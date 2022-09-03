@@ -1,0 +1,2469 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>
+      Fotos | Megan Denise Fox | liril
+    </title>
+    <link rel="shortcut icon" type="image/ico" href="../resources/icons/favicon.ico"  />
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,600,700' rel='stylesheet' type='text/css'>
+    
+     <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/courses/style.css">
+    <link rel="stylesheet" href="../css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/video-js.css">
+    <link rel="stylesheet" href="../css/photos/style.css">
+    <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="../css/user/photos/style.css">
+
+    <script type="text/javascript">
+        var username= "MeganFox"; 
+        var users_name= "Megan Denise Fox"; 
+    </script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/video.js"></script>
+    <script src="../js/jquery-ui.min.js"
+    ></script>
+    <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../js/user/photos/main.js"></script>
+
+    <script src="../js/courses/modernizr.custom.js"></script>
+
+ <script src="../js/jquery.knob.js">
+    </script>
+
+    <script>
+        $(function ($) {
+
+            $(".knob").knob({
+                change: function (value) {
+                    //console.log("change : " + value);
+                },
+                release: function (value) {
+                    //console.log(this.$.attr('value'));
+                    console.log("release : " + value);
+                },
+                cancel: function () {
+                    console.log("cancel : ", this);
+                },
+                /*format : function (value) {
+                  return value + '%';
+                  }
+                  ,*/
+                draw: function () {
+
+                    // "tron" case
+                    if (this.$.data('skin') == 'tron') {
+
+                        this.cursorExt = 0.3;
+
+                        var a = this.arc(this.cv) // Arc
+                            ,
+                            pa // Previous arc
+                            , r = 1;
+
+                        this.g.lineWidth = this.lineWidth;
+
+                        if (this.o.displayPrevious) {
+                            pa = this.arc(this.v);
+                            this.g.beginPath();
+                            this.g.strokeStyle = this.pColor;
+                            this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, pa.s, pa.e, pa.d);
+                            this.g.stroke();
+                        }
+
+                        this.g.beginPath();
+                        this.g.strokeStyle = r ? this.o.fgColor : this.fgColor;
+                        this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, a.s, a.e, a.d);
+                        this.g.stroke();
+
+                        this.g.lineWidth = 2;
+                        this.g.beginPath();
+                        this.g.strokeStyle = this.o.fgColor;
+                        this.g.arc(this.xy, this.xy, this.radius - this.lineWidth + 1 + this.lineWidth * 2 / 3, 0, 2 * Math.PI, false);
+                        this.g.stroke();
+
+                        return false;
+                    }
+                }
+            });
+
+            // Example of infinite knob, iPod click wheel
+            var v, up = 0,
+                down = 0,
+                i = 0,
+                $idir = $("div.idir"),
+                $ival = $("div.ival"),
+                incr = function () {
+                    i++;
+                    $idir.show().html("+").fadeOut();
+                    $ival.html(i);
+                },
+                decr = function () {
+                    i--;
+                    $idir.show().html("-").fadeOut();
+                    $ival.html(i);
+                };
+            $("input.infinite").knob({
+                min: 0,
+                max: 20,
+                stopper: false,
+                change: function () {
+                    if (v > this.cv) {
+                        if (up) {
+                            decr();
+                            up = 0;
+                        } else {
+                            up = 1;
+                            down = 0;
+                        }
+                    } else {
+                        if (v < this.cv) {
+                            if (down) {
+                                incr();
+                                down = 0;
+                            } else {
+                                down = 1;
+                                up = 0;
+                            }
+                        }
+                    }
+                    v = this.cv;
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(function () {
+      $.widget("ui.tooltip", $.ui.tooltip, {
+          options: {
+              content: function () {
+                  return $(this).prop('title');
+              }
+          }
+      });
+      
+$('.username').tooltip({
+    items: 'a.target',
+    open: function(event, ui)
+    {
+        if (typeof(event.originalEvent) === 'undefined')
+        {
+            return false;
+        }
+        $(".knob").knob();
+        var $id = $(ui.tooltip).attr('id');
+        
+        // close any lingering tooltips
+        $('div.ui-tooltip').not('#' + $id).remove();
+        
+        // ajax function to pull in data and add it to the tooltip goes here
+    },
+    close: function(event, ui)
+    {
+        ui.tooltip.hover(function()
+        {
+            $(this).stop(true).fadeTo(400, 1); 
+        },
+        function()
+        {
+            $(this).fadeOut('400', function()
+            {
+                $(this).remove();
+            });
+        });
+    }
+});  });
+    </script>
+</head>
+
+<body>
+<div class="wrapper"></div>
+    <header>
+        <nav>
+            <ul>
+                <li id="index">
+                    <a href="/"><section id="index-trigger">
+                        <span class="back-arrow button">
+              </span>
+                        <span id="index-text" class="text button">
+                Inicio
+              </span>
+                    </section></a>
+
+                </li>
+               
+                 <li id= "buscar">
+          <input class="buscar" type="text" placeholder="Busca aquí cursos, personas o cualquier cosa">
+          </li>
+                <li id="right-menu" class="button">
+                    <section id="dots" class="button">
+                        <span id="store" class="button">
+              </span>
+                        <span id="dots-icon" class="button">
+              </span>
+                        <span id="dots-text" class="button">
+                6'000.600
+              </span>
+
+                    </section>
+                    <section id="profileTrigger">
+                    </section>
+                    <div id="profile" class="button">
+                        <img id="profile-pic" src="../resources/images/white.jpg" alt="Walter White">
+                        <input class="knob button" data-width="35" data-height="35" data-fgColor="#2ecc71" data-bgColor="rgba(0,0,0,0)" data-displayInput=false data-thickness=".15" readonly value="60">
+                    </div>
+                    <span class="index-arrow button">
+              </span>
+
+                    <section id="profileSettings">
+                    </section>
+                </li>
+
+                <li>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="root">
+        <div class="contnr">
+
+            <div>
+                <a href="../MeganFox">Megan Denise Fox</a>
+            </div>
+            <span>
+                <span >Fotos</span>
+            </span>
+
+        </div>
+    </div>
+    <section id="wrapper" class="theater">
+ 
+    </section>
+    <div class="wrapper">
+    </div>
+<style class="zer">
+        
+    </style>
+    <section id="theater" class="theater">
+        <section>
+            <section id="picContainer">
+                <img id="bigPic" alt="">
+                <div class="Playuse">
+                </div>
+                <video id="theater_video" controls class="video-js d88fer vjs-default-skin" preload="none" width="100%" height="264" data-setup='{}'  data-setup="{}">
+                   <source src="" type='video/mp4'/>
+                   <p class="vjs-no-js">
+                      Para ver este vídeo, por favor activa el Javascript y considera actualizar tu navegador a uno que
+                      <a href="http://videojs.com/html5-video-support/" target="_blank">
+                      soporte vídeo en Html5
+                      </a>
+                   </p>
+                </video>
+                <div id="otherContainments">
+                  <div></div>
+                </div>
+            </section>
+            <aside class="comments">
+            <div class="info">
+                    <img id="pic" alt="">
+                    <p class="username"><a href="#"></a></p>
+            </div>
+            <div class="description">
+                <p class="title"></p>
+                <p class="more">
+                </p>
+            </div>
+            <div class="comentarios">
+                <div class="Comentarios">
+                </div>
+                <div class="newComment">
+                    <textarea rows="1"></textarea>
+                </div>
+            </div>
+            <div class="options button">
+            <ul>
+                <li class="bookmark"></li>
+                <li class="star"></li>
+                <li class="read"></li>
+            </ul></div>
+            <p id="close"></p>
+            </aside>
+        </section>
+    </section>
+        <div class="container"> 
+            
+            <div id="gallery">
+                <section class="photo mult_img">
+                                <div class="info">
+                                    <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                    <p class="username"><a class="target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/CENU%2C_S%C3%A3o_Paulo%2C_Brasil_%28cropped%29.jpg/1280px-CENU%2C_S%C3%A3o_Paulo%2C_Brasil_%28cropped%29.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   São Paulo​ (en español San Pablo)​ y oficialmente denominada como Município de São Paulo, es la ciudad más poblada de Brasil y capital del Estado de São Paulo y la principal ciudad de la región Metropolitana de São Paulo, en la región sudeste del país. Con una población de 12 176 866 habitantes (en 2018)​ en la ciudad propia y de 21 893 053 habitantes en su área metropolitana (en 2010)​, son la ciudad y la metrópoli más pobladas de América y del hemisferio occidental, ​ además de ser entre las aglomeraciones urbanas más pobladas del mundo.​ También es la ciudad más poblada de la lusofonia (mayor ciudad/metrópoli del mundo hablante del idioma portugués). São Paulo es la ciudad brasileña más influyente en el escenario global, siendo, en 2016, la 11ª ciudad más globalizada del planeta, recibiendo la clasificación de ciudad global alfa, por parte del Globalization and World Cities Study Group & Network (GaWC). Asimismo, es la ciudad lusófona más poblada e importante del mundo en términos tanto demográficos como culturales y económicos. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/São_Paulo'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">São Paulo​</a> <br><span title="28 de Marzo de 2022 a las 6:40 pm" class="time">28 de Marzo a las 6:40 pm</span></p>
+                                </div>
+                                <p class="title">❤️</p>
+                                <p class="moreI">there goes my heart<br>
+manifest outside of my body<br>
+draped in the towering silhouette of a most unusually handsome boy<br>
+<br>
+magical and haunted<br>
+kinetic and tortured<br>
+ethereal and dangerous<br>
+cosmic<br>
+lawless<br>
+eternal<br>
+creative genius<br>
+<br>
+the journey will likely be perilous<br>
+but there is no destination without him </p>                                <section class="navigation">
+                                    <div style="display: none; " class="nav_arrow left disabled">
+                                        <div class="arrow"></div>
+                                    </div>
+                                    <div style="display: none; " class="nav_arrow right">
+                                        <div class="arrow"></div>
+                                    </div>
+                                    <section class="carr">
+                                        <section class="picture">
+                                            <img class="pic" src="/resources/images/MeganFox/dkyw2UqrLV_tn.jpg" alt="" class="big">
+                                        </section>
+                                        <section class="picture">
+                                            <img class="pic" src="/resources/images/MeganFox/7kmk1Jnij8_tn.jpg" alt="" class="big">
+                                        </section>
+                                        <section class="picture">
+                                            <img class="pic" src="/resources/images/MeganFox/rLcyvTDfeN_tn.jpg" alt="" class="big">
+                                        </section>
+                                        <section class="picture">
+                                            <img class="pic" src="/resources/images/MeganFox/7oyGmsZ9Cc_tn.jpg" alt="" class="big">
+                                        </section>
+                                    </section>
+                                </section>
+                                <div class="Comentarios"></div>
+                                <div class="options button">
+                                    <ul>
+                                        <li class="bookmark"></li>
+                                        <li class="star"></li>
+                                        <a target="_blank" href="#">
+                                            <li class="read"></li>
+                                        </a>
+                                    </ul>
+                                </div>
+                            </section>
+                <section class="photo mult_img">
+                                <div class="info">
+                                    <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                    <p class="username"><a class="target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+              </div>">Megan Denise Fox </a> <br><span title="7 de Marzo de 2022 a las 10:8 pm" class="time">7 de Marzo a las 10:8 pm</span></p>
+                                </div>
+                                <p class="title">Everybody’s grandma had that one sofa…swipe</p>
+                                <section class="navigation">
+                                    <div style="display: none; " class="nav_arrow left disabled">
+                                        <div class="arrow"></div>
+                                    </div>
+                                    <div style="display: none; " class="nav_arrow right">
+                                        <div class="arrow"></div>
+                                    </div>
+                                    <section class="carr">
+                                        <section class="picture">
+                                            <img class="pic" src="/resources/images/MeganFox/tB66nEJhGF_tn.jpg" alt="" class="big">
+                                        </section>
+                                        <section class="picture">
+                                            <img class="pic" src="/resources/images/MeganFox/OUeB7PLl7y_tn.jpg" alt="" class="big">
+                                        </section>
+                                    </section>
+                                </section>
+                                <div class="Comentarios"></div>
+                                <div class="options button">
+                                    <ul>
+                                        <li class="bookmark"></li>
+                                        <li class="star"></li>
+                                        <a target="_blank" href="#">
+                                            <li class="read"></li>
+                                        </a>
+                                    </ul>
+                                </div>
+                            </section>
+                <section class="photo mult_img">
+                                <div class="info">
+                                    <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                    <p class="username"><a class="target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+              </div>">Megan Denise Fox </a> <br><span title="21 de Febrero de 2022 a las 2:21 am" class="time">21 de Febrero a las 2:21 am</span></p>
+                                </div>
+                                <p class="title">Was going for business casual Bratz doll 🧡</p>
+                                <section class="navigation">
+                                    <div style="display: none; " class="nav_arrow left disabled">
+                                        <div class="arrow"></div>
+                                    </div>
+                                    <div style="display: none; " class="nav_arrow right">
+                                        <div class="arrow"></div>
+                                    </div>
+                                    <section class="carr">
+                                        <section class="picture">
+                                            <img class="pic" src="/resources/images/MeganFox/2oev82l1uZ_tn.jpg" alt="" class="big">
+                                        </section>
+                                        <section class="picture">
+                                            <img class="pic" src="/resources/images/MeganFox/WqgztJx8L6_tn.jpg" alt="" class="big">
+                                        </section>
+                                    </section>
+                                </section>
+                                <div class="Comentarios"></div>
+                                <div class="options button">
+                                    <ul>
+                                        <li class="bookmark"></li>
+                                        <li class="star"></li>
+                                        <a href="#">
+                                            <li class="read"></li>
+                                        </a>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="photo mult_img">
+                                <div class="info">
+                                    <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                    <p class="username"><a class="target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+              </div>">Megan Denise Fox </a> <br><span title="9 de Febrero de 2022 a las 9:19 am" class="time">9 de Febrero a las 9:19 am</span></p>
+                                </div>
+                                <p class="title">It’s giving Dracula’s maid</p>
+                                <section class="navigation">
+                                    <div style="display: none; " class="nav_arrow left disabled">
+                                        <div class="arrow"></div>
+                                    </div>
+                                    <div style="display: none; " class="nav_arrow right">
+                                        <div class="arrow"></div>
+                                    </div>
+                                    <section class="carr">
+                                        <section class="picture">
+                                            <img class="pic" src="/resources/images/MeganFox/XhZC8VR6Rf_tn.jpg" alt="" class="big">
+                                        </section>
+                                        <section class="picture">
+                                            <img class="pic" src="/resources/images/MeganFox/AAMBWI03Pf_tn.jpg" alt="" class="big">
+                                        </section>
+                                    </section>
+                                </section>
+                                <div class="Comentarios"></div>
+                                <div class="options button">
+                                    <ul>
+                                        <li class="bookmark"></li>
+                                        <li class="star"></li>
+                                        <a href="#">
+                                            <li class="read"></li>
+                                        </a>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="photo mult_img">
+                                <div class="info">
+                                    <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                    <p class="username"><a class="target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+              </div>">Megan Denise Fox </a> <br><span title="27 de Enero de 2022 a las 3:16 pm" class="time">27 de Enero a las 3:16 pm</span></p>
+                                </div>
+                                <p class="title"></p>
+                                <section class="navigation">
+                                    <div style="display: none; " class="nav_arrow left disabled">
+                                        <div class="arrow"></div>
+                                    </div>
+                                    <div style="display: none; " class="nav_arrow right">
+                                        <div class="arrow"></div>
+                                    </div>
+                                    <section class="carr">
+                                        <section class="picture">
+                                            <img class="pic" src="/resources/images/MeganFox/hM4ubeaHO7_tn.jpg" alt="" class="big">
+                                        </section>
+                                        <section class="picture">
+                                            <img class="pic" src="/resources/images/MeganFox/FC2Xu9BNQs_tn.jpg" alt="" class="big">
+                                        </section>
+                                        <section class="picture">
+                                            <img class="pic" src="/resources/images/MeganFox/Yl7SWdmYMc_tn.jpg" alt="" class="big">
+                                        </section>
+                                    </section>
+                                </section>
+                                <div class="Comentarios"></div>
+                                <div class="options button">
+                                    <ul>
+                                        <li class="bookmark"></li>
+                                        <li class="star"></li>
+                                        <a href="#">
+                                            <li class="read"></li>
+                                        </a>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="photo mult_img">
+                                <div class="info">
+                                    <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                    <p class="username"><a class="target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+              </div>">Megan Denise Fox </a>; en <a href="#" class="target" title='         
+              <div class="tool city">
+                <figure>
+                   <img class="thumbnail" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Bellagio_2.jpg/1024px-Bellagio_2.jpg"></img>
+               </figure>
+         
+               <div class="introduction">
+                   El lago de Como o Lario (en italiano: lago di Como o Lario), es un lago situado en la región de Lombardia, en Italia, más específicamente en las provincias de Como y Lecco. Está situado a 199 metros de altitud sobre el nivel del mar y tiene una superficie de 146 km². Con sus 416 metros de profundidad (en la presa de Argegno) es uno de los lagos más profundos de Europa. Es el tercer lago más grande de Italia, después del lago de Garda (1º) y el lago Mayor. Tiene forma de una "Y" invertida. <a target= "_blank"style= "font-size:0.8em; " href= "https://es.wikipedia.org/wiki/Lago_de_Como"><span style= "color: #2ecc71; font-size: 1.5em; ">···</span> es.wikipedia.org</a>
+               </div>
+              </div>'>Lago de Como</a> <br><span title="20 de Enero de 2022 a las 5:10 pm" class="time">20 de Enero a las 5:10 pm</span></p>
+                                </div>
+                                <p class="title">Lake Como</p>
+                                <section class="navigation">
+                                    <div style="display: none; " class="nav_arrow left disabled">
+                                        <div class="arrow"></div>
+                                    </div>
+                                    <div style="display: none; " class="nav_arrow right">
+                                        <div class="arrow"></div>
+                                    </div>
+                                    <section class="carr">
+                                        <section class="picture">
+                                            <img class="pic" src="/resources/images/MeganFox/YZflJpIi3z_tn.jpg" alt="" class="big">
+                                        </section>
+                                        <section class="picture">
+                                            <img class="pic" src="/resources/images/MeganFox/h8cVk8DNK7_tn.jpg" alt="" class="big">
+                                        </section>
+                                        <section class="picture">
+                                            <img class="pic" src="/resources/images/MeganFox/itarYVLGy0_tn.jpg" alt="" class="big">
+                                        </section>
+                                        <section class="picture">
+                                            <img class="pic" src="/resources/images/MeganFox/Fd5WUoOlyg_tn.jpg" alt="" class="big">
+                                        </section>
+                                        <section class="picture">
+                                            <img class="pic" src="/resources/images/MeganFox/EHZDsEQjo9_tn.jpg" alt="" class="big">
+                                        </section>
+                                    </section>
+                                </section>
+                                <div class="Comentarios"></div>
+                                <div class="options button">
+                                    <ul>
+                                        <li class="bookmark"></li>
+                                        <li class="star"></li>
+                                        <a href="#">
+                                            <li class="read"></li>
+                                        </a>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="photo mult_img">
+                                <div class="info">
+                                    <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                    <p class="username"><a class="target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+              </div>">Megan Denise Fox </a> <br><span title="5 de Marzo de 2022 a las 8:10 pm" class="time">5 de Marzo a las 8:10 pm</span></p>
+                                </div>
+                                <p class="title">My underwire is poking out of my dress and I have white nail polish all over my hand from a failed in-car manicure, but don’t look at that. just focus on what’s working 🧁 🧁</p>
+                                <section class="navigation">
+                                    <div style="display: none; " class="nav_arrow left disabled">
+                                        <div class="arrow"></div>
+                                    </div>
+                                    <div style="display: none; " class="nav_arrow right">
+                                        <div class="arrow"></div>
+                                    </div>
+                                    <section class="carr">
+                                        <section class="picture">
+                                            <img class="pic" src="/resources/images/MeganFox/LmnTMmfauo_tn.jpg" alt="" class="big">
+                                        </section>
+                                        <section class="picture">
+                                            <img class="pic" src="/resources/images/MeganFox/Abl9R0LCem_tn.jpg" alt="" class="big">
+                                        </section>
+                                        <section class="picture">
+                                            <img class="pic" src="/resources/images/MeganFox/Tar6jPksB2_tn.jpg" alt="" class="big">
+                                        </section>
+                                    </section>
+                                </section>
+                                <div class="Comentarios"></div>
+                                <div class="options button">
+                                    <ul>
+                                        <li class="bookmark"></li>
+                                        <li class="star"></li>
+                                        <a href="#">
+                                            <li class="read"></li>
+                                        </a>
+                                    </ul>
+                                </div>
+                            </section>
+                <section class="photo">
+                            <img class="pic" src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title='         
+              <div class="tool city">
+                <figure>
+                   <img class="thumbnail" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Dorado%2C_Puerto_Rico%2C_Central_Square.jpg/250px-Dorado%2C_Puerto_Rico%2C_Central_Square.jpg"></img>
+               </figure>
+         
+               <div class="introduction">
+                   Dorado es un municipio de la costa norte de Puerto Rico. Fundado en el 1842 por Jacinto López. También conocido como "La Ciudad Ejemplar", "Ciudad Dorada", y "La Más Limpia de Puerto Rico". <a target= "_blank"style= "font-size:0.8em; " href= "https://es.wikipedia.org/wiki/Dorado_(Puerto_Rico)"><span style= "color: #2ecc71; font-size: 1.5em; ">···</span> es.wikipedia.org</a>
+               </div>
+              </div>'>Dorado</a><br><span title= "14 de Enero de 2022 a las 4:27 pm" class="time">14 de Enero a las 4:27 pm</span></p>                    
+                            </div>
+                            <p class="title"></p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                    </section>
+                <section class="photo">
+                    <img class="pic" src="/resources/images/MeganFox/LOwjEhL6Oo_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a><br><span title= "11 de Septiembre de 2021 a las 8:50 pm" class="time">Septiembre de 2021</span></p>                    
+                            </div>
+                            <p class="title">Guys I had a business meeting today,</p>
+                            <section class="moreI">I made sure to wear something subtle and professional</section>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                </section>
+                <section class="photo mult_img">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/n7YREaO6u1_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "6 de Septiembre de 2021 a las 3:44 pm" class="time">Septiembre de 2021</span></p>                    
+                            </div>
+                            <p class="title">When I tell you that the table at this air bnb saw some things 🥵</p>
+                            <section class="navigation">
+                                <div style= "display: none; " class="nav_arrow left disabled"><div class="arrow"></div></div>
+                                <div style= "display: none; " class="nav_arrow right"><div class="arrow"></div></div>
+                                <section class= "carr">
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/G9KiaATpcN_tn.jpg" alt="" class="big">
+                                    </section>
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/rU0w7cIlx7_tn.jpg" alt="" class="big">
+                                    </section>
+                                </section>
+                            </section>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                    </section>
+                <section class="photo">
+                            <img class="pic" src="/resources/images/MeganFox/n7YREaO6u1_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources//images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "1 de Febrero de 2021 a las 1:33 pm" class="time">Febrero de 2021</span></p>                    
+                            </div>
+                            <p class="title">👼🏻👽💫</p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                    </section>
+                <section class="photo">
+                            <img class="pic" src="/resources/images/MeganFox/IQM75cNdQN_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources//images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "30 de Julio de 2018 4:26 pm" class="time">Julio de 2018</span></p>                    
+                            </div>
+                            <p class="title">#BTS 📷</p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                    </section>
+                    <section class="photo">
+                            <img class="pic" src="/resources/images/MeganFox/RCMqsSRufJ_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources//images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "20 de Diciembre de 2018 a las 7:13 pm" class="time">Diciembre de 2018</span></p>                    
+                            </div>
+                            <p class="title">NYT Outtakes 📸</p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                    </section>
+                <section class="photo">
+                    <img class="pic" src="/resources/images/MeganFox/UXW7tkDzH9_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "17 de Septiembre de 2015 a las 8:32 pm" class="time">Septiembre de 2015</span></p>                    
+                            </div>
+                            <p class="title">Black 'n' white!</p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                </section>
+                <section class="photo mult_img">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources//images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "10 de Septiembre de 2021 a las 7:28 pm" class="time">Septiembre de 2021</span></p>                    
+                            </div>
+                            <p class="title">If you were one of those people who always thought I was disturbed and might be demon possessed please see these photos from CR Fashion Book as evidence in support of your theory.</p>
+                            <section class="navigation">
+                                <div style= "display: none; " class="nav_arrow left disabled"><div class="arrow"></div></div>
+                                <div style= "display: none; " class="nav_arrow right"><div class="arrow"></div></div>
+                                <section class= "carr">
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/t3m4tYoZgm_tn.jpg" alt="" class="big">
+                                    </section>
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/3GHtf78Mo6_tn.jpg" alt="" class="big">
+                                    </section>
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/3mDFy6MdLB_tn.jpg" alt="" class="big">
+                                    </section>
+                                </section>
+                            </section>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                    </section>
+                    <section class="photo mult_img">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/n7YREaO6u1_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+              </div>">Megan Denise Fox</a><br><span title= "13 de Septiembre de 2021 a las 5:24 pm" class="time">Septiembre de 2021</span></p>                    
+                            </div>
+                            <p class="title">Kourtney and I are in love</p>
+                            <section class="navigation">
+                                <div style= "display: none; " class="nav_arrow left disabled"><div class="arrow"></div></div>
+                                <div style= "display: none; " class="nav_arrow right"><div class="arrow"></div></div>
+                                <section class= "carr">
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/ihsJ6mzXTl_tn.jpg" alt="" class="big">
+                                    </section>
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/63q66K19dH_tn.jpg" alt="" class="big">
+                                    </section>
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/42zfEx3j5N_tn.jpg" alt="" class="big">
+                                    </section>
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/lS0QwApOy2_tn.jpg" alt="" class="big">
+                                    </section>
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/vF2xAEtzIZ_tn.jpg" alt="" class="big">
+                                    </section>
+                                </section>
+                            </section>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                    </section>
+                <section class="photo">
+                    <img class="pic" src="/resources/images/MeganFox/YY6JIfdeTv_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "13 de Enero de 2018 a las 2:33 pm" class="time">Enero de 2018</span></p>                    
+                            </div>
+                            <p class="title"></p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                </section>
+                <section class="photo mult_img">
+                    <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Walls_of_Troy_%282%29.jpg/1024px-Walls_of_Troy_%282%29.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Troya o Ilión (en griego Τροία —Troia—, Ίλιον —Ilión—, o Ίλιος —Ilios) es una antigua ciudad anatolia situada en el emplazamiento hoy conocido como la colina de Hisarlik, en Turquía (en turco '[colina] dotada de fortaleza'). Según los estudios de Frank Starke (1997), de J. David Hawkins4 (1998) y de W. D. Niemeier (1999), la palabra Wilusa era la denominación usada en hitita para la ciudad de Troya.  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Troya'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Troya</a> <br><span title= "7 de Septiembre de 2018 a las 2:51 pm" class="time">Septiembre de 2018</span></p>                    
+                            </div>
+                            <p class="title">With the queen visiting the City of Troy, and exploring gorgeous Bozcaada in hopes of finding evidence that Homer’s Iliad was more than just an epic poem...</br>
+Thanks to @fsbosphorus in Istanbul and @kolinhotel in Çanakkale for the service and hospitality.</p>
+                            <section class="navigation">
+                                <div style= "display: none; " class="nav_arrow left disabled"><div class="arrow"></div></div>
+                                <div style= "display: none; " class="nav_arrow right"><div class="arrow"></div></div>
+                                <section class= "carr">
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/04URifT0Ch_tn.jpg" alt="" class="big">
+                                    </section>
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/FBC64WGtGH_tn.jpg" alt="" class="big">
+                                    </section>
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/y23p3iNDu0_tn.jpg" alt="" class="big">
+                                    </section>
+                                </section>
+                            </section>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                </section>
+                <section class="photo">
+                    <img class="pic" src="/resources/images/MeganFox/twtqAtNBCh_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "10 de Diciembre de 2021 a las 8:35 pm" class="time">Diciembre de 2021</span></p>                    
+                            </div>
+                            <p class="title"></p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                </section>
+                <section class="photo">
+                    <img class="pic" src="/resources/images/MeganFox/sStzaCWysa_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "2 de Abril de 2015 a las 2:56 pm" class="time">Abril de 2015</span></p>                    
+                            </div>
+                            <p class="title">Eyeliner. Brows. Nude glossy lip. <a href="#">#spring</a> <a href="#">#harpersbazaar</a></p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                </section>
+                <section class="photo">
+                    <img class="pic" src="/resources/images/MeganFox/VgCo2saTEw_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "25 de Enero de 2021 a las 7:17 pm" class="time">Enero de 2021</span></p>                    
+                            </div>
+                            <p class="title">Valentine's Day's right around the corner</p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                </section>
+                <section class="photo">
+                    <img class="pic" src="/resources/images/MeganFox/DaelsU8hAZ_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "26 de Enero de 2018 a las 4:53 am" class="time">Enero de 2018</span></p>                    
+                            </div>
+                            <p class="title"></p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                </section>
+                <section class="photo mult_img">
+                    <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a> <br><span title= "1 de Noviembre de 2018 a las 11:57 pm" class="time">Noviembre de 2018</span></p>                    
+                            </div>
+                            <p class="title">Happy Halloween🎃</p>
+                            <section class="navigation">
+                                <div style= "display: none; " class="nav_arrow left disabled"><div class="arrow"></div></div>
+                                <div style= "display: none; " class="nav_arrow right"><div class="arrow"></div></div>
+                                <section class= "carr">
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/2twsnnRzTZ_tn.jpg" alt="" class="big">
+                                    </section>
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/3YXh7QmO2k_tn.jpg" alt="" class="big">
+                                    </section>
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/jvdSyAUWAP_tn.jpg" alt="" class="big">
+                                    </section>
+                                </section>
+                            </section>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                </section>
+                <section class="photo">
+                            <img class="pic" src="/resources/images/MeganFox/E7Q1hHhqxz_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources//images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "19 de Noviembre de 2018 a las 4:43 am" class="time">Noviembre de 2018</span></p>                    
+                            </div>
+                            <p class="title"></p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                    </section>
+                    <section class="photo mult_img">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources//images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/L%27Anse_aux_Meadows%2C_recreated_long_house.jpg/300px-L%27Anse_aux_Meadows%2C_recreated_long_house.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   L'Anse aux Meadows (en francés L'Anse-aux-Méduses, en español La ensenada de las medusas) es un sitio arqueológico situado en la punta septentrional de la isla de Terranova, en la provincia canadiense de Terranova y Labrador, correspondiente a un asentamiento nórdico de hace unos mil años (la datación de carbono oscila entre el año 990 y el 1050). <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/L%27Anse_aux_Meadows'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">L'Anse-aux-Méduses</a><br><span title= "23 de Agosto de 2018 a las 7:28 pm" class="time">Agosto de 2018</span></p>                    
+                            </div>
+                            <p class="title">Out in the field at an active dig with the Head of the Archaeology Department at Gotland University, Dan Carlsson. We were researching Viking graves, and he let me hold a broach that is around 1,000 years old.</p>
+                            <section class="navigation">
+                                <div style= "display: none; " class="nav_arrow left disabled"><div class="arrow"></div></div>
+                                <div style= "display: none; " class="nav_arrow right"><div class="arrow"></div></div>
+                                <section class= "carr">
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/xywkAmYWVh_tn.jpg" alt="" class="big">
+                                    </section>
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/JIyB9D6zHP_tn.jpg" alt="" class="big">
+                                    </section>
+                                </section>
+                            </section>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                    </section>
+                    <section class="photo">
+                            <img class="pic" src="/resources/images/MeganFox/ZnpDEi2693_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources//images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "21 de Marzo de 2017 a las 2:45 am"class="time">Marzo de 2017</span></p>                    
+                            </div>
+                            <p class="title">When you answer the door for the delivery like... </p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                    </section>
+                    <section class="photo">
+                            <img class="pic" src="/resources/images/MeganFox/BEKMF41oit_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources//images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "6 de Julio de 2018 a las 9:34 pm" class="time">Julio de 2018</span></p>                    
+                            </div>
+                            <p class="title">Backseat photo shoot because my eyes match this jacket and also because it’s still daylight at 9:30 pm. </br><a href="#">#LandOfTheMidnightSun</a> 🇳🇴</p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                    </section>
+                    <section class="photo">
+                            <img class="pic" src="/resources/images/MeganFox/A9fFXmoEfU_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources//images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "9 de Septiembre de 2017 a las 5:27 pm" class="time">Septiembre de 2017</span></p>                    
+                            </div>
+                            <p class="title">Thank you <a href="/liverpool_mexico">@liverpool_mexico</a> and all of Mexico for having me in your beautiful country.</p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                    </section>
+                    
+                    <section class="photo mult_img">
+                    <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Drakensburgmountains.jpg/220px-Drakensburgmountains.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Sudáfrica o, en uso minoritario, Suráfrica (oficialmente, República de Sudáfrica), es un país soberano, miembro de la Unión Africana, situado en África austral y cuya forma de gobierno es la república parlamentaria modificada. Su territorio está organizado en nueve provincias. Su capitalidad tiene un estatus especial, pues la componen tres ciudades: Pretoria, sede del poder ejecutivo; Bloemfontein, sede del poder judicial; y Ciudad del Cabo, sede del poder legislativo. Asimismo, la ciudad más poblada del país es Johannesburgo, siendo esta, además, una de las 40 áreas metropolitanas más grandes del mundo. </br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Sud%C3%A1frica'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Sudáfrica</a> <br><span title= "11 de Noviembre de 2019 a las 3:51 pm" class="time">Noviembre de 2019</span></p>                    
+                            </div>
+                            <p class="title"><a href="#">#RogueMovie</a></p>
+                            <section class="navigation">
+                                <div style= "display: none; " class="nav_arrow left disabled"><div class="arrow"></div></div>
+                                <div style= "display: none; " class="nav_arrow right"><div class="arrow"></div></div>
+                                <section class= "carr">
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/E9fN0TIaAs_tn.jpg" alt="" class="big">
+                                    </section>
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/DjybGgG2Kd_tn.jpg" alt="" class="big">
+                                    </section>
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/EM49wnBVbf_tn.jpg" alt="" class="big">
+                                    </section>
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/FOxID3leuj_tn.jpg" alt="" class="big">
+                                    </section>
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/IrsZAC7Hor_tn.jpg" alt="" class="big">
+                                    </section>
+                                </section>
+                            </section>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                </section>
+                    <section class="photo">
+                            <img class="pic" src="/resources/images/MeganFox/1V0WSdH3io_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources//images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "24 de Abril de 2019 a las 7:32 am" class="time">Abril de 2019</span></p>                    
+                            </div>
+                            <p class="title">Once upon a time 13 summers ago 🧡</p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                    </section>
+                    <section class="photo mult_img">
+                    <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a> <br><span title= "19 de Enero de 2020 a las 6:31 pm" class="time">2020</span></p>                    
+                            </div>
+                            <p class="title">Super cool car photo shoot</p>
+                            <section class="navigation">
+                                <div style= "display: none; " class="nav_arrow left disabled"><div class="arrow"></div></div>
+                                <div style= "display: none; " class="nav_arrow right"><div class="arrow"></div></div>
+                                <section class= "carr">
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/rxb9O3L5pS_tn.jpg" alt="" class="big">
+                                    </section>
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/tdELKebWIl_tn.jpg" alt="" class="big">
+                                    </section>
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/z83outN2rT_tn.jpg" alt="" class="big">
+                                    </section>
+                                </section>
+                            </section>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                </section>
+                    <section class="photo">
+                            <img class="pic" src="/resources/images/MeganFox/nKUglh82M1_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources//images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "11 de Septiembre de 2017 a las 3:53 pm" class="time">Septiembre de 2017</span></p>                    
+                            </div>
+                            <p class="title"></p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                    </section>
+                    <section class="photo">
+                            <img class="pic" src="/resources/images/MeganFox/XKScGTyorh_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources//images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "29 de Octubre de 2017 a las 2:46 pm" class="time">Octubre de 2017</span></p>                    
+                            </div>
+                            <p class="title">Want a sneak peek of my new <a href="/fredericks_hollywood">@fredericks_hollywood</a> x Megan Fox collection? Head to <a target= "_blank" href="https://www.fredericks.com/">fredericks.com</a> and sign up for a chance to shop the collection first.</p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                    </section>
+                    <section class="photo mult_img">
+                    <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Sleeping_Beauty_Castle_DLR.jpg/250px-Sleeping_Beauty_Castle_DLR.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Anaheim es una ciudad ubicada en el condado de Orange, en el estado estadounidense de California. En el año 2007, su población era de 345.556 habitantes, lo que la convierte en la décima ciudad más poblada de California. Es también la segunda ciudad más poblada en el condado, después de Santa Ana, y la segunda más grande, en términos de superficie. Es conocida por sus parques temáticos, equipos deportivos, y centros de convenciones. </br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Anaheim'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Anaheim</a> <br><span title= "7 de Septiembre de 2018 a las 2:51 pm" class="time">Septiembre de 2018</span></p>                    
+                            </div>
+                            <p class="title">Halloween at <a href="/disneyland">@disneyland</a> is always the most fun but can I get ONE family photo where everyone is looking at the camera and making a semi normal face ?? <a href="#">#disneyland</a></p>
+                            <section class="navigation">
+                                <div style= "display: none; " class="nav_arrow left disabled"><div class="arrow"></div></div>
+                                <div style= "display: none; " class="nav_arrow right"><div class="arrow"></div></div>
+                                <section class= "carr">
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/M8FxENooSD_tn.jpg" alt="" class="big">
+                                    </section>
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/IcGh3qlYGV_tn.jpg" alt="" class="big">
+                                    </section>
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/hOk1sFW9Ax_tn.jpg" alt="" class="big">
+                                    </section>
+                                </section>
+                            </section>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                </section>
+                    <section class="photo">
+                            <img class="pic" src="/resources/images/MeganFox/0pJEQ14Ayc_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources//images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "9 de Noviembre de 2017 a las 9:23 am" class="time">Noviembre de 2017</span></p>                    
+                            </div>
+                            <p class="title">At it again. Sneak peak, coming soon- just in time for festival season. <a href="/fredericks_hollywood">@fredericks_hollywood</a></p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                    </section>
+                    
+                    <section class="photo mult_img">
+                    <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Scandinavia.svg/200px-Scandinavia.svg.png'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Escandinavia es una región geográfica y cultural del norte de Europa (aunque el vocablo se usa comúnmente también en términos idiomáticos) compuesta por los países nórdicos germánicos: Dinamarca, Noruega y Suecia, en los cuales se hablan lenguas nórdicas, también llamadas lenguas escandinavas. En algunas acepciones con matices sociopolíticos y culturales, Islandia y las islas Feroe (en sí territorio autónomo de Dinamarca) también comparten este término, mientras que otros argumentan que desde una perspectiva geopolítica, el término incluye también a Finlandia. Bajo esta acepción (mayoritaria en algunos idiomas), Escandinavia es prácticamente sinónimo de los países nórdicos. </br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Escandinavia'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Escandinavia</a> <br><span title= "6 de Diciembre de 2018 a las 8:17 pm" class="time">Diciembre de 2018</span></p>                    
+                            </div>
+                            <p class="title">Thanks everyone for watching <a href="#">#LegendsOfTheLost</a>. Here are some behind the scenes photos from the first episode.
+The photos from the forest are from the night of my vision quest. I spent some time before looking for my staff. The staff is used as a type of divination tool — It grounds you and keeps you connected to the earth through your fear (of being eaten by timberwolves, bears or Nordic phantoms). Being alone in the woods after midnight is not fun...</p>
+                            <section class="navigation">
+                                <div style= "display: none; " class="nav_arrow left disabled"><div class="arrow"></div></div>
+                                <div style= "display: none; " class="nav_arrow right"><div class="arrow"></div></div>
+                                <section class= "carr">
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/TIDGRxRYR9_tn.jpg" alt="" class="big">
+                                    </section>
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/EQN3rgR3kM_tn.jpg" alt="" class="big">
+                                    </section>
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/WBKz4hzkQ6_tn.jpg" alt="" class="big">
+                                    </section>
+                                    <section class="picture">
+                                        <img class="pic" src="/resources/images/MeganFox/3VWaXxt4at_tn.jpg" alt="" class="big">
+                                    </section>
+                                </section>
+                            </section>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                </section>
+                    <section class="photo">
+                            <img class="pic" src="/resources/images/MeganFox/dJAAPomTOa_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources//images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "20 de Octubre de 2020 a las 4:28 pm" class="time">2020</span></p>                    
+                            </div>
+                            <p class="title">Film ‘Til Death’ 🩸</p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                    </section>
+                    <section class="photo">
+                            <img class="pic" src="/resources/images/MeganFox/BoeqjPf1c2_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources//images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "5 de Noviembre de 2019 a las 2:57 pm" class="time">Noviembre de 2019</span></p>                    
+                            </div>
+                            <p class="title"></p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                    </section>
+                    <section class="photo">
+                            <img class="pic" src="/resources/images/MeganFox/H8lrDtwKDO_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources//images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/The_city_beautiful.jpg/1024px-The_city_beautiful.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   La ciudad de Orlando es la sede del condado de Orange y es ciudad central de la zona metropolitana del mismo nombre, así como también cabecera de la región conocida como Florida Central, en el estado de Florida, del sudeste de Estados Unidos. Según el censo estadounidense de 2000, la ciudad tenía una población de 185.951 habitantes (la población en el área metropolitana es de 1.644.561). Un censo local de la población en 2003 arrojó un resultado de 199.336 mil habitantes (1,8 millones en el área metropolitana). Es la sexta ciudad más grande de Florida y la ciudad no costera más grande. Es además la cabecera de la tercera área metropolitana más grande del estado, detrás de Miami-Fort Lauderdale y Tampa-San Petersburgo. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Orlando_(Florida)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Orlando</a><br><span title= "13 de Junio de 2021 a las 8:21 pm " class="time">Junio de 2021</span></p>                    
+                            </div>
+                            <p class="title">Wishing upon a star 💫 <a href="/disneyparksblog">@disneyparksblog</a> <a href="/disneyland">@disneyland</a> <a href="/disneyparks">@disneyparks</a></p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                    </section>
+                    <section class="photo">
+                            <img class="pic" src="/resources/images/MeganFox/J7W4vIf8di_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources//images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "13 de Marzo de 2017 a las 2:22 pm " class="time">Marzo de 2017</span></p>                    
+                            </div>
+                            <p class="title">My @fredericks_hollywood campaign has launched. Stay tuned for more including my personal collection coming holiday 2017.</p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                    </section>
+                    <section class="photo">
+                            <img class="pic" src="/resources/images/MeganFox/9mnOddx7UX_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources//images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "4 de Abril de 2019 a las 1:54 pm " class="time">Abril de 2019</span></p>                    
+                            </div>
+                            <p class="title"><a href="#">#tbt</a> I don’t remember what this shoot was for... but I do remember I was like 8 months pregnant with Journey, had crazy sciatic pain, swollen... everything, and was not in the mood. but I love the wallpaper it looks like there’s some sort of mandala emerging from my crown chakra, very mother mary meets underwood vampire. <a href="#">#immaculateconception</a></p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                    </section>
+                    <section class="photo">
+                            <img class="pic" src="/resources/images/MeganFox/TsOFBfh0N6_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources//images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "18 de Julio de 2014 a las 7:22 pm " class="time">Julio de 2014</span></p>                    
+                            </div>
+                            <p class="title">Kids choice sports awards red carpet.</p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                    </section>
+                    <section class="photo">
+                            <img class="pic" src="/resources/images/MeganFox/ll9hzYja0q_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources//images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "22 de Diciembre de 2017 a las 4:12 pm " class="time">Diciembre de 2017</span></p>                    
+                            </div>
+                            <p class="title"><a href="#">#happyholidays</a> <a href="/fredericks_hollywood">@fredericks_hollywood</a></p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                    </section>
+
+                    <section class="photo">
+                            <img class="pic" src="/resources/images/MeganFox/H1vIRrcHnR_tn.jpg" alt="" class="big">
+                            <div class="info">
+                                <img src="/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg" alt="">
+                                <p class="username"><a class= "target" href="/MeganFox" title="         
+              <div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources//images/MeganFox/Ad4Jy7k20F_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>                  
+                  <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+
+                </div>
+                
+              </div>">Megan Denise Fox</a>; en <a href="#" class= "target"  title="         
+              <div class='tool city'>
+                <figure>
+                   <img class='thumbnail' src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg'></img>
+               </figure>
+         
+               <div class='introduction'>
+                   Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>
+               </div>
+              </div>">Los Ángeles</a><br><span title= "29 de Junio de 2017 a las 9:40 pm " class="time">Junio de 2017</span></p>                    
+                            </div>
+                            <p class="title"><a href="#">#mood</a> <a href="#">#tbt</a></p>
+                            <div class="Comentarios"></div>
+                            <div class="options button">
+                                <ul>
+                                    <li class="bookmark"></li>
+                                    <li class="star"></li>
+                                    <a href="#"><li class="read"></li></a>
+                                </ul>
+                            </div>
+                    </section>
+                    
+            </div>
+    </div>
+    <aside id="sidebar">
+     <div id="container">
+        <div id="resizeTop">
+       <div id="notifications">
+        <ul>
+            <div class="info button">
+                    <img src="/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif" alt="">
+                    <p class="username"><b href="#">A.K.A._Dizzy:</b> <br> 😉 Revisen Mi Perfil: <a target= "_blank" href="/A.K.A._Dizzy">A.K.A._Dizzy</a></p>
+                   
+            </div>
+            <div class="info button">
+                    <img src="/resources/images/white.jpg" alt="">
+                    <p class="username"><b href="#">Walter White</b> Es ahora amigo de  Walter White.</p>
+                  
+            </div>
+            <div class="info button">
+                    <img src="/resources/images/white.jpg" alt="">
+                    <p class="username"><b href="#">Walter White</b> hizo un commit a eBay.</p>
+            </div> 
+             <div class="info button">
+                    <img src="/resources/images/white.jpg" alt="">
+                    <p class="username"><b href="#">Walter White</b> Es ahora Moderador.</p>
+                   
+            </div>
+            <div class="info button">
+                    <img src="/resources/images/white.jpg" alt="">
+                    <p class="username"><b href="#">Walter White</b> Es ahora amigo de  Walter White.</p>
+                  
+            </div>
+            <div class="info button">
+                    <img src="/resources/images/white.jpg" alt="">
+                    <p class="username"><b href="#">Walter White</b> hizo un commit a eBay.</p>
+            </div> 
+             <div class="info button">
+                    <img src="/resources/images/white.jpg" alt="">
+                    <p class="username"><b href="#">Walter White</b> Es ahora Moderador.</p>
+                   
+            </div>
+            <div class="info button">
+                    <img src="/resources/images/white.jpg" alt="">
+                    <p class="username"><b href="#">Walter White</b> Es ahora amigo de  Walter White.</p>
+                  
+            </div>
+            <div class="info button">
+                    <img src="/resources/images/white.jpg" alt="">
+                    <p class="username"><b href="#">Walter White</b> hizo un commit a eBay.</p>
+            </div> 
+             <div class="info button">
+                    <img src="/resources/images/white.jpg" alt="">
+                    <p class="username"><b href="#">Walter White</b> Es ahora Moderador.</p>
+                   
+            </div>
+            <div class="info button">
+                    <img src="/resources/images/white.jpg" alt="">
+                    <p class="username"><b href="#">Walter White</b> Es ahora amigo de  Walter White.</p>
+                  
+            </div>
+            <div class="info button">
+                    <img src="/resources/images/white.jpg" alt="">
+                    <p class="username"><b href="#">Walter White</b> hizo un commit a eBay.</p>
+            </div> 
+             <div class="info button">
+                    <img src="/resources/images/white.jpg" alt="">
+                    <p class="username"><b href="#">Walter White</b> Es ahora Moderador.</p>
+                   
+            </div>
+            <div class="info button">
+                    <img src="/resources/images/white.jpg" alt="">
+                    <p class="username"><b href="#">Walter White</b> Es ahora amigo de  Walter White.</p>
+                  
+            </div>
+            <div class="info button">
+                    <img src="/resources/images/white.jpg" alt="">
+                    <p class="username"><b href="#">Walter White</b> hizo un commit a eBay.</p>
+            </div> 
+        </ul>
+        
+        </div>
+        </div>
+      <div id="resizeBottom">
+       <div id="chat">
+        <ul>
+        </ul>
+        
+        </div>
+        </div>
+        </div>
+        <section id="search">
+            <i id="searchIcon"></i>
+           <input type="text" placeholder="Buscar">
+        </section>
+    </aside>
+    <section id="Store" class="button">
+        <aside id="storeHeader" class="button">
+            
+        </aside>
+        <aside id="actualStore" class="button">
+            <aside id="storeList" class="button">
+                <ul>
+                    <a>
+                        <li class="button">Sección</li>
+                    </a>
+                    <a>
+                        <li class="button">Sección</li>
+                    </a>
+                    <a>
+                        <li class="button">Sección</li>
+                    </a>
+                    <a>
+                        <li class="button">Sección</li>
+                    </a>
+                    <a>
+                        <li class="button">Sección</li>
+                    </a>
+                    <a>
+                        <li class="button">Sección</li>
+                    </a>
+                    <a>
+                        <li class="button">Sección</li>
+                    </a>
+                    <a>
+                        <li class="button">Sección</li>
+                    </a>
+                </ul>
+            </aside>
+            <aside id="storeSection">
+                
+            </aside>
+        </aside>
+       
+    </section>
+    <section id="chats">
+    <div class="chats">
+
+
+    </div>
+  </section>
+  <script>
+          $("#notifications").mCustomScrollbar({theme: 
+        "minimal-dark", 
+        autoExpandScrollbar: true,
+        scrollInertia: 100,
+         mouseWheel:{ scrollAmount: 40 }
+
+    });
+      $("#chat").mCustomScrollbar({theme: 
+        "minimal-dark", 
+        autoExpandScrollbar: true,
+        scrollInertia: 100,
+            mouseWheel:{ scrollAmount: 40 }
+
+             });
+    </script>
+  <script src="../js/courses/grid.js"></script>
+        <script>
+            $(function() {
+                Grid.init();
+            });
+        </script>
+<script>
+    $( "#resizeBottom" ).resizable({
+      handles: "n",maxHeight: ($(window).height()-$("#sidebar #search").outerHeight() - 51),minHeight: 50 }
+                                  ).bind("resize", function (e, ui) {
+      $(this).css("top", "auto");
+    }
+                                        );
+    
+  </script>
+</body>
+</html>
+<!--For GitHub Pages Page To Refresh-->  
