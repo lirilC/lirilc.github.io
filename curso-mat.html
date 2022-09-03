@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+      <title>
+         Matemáticas | liril
+      </title>
+      <link rel="shortcut icon" type="image/ico" href="resources/icons/favicon.ico" />
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,600,700' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="css/animate.css">
+      <link rel="stylesheet" href="css/curso/style.css">
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/video-js.css">
+      <link rel="stylesheet" href="css/jquery-ui.min.css">
+      <script src="js/jquery.js"></script>
+      <script src="js/video.js"></script>
+      <script src="js/curso/main.js"></script>
+      <script src="js/jquery.knob.js"></script>
+      <script src="js/jquery.fittext.js"></script>
+      <script src="js/jquery-ui.min.js"></script>
+      <script src="js/jquery.ui.resizable.snap.ext.js"></script>
+      <script>
+         $(function ($) {
+         
+            $(".knob").knob({
+                change: function (value) {
+                    //console.log("change : " + value);
+                },
+                release: function (value) {
+                    //console.log(this.$.attr('value'));
+                    console.log("release : " + value);
+                },
+                cancel: function () {
+                    console.log("cancel : ", this);
+                },
+                /*format : function (value) {
+                  return value + '%';
+                  }
+                  ,*/
+                draw: function () {
+         
+                    // "tron" case
+                    if (this.$.data('skin') == 'tron') {
+         
+                        this.cursorExt = 0.3;
+         
+                        var a = this.arc(this.cv) // Arc
+                            ,
+                            pa // Previous arc
+                            , r = 1;
+         
+                        this.g.lineWidth = this.lineWidth;
+         
+                        if (this.o.displayPrevious) {
+                            pa = this.arc(this.v);
+                            this.g.beginPath();
+                            this.g.strokeStyle = this.pColor;
+                            this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, pa.s, pa.e, pa.d);
+                            this.g.stroke();
+                        }
+         
+                        this.g.beginPath();
+                        this.g.strokeStyle = r ? this.o.fgColor : this.fgColor;
+                        this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, a.s, a.e, a.d);
+                        this.g.stroke();
+         
+                        this.g.lineWidth = 2;
+                        this.g.beginPath();
+                        this.g.strokeStyle = this.o.fgColor;
+                        this.g.arc(this.xy, this.xy, this.radius - this.lineWidth + 1 + this.lineWidth * 2 / 3, 0, 2 * Math.PI, false);
+                        this.g.stroke();
+         
+                        return false;
+                    }
+                }
+            });
+         
+            // Example of infinite knob, iPod click wheel
+            var v, up = 0,
+                down = 0,
+                i = 0,
+                $idir = $("div.idir"),
+                $ival = $("div.ival"),
+                incr = function () {
+                    i++;
+                    $idir.show().html("+").fadeOut();
+                    $ival.html(i);
+                },
+                decr = function () {
+                    i--;
+                    $idir.show().html("-").fadeOut();
+                    $ival.html(i);
+                };
+            $("input.infinite").knob({
+                min: 0,
+                max: 20,
+                stopper: false,
+                change: function () {
+                    if (v > this.cv) {
+                        if (up) {
+                            decr();
+                            up = 0;
+                        } else {
+                            up = 1;
+                            down = 0;
+                        }
+                    } else {
+                        if (v < this.cv) {
+                            if (down) {
+                                incr();
+                                down = 0;
+                            } else {
+                                down = 1;
+                                up = 0;
+                            }
+                        }
+                    }
+                    v = this.cv;
+                }
+            });
+         });
+      </script>
+   </head>
+   <body>
+      <div class="widgetero">
+      </div>
+      <div class="wrapper">
+      </div>
+      <header>
+         <nav>
+            <ul>
+               <li id="back">
+                  <a href="cursos.html">
+                  <span class="back-arrow button">  
+                  </span>
+                  </a>
+               </li>
+               <li id="index">
+                  <section id="index-trigger">
+                     <span class="index-arrow button">
+                     </span>
+                     <span id="index-text" class="text button">
+                     Índice
+                     </span>
+                  </section>
+                  <section id="index-menu" class="button">
+                     <ul>
+                        <a>
+                           <li id="introduccion" class="indexMenuItem animated fadeOutUp button" title="Introducción">
+                              Introducción
+                           </li>
+                        </a>
+                        <a>
+                           <li id="suma" class="indexMenuItem animated fadeOutUp button" title="Suma">
+                              Suma
+                           </li>
+                        </a>
+                        <a>
+                           <li id="resta" class="indexMenuItem animated fadeOutUp button" title="Resta">
+                              Resta
+                           </li>
+                        </a>
+                        <a>
+                           <li id="division" class="indexMenuItem animated fadeOutUp button" title="División">
+                              División
+                           </li>
+                        </a>
+                     </ul>
+                  </section>
+               </li>
+               <li id="controls">
+                  <span id="play">
+                  </span>
+                  <span id="volume">
+                  </span>
+                  <span id="closedCaptions">
+                  </span>
+               </li>
+               <li>
+               </li>
+               <li id="right-menu" class="button">
+                  <span id="customize" class="button"></span>
+                  <section id="dots" class="button">
+                     <span id="store" class="button">
+                     </span>
+                     <span id="dots-icon" class="button">
+                     </span>
+                     <span id="dots-text" class="button">
+                     6'000.600
+                     </span>
+                  </section>
+                  <section id="profileTrigger">
+                  </section>
+                  <div id="profile" class="button">
+                     <img id="profile-pic" src="resources/images/white.jpg" alt="Walter White">
+                     <input class="knob button" data-width="35" data-height= "35" data-fgColor="#fff" data-bgColor="rgba(0,0,0,0)" data-displayInput=false data-thickness=".15" readonly value="60">
+                  </div>
+                  <span class="index-arrow button">
+                  </span>
+                  <section id="profileSettings">
+                  </section>
+               </li>
+               <li>
+               </li>
+            </ul>
+         </nav>
+      </header>
+      <section id="customizationBars" class="button">
+         <aside id="storeHeader" class="button">
+         </aside>
+         <aside id="actions">
+            <table class="tabs">
+               <td class="button actual"></td>
+               <td class="button resize on"></td>
+               <td class="button select"></td>
+               <td class="button cut"></td>
+               <td class="button copy"></td>
+               <td class="button paste"></td>
+               <td class="button delete"></td>
+            </table>
+            <table class="tabs">
+               <td colspan="2" class="button actual width inputed ">
+                  <input type="number" min="1" max="100" onchange="handleChange(this);">
+               </td>
+               <td colspan="2" class="button height inputed inputw">
+                  <input type="number" min="1" max="100" onkeydown="apply()" onchange="handleChange(this);">
+               </td>
+               <td colspan="2" class="button grid"><span>Snap</span></td>
+               <td class="button magnet on"></td>
+            </table>
+            <section>
+               <div class="presets">
+               </div>
+               <div class="snapping">
+               </div>
+            </section>
+         </aside>
+         <aside id="list">
+            <ul class="tabs">
+               <li class="button">Presets</li>
+               <li class="button">Add-ons</li>
+               <li class="button actual">Widgets</li>
+            </ul>
+            <ul class="widgets">
+               <li>
+                  <div class="widget" cont= "<iframe src= 'widgets/calculadora.html' width= '100%' height= '100%'></iframe>" style="height:200px; width: 100px">  
+                  </div>
+                  <img src="resources/images/widgets/calculadora.png" alt="">
+               </li>
+               <li>
+                  <div class="widget" cont= "<iframe width='100%' height='100%' src='https://www.youtube.com/embed/SrvKADxxsqg' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>" style="height:94px; width: 178.7159985714px">
+                  </div>
+                  <img src="bandera.png" alt="">
+               </li>
+               <li>
+                  <div class="widget" cont= "<iframe width='100%' height='100%' src='https://www.youtube.com/embed/KSo-xPvtDAQ' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>" style="height:94px; width: 164.714285714px">
+                  </div>
+                  <img src="rrr4.png" alt="">
+               </li>
+               <li>
+                  <div class="widget" cont= "<iframe width='100%' height='100%' src='https://www.youtube.com/embed/eRsGyueVLvQ' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>" style="height:94px; width: 164.714285714px">
+                  </div>
+                  <img src="resources/images/widgets/Sintel.png" alt="">
+               </li>
+               <li>
+                  <div class="widget" cont= "<iframe src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28020.084054557377!2d-80.694108!3d28.614458!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8b6bedb3524b4121!2sNASA+Shuttle+Landing+Facility!5e0!3m2!1sen!2sus!4v1557181476984!5m2!1sen!2sus' width='100%' height='100%' frameborder='0' style='border:0' allowfullscreen></iframe>" style="height:300px; width: 400px">
+                  </div>
+                  <img src="resources/images/widgets/mapa.png" alt="">
+               </li>
+               <li>
+                <div class="widget" style="height: 170px; width: 500px;" cont="<iframe src='https://flat.io/embed/626074cef876db0012f9ac62?layout=page&sharingKey=b773cfaec5937a198acaa073db8ba325e791780d51e1954e4522384dad30ec473d3a6e5bf52985cd079b676860dec196c802986bdc32f6e98c80820387aae2db&parts=5c8f7d20-d869-9d6e-6e25-7dd5be76ac10%2Cf336cd41-37b7-dca8-f0ca-dc68cf1bb010' height='100%' width='100%' frameBorder='0' allowfullscreen allow='midi'></iframe>" style="height:170px; width: 500px">
+                  </div>
+                  <img src="resources/images/widgets/LedZeppelin.jpg" alt="">
+               </li>
+               <li>
+                  <div class="widget" cont= "<img src= '92634853_234823197898312_1095566356717240320_n.jpg' style= 'width: 100%; height: 100%; '></img>" style="height:168px; width: 89px">
+                  </div>
+                  <img src="double_filter.png" alt="">
+               </li>
+               <li>
+                  <div class="widget" cont= "<iframe height='100%' width='100%' src='https://repl.it/@Dizzey/Tryage?lite=true' scrolling='no' frameborder='no' allowtransparency='true' allowfullscreen='true' sandbox='allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals'></iframe>" style="height:248px; width: 350px">
+                  </div>
+                  <img src="code.png" alt="">
+               </li>
+               <li>
+                  <div class="widget" cont= "<iframe height='100%' style='width: 100%;' scrolling='no' title='dinosaurios(); ' src='https://codepen.io/lirilco/embed/RwawRwr?theme-id=light&default-tab=js,result' frameborder='no' loading='lazy' allowtransparency='true' allowfullscreen='true'> See the Pen <a href='https://codepen.io/lirilco/pen/RwawRwr'>dinosaurios(); </a> by Liril (<a href='https://codepen.io/lirilco'>@lirilco</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>" style="height:248px; width: 350px">
+                  </div>
+                  <img src="dinosaurios.png" alt=""> 
+               </li>
+               <!--               
+               <li>
+                  <div class="widget" style="width:137.5px; height: 100px">
+                     <div class="content">
+                        <object width= "100%" height= "100%" data="Eldelprincipio0.0.2.8.1.swf" type="application/x-shockwave-flash">
+                           <param name="foo" value="bar">
+                        </object>
+                     </div>
+                  </div>
+                  <img style= "width: 52px; height: 100%; background-color: #f3fd3e" alt=""> 
+               </li>
+               <li>
+                  <div class="widget" style="width:137.5px; height: 100px">
+                     <div class="content">
+                        <object width= "100%" height= "100%" data="Divinity.swf" type="application/x-shockwave-flash">
+                           <param name="foo" value="bar">
+                        </object>
+                     </div>
+                  </div>
+                  <img style= "width: 52px; height: 100%; background-color: #d30" alt="">
+               </li>
+               <li>
+                  <div class="widget" style="width:137.5px; height: 100px">
+                     <div class="content">
+                        <object width= "100%" height= "100%" data="Divinity0.0.0.2.swf" type="application/x-shockwave-flash">
+                           <param name="foo" value="bar">
+                        </object>
+                     </div>
+                  </div>
+                  <img style= "width: 52px; height: 100%; background-color: #29e22f" alt="">
+               </li>
+               <li>
+                  <div class="widget" style="width:137.5px; height: 100px">
+                     <div class="content">
+                        <object width= "100%" height= "100%" data="Cheeta.swf" type="application/x-shockwave-flash">
+                           <param name="foo" value="bar">
+                        </object>
+                     </div>
+                  </div>
+                  <img style= "width: 52px; height: 100%; background-color: #cf230e" alt="">
+               </li>
+               <li>
+                  <div class="widget" style="width:137.5px; height: 100px">
+                     <div class="content">
+                        <object width= "100%" height= "100%" data="SA2.swf" type="application/x-shockwave-flash">
+                           <param name="foo" value="bar">
+                        </object>
+                     </div>
+                  </div>
+                  <img style= "width: 52px; height: 100%; background-color: #3382ed" alt="">
+               </li>
+               <li>
+                  <div class="widget" style="width:137.5px; height: 100px">
+                     <div class="content">
+                        <object width= "100%" height= "100%" data="Azul.swf" type="application/x-shockwave-flash">
+                           <param name="foo" value="bar">
+                        </object>
+                     </div>
+                  </div>
+                  <img style= "width: 52px; height: 100%; background-color: #3261ff" alt="">
+               </li>
+               <li>
+                  <div class="widget" style="width:137.5px; height: 100px">
+                     <div class="content">
+                        <object width= "100%" height= "100%" data="ElElephant.swf" type="application/x-shockwave-flash">
+                           <param name="foo" value="bar">
+                        </object>
+                     </div>
+                  </div>
+                  <img style= "width: 52px; height: 100%; background-color: #18e" alt="">
+               </li>
+               -->
+               <li>
+                  <div class="widget" cont= "<iframe scrolling='no' marginwidth='0' marginheight='0' frameborder='0' width='100%' height='100%' allowfullscreen src='https://cdn.chatytvgratis.net/rcn01.php'></iframe>"style="width:138px; height: 77px">
+                  </div>
+                  <img style= "width: auto; height: 100%;" src= "RCN.png" alt=""> 
+               </li>
+               <li>
+                  <div class="widget" cont= "<iframe scrolling='no' marginwidth='0' marginheight='0' frameborder='0' width='100%' height='100%' allowfullscreen src='https://cdn.chatytvgratis.net/caracol01.php'></iframe>" style="width:138px; height: 77px">
+                  </div>
+                  <img style= "width: auto; height: 100%; " src= "Caracol.png" alt=""> 
+               </li>
+               <li>
+                  <div class="widget" cont= "<iframe src= 'https://media.rtvc.gov.co/kalturartvc/indexSC.html' width= '100%' height= '100%'></iframe>" style="width:137.218px; height: 77px">
+                  </div>
+                  <img style= "width: auto; height: 100%; " src= "Señal Colombia.jpg" alt=""> 
+               </li>
+               <li>
+                  <div class="widget" cont= "<iframe src='http://player.cdnmedia.tv/embed/0192a203' width='100%' height='100%' frameborder='0' scrolling='no' allowfullscreen> </iframe>" style="width:138px; height: 77px">
+                  </div>
+                  <img style= "width: auto; height: 100%; " src= "Telemedellín.jpg" alt=""> 
+               </li>
+               <li>
+                  <div class="widget" cont= "<iframe src='https://cdn.chatytvgratis.net/player/jwplayer.php?id=https://hdvideo2.cdn.net.co/live01/ta.m3u' width='100%' height='100%' frameborder='0' scrolling='no' allowfullscreen></iframe>" style="width:137.5px; height: 100px">
+                  </div>
+                  <img style= "width: auto; height: 100%; " src= "Teleantioquia.png" alt=""> 
+               </li>
+               <li>
+                  <div class="widget" cont= "<iframe src='https://cdn.chatytvgratis.net/player/jwplayer.php?id=https://hdvideo2.cdn.net.co/live01/ta.m3u' width='100%' height='100%' frameborder='0' scrolling='no' allowfullscreen></iframe>" style="width:137.5px; height: 100px">
+                  </div>
+                  <img style= "width: auto; height: 100%; " src= "Teleantioquia.png"a lt=""> 
+               </li>
+            </ul>
+         </aside>
+      </section>
+      <section id="Store" class="button">
+         <aside id="storeHeader" class="button">
+         </aside>
+         <aside id="actualStore" class="button">
+            <aside id="storeList" class="button">
+               <ul>
+                  <a>
+                     <li class="button">Sección</li>
+                  </a>
+                  <a>
+                     <li class="button">Sección</li>
+                  </a>
+                  <a>
+                     <li class="button">Sección</li>
+                  </a>
+                  <a>
+                     <li class="button">Sección</li>
+                  </a>
+                  <a>
+                     <li class="button">Sección</li>
+                  </a>
+                  <a>
+                     <li class="button">Sección</li>
+                  </a>
+                  <a>
+                     <li class="button">Sección</li>
+                  </a>
+                  <a>
+                     <li class="button">Sección</li>
+                  </a>
+               </ul>
+            </aside>
+            <aside id="storeSection">
+            </aside>
+         </aside>
+      </section>
+      <section id="video">
+         <video id="example_video_1" controls class="video-js vjs-default-skin" preload="none" width="100%" height="264" poster="resources/images/thumb-mat.png" data-setup="{}">
+            <source src="resources/videos/mat/curso.webm" type='video/webm' />
+            <source src="resources/videos/mat/curso.mp4" type='video/mp4' />
+            <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+            <!-- Tracks need an ending tag         thanks to IE9 -->
+            <p class="vjs-no-js">
+               Para ver este vídeo, por favor activa el Javascript y considera actualizar tu navegador a uno que
+               <a href="http://videojs.com/       html5-video-support/" target="_blank">
+               soporte vídeo en Html5
+               </a>
+            </p>
+         </video>
+      </section>
+      <section id="timeline">
+      </section>
+      <script>
+         function apply() {
+             a = $(".inputw").value
+             $(".selectedWidget").width(a)
+         }
+         
+         function handleChange(input) {
+             if (input.value < 1) input.value = 1;
+             if (input.value > 100) input.value = 100;
+         }
+      </script>
+      <script>
+         var player = videojs('example_video_1');
+      </script>
+      <script>
+         jump("#introduccion",0);
+         jump("#suma",47);
+         jump("#resta",84);
+         jump("#division",151);
+      </script>
+   </body>
+</html>
