@@ -1,0 +1,771 @@
+.disabled {
+  background: #e6e0e0;
+  color: #d9938d;
+  border: 1px solid #ccc;
+  outline: none !important;
+}
+#wrapper
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: #000;
+    opacity: 0.6;
+    z-index: 3;
+}   
+.theater
+{
+    display:none;
+}
+#theater
+{
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    position: fixed;
+    height: 500px;
+    background-color: #fff;
+    z-index: 3;
+    top: 20px;
+    max-width: 1400px;
+}
+#theater #picContainer
+{
+    position: relative;
+    height: 100%;
+    background-color: #fff
+} 
+#theater #bigPic
+{
+   position: absolute;
+     width: 100%;
+       height: 100%;
+top: 0;
+bottom: 0;
+left: 0;
+object-fit: contain;
+margin: auto ;
+
+}
+
+#theater .info p
+{
+    
+   font-size: 14px;
+       width: auto !important;
+
+
+}
+#theater .title
+{
+    
+  color: #666;
+    font-weight: bold
+
+}
+#theater .more
+{
+  color: #666 !important;
+  font-size: 15px;
+    margin: 0;
+}
+
+.options
+{
+    
+    height: 60px;
+    
+
+}
+.options ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 50px;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+} 
+#theater .options
+{
+   
+    bottom: 0;
+position: absolute;
+width: 100%;
+left: 0;
+    
+} 
+#theater .options ul
+{
+   
+    line-height: 0;
+    
+} 
+#theater .options ul li
+{
+   
+font-size: 40px    
+} 
+.options ul li
+{
+display: inline-block;
+    width: 30%;;
+    margin: 0;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    font-family: "icomoon";
+    line-height:50px;
+    font-size: 30px;
+    cursor: pointer;
+    
+    
+} 
+.options ul li.bookmark:after
+{
+content: "\f097"
+} 
+.options ul li.bookmark.true:after
+{
+content: "\f02e"
+} 
+.options ul li.star:after
+{
+content: "\e60d"
+} 
+.options ul li.star.true:after
+{
+content: "\e60c"
+} 
+.options ul li.read:after
+{
+content: "\e627"
+} 
+#theater .comments
+{
+    width: 300px;
+    display: inline-block;
+     padding: 20px;
+    position: absolute;
+top: 0;
+right: 0;
+}
+#theater .comments #close
+{
+    text-align: right;
+    font-size: 9px;
+    color: #bbb;
+    margin: 5px 5px;
+    font-family: "icomoon";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px;
+    cursor: pointer
+    
+}
+
+#theater .comments #close:before
+{
+    content: "\e60e"
+}
+#gallery img 
+{ 
+    cursor: pointer; 
+} 
+.info  img{
+    height: 40px !important;
+    width: 40px!important;
+    cursor: pointer;
+}
+.story .info  p{
+    width: auto !important;
+    font-size: 15px
+}
+.info  .time {
+    color: #aaa;
+    font-size: 14px;
+    margin: 0;
+   
+}
+.info  p a{
+  font-weight: bold;
+    text-decoration: none;
+}
+#theater .title
+{
+    
+  color: #666;
+    font-weight: bold
+
+}
+#theater .more
+{
+  color: #666 !important;
+  font-size: 15px;
+    margin: 0;
+}
+
+.options
+{
+    
+    height: 60px;
+    
+
+}
+.options ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 50px;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+} 
+#theater .options
+{
+   
+    bottom: 0;
+position: absolute;
+width: 100%;
+left: 0;
+    
+} 
+#theater .options ul
+{
+   
+    line-height: 0;
+    
+} 
+#theater .options ul li
+{
+   
+font-size: 40px    
+} 
+.options ul li
+{
+    display: inline-block;
+    width: 30%;;
+    margin: 0;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    font-family: "icomoon";
+    line-height:50px;
+    font-size: 30px;
+    cursor: pointer;
+    
+    
+} 
+.options ul li.bookmark:after
+{
+content: "\f097"
+} 
+.options ul li.bookmark.true:after
+{
+content: "\f02e"
+} 
+.options ul li.star:after
+{
+content: "\e60d"
+} 
+.options ul li.star.true:after
+{
+content: "\e60c"
+} 
+.options ul li.read:after
+{
+content: "\e627"
+} 
+#theater .comments
+{
+    width: 300px;
+    display: inline-block;
+     padding: 20px;
+    position: absolute;
+top: 0;
+right: 0;
+}
+#theater .comments #close
+{
+    text-align: right;
+    font-size: 9px;
+    color: #bbb;
+    margin: 5px 5px;
+    font-family: "icomoon";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px;
+    cursor: pointer
+    
+}
+
+#theater .comments #close:before
+{
+    content: "\e60e"
+}
+.info img
+{
+    position: static;
+    display: inline-block;
+}
+.info p
+{
+    margin: 0;
+        color: #666;
+
+    position: static;
+   font-size: 13px ;
+    display: inline-block;
+    width:  140px;
+    vertical-align: top;
+}
+  
+body 
+{ 
+    color: #2ecc71; 
+} 
+  
+#file_expl 
+{ 
+    white-space: nowrap; 
+    display: flex; 
+    display: -webkit-box; 
+    display: -moz-box; 
+    display: -ms-flexbox; 
+    display: -webkit-flex; 
+} 
+
+#file_expl #files, #file_expl #preview 
+{ 
+    width: 50%; 
+    height: 100% !important; 
+    display: inline-block; 
+    white-space: normal; 
+    position: relative; 
+} 
+  
+#file_expl #preview .file_tree
+{ 
+    visibility: hidden; 
+    z-index: 3; 
+    position: relative; 
+    overflow-y: auto; 
+} 
+  
+#file_expl #files .file_tree
+{ 
+    overflow-y: auto; 
+    margin-right: 5.5px; 
+} 
+  
+#file_expl #preview .file_tree.visible
+{ 
+    visibility: visible; 
+} 
+
+#files .ui-resizable-e 
+{ 
+    background-color: white; 
+} 
+  
+.file_tree 
+{ 
+    list-style: none; 
+    padding: 0; 
+    margin:0; 
+} 
+  
+
+.file_tree li { 
+    padding: 0; 
+    border-bottom: none; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    opacity: 0; 
+    height: 0; 
+    transition: top 100ms ease-in-out, visibility 0ms ease-in-out, opacity 100ms ease-in-out; 
+    word-wrap: unset; 
+    word-break: break-all; 
+    text-overflow: ellipsis; 
+    overflow: hidden; 
+    max-height: 26px !important; 
+} 
+  
+.file_tree li:hover { 
+   text-decoration: underline; 
+   cursor: pointer; 
+} 
+
+.file_tree .folder { 
+    background-color: #def; 
+    width: 100%; 
+    box-sizing: border-box; 
+    width: 100%; 
+    box-sizing: border-box; 
+} 
+  
+.file_tree .file { 
+    color: #666; 
+    width: 100%; 
+    box-sizing: border-box; 
+    word-wrap: anywhere; 
+    white-space: break-spaces; 
+    word-break: break-all; 
+} 
+
+#file_expl #information_cont 
+{ 
+    position: absolute; 
+    width: 100%; 
+    top: 26.4px; 
+    visibility: hidden; 
+    opacity: 0;
+    transition: visibility 0ms ease-in-out, opacity 382ms ease-in-out; 
+    color: #666 !important; 
+    box-sizing: border-box; 
+} 
+
+#file_expl #information_cont.visible
+{ 
+    visibility: visible; 
+    opacity: 1;
+    padding-right: 6px;
+} 
+  
+#file_expl #information 
+{ 
+    width: 100%; 
+    height: 100%; 
+    box-sizing: border-box; 
+    padding-top: 26px; 
+    overflow: auto; 
+} 
+#information > i 
+{ 
+    margin-left: 20px; 
+} 
+#file_expl #information .Historia
+{
+  background-color: #fff;
+  box-shadow: 0 6px 0 #bdc3c7;
+  color: #9B9B9B;
+  position: absolute;
+  bottom: 7px;
+  border-radius: 3px;
+  border: none;
+  display: block;
+  font-size: 25px;
+  margin: 0.2em auto;
+  padding: 10px 3%;
+  width: 6em;
+  position: absolute;
+  top: 0;
+  right: 23px;
+  height: 34px;
+  box-sizing: content-box;
+}
+
+#file_expl #information .Historia:active
+{
+  background-color: #E3E6E7;
+  bottom: 1px;
+  border-width: 0;
+  outline: none;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3), inset 0 2px 1px rgba(0, 0, 0, 0.4), 0 2px #ecf0f1;
+  top: 6px;
+}  
+#file_expl #information #historia li
+{
+    list-style: none;
+    width: 100%;
+    padding: 2.7px 10px;
+    border-bottom: 0.1px solid #ccc;
+    cursor: pointer;
+    color: #886555;
+    word-wrap: anywhere;
+    white-space: break-spaces;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-height: 28.4px;
+    box-sizing: border-box;
+}
+#file_expl #information #historia li:first-child
+{
+    max-height: 29.4px;
+    border-top: 0.1px solid #ccc;
+}
+#file_expl #information #historia li.selected
+{
+    background: #d2d2d2;
+    color: #8e8e8e;
+}
+#file_expl #information #historia
+{
+    padding: 0; 
+    margin: 0; 
+}  
+.file_tree li.inScope 
+{ 
+    height: auto; 
+    opacity: 1; 
+    padding: 1.7px 10px; 
+    border-bottom: 0.1px solid #ccc; 
+} 
+
+.file_tree .folder_cont.inScope>.folder:first-child
+{ 
+    height: auto; 
+    opacity: 1; 
+    padding: 1.7px 10px; 
+    border-bottom: 0.1px solid #ccc; 
+} 
+
+.file_tree .folder_cont > .folder.inScope
+{ 
+    height: auto; 
+    opacity: 1; 
+    padding: 1.7px 10px; 
+    border-bottom: 0.1px solid #ccc; 
+} 
+  
+.folder_cont 
+{ 
+    width: 100%; 
+    box-sizing: border-box; 
+    transition: top 100ms ease-in-out, visibility 0ms ease-in-out, opacity 100ms ease-in-out; 
+} 
+#file_expl #preview #file_preview #options
+{ 
+    width: 100%; 
+    height: 14.7px; 
+    background-color: white; 
+} 
+
+#file_expl #preview #file_preview #file, #file_expl #preview #file_preview #filePr, #file_expl #preview #file_preview #edit
+{ 
+    width: 100%; 
+    position: absolute; 
+    top: 14.7px; 
+    visibility: hidden; 
+    opacity: 0; 
+    transition: visibility 0ms ease-in-out, opacity 100ms ease-in-out; 
+} 
+#file_expl #preview #file_preview #options ul
+{ 
+    list-style: none; 
+    margin: 0; 
+    line-height: 1; 
+    font-size: 11.9px; 
+    text-align: center; 
+    padding: 0; 
+    color: #666 !important; 
+    cursor: default; 
+} 
+#file_expl #preview #file_preview #options ul li
+{ 
+    display: inline-block; 
+} 
+#file_expl #preview #file_preview #options ul li a
+{ 
+    cursor: pointer; 
+} 
+#file_expl #preview #file_preview #options ul li.selected a
+{ 
+    color: #ccc !important; 
+    cursor: default; 
+} 
+#file_expl #preview #file_preview #options ul li#Live.selected.modified a 
+{ 
+    color: #c7ca63 !important; 
+} 
+#file_expl #preview #file_preview #options ul li#Editar.modified::after {
+    content: "●";
+    width: 7.88em;
+    height: 7.88em;
+    color: #d1dd7e;
+    margin-left: 5px;
+}
+#file_expl #preview #file_preview #file 
+{ 
+
+    overflow-y: auto; 
+    background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.0980392) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.0980392) 75%, rgba(0, 0, 0, 0.0980392) 0), -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.0980392) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.0980392) 75%, rgba(0, 0, 0, 0.0980392) 0), white;
+    background: -moz-linear-gradient(45deg, rgba(0, 0, 0, 0.0980392) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.0980392) 75%, rgba(0, 0, 0, 0.0980392) 0), -moz-linear-gradient(45deg, rgba(0, 0, 0, 0.0980392) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.0980392) 75%, rgba(0, 0, 0, 0.0980392) 0), white;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.0980392) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.0980392) 75%, rgba(0, 0, 0, 0.0980392) 0), linear-gradient(45deg, rgba(0, 0, 0, 0.0980392) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.0980392) 75%, rgba(0, 0, 0, 0.0980392) 0), white;
+    background-repeat: repeat, repeat;
+    background-position: 0px 0, 5px 5px;
+    -webkit-transform-origin: 0 0 0;
+    transform-origin: 0 0 0;
+    -webkit-background-origin: padding-box, padding-box;
+    background-origin: padding-box, padding-box;
+    -webkit-background-clip: border-box, border-box;
+    background-clip: border-box, border-box;
+    -webkit-background-size: 10px 10px, 10px 10px;
+    background-size: 10px 10px, 10px 10px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-shadow: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+    -webkit-transform: scaleX(1) scaleY(1) scaleZ(1);
+    transform: scaleX(1) scaleY(1) scaleZ(1);
+} 
+  
+#file_expl #preview #file_preview #filePr div 
+{ 
+    width: 100%; 
+    height: 100%; 
+} 
+#file_expl #preview #file_preview #filePr div iframe 
+{ 
+    width: 100%; 
+    height: 100%; 
+    border: none; 
+    position: absolute; 
+} 
+
+#file_expl #preview #file_preview #file pre 
+{ 
+    margin: 0; 
+    border-radius: 0; 
+    overflow: hidden; 
+    padding-top: 2em; 
+    padding-bottom: 16px; 
+    padding-left: 12.8px; 
+    padding-right: 42.8px; 
+} 
+  
+#file_expl #preview #file_preview #file img, #file_expl #preview #file_preview #file video 
+{ 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    object-fit: contain; 
+    margin: auto; 
+} 
+
+#file_expl #preview #file_preview .code-scroll 
+{ 
+    width: 100%; 
+    overflow-x: auto; 
+    position: relative; 
+    z-index: 199538; 
+} 
+
+#file_expl #preview #file_preview .code-filler 
+{ 
+    height: 1px; 
+    position: absolute;; 
+} 
+
+#file_expl #files 
+{ 
+    overflow-y: auto; 
+    overflow-x: hidden; 
+} 
+  
+#files .ui-resizable-handle.ui-resizable-e 
+{ 
+    width: 6px; 
+    right: 0; 
+} 
+  
+#editor span 
+{ 
+    font-family: "consolas"; 
+} 
+  
+#options ul li 
+{ 
+    color: #2ecc71;   
+} 
+.contnr
+{
+    width: max-content; 
+}
+.contnr > span
+{
+    padding-right: 20px; 
+}
+#buscar 
+{ 
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding-left: 135px;
+  height: 40px;
+  padding-top: 4px;
+  box-sizing: border-box;
+  padding-right: 300px;
+} 
+.buscar 
+{ 
+    max-width: 100%; 
+} 
+header nav ul li#right-menu #store::before {
+    /*background-image: url("https://www.freepnglogos.com/uploads/santa-hat-png/download-santa-hat-png-transparent-image-and-clipart-2.png");*/ 
+    background-repeat: no-repeat;
+    height: 16px;
+    display: inline-block;
+    width: 16px;
+    background-size: contain;
+    background-position-x: -3px;
+}
+#file_expl #preview #file_preview #edit iframe{ 
+    width: 100%; 
+    height: 100%; 
+    border: none; 
+} 
+#forkedFrom
+{
+    position: fixed; 
+    background: #fff; 
+    top: 46px;
+    /*! height: 90px; */
+    color: #bbb;
+    right: 0.4em;
+}
+#forkedFrom:before {
+  content: "\e900";
+  font-family: "icomoon";
+  margin: 12px 19px;
+}
+#forkedFrom a {
+    color: #2ecc71 !important;
+    text-decoration: none;
+    outline: none !important;
+}
+#forkedFrom a:hover {
+    text-decoration: underline; 
+}
+div#contextmenu ul {
+  padding: 0;
+}
+div#contextmenu ul > li {
+  list-style: none;
+  width: 100%;
+  padding: 0 !important;
+  height: 21px; 
+  color: #c2009d9c; 
+}
+div#contextmenu ul > li button {
+  font-size: 11px;
+  height: 100%;
+  width: 100%;
+}
+badguy 
+{ 
+    display: none; 
+} 
