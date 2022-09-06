@@ -390,7 +390,7 @@ K100= function(builds){
         (!hashes[w1] || (!!cold && (cold.hash)))? (function(){ 
             var oReq= new XMLHttpRequest(); 
             oReq.addEventListener("load", function(e){k300(e, w1, t, "blog")}); 
-            oReq.open("GET", "https://api.github.com/repos/LirilCo/lirilco.github.io/commits?path=" +  w1 + ".html"); 
+            oReq.open("GET", "https://api.github.com/repos/LirilC/lirilc.github.io/commits?path=" +  w1 + ".html"); 
             oReq.setRequestHeader('Authorization', "token " + token); 
             oReq.send(); 
         })(): 1; 
@@ -401,7 +401,7 @@ K0= function(){
 
     var oReq= new XMLHttpRequest(); 
     oReq.addEventListener("load", function(e){K100(e)}); 
-    oReq.open("GET", "https://api.github.com/repos/LirilCo/lirilco.github.io/pages/builds"); 
+    oReq.open("GET", "https://api.github.com/repos/LirilC/lirilc.github.io/pages/builds"); 
     oReq.setRequestHeader('Authorization', "token " + token); 
     oReq.send();
 }
@@ -452,7 +452,7 @@ $(document).on("ready",function(){
     }); 
     /*var oReq = new XMLHttpRequest();
     oReq.addEventListener("load", K0);
-    oReq.open("get", "https://cdn.filestackcontent.com/4cpMUkITTAGimI5om7YA");
+    oReq.open("get", "https://cdn.filestackcontent.com/T1JT7NWRhigB2KGvZN7g");
     oReq.send();*/ 
     $("#theater .read").on("click", function(){ 
         !$("#theater .description").hasClass("closed")? $("#theater .description").addClass("closed"): $("#theater .description").removeClass("closed"); 

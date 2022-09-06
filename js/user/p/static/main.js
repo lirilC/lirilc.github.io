@@ -104,7 +104,7 @@ $(LEB).css({"border-bottom": ""})
     
 setTimeout(function(){i.target.style.top= 0; ok= false; 
 }, 1); 
-setTimeout(function(){!$("#file_expl #information_cont").hasClass("visible")? (function(){$("#file_expl #information_cont").toggleClass("visible"); $("#file_expl #information_cont #information").html("<i>Infor</i><button class='Historia'>Historia</button>"); $(".Historia").on("click", function(){var oReq= new XMLHttpRequest();oReq.addEventListener("load", ee);oReq.open("GET", "https://api.github.com/repos/LirilCo/lirilco.github.io/commits?path=" + FileToRequest);oReq.setRequestHeader('Authorization', "token " + token);crawl();oReq.send();}); })(): 666; ok= true; 
+setTimeout(function(){!$("#file_expl #information_cont").hasClass("visible")? (function(){$("#file_expl #information_cont").toggleClass("visible"); $("#file_expl #information_cont #information").html("<i>Infor</i><button class='Historia'>Historia</button>"); $(".Historia").on("click", function(){var oReq= new XMLHttpRequest();oReq.addEventListener("load", ee);oReq.open("GET", "https://api.github.com/repos/LirilC/lirilc.github.io/commits?path=" + FileToRequest);oReq.setRequestHeader('Authorization', "token " + token);crawl();oReq.send();}); })(): 666; ok= true; 
 }, 101); 
 
 uRL= ""; 

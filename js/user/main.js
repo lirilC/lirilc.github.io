@@ -83,7 +83,7 @@ $('.theater .comments .options .bookmark').removeClass("true");
         autoExpandScrollbar: true,
         scrollInertia: 100});
 
-    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 4 !important; }; "; 
+    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 219 !important; }; "; 
     !!$(".XWW").length? $(".XWW")[0].innerHTML= "#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; ": $("head").append("<style class='XWW'>#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; </style>"); 
     responsive(); 
 }
@@ -223,7 +223,7 @@ $('.theater .comments .options .bookmark').removeClass("true");
     //console.log( th );  
 
     responsive(); 
-    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 4 !important; }; "; 
+    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 219 !important; }; "; 
     !!$(".XWW").length? $(".XWW")[0].innerHTML= "#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; ": $("head").append("<style class='XWW'>#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; </style>"); 
 }
 function openModal(a){
@@ -409,7 +409,7 @@ function openModal(a){
         //lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", "/" + username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf(".")));  
     }
 
-    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 4 !important; }; "; 
+    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 219 !important; }; "; 
     !!$(".XWW").length? $(".XWW")[0].innerHTML= "#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; ": $("head").append("<style class='XWW'>#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; </style>"); 
 }
 function openVideoModal(a){ 
@@ -519,7 +519,7 @@ $('.theater .comments .options .bookmark').removeClass("true");
     responsive()
 
 
-    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 4 !important; }; "; 
+    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 219 !important; }; "; 
     !!$(".XWW").length? $(".XWW")[0].innerHTML= "#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; ": $("head").append("<style class='XWW'>#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; </style>"); 
 }
 function openOtherModal(a){ 
@@ -638,7 +638,7 @@ $('.theater .comments .options .bookmark').removeClass("true");
             $(this).removeClass("activado"); 
         }
     })
-    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 4 !important; }; "; 
+    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 219 !important; }; "; 
     !!$(".XWW").length? $(".XWW")[0].innerHTML= "#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; ": $("head").append("<style class='XWW'>#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; </style>"); 
 }
 function openVidModal(a){ 
@@ -741,7 +741,7 @@ $('.theater .comments .options .bookmark').removeClass("true");
         scrollInertia: 100});
       
 
-    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 4 !important; }; "; 
+    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 219 !important; }; "; 
     !!$(".XWW").length? $(".XWW")[0].innerHTML= "#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; ": $("head").append("<style class='XWW'>#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; </style>"); 
     responsive()
 }
@@ -1286,7 +1286,7 @@ K100= function(builds){
         (!hashes[w1] || (!!cold && (cold.hash)))? (function(){ 
             var oReq= new XMLHttpRequest(); 
             oReq.addEventListener("load", function(e){k300(e, w1, t, "foto")}); 
-            oReq.open("GET", "https://api.github.com/repos/LirilCo/lirilco.github.io/commits?path=" +  w1 + ".html"); 
+            oReq.open("GET", "https://api.github.com/repos/LirilC/lirilc.github.io/commits?path=" +  w1 + ".html"); 
             oReq.setRequestHeader('Authorization', "token " + token); 
             oReq.send(); 
             !(!!cold && (cold.hash))? t.find("img").on("click", function(){openFotosModal($(this));}): 1; 
@@ -1301,7 +1301,7 @@ K100= function(builds){
         (!hashes[w1] || (!!cold && (cold.hash)))? (function(){ 
             var oReq= new XMLHttpRequest(); 
             oReq.addEventListener("load", function(e){k300(e, w1, t, "video")}); 
-            oReq.open("GET", "https://api.github.com/repos/LirilCo/lirilco.github.io/commits?path=" +  w1 + ".html"); 
+            oReq.open("GET", "https://api.github.com/repos/LirilC/lirilc.github.io/commits?path=" +  w1 + ".html"); 
             oReq.setRequestHeader('Authorization', "token " + token); 
             oReq.send(); 
             !(!!cold && (cold.hash))? t.prev().on("click", function(){openVidModal($(this).next().find(".Enlarge"))}): 1; 
@@ -1315,7 +1315,7 @@ K100= function(builds){
         (!hashes[w1] || (!!cold && (cold.hash)))? (function(){ 
             var oReq= new XMLHttpRequest(); 
             oReq.addEventListener("load", function(e){k300(e, w1, t, "story")}); 
-            oReq.open("GET", "https://api.github.com/repos/LirilCo/lirilco.github.io/commits?path=" +  w1 + ".html"); 
+            oReq.open("GET", "https://api.github.com/repos/LirilC/lirilc.github.io/commits?path=" +  w1 + ".html"); 
             oReq.setRequestHeader('Authorization', "token " + token); 
             oReq.send(); 
             a= t; 
@@ -1336,7 +1336,7 @@ K100= function(builds){
     (!hashes[w1] || (!!cold && (cold.hash)))? (function(){ 
         var oReq= new XMLHttpRequest(); 
         oReq.addEventListener("load", function(e){k300(e, w1, t, "profilePic")}); 
-        oReq.open("GET", "https://api.github.com/repos/LirilCo/lirilco.github.io/commits?path=" +  w1 + ".html"); 
+        oReq.open("GET", "https://api.github.com/repos/LirilC/lirilc.github.io/commits?path=" +  w1 + ".html"); 
         oReq.setRequestHeader('Authorization', "token " + token); 
         oReq.send(); 
         !(!!cold && (cold.hash))? $("#profilePic").on("click", function(){openProfilePicModal($(this));}): 1; 
@@ -1348,7 +1348,7 @@ K0= function(){
 
     var oReq= new XMLHttpRequest(); 
     oReq.addEventListener("load", function(e){K100(e)}); 
-    oReq.open("GET", "https://api.github.com/repos/LirilCo/lirilco.github.io/pages/builds"); 
+    oReq.open("GET", "https://api.github.com/repos/LirilC/lirilc.github.io/pages/builds"); 
     oReq.setRequestHeader('Authorization', "token " + token); 
     oReq.send();
 }
@@ -1360,7 +1360,7 @@ $(document).on("ready",function(e){
                                          
         var oReq = new XMLHttpRequest();
         oReq.addEventListener("load", K0);
-        oReq.open("get", "https://cdn.filestackcontent.com/4cpMUkITTAGimI5om7YA");
+        oReq.open("get", "https://cdn.filestackcontent.com/T1JT7NWRhigB2KGvZN7g");
         oReq.send();
     }; 
 
@@ -1512,7 +1512,7 @@ $(document).on("ready",function(e){
     
     var oReq= new XMLHttpRequest();
     oReq.addEventListener("load", k200);
-    oReq.open("GET", "https://api.github.com/repos/LirilCo/lirilco.github.io/commits?path=" + window.location.pathname.slice(1, window.location.pathname.lastIndexOf(".html") != -1? window.location.pathname.lastIndexOf(".html"): window.location.pathname.length) + ".html");
+    oReq.open("GET", "https://api.github.com/repos/LirilC/lirilc.github.io/commits?path=" + window.location.pathname.slice(1, window.location.pathname.lastIndexOf(".html") != -1? window.location.pathname.lastIndexOf(".html"): window.location.pathname.length) + ".html");
     oReq.send();
 */
 /*
