@@ -1209,7 +1209,7 @@ k300= function(C, p, y, ty){
     if(!!JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))) && JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).hash != JSON.parse(C.target.response)[0].sha){
         var oReq= new XMLHttpRequest(); 
         oReq.addEventListener("load", function(e){k200(e, p, y, JSON.parse(C.target.response), ty)}); 
-        oReq.open("GET", "https://raw.githubusercontent.com/LirilCo/Lirilco.github.io/" + JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).hash + C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")) + ".html"); 
+        oReq.open("GET", "https://raw.githubusercontent.com/LirilC/Lirilc.github.io/" + JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).hash + C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")) + ".html"); 
         oReq.send(); 
     }else if(!!JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))))){
         switch(ty){
@@ -1505,7 +1505,7 @@ $(document).on("ready",function(e){
         if(typeof commitAF != "undefined"){
             var oReq= new XMLHttpRequest();
             oReq.addEventListener("load", reqListener);
-            oReq.open("GET", "https://raw.githubusercontent.com/LirilCo/Lirilco.github.io/" + commitAF);
+            oReq.open("GET", "https://raw.githubusercontent.com/LirilC/Lirilc.github.io/" + commitAF);
             oReq.send();
         }
     } 
@@ -1528,7 +1528,7 @@ $(".story").each(function(){
     (!!cold && (cold.hash))? (function(){ 
         var oReq= new XMLHttpRequest();
     oReq.addEventListener("load", function(e){k200(e, t)});
-    oReq.open("GET", "https://raw.githubusercontent.com/LirilCo/Lirilco.github.io/" + cold.hash + w1 + ".html"); 
+    oReq.open("GET", "https://raw.githubusercontent.com/LirilC/Lirilc.github.io/" + cold.hash + w1 + ".html"); 
     oReq.send();
     })(): 1; 
 });
