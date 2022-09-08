@@ -2,6 +2,11 @@ closeModal= function(){1};
 var hashes= {}; 
 var nonBuilt; 
 
+getVideos= function($c, $C){videos= 0
+for(var r= 0; r < $C; r++){
+    videos= $($c.find(".carr").children()[r]).is(".video")? videos + 1: videos; 
+}
+return videos}
 function getNewComments(m, h){ 
     var arr= []; 
                  
@@ -256,7 +261,19 @@ k300= function(C, p, y, ty){
 document.addEventListener("keydown",function(evt){ 
     aaa= $("#theater"); 
 
-    if(!!aaa.find(".carr").length){ 
+    if($(aaa).is(".mult_carr")){(function(){ 
+            //th= $( th.context ).closest(".story").length? $( th.context ).closest(".story"): $( th.context ).closest(".foto").length? $( th.context ).closest(".foto"): $( th.context ).closest('#profilePic').length? $( th.context ).closest('#profilePic'): th.context;  
+            switch(evt.keyCode){
+                case 37: 
+                        th= aaa
+                        !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", "/" + username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); history.pushState({page: 1}, "", "/" + username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf(".")))}): 672; 
+                    break; 
+                case 39: 
+                        th= aaa
+                        !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", "/" + username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); history.pushState({page: 1}, "", "/" + username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf(".")))}): 672; 
+                    break; 
+        }
+    })()}else if(!!aaa.find(".carr").length){ 
 	   switch(evt.keyCode){
             case 37: 
                 !$(aaa.find(".carr")).is(":animated")? $(aaa.find(".carr")).animate({scrollLeft: aaa.find(".carr")[0].scrollLeft - $(aaa.find(".carr")).width()}, 400, function(){
@@ -377,6 +394,19 @@ $(function(){
     oReq.open("get", "https://cdn.filestackcontent.com/T1JT7NWRhigB2KGvZN7g");
     oReq.send();*/ 
 })
+window.addEventListener("load", function(r){
+if($(".theater").is(".mult_carr")){$(".carr > section").each(function(){$(".carr").scrollLeft(20);
+$(".carr > section").each(function(){if(window.location.pathname.slice(window.location.pathname.indexOf(username) + username.length).indexOf("/vid/") == 0){if($(this).is(".video")){
+if(window.location.pathname.slice(window.location.pathname.indexOf(username) + username.length).slice(4) == $(this).find("video")[0].src.slice($(this).find("video")[0].src.indexOf(username) + username.length).slice(0, -4)){
+$(".carr").scrollLeft($(".carr > section").index($(this)) * $(".carr").width()) 
+}
+}
+}else if(window.location.pathname.slice(window.location.pathname.indexOf(username) + username.length).indexOf("/img/") == 0 && !$(this).is(".video")){
+if(window.location.pathname.slice(window.location.pathname.indexOf(username) + username.length).slice(4) == $(this).find(".pic")[0].src.slice($(this).find(".pic")[0].src.indexOf(username) + username.length).slice(0, -4)){
+$(".carr").scrollLeft($(".carr > section").index($(this)) * $(".carr").width()) 
+}
+}})})}
+})
 document.addEventListener("DOMContentLoaded", function(){
     window.addEventListener("popstate", function(){
 Antheater= $("#theater"); 
@@ -427,18 +457,12 @@ Antheater= $("#theater");
     aaa= $("#theater"); 
 
     $(".nav_arrow.left .arrow").click(function(){ 
-        (!$(aaa.find(".carr")).is(":animated") && !$(this).parent().is(".disabled"))? $(aaa.find(".carr")).animate({scrollLeft: aaa.find(".carr")[0].scrollLeft - $(aaa.find(".carr")).width()}, 400, function(){
-                    a$= $(aaa.find(".carr")).find(".pic")[Math.round(aaa.find(".carr")[0].scrollLeft / $(aaa.find(".carr")).width())].src; 
-                    a$= a$.slice(a$.lastIndexOf("/") + 1, a$.lastIndexOf("."));
-                    history.pushState({page: 1}, "", "/" + username + "/img/" + a$); 
-                  }): 672; 
+        th= aaa
+        !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", "/" + username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); history.pushState({page: 1}, "", "/" + username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf(".")))}): 672; 
     }); 
     $(".nav_arrow.right .arrow").click(function(){ 
-        (!$(aaa.find(".carr")).is(":animated") && !$(this).parent().is(".disabled"))? $(aaa.find(".carr")).animate({scrollLeft: aaa.find(".carr")[0].scrollLeft + $(aaa.find(".carr")).width()}, 400, function(){
-                    a$= $(aaa.find(".carr")).find(".pic")[Math.round(aaa.find(".carr")[0].scrollLeft / $(aaa.find(".carr")).width())].src; 
-                    a$= a$.slice(a$.lastIndexOf("/") + 1, a$.lastIndexOf(".")); 
-                    history.pushState({page: 1}, "", "/" + username + "/img/" + a$); 
-                 }): 672; 
+        th= aaa
+        !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", "/" + username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); history.pushState({page: 1}, "", "/" + username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf(".")))}): 672; 
     })
     $(".carr").on("scroll", function(){ 
         rf= $(this)
@@ -461,3 +485,16 @@ Antheater= $("#theater");
 
 })
 
+//
+/*
+$(".carr > section").each(function(){if(window.location.pathname.slice(window.location.pathname.indexOf(username) + username.length).indexOf("/vid/") == 0){if($(this).is(".video")){
+if(window.location.pathname.slice(window.location.pathname.indexOf(username) + username.length).slice(4) == $(this).find("video")[0].src.slice($(this).find("video")[0].src.indexOf(username) + username.length).slice(0, -4)){
+    console.log($(this))
+}
+}else if(window.location.pathname.slice(window.location.pathname.indexOf(username) + username.length).indexOf("/img/") == 0){
+if(window.location.pathname.slice(window.location.pathname.indexOf(username) + username.length).slice(4) == $(this).find(".pic")[0].src.slice($(this).find(".pic")[0].src.indexOf(username) + username.length).slice(0, -4)){
+    console.log($(this))
+}
+}}})
+
+*/
