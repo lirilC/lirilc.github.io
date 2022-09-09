@@ -394,6 +394,12 @@ $(function(){
     oReq.open("get", "https://cdn.filestackcontent.com/T1JT7NWRhigB2KGvZN7g");
     oReq.send();*/ 
 })
+document.addEventListener("DOMContentLoaded", function(){
+    $("header").after(`<aside class="searchResults hidden">
+        <div>
+        </div>
+    </aside>`)
+})
 window.addEventListener("load", function(r){
 if($(".theater").is(".mult_carr")){$(".carr > section").each(function(){$(".carr").scrollLeft(20);
 $(".carr > section").each(function(){if(window.location.pathname.slice(window.location.pathname.indexOf(username) + username.length).indexOf("/vid/") == 0){if($(this).is(".video")){

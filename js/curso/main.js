@@ -212,6 +212,9 @@ snapTolerance: 10
 		if($("#Store").hasClass("open") && $("#customizationBars").hasClass("open")){
 			$("#customizationBars").removeClass("open")
 		}
+		if($("#customizationBars").hasClass("open")){
+			$(".widgetero").height(0)
+		}
 		$("#right-menu #customize").toggleClass("open");
 		$("#customizationBars").toggleClass("open");
 		if(!player.paused()){

@@ -1858,7 +1858,8 @@ display: none !important}
 .searchResults > div{
 width: 100%;
 height: 100%;
-background: #fff}
+background: #fff;
+overflow-y: auto}
 .searchResults .result{
 position: relative;
 padding: 13px;
@@ -1916,3 +1917,6 @@ height: 100%;
 padding-bottom: unset !important} 
 .carr .Playuse{ 
 display: block} 
+.searchResults .result .username .name{
+display: inline-block;
+color: #808080}
