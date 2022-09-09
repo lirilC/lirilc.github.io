@@ -1515,15 +1515,21 @@ display: inline-block;
     width: 100%; 
     position: relative; 
 } 
-.mult_img .carr{ 
+.mult_img .carr, .mult_carr .carr{ 
     writing-mode: vertical-lr; 
     width: 100%; 
     overflow-x: hidden; 
 } 
-.mult_img .picture{ 
+.mult_carr .video{ 
+    position: relative; 
+    writing-mode: initial !important; 
+    top: 50%; 
+    transform: translateY(-50%); 
+} 
+.mult_img .picture, .mult_carr .picture, .mult_carr .video{ 
     width: 100%; 
 } 
-.mult_img .picture .pic{ 
+.mult_img .picture .pic, .mult_carr .picture .pic{ 
     width: 100%; 
     object-fit: contain; 
 } 
@@ -1904,3 +1910,9 @@ left: 0;
 width: 100%;
 height: 100%;
 z-index: 2}
+.carr .video{ 
+width: 100%;
+height: 100%;
+padding-bottom: unset !important} 
+.carr .Playuse{ 
+display: block} 

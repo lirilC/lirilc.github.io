@@ -83,7 +83,7 @@ $('.theater .comments .options .bookmark').removeClass("true");
         autoExpandScrollbar: true,
         scrollInertia: 100});
 
-    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 219 !important; }; "; 
+    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 310 !important; }; "; 
     !!$(".XWW").length? $(".XWW")[0].innerHTML= "#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; ": $("head").append("<style class='XWW'>#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; </style>"); 
     responsive(); 
 }
@@ -223,7 +223,7 @@ $('.theater .comments .options .bookmark').removeClass("true");
     //console.log( th );  
 
     responsive(); 
-    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 219 !important; }; "; 
+    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 310 !important; }; "; 
     !!$(".XWW").length? $(".XWW")[0].innerHTML= "#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; ": $("head").append("<style class='XWW'>#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; </style>"); 
 }
 function openModal(a){
@@ -409,7 +409,7 @@ function openModal(a){
         //lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", "/" + username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf(".")));  
     }
 
-    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 219 !important; }; "; 
+    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 310 !important; }; "; 
     !!$(".XWW").length? $(".XWW")[0].innerHTML= "#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; ": $("head").append("<style class='XWW'>#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; </style>"); 
 }
 function openVideoModal(a){ 
@@ -568,8 +568,8 @@ if(a.closest('.story').is(".mult_img") || a.closest('.story').is(".mult_carr")){
         //lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", "/" + username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf(".")));  
     }
 
-    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 219 !important; }; "; 
-    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 219 !important; }; "; 
+    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 310 !important; }; "; 
+    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 310 !important; }; "; 
     !!$(".XWW").length? $(".XWW")[0].innerHTML= "#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; ": $("head").append("<style class='XWW'>#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; </style>"); 
 }
 function openOtherModal(a){ 
@@ -688,7 +688,7 @@ $('.theater .comments .options .bookmark').removeClass("true");
             $(this).removeClass("activado"); 
         }
     })
-    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 219 !important; }; "; 
+    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 310 !important; }; "; 
     !!$(".XWW").length? $(".XWW")[0].innerHTML= "#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; ": $("head").append("<style class='XWW'>#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; </style>"); 
 }
 function openVidModal(a){ 
@@ -843,8 +843,8 @@ if(a.closest('.story').is(".mult_img") || a.closest('.story').is(".mult_carr")){
         //lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", "/" + username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf(".")));  
     }
 
-    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 219 !important; }; "; 
-    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 219 !important; }; "; 
+    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 310 !important; }; "; 
+    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 310 !important; }; "; 
     !!$(".XWW").length? $(".XWW")[0].innerHTML= "#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; ": $("head").append("<style class='XWW'>#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; </style>"); 
     responsive()
 }
@@ -894,7 +894,7 @@ function closeModal(){
 
     $("#theater").find(".more")[0].outerHTML= "<p class= 'more'></p>"; 
     $("#theater .nav_arrow").remove(); 
-    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 1 !important; }; "; 
+    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 310 !important; }; "; 
     $("body")[0].style.overflow= ""; 
     responsive(); 
     if ($('.theater .comments .options .bookmark').hasClass("true")){

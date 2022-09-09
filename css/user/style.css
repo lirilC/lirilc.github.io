@@ -870,7 +870,7 @@ section.video:hover .Enlarge {
     display: block;
 }
 
-#theater .Playuse
+#theater #picContainer > .Playuse
 {
     display: none; 
 }
