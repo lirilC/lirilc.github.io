@@ -323,7 +323,6 @@ header.open {
     border-bottom: solid 6px #27ae60;
     height: 40px;
     width: 100%;
-    z-index: 3;
 }
 header.open nav ul li input{
     background-color: #2ecc71;
@@ -1920,3 +1919,5 @@ display: block}
 .searchResults .result .username .name{
 display: inline-block;
 color: #808080}
+.searchResults .result#resaltado{
+background-color: #ddd}
