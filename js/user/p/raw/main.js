@@ -13,13 +13,12 @@ function tagReplacer( HtML ){
         /*console.log( HtML.slice( parseInt( e ), ( parseInt( e ) + 6 ) ) ); */ 
 
         //console.log( parseInt( e ) + 4 );  
-
         switch( HtML.slice( parseInt( e ), ( parseInt( e ) + 6 ) ) ){ 
             case "<scrip": case "< scri": case "<  scr": 
-                response[response.length]= [HtML.slice( parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( "</script>" ) + "</script>".length + 1 ), [parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( "</script>" ) + "</script>".length + 1], "sc"]; 
+                if(HtML.slice( parseInt( e ), ( parseInt( e ) + 33 ) ).indexOf("scriptModificado") == -1 && (HtML.slice( parseInt( e ), ( parseInt( e ) + 33 ) ).indexOf(`src=`) != -1 || HtML.slice( parseInt( e ), ( parseInt( e ) + 33 ) ).indexOf(`src =`) != -1))response[response.length]= [HtML.slice( parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( "</script>" ) + "</script>".length + 1 ), [parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( "</script>" ) + "</script>".length + 1], "sc"]; 
                 break; 
             case "<link ": case "< link": case "<  lin": 
-                response[response.length]= [HtML.slice( parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( ">" ) + ">".length + 1 ), [parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( ">" ) + ">".length + 1], "st"]; 
+                if(HtML.slice( parseInt( e ), ( parseInt( e ) + 33 ) ).indexOf("styleModificado") == -1)response[response.length]= [HtML.slice( parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( ">" ) + ">".length + 1 ), [parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( ">" ) + ">".length + 1], "st"]; 
                 break; 
         }; 
     }; 
@@ -156,19 +155,37 @@ $( document ).on( "ready", function(){
                     
  	function reqListener () { 
         respuesta= localStorage.getItem(FileToRequest) != null? JSON.parse( localStorage.getItem( FileToRequest ) ).value: this.responseText; 
-
-        //console.log( respuesta ); 
-        for( t in tagReplacer( respuesta ) ){ 
-            if(tagReplacer( respuesta )[tagReplacer( respuesta ).length - 1 - parseInt( t )] != undefined) 
-                if( !!localStorage.getItem( root_url( get( "src", tagReplacer( respuesta )[tagReplacer( respuesta ).length - 1 - parseInt( t )][0] ) ) ) ){ 
-            		isModule= ( "type", tagReplacer( respuesta )[tagReplacer( respuesta ).length - 1 - parseInt( t )][0] ).indexOf( "module" ) != -1; 
-                    respuesta= respuesta.slice( 0, tagReplacer( respuesta )[tagReplacer( respuesta ).length - 1 - parseInt( t )][1][0] ) + "<script class= 'scriptModificado' " + ( isModule? "type= 'module'": "" ) + " id= '" + get( "src", tagReplacer( respuesta )[tagReplacer( respuesta ).length - 1 - parseInt( t )][0] ) + "'>\n\n /*" + get( "src", tagReplacer( respuesta )[tagReplacer( respuesta ).length - 1 - parseInt( t )][0] ) + "*/\n\n" + JSON.parse( localStorage.getItem( root_url( get( "src", tagReplacer( respuesta )[tagReplacer( respuesta ).length - 1 - parseInt( t )][0] ) ) ) ).value + "\n\n</script>" + respuesta.slice( tagReplacer( respuesta )[tagReplacer( respuesta ).length - 1 - parseInt( t )][1][1] - 1, respuesta.length ); 
-                } 
-                if( !!localStorage.getItem( root_url( get( "href", tagReplacer( respuesta )[tagReplacer( respuesta ).length - 1 - parseInt( t )][0] )  ) ) ){ 
-                    respuesta= respuesta.slice( 0, tagReplacer( respuesta )[tagReplacer( respuesta ).length - 1 - parseInt( t )][1][0] ) + "<style class= 'styleModificado' id= '" + get( "href", tagReplacer( respuesta )[tagReplacer( respuesta ).length - 1 - parseInt( t )][0] ) + "'>\n\n /*" + get( "href", tagReplacer( respuesta )[tagReplacer( respuesta ).length - 1 - parseInt( t )][0] ) + "*/\n\n" + JSON.parse( localStorage.getItem( root_url( get( "href", tagReplacer( respuesta )[tagReplacer( respuesta ).length - 1 - parseInt( t )][0] ) ) ) ).value + "\n\n</style>" + respuesta.slice( tagReplacer( respuesta )[tagReplacer( respuesta ).length - 1 - parseInt( t )][1][1] - 1, respuesta.length ); 
-                }; 
-            /*console.log( get( "src", tagReplacer( respuesta )[tagReplacer( respuesta ).length - 1 - parseInt( t )][0] ) + (!!localStorage.getItem( root_url( get( "src", tagReplacer( respuesta )[tagReplacer( respuesta ).length - 1 - parseInt( t )][0] ) ) )? " ∘  modified": "    not modified") ); */ 
-        }; 
+pId= FileToRequest.slice(FileToRequest.indexOf("/raw/p/") + 7, FileToRequest.length)
+pId= pId.slice(0, pId.indexOf("/"))
+if(pId == "8d299s2gvkL9"){
+rejected= 0
+while(tagReplacer(respuesta).length){
+if(!localStorage.getItem( root_url( get( "src", tagReplacer( respuesta )[0][0] ) ) ) && !localStorage.getItem( root_url( get( "href", tagReplacer( respuesta )[0][0] ) ) )){
+rejected++
+}
+if( tagReplacer( respuesta )[0][0].indexOf("<script") == 0 && (pId == "8d299s2gvkL9" || !!localStorage.getItem( root_url( get( "src", tagReplacer( respuesta )[0][0] ) ) ) ) ){ 
+respuesta= respuesta.slice( 0, tagReplacer( respuesta )[0][1][0] ) + "<script class= 'scriptModificado' id= " + '"' + get( "src", tagReplacer( respuesta )[0][0] ) + '"' + ">\n\n /*" + get( "src", tagReplacer( respuesta )[0][0] ) + "*/\n\n" + (localStorage.getItem( root_url( get( "src", tagReplacer( respuesta )[0][0] ) ) ) != null? JSON.parse( localStorage.getItem( root_url( get( "src", tagReplacer( respuesta )[0][0] ) ) ) ).value: "") + "\n\n</script>" + respuesta.slice( tagReplacer( respuesta )[0][1][1] - 1, respuesta.length ); 
+}
+if( typeof tagReplacer( respuesta )[0] != "undefined" && tagReplacer( respuesta )[0][0].indexOf("<link") == 0 && (pId == "8d299s2gvkL9" || !!localStorage.getItem( root_url( get( "href", tagReplacer( respuesta )[0][0] ) ) ) ) ){ 
+respuesta= respuesta.slice( 0, tagReplacer( respuesta )[0][1][0] ) + "<style class= 'styleModificado' id= " + '"' + get( "href", tagReplacer( respuesta )[0][0] ) + '"' + ">\n\n /*" + get( "href", tagReplacer( respuesta )[0][0] ) + "*/\n\n" + JSON.parse( localStorage.getItem( root_url( get( "href", tagReplacer( respuesta )[0][0] ) ) ) ).value + "\n\n</style>" + respuesta.slice( tagReplacer( respuesta )[0][1][1] - 1, respuesta.length ) ; 
+}; 
+if(tagReplacer(respuesta).length == rejected)break;
+}
+}else{
+z= 0; 
+for( t in tagReplacer( respuesta ) ){ 
+if(typeof tagReplacer( respuesta )[t - z] != undefined)
+if( !!localStorage.getItem( root_url( get( "src", tagReplacer( respuesta )[t - z][0] ) ) ) ){ 
+respuesta= respuesta.slice( 0, tagReplacer( respuesta )[t - z][1][0] ) + "<script class= 'scriptModificado' id= " + '"' + get( "src", tagReplacer( respuesta )[t - z][0] ) + '"' + ">\n\n /*" + get( "src", tagReplacer( respuesta )[t - z][0] ) + "*/\n\n" + JSON.parse( localStorage.getItem( root_url( get( "src", tagReplacer( respuesta )[t - z][0] ) ) ) ).value + "\n\n</script>" + respuesta.slice( tagReplacer( respuesta )[t - z][1][1] - 1, respuesta.length ) ; 
+z++
+} 
+if( !!localStorage.getItem( root_url( get( "href", tagReplacer( respuesta )[t - z][0] )  ) ) ){ 
+respuesta= respuesta.slice( 0, tagReplacer( respuesta )[t - z][1][0] ) + "<style class= 'styleModificado' id= " + '"' + get( "href", tagReplacer( respuesta )[t - z][0] ) + '"' + ">\n\n /*" + get( "href", tagReplacer( respuesta )[t - z][0] ) + "*/\n\n" + JSON.parse( localStorage.getItem( root_url( get( "href", tagReplacer( respuesta )[t - z][0] ) ) ) ).value + "\n\n</style>" + respuesta.slice( tagReplacer( respuesta )[t - z][1][1] - 1, respuesta.length ) ; 
+z++
+}; 
+/*console.log( get( "src", tagReplacer( respuesta )[t - z][0] ) + (!!localStorage.getItem( root_url( get( "src", tagReplacer( respuesta )[tagReplacer( respuesta ).length - 1 - parseInt( t )][0] ) ) )? " ∘  modified": "    not modified") ); */ 
+}; 
+}
 
         respuesta= respuesta.indexOf( "<!" ) !== 0? "<pre>" + respuesta + "</pre>": respuesta; 
 
@@ -187,7 +204,7 @@ $( document ).on( "ready", function(){
     
 purger= {}; 
             
-purger.index= {in: 12, sprPrg: true}; 
+purger.index= {in: 13, sprPrg: true}; 
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return

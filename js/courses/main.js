@@ -260,7 +260,7 @@ $(window).on("load",
 
 purger= {}; 
             
-purger.index= {in: 12, sprPrg: true}; 
+purger.index= {in: 13, sprPrg: true}; 
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return
