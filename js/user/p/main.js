@@ -462,7 +462,7 @@ function tagReplacer( HtML ){
         //console.log( parseInt( e ) + 4 );  
         switch( HtML.slice( parseInt( e ), ( parseInt( e ) + 6 ) ) ){ 
             case "<scrip": case "< scri": case "<  scr": 
-                if(HtML.slice( parseInt( e ), ( parseInt( e ) + 33 ) ).indexOf("scriptModificado") == -1 && (HtML.slice( parseInt( e ), ( parseInt( e ) + 33 ) ).indexOf(`src=`) != -1 || HtML.slice( parseInt( e ), ( parseInt( e ) + 33 ) ).indexOf(`src =`) != -1))response[response.length]= [HtML.slice( parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( "</script>" ) + "</script>".length + 1 ), [parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( "</script>" ) + "</script>".length + 1], "sc"]; 
+                if(HtML.slice( parseInt( e ), ( parseInt( e ) + 33 ) ).indexOf("scriptModificado") == -1 && (HtML.slice( parseInt( e ), ( parseInt( e ) + 53 ) ).indexOf(`src=`) != -1 || HtML.slice( parseInt( e ), ( parseInt( e ) + 53 ) ).indexOf(`src =`) != -1))response[response.length]= [HtML.slice( parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( "</script>" ) + "</script>".length + 1 ), [parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( "</script>" ) + "</script>".length + 1], "sc"]; 
                 break; 
             case "<link ": case "< link": case "<  lin": 
                 if(HtML.slice( parseInt( e ), ( parseInt( e ) + 33 ) ).indexOf("styleModificado") == -1)response[response.length]= [HtML.slice( parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( ">" ) + ">".length + 1 ), [parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( ">" ) + ">".length + 1], "st"]; 
@@ -2551,14 +2551,14 @@ z++
 
         if ($("#profileSettings").hasClass("open")) {
             if($("#profileSettings").hasClass("openedStore")){
-            $('.knob').trigger(
+            $('header .knob').trigger(
                 'configure', {
                     "fgColor": "#2ecc71"
                 }
             );
         }
         else{
-            $('.knob').trigger(
+            $('header .knob').trigger(
                 'configure', {
                     "fgColor": "#2ecc71"
                 }
@@ -2568,14 +2568,14 @@ z++
         else{
             if($("#profileSettings").hasClass("openedStore")){
 
-            $('.knob').trigger(
+            $('header .knob').trigger(
                 'configure', {
                     "fgColor": "#fff"
                 }
             );
         }
         else{
-            $('.knob').trigger(
+            $('header .knob').trigger(
                 'configure', {
                     "fgColor": "#2ecc71"
                 }
@@ -4507,7 +4507,7 @@ $(window).on("load", function () {
         return $(this).find("p").text();
     });
 
-    $('.knob').trigger(
+    $('header .knob').trigger(
         'configure', {
             "fgColor": "#2ecc71"
         }
@@ -4529,7 +4529,7 @@ $(window).on("load", function () {
         $("#Store #actualStore #storeSection").width($(window).width() - $("#Store #actualStore #storeList").width() - 87);
         $("#Store #actualStore #storeSection").height($("#Store #actualStore").height() - 80);
         
-            $('.knob').trigger(
+            $('header .knob').trigger(
                 'configure', {
                     "fgColor": "#fff"
                 }
@@ -4538,7 +4538,7 @@ $(window).on("load", function () {
         if ($("#Store").hasClass("open")) {
             $("header").addClass("open");
            
-                 $('.knob').trigger(
+                 $('header .knob').trigger(
                 'configure', {
                     "fgColor": "#fff"
                 
@@ -4546,7 +4546,7 @@ $(window).on("load", function () {
             })
         } else {
            $("header").removeClass("open");
-           $('.knob').trigger(
+           $('header .knob').trigger(
                    'configure', {
                        "fgColor": "#2ecc71"
                    }
@@ -4597,7 +4597,7 @@ document.onkeydown = function (evt) {
      $(".chat").on("click", function(){})
 
         if ($("#profileSettings").hasClass("open") && $("#Store").hasClass("open")) {
-            $('.knob').trigger(
+            $('header .knob').trigger(
                 'configure', {
                     "fgColor": "#2ecc71"
                 }
@@ -4616,14 +4616,14 @@ $("#chats .chats ").on("click", ".chat", function(ev) {
 
         if ($("#profileSettings").hasClass("open")) {
             if($("#profileSettings").hasClass("openedStore")){
-            $('.knob').trigger(
+            $('header .knob').trigger(
                 'configure', {
                     "fgColor": "#2ecc71"
                 }
             );
         }
         else{
-            $('.knob').trigger(
+            $('header .knob').trigger(
                 'configure', {
                     "fgColor": "#2ecc71"
                 }
@@ -4633,14 +4633,14 @@ $("#chats .chats ").on("click", ".chat", function(ev) {
         else{
             if($("#profileSettings").hasClass("openedStore")){
 
-            $('.knob').trigger(
+            $('header .knob').trigger(
                 'configure', {
                     "fgColor": "#fff"
                 }
             );
         }
         else{
-            $('.knob').trigger(
+            $('header .knob').trigger(
                 'configure', {
                     "fgColor": "#2ecc71"
                 }

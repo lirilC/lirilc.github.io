@@ -645,14 +645,14 @@ $(".revelar").on("click", function(){
 
         if ($("#profileSettings").hasClass("open")) {
             if($("#profileSettings").hasClass("openedStore")){
-            $('.knob').trigger(
+            $('header .knob').trigger(
                 'configure', {
                     "fgColor": "#2ecc71"
                 }
             );
         }
         else{
-            $('.knob').trigger(
+            $('header .knob').trigger(
                 'configure', {
                     "fgColor": "#2ecc71"
                 }
@@ -662,14 +662,14 @@ $(".revelar").on("click", function(){
         else{
             if($("#profileSettings").hasClass("openedStore")){
 
-            $('.knob').trigger(
+            $('header .knob').trigger(
                 'configure', {
                     "fgColor": "#fff"
                 }
             );
         }
         else{
-            $('.knob').trigger(
+            $('header .knob').trigger(
                 'configure', {
                     "fgColor": "#2ecc71"
                 }
@@ -850,7 +850,7 @@ function closeModal() {
 
     $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 1 !important; }; "; 
 }
-		$('.knob').trigger(
+		$('header .knob').trigger(
         		'configure',
         		{   
         		    "fgColor":"#fff"
@@ -891,7 +891,7 @@ function closeModal() {
         $("#Store #actualStore #storeSection").width($(window).width() - $("#Store #actualStore #storeList").width() - 87);
         $("#Store #actualStore #storeSection").height($("#Store #actualStore").height() - 80);
         if ($("#profileSettings").hasClass("open")) {
-            $('.knob').trigger(
+            $('header .knob').trigger(
                 'configure', {
                     "fgColor": "#2ecc71"
                 }
@@ -900,13 +900,13 @@ function closeModal() {
         if ($("#Store").hasClass("open")) {
             $("header").addClass("open");
              if ($("#profileSettings").hasClass("open")) {
-            $('.knob').trigger(
+            $('header .knob').trigger(
                 'configure', {
                     "fgColor": "#2ecc71"
                 }
             );}
             else{
-                 $('.knob').trigger(
+                 $('header .knob').trigger(
                 'configure', {
                     "fgColor": "#fff"
                 }
@@ -916,7 +916,7 @@ function closeModal() {
            $("header").removeClass("open");
            }
            if (!$("#profileSettings").hasClass("open") && !$("#Store").hasClass("open")) {
-               $('.knob').trigger(
+               $('header .knob').trigger(
                    'configure', {
                        "fgColor": "#2ecc71"
                    }
@@ -963,14 +963,14 @@ $(document).on("keypress", function(e){
 
         if ($("#profileSettings").hasClass("open")) {
             if($("#profileSettings").hasClass("openedStore")){
-            $('.knob').trigger(
+            $('header .knob').trigger(
                 'configure', {
                     "fgColor": "#2ecc71"
                 }
             );
         }
         else{
-            $('.knob').trigger(
+            $('header .knob').trigger(
                 'configure', {
                     "fgColor": "#2ecc71"
                 }
@@ -980,14 +980,14 @@ $(document).on("keypress", function(e){
         else{
             if($("#profileSettings").hasClass("openedStore")){
 
-            $('.knob').trigger(
+            $('header .knob').trigger(
                 'configure', {
                     "fgColor": "#fff"
                 }
             );
         }
         else{
-            $('.knob').trigger(
+            $('header .knob').trigger(
                 'configure', {
                     "fgColor": "#2ecc71"
                 }
@@ -1022,7 +1022,7 @@ function responsive(){
         $("#Store #actualStore #storeSection").width($(window).width() - $("#Store #actualStore #storeList").width() - 87);
         $("#Store #actualStore #storeSection").height($("#Store #actualStore").height() - 80);
         if($("#profileSettings").hasClass("open")){
-            $('.knob').trigger(
+            $('header .knob').trigger(
                 'configure',
                 {   
                     "fgColor":"#2ecc71"
@@ -1031,7 +1031,7 @@ function responsive(){
         }if($("#Store").hasClass("open")){
 
             $("header").addClass("open");
-            $('.knob').trigger(
+            $('header .knob').trigger(
                 'configure',
                 {   
                     "fgColor":"#fff"
@@ -1041,7 +1041,7 @@ function responsive(){
             $("header").removeClass("open");
         }   
         if(!$("#profileSettings").hasClass("open") && !$("#Store").hasClass("open")){
-            $('.knob').trigger(
+            $('header .knob').trigger(
                 'configure',
                 {   
                     "fgColor":"#2ecc71"
@@ -1050,7 +1050,7 @@ function responsive(){
         }
 
         if($("#profileSettings").hasClass("open") && $("#Store").hasClass("open")){
-            $('.knob').trigger(
+            $('header .knob').trigger(
                 'configure',
                 {   
                     "fgColor":"#2ecc71"
