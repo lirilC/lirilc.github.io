@@ -2222,6 +2222,8 @@ switch(r.keyCode){
     break;
 }
 })
+
+document.addEventListener("keydown", function(e){if(e.shiftKey && e.ctrlKey && e.altKey){e.preventDefault();$("#theater").css("display") == "block"?closeModal():1;$("#buscar input").val("");$("#buscar input").trigger("input");$("#buscar input").focus()}})
     var distance; 
     el= $($("#profilePic > img")[0]); 
                         

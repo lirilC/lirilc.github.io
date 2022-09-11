@@ -2287,6 +2287,8 @@ switch(r.keyCode){
 }
 })
 
+document.addEventListener("keydown", function(e){if(e.shiftKey && e.ctrlKey && e.altKey){e.preventDefault();$("#buscar input").val("");$("#buscar input").trigger("input");$("#buscar input").focus()}})
+
     if( pId === "8d299s2gvkL9" && JSON.parse( localStorage.getItem( "file_tree" ) ) != null && localStorage.getItem( "file_tree" ) != "\"\"" )$( "#files ul.file_tree" ).html( JSON.parse( localStorage.getItem( "file_tree" ) ) )
 
 
