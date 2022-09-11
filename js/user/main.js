@@ -1034,7 +1034,7 @@ bGComments= function(arg){
 badGuy= function(){ 
     Antheater= typeof th != "undefined" && !th.is(".story")? th: $(".current")
     console.log(Antheater)
-    iTS= un_tn(!Antheater.is(".current")? !!Antheater.find(".carr").length? window.location.pathname.slice(0, window.location.pathname.lastIndexOf("/")) + $(Antheater).find(".carr").find("img")[0].src.slice($(Antheater).find(".carr").find("img")[0].src.lastIndexOf("/"), $(Antheater).find(".carr").find("img")[0].src.lastIndexOf(".")): window.location.pathname: $(".current").is(".mult_img")? $(".current").find(".options a").attr("href").slice(0, $(".current").find(".options a").attr("href").lastIndexOf("/")) + $(".current").find(".carr").find("img")[0].src.slice($(".current").find(".carr").find("img")[0].src.lastIndexOf("/"), $(".current").find(".carr").find("img")[0].src.lastIndexOf(".")): $(".current").find(".options a").attr("href"), (!Antheater.length || (!!Antheater.length && ((Antheater.is(".vid") || Antheater.is(".foto") || Antheater.is("#profilePic")) && (!Antheater.is(".mult_img"))) || Antheater.is(".story")) || Antheater.is("#theater"))? true: false); 
+    iTS= $("#theater").is(".mult_carr")? $($("#theater .carr section")[0]).is(".picture")? `/${username}/img/${$($("#theater .carr section")[0]).find("img").attr("src").slice(-14, -4)}`: `/${username}/vid/${$($("#theater .carr section")[0]).find("video").attr("src").slice(-14, -4)}`: un_tn(!Antheater.is(".current")? !!Antheater.find(".carr").length? window.location.pathname.slice(0, window.location.pathname.lastIndexOf("/")) + $(Antheater).find(".carr").find("img")[0].src.slice($(Antheater).find(".carr").find("img")[0].src.lastIndexOf("/"), $(Antheater).find(".carr").find("img")[0].src.lastIndexOf(".")): window.location.pathname: $(".current").is(".mult_img")? $(".current").find(".options a").attr("href").slice(0, $(".current").find(".options a").attr("href").lastIndexOf("/")) + $(".current").find(".carr").find("img")[0].src.slice($(".current").find(".carr").find("img")[0].src.lastIndexOf("/"), $(".current").find(".carr").find("img")[0].src.lastIndexOf(".")): $(".current").find(".options a").attr("href"), (!Antheater.length || (!!Antheater.length && ((Antheater.is(".vid") || Antheater.is(".foto") || Antheater.is("#profilePic")) && (!Antheater.is(".mult_img"))) || Antheater.is(".story")) || Antheater.is("#theater"))? true: false); 
     localStorage.setItem(iTS, JSON.stringify({B: ($("#theater").css("display") == "block"? $("#theater .options .bookmark").hasClass("true"): $(".current").find(".options .bookmark").hasClass("true"))? true: false, S: ($("#theater").css("display") == "block"? $("#theater .options .star").hasClass("true"): $(".current").find(".options .star").hasClass("true"))? true: false, C: bGComments(), hash: ((localStorage.getItem(iTS) != null && (typeof JSON.parse(localStorage.getItem(iTS)).hash != "undefined"))? JSON.parse(localStorage.getItem(iTS)).hash: hashes[iTS])})); 
     delete th; 
     $(".story").each(function(){ 
@@ -1093,7 +1093,7 @@ badGuy= function(){
 
 purger= {}; 
             
-purger.index= {in: 13, sprPrg: true}; 
+purger.index= 14
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return

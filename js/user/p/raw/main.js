@@ -208,7 +208,7 @@ z++
     
 purger= {}; 
             
-purger.index= {in: 13, sprPrg: true}; 
+purger.index= 14
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return

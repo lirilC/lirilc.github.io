@@ -306,7 +306,12 @@ K100= function(builds){
         })(); 
     $("#theater").each(function(){ 
         if(!!$(this).find(".carr").length){
-            w1=  "/" + username + "/img" + un_tn($(this).find(".carr img")[0].src).slice(un_tn($(this).find(".carr img")[0].src).lastIndexOf("/"), un_tn($(this).find(".carr img")[0].src).lastIndexOf(".")); 
+              
+        if($("#theater").is(".mult_carr")){w1= $($("#theater .carr section")[0]).is(".picture")? `/${username}/img/${$($("#theater .carr section")[0]).find("img").attr("src").slice(-14, -4)}`: `/${username}/vid/${$($("#theater .carr section")[0]).find("video").attr("src").slice(-14, -4)}`}
+            else{
+                w1= ("/" + username + "/img" + un_tn($(this).find(".carr img")[0].src).slice(un_tn($(this).find(".carr img")[0].src).lastIndexOf("/"), un_tn($(this).find(".carr img")[0].src).lastIndexOf("."))); 
+            }
+
             console.log(w1) 
         }else{
             w1= window.location.pathname
@@ -389,10 +394,10 @@ $(function(){
 
     audiojs.createAll(); 
 
-    /*var oReq = new XMLHttpRequest();
+    var oReq = new XMLHttpRequest();
     oReq.addEventListener("load", K0);
     oReq.open("get", "https://cdn.filestackcontent.com/T1JT7NWRhigB2KGvZN7g");
-    oReq.send();*/ 
+    oReq.send();
 })
 document.addEventListener("DOMContentLoaded", function(){
     $("header").after(`<aside class="searchResults hidden">
