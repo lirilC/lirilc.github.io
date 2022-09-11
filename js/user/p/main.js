@@ -456,7 +456,7 @@ title= function(){
 function tagReplacer( HtML ){ 
     var response= []; 
                                       
-    for( e in HtML ){ 
+    for( var e in HtML ){ 
         /*console.log( HtML.slice( parseInt( e ), ( parseInt( e ) + 6 ) ) ); */ 
 
         //console.log( parseInt( e ) + 4 );  
@@ -465,7 +465,7 @@ function tagReplacer( HtML ){
                 if(HtML.slice( parseInt( e ), ( parseInt( e ) + 33 ) ).indexOf("scriptModificado") == -1 && (HtML.slice( parseInt( e ), ( parseInt( e ) + 53 ) ).indexOf(`src=`) != -1 || HtML.slice( parseInt( e ), ( parseInt( e ) + 53 ) ).indexOf(`src =`) != -1))response[response.length]= [HtML.slice( parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( "</script>" ) + "</script>".length + 1 ), [parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( "</script>" ) + "</script>".length + 1], "sc"]; 
                 break; 
             case "<link ": case "< link": case "<  lin": 
-                if(HtML.slice( parseInt( e ), ( parseInt( e ) + 33 ) ).indexOf("styleModificado") == -1)response[response.length]= [HtML.slice( parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( ">" ) + ">".length + 1 ), [parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( ">" ) + ">".length + 1], "st"]; 
+                if(HtML.slice( parseInt( e ), ( parseInt( e ) + 33 ) ).indexOf("styleModificado") == -1 && (HtML.slice( parseInt( e ), ( parseInt( e ) + 53 ) ).indexOf('image/x-icon') == -1))response[response.length]= [HtML.slice( parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( ">" ) + ">".length + 1 ), [parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( ">" ) + ">".length + 1], "st"]; 
                 break; 
         }; 
     }; 
@@ -525,14 +525,14 @@ relative_url= function( url ){
 root_and_raw_urls_in_HTMLs= function( doc ){
     var eq= ["= ", "=", " = ", "  =", "  = ", " =", "=  "]; 
     
-    for( i in eq ){
+    for( var i in eq ){
         rg= 'href' + eq[i] + '"([^"]*)"'; 
                               
         mT= undefined; 
         
         mT= [...doc.matchAll( rg )]; 
         
-        for( u in mT ){
+        for( var u in mT ){
             doc= ( mT[u][1].indexOf( "http" ) == -1 && mT[u][1][0] != "/" )? doc.replaceAll( mT[u][1], root_url( mT[u][1] ) ): doc;
          }
         
@@ -543,7 +543,7 @@ root_and_raw_urls_in_HTMLs= function( doc ){
         
         mT= [...doc.matchAll( rg )]; 
         
-        for( u in mT ){
+        for( var u in mT ){
             doc= ( mT[u][1].indexOf( "http" ) == -1 && mT[u][1][0] != "/" )? doc.replaceAll( mT[u][1], root_url( mT[u][1] ) ): doc;  
         }
     }
@@ -552,7 +552,7 @@ root_and_raw_urls_in_HTMLs= function( doc ){
                       
     mT= [...doc.matchAll(rg)]; 
 
-    for( u in mT ){ 
+    for( var u in mT ){ 
         doc= ( mT[u][1].indexOf( "http" ) == -1 && mT[u][1][0] != "/" )? doc.replaceAll( mT[u][1], root_url( mT[u][1] ) ): doc; 
     } 
     
@@ -5286,7 +5286,7 @@ purger.purge= function( a ){
     if(typeof purger.index.in !== "undefined")return
     fT= localStorage.getItem("file_tree")
     if( ( localStorage.getItem( "safety_purge" ) === null || ( localStorage.getItem( "safety_purge" ) !== null && parseInt( localStorage.getItem( "safety_purge" ) ) != purger.index ) ) || ( typeof a != "undefined" && a == "bypass" ) ){ 
-        for( ii in localStorage ){ 
+        for( var ii in localStorage ){ 
             if( typeof localStorage[ii] != "function" && ii != "length" && ["safety_purge", "tooltip", "knob", "filesWidth", "user", "selected"].indexOf( ii ) == -1 ){ 
                 ( function( a ){ var av= a; for( var v= 1; v <= 2; v++ )av= av.slice( av.indexOf("/") + 1 ); return av } )( ii ).indexOf( "raw" ) === 0? console.log( ii ): localStorage.removeItem( ii ); 
             } 

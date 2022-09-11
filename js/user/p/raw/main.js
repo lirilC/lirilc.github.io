@@ -9,7 +9,7 @@ const FileToRequest= decodeURIComponent(window.location.pathname + "p" + window.
 function tagReplacer( HtML ){ 
     var response= []; 
                                       
-    for( e in HtML ){ 
+    for( var e in HtML ){ 
         /*console.log( HtML.slice( parseInt( e ), ( parseInt( e ) + 6 ) ) ); */ 
 
         //console.log( parseInt( e ) + 4 );  
@@ -18,7 +18,7 @@ function tagReplacer( HtML ){
                 if(HtML.slice( parseInt( e ), ( parseInt( e ) + 33 ) ).indexOf("scriptModificado") == -1 && (HtML.slice( parseInt( e ), ( parseInt( e ) + 53 ) ).indexOf(`src=`) != -1 || HtML.slice( parseInt( e ), ( parseInt( e ) + 53 ) ).indexOf(`src =`) != -1))response[response.length]= [HtML.slice( parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( "</script>" ) + "</script>".length + 1 ), [parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( "</script>" ) + "</script>".length + 1], "sc"]; 
                 break; 
             case "<link ": case "< link": case "<  lin": 
-                if(HtML.slice( parseInt( e ), ( parseInt( e ) + 33 ) ).indexOf("styleModificado") == -1)response[response.length]= [HtML.slice( parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( ">" ) + ">".length + 1 ), [parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( ">" ) + ">".length + 1], "st"]; 
+                if(HtML.slice( parseInt( e ), ( parseInt( e ) + 33 ) ).indexOf("styleModificado") == -1 && (HtML.slice( parseInt( e ), ( parseInt( e ) + 53 ) ).indexOf('image/x-icon') == -1))response[response.length]= [HtML.slice( parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( ">" ) + ">".length + 1 ), [parseInt( e ), parseInt( e ) + HtML.slice( parseInt( e ), HtML.length - 1 ).indexOf( ">" ) + ">".length + 1], "st"]; 
                 break; 
         }; 
     }; 
@@ -80,7 +80,7 @@ root_and_raw_urls_in_HTMLs= function( doc ){
 	while( ( match= re[1].exec( doc ) ) !== null ){ 
 		   	u= parseInt( match && match.index ); 
 
-		   	for( i in eq ){ 
+		   	for( var i in eq ){ 
 		    	//console.log( doc.slice( parseInt( u - ( "href".length + eq[i].length ) ), u ) + "+ " + 'href' + eq[i]);  
 		    	//console.log( parseInt( u - ( "href".length + eq[i].length ) ) + ", ", u );  
 		    	
@@ -194,6 +194,9 @@ z++
         document.write( root_and_raw_urls_in_HTMLs( respuesta ) ); 
         document.close(); 
 		var blinking= setInterval( function(){ blinking_I++; window.location.toString().replace( window.location.origin, "" ) === aU? history.pushState( {page: 1}, "", bU ): window.location.toString().replace( window.location.origin, "" ) === bU? history.pushState( {page: 1}, "", aU ): 1; blinking_I >= 18? ( function(){if( [bU, aU].indexOf( window.location.toString().replace( window.location.origin, "" ) ) != -1 )history.pushState( {page: 1}, "", aU ); clearInterval( blinking )} )(): 1}, 239 ); 
+        delete u; 
+        delete i; 
+        delete e; 
     }; 
        
     var xxa = new XMLHttpRequest(); 
@@ -210,7 +213,7 @@ purger.purge= function( a ){
     if(typeof purger.index.in !== "undefined")return
     fT= localStorage.getItem("file_tree")
     if( ( localStorage.getItem( "safety_purge" ) === null || ( localStorage.getItem( "safety_purge" ) !== null && parseInt( localStorage.getItem( "safety_purge" ) ) != purger.index ) ) || ( typeof a != "undefined" && a == "bypass" ) ){ 
-        for( ii in localStorage ){ 
+        for( var ii in localStorage ){ 
             if( typeof localStorage[ii] != "function" && ii != "length" && ["safety_purge", "tooltip", "knob", "filesWidth", "user", "selected"].indexOf( ii ) == -1 ){ 
                 ( function( a ){ var av= a; for( var v= 1; v <= 2; v++ )av= av.slice( av.indexOf("/") + 1 ); return av } )( ii ).indexOf( "raw" ) === 0? console.log( ii ): localStorage.removeItem( ii ); 
             } 
@@ -229,4 +232,3 @@ localStorage.clear()
 localStorage.setItem("safety_purge", purger.index.in)
 console.log("superPurged All files and file_trees were also deleted!")
 }
-delete u; 
