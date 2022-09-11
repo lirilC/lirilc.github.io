@@ -174,17 +174,18 @@ if(tagReplacer(respuesta).length == rejected)break;
 }else{
 z= 0; 
 for( t in tagReplacer( respuesta ) ){ 
-if(typeof tagReplacer( respuesta )[t - z] != undefined)
+if(typeof tagReplacer( respuesta )[t - z] != "undefined"){
 if( !!localStorage.getItem( root_url( get( "src", tagReplacer( respuesta )[t - z][0] ) ) ) ){ 
 respuesta= respuesta.slice( 0, tagReplacer( respuesta )[t - z][1][0] ) + "<script class= 'scriptModificado' id= " + '"' + get( "src", tagReplacer( respuesta )[t - z][0] ) + '"' + ">\n\n /*" + get( "src", tagReplacer( respuesta )[t - z][0] ) + "*/\n\n" + JSON.parse( localStorage.getItem( root_url( get( "src", tagReplacer( respuesta )[t - z][0] ) ) ) ).value + "\n\n</script>" + respuesta.slice( tagReplacer( respuesta )[t - z][1][1] - 1, respuesta.length ) ; 
 z++
 } 
-if( !!localStorage.getItem( root_url( get( "href", tagReplacer( respuesta )[t - z][0] )  ) ) ){ 
+if( typeof tagReplacer( respuesta )[t - z] != "undefined" && !!localStorage.getItem( root_url( get( "href", tagReplacer( respuesta )[t - z][0] )  ) ) ){ 
 respuesta= respuesta.slice( 0, tagReplacer( respuesta )[t - z][1][0] ) + "<style class= 'styleModificado' id= " + '"' + get( "href", tagReplacer( respuesta )[t - z][0] ) + '"' + ">\n\n /*" + get( "href", tagReplacer( respuesta )[t - z][0] ) + "*/\n\n" + JSON.parse( localStorage.getItem( root_url( get( "href", tagReplacer( respuesta )[t - z][0] ) ) ) ).value + "\n\n</style>" + respuesta.slice( tagReplacer( respuesta )[t - z][1][1] - 1, respuesta.length ) ; 
 z++
 }; 
 /*console.log( get( "src", tagReplacer( respuesta )[t - z][0] ) + (!!localStorage.getItem( root_url( get( "src", tagReplacer( respuesta )[tagReplacer( respuesta ).length - 1 - parseInt( t )][0] ) ) )? " ∘  modified": "    not modified") ); */ 
-}; 
+};
+}
 }
 
         respuesta= respuesta.indexOf( "<!" ) !== 0? "<pre>" + respuesta + "</pre>": respuesta; 
