@@ -528,7 +528,7 @@ cursor: pointer
     top: 0;
     background-color: #000;
     opacity: 0.6;
-    z-index: 3;
+    z-index: 250;
 }   
 .theater
 {
@@ -542,7 +542,7 @@ cursor: pointer
     margin-left: auto;
     position: fixed;
     height: 500px;
-    z-index: 3;
+    z-index: 250;
     top: 20px;
     max-width: 1400px;
 }
@@ -852,7 +852,7 @@ content: "\e904"
 } 
  h4, h3, h2, h1, sup, sub{ 
     color: #7A7A7A; 
-} 
+    font-weight: normal} 
 #article>img
 {
     margin: 40px 0 0 0;
@@ -870,7 +870,6 @@ content: "\e904"
 {
     color: #7A7A7A;
     font-size: 35px;
-    font-weight: bold;
     
  } 
 #theater .comments #close:before
@@ -957,7 +956,7 @@ content: "\e904"
 i, q, b, sup  
 { 
   color: inherit; 
-} 
+  font-weight: lighter} 
 header .bookmark 
 { 
   margin: 0 14px !important; 

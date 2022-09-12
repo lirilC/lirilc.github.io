@@ -693,7 +693,7 @@ $('#profileSettings').click(function(i){
 
     responsive()
     function openBlImage(a) {
-    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 4 !important; }; "; 
+    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 310 !important; }; "; 
 
     $("body")[0].style.overflowY= "hidden"; 
     $("#theater").addClass("animated fadeIn ")
@@ -778,7 +778,7 @@ $('#profileSettings').click(function(i){
     responsive()
 }
     function openModal(a) {
-    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 4 !important; }; "; 
+    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 310 !important; }; "; 
     $("body")[0].style.overflowY= "hidden"; 
     $("#theater").addClass("animated fadeIn ")
     $(".theater").css({
