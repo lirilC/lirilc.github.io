@@ -466,7 +466,7 @@ k300= function(C, p, y, ty){
   
 purger= {}; 
             
-purger.index= 14
+purger.index= 15; 
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return
@@ -1177,6 +1177,8 @@ $("#chats .chats").on("keypress", ".chat .chatBox .newMessage textarea", functio
        $(this).closest(".chat").find(".messages").append("<p class='sent'>" + content + "</p>")
        $(this).val("")
        scrollBottom($(this).closest(".chat").find(".chatBox .messages"))
+       $(this).trigger("input")
+       $(this).trigger("input")
   }
  })
 $("#chats .chats").on("keyup", ".chat .chatBox .newMessage textarea", function (ev) {

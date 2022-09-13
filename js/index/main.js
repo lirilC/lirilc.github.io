@@ -2140,6 +2140,8 @@ $("#chats .chats").on("input", ".chat .chatBox .newMessage textarea", function (
        $(this).closest(".chat").find(".messages").append("<pre class='sent'>" + content + "</pre>")
        $(this).val("")
        scrollBottom($(this).closest(".chat").find(".chatBox .messages"))
+       $(this).trigger("input")
+       $(this).trigger("input")
       sizeMessages($(this));
   }
  })
@@ -2416,7 +2418,7 @@ badGuy= function(){
   
 purger= {}; 
             
-purger.index= 14
+purger.index= 15; 
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return
