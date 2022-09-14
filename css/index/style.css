@@ -1540,6 +1540,7 @@ display: inline-block;
     height: 100%; 
     position: absolute; 
     text-align: center; 
+    z-index: 1;
 } 
 .nav_arrow .arrow{ 
     font-family: "icomoon"; 

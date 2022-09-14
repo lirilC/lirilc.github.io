@@ -763,18 +763,18 @@ $(".knob").knob()
 $(document).on("keydown", function(r){
 switch(r.keyCode){
   case 40:
-        if(!$(".result#resaltado").length){
+        if(!$(".searchResults").is(".hidden") && !$(".result#resaltado").length){
             $($(".result")[0]).attr("id", "resaltado")
             $($(".result")[0]).children()[0].focus()
             setTimeout(function(){$(".searchResults > div").scrollTop(0)}, 20)
-        }else if($(".result#resaltado").index() != $(".result").length - 1){
+        }else if(!$(".searchResults").is(".hidden") && $(".result#resaltado").index() != $(".result").length - 1){
             $(".result#resaltado").next().children()[0].focus()
             $(".result#resaltado").next().attr("id", "resaltado")
             $($(".result#resaltado")[0]).attr("id", "")
         }
     break;
   case 38:
-        if($(".result#resaltado").length && $(".result#resaltado").index() != 0){
+        if(!$(".searchResults").is(".hidden") && $(".result#resaltado").length && $(".result#resaltado").index() != 0){
             $(".result#resaltado").prev().children()[0].focus()
             $(".result#resaltado").prev().attr("id", "resaltado")
             $($(".result#resaltado")[1]).attr("id", "")
@@ -1199,7 +1199,7 @@ function scrollBottom(d){
 
 purger= {}; 
             
-purger.index= 15; 
+purger.index= 16; 
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return
