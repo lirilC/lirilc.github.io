@@ -41,7 +41,7 @@ gOfObj[gOfObj.length - 1].rotation.z= (Math.PI / 180) * 720
 
 gOfObj[gOfObj.length - 1].position.x= -2.0342499999999992
 gOfObj[gOfObj.length - 1].position.y= 2.7000449999999967
-gOfObj[gOfObj.length - 1].position.z=0.22132699999999997
+gOfObj[gOfObj.length - 1].position.z=1.43485018
 
 scene.add(gOfObj[gOfObj.length - 1])
 },
@@ -108,7 +108,7 @@ console.log(error)
         );
     }; 
 
-    loadSVG( '/LamaMadora/raw/p/i8eE2s38vBNE5/resources/Calles/City_1.svg', 0.21352318, new THREE.MeshStandardMaterial({ color: 0xde3f52, roughness: 1, reflectivity: 0.27 }) ); 
+    loadSVG( '/LamaMadora/raw/p/u889Dj8Q22dSC/resources/Calles/City_2.svg', 1.21352318, new THREE.MeshStandardMaterial({ color: 0xde3f52, roughness: 1, reflectivity: 0.27 }) ); 
 
     camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.001, 89 );
     camera.position.z= 0.888; 
@@ -436,7 +436,7 @@ console.log(error)
     gM1 = new THREE.Mesh( new THREE.BoxGeometry( 1, 2, 0.787 ), new THREE.MeshPhongMaterial({ color: 0xfef0fe , reflectivity: 0.47 }) );
     gM1.position.x= -2.124; 
     gM1.position.y= 3.1; 
-    gM1.position.z= -0.033 - 0.02 - 0.5 + 0.787 / 2; 
+    gM1.position.z= 1.05402318; 
     
     scene.add( gM1 ); 
     
