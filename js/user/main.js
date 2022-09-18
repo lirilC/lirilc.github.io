@@ -428,7 +428,7 @@ function openVideoModal(a){
         "display": "block"
     })
     $this= a.closest('.story')
-    var source= a.closest('.story').find("video").attr('src');
+    var source= a.closest('.video').find("video").attr('src');
     $('.theater video').attr('src', source);
 
     $('.theater video').attr('autoplay', "true");
@@ -2423,13 +2423,13 @@ a= 0;
         videojs($("video")[e].id).on("pause", function(i){ 
             a= i
             let vId= VIds.length - 1
-            $(videojs(i.target.parentElement.id).L.parentElement).siblings().filter(".Playuse").removeClass("playing"); 
+            $($(this)[0].L.parentElement).siblings().filter(".Playuse").removeClass("playing"); 
         });
         
         videojs($("video")[e].id).on("play", function(i){ 
             //console.log(i)
             let vId= VIds.length - 1
-            $(videojs(i.target.parentElement.id).L.parentElement).siblings().filter(".Playuse").addClass("playing"); 
+            $($(this)[0].L.parentElement).siblings().filter(".Playuse").addClass("playing"); 
         });}
    
 

@@ -596,10 +596,10 @@ cursor: pointer
     box-sizing: border-box;
     padding-bottom: 44px;
 }
-section.video section.video:hover .Enlarge {
+section.video:hover .Enlarge {
     display: block;
 }
-section.video section.video .Enlarge {
+section.video .Enlarge {
     top: 23px; 
 }
 #theater .Playuse
