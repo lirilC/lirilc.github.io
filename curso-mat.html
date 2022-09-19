@@ -207,8 +207,6 @@
          </nav>
       </header>
       <section id="customizationBars" class="button">
-         <aside id="storeHeader" class="button">
-         </aside>
          <aside id="actions">
             <table class="tabs">
                <td class="button actual"></td>
@@ -221,10 +219,10 @@
             </table>
             <table class="tabs">
                <td colspan="2" class="button actual width inputed ">
-                  <input type="number" min="1" max="100" onchange="handleChange(this);">
+                  <input id= "gridWidth" type="number" min="0" max="100" value= "0" oninput="handleChange(this);">
                </td>
                <td colspan="2" class="button height inputed inputw">
-                  <input type="number" min="1" max="100" onkeydown="apply()" onchange="handleChange(this);">
+                  <input id= "gridHeight" type="number" min="0" max="100" value= "0" onkeydown="apply()" oninput="handleChange(this);">
                </td>
                <td colspan="2" class="button grid"><span>Snap</span></td>
                <td class="button magnet on"></td>
@@ -376,19 +374,14 @@
                   <img style= "width: auto; height: 100%; " src= "Señal Colombia.jpg" alt=""> 
                </li>
                <li>
-                  <div class="widget" cont= "<iframe src='http://player.cdnmedia.tv/embed/0192a203' width='100%' height='100%' frameborder='0' scrolling='no' allowfullscreen> </iframe>" style="width:138px; height: 77px">
+                  <div class="widget" cont= "<iframe src='https://player.cdnmedia.tv/embed/1171ea8b' width='100%' height='100%' frameborder='0' scrolling='no' allowfullscreen> </iframe>" style="width:138px; height: 77px">
                   </div>
-                  <img style= "width: auto; height: 100%; " src= "Telemedellín.jpg" alt=""> 
+                  <img style= "width: auto; height: 100%; " src= "/Telemedellín.jpg" alt=""> 
                </li>
                <li>
-                  <div class="widget" cont= "<iframe src='https://cdn.chatytvgratis.net/player/jwplayer.php?id=https://hdvideo2.cdn.net.co/live01/ta.m3u' width='100%' height='100%' frameborder='0' scrolling='no' allowfullscreen></iframe>" style="width:137.5px; height: 100px">
+                  <div class="widget" cont= "<iframe src='https://cdn.chatytvgratis.net/player/videojsp2p.php?id=https://hlsfree.live:3759/multi_live/play_src.m3u8' width='100%' height='100%' frameborder='0' scrolling='no' allowfullscreen> </iframe>" style="width:138px; height: 77px">
                   </div>
-                  <img style= "width: auto; height: 100%; " src= "Teleantioquia.png" alt=""> 
-               </li>
-               <li>
-                  <div class="widget" cont= "<iframe src='https://cdn.chatytvgratis.net/player/jwplayer.php?id=https://hdvideo2.cdn.net.co/live01/ta.m3u' width='100%' height='100%' frameborder='0' scrolling='no' allowfullscreen></iframe>" style="width:137.5px; height: 100px">
-                  </div>
-                  <img style= "width: auto; height: 100%; " src= "Teleantioquia.png"a lt=""> 
+                  <img style= "width: auto; height: 100%; " src= "/resources/images/widgets/CityTv.png" alt=""> 
                </li>
             </ul>
          </aside>
@@ -430,7 +423,7 @@
          </aside>
       </section>
       <section id="video">
-         <video id="example_video_1" controls class="video-js vjs-default-skin" preload="none" width="100%" height="264" poster="resources/images/thumb-mat.png" data-setup="{}">
+         <video id="example_video_1" controls class="video-js vjs-default-skin" preload="none" width="100%" height="100%" poster="resources/images/thumb-mat.png" data-setup="{}">
             <source src="resources/videos/mat/curso.webm" type='video/webm' />
             <source src="resources/videos/mat/curso.mp4" type='video/mp4' />
             <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
@@ -451,10 +444,10 @@
              $(".selectedWidget").width(a)
          }
          
-         function handleChange(input) {
-             if (input.value < 1) input.value = 1;
-             if (input.value > 100) input.value = 100;
-         }
+function handleChange(input) {
+$(".widgetero .widget").draggable("option", "grid", $("#gridWidth").val() == "0" && $("#gridHeight").val() == "0"? false: [parseInt($("#gridWidth").val()), parseInt($("#gridHeight").val())])
+$(".widgetero .widget").resizable("option", "grid", $("#gridWidth").val() == "0" && $("#gridHeight").val() == "0"? false: [parseInt($("#gridWidth").val()), parseInt($("#gridHeight").val())])
+}
       </script>
       <script>
          var player = videojs('example_video_1');

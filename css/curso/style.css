@@ -25,6 +25,12 @@ header {
     height: 41px;
     width: 100%;
 }
+header.open {
+    background-color: #2ecc71;
+    border-bottom: solid 6px #27ae60;
+    height: 40px;
+    width: 100%;
+}
 header>nav>ul>li {
     display: table-cell;
     list-style-type: none;
@@ -314,10 +320,10 @@ input:focus {
     user-select: none;
 }
 #video {
-}
+height: calc(100% - 47px - 15px)}
 #example_video_1 {
-    width: 100%
-}
+height:100%; 
+width: 100%}
 #example_video_1_html5_api{ 
     height:100%; 
     max-height: unset; 
@@ -335,12 +341,13 @@ input:focus {
 }
  #customizationBars{
     display: none;
-    height: 100%;
+    height: calc(100% - 46px);
     left: 0;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
+    margin-top: 46px;
 }
 #Store #actualStore, #customizationBars #actualStore {
     background-color: #ecf0f1;
@@ -395,10 +402,8 @@ normal #fff*/
 }
 .vidVidCustomizationMode
 {
-        border: solid 2px #27ae60;
-            margin-top: 1px;
-
-
+    border: solid 2px #27ae60;
+    height: calc((100% + 15px) / 2 ) !important
 }
 #actions
 {
@@ -407,10 +412,8 @@ normal #fff*/
     height: 50%;
     box-sizing: border-box;
     position: absolute;
-    bottom: -20px;
-    padding-bottom: 20px;
+    bottom: 0;
     border-right: solid 2px #27ae60;
-
 }
 #actions .tabs
 {
@@ -441,7 +444,7 @@ normal #fff*/
 }
 #actions .tabs .copy:before
 {
-     content:"\e61b"
+     content:"\e92c"
 
 }
 #actions .tabs .paste:before
@@ -465,16 +468,13 @@ normal #fff*/
      margin-right: 25px;
 
 }
+#actions .grid span{
+color: inherit}
 #actions .tabs td input
 {
     line-height: 1;
      width: 100%;
 
-}
-#actions .tabs td span
-{
- 
-    color: #6B6969;
 }
 #actions .tabs td span.wh
 {
@@ -636,11 +636,16 @@ iframe
 .widgetero
 {
     position: absolute;
-    width: 50%;
-    top: 47px ;
+    width: 100%;
     left: 0 ;
     z-index: 2;
     display:block;
+    height: calc(100% - 46px - 15px);
+    margin-top: 46px;
+}
+.widgetero.open{
+    height: calc((100% - 46px) / 2);
+    width: 50%;
 }
 .widgetero.invisible{ 
     display: none; 
@@ -696,7 +701,7 @@ iframe
     position: relative;
     z-index: 2;
 }
-.magnet.on
+.magnet.on, .grid.on
 {
     color: #2ecc71 !important;
 }

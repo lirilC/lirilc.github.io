@@ -4,6 +4,7 @@ var best = 0;
 var out = false;
 var copiedWidget;
 var snapping = true;
+var gridSnapping = false;
 pasted = true;
 type = "none";
 copiedTop = 0;
@@ -16,6 +17,54 @@ pasteCountLeftRef = 0;
 select = false;
 copiedLeft = 0;
 widg= ""; 
+getSpace= function(){
+  vW= $("video")[0].videoWidth
+  vH= $("video")[0].videoHeight
+  vOW= $("video")[0].offsetWidth
+  vOH= $("video")[0].offsetHeight
+	
+	if(vW / vH < vOW / vOH){
+		rat= vH / vOH
+		return {left: ((vOW - (vW/rat)) / 2) + ($("#customizationBars").is(".open")?4: 0),top: 0,bottom:0, right: ((vOW - (vW/rat)) / 2) - ($("#customizationBars").is(".open")?4: 0)}
+	}else if(vW / vH > vOW / vOH){
+		rat= vW / vOW
+		return {left: 0,top: ((vOH - (vH/rat)) / 2),bottom:((vOH - (vH/rat)) / 2), right: 0}
+	}
+}
+function sizeWidgetero(){
+if($("#customizationBars").is(".open")){
+$(".widgetero").css({
+"height": "",
+"width": "",
+"margin-top": 46,
+"margin-left": ""})
+if(getSpace().top){
+$(".widgetero").css({
+"height": ($("body").height() - 46) / 2 - getSpace().top * 2,
+"margin-top": getSpace().top + 46})}else{
+$(".widgetero").css({
+"width": $("body").width() / 2 - getSpace().left * 2,
+"margin-left": getSpace().left})
+}}else{
+$(".widgetero").css({
+"height": "",
+"width": "",
+"margin-top": 46,
+"margin-left": ""})
+if(getSpace().top){
+$(".widgetero").css({
+"height": $("body").height() - 61 - getSpace().top * 2,
+"margin-top": getSpace().top + 46})}else{
+$(".widgetero").css({
+"width": $("body").width() - getSpace().left * 2,
+"margin-left": getSpace().left})
+}}	
+}
+function integerer(i){
+return parseInt(i.slice(0, -1))}
+window.onresize= function(e){
+sizeWidgetero()
+}
 $(document).on("ready",function(){
 	purger.purge(); 
 					
@@ -77,12 +126,13 @@ var dropped = false;
 $('.widgetero .widget').last().draggable({
 	stack:".widgetero .widget",
 	cursor: "move", 
-	snap: ".vidVidCustomizationMode, .widget", 
+	snap: ".vidVidCustomizationMode, .widgetero, .widgetero .widget", 
 	snapMode: "both", 
 	revertDuration: 100,
 	snapTolerance: 10,
-	  distance: 10,
+	grid: ($("#gridWidth").val() == "0" && $("#gridHeight").val() == "0") || !gridSnapping? false: [parseInt($("#gridWidth").val()), parseInt($("#gridHeight").val())],
 containment: "window",
+cursorAt: { left: $('.widgetero .widget').last().width() / 2 },
 	revert: false,
     start: function(event, ui) {
     	if(!$('.widgetero .widget').last().hasClass("dropped")){ 
@@ -112,13 +162,15 @@ $(document).mouseup(function(e) {
 		containment: "window",
 		stack:".widgetero .widget",
 		cursor: "move", 
-		snap: ".vidVidCustomizationMode, .widget", 
+		snap: ".vidVidCustomizationMode, .widgetero, .widgetero .widget", 
 		snapMode: "both", 
 		revert: 'invalid', 
-		revertDuration: 100,
+		revertDuration: 86,
+		cursorAt: false,
+		grid: ($("#gridWidth").val() == "0" && $("#gridHeight").val() == "0") || !gridSnapping? false: [parseInt($("#gridWidth").val()), parseInt($("#gridHeight").val())],
 		snapTolerance: 10});
 		if(snapping){
-    		$('.widgetero .widget').draggable("option", "snap", ".vidVidCustomizationMode, .widget" );
+    		$('.widgetero .widget').draggable("option", "snap", ".vidVidCustomizationMode, .widgetero, .widgetero .widget" );
 		}else{
     		$('.widgetero .widget').draggable("option", "snap", false );
 		}
@@ -127,6 +179,11 @@ $(document).mouseup(function(e) {
     		  
     		drop: function(event, ui)
     		{        
+    			$(ui.draggable).width((($(ui.draggable).width() - ($(ui.draggable).is(".select")?11:0)) / ($(".widgetero").width()) * 100 )+ "%")
+    			$(ui.draggable).height((($(ui.draggable).height() - ($(ui.draggable).is(".select")?5:0)) / ($(".widgetero").height()) * 100 )+ "%")
+    			$(ui.draggable).css({"left": (parseInt($(ui.draggable).css("left").replaceAll("px", "")) / ($(".widgetero").width()) * 100 ) + "%"})
+    			$(ui.draggable).css({"top": (parseInt($(ui.draggable).css("top").replaceAll("px", "")) / ($(".widgetero").height()) * 100 ) + "%"})
+
     			ui.draggable.data('dropped', true);
 				dropped = true; 
 				$('.widgetero .widget').last().addClass("dropped")
@@ -153,11 +210,21 @@ $(document).mouseup(function(e) {
         's': '#sgrip',
         'w': '#wgrip'
     },
+	snap: ".vidVidCustomizationMode, .widgetero, .widgetero .widget", 
   snapMode: "both", 
-snapTolerance: 10
+snapTolerance: 10,
+grid: ($("#gridWidth").val() == "0" && $("#gridHeight").val() == "0") || !gridSnapping? false: [parseInt($("#gridWidth").val()), parseInt($("#gridHeight").val())],
+
+stop: function(event, ui)
+    		{        
+    			$(ui.element).width((($(ui.element).width()) / ($(".widgetero").width()) * 100 )+ "%")
+    			$(ui.element).height((($(ui.element).height()) / ($(".widgetero").height()) * 100 )+ "%")
+    			$(ui.element).css({"left": (parseInt($(ui.element).css("left").replaceAll("px", "")) / ($(".widgetero").width()) * 100 ) + "%"})
+    			$(ui.element).css({"top": (parseInt($(ui.element).css("top").replaceAll("px", "")) / ($(".widgetero").height()) * 100 ) + "%"})
+		}
 })
 		if(snapping){
-    		$('.widgetero .widget').resizable("option", "snap", ".vidVidCustomizationMode, .widget" );
+    		$('.widgetero .widget').resizable("option", "snap", ".vidVidCustomizationMode, .widgetero, .widgetero .widget" );
 		}else{
     		$('.widgetero .widget').resizable("option", "snap", false );
 		}
@@ -211,12 +278,18 @@ snapTolerance: 10
 	$("#customize").on("click",function(){
 		if($("#Store").hasClass("open") && $("#customizationBars").hasClass("open")){
 			$("#customizationBars").removeClass("open")
+			$("header").removeClass("open")
+			$(".widgetero").removeClass("open")
 		}
 		if($("#customizationBars").hasClass("open")){
 			$(".widgetero").height(0)
 		}
 		$("#right-menu #customize").toggleClass("open");
 		$("#customizationBars").toggleClass("open");
+		$("header").toggleClass("open")
+		$(".widgetero").toggleClass("open")
+
+
 		if(!player.paused()){
 			player.pause();
 			wasPlaying = true;
@@ -240,16 +313,15 @@ snapTolerance: 10
 			
 				
 			$("#customizationBars").addClass("open")
+			$("header").addClass("open")
+			$(".widgetero").addClass("open")
+
 		}		
 		
 		if(!$("#Store").hasClass("open") && !$("#customizationBars").hasClass("open") ){
 			$(".widgetero .widget").each(function(){
 				$(this).draggable("disable")
 				$(this).find(".coverDiv").remove()
-				$(this).css("width", ($(this).width()*2)-0)
-				$(this).css("height", ($(this).height())*2)
-				$(this).css("left", parseInt($(this).css("left"))*2)
-				$(this).css("top", (parseInt($(this).css("top"))*2)-2)
 				$(this).addClass("active")
 				$(this).removeClass("widget draggable ui-draggable ui-draggable-handle ui-resizable")
 			})	
@@ -261,12 +333,13 @@ snapTolerance: 10
 			$("#cover").addClass("open");
 			$("#example_video_1").removeClass("vidCustomizationMode");
 			$("#example_video_1").children().first().removeClass("vidVidCustomizationMode");
-			$("#example_video_1").children().first().height( "100%")
 			$(".vjs-progress-holder").removeClass("opened");
 		}
+
 	if($("#customizationBars").hasClass("open")){
 		customizationMode();
 	}
+	sizeWidgetero()
 	});
 	setInterval(function(){
         $("#index-menu.open").height(32* $("#index-menu.open > ul > a").length);
@@ -275,7 +348,6 @@ snapTolerance: 10
         }else{
             $("#play").addClass("playing")
 		}
-		$("#example_video_1").height($(window).height() - $("header").height() - 21);
 		$("#Store #actualStore").height($(window).height() - $("header").height() - 21);
 		$("#Store #actualStore #storeSection").width($(window).width() - $("#Store #actualStore #storeList").width() - 87);
 		$("#Store #actualStore #storeSection").height($("#Store #actualStore").height() - 80);
@@ -381,17 +453,12 @@ function customizationMode(){
 				
 			})	
 	$(".widgetero .widget").each(function(){
-					$(this).css("width", (($(this).width())/2)+0)
-					$(this).css("height", (($(this).height()))/2)
-					$(this).css("left", parseInt($(this).css("left"))/2)
-					$(this).css("top", ((parseInt($(this).css("top")))/2)+1)
 			})	
 	$("#example_video_1").children().first().addClass("vidVidCustomizationMode");
 	a = $("#example_video_1").height()/$("#example_video_1").width()
 	vidHeight = $(".vidVidCustomizationMode").height() +4;
 	$("#example_video_1").addClass("vidCustomizationMode");
-	$(".vidVidCustomizationMode").height( (a*$("#example_video_1").width()-3))
-		$(".widgetero").height( (a*$("#example_video_1").width()+1))
+		$(".widgetero").height("")
 	w = $(".vidVidCustomizationMode").width();
 	h = $(".vidVidCustomizationMode").height();
 $(".back-arrow").addClass("openedStore");
@@ -496,6 +563,18 @@ function controls(a){
     		snapping = false;
     	}else{
     		snapping = true;
+    	}
+	}
+	if ($(a.target).parents().andSelf().is(".grid")){
+    	$(".grid").toggleClass("on");
+    	if(gridSnapping){
+    		gridSnapping = false;
+    		$(".widgetero .widget").draggable("option", "grid", false)
+			$(".widgetero .widget").resizable("option", "grid", false)
+    	}else{
+    		gridSnapping = true;
+    		$(".widgetero .widget").draggable("option", "grid", $("#gridWidth").val() == "0" && $("#gridHeight").val() == "0"? false: [parseInt($("#gridWidth").val()), parseInt($("#gridHeight").val())])
+			$(".widgetero .widget").resizable("option", "grid", $("#gridWidth").val() == "0" && $("#gridHeight").val() == "0"? false: [parseInt($("#gridWidth").val()), parseInt($("#gridHeight").val())])
     	}
 	}
 }
