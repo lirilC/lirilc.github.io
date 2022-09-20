@@ -186,7 +186,7 @@ $(document).mouseup(function(e) {
     			$(ui.draggable).width((($(ui.draggable).width() - ($(ui.draggable).is(".select")?11:0)) / ($(".widgetero").width()) * 100 )+ "%")
     			$(ui.draggable).height((($(ui.draggable).height() - ($(ui.draggable).is(".select")?5:0)) / ($(".widgetero").height()) * 100 )+ "%")
     			$(ui.draggable).css({"left": (parseInt($(ui.draggable).css("left").replaceAll("px", "")) / ($(".widgetero").width()) * 100 ) + "%"})
-    			$(ui.draggable).css({"top": ((parseInt($(ui.draggable).css("top").replaceAll("px", "")) + 1) / ($(".widgetero").height()) * 100 ) + "%"})
+    			$(ui.draggable).css({"top": ((parseInt($(ui.draggable).css("top").replaceAll("px", ""))) / ($(".widgetero").height()) * 100 ) + "%"})
 
     			ui.draggable.data('dropped', true);
 				dropped = true; 

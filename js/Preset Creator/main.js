@@ -8,6 +8,7 @@ var preset1= [[0, ""]];
 var editable= [[0, ""]]; 
 var gridSnapping = false;
 var firstPlay = false;
+var pen_width = 0.7;
 pasted = true;
 type = "none";
 copiedTop = 0;
@@ -734,7 +735,7 @@ document.addEventListener("mouseup", function(i){
 document.addEventListener("mousemove", function(i){                                                 
     L= parseInt(Math.random() * dsrcrs.length); 
                                                 
-   (mousedown && drawing)? document.getElementsByClassName("widgetero")[0].innerHTML= document.getElementsByClassName("widgetero")[0].innerHTML + "<div style= 'width: 6.8px; height: 6.8px; background-color: " + dsrcrs[L] + "; position: absolute; left: " + ((i.pageX - parseInt($(".widgetero").css("margin-left").slice(0,-2))) / ($(".widgetero").width()) * 100 ) + "%; top: " + ((i.pageY - parseInt($(".widgetero").css("margin-top").slice(0,-2))) / ($(".widgetero").height()) * 100 ) +  "%; '></div>": 13781;
+   (mousedown && drawing)? document.getElementsByClassName("widgetero")[0].innerHTML= document.getElementsByClassName("widgetero")[0].innerHTML + "<div style= 'width: " + pen_width + "%; height: " + (pen_width / ($("video")[0].videoHeight / $("video")[0].videoWidth)) + "%; background-color: " + dsrcrs[L] + "; position: absolute; left: " + ((i.pageX - parseInt($(".widgetero").css("margin-left").slice(0,-2))) / ($(".widgetero").width()) * 100 ) + "%; top: " + ((i.pageY - parseInt($(".widgetero").css("margin-top").slice(0,-2))) / ($(".widgetero").height()) * 100 ) +  "%; '></div>": 13781;
 }); 
     
 document.addEventListener("keyup", function(i){                                                
