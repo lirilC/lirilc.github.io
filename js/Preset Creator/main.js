@@ -6,6 +6,8 @@ var copiedWidget;
 var snapping = true;
 var preset1= [[0, ""]]; 
 var editable= [[0, ""]]; 
+var gridSnapping = false;
+var firstPlay = false;
 pasted = true;
 type = "none";
 copiedTop = 0;
@@ -18,9 +20,61 @@ pasteCountLeftRef = 0;
 select = false;
 copiedLeft = 0;
 drawing= false; 
+getSpace= function(){
+  vW= $("video")[0].videoWidth
+  vH= $("video")[0].videoHeight
+  vOW= $("video")[0].offsetWidth
+  vOH= $("video")[0].offsetHeight
+	
+	if(vW / vH < vOW / vOH){
+		rat= vH / vOH
+		return {left: ((vOW - (vW/rat)) / 2) + ($("#customizationBars").is(".open")?4: 0),top: 0,bottom:0, right: ((vOW - (vW/rat)) / 2) - ($("#customizationBars").is(".open")?4: 0)}
+	}else if(vW / vH > vOW / vOH){
+		rat= vW / vOW
+		return {left: 0,top: ((vOH - (vH/rat)) / 2),bottom:((vOH - (vH/rat)) / 2), right: 0}
+	}
+}
+function sizeWidgetero(){
+if($("#customizationBars").is(".open")){
+$(".widgetero").css({
+"height": "",
+"width": "",
+"margin-top": 46,
+"margin-left": ""})
+if(getSpace().top){
+$(".widgetero").css({
+"height": ($("body").height() - 46) / 2 - getSpace().top * 2,
+"margin-top": getSpace().top + 46})}else{
+$(".widgetero").css({
+"width": $("body").width() / 2 - getSpace().left * 2,
+"margin-left": getSpace().left})
+}}else{
+$(".widgetero").css({
+"height": "",
+"width": "",
+"margin-top": 46,
+"margin-left": ""})
+if(getSpace().top){
+$(".widgetero").css({
+"height": $("body").height() - 61 - getSpace().top * 2,
+"margin-top": getSpace().top + 46})}else{
+$(".widgetero").css({
+"width": $("body").width() - getSpace().left * 2,
+"margin-left": getSpace().left})
+}}	
+}
+function integerer(i){
+return parseInt(i.slice(0, -1))}
+window.onresize= function(e){
+sizeWidgetero()
+}
 $(document).on("ready",function(){ 
 	purger.purge(); 
 					
+$("video")[0].addEventListener('loadeddata', (e) => {
+    !firstPlay? (function(){sizeWidgetero(); firstPlay= true})(): 1;
+});
+
 	$("#frame").on("click", function(){ 
 		$('#fantasma')[0].innerHTML= $('.widgetero')[0].innerHTML; $('#fantasma .widget .ui-resizable-handle').remove(); 
 		$('#fantasma .widget .coverDiv').remove(); 
@@ -89,19 +143,20 @@ $('#profileSettings').click(function(i){
 	
 	})
 $('#snippets .snippet').mousedown(function(e) {
+	if(!firstPlay)return;
 	$(this).find($( "#snippets .widget" )).clone().addClass('widget draggable').appendTo( ".widgetero" );
 	
 var dropped = false;
 $('.widgetero .widget').last().draggable({
 	stack:".widgetero .widget",
 	cursor: "move", 
-	snap: ".vidVidCustomizationMode, .widget, div", 
+	snap: ".widgetero, .vidVidCustomizationMode, .widget, div", 
 	snapMode: "both", 
 	revertDuration: 100,
 	snapTolerance: 10,
-	  distance: 10,
 containment: "window",
 	revert: false,
+	cursorAt: { left: $('.widgetero .widget').last().width() / 2 },
     start: function(event, ui) {
     	if(!$('.widgetero .widget').last().hasClass("dropped")){ 
     		ui.helper.data('dropped', false);
@@ -118,8 +173,8 @@ containment: "window",
     }
 })
 $('.widgetero .widget').last().css({
-	left: e.pageX - $('.widgetero .widget').last().width()/2,
-	top: e.pageY -($('.widgetero .widget').last().height()/2)-46}).trigger(e)
+	left: e.pageX - $('.widgetero .widget').last().width()/2 - parseInt($(".widgetero").css("margin-left").slice(0,-2)),
+	top: e.pageY -($('.widgetero .widget').last().height()/2) - 46}).trigger(e)
 
 }); 
 
@@ -130,13 +185,13 @@ var dropped = false;
 $('.widgetero .widget').last().draggable({
 	stack:".widgetero .widget",
 	cursor: "move", 
-	snap: ".vidVidCustomizationMode, .widget, div", 
+	snap: ".widgetero, .vidVidCustomizationMode, .widget, div", 
 	snapMode: "both", 
 	revertDuration: 100,
 	snapTolerance: 10,
-	  distance: 10,
 containment: "window",
 	revert: false,
+	cursorAt: { left: $('.widgetero .widget').last().width() / 2 },
     start: function(event, ui) {
     	if(!$('.widgetero .widget').last().hasClass("dropped")){ 
     		ui.helper.data('dropped', false);
@@ -153,8 +208,8 @@ containment: "window",
     }
 })
 $('.widgetero .widget').last().css({
-	left: e.pageX - $('.widgetero .widget').last().width()/2,
-	top: e.pageY -($('.widgetero .widget').last().height()/2)-46}).trigger(e)
+	left: e.pageX - $('.widgetero .widget').last().width()/2 - parseInt($(".widgetero").css("margin-left").slice(0,-2)),
+	top: e.pageY -($('.widgetero .widget').last().height()/2) - 46}).trigger(e)
 
 }); 
 
@@ -165,13 +220,14 @@ $(document).mouseup(function(e) {
 		containment: "window",
 		stack:".widgetero .widget",
 		cursor: "move", 
-		snap: ".vidVidCustomizationMode, .widget, div", 
+		snap: ".widgetero, .vidVidCustomizationMode, .widget, div", 
 		snapMode: "both", 
 		revert: 'invalid', 
 		revertDuration: 100,
+		cursorAt: false,
 		snapTolerance: 10});
 		if(snapping){
-    		$('.widgetero .widget').draggable("option", "snap", ".vidVidCustomizationMode, .widget, div" );
+    		$('.widgetero .widget').draggable("option", "snap", ".widgetero, .vidVidCustomizationMode, .widget, div" );
 		}else{
     		$('.widgetero .widget').draggable("option", "snap", false );
 		}
@@ -180,6 +236,11 @@ $(document).mouseup(function(e) {
     		  
     		drop: function(event, ui)
     		{        
+    			$(ui.draggable).width((($(ui.draggable).width() - ($(ui.draggable).is(".select")?11:0)) / ($(".widgetero").width()) * 100 )+ "%")
+    			$(ui.draggable).height((($(ui.draggable).height() - ($(ui.draggable).is(".select")?5:0)) / ($(".widgetero").height()) * 100 )+ "%")
+    			$(ui.draggable).css({"left": (parseInt($(ui.draggable).css("left").replaceAll("px", "")) / ($(".widgetero").width()) * 100 ) + "%"})
+    			$(ui.draggable).css({"top": ((parseInt($(ui.draggable).css("top").replaceAll("px", "")) + 1) / ($(".widgetero").height()) * 100 ) + "%"})
+
     			ui.draggable.data('dropped', true);
 				dropped = true; 
 				$('.widgetero .widget').last().addClass("dropped")
@@ -207,10 +268,17 @@ $(document).mouseup(function(e) {
         'w': '#wgrip'
     },
   snapMode: "both", 
-snapTolerance: 10
+snapTolerance: 10,
+stop: function(event, ui)
+    		{        
+    			$(ui.element).width((($(ui.element).width()) / ($(".widgetero").width()) * 100 )+ "%")
+    			$(ui.element).height((($(ui.element).height()) / ($(".widgetero").height()) * 100 )+ "%")
+    			$(ui.element).css({"left": (parseInt($(ui.element).css("left").replaceAll("px", "")) / ($(".widgetero").width()) * 100 ) + "%"})
+    			$(ui.element).css({"top": (parseInt($(ui.element).css("top").replaceAll("px", "")) / ($(".widgetero").height()) * 100 ) + "%"})
+		}
 })
 		if(snapping){
-    		$('.widgetero .widget').resizable("option", "snap", ".vidVidCustomizationMode, .widget, div" );
+    		$('.widgetero .widget').resizable("option", "snap", ".widgetero, .vidVidCustomizationMode, .widget, div" );
 		}else{
     		$('.widgetero .widget').resizable("option", "snap", false );
 		}
@@ -261,6 +329,7 @@ snapTolerance: 10
 		}		
 	});
 	$("#customize").on("click",function(){
+		if(!firstPlay)return;
 		if($("#Store").hasClass("open") && $("#customizationBars").hasClass("open")){
 			$("#customizationBars").removeClass("open")
 		}
@@ -665,7 +734,7 @@ document.addEventListener("mouseup", function(i){
 document.addEventListener("mousemove", function(i){                                                 
     L= parseInt(Math.random() * dsrcrs.length); 
                                                 
-   (mousedown && drawing)? document.getElementsByClassName("widgetero")[0].innerHTML= document.getElementsByClassName("widgetero")[0].innerHTML + "<div style= 'width: 6.8px; height: 6.8px; background-color: " + dsrcrs[L] + "; position: absolute; left: " + i.pageX + "px; top: " + (i.pageY - 47) +  "px; '></div>": 13781;
+   (mousedown && drawing)? document.getElementsByClassName("widgetero")[0].innerHTML= document.getElementsByClassName("widgetero")[0].innerHTML + "<div style= 'width: 6.8px; height: 6.8px; background-color: " + dsrcrs[L] + "; position: absolute; left: " + ((i.pageX - parseInt($(".widgetero").css("margin-left").slice(0,-2))) / ($(".widgetero").width()) * 100 ) + "%; top: " + ((i.pageY - parseInt($(".widgetero").css("margin-top").slice(0,-2))) / ($(".widgetero").height()) * 100 ) +  "%; '></div>": 13781;
 }); 
     
 document.addEventListener("keyup", function(i){                                                

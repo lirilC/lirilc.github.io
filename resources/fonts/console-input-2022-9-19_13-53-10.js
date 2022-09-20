@@ -1,0 +1,1 @@
+$(".widgetero .widget").draggable("option", "grid", [parseInt($("#gridWidth").val()), parseInt($("#gridHeight").val())])

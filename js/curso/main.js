@@ -5,6 +5,7 @@ var out = false;
 var copiedWidget;
 var snapping = true;
 var gridSnapping = false;
+var firstPlay = false;
 pasted = true;
 type = "none";
 copiedTop = 0;
@@ -68,6 +69,9 @@ sizeWidgetero()
 $(document).on("ready",function(){
 	purger.purge(); 
 					
+$("video")[0].addEventListener('loadeddata', (e) => {
+    !firstPlay? (function(){sizeWidgetero(); firstPlay= true})(): 1;
+});
 	$("html").click(function() {
 		$(".wrapper").removeClass("visible")
 		$(".back-arrow").removeClass("open");
@@ -182,7 +186,7 @@ $(document).mouseup(function(e) {
     			$(ui.draggable).width((($(ui.draggable).width() - ($(ui.draggable).is(".select")?11:0)) / ($(".widgetero").width()) * 100 )+ "%")
     			$(ui.draggable).height((($(ui.draggable).height() - ($(ui.draggable).is(".select")?5:0)) / ($(".widgetero").height()) * 100 )+ "%")
     			$(ui.draggable).css({"left": (parseInt($(ui.draggable).css("left").replaceAll("px", "")) / ($(".widgetero").width()) * 100 ) + "%"})
-    			$(ui.draggable).css({"top": (parseInt($(ui.draggable).css("top").replaceAll("px", "")) / ($(".widgetero").height()) * 100 ) + "%"})
+    			$(ui.draggable).css({"top": ((parseInt($(ui.draggable).css("top").replaceAll("px", "")) + 1) / ($(".widgetero").height()) * 100 ) + "%"})
 
     			ui.draggable.data('dropped', true);
 				dropped = true; 
@@ -276,6 +280,7 @@ stop: function(event, ui)
 		}		
 	});
 	$("#customize").on("click",function(){
+		if(!firstPlay)return;
 		if($("#Store").hasClass("open") && $("#customizationBars").hasClass("open")){
 			$("#customizationBars").removeClass("open")
 			$("header").removeClass("open")
