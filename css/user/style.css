@@ -629,7 +629,7 @@ position: absolute;
     color: #555;
 }
 #biography #content #main #summary aside#sections #vids > img, #biography #content #main #summary aside#sections #pics > img, #biography #content #main #summary aside#sections #vids .foto, #biography #content #main #summary aside#sections #pics .foto {
-    width: 32%;
+    width: 106px;
     display: inline-block;
     cursor: pointer;
 }
