@@ -858,6 +858,19 @@ can493ax= "<div class='comentario'>" + "<input class='knob button' data-width='2
 asdknki4= "<div class='comentario'>" + "<input class='knob button' data-width='28' data-height='28' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.18' readonly value='100'><img title=" + '"' + "<div class='tool'><input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'><img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'><div class='datos'><ul class='actions'><li class='chatear' title='Chatear'>C</li><li class='agregar' title='Agregar'>A</li><li class='juzgar' title='Juzgar'>J</li></ul><p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p><p class='rol'>CEO <b style='color:#fff;'>+100</b></p></div><div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div><div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div><div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'></div><div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'></div></div>" + '"' + " src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>&nbsp<a target= '_blank'  href='/A.K.A._Dizzy' >Luis Eduardo Gallego García</a><span class='is'>: </span><span class='Comentario'>Yo más, bebé</span><span class='Respxxder'></span></div>"; 
 H= asdknki4; 
 var nonBuilt; 
+function rvsdatefinder(e){
+var indc= -1
+for(ind in edHistory){
+    indc++
+    if(indc == e) 
+        return ind
+}}
+function datefinder(e){
+var indc= -1
+for(ind in edHistory){
+    indc++
+    if(edHistory[ind] ==edHistory[e])return indc
+}}
 getVideos= function($c, $C){videos= 0
 for(var r= 0; r < $C; r++){
     videos= $($c.find(".carr").children()[r]).is(".video")? videos + 1: videos; 
@@ -1465,6 +1478,18 @@ K0= function(){
 $(document).on("ready",function(e){ 
     purger.purge(); 
                     
+$(".Editado").on("contextmenu", function(er){er.preventDefault()})
+$(".Editado").on("mouseup", function(e){
+console.log(e)
+if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHistory).length - 1){
+    console.log(edHistory[rvsdatefinder(datefinder($(this).attr("title")) + 1)]); 
+    $(this).attr("title", rvsdatefinder(datefinder($(this).attr("title")) + 1))
+}else if(e.which === 3 && datefinder($(this).attr("title")) - 1 >= 0){
+    console.log(edHistory[rvsdatefinder(datefinder($(this).attr("title")) - 1)]); 
+    $(this).attr("title", rvsdatefinder(datefinder($(this).attr("title")) - 1))
+}
+
+})
     if(window.location.pathname.indexOf("/img/") === -1 && window.location.pathname.indexOf("/vid/") === -1 && window.location.pathname.indexOf("/pos/") === -1){ 
         $("#ties > div > div").each(function(){$(this).outerHeight() != $(this).prop("scrollHeight")? $(this).parent().addClass("overflowing"): 1}); 
                                          
