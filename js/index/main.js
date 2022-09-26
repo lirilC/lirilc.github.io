@@ -833,7 +833,7 @@ function openModal(a){
         //lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4)  + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf(".")));  
     }
 
-    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 219 !important; }; "; 
+    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 310 !important; }; "; 
     !!$(".XWW").length? $(".XWW")[0].innerHTML= "#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; ": $("head").append("<style class='XWW'>#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; </style>"); 
 }
 function openVideoModal(a){ 
@@ -1112,7 +1112,7 @@ $('.theater .comments .options .bookmark').removeClass("true");
             $(this).removeClass("activado"); 
         }
     })
-    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 219 !important; }; "; 
+    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 310 !important; }; "; 
     !!$(".XWW").length? $(".XWW")[0].innerHTML= "#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; ": $("head").append("<style class='XWW'>#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; </style>"); 
 }
 function openVidModal(a){ 
@@ -1215,7 +1215,7 @@ $('.theater .comments .options .bookmark').removeClass("true");
         scrollInertia: 100});
       
 
-    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 219 !important; }; "; 
+    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 310 !important; }; "; 
     !!$(".XWW").length? $(".XWW")[0].innerHTML= "#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; ": $("head").append("<style class='XWW'>#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; </style>"); 
     responsive()
 }
