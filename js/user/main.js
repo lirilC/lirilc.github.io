@@ -871,6 +871,9 @@ for(ind in edHistory){
     indc++
     if(edHistory[ind] ==edHistory[e])return indc
 }}
+var edition= function(e){
+    console.log(e.target.responseText)
+}
 getVideos= function($c, $C){videos= 0
 for(var r= 0; r < $C; r++){
     videos= $($c.find(".carr").children()[r]).is(".video")? videos + 1: videos; 
@@ -1483,9 +1486,21 @@ $(".Editado").on("mouseup", function(e){
 console.log(e)
 if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHistory).length - 1){
     console.log(edHistory[rvsdatefinder(datefinder($(this).attr("title")) + 1)]); 
+
+    var wReq = new XMLHttpRequest();
+    wReq.addEventListener("load", function(e){edition(e)}); 
+    wReq.open("get", edHistory[rvsdatefinder(datefinder($(this).attr("title")) + 1)], true);
+    wReq.send();
+
     $(this).attr("title", rvsdatefinder(datefinder($(this).attr("title")) + 1))
 }else if(e.which === 3 && datefinder($(this).attr("title")) - 1 >= 0){
     console.log(edHistory[rvsdatefinder(datefinder($(this).attr("title")) - 1)]); 
+
+    var wReq = new XMLHttpRequest();
+    wReq.addEventListener("load", function(e){edition(e)}); 
+    wReq.open("get", edHistory[rvsdatefinder(datefinder($(this).attr("title")) - 1)], true);
+    wReq.send();
+
     $(this).attr("title", rvsdatefinder(datefinder($(this).attr("title")) - 1))
 }
 
