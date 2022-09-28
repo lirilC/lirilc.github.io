@@ -2083,6 +2083,8 @@ header nav ul li#right-menu #store::before {
     float: right; 
     color: #aaa; 
     font-size: 14px; 
+    z-index: 2;
+    position: relative;
 } 
 .Cont {
     position: absolute; 
