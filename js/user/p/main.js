@@ -1618,6 +1618,7 @@ $( "#files .file_tree" ).children().each( function(){$( this ).is( ".folder_cont
 $( "#files .file_tree" ).children().removeAttr( "style" )
 $( "#files .file_tree > .folder_cont > .folder" ).removeAttr( "style" )
 $("#root")[0].children[0].innerHTML= "<div><a href= \"/" + username + "\">" + users_name + `</a></div><div><a href="/` + username + `/p">Proyectos</a></div><span><span>` + pNa + `</span></span>`
+$("a").click(function(ed){if($(this).attr("target") !== "_blank" && $(this).attr("href") != undefined){ed.preventDefault(); loadPage($(this).attr("href"))}})
 return
 }
 
@@ -5044,6 +5045,7 @@ oF= $(el)
 })*/
        } 
     }); 
+    $("a").click(function(ed){if($(this).attr("target") !== "_blank" && $(this).attr("href") != undefined){ed.preventDefault(); loadPage($(this).attr("href"))}})
 } 
 
 getToBusiness= function(r6){ 
