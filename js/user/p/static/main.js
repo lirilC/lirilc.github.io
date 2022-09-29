@@ -21,7 +21,9 @@ function loadPage(x, s){
    
 
 window.onpopstate= function(){
+if(window.location.pathname.indexOf("/" + username + "/p/" + pId) != 0){
 loadPage(window.location.pathname, "p")
+}
 }
 
 
