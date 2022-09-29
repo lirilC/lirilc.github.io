@@ -1,4 +1,30 @@
+function reqListenerForPageLoad (e) { 
+    urL= e.explicitOriginalTarget.responseURL
+    urL= urL.slice(urL.indexOf("/") + 1, urL.length)
+    urL= urL.slice(urL.indexOf("/") + 1, urL.length)
+    urL= urL.slice(urL.indexOf("/"), urL.length)
+    console.log(urL)
+    history.pushState({page: 1}, "", urL);  
+    document.open(); 
+    document.write( e.target.responseText ); 
+    document.close(); 
+}; 
+       
+function loadPage(x){
+    if(x != window.location.pathname){
+        var xxa = new XMLHttpRequest(); 
+        xxa.addEventListener("load", reqListenerForPageLoad); 
+        xxa.open("GET", x); 
+        xxa.send(); 
+    }
+}
+   
+
+
+
+
 document.addEventListener("DOMContentLoaded", function(){ 
+$("a").click(function(ed){if($(this).attr("target") !== "_blank" && $(this).attr("href") != undefined){ed.preventDefault(); loadPage($(this).attr("href"))}})
 _w= window
 const pId_from_end_of_url= (function(w){return (w.p.indexOf( pId ) + 1, 
 w.p.length, 

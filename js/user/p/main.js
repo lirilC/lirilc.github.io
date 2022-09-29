@@ -1,3 +1,28 @@
+function reqListenerForPageLoad (e) { 
+    urL= e.explicitOriginalTarget.responseURL
+    urL= urL.slice(urL.indexOf("/") + 1, urL.length)
+    urL= urL.slice(urL.indexOf("/") + 1, urL.length)
+    urL= urL.slice(urL.indexOf("/"), urL.length)
+    console.log(urL)
+    history.pushState({page: 1}, "", urL);  
+    document.open(); 
+    document.write( e.target.responseText ); 
+    document.close(); 
+}; 
+       
+function loadPage(x){
+    if(x != window.location.pathname){
+        var xxa = new XMLHttpRequest(); 
+        xxa.addEventListener("load", reqListenerForPageLoad); 
+        xxa.open("GET", x); 
+        xxa.send(); 
+    }
+}
+   
+
+
+
+
 /*
 
 
@@ -370,7 +395,7 @@ function openModal(a) {
     var source = a.attr('src');
     $('.theater #bigPic').attr('src', source);
 
-    var user = '<a href="user.html">Walter White</a><br><span class="time">24 de Octubre a las 0:30 am</span>'; 
+    var user = '<a url="user.html">Walter White</a><br><span class="time">24 de Octubre a las 0:30 am</span>'; 
     $('.theater .comments .info .username').html(user); 
 
     var time = a.closest('.story').find(".time").html();
@@ -1068,7 +1093,7 @@ if( $( this ).is( ".editing" ) )return
 
     pageI++; 
                                                                       
-    (!!uRL.length && uRL.length > 0)? $("#root")[0].children[0].children[$("#root")[0].children.length - 1].outerHTML= '<div><a href=\"/' + username + '/p/' + pId + '\">' + $("#root")[0].children[0].children[$("#root")[0].children.length - 1].innerText + '</a></div>': 1; 
+    (!!uRL.length && uRL.length > 0)? $("#root")[0].children[0].children[$("#root")[0].children.length - 1].outerHTML= '<div><a url=\"/' + username + '/p/' + pId + '\">' + $("#root")[0].children[0].children[$("#root")[0].children.length - 1].innerText + '</a></div>': 1; 
                                   
     updateRoot(separateUrl(uRL)); 
 
@@ -1592,7 +1617,7 @@ $(".file").css({"opacity": "0", "height": "0", "padding": "0", "border-bottom": 
 $( "#files .file_tree" ).children().each( function(){$( this ).is( ".folder_cont" )? $( $( this ).find( ".folder" )[0] ).addClass( "inScope" ): $( this ).addClass( "inScope" )} )
 $( "#files .file_tree" ).children().removeAttr( "style" )
 $( "#files .file_tree > .folder_cont > .folder" ).removeAttr( "style" )
-$("#root")[0].children[0].innerHTML= "<div><a url= \"/" + username + "\">" + users_name + `</a></div><div><a url="/` + username + `/p">Proyectos</a></div><span><span>` + pNa + `</span></span>`
+$("#root")[0].children[0].innerHTML= "<div><a href= \"/" + username + "\">" + users_name + `</a></div><div><a href="/` + username + `/p">Proyectos</a></div><span><span>` + pNa + `</span></span>`
 return
 }
 
@@ -2125,7 +2150,7 @@ uRL= uRL.slice(0, uRL.length - 1);
 
 pageI++; 
 
-(!!uRL.length && uRL.length > 0)? $("#root")[0].children[0].children[$("#root")[0].children.length - 1].outerHTML= '<div><a href=\"/' + username + '/p/' + pId + '\">' + $("#root")[0].children[0].children[$("#root")[0].children.length - 1].innerText + '</a></div>': 1; 
+(!!uRL.length && uRL.length > 0)? $("#root")[0].children[0].children[$("#root")[0].children.length - 1].outerHTML= '<div><a url=\"/' + username + '/p/' + pId + '\">' + $("#root")[0].children[0].children[$("#root")[0].children.length - 1].innerText + '</a></div>': 1; 
 
 updateRoot(separateUrl(uRL)); 
 
@@ -2205,6 +2230,7 @@ $(document).on("ready",function(e){
     purger.purge()
     purger.super_purge()
 
+$("a").click(function(ed){if($(this).attr("target") !== "_blank" && $(this).attr("href") != undefined){ed.preventDefault(); loadPage($(this).attr("href"))}})
 $("header").after(`<aside class="searchResults hidden">
         <div>
         </div>
@@ -2226,7 +2252,7 @@ for(var f in results){
 if(results[f].type == "Usuario"){
 $(".searchResults > div").append(
 `<section class="result">
-<a href= "/` + results[f].username + `"></a>
+<a url= "/` + results[f].username + `"></a>
 <div class="profilePic">
 <img src="` + results[f].profilePic + `" alt="">
 <input class="knob button" data-width="106" data-height="106" data-fgColor="#2ecc71" data-bgColor="rgba(0,0,0,0)" data-displayInput=false data-thickness=".06" readonly value="` + results[f].rol[1].slice(1) + `"></div>
@@ -2240,7 +2266,7 @@ for(var f in results){
 if(results[f].type == "Blog"){
 $(".searchResults > div").append(
 `<section class="result">
-<a href= "` + results[f].href + `"></a>
+<a url= "` + results[f].href + `"></a>
 <div class="profilePic">
 <img src="` + results[f].profilePic + `" alt="">
 <input class="knob button" data-width="106" data-height="106" data-fgColor="#2ecc71" data-bgColor="rgba(0,0,0,0)" data-displayInput=false data-thickness=".06" readonly value="` + results[f].rol[1].slice(1) + `"></div>
@@ -2254,7 +2280,7 @@ for(var f in results){
 if(results[f].type == "Proyecto"){
 $(".searchResults > div").append(
 `<section class="result">
-<a href= "` + results[f].href + `"></a>
+<a url= "` + results[f].href + `"></a>
 <div class="profilePic">
 <img src="` + results[f].profilePic + `" alt="">
 <input class="knob button" data-width="106" data-height="106" data-fgColor="#2ecc71" data-bgColor="rgba(0,0,0,0)" data-displayInput=false data-thickness=".06" readonly value="` + results[f].rol[1].slice(1) + `"></div>
@@ -2264,6 +2290,7 @@ $(".searchResults > div").append(
 )
 }
 }
+$(".searchResults a").click(function(ed){if($(this).attr("target") !== "_blank" && $(this).attr("href") != undefined){ed.preventDefault(); loadPage($(this).attr("href"))}})
 $(".knob").knob()
 })
 $(document).on("keydown", function(r){
@@ -3986,7 +4013,7 @@ if( $( this ).is( ".editing" ) )return
 
     pageI++; 
                                                                       
-    (!!uRL.length && uRL.length > 0)? $("#root")[0].children[0].children[$("#root")[0].children.length - 1].outerHTML= '<div><a href=\"/' + username + '/p/' + pId + '\">' + $("#root")[0].children[0].children[$("#root")[0].children.length - 1].innerText + '</a></div>': 1; 
+    (!!uRL.length && uRL.length > 0)? $("#root")[0].children[0].children[$("#root")[0].children.length - 1].outerHTML= '<div><a url=\"/' + username + '/p/' + pId + '\">' + $("#root")[0].children[0].children[$("#root")[0].children.length - 1].innerText + '</a></div>': 1; 
                                   
     updateRoot(separateUrl(uRL)); 
 
@@ -4849,7 +4876,7 @@ separateUrl= function (r3){
 } 
   
 updateRoot= function(a7){ 
-    $("#root")[0].children[0].innerHTML= "<div><a url= \"/" + username + "\">" + users_name + `</a></div><div><a url="/` + username + `/p">Proyectos</a></div><span><span>` + pNa + `</span></span>`; 
+    $("#root")[0].children[0].innerHTML= "<div><a href= \"/" + username + "\">" + users_name + `</a></div><div><a href="/` + username + `/p">Proyectos</a></div><span><span>` + pNa + `</span></span>`; 
 
     (!!getToBusiness(decodeURIComponent(window.location.pathname)).length)? $("#root")[0].children[0].children[$("#root")[0].children[0].children.length - 1].outerHTML= "<div><a url= " + '"/' + username + `/p/` + pId + '"' + ">" + $("#root")[0].children[0].children[$("#root")[0].children[0].children.length - 1].innerText + `</a></div>`: 1; 
 
