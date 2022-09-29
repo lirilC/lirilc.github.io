@@ -10,13 +10,20 @@ function reqListenerForPageLoad (e) {
     document.close(); 
 }; 
        
-function loadPage(x){
-    if(x != window.location.pathname){
+function loadPage(x, s){
+    if(x != window.location.pathname || (typeof s != undefined && s == "p")){
         var xxa = new XMLHttpRequest(); 
         xxa.addEventListener("load", reqListenerForPageLoad); 
         xxa.open("GET", x); 
         xxa.send(); 
     }
+}
+
+
+window.onpopstate= function(){
+if(["/" + username + "/img/", "/" + username + "/vid/"].indexOf(window.location.pathname.slice(0, window.location.pathname.lastIndexOf("/") + 1)) == -1){
+loadPage(window.location.pathname, "p")
+}
 }
    
 
