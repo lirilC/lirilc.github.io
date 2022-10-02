@@ -1699,6 +1699,15 @@ time{
     position: sticky; 
     top: 44px; 
 } 
+.Editado{ 
+    float: right; 
+    color: #aaa; 
+    font-size: 14px; 
+    z-index: 2;
+    position: relative;
+    margin-right: 21px;
+    cursor: pointer;
+} 
 .searchResults{
 display: block;
 width: 100%;

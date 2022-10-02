@@ -927,7 +927,7 @@ var edition= function(e){
     $("body").prepend("<badguy></badguy>"); 
     switch(type){
         case "oC":
-            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.length).indexOf("</section>") + e.target.responseText.lastIndexOf("otherContainments") - 9)); 
+            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.length).indexOf("<aside") + e.target.responseText.lastIndexOf("otherContainments") - 9)); 
             $(".current .title").next().remove()
             $(".current .title").after($("badguy").find("#otherContainments").html())
             $(".current").find("text").html()
@@ -937,7 +937,7 @@ var edition= function(e){
 
             $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
 
-            if($(".current").find(".title").text().indexOf("We're L") != 0)$(".current").find(".title").html($("badguy").text())
+            if($(".current").find(".title").text().indexOf("We're L") != 0)$(".current").find(".title").html($("badguy").html())
             $("badguy").remove()
             break;
         case "c":
@@ -947,7 +947,7 @@ var edition= function(e){
 
             $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
 
-            $(".current").find(".title").html($("badguy").text())
+            $(".current").find(".title").html($("badguy").html())
             $("badguy").remove()
             break;
         case "mult_img":
@@ -989,6 +989,10 @@ var edition= function(e){
                 Math.round($(this)[0].scrollLeft / $(this).width()) == $(this).children().length - 1? (function(){rf.parent().find(".nav_arrow.right").addClass("disabled"); $("#theater").find(".nav_arrow.right").addClass("disabled")})(): (function(){rf.parent().find(".nav_arrow.right").removeClass("disabled"); $("#theater").find(".nav_arrow.right").removeClass("disabled")})(); 
                 $(this)[0].scrollLeft == 0? (function(){rf.parent().find(".nav_arrow.left").addClass("disabled"); $("#theater").find(".nav_arrow.left").addClass("disabled");})(): (function(){rf.parent().find(".nav_arrow.left").removeClass("disabled"); $("#theater").find(".nav_arrow.left").removeClass("disabled")})(); 
             }) 
+
+            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
+            W= e.target.responseText
+            console.log($("badguy").html())
             $("badguy").remove()
             break; 
     }
