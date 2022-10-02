@@ -25,16 +25,16 @@ table tbody div input
 .deactivators > div > .deactivator div
 { 
     width: 230px; 
-	height: 1px; 
+    height: 1px; 
 } 
 .timeToTimeout 
 { 
     vertical-align: bottom; 
-	margin-left: -200px; 
-	width: 200px; 
-	display: inline-block; 
+    margin-left: -200px; 
+    width: 200px; 
+    display: inline-block; 
 } 
 .timeToTimeout .countdown 
 { 
-	overflow-x: scroll; 
+    overflow-x: scroll; 
 } 

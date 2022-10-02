@@ -140,7 +140,30 @@ flash= function(){
 	flashing= setInterval(function(){document.querySelector(".timeToTimeout .countdown").style.backgroundColor= document.querySelector(".timeToTimeout .countdown").style.backgroundColor != "rgb(34, 34, 34)"? "#222": "#fff"; }, 230); 
 }; 
 
+snka= [[13, 12], [14, 12], [15, 12]]
+
+contactsSnks= function(x, y){
+	for(ccc in snka.slice(0, -1)){
+		if(snka[ccc][0] == x && snka[ccc][1] == y){
+			return true; 
+		}
+	}
+
+	return false; 
+}
+
+
+
+
+document.addEventListener("keydown", function(z){ 
+	if(z.keyCode == 37 && d != "dead")d="izquierda"; 
+	if(z.keyCode == 39 && d != "dead")d="derecha"; 
+	if(z.keyCode == 38 && d != "dead")d="arriba"; 
+	if(z.keyCode == 40 && d != "dead")d="abajo"; 
+}); 
 var right= false; 
+
+d= "derecha"; 
 document.addEventListener("DOMContentLoaded", function(){ 
 	populate= function(w, h){ 
 		for(e= 1; e <= h; e++){ 
@@ -161,33 +184,80 @@ document.addEventListener("DOMContentLoaded", function(){
         	} 
         } 
 
-        var nodo_de_estilo= document.createElement( 'style' ); 
-        nodo_de_estilo.type= "text/css"; 
-                                         
-        if( !!( window.attachEvent && !window.opera ) ){ 
-            nodo_de_estilo.styleSheet.cssText= 'table tbody div{height: ' + document.querySelectorAll( "table tbody div input" )[0].clientHeight + "px" + '}'; 
-        }else{ 
-            var hoja_de_estilos= document.createTextNode('table tbody div{height: ' + document.querySelectorAll( "table tbody div input" )[0].clientHeight + "px" + '}'); 
-            nodo_de_estilo.appendChild( hoja_de_estilos ); 
-        } 
-          
-        document.getElementsByTagName('head')[0].appendChild( nodo_de_estilo ); 
-        
-
-		for(a= 0; a <= document.querySelectorAll("table tbody div input").length - 1; a++){ 
-    		document.querySelectorAll("table tbody div input")[a].mined= parseInt(Math.random() * 9) == 1? true: false; 
-    		document.querySelectorAll("table tbody div input")[a].addEventListener("change", function(e){ if((typeof u != "undefined") || (typeof y != "undefined") || !(typeof r == "undefined") || !(typeof w == "undefined")){/*console.log((typeof u != "undefined"), (typeof y != "undefined"), !(typeof r == "undefined"), (typeof w != "undefined")); */this.checked= !this.checked; return; }; this.checked= !this.checked; /*console.log(["Mined: ", this.mined]); */ cosaParaengineerer= Array.prototype.indexOf.call(e.target.parentElement.parentElement.querySelectorAll("input"), e.target); sweep([Array.prototype.indexOf.call(e.target.parentElement.children, e.target), Array.prototype.indexOf.call(e.target.parentElement.parentElement.children, e.target.parentElement)], 2); }); 
+        for(a= 0; a <= document.querySelectorAll("table tbody div")[document.querySelectorAll("table tbody div").length - 1].children.length - 1; a++){ 
+			document.querySelectorAll("table tbody div")[a].style.height= document.querySelectorAll("table tbody div input")[0].clientHeight + "px"; 
 		} 
+
+		/*for(a= 0; a <= document.querySelectorAll("table tbody div input").length - 1; a++){ 
+    		document.querySelectorAll("table tbody div input")[a].mined= parseInt(Math.random() * 9) == 1? true: false; 
+    		document.querySelectorAll("table tbody div input")[a].addEventListener("change", function(e){ if((typeof u != "undefined") || (typeof y != "undefined") || !(typeof r == "undefined") || !(typeof w == "undefined")){/*console.log((typeof u != "undefined"), (typeof y != "undefined"), !(typeof r == "undefined"), (typeof w != "undefined")); *//*this.checked= !this.checked; return; }; this.checked= !this.checked; /*console.log(["Mined: ", this.mined]); */ /*cosaParaengineerer= Array.prototype.indexOf.call(e.target.parentElement.parentElement.querySelectorAll("input"), e.target); sweep([Array.prototype.indexOf.call(e.target.parentElement.children, e.target), Array.prototype.indexOf.call(e.target.parentElement.parentElement.children, e.target.parentElement)], 2); }); 
+		} */
 	}; 
        
-	populate(20, 20); 
-}); 
+	populate(25, 25); 
 
-/*Editar los archivos like it was 
-a local host. No upload but like... 
-be able to save the files 
-and try the htmls keeping in mind the 
-saved files 
-   
-   
-*/ 
+	document.querySelector("body").insertAdjacentHTML("beforeend", "<span id= 'Empezar' style= 'width: 100vw; height: 100vh; background: #66d7d2; position: absolute; z-index: 10000; opacity: 0.7; top: 0; left: 0; color: #fff; padding-top: 50vh; box-sizing: border-box; text-align: center; font-family: " + '"Open Sans", "Sans Serif";' + "'>Da click aquí para comenzar.</span>")
+
+	document.querySelector("#Empezar").addEventListener("click", function(){
+		this.remove(); 
+var eer= setInterval(function(){
+
+if(typeof fud == "undefined" || fud.length > 2){
+	if(typeof fud != "undefined"){
+		AntiEngineerer(fud[0], fud[1]).checked= false; 
+		AntiEngineerer(fud[0], fud[1]).disabled= false; 
+	}; 
+	fud= [parseInt(Math.random() * 25), parseInt(Math.random() * 25)]; 
+	while(contactsSnks(fud[0], fud[1])){
+		fud= [parseInt(Math.random() * 25), parseInt(Math.random() * 25)]; 
+	}
+	AntiEngineerer(fud[0], fud[1]).checked= true; 
+	AntiEngineerer(fud[0], fud[1]).disabled= true; 
+}
+if(d != "dead"){
+	for(a= 0; a < document.querySelectorAll("input[type=checkbox]").length; a++){ 
+		document.querySelectorAll("input[type=checkbox]")[a].checked= false; 
+	}; 
+}
+ 
+AntiEngineerer(fud[0], fud[1]).checked= true; 
+
+AntiEngineerer(fud[0], fud[1]).disabled= true; 
+
+for(e in snka){
+	AntiEngineerer(snka[e][0], snka[e][1]).checked= true; 
+}
+
+
+
+switch(d){
+	case "derecha": 
+		snka[snka.length]= [snka[snka.length - 1][0] + 1, snka[snka.length - 1][1]]; 
+		break; 
+	case "izquierda": 
+		snka[snka.length]= [snka[snka.length - 1][0] - 1, snka[snka.length - 1][1]]; 
+		break; 
+	case "arriba": 
+		snka[snka.length]= [snka[snka.length - 1][0], snka[snka.length - 1][1] - 1]; 
+		break; 
+	case "abajo": 
+		snka[snka.length]= [snka[snka.length - 1][0], snka[snka.length - 1][1] + 1]; 
+		break; 
+	case "dead": 
+		for(a= 0; a < document.querySelectorAll("input[type=checkbox]").length; a++){ 
+			document.querySelectorAll("input[type=checkbox]")[a].checked= document.querySelectorAll("input[type=checkbox]")[a] != AntiEngineerer(fud[0], fud[1])? false: true; 
+		}; 
+		for(r in snka){
+			AntiEngineerer(snka[r][0], snka[r][1]).disabled= true; 
+			AntiEngineerer(snka[r][0], snka[r][1]).checked= true; 
+		}
+		break; 
+}
+d != "dead" && snka[snka.length - 1][0] == fud[0] && snka[snka.length - 1][1] == fud[1]? (function(){fud[fud.length]= "eaten"; })(): (function(){snka= d != "dead"? snka.splice(1): snka; })(); 
+
+
+contactsSnks(snka[snka.length - 1][0], snka[snka.length - 1][1])? (function(){d= "dead"; })(): 1; 
+}, 600)
+
+	})
+}); 
