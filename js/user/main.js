@@ -990,9 +990,9 @@ var edition= function(e){
                 $(this)[0].scrollLeft == 0? (function(){rf.parent().find(".nav_arrow.left").addClass("disabled"); $("#theater").find(".nav_arrow.left").addClass("disabled");})(): (function(){rf.parent().find(".nav_arrow.left").removeClass("disabled"); $("#theater").find(".nav_arrow.left").removeClass("disabled")})(); 
             }) 
 
-            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
+            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') - 9, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') - 9, e.target.responseText.length).indexOf('"more"') - 9 + e.target.responseText.lastIndexOf('"title"') - 9)); 
             W= e.target.responseText
-            console.log($("badguy").html())
+            $(".current .title").html($("badguy p").html())
             $("badguy").remove()
             break; 
     }

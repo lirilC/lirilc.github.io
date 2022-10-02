@@ -42,6 +42,112 @@ var $this
 var hashes= {}; 
 var nonBuilt; 
 var ctrlMShift= false; 
+function rvsdatefinder(e){
+var indc= -1
+for(ind in edHistory){
+    indc++
+    if(indc == e) 
+        return ind
+}}
+function datefinder(e){
+var indc= -1
+for(ind in edHistory){
+    indc++
+    if(edHistory[ind] ==edHistory[e])return indc
+}}
+var edition= function(e){
+    $("body").append("<badguy></badguy>"); 
+    switch(type){
+        case "oC":
+            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.length).indexOf("<aside") + e.target.responseText.lastIndexOf("otherContainments") - 9)); 
+            $(".current .title").next().remove()
+            $(".current .title").after($("badguy").find("#otherContainments").html())
+            $(".current").find("text").html()
+            for(var er= 0; er <= $(".current .media audio").length - 1; er++){
+                audiojs.create($(".current .media audio")[er])
+            }
+
+            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
+
+            if($(".current").find(".title").text().indexOf("We're L") != 0)$(".current").find(".title").html($("badguy").html())
+            $("badguy").remove()
+            break;
+        case "c":
+            $("badguy").html(e.target.responseText.slice(e.target.responseText.indexOf("<containment") , e.target.responseText.slice(e.target.responseText.lastIndexOf("<containment"), e.target.responseText.length).indexOf("</containment") + e.target.responseText.indexOf("<containment"))); 
+            $(".current .title").next().remove()
+            $(".current .title").after($("badguy").find("containment")[0].outerHTML)
+
+            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
+
+            $(".current").find(".title").html($("badguy").html())
+            $("badguy").remove()
+            break;
+        case "mult_img":
+            $("badguy").html(e.target.responseText.slice(e.target.responseText.indexOf('"navigation"') - 15, e.target.responseText.slice(e.target.responseText.indexOf('"navigation"') - 15, e.target.responseText.length).indexOf("Playuse") - 3 + e.target.responseText.indexOf('"navigation"') - 15)); 
+            $(".current .Comentarios").prev().remove()
+            $(".current .Comentarios").before($("badguy").find(".navigation")[0].outerHTML)
+            $(".current").find("text").html()
+            
+            $(".current .nav_arrow.left .arrow").not("#picContainer .arrow").on("click", function(){
+                th= $(".current");
+                if($("#theater .nav_arrow.left").is(".disabled"))
+                    {return}; 
+                if(th.find(".nav_arrow.left").is(".disabled") && $("#theater").css("display") == "none")
+                    {return}
+                if($("#theater").css("display") == "none" && !!th.find(".carr").length){ 
+                    lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
+                    if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
+                    !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
+                        if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); th.find(".options a").attr("href", "/" + username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
+                }
+            }); 
+
+            $(".current .nav_arrow.right .arrow").not("#picContainer .arrow").on("click", function(){
+                th= $(".current");
+                if($("#theater .nav_arrow.right").is(".disabled"))
+                    {return}; 
+                if(th.find(".nav_arrow.right").is(".disabled") && $("#theater").css("display") == "none")
+                    {return}
+                if($("#theater").css("display") == "none" && !!th.find(".carr").length){ 
+                    lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
+                    if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
+                    !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
+                        if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); th.find(".options a").attr("href", "/" + username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
+                }
+            }); 
+
+            $(".current .carr").on("scroll", function(){ 
+                rf= $(this)
+                Math.round($(this)[0].scrollLeft / $(this).width()) == $(this).children().length - 1? (function(){rf.parent().find(".nav_arrow.right").addClass("disabled"); $("#theater").find(".nav_arrow.right").addClass("disabled")})(): (function(){rf.parent().find(".nav_arrow.right").removeClass("disabled"); $("#theater").find(".nav_arrow.right").removeClass("disabled")})(); 
+                $(this)[0].scrollLeft == 0? (function(){rf.parent().find(".nav_arrow.left").addClass("disabled"); $("#theater").find(".nav_arrow.left").addClass("disabled");})(): (function(){rf.parent().find(".nav_arrow.left").removeClass("disabled"); $("#theater").find(".nav_arrow.left").removeClass("disabled")})(); 
+            }) 
+
+            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
+            W= e.target.responseText
+            console.log($("badguy").html())
+            $("badguy").remove()
+            break; 
+        case "b":
+            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('id="text"') - 7, e.target.responseText.slice(e.target.responseText.lastIndexOf('id="text"') - 7, e.target.responseText.length).indexOf("</aside>") + e.target.responseText.lastIndexOf('id="text"') - 7)); 
+            $("#text").not("badguy #text").html("")
+            $("#text").not("badguy #text").html($("badguy #text").html())
+            console.log($("badguy #text").html())
+            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('id="title"') + 11, e.target.responseText.slice(e.target.responseText.lastIndexOf('id="title"') + 11, e.target.responseText.length).indexOf("</aside>") + e.target.responseText.lastIndexOf('id="title"') + 11)); 
+
+            $("#title").not("badguy #title").html($("badguy").html())
+            $("badguy").remove()
+            $("figure > div").resizable({
+                handles: 'e',
+                start: function() {
+                    $("#setter")[0].innerHTML = "img{cursor:e-resize !important}"
+                },
+                stop: function() {
+                    $("#setter")[0].innerHTML = ""
+                }
+            });
+            break;
+    }
+}
 wD= function(thi, b){ 
     if(typeof b == "undefined"){ 
         if(!thi.parent().next(".newComment").find("textarea").length){ 
@@ -450,7 +556,33 @@ $(document).on("ready",function(){
     purger.purge(); 
 
 $("a").click(function(ed){if($(this).attr("target") !== "_blank" && $(this).attr("href") != undefined){ed.preventDefault(); loadPage($(this).attr("href"))}})
+$(".Editado").on("contextmenu", function(er){er.preventDefault()})
+$(".Editado").on("mouseup", function(e){
+console.log(e)
+if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHistory).length - 1){
+    console.log(edHistory[rvsdatefinder(datefinder($(this).attr("title")) + 1)]); 
 
+    var wReq = new XMLHttpRequest();
+    wReq.addEventListener("load", function(e){edition(e)}); 
+    wReq.open("get", edHistory[rvsdatefinder(datefinder($(this).attr("title")) + 1)], true);
+    wReq.send();
+    rvsdatefinder(datefinder($(this).attr("title")) + 1).indexOf("Editado") != 0? $(this).css({"text-decoration": "line-through", "color": "#3773639f"}): $(this).css({"text-decoration": "", "color": "rgb(221, 221, 144)"})
+    $(this).attr("title", rvsdatefinder(datefinder($(this).attr("title")) + 1))
+}else if(e.which === 3 && datefinder($(this).attr("title")) - 1 >= 0){
+
+    console.log(edHistory[rvsdatefinder(datefinder($(this).attr("title")) - 1)]); 
+
+    var wReq = new XMLHttpRequest();
+    wReq.addEventListener("load", function(e){edition(e)}); 
+    wReq.open("get", edHistory[rvsdatefinder(datefinder($(this).attr("title")) - 1)], true);
+    wReq.send();
+
+    rvsdatefinder(datefinder($(this).attr("title")) - 1).indexOf("Editado") != 0? $(this).css({"text-decoration": "line-through", "color": "#3773639f"}): $(this).css({"text-decoration": "", "color": ""})
+    $(this).attr("title", rvsdatefinder(datefinder($(this).attr("title")) - 1))
+    if(datefinder($(this).attr("title"))== 0){$(this).css({"color": ""})}else{$(this).css({"color": "rgb(221, 221, 144)"})}
+}
+
+})
 $(".nombre").on("click", function(){
     if(ctrlMShift){
         if($(this).attr("contenteditable") == "true"){
