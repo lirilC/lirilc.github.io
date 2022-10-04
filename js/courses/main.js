@@ -50,7 +50,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 $(document).on("ready",function(){
     purger.purge(); 
                     
-$("a").click(function(ed){if($(this).attr("target") !== "_blank" && $(this).attr("href") != undefined){ed.preventDefault(); loadPage($(this).attr("href"))}})
+$("a").not("#og-grid > li > a").click(function(ed){if($(this).attr("target") !== "_blank" && $(this).attr("href") != undefined){ed.preventDefault(); loadPage($(this).attr("href"))}})
 $("header").after(`<aside class="searchResults hidden">
         <div>
         </div>
