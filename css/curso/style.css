@@ -892,3 +892,10 @@ display: inline-block;
 color: #808080}
 .searchResults .result#resaltado{
 background-color: #ddd}
+.widgetero.open iframe{
+transform: scale(0.5);
+transform-origin: 0 0;
+width: 200%;
+height: 200%;
+display: block;
+}
