@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="https://use.typekit.net/xid6udh.css">
+    <link rel="stylesheet" href="css/style_Calculadora.css">
+    <script
+src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="container" id="calcs-section">
+      <div class="row">
+        <input id="print" class="col-xs-12 text-right calcs" type="text" name="input" size="16">
+      </div>
+    </div>
+    <div class="container" id="calc-buttons">
+      <div class="row">
+        <button class="btn btn-lg btn-default col-xs-3" onClick="go('ac');">AC</button>
+        <button class="btn btn-lg btn-default col-xs-3" onClick="go('log');">log</button>
+        <button class="btn btn-lg btn-default col-xs-3" onClick="go('sin');">sin</button>
+        <button class="btn btn-lg btn-default col-xs-3" onClick="go('tan');">tan</button>
+      </div>
+      <div class="row">
+        <button class="btn btn-lg btn-default col-xs-3" onClick="go(7);">7</button>
+        <button class="btn btn-lg btn-default col-xs-3" onClick="go(8);">8</button>
+        <button class="btn btn-lg btn-default col-xs-3" onClick="go(9);">9</button>
+        <button class="btn btn-lg btn-default col-xs-3" onClick="go(' * ');">*</button>
+      </div>
+      <div class="row">
+        <button class="btn btn-lg btn-default col-xs-3" onClick="go(4);">4</button>
+        <button class="btn btn-lg btn-default col-xs-3" onClick="go(5);">5</button>
+        <button class="btn btn-lg btn-default col-xs-3" onClick="go(6);">6</button>
+        <button class="btn btn-lg btn-default col-xs-3" onClick="go(' - ');">-</button>
+      </div>
+      <div class="row">
+        <button class="btn btn-lg btn-default col-xs-3" onClick="go(1);">1</button>
+        <button class="btn btn-lg btn-default col-xs-3" onClick="go(2);">2</button>
+        <button class="btn btn-lg btn-default col-xs-3" onClick="go(3);">3</button>
+        <button class="btn btn-lg btn-default col-xs-3" onClick="go(' + ');">+</button>
+      </div>
+      <div class="row">
+        <button class="btn btn-lg btn-default col-xs-3" onClick="go(0);">0</button>
+        <button class="btn btn-lg btn-default col-xs-3" onClick="go('.');">.</button>
+        <button class="btn btn-lg btn-default col-xs-3" onClick="go('eval');">=</button>
+        <button class="btn btn-lg btn-default col-xs-3" onClick="go(' / ');">/</button>
+      </div>
+    </div>
+  </div>
+  <script type= "text/javascript" src= "js/main_Calculadora.js"></script>
+</body>
+</html>

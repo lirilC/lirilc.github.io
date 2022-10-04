@@ -110,7 +110,18 @@ sizeWidgetero()
 }
 $(document).on("ready",function(){
 	purger.purge(); 
-					
+				
+for(e in Object.keys(localStorage)){
+	if(Object.keys(localStorage)[e].indexOf("/A.K.A._Dizzy/raw/p/i9d2g2cftdCds") === 0 && Object.keys(localStorage)[e].indexOf(".html") == Object.keys(localStorage)[e].length - 5){
+		console.log(Object.keys(localStorage)[e])
+
+$(".widgets").append(`<li>
+	<div class="widget" cont= "<iframe src= '${Object.keys(localStorage)[e].replace("/raw/p/", "/raw/#/")}' width= '100%' height= '100%'></iframe>" style="height:200px; width: 320px">  
+	</div>
+	<img src="resources/images/widgets/unknown.jpg" alt="">
+</li>`)
+	}
+}	
 $("a").click(function(ed){if($(this).attr("target") !== "_blank" && $(this).attr("href") != undefined){ed.preventDefault(); loadPage($(this).attr("href"))}})
 $("video")[0].addEventListener('loadeddata', (e) => {
     !firstPlay? (function(){sizeWidgetero(); firstPlay= true})(): 1;
@@ -685,6 +696,7 @@ purger.index= 16;
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return
     fT= localStorage.getItem("file_tree")
+    wFT= localStorage.getItem("w_file_tree")
     if( ( localStorage.getItem( "safety_purge" ) === null || ( localStorage.getItem( "safety_purge" ) !== null && parseInt( localStorage.getItem( "safety_purge" ) ) != purger.index ) ) || ( typeof a != "undefined" && a == "bypass" ) ){ 
         for( ii in localStorage ){ 
             if( typeof localStorage[ii] != "function" && ii != "length" && ["safety_purge", "tooltip", "knob", "filesWidth", "user", "selected"].indexOf( ii ) == -1 ){ 
@@ -695,6 +707,7 @@ purger.purge= function( a ){
         localStorage.setItem("safety_purge", purger.index); 
                                 
         localStorage.setItem("file_tree", fT)
+        localStorage.setItem("w_file_tree", wFT)
         console.log("Purged!"); 
     }; 
 }; 
