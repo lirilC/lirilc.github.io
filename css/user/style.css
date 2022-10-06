@@ -354,9 +354,18 @@ input:focus,textarea:focus {
 normal #fff*/
 .info  img{
     height: 40px !important;
-    width: 40px!important;
+    width: 40px !important;
     cursor: pointer;
     position: absolute; 
+}
+.info:not(.button)  img{
+    height: 37px !important;
+    width: 37px !important;
+    cursor: pointer;
+    position: absolute; 
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 5px;
 }
 #notifications .info img{ 
     top: 0; 
@@ -366,34 +375,38 @@ normal #fff*/
 .story .info  p{
     width: auto !important;
     font-size: 15px; 
-    padding-left: 50px; 
+    padding-left: 52px; 
 }
 .info  p.repost, .info  p.fork{
     width: auto !important;
     font-size: 15px; 
-    padding-left: 114px; 
+    padding-left: 118px; 
 }
 #theater .info  p.repost, #theater .info  p.fork{
     width: auto !important;
     font-size: 15px; 
-    padding-left: 114px; 
+    padding-left: 118px; 
 }
 .info img.repost:first-child, .info img.fork:first-child{
-    height: 40px !important;
-    width: 40px!important;
-    cursor: pointer;
     position: absolute; 
     left: 0; 
+    height: 37px !important;
+    width: 37px !important;
+    cursor: pointer;
+    position: absolute; 
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 5px;
 }
 .info  img.repost, .info  img.fork{
-    height: 40px !important;
-    width: 40px!important;
+    height: 37px !important;
+    width: 37px!important;
     cursor: pointer;
     position: absolute; 
     left: 64px; 
 }
 #theater .info  img.repost, #theater .info  img.fork{
-    height: 40px !important;
+    height: 37px !important;
 }
 .story .embed{
     height: 267px; 
@@ -880,7 +893,7 @@ section.video:hover .Enlarge {
     
    font-size: 14px;
        width: auto !important;
-padding-left: 47px;
+padding-left: 52px;
 
 }
 #theater .title
@@ -1078,7 +1091,6 @@ content: "\e904"
     position: absolute;
     display: inline-block;
     object-fit: contain;
-    height: 100% !important;
 }
 .info p
 {
@@ -1755,13 +1767,16 @@ display: inline-block;
 } 
 .repostedFrom, .forkedFrom {
     position: absolute;
-    left: 44px;
+    left: 47.5px;
     height: 40px;
     vertical-align: middle;
     display: inline;
     color: #666;
     font-size: ;
     top: 10px;
+}
+.forkedFrom{
+    left: 50px;
 }
 .repostedFrom::after {
     font-family: "icomoon";
@@ -2193,3 +2208,21 @@ display: inline-block;
 color: #808080}
 .searchResults .result#resaltado{
 background-color: #ddd}
+.info div:first-child
+{
+    position: absolute;
+}
+.forkedFrom + div
+{
+    position: absolute;
+    left: 64px
+}
+.repostedFrom + div
+{
+    position: absolute;
+    left: 64px
+}
+.info canvas
+{
+    position: absolute;
+}
