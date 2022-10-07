@@ -619,39 +619,35 @@ section.video .Enlarge {
     
    font-size: 14px;
        width: auto !important;
-padding-left: 52px;
+padding-left: 47px;
 
 }
 .info  p.repost, .info  p.fork{
     width: auto !important;
     font-size: 15px; 
-    padding-left: 118px; 
+    padding-left: 114px; 
 }
 #theater .info  p.repost, #theater .info  p.fork{
     width: auto !important;
     font-size: 15px; 
-    padding-left: 118px; 
+    padding-left: 114px; 
 }
 .info img.repost:first-child, .info img.fork:first-child{
+    height: 40px !important;
+    width: 40px!important;
+    cursor: pointer;
     position: absolute; 
     left: 0; 
-    height: 37px !important;
-    width: 37px !important;
-    cursor: pointer;
-    position: absolute; 
-    border-radius: 50%;
-    margin-top: 5px;
-    margin-left: 5px;
 }
 .info  img.repost, .info  img.fork{
-    height: 37px !important;
-    width: 37px!important;
+    height: 40px !important;
+    width: 40px!important;
     cursor: pointer;
     position: absolute; 
-    left: 64px;
+    left: 64px; 
 }
 #theater .info  img.repost, #theater .info  img.fork{
-    height: 37px !important;
+    height: 40px !important;
 }
 #theater .title
 {
@@ -842,21 +838,7 @@ content: "\e904"
 {
     color: #666;
 }
-.info  img{
-    height: 40px !important;
-    width: 40px !important;
-    cursor: pointer;
-    position: absolute; 
-}
-.info:not(.button)  img{
-    height: 37px !important;
-    width: 37px !important;
-    cursor: pointer;
-    position: absolute; 
-    border-radius: 50%;
-    margin-top: 5px;
-    margin-left: 5px;
-}
+
 .info img
 {
     position: static;
@@ -872,7 +854,7 @@ content: "\e904"
 {
     margin: 0;
     color: #666;
-    padding-left: 52px; 
+    padding-left: 50px; 
     position: static;
    font-size: 13px ;
     display: inline-block;
@@ -1494,16 +1476,13 @@ display: inline-block;
 } 
 .repostedFrom, .forkedFrom {
     position: absolute;
-    left: 47.5px;
+    left: 44px;
     height: 40px;
     vertical-align: middle;
     display: inline;
     color: #666;
     font-size: ;
     top: 10px;
-}
-.forkedFrom{
-    left: 50px;
 }
 .repostedFrom::after {
     font-family: "icomoon";
@@ -1948,21 +1927,3 @@ display: inline-block;
 color: #808080}
 .searchResults .result#resaltado{
 background-color: #ddd}
-.info div:first-child
-{
-    position: absolute;
-}
-.forkedFrom + div
-{
-    position: absolute;
-    left: 64px
-}
-.repostedFrom + div
-{
-    position: absolute;
-    left: 64px
-}
-.info canvas
-{
-    position: absolute;
-}
