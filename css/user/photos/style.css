@@ -189,7 +189,7 @@ section.video section.video:hover .Enlarge {
     
    font-size: 14px;
        width: auto !important;
-padding-left: 47px;
+padding-left: 52px; 
 
 }
 #theater .title
@@ -316,17 +316,31 @@ content: "\e904"
 { 
     position: relative; 
 } 
+.info  img{
+    height: 40px !important;
+    width: 40px !important;
+    cursor: pointer;
+    position: absolute; 
+}
+.info:not(.button)  img{
+    height: 37px !important;
+    width: 37px !important;
+    cursor: pointer;
+    position: absolute; 
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 5px;
+}
 #theater .info img
 {
     position: absolute;
     display: inline-block;
     object-fit: contain;
-    height: 100% !important;
 }
 .info p {
     margin: 0;
     color: #666;
-    padding-left: 50px;
+    padding-left: 52px;
     position: static;
     font-size: 13px;
     display: inline-block;
@@ -1129,8 +1143,6 @@ a:hover
     position: absolute;
     display: inline-block;
     object-fit: contain;
-    height: 100% !important;
-    width: 40px; 
 }
 .info a:hover { 
     text-decoration: none !important; 
@@ -1275,3 +1287,11 @@ display: inline-block;
 color: #808080}
 .searchResults .result#resaltado{
 background-color: #ddd}
+.info div:first-child
+{
+    position: absolute;
+}
+.info canvas
+{
+    position: absolute;
+}

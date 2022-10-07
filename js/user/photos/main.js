@@ -756,16 +756,16 @@ switch(r.keyCode){
         })(); 
     }) 
     $('.chats').click(function(e){ 
-	    aa= e.target; 
-	    ii= false; 
-	    while(!!aa.parentElement && !ii){ 
-	        (!!aa.parentElement.getAttribute("class") && aa.parentElement.getAttribute("class").indexOf("chat ") != -1)? ii = true: 1; 
-	        aa= aa.parentElement; 
-	    }
+        aa= e.target; 
+        ii= false; 
+        while(!!aa.parentElement && !ii){ 
+            (!!aa.parentElement.getAttribute("class") && aa.parentElement.getAttribute("class").indexOf("chat ") != -1)? ii = true: 1; 
+            aa= aa.parentElement; 
+        }
         if(!ii){ 
             $(this).hide(); 
-    	    $(document.elementFromPoint(e.clientX, e.clientY)).trigger("click"); 
-    	    $(this).show(); 
+            $(document.elementFromPoint(e.clientX, e.clientY)).trigger("click"); 
+            $(this).show(); 
         } 
     }); 
     $("html").click(function(e) {
