@@ -1348,7 +1348,7 @@ k200= function(f, ww1, a, u, ty){
 switch(ty){
     case "foto": 
         $(".foto").each(function(){ 
-            if(("/" + username + "/img" + ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).slice(($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("/"), ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("."))) == f.target.responseURL.slice(100, -5)){
+            if(("/" + username + "/img" + ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).slice(($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("/"), ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("."))) == f.target.responseURL.slice(98, -5)){
                 a= $(this); 
                 (function(){ 
                     a.find("img").on("click", function(){openFotosModal($(this));}); 
@@ -1368,7 +1368,7 @@ switch(ty){
     break; 
     case "story": 
         $(".story").each(function(){ 
-            if(($(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + $(this).find(".carr").find("img")[0].src.slice($(this).find(".carr").find("img")[0].src.lastIndexOf("/"), $(this).find(".carr").find("img")[0].src.lastIndexOf(".")): $(this).find(".options a").attr("href")) == f.target.responseURL.slice(100, -5)){
+            if(($(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + $(this).find(".carr").find("img")[0].src.slice($(this).find(".carr").find("img")[0].src.lastIndexOf("/"), $(this).find(".carr").find("img")[0].src.lastIndexOf(".")): $(this).find(".options a").attr("href")) == f.target.responseURL.slice(98, -5)){
                 a= $(this); 
                 (function(){ 
                     a.on( "click", function(r){ 
@@ -1383,7 +1383,7 @@ switch(ty){
     case "profilePic": 
         $("#profilePic").each(function(){ 
             if(("/" + username + "/img" + ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)).slice(($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)).lastIndexOf("/"), ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)).lastIndexOf(".")))
- == f.target.responseURL.slice(100, -5)){
+ == f.target.responseURL.slice(98, -5)){
                 a= $(this);
                 (function(){ 
                     $("#profilePic").on("click", function(){openProfilePicModal($(this));}); 
@@ -1396,7 +1396,7 @@ switch(ty){
 
 console.log(a)
     aS= a; 
-    if(JSON.parse(localStorage.getItem(f.target.responseURL.slice(100, -5))).hash != hashes[f.target.responseURL.slice(100, -5)]){
+    if(JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).hash != hashes[f.target.responseURL.slice(98, -5)]){
             $("badguy").remove();
             $("body").prepend("<badguy></badguy>");
             $("badguy").html(f.target.response.slice(f.target.response.lastIndexOf("biography") + 12, f.target.response.indexOf("sidebar") - 11).slice(0, f.target.response.slice(f.target.response.lastIndexOf("biography") + 12, f.target.response.indexOf("sidebar") - 11).lastIndexOf("</aside>")));
@@ -1410,9 +1410,9 @@ console.log(a)
         newComments[newComments.length]= getNewComments(aS.find(".Comentarios"), $("badguy .Comentarios")); 
         getCommentsAndAnswers($("badguy .Comentarios"), aS);
         
-        JSON.parse(localStorage.getItem(f.target.responseURL.slice(100, -5))).B? aS.find(".options .bookmark").addClass("true"): aS.find(".options .bookmark").removeClass("true");
-        JSON.parse(localStorage.getItem(f.target.responseURL.slice(100, -5))).S? aS.find(".options .star").addClass("true"): aS.find(".options .star").removeClass("true");
-        !!JSON.parse(localStorage.getItem(f.target.responseURL.slice(100, -5))).C? (function(){aS.find(".Comentarios")[0].innerHTML= JSON.parse(localStorage.getItem(f.target.responseURL.slice(100, -5))).C})(): 1;
+        JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).B? aS.find(".options .bookmark").addClass("true"): aS.find(".options .bookmark").removeClass("true");
+        JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).S? aS.find(".options .star").addClass("true"): aS.find(".options .star").removeClass("true");
+        !!JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).C? (function(){aS.find(".Comentarios")[0].innerHTML= JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).C})(): 1;
         $("badguy").remove(); 
         for(w in newComments){ 
             if(newComments[w].length == 1){
@@ -1441,11 +1441,11 @@ console.log(a)
             } 
         } 
         console.log(u[0])
-        localStorage.setItem(f.target.responseURL.slice(100, -5), JSON.stringify({B: JSON.parse(localStorage.getItem(f.target.responseURL.slice(100, -5))).B, S: JSON.parse(localStorage.getItem(f.target.responseURL.slice(100, -5))).S, C: bGComments(aS), hash: u[0].sha})); 
+        localStorage.setItem(f.target.responseURL.slice(98, -5), JSON.stringify({B: JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).B, S: JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).S, C: bGComments(aS), hash: u[0].sha})); 
     }else{
-        JSON.parse(localStorage.getItem(f.target.responseURL.slice(100, -5))).B? aS.find(".options .bookmark").addClass("true"): aS.find(".options .bookmark").removeClass("true");
-        JSON.parse(localStorage.getItem(f.target.responseURL.slice(100, -5))).S? aS.find(".options .star").addClass("true"): aS.find(".options .star").removeClass("true");
-        !!JSON.parse(localStorage.getItem(f.target.responseURL.slice(100, -5))).C? (function(){aS.find(".Comentarios")[0].innerHTML= JSON.parse(localStorage.getItem(f.target.responseURL.slice(100, -5))).C})(): 1;
+        JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).B? aS.find(".options .bookmark").addClass("true"): aS.find(".options .bookmark").removeClass("true");
+        JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).S? aS.find(".options .star").addClass("true"): aS.find(".options .star").removeClass("true");
+        !!JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).C? (function(){aS.find(".Comentarios")[0].innerHTML= JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).C})(): 1;
     }
 }
 k300= function(C, p, y, ty){ 
@@ -1866,7 +1866,7 @@ $(".story").each(function(){
         }
     }); 
     
-    $("#search input").on("keydown keyup", function(){for(a= 0; a < $("#resizeBottom")[0].children[0].children[0].children[0].children[0].children.length; a++){ 
+    $("#search input").on("input", function(){for(a= 0; a < $("#resizeBottom")[0].children[0].children[0].children[0].children[0].children.length; a++){ 
         $("#resizeBottom")[0].children[0].children[0].children[0].children[0].children[a].style.display= ""; 
         $("#resizeBottom")[0].children[0].children[0].children[0].children[0].children[a].innerText.toLowerCase().indexOf($("#search input")[0].value.toLowerCase()) == -1? $("#resizeBottom")[0].children[0].children[0].children[0].children[0].children[a].style.display= "none": 1; 
     }})
