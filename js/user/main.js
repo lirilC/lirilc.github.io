@@ -1,3 +1,11 @@
+main= function(){
+$(".knob").knob();
+}
+
+
+$(".knob").knob();
+
+
 function reqListenerForPageLoad (e) { 
     urL= e.explicitOriginalTarget.responseURL
     urL= urL.slice(urL.indexOf("/") + 1, urL.length)

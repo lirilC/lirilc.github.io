@@ -16,13 +16,15 @@
   </head>
   <body>
 
+    <script src= "/js/user/main.js"></script>
     <script type="module">
         import app from "/js/templates/user.js"
         window._app= app
         console.log(_app())
         $("body").html(_app())
+
+        main()
     </script>
-    <script src= "/js/user/main.js"></script>
     <script>
     </script>
   </body>

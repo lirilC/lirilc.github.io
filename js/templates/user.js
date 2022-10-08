@@ -1,8 +1,5 @@
 function app () {
-        return `<div>
-                    <div class="wrapper">
-                    </div>
-                    <header>
+        return `<header>
                         <nav>
                             <ul>
                                 <li id="index">
@@ -32,7 +29,7 @@ function app () {
                                     <section id="profileTrigger">
                                     </section>
                                     <div id="profile" class="button">
-                                        <img id="profile-pic" src=${loggedUser.profilePic} alt="Walter White"></img>
+                                        <img id="profile-pic" src= ${loggedUser.profilePic} alt="Walter White"></img>
                                         <input class="knob button" data-width="35" data-height="35" data-fgColor="#2ecc71" data-bgColor="rgba(0,0,0,0)" data-displayInput="false" data-thickness=".15" readonly value=${loggedUser.level}></input>
                                     </div>
                                     <span class="index-arrow button">
@@ -44,8 +41,7 @@ function app () {
                                 </li>
                             </ul>
                         </nav>
-                    </header>
-                </div>`
+                    </header>`
       };
 
 export default app;
