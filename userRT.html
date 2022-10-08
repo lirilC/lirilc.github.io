@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Walter White | liril</title>
+
+    
+    <link href="css/user/style.css" rel="stylesheet" >
+    <script src= "/js/user/DB.js"></script>
+
+    <script src= "/js/loggedUser/DB.js"></script>
+
+    
+    <script src="/js/jQuery.min.js"></script>
+    <script src="/js/jquery.knob.js"></script>
+  </head>
+  <body>
+
+    <script type="module">
+        import app from "/js/templates/user.js"
+        window._app= app
+        console.log(_app())
+        $("body").html(_app())
+    </script>
+    <script src= "/js/user/main.js"></script>
+    <script>
+    </script>
+  </body>
+</html>
