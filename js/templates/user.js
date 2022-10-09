@@ -251,6 +251,29 @@ function app () {
                                   <li>Información</li>
                               </ul>
                           </section>
+                          <section id="main">
+                              <section id="summary">
+                                  <aside id="sections">
+                                      <section id="pics">
+                                          <h2 class="title"><a href="/user/photos">Fotos</a> (64)</h2>
+                                          <img src="/resources/images/grid/1.jpg" alt="">
+                                          <img src="/resources/images/grid/2.jpg" alt="">
+                                          <img src="/resources/images/grid/3.jpg" alt="">
+                                          <img src="/resources/images/grid/2.jpg" alt="">
+                                          <img src="/resources/images/grid/1.jpg" alt="">
+                                          <img src="/resources/images/grid/3.jpg" alt="">
+                                          <img src="/resources/images/grid/3.jpg" alt="">
+                                          <img src="/resources/images/grid/2.jpg" alt="">
+                                          <img src="/resources/images/grid/1.jpg" alt="">
+                                      </section>
+                                  </aside>
+                                  <aside id="updates">
+                                      <aside id="feed">
+                                          ${one("story", foReach, user.stories)}
+                                      </aside>
+                                  </aside>
+                              </section>
+                          </section>
                       </section>
                   </aside>`
       };

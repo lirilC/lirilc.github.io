@@ -736,6 +736,12 @@ text-align: right;
 text-decoration: none;
 
 }
+#feed .story{
+    padding: 10px;
+}
+#feed .story .info{
+    text-align: left;
+}
 #feed .story img{
     max-height: 370px;
     max-width: 100%;

@@ -2,10 +2,80 @@ var R= {}
 var foReach= "foReach"
 var one= function(a, b, c){
 	switch(a){
-    	case "storyImg":
+    	case "story":
 			var reTurn= ""
 			for(e in c){
-				reTurn+= c[e].contents
+				switch(c[e].type){
+					case "links":
+						reTurn+=   `<section class="story links">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
+		                                    <img src="${user.profilePic}" alt="">
+		                                    <p class="username"><a class="target" href="/${user.username}">${user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                ${c[e].contents}
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${Object.keys(c[e])[0]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "informativeImg":
+						reTurn+=   `<section class="story informative img">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
+		                                    <img src="${user.profilePic}" alt="">
+		                                    <p class="username"><a class="target" href="/${user.username}">${user.users_name}</a> ${c[e].information}<br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                ${c[e].contents}
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${Object.keys(c[e])[0]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>`
+						break
+					case "img":
+						reTurn+=   `<section class="story img">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
+		                                    <img src="${user.profilePic}" alt="">
+		                                    <p class="username"><a class="target" href="/${user.username}">${user.users_name}</a><br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <section id="picture">
+		                                    <img class="pic" src="${c[e].contents.image}" alt="" class="big">
+		                                </section>
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${Object.keys(c[e])[0]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>`
+						break
+				}
 			}
 			return reTurn
 			break
@@ -79,23 +149,6 @@ var responsive= function(){
             })
         }
 
-        if (parseInt($(window).width() - $("#sidebar").outerWidth()) <= 600){
-            $("#feed .story").css({
-                "padding": "10px 0"
-               
-            })
-            $("#feed .story .info").css({
-                "text-align": "center"
-            })
-
-        }else{
-            $("#feed .story").css({
-                "padding": "10px"
-            })
-            $("#feed .story .info").css({
-                "text-align": "left"
-            })
-        }
         $("#chats .chats").width($(window).width() - $("#sidebar").outerWidth() -10);
         $("#sidebar #container #resizeTop").height($("#sidebar").height() - $("#sidebar #container #resizeBottom").height() - 36);
 	$("#options ul").width($("#content").width() - 243.5); 

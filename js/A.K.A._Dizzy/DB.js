@@ -1,15 +1,17 @@
 user= {
-	username: "user",
-	users_name: "Walter White",
-    profilePic: "/resources/images/white.jpg",
+	username: "A.K.A._Dizzy",
+	users_name: "Luis Eduardo Gallego García",
+    profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
     rol:{
-    	rol: "Moderador",
-    	level: "60"
+    	rol: "CEO",
+    	level: "100"
     },
     cover: {
-    	insignias: `<div title="Hum " class="line" style="top: 50%;"></div>
-	                <div title="Hum " class="line" style="top: 20%;"></div>
-	                <div title="Hum " class="line" style="top: 60%;"></div>`
+    	insignias: `<div title="EP (Planifique)" class="line" style="top: 72%;"></div>
+                    <div title="Proyecto completado (dinosaurios)" class="line" style="top: 28%;"></div>
+                    <div title="Proyecto completado (aNGEL();)" class="line" style="top: 23%;"></div>
+                    <div title="Proyecto completado (por_siLaBas();)" class="line" style="top: 38%;"></div>
+                    <div title="Proyecto completado (Robot De Dedicatorias)" class="line" style="top: 75%;"></div>`
     },
     stories: {
     	"/user/pos/kZCvatjUhF": {
