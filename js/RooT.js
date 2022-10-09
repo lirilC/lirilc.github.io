@@ -4,7 +4,7 @@ var one= function(a, b, c){
 	switch(a){
     	case "story":
 			var reTurn= ""
-			for(e in c){
+			for(var e in c){
 				switch(c[e].type){
 					case "links":
 						reTurn+=   `<section class="story links">
@@ -21,7 +21,7 @@ var one= function(a, b, c){
 		                                        <li class="bookmark"></li>
 		                                        <li class="star"></li>
 		                                        <li class="Enlargetic">
-		                                            <a href="${Object.keys(c[e])[0]}" target="_blank" class="read active" title=""></a>
+		                                            <a href="${e}" target="_blank" class="read active" title=""></a>
 		                                            <span title="" class="Enlarge"></span>
 		                                        </li>
 		                                    </ul>
@@ -44,12 +44,13 @@ var one= function(a, b, c){
 		                                        <li class="bookmark"></li>
 		                                        <li class="star"></li>
 		                                        <li class="Enlargetic">
-		                                            <a href="${Object.keys(c[e])[0]}" target="_blank" class="read active" title=""></a>
+		                                            <a href="${e}" target="_blank" class="read active" title=""></a>
 		                                            <span title="" class="Enlarge"></span>
 		                                        </li>
 		                                    </ul>
 		                                </div>
-		                            </section>`
+		                            </section>
+		                            `
 						break
 					case "img":
 						reTurn+=   `<section class="story img">
@@ -68,17 +69,83 @@ var one= function(a, b, c){
 		                                        <li class="bookmark"></li>
 		                                        <li class="star"></li>
 		                                        <li class="Enlargetic">
-		                                            <a href="${Object.keys(c[e])[0]}" target="_blank" class="read active" title=""></a>
+		                                            <a href="${e}" target="_blank" class="read active" title=""></a>
 		                                            <span title="" class="Enlarge"></span>
 		                                        </li>
 		                                    </ul>
 		                                </div>
-		                            </section>`
+		                            </section>
+		                            `
+						break
+					case "mult_carr":
+						reTurn+=   `<section class="story mult_carr">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
+		                                    <img src="${user.profilePic}" alt="">
+		                                    <p class="username"><a class="target" href="/${user.username}">${user.users_name}</a><br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                <section class="navigation">
+				                            <div class="nav_arrow left disabled">
+				                                <div class="arrow"></div>
+				                            </div>
+				                            <div class="nav_arrow right">
+				                                <div class="arrow"></div>
+				                            </div>
+				                            <section class="carr">
+		                                		${one("carrItem", foReach, c[e].contents.carrContents)}
+		                                	</section>
+		                                </section>
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${e}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
 						break
 				}
 			}
 			return reTurn
 			break
+		case "carrItem":
+			var reTurn= ""
+			for(var e in c){
+				switch(c[e][0]){
+					case "vi":
+						reTurn+=   `<section class="video">
+	                                    <div class="Playuse">
+	                                    </div>
+	                                    <div class="Enlarge">
+	                                    </div>
+	                                    <video id="x4" controls class="video-js d88fer vjs-default-skin" preload="none" width="100%" height="325" data-setup='{"poster":"/resources/images/${user.username}/${c[e][1]}_poster.png"}' data-setup="{}">
+	                                        <source src="/resources/videos/${user.username}/${c[e][1]}.mp4" type='video/mp4' />
+	                                        <p class="vjs-no-js">
+	                                            Para ver este vídeo, por favor activa el Javascript y considera actualizar tu navegador a uno que
+	                                            <a href="http://videojs.com/html5-video-support/" target="_blank">
+	                                                soporte vídeo en Html5
+	                                            </a>
+	                                        </p>
+	                                    </video>
+	                                </section>
+	                                `
+	                    break;
+	                case "im":
+						reTurn+=   `<section class="picture">
+	                                    <img class="pic" src="/resources/images/${user.username}/${c[e][1]}.jpg" alt="" class="big">
+	                                </section>
+	                                `
+	                    break;
+				}
+			}
+			return reTurn
 	}
 }
 /*Bind first pageDOMContentLoaded*/
