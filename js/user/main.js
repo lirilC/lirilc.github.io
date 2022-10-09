@@ -1,5 +1,4 @@
 main= function(){
-$(".knob").knob();
 }
 
 

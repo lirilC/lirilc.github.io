@@ -4,26 +4,30 @@
     <meta charset="UTF-8" />
     <title>Walter White | liril</title>
 
+    <script src= "/js/RooT.js"></script>
     
-    <link href="css/user/style.css" rel="stylesheet" >
+
+    <link href="/css/user/style.css" rel="stylesheet" >
     <script src= "/js/user/DB.js"></script>
 
     <script src= "/js/loggedUser/DB.js"></script>
 
     
+    <link href="/css/jquery-ui.min.css" rel="stylesheet" >
+
     <script src="/js/jQuery.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
     <script src="/js/jquery.knob.js"></script>
   </head>
   <body>
 
-    <script src= "/js/user/main.js"></script>
     <script type="module">
         import app from "/js/templates/user.js"
         window._app= app
         console.log(_app())
         $("body").html(_app())
 
-        main()
+        R.ready()
     </script>
     <script>
     </script>
