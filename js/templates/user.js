@@ -219,18 +219,27 @@ function app () {
                           <section id="cover">
                               ${user.cover.insignias}
                               <figure ondragstart= "return false" id="profilePic">
-                                  <img src="${user.profilePic}" alt="">
+                                  <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
                                   <input class="knob button" data-width="195" data-height="195" data-fgColor="#2ecc71" data-bgColor="rgba(0,0,0,0)" data-displayInput=false data-thickness=".06" readonly value="${user.rol.level}">
-                                  <figcaption spellcheck= "false">Walter White</figcaption>
                                   <section class="hidden">
                                       <div class="info">
                                           <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
-                                          <img src="${user.profilePic}" alt="">
-                                          <p class="username"><a href="/user">Walter White</a><br><span class="time">24 de Octubre a las 0:30 am</span></p>
+                                          <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+                                          <p class="username"><a href="/${user.username}" title= "${user.tool}">${user.users_name}</a>${typeof user.profilePic[Object.keys(user.profilePic)[0]].city !== "undefined"? `; en <a class="target" title="         
+                                                                                                                                                                                                                               <div class='tool city'>
+                                                                                                                                                                                                                                   <figure>
+                                                                                                                                                                                                                                       <img class='thumbnail' src= '${user.profilePic[Object.keys(user.profilePic)[0]].city.pic}'></img>
+                                                                                                                                                                                                                                   </figure>
+                                                                                                                                                                                                                                   <div class='introduction'>
+                                                                                                                                                                                                                                       ${user.profilePic[Object.keys(user.profilePic)[0]].city.description}
+                                                                                                                                                                                                                                   </div>
+                                                                                                                                                                                                                               </div>">${user.profilePic[Object.keys(user.profilePic)[0]].city.name}</a> `: ``}<br>
+                                              <span title="${user.profilePic[Object.keys(user.profilePic)[0]].date.full}" class="time">${user.profilePic[Object.keys(user.profilePic)[0]].date.min}</span>
+                                          </p>
                                       </div>
-                                      <p class="title">Oie Zyh...</p>
+                                      <p class="title">${user.profilePic[Object.keys(user.profilePic)[0]].title}</p>
                                       <section id="picture">
-                                          <img class="pic" src="${user.profilePic}" alt="" class="big">
+                                          <img class="pic" src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="" class="big">
                                       </section>
                                       <div class="Comentarios"></div>
                                       <div class="options button">
@@ -257,10 +266,17 @@ function app () {
                           <section id="main">
                               <section id="summary">
                                   <aside id="sections">
-                                      <section id="pics">
-                                          <h2 class="title"><a href="/user/photos">Fotos</a> (${user.fotos.quantity})</h2>
-                                              ${one("foto", foReach, user.fotos.fotos)}
+                                      <section id="situation">
+                                          <h2 class="title">Situación Sentimental</h2>
+                                          ${one("situation", foReach, user.situation)}
                                       </section>
+                                      <section id="pics">
+                                          <h2 class="title"><a href="/${user.username}/photos">Fotos</a> (${user.fotos.quantity})</h2>
+                                          ${one("foto", foReach, user.fotos.fotos)}
+                                      </section>
+                                      <section id="vids">
+                                          <h2 class="title"><a href="/${user.username}/videos">Vídeos</a> (${user.videos.quantity})</h2>
+                                          ${one("video", foReach, user.videos.videos)}
                                   </aside>
                                   <aside id="updates">
                                       <aside id="feed">

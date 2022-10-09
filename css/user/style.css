@@ -1818,7 +1818,7 @@ display: inline-block;
     flex-direction: column;
 } 
 .foto .navigation, .foto .carr, .foto .picture{ 
-    height: 105.7px; 
+    height: 106px; 
 } 
 .foto .carr, .mult_img .carr, .mult_carr .carr{ 
     writing-mode: vertical-lr; 
@@ -1917,6 +1917,7 @@ display: inline-block;
     padding: 58px 0 87px 0;
     width: 300px; 
     transition: 235ms transform 235ms ease-in; 
+    overflow: hidden;
 }
 #theater .description.closed{ 
     transition-delay: 0s; 
@@ -2072,8 +2073,12 @@ display: inline-block;
 } 
 /*.RIPonsive{}*/ 
 #theater .more{ 
-    flex-grow: 1; 
-    overflow: hidden !important; 
+    flex-grow: 1;
+    overflow: hidden;
+    overflow-y: auto;
+    width: calc(100% + 12px);
+    padding-right: 12px;
+    box-sizing: border-box;
 } 
 #theater .info{ 
     z-index: 1; 

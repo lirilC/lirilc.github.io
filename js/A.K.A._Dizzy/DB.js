@@ -1,7 +1,19 @@
 user= {
 	username: "A.K.A._Dizzy",
 	users_name: "Luis Eduardo Gallego García",
-    profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
+    profilePic: {
+            "/A.K.A._Dizzy/img/1AzV0qwVwn": {
+                type: "img",
+                date: {
+                    full: "13 de Enero de 2022 a las 7:57 pm",
+                    min: "13 de Enero a las 7:57 pm"
+                },
+                city: {name: "Nariño", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG/250px-Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG", description: `Nariño es un municipio de Colombia, localizado en la subregión Oriente del departamento de Antioquia. Limita por el norte con los municipios de Sonsón y Argelia, por el este y sur con el departamento de Caldas y por el oeste con el municipio de Sonsón. </br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nari%C3%B1o_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+                title: `You start truly appreciating life once you realize you're special, not better.`,
+                description: ``,
+                contents:  {image: "1AzV0qwVwn_tn.gif"},
+                Comentarios: ""
+            }},
     rol:{
     	rol: "CEO",
     	level: "100"
@@ -30,6 +42,22 @@ user= {
                     <div title="Proyecto completado (por_siLaBas();)" class="line" style="top: 38%;"></div>
                     <div title="Proyecto completado (Robot De Dedicatorias)" class="line" style="top: 75%;"></div>`
     },
+    situation: {
+        "Novio de": {username: "L", name: "Laura Escobar Bonnett", tool:   `<div class='tool'>
+                                                                                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                                                                                <img src='/resources/images/L/OGnpwD3jys_tn.jpg'>
+                                                                                <div class='datos'>
+                                                                                    <ul class='actions'>
+                                                                                        <li class='chatear' title='Chatear'>C</li>
+                                                                                        <li class='agregar' title='Agregar'>A</li>
+                                                                                        <li class='juzgar' title='Juzgar'>J</li>
+                                                                                    </ul>                  
+                                                                                    <p class='username' title= 'Laura Escobar Bonnett'>Laura Escobar Bonnett</p>
+                                                                                    <p class='rol'>Princesa <b style='color:#fff;'>+100</b></p>
+                                                                                </div>
+                                                                            </div>`},
+        "Amor de la vida de": {name: "#La Madre Naturaleza, La Que Hace Que Crezcan Los Árboles"}
+    },
     fotos: {
         quantity: 43,
         fotos: {
@@ -41,7 +69,7 @@ user= {
                 },
                 title: ``,
                 description: ``,
-                contents:  {carrContents: ["m88IB35sDo", "HQ90sglfFm", "OB4BT5600x", "ASk65nzCoF"]},
+                contents:  {carrContents: ["m88IB35sDo_tn.jpg", "HQ90sglfFm_tn.jpg", "OB4BT5600x_tn.jpg", "ASk65nzCoF_tn.jpg"]},
                 Comentarios: "",
                 Editado: [ 'type= "mult_img"; edHistory= {"Editado el 3 de Agosto de 2022 a las 5:33 pm": "https://raw.githubusercontent.com/lirilC/lirilColombia.github.io/79bc8b28e9b1cd78770b6a8952cb55fe59f1c1d2/A.K.A._Dizzy/img/m88IB35sDo.html", "3 de Enero de 2022 a las 8:22 pm": "https://raw.githubusercontent.com/lirilC/lirilColombia.github.io/62a73cb90fad9a3fdac70915cafcee58789d53fa/A.K.A._Dizzy/img/m88IB35sDo.html"}', "Editado el 3 de Agosto de 2022 a las 5:33 pm"]
             },
@@ -54,7 +82,7 @@ user= {
                 city: {name: "Rionegro", pic: "https://upload.wikimedia.org/wikipedia/commons/2/26/Atardecer-parque.jpg", description: `Rionegro es una pequeña ciudad en los Andes colombianos. Aquí se encuentra el aeropuerto internacional de Medellín. En la Plaza de la Libertad está la Catedral de San Nicolás, con sus cúpulas. El Museo Histórico Casa de la Convención se encuentra en un edificio en el que se sancionó una versión de la constitución colombiana en 1863. Al sudoeste, está Tutucán, que es una réplica de un pueblo típico local, con una iglesia, un molino y una granja. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Rionegro_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
                 title: `Suit up!`,
                 description: ``,
-                contents:  {image: "7rgZ9RIbw0"},
+                contents:  {image: "7rgZ9RIbw0_tn.jpg"},
                 Comentarios: ""
             },
             "/A.K.A._Dizzy/img/mLlJStEFC3": {
@@ -66,7 +94,7 @@ user= {
                 city: {name: "Rionegro", pic: "https://upload.wikimedia.org/wikipedia/commons/2/26/Atardecer-parque.jpg", description: `Rionegro es una pequeña ciudad en los Andes colombianos. Aquí se encuentra el aeropuerto internacional de Medellín. En la Plaza de la Libertad está la Catedral de San Nicolás, con sus cúpulas. El Museo Histórico Casa de la Convención se encuentra en un edificio en el que se sancionó una versión de la constitución colombiana en 1863. Al sudoeste, está Tutucán, que es una réplica de un pueblo típico local, con una iglesia, un molino y una granja. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Rionegro_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
                 title: ``,
                 description: `One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.<br><br>He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.<br><br><br>The bedding was hardly able to cover it and seemed ready to slide off any moment.<br><br><br>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked.<br><br><br><br>"What's happened to me?<br><br>" he thought.<br>It wasn't a dream.<br><br><br><br>His room, a proper human room although a little too small, lay peacefully between its four familiar walls.<br><br><br>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.<br><br><br><br><br><br>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer.<br><br><br>Gregor then turned to look out the window at the dull weather.<br><br>Drops`,
-                contents:  {image: "mLlJStEFC3"},
+                contents:  {image: "mLlJStEFC3_tn.jpg"},
                 Comentarios: ""
             },
             "/A.K.A._Dizzy/img/mc3JqoasTl": {
@@ -78,7 +106,7 @@ user= {
                 city: {name: "Rionegro", pic: "https://upload.wikimedia.org/wikipedia/commons/2/26/Atardecer-parque.jpg", description: `Rionegro es una pequeña ciudad en los Andes colombianos. Aquí se encuentra el aeropuerto internacional de Medellín. En la Plaza de la Libertad está la Catedral de San Nicolás, con sus cúpulas. El Museo Histórico Casa de la Convención se encuentra en un edificio en el que se sancionó una versión de la constitución colombiana en 1863. Al sudoeste, está Tutucán, que es una réplica de un pueblo típico local, con una iglesia, un molino y una granja. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Rionegro_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
                 title: `¡Ashley, llenemos de catipsum el moreI!`,
                 description: `Ni teníamos un .moreI<br><br><br>Cat ipsum dolor sit amet, ipsa nemo. Eiusmod excepteur. Vel ad for magni. Accusantium architecto. In nostrum. Nisi aliquid ipsa and proident but occaecat yet nulla for commodo. Aliquid. Duis. Reprehenderit iste yet ipsam proident, yet sequi. Incidunt architecto. Aute esse, but ab for modi illo quia.<br><br>Illum irure consectetur si. Nihil sed. Magnam ullam occaecat anim yet perspiciatis. Cupidatat. Minima eius yet fugit, ipsa cillum adipisicing.<br><br>Quo ullamco adipisci accusantium but quo. In ratione proident or nostrum unde. Voluptate elit, error deserunt. Mollit nisi but ullamco. Numquam voluptatem explicabo. Anim pariatur and voluptatem for laudantium so nesciunt so aute ex. Aspernatur. Exercitationem ea so laborum and sed qui but aute but in. Elit incididunt yet exercitationem. Laborum ut and sequi iure. Eu eos, amet for natus. Non ea but laboris incidunt. Aliquip quaerat. Sequi ipsam.`,
-                contents:  {image: "mc3JqoasTl"},
+                contents:  {image: "mc3JqoasTl_tn.jpg"},
                 Comentarios: ""
             },
             "/A.K.A._Dizzy/img/sHUHUUDCJN": {
@@ -90,7 +118,7 @@ user= {
                 city: {name: "Rionegro", pic: "https://upload.wikimedia.org/wikipedia/commons/2/26/Atardecer-parque.jpg", description: `Rionegro es una pequeña ciudad en los Andes colombianos. Aquí se encuentra el aeropuerto internacional de Medellín. En la Plaza de la Libertad está la Catedral de San Nicolás, con sus cúpulas. El Museo Histórico Casa de la Convención se encuentra en un edificio en el que se sancionó una versión de la constitución colombiana en 1863. Al sudoeste, está Tutucán, que es una réplica de un pueblo típico local, con una iglesia, un molino y una granja. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Rionegro_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
                 title: `Mi hermana, la que emana <sub style="color: inherit; ">(amor)</sub>`,
                 description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet varius lectus, congue rutrum urna. Suspendisse in ultrices enim. In hac habitasse platea dictumst. Praesent aliquet, nisi nec euismod vulputate, odio velit porta erat, ut semper lacus erat ac nulla. Aenean ex libero, volutpat vel sem et, blandit dictum dui. Duis suscipit sed nisi finibus vestibulum. Quisque finibus porttitor nisl, nec consequat metus. Quisque commodo, libero nec volutpat suscipit, quam urna volutpat turpis, quis rhoncus magna dui sit amet lacus. Donec pellentesque aliquam turpis nec commodo. Aliquam lobortis facilisis auctor. Sed libero nisi, scelerisque et porttitor vel, accumsan sed lacus. Pellentesque at tortor pellentesque, vestibulum turpis at, iaculiuisque finibus porttitor nisl, nec consequat metus. Quisque commodo, libero nec volutpat suscipit, quam urna volutpat turpis, quis rhoncus magna dui sit amet lacus. Donec pellentesque aliquam turpis nec commodo. Aliquam lobortis facilisis auctor. Sed libero nisi, scelerisque et porttitor vel, accumsan sed lacus. Pellentesque at tortor pellentesque, vestibulum turpis at, iaculis nibh.`,
-                contents:  {image: "sHUHUUDCJN"},
+                contents:  {image: "sHUHUUDCJN_tn.jpg"},
                 Comentarios: ""
             },
             "/A.K.A._Dizzy/img/Rj1MrRdB5e": {
@@ -102,7 +130,7 @@ user= {
                 city: {name: "Medellín", pic: "https://cdn.forbes.co/2020/09/Medell%C3%ADn-foto-ProColombia-1536x1024.jpg", description: `Medellín es un distrito colombiano, capital del departamento de Antioquia. Es la ciudad más poblada del departamento y la segunda más poblada del país después de Bogotá.​ Está ubicada en la parte más ancha de la región natural conocida como Valle de Aburrá, en la cordillera central de los Andes. Está extendida por ambas orillas del río Medellín, que la atraviesa de sur a norte, y es el municipio principal del Área metropolitana del Valle de Aburrá.​ <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Medell%C3%ADn'><span style= 'color: #2ecc71; font-size: 1.5em; '>···&nbsp</span>es.wikipedia.org</a>`},
                 title: `El dolor; es veneno, nena.`,
                 description: `Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.<br><br>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.<br><br>A small river named Duden flows by their place and supplies it with the necessary regelialia.brIt is a paradisematic country, in which roasted parts of sentences fly into your mouth.<br><br>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.<br><br>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.<br><br>She packed her seven versalia, put her initial into the belt and made herself on the way.<br><br>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.<br><br>Pityful a rethoric question ran over her cheek, then`,
-                contents:  {carrContents: ["Rj1MrRdB5e", "ev7zYwBnyC", "k6PIq50JdR"]},
+                contents:  {carrContents: ["Rj1MrRdB5e_tn.jpg", "ev7zYwBnyC_tn.jpg", "k6PIq50JdR_tn.jpg"]},
                 Comentarios: ""
             },
             "/A.K.A._Dizzy/img/qQfvtpKBqd": {
@@ -114,7 +142,7 @@ user= {
                 city: {name: "Rionegro", pic: "https://upload.wikimedia.org/wikipedia/commons/2/26/Atardecer-parque.jpg", description: `Rionegro es una pequeña ciudad en los Andes colombianos. Aquí se encuentra el aeropuerto internacional de Medellín. En la Plaza de la Libertad está la Catedral de San Nicolás, con sus cúpulas. El Museo Histórico Casa de la Convención se encuentra en un edificio en el que se sancionó una versión de la constitución colombiana en 1863. Al sudoeste, está Tutucán, que es una réplica de un pueblo típico local, con una iglesia, un molino y una granja. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Rionegro_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
                 title: ``,
                 description: ``,
-                contents:  {image: "qQfvtpKBqd"},
+                contents:  {image: "qQfvtpKBqd_tn.jpg"},
                 Comentarios: ""
             },
             "/A.K.A._Dizzy/img/Jc6pW2nCXi": {
@@ -126,7 +154,7 @@ user= {
                 city: {name: "Rionegro", pic: "https://upload.wikimedia.org/wikipedia/commons/2/26/Atardecer-parque.jpg", description: `Rionegro es una pequeña ciudad en los Andes colombianos. Aquí se encuentra el aeropuerto internacional de Medellín. En la Plaza de la Libertad está la Catedral de San Nicolás, con sus cúpulas. El Museo Histórico Casa de la Convención se encuentra en un edificio en el que se sancionó una versión de la constitución colombiana en 1863. Al sudoeste, está Tutucán, que es una réplica de un pueblo típico local, con una iglesia, un molino y una granja. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Rionegro_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
                 title: ``,
                 description: ``,
-                contents:  {image: "Jc6pW2nCXi"},
+                contents:  {image: "Jc6pW2nCXi_tn.jpg"},
                 Comentarios: ""
             },
             "/A.K.A._Dizzy/img/PxJS3xrMIu": {
@@ -135,9 +163,25 @@ user= {
                     full: "12 de Marzo de 2016 a las 2:56 am",
                     min: "Marzo de 2016"
                 },
-                title: ``,
+                title: `Cuando estudiábamos en La Industrial.`,
                 description: ``,
-                contents:  {image: "PxJS3xrMIu"},
+                contents:  {image: "PxJS3xrMIu_tn.jpg"},
+                Comentarios: ""
+            }
+        }
+    },
+    videos: {
+        quantity: 8,
+        videos: {
+            "/A.K.A._Dizzy/vid/CHFZVxsnIK": {
+                type: "video",
+                date: {
+                    full: "1 de Septiembre de 2021 a las 8:54 am",
+                    min: "Septiembre de 2021"
+                },
+                title: `Una canción que le escribí a Danielle Henao`,
+                description: `❤ you, Dani`,
+                contents:  {video: "CHFZVxsnIK"},
                 Comentarios: ""
             }
         }
@@ -151,7 +195,7 @@ user= {
     		},
             title: `¡Mis lunares forman La Constelación De Orión!`,
     		description: `No me sobra UN lunar ni me falta una estrella (excepto, intermitentemente, π³).<br>&nbsp;&nbsp;Está reflejada horizontalmente; es decir, volteada horizontalmente en mi cuerpo, como si se hubiera impregnado en mí La Constelación De Orión.<br>&nbsp;&nbsp;A veces, lunares que representan otras estrellas resultan en medio de otros, pero están asignados.`,
-    		contents:  {carrContents: [["vi", "YGrUmbzaP6"], ["im", "TkS4kGlM2F"], ["im", "ABXSSfIxKF"], ["vi", "oiSqZBMfSm"], ["im", "2Bj0rEcfX4"], ["vi", "kWNmxqDYLD"], ["im", "zI6nRyBaQe"], ["im", "QOpi0xm3OW"], ["im", "5kiJiMZVfU"], ["im", "sxJhXFVj0m"], ["im", "8SIzVcMeCy"], ["vi", "jtaVEZePVD"], ["im", "qGXqJS9Yw9"], ["vi", "pQvb1GSE1E"], ["im", "I5gD1JPvmu"], ["vi", "3p3HPMTs9n"], ["vi", "FYBaJ4wtkH"], ["im", "ImTCz77FJq"]]},
+    		contents:  {carrContents: [["vi", "YGrUmbzaP6"], ["im", "TkS4kGlM2F.jpg"], ["im", "ABXSSfIxKF.jpg"], ["vi", "oiSqZBMfSm"], ["im", "2Bj0rEcfX4.jpg"], ["vi", "kWNmxqDYLD"], ["im", "zI6nRyBaQe.jpg"], ["im", "QOpi0xm3OW.jpg"], ["im", "5kiJiMZVfU.jpg"], ["im", "sxJhXFVj0m.jpg"], ["im", "8SIzVcMeCy.jpg"], ["vi", "jtaVEZePVD"], ["im", "qGXqJS9Yw9.jpg"], ["vi", "pQvb1GSE1E"], ["im", "I5gD1JPvmu.jpg"], ["vi", "3p3HPMTs9n"], ["vi", "FYBaJ4wtkH"], ["im", "ImTCz77FJq.jpg"]]},
             Comentarios: ""
     	},
     	"/A.K.A._Dizzy/pos/CvXsC3PQ5A": {
@@ -381,7 +425,7 @@ user= {
             },
             title: ``,
             description: ``,
-            contents:  {carrContents: ["m88IB35sDo", "HQ90sglfFm", "OB4BT5600x", "ASk65nzCoF"]},
+            contents:  {carrContents: ["m88IB35sDo.jpg", "HQ90sglfFm.jpg", "OB4BT5600x.jpg", "ASk65nzCoF.jpg"]},
             Comentarios: "",
             Editado: [ 'type= "mult_img"; edHistory= {"Editado el 3 de Agosto de 2022 a las 5:33 pm": "https://raw.githubusercontent.com/lirilC/lirilColombia.github.io/79bc8b28e9b1cd78770b6a8952cb55fe59f1c1d2/A.K.A._Dizzy/img/m88IB35sDo.html", "3 de Enero de 2022 a las 8:22 pm": "https://raw.githubusercontent.com/lirilC/lirilColombia.github.io/62a73cb90fad9a3fdac70915cafcee58789d53fa/A.K.A._Dizzy/img/m88IB35sDo.html"}', "Editado el 3 de Agosto de 2022 a las 5:33 pm"]
         },
@@ -432,7 +476,7 @@ user= {
             city: {name: "Isla de San Andrés", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Panor%C3%A1mica_de_San_Andres.JPG/1024px-Panor%C3%A1mica_de_San_Andres.JPG", description: `La Isla de San Andrés (conocida también como San Andrés Isla) es una isla colombiana del mar Caribe, ubicada frente a las costas de Nicaragua. Es la más grande de las islas que forman parte del Archipiélago de San Andrés, Providencia y Santa Catalina, con una extensión total de 26 km² siendo así, la isla más grande del país. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Isla_de_San_Andr%C3%A9s_(Colombia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: `¡San Andrés!`,
             description: ``,
-            contents:  {image: "B2isKEWo92"},
+            contents:  {image: "B2isKEWo92.jpg"},
             Comentarios: ""
         },
         "/G-Suschrist/pos/bp2NlhDANW": {
@@ -613,7 +657,7 @@ user= {
             },
             title: `My gear-l`,
             description: `Mirella, mi raya. <3 ♪▲↓☺CTE☺☺ú═‼‼♂AË0`,
-            contents:  {image: "iV8oZ61eYR"},
+            contents:  {image: "iV8oZ61eYR.jpg"},
             Comentarios: ""
         },
         "/A.K.A._Dizzy/pos/ZGm4LhyR6Y": {
@@ -639,7 +683,7 @@ user= {
             city: {name: "Rionegro", pic: "https://upload.wikimedia.org/wikipedia/commons/2/26/Atardecer-parque.jpg", description: `Rionegro es una pequeña ciudad en los Andes colombianos. Aquí se encuentra el aeropuerto internacional de Medellín. En la Plaza de la Libertad está la Catedral de San Nicolás, con sus cúpulas. El Museo Histórico Casa de la Convención se encuentra en un edificio en el que se sancionó una versión de la constitución colombiana en 1863. Al sudoeste, está Tutucán, que es una réplica de un pueblo típico local, con una iglesia, un molino y una granja. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Rionegro_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: `Friends! <a href="#">#tbt</a>`,
             description: ``,
-            contents:  {image: "CLakPAdCCN"},
+            contents:  {image: "CLakPAdCCN.jpg"},
             Comentarios: ""
         },
         "/A.K.A._Dizzy/pos/tYUH9yd1q6": {
@@ -731,7 +775,7 @@ user= {
             },
             title: `Robotnavirus - Constructor And Business Partners`,
             description: ``,
-            contents:  {carrContents: ["MYW75Pro3m", "DjGEZFt9xo", "oqacnSHxiN", "kJDhFLvqfr", "omyoS1RWCu", "ADhYiHqGXB", "9ShDvbxnyZ", "gJzkFon1ep", "AueW3DjjDi"]},
+            contents:  {carrContents: ["MYW75Pro3m.jpg", "DjGEZFt9xo.jpg", "oqacnSHxiN.jpg", "kJDhFLvqfr.jpg", "omyoS1RWCu.jpg", "ADhYiHqGXB.jpg", "9ShDvbxnyZ.jpg", "gJzkFon1ep.jpg", "AueW3DjjDi.jpg"]},
             Comentarios: ""
         }
     }
