@@ -2122,15 +2122,12 @@ $(window).on("load", function () {
             }
             $(".chats .chat."+$(this).attr('class').split(' ')[2]+" .newMessage textarea").focus();
         }
-    }
-
-
-        )
+    })
 
   
     $("#chats .chats ").on("mouseover mouseout", ".chatTitle", function() {
         $( this ).find(".close").toggleClass( "visible" );
-      });
+    });
     $( ".chatTitle .close" ).on("click",
       function() {
         destroyChat($(this));
@@ -2389,14 +2386,13 @@ $("#chats .chats").on("input", ".chat .chatBox .newMessage textarea", function (
        $(this).trigger("input")
       sizeMessages($(this));
   }
- })
+ }) 
 $("#chats .chats").on("keyup", ".chat .chatBox .newMessage textarea", function (ev) {
     sizeMessages($(this));
  
  })
 $("#chats .chats").on("keydown", ".chat .chatBox .newMessage textarea", function (ev) {
     sizeMessages($(this));
- 
  })
 });
 

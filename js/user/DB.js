@@ -26,7 +26,7 @@ user= {
             Comentarios: ""
     	},
     	"/user/img/1": {
-    		type: "repost",
+    		type: "informativeImg",
     		date:{
     			full: "El día de ayer a las 3:30 pm",
     			min: "Ayer a las 3:30 pm"

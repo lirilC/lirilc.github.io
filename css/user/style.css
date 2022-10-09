@@ -648,6 +648,7 @@ position: absolute;
 }
 #biography #content #main #summary aside#sections #vids > img, #biography #content #main #summary aside#sections #pics > img, #biography #content #main #summary aside#sections #vids .foto, #biography #content #main #summary aside#sections #pics .foto {
     width: 106px;
+    height: 106px;
     display: inline-block;
     cursor: pointer;
 }
@@ -1198,6 +1199,7 @@ content: "\e904"
     position: fixed;
     overflow-y: hidden;
     z-index: 2; 
+    width: calc(100% - 206px);
 }
 #chats .chats
 {
@@ -1207,8 +1209,8 @@ content: "\e904"
     overflow-x: auto;
     overflow-y: hidden;
     text-align: right;
-      direction:rtl;
-
+    direction:rtl;
+    width: 100%;
 }
 #chats .chats .chat 
 {
@@ -1584,7 +1586,10 @@ display: inline-block;
 #vids .foto, #pics .foto
 {
     padding: 0 !important; 
-    margin: 0 !important; 
+    margin: 0; 
+}
+#pics > section:nth-child(3), #pics > section:nth-child(6), #pics > section:nth-child(9), #vids > section:nth-child(3), #vids > section:nth-child(6), #vids > section:nth-child(9) {
+    margin: 0 4px;
 }
 #vids .foto #picture, #pics .foto #picture
 {
@@ -1807,6 +1812,11 @@ display: inline-block;
     width: 100%; 
     position: relative; 
 } 
+.story .navigation{ 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+} 
 .foto .navigation, .foto .carr, .foto .picture{ 
     height: 105.7px; 
 } 
@@ -1829,12 +1839,18 @@ display: inline-block;
     width: 100%; 
     object-fit: contain; 
 } 
-.nav_arrow{ 
+.theater .nav_arrow{ 
     display: flex; 
     justify-content: center; 
     flex-direction: column; 
     font-family: "icomoon"; 
     height: 100%; 
+    position: absolute; 
+    text-align: center; 
+    z-index: 1; 
+} 
+.story .nav_arrow{ 
+    font-family: "icomoon"; 
     position: absolute; 
     text-align: center; 
     z-index: 1; 

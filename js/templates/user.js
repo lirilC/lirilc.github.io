@@ -64,6 +64,9 @@ function app () {
                                         </a>
                                     </p>
                                 </video>
+                                <div id="otherContainments">
+                                    <div></div>
+                                </div>
                             </section>
                             <aside class="comments">
                                 <div class="info">
@@ -255,16 +258,8 @@ function app () {
                               <section id="summary">
                                   <aside id="sections">
                                       <section id="pics">
-                                          <h2 class="title"><a href="/user/photos">Fotos</a> (64)</h2>
-                                          <img src="/resources/images/grid/1.jpg" alt="">
-                                          <img src="/resources/images/grid/2.jpg" alt="">
-                                          <img src="/resources/images/grid/3.jpg" alt="">
-                                          <img src="/resources/images/grid/2.jpg" alt="">
-                                          <img src="/resources/images/grid/1.jpg" alt="">
-                                          <img src="/resources/images/grid/3.jpg" alt="">
-                                          <img src="/resources/images/grid/3.jpg" alt="">
-                                          <img src="/resources/images/grid/2.jpg" alt="">
-                                          <img src="/resources/images/grid/1.jpg" alt="">
+                                          <h2 class="title"><a href="/user/photos">Fotos</a> (${user.fotos.quantity})</h2>
+                                              ${one("foto", foReach, user.fotos.fotos)}
                                       </section>
                                   </aside>
                                   <aside id="updates">
