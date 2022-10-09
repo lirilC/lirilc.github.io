@@ -12,6 +12,7 @@ var one= function(a, b, c){
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <img src="${user.profilePic}" alt="">
 		                                    <p class="username"><a class="target" href="/${user.username}">${user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
 		                                <p class="title">${c[e].title}</p>
 		                                ${c[e].contents}
@@ -35,6 +36,7 @@ var one= function(a, b, c){
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <img src="${user.profilePic}" alt="">
 		                                    <p class="username"><a class="target" href="/${user.username}">${user.users_name}</a> ${c[e].information}<br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
 		                                <p class="title">${c[e].title}</p>
 		                                ${c[e].contents}
@@ -58,10 +60,46 @@ var one= function(a, b, c){
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <img src="${user.profilePic}" alt="">
 		                                    <p class="username"><a class="target" href="/${user.username}">${user.users_name}</a><br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
 		                                <p class="title">${c[e].title}</p>
 		                                <section id="picture">
 		                                    <img class="pic" src="${c[e].contents.image}" alt="" class="big">
+		                                </section>
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${e}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "mult_img":
+						reTurn+=   `<section class="story mult_img">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
+		                                    <img src="${user.profilePic}" alt="">
+		                                    <p class="username"><a class="target" href="/${user.username}">${user.users_name}</a><br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                <section class="navigation">
+				                            <div class="nav_arrow left disabled">
+				                                <div class="arrow"></div>
+				                            </div>
+				                            <div class="nav_arrow right">
+				                                <div class="arrow"></div>
+				                            </div>
+				                            <section class="carr">
+		                                		${one("carrItem", foReach, c[e].contents.carrContents)}
+		                                	</section>
 		                                </section>
 		                                <div class="Comentarios">${c[e].Comentarios}</div>
 		                                <div class="options button">
@@ -83,6 +121,7 @@ var one= function(a, b, c){
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <img src="${user.profilePic}" alt="">
 		                                    <p class="username"><a class="target" href="/${user.username}">${user.users_name}</a><br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
 		                                <p class="title">${c[e].title}</p>
 		                                <p class="moreI">${c[e].description}</p>
@@ -97,6 +136,35 @@ var one= function(a, b, c){
 		                                		${one("carrItem", foReach, c[e].contents.carrContents)}
 		                                	</section>
 		                                </section>
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${e}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "repostLinks":
+						reTurn+=   `<section class="story repost links">
+		                                <div class="info">
+		                                    <img class="repost" src="${user.profilePic}" alt="">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
+		                                    <div class="repostedFrom"></div>
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
+		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <p class="username repost"><a class="target" href="/${user.username}" title="">${user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="">${c[e].originalPoster.users_name}</a><br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                ${c[e].contents}
 		                                <div class="Comentarios">${c[e].Comentarios}</div>
 		                                <div class="options button">
 		                                    <ul>
@@ -140,6 +208,12 @@ var one= function(a, b, c){
 	                case "im":
 						reTurn+=   `<section class="picture">
 	                                    <img class="pic" src="/resources/images/${user.username}/${c[e][1]}.jpg" alt="" class="big">
+	                                </section>
+	                                `
+	                    break;
+	                default:
+						reTurn+=   `<section class="picture">
+	                                    <img class="pic" src="/resources/images/${user.username}/${c[e]}.jpg" alt="" class="big">
 	                                </section>
 	                                `
 	                    break;

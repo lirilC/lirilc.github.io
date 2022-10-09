@@ -19,19 +19,21 @@ user= {
     			min: "10 de Julio a las 9:5 pm"
     		},
     		title: `_dvlpmt`,
+            description: ``,
     		contents:  `<section id="links">
                             <a class="link" target="_blank" href="/user/p/8d299s2gvkL9"><span class="Title">_dvlpmt</span><span class="linktype">Proyecto</span></a>
                         </section>`,
             Comentarios: ""
     	},
     	"/user/img/1": {
-    		type: "informativeImg",
+    		type: "repost",
     		date:{
     			full: "El día de ayer a las 3:30 pm",
     			min: "Ayer a las 3:30 pm"
     		},
     		information: `hizo un commit a <a href="#">eBay</a>`,
     		title: "Nuevo ad",
+            description: ``,
     		contents:  `<section id="picture">
                             <img class="pic" src="/resources/images/grid/1.jpg" alt="" class="big">
                         </section>`,
@@ -44,6 +46,7 @@ user= {
     			min: "Octubre de 2015"
     		},
     		title: `Nove<a href= "/article" target= "_blank">dades e</a>n Adobe Photoshop CC`,
+            description: ``,
     		contents:  {image: "/resources/images/article/avatar.jpg"},
             Comentarios: ""
     	},
@@ -54,6 +57,7 @@ user= {
     			min: "Octubre de 2015"
     		},
     		title: `Nuevos conceptos de diseño por <a href="/user">Walter White</a>`,
+            description: ``,
     		contents:  {image: "/resources/images/grid/2.jpg"},
             Comentarios: ""
     	}
