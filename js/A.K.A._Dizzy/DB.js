@@ -13,7 +13,8 @@ user= {
                 description: ``,
                 contents:  {image: "1AzV0qwVwn_tn.gif"},
                 Comentarios: ""
-            }},
+            }
+        },
     rol:{
     	rol: "CEO",
     	level: "100"

@@ -271,11 +271,11 @@ function app () {
                                           ${one("situation", foReach, user.situation)}
                                       </section>
                                       <section id="pics">
-                                          <h2 class="title"><a href="/${user.username}/photos">Fotos</a> (${user.fotos.quantity})</h2>
+                                          <h2 class="title"><a id= "photos" href="/${user.username}/photos">Fotos</a> (${user.fotos.quantity})</h2>
                                           ${one("foto", foReach, user.fotos.fotos)}
                                       </section>
                                       <section id="vids">
-                                          <h2 class="title"><a href="/${user.username}/videos">Vídeos</a> (${user.videos.quantity})</h2>
+                                          <h2 class="title"><a id= "videos" href="/${user.username}/videos">Vídeos</a> (${user.videos.quantity})</h2>
                                           ${one("video", foReach, user.videos.videos)}
                                   </aside>
                                   <aside id="updates">

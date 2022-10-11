@@ -1,6 +1,10 @@
-var R= {}
-var foReach= "foReach"
+var RooT= {}
 
+_R= function(q, c){
+	return $(document.querySelectorAll(q)[c])
+}
+var Then
+var foReach= "foReach"
 
 var one= function(a, b, c){
 	switch(a){
@@ -483,6 +487,87 @@ var one= function(a, b, c){
                             </section>`
 			}
 			return reTurn
+		case "photo":
+			var reTurn= ""
+			for(var e in c){
+				switch(c[e].type){
+					case "mult_img":
+						reTurn+=   `<section class="photo mult_img">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
+		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <p class="username"><a class="target" href="/${user.username}" title="${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
+																																								               <div class='tool city'>
+																																								                   <figure>
+																																								                       <img class='thumbnail' src= '${c[e].city.pic}'></img>
+																																								                   </figure>
+																																								               	   <div class='introduction'>
+																																								                       ${c[e].city.description}
+																																								                   </div>
+																																								               </div>">${c[e].city.name}</a> `: ``}<br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                <section class="navigation">
+		                                    <div style="display: none; " class="nav_arrow left disabled">
+		                                        <div class="arrow"></div>
+		                                    </div>
+		                                    <div style="display: none; " class="nav_arrow right">
+		                                        <div class="arrow"></div>
+		                                    </div>
+		                                    <section class="carr">
+		                                        ${one("tnCarrItem", foReach, c[e].contents.carrContents)}
+		                                    </section>
+		                                </section>
+		                                <div class="Comentarios"></div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <a href="#">
+		                                            <li class="read"></li>
+		                                        </a>
+		                                    </ul>
+		                                </div>
+		                            </section>`
+		                            break
+		            case "img":
+						reTurn+=   `<section class="photo img">
+                                		<img class="pic" src="/resources/images/${user.username}/${c[e].contents.image}" alt="" class="big">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
+		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <p class="username"><a class="target" href="/${user.username}" title="${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
+																																								               <div class='tool city'>
+																																								                   <figure>
+																																								                       <img class='thumbnail' src= '${c[e].city.pic}'></img>
+																																								                   </figure>
+																																								               	   <div class='introduction'>
+																																								                       ${c[e].city.description}
+																																								                   </div>
+																																								               </div>">${c[e].city.name}</a> `: ``}<br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                <div class="Comentarios"></div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <a href="#">
+		                                            <li class="read"></li>
+		                                        </a>
+		                                    </ul>
+		                                </div>
+		                            </section>`
+		                            break
+				}
+			}
+			return reTurn;
 		case "carrItem":
 			var reTurn= ""
 			for(var e in c){
@@ -570,6 +655,21 @@ var one= function(a, b, c){
 	}
 }
 
+var This
+var wiTh
+RooT.fill= function(a, b, c, d, e){
+	c.html(e)
+}
+RooT.replace= function(a, b, c, d, e){
+	c[0].outerHTML= e
+}
+RooT.reverse= function(a){
+	var reTurn= {}
+	for(var e= Object.entries(a).length - 1; e >= 0; e--){
+		reTurn[Object.keys(a)[e]]= Object.values(a)[e]
+	}
+	return reTurn
+}
 /*Initialize some variables*/
 var vX= -1
 var cC= 1
@@ -2084,7 +2184,7 @@ var K0= function(){
     oReq.send();
 }
 /*Bind first pageDOMContentLoaded*/
-R.ready= function(e){
+RooT.ready= function(e){
 	/*Send first request, for the Github token*/
 	var oReq = new XMLHttpRequest();
     oReq.addEventListener("load", K0);
@@ -2114,7 +2214,7 @@ R.ready= function(e){
         		$("#resizeTop").css({"height": "calc(" + (100 - (($(ui.element).height()) / ($("#sidebar #container").height()) * 100 )) + "% - 7px)"})
     			$(ui.element).height((($(ui.element).height()) / ($("#sidebar #container").height()) * 100 )+ "%")
 		} }).bind("resize", function(e, ui) {
-        $("#resizeTop").css({"height": ($(window).height() - 83 - $(this).height())})
+        $("#resizeTop").css({"height": ($(window).height() - 53 - $(this).height())})
     });
     Used= []; 
     Urls= ["Abigail O'Neill.jpg", "Alana Campos.png", "Alexandra Tyler.jpeg", "Ali Chanel.jpg", "Ali Michael.jpg", "Alicia Loraina Olivas.jpg", "Allie Leggett.jpg", "Allie Silva.jpg", "Alyssa Arcè.jpg", "Amanda Booth.jpg", "Amanda Cerny.webp", "Amanda Streich.jpg", "Amberleigh West.jpg", "Amelia Talon.jpg", "Amy Leigh Andrews.jpg", "Ana Cheri.webp", "Anita Pathammavong.jpg", "Anna Sophia Berglund.jpg", "Ashley Doris.jpg", "Ashley Hobbs.jpg", "Ashley Smith.webp", "Audrey Aleen Allen.jpg", "Beth Williams.jpg", "Bridget Malcolm.jpg", "Britany Nola.jpg", "Britt Linn.jpeg", "Brittany Brousseau.jpg", "Brittny Ward.jpg", "Brook Power.jpg", "Bryiana Noelle.jpg", "Camille Rowe.jpg", "Carly Lauren.jpg", "Carolina Ballesteros.jpg", "Cassandra Dawn.webp", "Chasity Samone.jpg", "Chelsie Aryn.jpg", "Ciara Price.jpg", "Claire Sinclair.jpg", "Dana Taylor.jpg", "Dani Mathers.jpg", "Danielle Alcaraz.jpg", "Dominique Jane.jpg", "Dree Hemingway.jpg", "Elizabeth Elam.webp", "Elizabeth Ostrander.webp", "Elsie Hewitt.jpg", "Emily Agnes.jpg", "Enikő Mihalik.jpg", "Eugena Washington.jpg", "Fo Porter.jpg", "Francesca Frigo.jpg", "Geena Rocero.jpg", "Gemma Lee Farrell.jpg", "Gia Marie.jpg", "Gillian Chan.jpg", "Heather Knox.jpg", "Heather Rae Young.webp", "Hilda Dias Pimentel.jpg", "Ines Rau.jpg", "Iryna Ivanova.jpg", "Jaclyn Swedberg.jpg", "Jaime Faith Edmonson.jpg", "Jaslyn Ome.jpg", "Jenny Watwood.jpg", "Jessa Lynn Hinton.jpg", "Jessica Ashley.jpg", "Jessica Wall.jpg", "Jordan Emanuel.webp", "Jordy Murray.jpg", "Josie Canseco.jpg", "Joy Corrigan.jpg", "Karina Marie.jpg", "Kassie Lyn Logsdon.jpg", "Katie Vernola.jpg", "Kayla Garvin.jpg", "Kayla Rae Reid.webp", "Kaylia Cassandra.webp", "Kayslee Collins.webp", "Kelly Gale.png", "Kennedy Summers.jpg", "Khrystyana.jpg", "Kirby Griffin.jpg", "Kristen Nicole.jpeg", "Kristy Garett.jpg", "Kylie Johnson.jpg", "Kyra Milan.jpg", "Lada Kravchenko.jpg", "Leola Bell.jpg", "Lisa Seiffert.jpg", "Liza Kei.png", "Lorena Medina.jpg", "Maggie May.jpg", "Marsha Elle.jpg", "Megan Moore.jpg", "Megan Samperi.jpg", "Mei-Ling Lam.jpg", "Miki Hamano.jpg", "Milan Dixon.jpg", "Monica Sims.jpg", "Nereyda Bird.jpg", "Nikki Leigh.jpg", "Nina Daniele.jpg", "Olga de Mar.jpg", "Olivia Paige.jpg", "Pamela Horton.jpg", "Priscilla Huggins.jpg", "Rachel Harris.jpg", "Rainy Day Jordan.jpg", "Raquel Pomplun.jpg", "Riley Ticotin.jpg", "Roos van Montfort.jpg", "Roxanna June.jpg", "Sasha Bonilova.jpg", "Savannah Smith.jpeg", "Shanice Jordyn.jpg", "Shanna McLaughlin.jpg", "Shauna Sexton.jpg", "Shawn Dillon.jpeg", "Shelby Chesnes.jpg", "Shelby Rose.jpg", "Shelby Rose.webp", "Shera Bechard.jpg", "Sophie O’Neil.jpg", "Stephanie Branton.jpg", "Tanerélle.jpg", "Teela LaRoux.jpg", "Tiffany Toth.jpg", "Val Keil.jpeg", "Valeria Lakhina.jpg", "Vendela Lindblom.jpg", "Yoli Lara.jpg", "Megan Denise Fox.jpg", "Laura Escobar Bonnett.jpg", "Luis Eduardo Gallego García.gif", "Dios Jesucristo.jpg", "Aura María Cardona Demasiado.jpg", "Juan José Martínez Vidal.jpg", "Walter White.jpg", "La Perrita Del Poste.jpg", "ElDelprincipio.jpg"]; 
@@ -2631,6 +2731,14 @@ $("#theater .read").on("click", function(){
     !$("#theater .description").hasClass("closed")? $("#theater .description").addClass("closed"): $("#theater .description").removeClass("closed"); 
     !$("#theater .comentarios").hasClass("open")? $("#theater .comentarios").addClass("open"): $("#theater .comentarios").removeClass("open"); 
 })
+/*RooT photos' link*/
+_R("#photos", 0).on("click", function(ev){
+	ev.preventDefault()
+	RooT.imporT("/js/A.K.A._Dizzy/photos/DB.js", Then, function(d){
+		window.user= d._user()
+		RooT.imporT("/js/templates/photos.js", Then, function(d){RooT.replace(This, undefined, _R("#biography", 0), wiTh, d.app().container())})
+	})
+})
 }
 var responsive= function(){
     $("#otherContainments").is(".visible")? $("#otherContainments > div").height() < $("#otherContainments > div")[0].scrollHeight? $("#otherContainments").addClass("overflowing"): $("#otherContainments").removeClass("overflowing"): 1; 
@@ -2640,14 +2748,8 @@ var responsive= function(){
         $("#Store #actualStore #storeSection").height($("#Store #actualStore").height() - 80);
         $("#sidebar #chat").height(($(window).height() - $("#sidebar #search").outerHeight() - 46));
         $("#resizeBottom").resizable("option", "maxHeight", ($(window).height() - $("#sidebar #search").outerHeight() - 51));
-        if ($("#resizeBottom").height() > ($(window).height() - $("#sidebar #search").outerHeight() - 51)){
-            $("#resizeBottom").css({
-                "height": "50%"
-            })
-        }
 
         $("#chats .chats").width($(window).width() - $("#sidebar").outerWidth() -10);
-        $("#sidebar #container #resizeTop").height($("#sidebar").height() - $("#sidebar #container #resizeBottom").height() - 36);
 	$("#options ul").width($("#content").width() - 243.5); 
  }
 /*Bind window resize*/
