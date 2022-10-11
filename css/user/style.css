@@ -2295,7 +2295,6 @@ background-color: #ddd}
     height: 220px;
     width: 220px;
     cursor: pointer; 
-    margin: 0 5px 0 0;
 }
 .wrapper{
     display: none;
@@ -3041,6 +3040,7 @@ display: inline-block;
 .photo 
 { 
     display: inline-block; 
+    margin: 0 5px 0 0;
 } 
 .tool
 {
@@ -3683,4 +3683,56 @@ background-color: #ddd}
 .info canvas
 {
     position: absolute;
+}
+
+/*/css/normalize.css*/
+#root 
+{ 
+  background-color: #fff; 
+  width: 100%; 
+  padding: 20px; 
+  border-bottom: solid 2px #ccc; 
+  box-sizing: content-box; 
+  list-style-type: none; 
+  margin: 0; 
+  display: flex; 
+  overflow-x: auto; 
+  max-height: 22px;
+} 
+#root .contnr div, #root .contnr span 
+{ 
+  color: #2ecc71; 
+  /*padding-right: 4.15px; */ 
+  display: inline; 
+  white-space: nowrap; 
+} 
+#root .contnr div:after 
+{ 
+  content: " > "; 
+  color: #ccc; 
+} 
+  
+#root div.noArrow:after 
+{ 
+  content: ""; 
+} 
+  
+#root div.noArrow 
+{ 
+  padding-right: 0; 
+} 
+  
+#root div a
+{
+color: #2ecc71; 
+text-decoration: none; 
+cursor: pointer; 
+}
+#root span span
+{
+color: #bbb !important; 
+}
+input.knob
+{
+  display: none;
 }

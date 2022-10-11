@@ -226,7 +226,7 @@ user= {
             city: {name: "Isla de San Andrés", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Panor%C3%A1mica_de_San_Andres.JPG/1024px-Panor%C3%A1mica_de_San_Andres.JPG", description: `La Isla de San Andrés (conocida también como San Andrés Isla) es una isla colombiana del mar Caribe, ubicada frente a las costas de Nicaragua. Es la más grande de las islas que forman parte del Archipiélago de San Andrés, Providencia y Santa Catalina, con una extensión total de 26 km² siendo así, la isla más grande del país. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Isla_de_San_Andr%C3%A9s_(Colombia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: `¡San Andrés!`,
             description: ``,
-            contents:  {image: "B2isKEWo92.jpg"},
+            contents:  {image: "B2isKEWo92_tn.jpg"},
             Comentarios: ""
         },
         "/A.K.A._Dizzy/img/m88IB35sDo": {

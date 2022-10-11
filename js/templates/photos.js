@@ -218,7 +218,73 @@ export function app () {
                               <div id="gallery">
                                   ${one("photo", foReach, RooT.reverse(user.photos))}
                               </div>
-                          </aside>`, container: function (){return `<div class="container"> 
+                          </aside>`, container: function (){return `<div id="root">
+                                                                        <div class="contnr">
+
+                                                                            <div>
+                                                                                <a href="/${user.username}">${user.users_name}</a>
+                                                                            </div>
+                                                                            <span>
+                                                                                <span>Fotos</span>
+                                                                            </span>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <section id="wrapper" class="theater">
+                                                                 
+                                                                    </section>
+                                                                    <div class="wrapper">
+                                                                    </div>
+                                                                    <style class="zer">
+                                                                        
+                                                                    </style>
+                                                                    <section id="theater" class="theater">
+                                                                        <section>
+                                                                            <section id="picContainer">
+                                                                                <img id="bigPic" alt="">
+                                                                                <div class="Playuse">
+                                                                                </div>
+                                                                                <video id="theater_video" controls class="video-js d88fer vjs-default-skin" preload="none" width="100%" height="264" data-setup='{}'  data-setup="{}">
+                                                                                   <source src="" type='video/mp4'/>
+                                                                                   <p class="vjs-no-js">
+                                                                                      Para ver este vídeo, por favor activa el Javascript y considera actualizar tu navegador a uno que
+                                                                                      <a href="http://videojs.com/html5-video-support/" target="_blank">
+                                                                                      soporte vídeo en Html5
+                                                                                      </a>
+                                                                                   </p>
+                                                                                </video>
+                                                                                <div id="otherContainments">
+                                                                                  <div></div>
+                                                                                </div>
+                                                                            </section>
+                                                                            <aside class="comments">
+                                                                            <div class="info">
+                                                                                    <img id="pic" alt="">
+                                                                                    <p class="username"><a href="#"></a></p>
+                                                                            </div>
+                                                                            <div class="description">
+                                                                                <p class="title"></p>
+                                                                                <p class="more">
+                                                                                </p>
+                                                                            </div>
+                                                                            <div class="comentarios">
+                                                                                <div class="Comentarios">
+                                                                                </div>
+                                                                                <div class="newComment">
+                                                                                    <textarea rows="1"></textarea>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="options button">
+                                                                            <ul>
+                                                                                <li class="bookmark"></li>
+                                                                                <li class="star"></li>
+                                                                                <li class="read"></li>
+                                                                            </ul></div>
+                                                                            <p id="close"></p>
+                                                                            </aside>
+                                                                        </section>
+                                                                    </section>
+                                                                    <div class="container"> 
                                                                         <div id="gallery">
                                                                             ${one("photo", foReach, RooT.reverse(user.photos))}
                                                                         </div>
