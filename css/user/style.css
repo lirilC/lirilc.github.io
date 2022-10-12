@@ -1046,10 +1046,6 @@ content: "\e904"
     height: 100% !important;
     width: 100% !important;
 }
-#sidebar #container{
-    position: relative;
-    flex-grow: 1; 
-}
 #sidebar  #container #resizeBottom{
     position: absolute;
     bottom: 0;
@@ -2340,7 +2336,7 @@ header nav ul li#right-menu #store::before {
 }
 #sidebar #container{
     position: relative;
-
+    height: calc(100% - 30px)
 }
 #sidebar  #container #resizeBottom{
     position: absolute;

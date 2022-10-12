@@ -1,6 +1,7 @@
 var RooT= {}
 
 _R= function(q, c, d){
+	if(typeof c != undefined)return $(q).not(typeof d != undefined? "": ".e")
 	return $(document.querySelectorAll(q)[c]).not(typeof d != undefined? "": ".e")
 }
 _T= function(q){
@@ -673,6 +674,28 @@ RooT.reverse= function(a){
 	}
 	return reTurn
 }
+var To
+RooT.prepend= function(a, b, c){
+	c.prepend(a)
+}
+RooT.append= function(a, b, c){
+	c.append(a)
+}
+var afTer
+var befoRe
+RooT.put= function(a, b, c){
+	switch(b){
+		case afTer:
+			c.after(a)
+			break
+		case befoRe:
+			c.before(a)
+			break
+	}
+}
+RooT.prepend= function(a, b, c){
+	c.prepend(a)
+}
 /*Initialize some variables*/
 var vX= -1
 var cC= 1
@@ -743,7 +766,7 @@ var edition= function(e){
                     lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
                     if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
                     !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
-                        if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); th.find(".options a").attr("href", "/" + username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
+                        if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); th.find(".options a").attr("href", "/" + user.username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
                 }
             }); 
 
@@ -757,7 +780,7 @@ var edition= function(e){
                     lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
                     if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
                     !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
-                        if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); th.find(".options a").attr("href", "/" + username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
+                        if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); th.find(".options a").attr("href", "/" + user.username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
                 }
             }); 
 
@@ -1668,6 +1691,104 @@ $('.theater .comments .options .bookmark').removeClass("true");
     !!$(".XWW").length? $(".XWW")[0].innerHTML= "#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; ": $("head").append("<style class='XWW'>#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; </style>"); 
     responsive()
 }
+var openPhotoModal= function(a) {
+    th= a.closest(".photo"); 
+
+    $("body")[0].style.overflow= "hidden"; 
+    responsive(); 
+    $("#theater").addClass("animated fadeIn ")
+    $(".theater").css({
+        "display": "block"
+    })
+
+    var info = a.closest('.photo').find(".info").html(); 
+    $('.theater .comments .info').html(info); 
+
+    var title = a.closest(".photo").find(".title").html();
+    $('.theater .comments .title').html(title);
+    if (a.closest(".photo").find(".options .bookmark").hasClass("true")) {
+        $('.theater .comments .options .bookmark').addClass("true");
+    } else {
+        $('.theater .comments .options .bookmark').removeClass("true");
+    }
+    if (a.closest(".photo").find(".options .star").hasClass("true")) {
+        $('.theater .comments .options .star').addClass("true");
+    } else {
+        $('.theater .comments .options .star').removeClass("true");
+    }
+    var pic = a.closest(".photo").find(".info img").attr('src');
+    $('.theater .comments .info #pic').attr('src', pic);
+
+    var ref = a.closest(".photo").find(".options ul a").attr('href');
+    $('.theater .comments .options ul a').attr('href', ref);
+
+    var more= !!a.closest('.photo').find(".moreI").html()? a.closest('.photo').find(".moreI").html(): "";
+    $('.theater .comments .more').html(more);
+
+    var comments = a.closest('.photo').find(".Comentarios").html();
+    $('.theater .comments .comentarios .Comentarios').html(comments);
+
+    $('.theater .comments .comentarios .Comentarios .comentario').on("mousemove", function(event){elx= $($(this).children()[0]); circleWidth = elx.outerWidth( true ),circleHeight  = elx.outerHeight( true ),circleLeft    = elx.offset().left,circleTop     = elx.offset().top,circlePos     = {x     : circleLeft + circleWidth / 2,y     : circleTop + circleHeight / 2,radius: circleWidth / 2};distance    = Math.sqrt( Math.pow( event.pageX - circlePos.x, 2 ) + Math.pow( event.pageY - circlePos.y, 2 ) );if(distance <= circlePos.radius){$($(this).children()[0]).css({"pointer-events": "all"});$($(this).children()[0]).css({"pointer-events": "all"});}else{$($(this).children()[0]).css({"pointer-events": "none"});$($(this).children()[0]).css({"pointer-events": "none"});}}); 
+
+    $("#theater .Respuestas").html(function(){return '<span class="Responder"></span>' + "Respuestas (" + $(this).parent().children().filter(".comentario.hidden").length + ")"}); 
+                                       
+    $("#theater .Respuestas").click(function(l){wd($(this), l)}); 
+
+    for(let collapse of document.querySelectorAll("#theater .Respuestas .Responder")){ 
+        collapse.addEventListener("contextmenu", function(e){ 
+            e.preventDefault(); 
+            wwd(this); 
+        })
+    }; 
+
+    $(".comentario .Responder").on("click", function(){wD($(this))}); 
+
+    $(".Respuestas .Responder").on("click", function(){wD($(this), 1)}); 
+
+    $(".knob").knob(); 
+
+    tooltipComentarios(); 
+
+    tooltip(); 
+
+    if($("#bigPic").width()<=$("#bigPic").height()){
+        $("#bigPic").css({ "width":"100%"})
+    }else{
+
+    }
+
+    $("#theater").find(".description").css({"padding-top": ($("#theater").find(".info").height() + 19) + "px"}); 
+
+    $("#theater").find(".comentarios").css({"padding-top": ($("#theater").find(".info").height() + 35) + "px"}); 
+
+    if(a.closest('.photo').is(".mult_img")){ 
+        ar= $(a.closest('.photo')); 
+        source= un_tn(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].src); 
+        $("#theater").find("#bigPic")[0].src= un_tn(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].src); 
+        $("#theater").append('<div class="nav_arrow left' + (ar.find(".nav_arrow.left").is(".disabled")? ' disabled': '') + '"><div class= "arrow"></div></div><div class="nav_arrow right' + (ar.find(".nav_arrow.right").is(".disabled")? ' disabled': '') + '"><div class= "arrow"></div></div>'); 
+        $("#theater .nav_arrow.left .arrow").on("click", function(){
+            !ar.find(".carr").is(":animated")? ar.find(".carr")[0].scrollLeft= ar.find(".carr")[0].scrollLeft - ar.find(".carr").width(): 672; 
+            $("#theater").find("#bigPic")[0].src= un_tn(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].src); 
+            source= un_tn($("#theater").find("#bigPic")[0].src); 
+            history.pushState({page: 1}, "", "/" + user.username + "/img/" + source.slice(source.lastIndexOf("/") + 1, -4)); 
+        }); 
+        $("#theater .nav_arrow.right .arrow").on("click", function(){
+            !ar.find(".carr").is(":animated")? ar.find(".carr")[0].scrollLeft= ar.find(".carr")[0].scrollLeft + ar.find(".carr").width(): 672; 
+            $("#theater").find("#bigPic")[0].src= un_tn(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].src); 
+            source= un_tn($("#theater").find("#bigPic")[0].src); 
+            history.pushState({page: 1}, "", "/" + user.username + "/img/" + source.slice(source.lastIndexOf("/") + 1, -4)); 
+        }); 
+        $(".nav_arrow").on("click", function(i){$(i.target).is(".nav_arrow")? closeModal(): 1; }); 
+        history.pushState({page: 1}, "", "/" + user.username + "/img/" + source.slice(source.lastIndexOf("/") + 1, -4)); 
+    }else{ 
+        var source = un_tn($(a.closest(".photo").children()[0]).attr('src')); 
+        $('.theater #bigPic').attr('src', source); 
+        history.pushState({page: 1}, "", "/" + user.username + "/img/" + source.slice(source.lastIndexOf("/") + 1, -4)); 
+    } 
+    responsive(); 
+    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 310 !important; }; "; 
+    !!$(".XWW").length? $(".XWW")[0].innerHTML= "#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; ": $("head").append("<style class='XWW'>#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; </style>"); 
+}
 var closeModal= function(){ 
     if( typeof th == "undefined" ){ th= $( th.context ).closest(".story").length? $( th.context ).closest(".story"): $( th.context ).closest(".foto").length? $( th.context ).closest(".foto"): $( th.context ).closest('#profilePic').length? $( th.context ).closest('#profilePic'): th.context }else{ th= Antheater }; 
 
@@ -1681,7 +1802,7 @@ var closeModal= function(){
 
     $("#theater .RespueNtas").html('<span class="Responder"></span>Respuestas (∞)'); 
 
-    Antheater.find(".Comentarios").html($("#theater .Comentarios").html()); 
+    _R(th).find(".Comentarios").html($("#theater .Comentarios").html()); 
 
     $("#theater #bigPic")[0].src= ""; 
 
@@ -1707,14 +1828,14 @@ var closeModal= function(){
     $("body")[0].style.overflow= ""; 
     responsive(); 
     if ($('.theater .comments .options .bookmark').hasClass("true")){
-        th.find('.options .bookmark').addClass("true");
+        _R(th).find('.options .bookmark').addClass("true");
     }else{
-        th.find('.options .bookmark').removeClass("true");
+        _R(th).find('.options .bookmark').removeClass("true");
     }
     if ($('.theater .comments .options .star').hasClass("true")){
-        th.find('.options .star').addClass("true");
+        _R(th).find('.options .star').addClass("true");
     }else{
-        th.find('.options .star').removeClass("true");
+        _R(th).find('.options .star').removeClass("true");
     }
     $(".theater").css({
         "display": "none"
@@ -1724,7 +1845,11 @@ var closeModal= function(){
 
     console.log( th ); 
 
-    history.pushState({page: 1}, "", `/${user.username}`); 
+	if(RooT.maTch.user.exec(window.location.pathname) !== null){
+	    history.pushState({page: 1}, "", `/${user.username}`); 
+	}else if(RooT.maTch.user.exec(window.location.pathname) !== null){
+	    history.pushState({page: 1}, "", `/${user.username}/photos`); 
+	}
 }
 var getNewComments= function(m, h){ 
     var arr= []; 
@@ -2028,7 +2153,7 @@ var k200= function(f, ww1, a, u, ty){
 switch(ty){
 	case "foto": 
         $(".foto").each(function(){ 
-            if(("/" + user.username + "/img" + ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).slice(($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("/"), ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("."))) == f.target.responseURL.slice(100, -5)){
+            if(("/" + user.username + "/img" + ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).slice(($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("/"), ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("."))) == f.target.responseURL.slice(98, -5)){
                 a= $(this); 
                 (function(){ 
                     a.find("img").on("click", function(){openFotosModal($(this));}); 
@@ -2060,10 +2185,20 @@ switch(ty){
             }
         }); 
     break; 
+    case "photo": 
+        $(".photo").each(function(){ 
+            if(("/" + user.username + "/img" + ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).slice(($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("/"), ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("."))) == f.target.responseURL.slice(98, -5)){
+                a= $(this); 
+                (function(){ 
+                    a.find("img").on("click", function(){openPhotoModal($(this))}); 
+                })(); 
+            }
+        })
+    break; 
     case "profilePic": 
         $("#profilePic").each(function(){ 
             if(("/" + user.username + "/img" + ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)).slice(($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)).lastIndexOf("/"), ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)).lastIndexOf(".")))
- == f.target.responseURL.slice(100, -5)){
+ == f.target.responseURL.slice(98, -5)){
                 a= $(this);
                 (function(){ 
                     $("#profilePic").on("click", function(){openProfilePicModal($(this));}); 
@@ -2178,6 +2313,16 @@ var k300= function(C, p, y, ty){
                     }
                 }); 
             break; 
+            case "photo": 
+                $(".photo").each(function(){ 
+                    if(("/" + user.username + "/img" + ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).slice(($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("/"), ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("."))) == C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))){ 
+                        a= $(this); 
+                        (function(){ 
+                            a.find("img").on("click", function(){openPhotoModal($(this))}); 
+                        })(); 
+                    } 
+                }) 
+            break; 
 			case "profilePic": 
                 $("#profilePic").each(function(){ 
                     if(("/" + user.username+ "/img" + ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)).slice(($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)).lastIndexOf("/"), ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)).lastIndexOf(".")))
@@ -2239,6 +2384,23 @@ var K100= function(builds){
         })(): (function(){
         })(); 
     }); 
+    $(".photo").each(function(){ 
+        src= $(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src); 
+        w1=  "/" + user.username + "/img" + src.slice(src.lastIndexOf("/"), src.lastIndexOf(".")); 
+        console.log(w1) 
+        cold= JSON.parse(localStorage.getItem(w1)); 
+        t= $(this); 
+        (!hashes[w1] || (!!cold && (cold.hash)))? (function(){ 
+            var oReq= new XMLHttpRequest(); 
+            oReq.addEventListener("load", function(e){k300(e, w1, t, "photo")}); 
+            oReq.open("GET", "https://api.github.com/repos/LirilC/lirilc.github.io/commits?path=" +  w1 + ".html"); 
+            oReq.setRequestHeader('Authorization', "token " + token); 
+            oReq.send(); 
+            !(!!cold && (cold.hash))? t.find("img").on("click", function(){openPhotoModal($(this))}): 1; 
+        })(): (function(){ 
+        })(); 
+    }); 
+if(RooT.maTch.user.exec(window.location.pathname) !== null){
     src= ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)); 
     w1= "/" + user.username + "/img" + src.slice(src.lastIndexOf("/"), src.lastIndexOf(".")); 
     cold= JSON.parse(localStorage.getItem(w1)); 
@@ -2252,6 +2414,7 @@ var K100= function(builds){
         !(!!cold && (cold.hash))? $("#profilePic").on("click", function(){openProfilePicModal($(this));}): 1; 
     })(): (function(){
     })(); 
+}
     $(".story").each(function(){ 
         w1=  $(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + $(this).find(".carr").find("img")[0].src.slice($(this).find(".carr").find("img")[0].src.lastIndexOf("/"), $(this).find(".carr").find("img")[0].src.lastIndexOf(".")): $(this).find(".options a").attr("href");                                                   
         cold= JSON.parse(localStorage.getItem(w1)); 
@@ -2292,8 +2455,8 @@ RooT.ready= function(e){
     oReq.open("get", "https://cdn.filestackcontent.com/T1JT7NWRhigB2KGvZN7g");
     oReq.send();
 	/*knob knobs and tooltip tooltips*/
-	$(".knob").not(".foto .knob").knob();
-	$(function($) {
+	_R(".knob").not(".knob").knob();
+	_R(function($) {
 	    $.widget("ui.tooltip", $.ui.tooltip, {
 	        options: {
 	            content: function() {
@@ -2304,18 +2467,18 @@ RooT.ready= function(e){
 
 	    tooltip(); 
 
-	    $(".knob").not(".foto .knob").knob();
+	    _R(".knob").not(".foto .knob").knob();
 
-	    $(".Enlargetic").on("contextmenu", function(j){j.preventDefault(); ab= $(this).children().filter(".active"); $(this).children().not(".active").addClass("active"); ab.removeClass("active"); }); 
+	    _R(".Enlargetic").on("contextmenu", function(j){j.preventDefault(); ab= $(this).children().filter(".active"); $(this).children().not(".active").addClass("active"); ab.removeClass("active"); }); 
 	});
 	/*Size, populate, and event sidebar*/
-	$("#resizeTop").css({"height": "calc(50% - 7px)"})
-	$("#resizeBottom").resizable({ handles: "n", maxHeight: ($(window).height() - $("#sidebar #search").outerHeight() - 51), minHeight: 50, stop: function(event, ui)
+	_R("#resizeTop", 0).css({"height": "calc(50% - 7px)"})
+	_R("#resizeBottom", 0).resizable({ handles: "n", maxHeight: (_T(window).height() - _R("#sidebar #search").outerHeight() - 51), minHeight: 50, stop: function(event, ui)
     		{        
-        		$("#resizeTop").css({"height": "calc(" + (100 - (($(ui.element).height()) / ($("#sidebar #container").height()) * 100 )) + "% - 7px)"})
+        		_R("#resizeTop").css({"height": "calc(" + (100 - (($(ui.element).height()) / ($("#sidebar #container").height()) * 100 )) + "% - 7px)"})
     			$(ui.element).height((($(ui.element).height()) / ($("#sidebar #container").height()) * 100 )+ "%")
 		} }).bind("resize", function(e, ui) {
-        $("#resizeTop").css({"height": ($(window).height() - 53 - $(this).height())})
+        _R("#resizeTop").css({"height": ($(window).height() - 83 - $(this).height())})
     });
     Used= []; 
     Urls= ["Abigail O'Neill.jpg", "Alana Campos.png", "Alexandra Tyler.jpeg", "Ali Chanel.jpg", "Ali Michael.jpg", "Alicia Loraina Olivas.jpg", "Allie Leggett.jpg", "Allie Silva.jpg", "Alyssa Arcè.jpg", "Amanda Booth.jpg", "Amanda Cerny.webp", "Amanda Streich.jpg", "Amberleigh West.jpg", "Amelia Talon.jpg", "Amy Leigh Andrews.jpg", "Ana Cheri.webp", "Anita Pathammavong.jpg", "Anna Sophia Berglund.jpg", "Ashley Doris.jpg", "Ashley Hobbs.jpg", "Ashley Smith.webp", "Audrey Aleen Allen.jpg", "Beth Williams.jpg", "Bridget Malcolm.jpg", "Britany Nola.jpg", "Britt Linn.jpeg", "Brittany Brousseau.jpg", "Brittny Ward.jpg", "Brook Power.jpg", "Bryiana Noelle.jpg", "Camille Rowe.jpg", "Carly Lauren.jpg", "Carolina Ballesteros.jpg", "Cassandra Dawn.webp", "Chasity Samone.jpg", "Chelsie Aryn.jpg", "Ciara Price.jpg", "Claire Sinclair.jpg", "Dana Taylor.jpg", "Dani Mathers.jpg", "Danielle Alcaraz.jpg", "Dominique Jane.jpg", "Dree Hemingway.jpg", "Elizabeth Elam.webp", "Elizabeth Ostrander.webp", "Elsie Hewitt.jpg", "Emily Agnes.jpg", "Enikő Mihalik.jpg", "Eugena Washington.jpg", "Fo Porter.jpg", "Francesca Frigo.jpg", "Geena Rocero.jpg", "Gemma Lee Farrell.jpg", "Gia Marie.jpg", "Gillian Chan.jpg", "Heather Knox.jpg", "Heather Rae Young.webp", "Hilda Dias Pimentel.jpg", "Ines Rau.jpg", "Iryna Ivanova.jpg", "Jaclyn Swedberg.jpg", "Jaime Faith Edmonson.jpg", "Jaslyn Ome.jpg", "Jenny Watwood.jpg", "Jessa Lynn Hinton.jpg", "Jessica Ashley.jpg", "Jessica Wall.jpg", "Jordan Emanuel.webp", "Jordy Murray.jpg", "Josie Canseco.jpg", "Joy Corrigan.jpg", "Karina Marie.jpg", "Kassie Lyn Logsdon.jpg", "Katie Vernola.jpg", "Kayla Garvin.jpg", "Kayla Rae Reid.webp", "Kaylia Cassandra.webp", "Kayslee Collins.webp", "Kelly Gale.png", "Kennedy Summers.jpg", "Khrystyana.jpg", "Kirby Griffin.jpg", "Kristen Nicole.jpeg", "Kristy Garett.jpg", "Kylie Johnson.jpg", "Kyra Milan.jpg", "Lada Kravchenko.jpg", "Leola Bell.jpg", "Lisa Seiffert.jpg", "Liza Kei.png", "Lorena Medina.jpg", "Maggie May.jpg", "Marsha Elle.jpg", "Megan Moore.jpg", "Megan Samperi.jpg", "Mei-Ling Lam.jpg", "Miki Hamano.jpg", "Milan Dixon.jpg", "Monica Sims.jpg", "Nereyda Bird.jpg", "Nikki Leigh.jpg", "Nina Daniele.jpg", "Olga de Mar.jpg", "Olivia Paige.jpg", "Pamela Horton.jpg", "Priscilla Huggins.jpg", "Rachel Harris.jpg", "Rainy Day Jordan.jpg", "Raquel Pomplun.jpg", "Riley Ticotin.jpg", "Roos van Montfort.jpg", "Roxanna June.jpg", "Sasha Bonilova.jpg", "Savannah Smith.jpeg", "Shanice Jordyn.jpg", "Shanna McLaughlin.jpg", "Shauna Sexton.jpg", "Shawn Dillon.jpeg", "Shelby Chesnes.jpg", "Shelby Rose.jpg", "Shelby Rose.webp", "Shera Bechard.jpg", "Sophie O’Neil.jpg", "Stephanie Branton.jpg", "Tanerélle.jpg", "Teela LaRoux.jpg", "Tiffany Toth.jpg", "Val Keil.jpeg", "Valeria Lakhina.jpg", "Vendela Lindblom.jpg", "Yoli Lara.jpg", "Megan Denise Fox.jpg", "Laura Escobar Bonnett.jpg", "Luis Eduardo Gallego García.gif", "Dios Jesucristo.jpg", "Aura María Cardona Demasiado.jpg", "Juan José Martínez Vidal.jpg", "Walter White.jpg", "La Perrita Del Poste.jpg", "ElDelprincipio.jpg"]; 
@@ -2327,7 +2490,7 @@ RooT.ready= function(e){
             randmIntgr= parseInt(Math.random() * Urls.length ); 
         }
 
-        $("#resizeBottom ul")[0].innerHTML= $("#resizeBottom ul")[0].innerHTML + '<li class="button offline"><img src="/resources/images/chat/' + Urls[randmIntgr] + '" alt=""><p>' + Urls[randmIntgr].slice(0, Urls[randmIntgr].indexOf(".")) + '</p><span ></span></li>'
+        _R("#resizeBottom ul")[0].innerHTML= _R("#resizeBottom ul")[0].innerHTML + '<li class="button offline"><img src="/resources/images/chat/' + Urls[randmIntgr] + '" alt=""><p>' + Urls[randmIntgr].slice(0, Urls[randmIntgr].indexOf(".")) + '</p><span ></span></li>'
         Used[Used.length]= randmIntgr
     }
 
@@ -2397,6 +2560,12 @@ RooT.ready= function(e){
     $("#chat ul li").prop("title", function () {
         return $(this).find("p").text();
     });
+RooT.maTch= {}
+RooT.maTch.user= new RegExp('^\/[^\/]+$')
+RooT.maTch.photos= new RegExp('^(\/.*?\/)photos$');
+
+if(RooT.maTch.user.exec(window.location.pathname) !== null){
+
     /*Activate jQuery UI's tooltips on the badges*/
     $(".line").tooltip({
         track: true,
@@ -2841,6 +3010,9 @@ _R("#photos", 0).on("click", function(ev){
 		RooT.imporT("/js/templates/photos.js", Then, function(d){
 			_T(document).scrollTop(0)
 			RooT.replace(This, undefined, _R("#biography", 0), wiTh, d.app().container())
+			RooT.put(d.app().root(), afTer, _R("header", 0))
+
+			RooT.ready()
 		})
 	})
 })
@@ -2871,6 +3043,17 @@ if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHisto
     if(datefinder($(this).attr("title"))== 0){$(this).css({"color": ""})}else{$(this).css({"color": "rgb(221, 221, 144)"})}
 }
 })
+/*Create all audiojs instances*/
+audiojs.events.ready(function(){
+   var as= audiojs.createAll()
+})
+}else if(RooT.maTch.photos.exec(window.location.pathname) !== null){
+	/*Request Github token from safe page*/
+	var oReq = new XMLHttpRequest();
+    oReq.addEventListener("load", K0);
+    oReq.open("get", "https://cdn.filestackcontent.com/T1JT7NWRhigB2KGvZN7g");
+    oReq.send(); 
+}
 }
 var responsive= function(){
     $("#otherContainments").is(".visible")? $("#otherContainments > div").height() < $("#otherContainments > div")[0].scrollHeight? $("#otherContainments").addClass("overflowing"): $("#otherContainments").removeClass("overflowing"): 1; 

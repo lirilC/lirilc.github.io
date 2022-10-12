@@ -997,6 +997,9 @@ var edition= function(e){
             break; 
     }
 }
+function un_tn(u){ 
+    return u.slice(0, u.indexOf("_tn")) + u.slice(u.indexOf("_tn") + 3); 
+} 
 getVideos= function($c, $C){videos= 0
 for(var r= 0; r < $C; r++){
     videos= $($c.find(".carr").children()[r]).is(".video")? videos + 1: videos; 
@@ -1509,6 +1512,7 @@ k300= function(C, p, y, ty){
                     }
                 }); 
             break; 
+
         }; 
         JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).B? a.find(".options .bookmark").addClass("true"): a.find(".options .bookmark").removeClass("true"); 
         JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).S? a.find(".options .star").addClass("true"): a.find(".options .star").removeClass("true"); 
@@ -1578,6 +1582,22 @@ K100= function(builds){
                 } ); 
             })(): 1; 
         })(): (function(){
+        })(); 
+    }); 
+    $(".photo").each(function(){ 
+        src= $(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src); 
+        w1=  "/" + username + "/img" + src.slice(src.lastIndexOf("/"), src.lastIndexOf(".")); 
+        console.log(w1) 
+        cold= JSON.parse(localStorage.getItem(w1)); 
+        t= $(this); 
+        (!hashes[w1] || (!!cold && (cold.hash)))? (function(){ 
+            var oReq= new XMLHttpRequest(); 
+            oReq.addEventListener("load", function(e){k300(e, w1, t, "photo")}); 
+            oReq.open("GET", "https://api.github.com/repos/LirilC/lirilc.github.io/commits?path=" +  w1 + ".html"); 
+            oReq.setRequestHeader('Authorization', "token " + token); 
+            oReq.send(); 
+            !(!!cold && (cold.hash))? t.find("img").on("click", function(){openModal($(this))}): 1; 
+        })(): (function(){ 
         })(); 
     }); 
     src= ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)); 

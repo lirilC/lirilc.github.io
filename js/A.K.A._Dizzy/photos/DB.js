@@ -1,5 +1,5 @@
 export function _user(){
-user= {
+var user= {
 	username: "A.K.A._Dizzy",
 	users_name: "Luis Eduardo Gallego García",
     profilePic: {
