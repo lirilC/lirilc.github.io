@@ -1,7 +1,7 @@
 var RooT= {}
 
 _R= function(q, c, d){
-	if(typeof c != undefined)return $(q).not(typeof d != undefined? "": ".e")
+	if(typeof c === "undefined")return $(q).not(typeof d != undefined? "": ".e")
 	return $(document.querySelectorAll(q)[c]).not(typeof d != undefined? "": ".e")
 }
 _T= function(q){

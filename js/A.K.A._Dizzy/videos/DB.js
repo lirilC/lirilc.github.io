@@ -31,12 +31,12 @@ var user= {
                     </ul>                  
                     <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
                     <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
-                    </div>
-                    <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
-                    <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
-                    <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
-                    <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-                </div>`,
+                </div>
+                <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
+                <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
+                <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
+                <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
+            </div>`,
     
     videos: {
         "/A.K.A._Dizzy/vid/CHFZVxsnIK": {
