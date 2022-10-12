@@ -1,4 +1,5 @@
-user= {
+export function _user(){
+var user= {
 	username: "A.K.A._Dizzy",
 	users_name: "Luis Eduardo Gallego García",
     profilePic: {
@@ -780,4 +781,6 @@ user= {
             Comentarios: ""
         }
     }
-};
+}
+return user
+}

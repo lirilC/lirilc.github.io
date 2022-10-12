@@ -3405,11 +3405,6 @@ a:hover
 #theater .comentarios .Comentarios .comentario .Comentario .media .play-pause{ 
     z-index: 1; 
 } 
-/*.RIPonsive{}*/ 
-#theater .more{ 
-    flex-grow: 1; 
-    overflow: hidden !important; 
-} 
 #theater .info{ 
     z-index: 1; 
 } 

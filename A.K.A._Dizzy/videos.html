@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Vídeos | Luis Eduardo Gallego García | liril</title>
-    <link rel="shortcut icon" type="image/ico" href="resources/icons/favicon.ico" />
+    <link rel="shortcut icon" type="image/ico" href="/resources/icons/favicon.ico" />
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,600,700' rel='stylesheet' type='text/css'>
 
@@ -31,9 +31,9 @@
   <body>
 
     <script type="module">
-        RooT.imporT("/js/A.K.A._Dizzy/photos/DB.js", Then, function(e){
+        RooT.imporT("/js/A.K.A._Dizzy/videos/DB.js", Then, function(e){
             window.user= e._user()
-            RooT.imporT("/js/templates/photos.js", Then, function(e){
+            RooT.imporT("/js/templates/videos.js", Then, function(e){
                 window._app= e.app().__app
                 $("body").html(e.app().__app)
                 RooT.ready()
