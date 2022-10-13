@@ -194,7 +194,7 @@ var one= function(a, b, c){
 				                            </div>
 				                            <div class="Playuse">
 				                            </div>
-				                            <video id="video_1" controls class="video-js d88fer vjs-default-skin" preload="none" width="100%" height="264" data-setup='{"poster":"/resources/images/${user.username}/${c[e].contents.video}_poster.png"}' data-setup="{}">
+				                            <video id="x${(function(){vX++; return vX})()}" controls class="video-js d88fer vjs-default-skin" preload="none" width="100%" height="264" data-setup='{"poster":"/resources/images/${user.username}/${c[e].contents.video}_poster.png"}' data-setup="{}">
 				                                <source src="/resources/videos/${user.username}/${c[e].contents.video}.mp4" type='video/mp4' />
 				                                <p class="vjs-no-js">
 				                                    Para ver este vídeo, por favor activa el Javascript y considera actualizar tu navegador a uno que
@@ -364,6 +364,80 @@ var one= function(a, b, c){
 		                            </section>
 		                            `
 						break
+					case "repostImg":
+						reTurn+=   `<section class="story repost img">
+		                                <div class="info">
+		                                    <img class="repost" src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
+		                                    <div class="repostedFrom"></div>
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
+		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <p class="username repost"><a class="target" href="/${user.username}" title= "${user.tool}">${user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                <section id="picture">
+		                                    <img class="pic" src="/resources/images/${c[e].originalPoster.username}/${c[e].contents.image}" alt="" class="big">
+		                                </section>
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${e}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+		                break;
+					case "repostVideo":
+						reTurn+=   `<section class="story repost video">
+		                                <div class="info">
+		                                    <img class="repost" src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
+		                                    <div class="repostedFrom"></div>
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
+		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <p class="username repost"><a class="target" href="/${user.username}" title= "${user.tool}">${user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                <section class="video">
+		                                    <div class="Enlarge">
+		                                    </div>
+		                                    <div class="Playuse">
+		                                    </div>
+		                                    <video id="x${(function(){vX++; return vX})()}" controls class="video-js d88fer vjs-default-skin" preload="none" width="100%" height="264" data-setup='{"poster":"/resources/images/${c[e].originalPoster.username}/${c[e].contents.video}_poster.png"}' data-setup="{}">
+		                                        <source src="/resources/videos/${c[e].originalPoster.username}/${c[e].contents.video}.mp4" type='video/mp4' />
+		                                        <p class="vjs-no-js">
+		                                            Para ver este vídeo, por favor activa el Javascript y considera actualizar tu navegador a uno que
+		                                            <a href="http://videojs.com/       html5-video-support/" target="_blank">
+		                                                soporte vídeo en Html5
+		                                            </a>
+		                                        </p>
+		                                    </video>
+		                                </section>
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${e}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+		                break;
 				}
 			}
 			return reTurn
@@ -468,7 +542,7 @@ var one= function(a, b, c){
                                     </div>
                                     <div class="Playuse">
                                     </div>
-                                    <video id="example_video_1" controls class="video-js d88fer vjs-default-skin" preload="none" width="100%" height="264" data-setup='{"poster":"/resources/images/${user.username}/${c[e].contents.video}_poster.png"}' data-setup="{}">
+                                    <video id="x${(function(){vX++; return vX})()}" controls class="video-js d88fer vjs-default-skin" preload="none" width="100%" height="264" data-setup='{"poster":"/resources/images/${user.username}/${c[e].contents.video}_poster.png"}' data-setup="{}">
                                         <source src="/resources/videos/${user.username}/${c[e].contents.video}.mp4" type='video/mp4' />
                                         <p class="vjs-no-js">
                                             Para ver este vídeo, por favor activa el Javascript y considera actualizar tu navegador a uno que
@@ -652,8 +726,10 @@ var one= function(a, b, c){
 		case "situation":
 			var reTurn= ""
 			for(var e in c){
-				reTurn+= c[e].name[0] === '#'? (function(){return `<p>${e} <a href= "#" title= "No está en liril" style= "cursor: not-allowed; color: #bdbdbd; ">${c[e].name.slice(1, c[e].name.length - 1)}</a></p>
-																																																					`})(): (function(){return `<p>Novio de <a title="${c[e].tool}" href="/${c[e].username}">${c[e].name}</a>.</p>`})()
+				if(e === "###"){reTurn+=c[e]}else{
+					reTurn+= c[e].name[0] === '#'? (function(){return `<p>${e} <a href= "#" title= "No está en liril" style= "cursor: not-allowed; color: #bdbdbd; ">${c[e].name.slice(1, c[e].name.length)}</a>.</p>
+																																																					`})(): (function(){return `<p>${e} <a title="${c[e].tool}" href="/${c[e].username}">${c[e].name}</a>.</p>`})()
+				}
 			}
 			return reTurn
 	}
@@ -3006,7 +3082,7 @@ $("#theater .read").on("click", function(){
 _R("#photos", 0).on("click", function(ev){
 	history.pushState({page: 1}, "", `/${user.username}/photos`); 
 	ev.preventDefault()
-	RooT.imporT("/js/A.K.A._Dizzy/photos/DB.js", Then, function(d){
+	RooT.imporT("/js/" + user.username + "/photos/DB.js", Then, function(d){
 		window.user= d._user()
 		RooT.imporT("/js/templates/photos.js", Then, function(d){
 			_T(document).scrollTop(0)
@@ -3022,7 +3098,7 @@ _R("#photos", 0).on("click", function(ev){
 _R("#videos", 0).on("click", function(ev){
 	history.pushState({page: 1}, "", `/${user.username}/videos`); 
 	ev.preventDefault()
-	RooT.imporT("/js/A.K.A._Dizzy/videos/DB.js", Then, function(d){
+	RooT.imporT("/js/" + user.username + "/videos/DB.js", Then, function(d){
 		window.user= d._user()
 		RooT.imporT("/js/templates/videos.js", Then, function(d){
 			_T(document).scrollTop(0)
@@ -3033,6 +3109,37 @@ _R("#videos", 0).on("click", function(ev){
 			RooT.ready()
 		})
 	})
+})
+/*RooT RooTed users' links*/
+_R('a[href="/A.K.A._Dizzy"]').on("click", function(e){
+	e.preventDefault()
+	
+	history.pushState({page: 1}, "", `/A.K.A._Dizzy`)
+  RooT.imporT("/js/A.K.A._Dizzy/DB.js", Then, function(d){
+    window.user= d._user()
+    RooT.imporT("/js/templates/user.js", Then, function(d){
+      _T(document).scrollTop(0)
+      _R("title").text(`${user.users_name} | liril`)
+      RooT.replace(This, undefined, _R("#biography", 0), wiTh, d.app().biography())
+
+      RooT.ready()
+    })
+  })
+})
+_R('a[href="/AuraCardonaC"]').on("click", function(e){
+	e.preventDefault()
+	
+	history.pushState({page: 1}, "", `/AuraCardonaC`)
+  RooT.imporT("/js/AuraCardonaC/DB.js", Then, function(d){
+    window.user= d._user()
+    RooT.imporT("/js/templates/user.js", Then, function(d){
+      _T(document).scrollTop(0)
+      _R("title").text(`${user.users_name} | liril`)
+      RooT.replace(This, undefined, _R("#biography", 0), wiTh, d.app().biography())
+
+      RooT.ready()
+    })
+  })
 })
 /*Story edition management*/
 $(".Editado").on("contextmenu", function(er){er.preventDefault()})
@@ -3133,7 +3240,7 @@ audiojs.events.ready(function(){
     _R("#root .contnr div a", 0, 'e').on("click", function(e){
 		e.preventDefault()
 		history.pushState({page: 1}, "", `/${user.username}`); 
-		RooT.imporT("/js/A.K.A._Dizzy/DB.js", Then, function(d){
+		RooT.imporT("/js/" + user.username + "/DB.js", Then, function(d){
 			window.user= d._user()
 			RooT.imporT("/js/templates/user.js", Then, function(d){
 				_T(document).scrollTop(0)
@@ -3294,7 +3401,7 @@ audiojs.events.ready(function(){
 	    })
 	    Antheater= false; 
 	    console.log( th ); 
-		history.pushState({page: 1}, "", `/${user.username}/photos`); 
+		history.pushState({page: 1}, "", `/${user.username}/videos`); 
 	}
     /*Close modal on dark wrapper in the background of the theater's click*/
 	$("#wrapper").on("click", function (){
@@ -3317,7 +3424,7 @@ audiojs.events.ready(function(){
     _R("#root .contnr div a", 0, 'e').on("click", function(e){
 		e.preventDefault()
 		history.pushState({page: 1}, "", `/${user.username}`); 
-		RooT.imporT("/js/A.K.A._Dizzy/DB.js", Then, function(d){
+		RooT.imporT("/js/" + user.username + "/DB.js", Then, function(d){
 			window.user= d._user()
 			RooT.imporT("/js/templates/user.js", Then, function(d){
 				_T(document).scrollTop(0)

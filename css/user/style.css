@@ -3176,7 +3176,7 @@ a:hover
 } 
 .photo .picture .pic, .mult_img .picture .pic{ 
     width: 100%; 
-    object-fit: cover; 
+    object-fit: contain; 
 } 
 .nav_arrow{ 
     display: flex; 
