@@ -17,7 +17,7 @@ var user= {
         },
     rol:{
     	rol: "Profe de fitness",
-    	level: "100"
+    	level: "94"
     },
     tool:  `<div class='tool'>
                 <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
@@ -39,7 +39,7 @@ var user= {
         "###": `<div id="sión" style="border: 1px dotted #636363; width: 100%; height: 41px; position: relative; cursor: s-resize;" onmousemove='L= function(e){(e.movementX >= 0 &amp;&amp; e.movementY >= 0)? ((e.movementX / e.movementY) < 0.5)? (function(){e.target.style.cursor= "s-resize"})(): ((e.movementX / e.movementY) > 2)? (function(){e.target.style.cursor= "e-resize"})(): (function(){e.target.style.cursor= "se-resize"})(): (e.movementX < 0 &amp;&amp; e.movementY >= 0)? ((e.movementX / e.movementY) > -0.5)? (function(){e.target.style.cursor= "s-resize"})(): ((e.movementX / e.movementY) < -2)? (function(){e.target.style.cursor= "w-resize"})(): (function(){e.target.style.cursor= "sw-resize"})(): (e.movementX >= 0 &amp;&amp; e.movementY < 0)? ((e.movementX / e.movementY) > -0.5)? (function(){e.target.style.cursor= "n-resize"})(): ((e.movementX / e.movementY) < -2)? (function(){e.target.style.cursor= "e-resize"})(): (function(){e.target.style.cursor= "ne-resize"})(): (e.movementX < 0 &amp;&amp; e.movementY < 0)? ((e.movementX / e.movementY) < 0.5)? (function(){e.target.style.cursor= "n-resize"})(): ((e.movementX / e.movementY) > 2)? (function(){e.target.style.cursor= "w-resize"})(): (function(){e.target.style.cursor= "nw-resize"})(): 1}; L(event); '></div>`
     },
     fotos: {
-        quantity: 77,
+        quantity: 89,
         fotos: {
             "/AuraCardonaC/img/eQZeHjWK8V": {
                 type: "mult_img",
@@ -143,9 +143,9 @@ var user= {
         }
     },
     videos: {
-        quantity: 8,
+        quantity: 3,
         videos: {
-            "/A.K.A._Dizzy/vid/SZOkZDAKMZ": {
+            "/AuraCardonaC/vid/SZOkZDAKMZ": {
                 type: "video",
                 date: {
                     full: "5 de Marzo de 2022 a las 2:14 pm",
@@ -156,7 +156,7 @@ var user= {
                 contents:  {video: "SZOkZDAKMZ"},
                 Comentarios: ""
             },
-            "/A.K.A._Dizzy/vid/I90Corf6I3": {
+            "/AuraCardonaC/vid/I90Corf6I3": {
                 type: "video",
                 date: {
                     full: "21 de Noviembre de 2021 a las 3:55 am",
@@ -414,7 +414,7 @@ var user= {
             },
             title: `Me siento orgullosa de mí 🖤`,
             description: ``,
-            contents:  {carrContents: ["IEOKvyBsGJ.jpg", "KDoMGssk5c.jpg", "rBudXPAMOB.jpg", "zlZcPDkSxc.jpg"]},
+            contents:  {carrContents: ["IEOKvyBsGJ.jpg", "KDoMGssk5c.jpg", "rBudXPAMOB.jpg"]},
             Comentarios: "",
         },
         "/AuraCardonaC/img/DsVQ1JS2UR": {

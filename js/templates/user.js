@@ -277,6 +277,11 @@ export function app () {
                                         <section id="vids">
                                             <h2 class="title"><a id= "videos" href="/${user.username}/videos">Vídeos</a> (${user.videos.quantity})</h2>
                                             ${one("video", foReach, user.videos.videos)}
+                                        </section>
+                                        <section id="situation">
+                                            <h2 class="title">Lazos Familiares</h2>
+                                            ${one("tie", foReach, user.ties)}
+                                        </section>
                                     </aside>
                                     <aside id="updates">
                                         <aside id="feed">

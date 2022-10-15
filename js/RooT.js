@@ -10,7 +10,7 @@ _T= function(q){
 var Then
 var foReach= "foReach"
 
-var one= function(a, b, c){
+var one= function(a, b, c, d){
 	switch(a){
     	case "story":
 			var reTurn= ""
@@ -154,6 +154,7 @@ var one= function(a, b, c){
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
 		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
 		                                <section id="picture">
 		                                    <img class="pic" src="/resources/images/${user.username}/${c[e].contents.image}" alt="" class="big">
 		                                </section>
@@ -395,6 +396,45 @@ var one= function(a, b, c){
 		                            </section>
 		                            `
 		                break;
+		            case "repostMult_img":
+						reTurn+=   `<section class="story repost mult_img">
+		                                <div class="info">
+		                                    <img class="repost" src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
+		                                    <div class="repostedFrom"></div>
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
+		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <p class="username repost"><a class="target" href="/${user.username}" title= "${user.tool}">${user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                <section class="navigation">
+				                            <div class="nav_arrow left disabled">
+				                                <div class="arrow"></div>
+				                            </div>
+				                            <div class="nav_arrow right">
+				                                <div class="arrow"></div>
+				                            </div>
+				                            <section class="carr">
+		                                		${one("repost_carrItem", foReach, (function(){mini_reTurn= {}; for(var t in c[e].contents.carrContents){mini_reTurn[t]= c[e].contents.carrContents[t]}return mini_reTurn})(), {originalPoster: c[e].originalPoster})}
+		                                	</section>
+		                                </section>
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${e}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+		                break;
 					case "repostVideo":
 						reTurn+=   `<section class="story repost video">
 		                                <div class="info">
@@ -438,6 +478,35 @@ var one= function(a, b, c){
 		                            </section>
 		                            `
 		                break;
+		            case "repost_multimedia":
+						reTurn+=   `<section class="story repost containments">
+		                                <div class="info">
+		                                    <img class="repost" src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
+		                                    <div class="repostedFrom"></div>
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
+		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <p class="username repost"><a class="target" href="/${user.username}" title= "${user.tool}">${user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                ${c[e].contents}
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${e}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
 				}
 			}
 			return reTurn
@@ -723,7 +792,53 @@ var one= function(a, b, c){
 				}
 			}
 			return reTurn
+		case "repost_carrItem":
+			var reTurn= ""
+			for(var e in c){
+				switch(c[e][0]){
+					case "vi":
+						reTurn+=   `<section class="video">
+	                                    <div class="Playuse">
+	                                    </div>
+	                                    <div class="Enlarge">
+	                                    </div>
+	                                    <video id="x${(function(){vX++; return vX})()}" controls class="video-js d88fer vjs-default-skin" preload="none" width="100%" height="325" data-setup='{"poster":"/resources/images/${user.username}/${c[e][1]}_poster.png"}' data-setup="{}">
+	                                        <source src="/resources/videos/${d.originalPoster.username}/${c[e][1]}.mp4" type='video/mp4' />
+	                                        <p class="vjs-no-js">
+	                                            Para ver este vídeo, por favor activa el Javascript y considera actualizar tu navegador a uno que
+	                                            <a href="http://videojs.com/html5-video-support/" target="_blank">
+	                                                soporte vídeo en Html5
+	                                            </a>
+	                                        </p>
+	                                    </video>
+	                                </section>
+	                                `
+	                    break;
+	                case "im":
+						reTurn+=   `<section class="picture">
+	                                    <img class="pic" src="/resources/images/${d.originalPoster.username}/${c[e][1]}" alt="" class="big">
+	                                </section>
+	                                `
+	                    break;
+	                default:
+						reTurn+=   `<section class="picture">
+	                                    <img class="pic" src="/resources/images/${d.originalPoster.username}/${c[e]}" alt="" class="big">
+	                                </section>
+	                                `
+	                    break;
+				}
+			}
+			return reTurn
 		case "situation":
+			var reTurn= ""
+			for(var e in c){
+				if(e === "###"){reTurn+=c[e]}else{
+					reTurn+= c[e].name[0] === '#'? (function(){return `<p>${e} <a href= "#" title= "No está en liril" style= "cursor: not-allowed; color: #bdbdbd; ">${c[e].name.slice(1, c[e].name.length)}</a>.</p>
+																																																					`})(): (function(){return `<p>${e} <a title="${c[e].tool}" href="/${c[e].username}">${c[e].name}</a>.</p>`})()
+				}
+			}
+			return reTurn
+		case "tie":
 			var reTurn= ""
 			for(var e in c){
 				if(e === "###"){reTurn+=c[e]}else{
@@ -800,31 +915,32 @@ for(ind in edHistory){
     indc++
     if(edHistory[ind] ==edHistory[e])return indc
 }}
-var edition= function(e){
+var edition= function(e, d){
     $("body").prepend("<badguy></badguy>"); 
     switch(type){
         case "oC":
             $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.length).indexOf("<aside") + e.target.responseText.lastIndexOf("otherContainments") - 9)); 
-            $(".current .title").next().remove()
-            $(".current .title").after($("badguy").find("#otherContainments").html())
-            $(".current").find("text").html()
-            for(var er= 0; er <= $(".current .media audio").length - 1; er++){
-                audiojs.create($(".current .media audio")[er])
+            d.find("containment").remove()
+            d.find("media").remove()
+            d.find(".Comentarios").before($("badguy").find("#otherContainments").html())
+            d.find("text").html()
+            for(var er= 0; er <= d.find(".media audio").length - 1; er++){
+                audiojs.create(d.find(".media audio")[er])
             }
 
             $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
 
-            if($(".current").find(".title").text().indexOf("We're L") != 0)$(".current").find(".title").html($("badguy").html())
+            if(d.find(".title").text().indexOf("We're L") != 0)d.find(".title").html($("badguy").html())
             $("badguy").remove()
             break;
         case "c":
             $("badguy").html(e.target.responseText.slice(e.target.responseText.indexOf("<containment") , e.target.responseText.slice(e.target.responseText.lastIndexOf("<containment"), e.target.responseText.length).indexOf("</containment") + e.target.responseText.indexOf("<containment"))); 
-            $(".current .title").next().remove()
-            $(".current .title").after($("badguy").find("containment")[0].outerHTML)
+            d.find("containment").remove()
+            d.find(".Comentarios").before($("badguy").find("containment")[0].outerHTML)
 
             $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
 
-            $(".current").find(".title").html($("badguy").html())
+            d.find(".title").html($("badguy").html())
             $("badguy").remove()
             break;
         case "mult_img":
@@ -2369,6 +2485,20 @@ var K0= function(){
 }
 /*Bind first pageDOMContentLoaded*/
 RooT.ready= function(e){
+	/*Initialize some variables*/
+	var vX= -1
+	var cC= 1
+	var ok= true
+	var waiting= false
+	var ar= false
+	var next; 
+	var Antheater= false
+	can493ax= "<div class='comentario'>" + "<input class='knob button' data-width='28' data-height='28' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.18' readonly value='100'><img title=" + '"' + "<div class='tool'><input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'><img src='/resources/images/L/OGnpwD3jys'><div class='datos'><ul class='actions'><li class='chatear' title='Chatear'>C</li><li class='agregar' title='Agregar'>A</li><li class='juzgar' title='Juzgar'>J</li></ul><p class='username' title= 'Laura Escobar Bonnett'>Laura Escobar Bonnett</p><p class='rol'>Princesa <b style='color:#fff;'>+100</b></p></div></div>" + '"' + " src='/resources/images/L/OGnpwD3jys'>&nbsp<a target= '_blank'  href='/L' >Laura Escobar Bonnett</a><span class='is'>: </span><span class='Comentario'>¡Yo más, Luis! 💜</span><span class='Respxxder'></span></div>"
+	asdknki4= "<div class='comentario'>" + "<input class='knob button' data-width='28' data-height='28' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.18' readonly value='100'><img title=" + '"' + "<div class='tool'><input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'><img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'><div class='datos'><ul class='actions'><li class='chatear' title='Chatear'>C</li><li class='agregar' title='Agregar'>A</li><li class='juzgar' title='Juzgar'>J</li></ul><p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p><p class='rol'>CEO <b style='color:#fff;'>+100</b></p></div><div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div><div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div><div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'></div><div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'></div></div>" + '"' + " src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>&nbsp<a target= '_blank'  href='/A.K.A._Dizzy' >Luis Eduardo Gallego García</a><span class='is'>: </span><span class='Comentario'>Yo más, bebé</span><span class='Respxxder'></span></div>"
+	H= asdknki4
+	var token
+	var hashes= {}
+	var nonBuilt
 	/*Send first request, for the Github token*/
 	var oReq = new XMLHttpRequest();
     oReq.addEventListener("load", K0);
@@ -3141,6 +3271,28 @@ _R('a[href="/AuraCardonaC"]').on("click", function(e){
     })
   })
 })
+_R('a[href="/MeganFox"]').on("click", function(e){
+	e.preventDefault()
+	
+	history.pushState({page: 1}, "", `/MeganFox`)
+  RooT.imporT("/js/MeganFox/DB.js", Then, function(d){
+    window.user= d._user()
+    RooT.imporT("/js/templates/user.js", Then, function(d){
+      _T(document).scrollTop(0)
+      _R("title").text(`${user.users_name} | liril`)
+      RooT.replace(This, undefined, _R("#biography", 0), wiTh, d.app().biography())
+
+      RooT.ready()
+    })
+  })
+})
+/*
+$("a").each(function(){
+	if(RooT.maTch.user.exec($(this).attr("href"))){
+		console.log($(this).attr("href"))
+	}
+})
+*/
 /*Story edition management*/
 $(".Editado").on("contextmenu", function(er){er.preventDefault()})
 $(".Editado").on("mouseup", function(e){
@@ -3148,7 +3300,8 @@ console.log(e)
 if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHistory).length - 1){
     console.log(edHistory[rvsdatefinder(datefinder($(this).attr("title")) + 1)]); 
     var wReq = new XMLHttpRequest();
-    wReq.addEventListener("load", function(e){edition(e)}); 
+    var yS= $(this).closest(".story")
+    wReq.addEventListener("load", function(e){edition(e, yS)}); 
     wReq.open("get", edHistory[rvsdatefinder(datefinder($(this).attr("title")) + 1)], true);
     wReq.send();
     rvsdatefinder(datefinder($(this).attr("title")) + 1).indexOf("Editado") != 0? $(this).css({"text-decoration": "line-through", "color": "#3773639f"}): $(this).css({"text-decoration": "", "color": "rgb(221, 221, 144)"})
@@ -3156,7 +3309,8 @@ if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHisto
 }else if(e.which === 3 && datefinder($(this).attr("title")) - 1 >= 0){
     console.log(edHistory[rvsdatefinder(datefinder($(this).attr("title")) - 1)]); 
     var wReq = new XMLHttpRequest();
-    wReq.addEventListener("load", function(e){edition(e)}); 
+    var yS= $(this).closest(".story")
+    wReq.addEventListener("load", function(e){edition(e, yS)}); 
     wReq.open("get", edHistory[rvsdatefinder(datefinder($(this).attr("title")) - 1)], true);
     wReq.send();
     rvsdatefinder(datefinder($(this).attr("title")) - 1).indexOf("Editado") != 0? $(this).css({"text-decoration": "line-through", "color": "#3773639f"}): $(this).css({"text-decoration": "", "color": ""})

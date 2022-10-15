@@ -17,7 +17,7 @@ var user= {
         },
     rol:{
         rol: "Profe de fitness",
-        level: "100"
+        level: "94"
     },
     tool:  `<div class='tool'>
                 <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
@@ -150,7 +150,7 @@ var user= {
             title: `🤍 En una bicicleta 🤍`,
             description: ``,
             contents:  {carrContents: ["Mj9oCdQTpa_tn.jpg", "I4zmHzjMv4_tn.jpg", "Te5J8T5SHF_tn.jpg"]},
-            Comentarios: "",
+            Comentarios: ""
         },
         "/AuraCardonaC/img/J7tNqf0LWW": {
             type: "mult_img",
@@ -162,7 +162,7 @@ var user= {
             title: ``,
             description: ``,
             contents:  {carrContents: ["J7tNqf0LWW_tn.jpg", "utXmxvMrIk_tn.jpg", "MbHN1fgMHy_tn.jpg", "xaJ3gqXVbq_tn.jpg", "t6rnDXlB64_tn.jpg", "cgL09joAyj_tn.jpg", "3hyNNIYjj7_tn.jpg", "XsD7nmAtfQ_tn.jpg"]},
-            Comentarios: "",
+            Comentarios: ""
         },
         "/AuraCardonaC/img/XimgvFT6pp": {
             type: "img",
@@ -184,7 +184,7 @@ var user= {
             title: `MIS 3 ÁNGULOS 🖤`,
             description: ``,
             contents:  {carrContents: ["KRhK5gQhQk_tn.jpg", "JkDlU5tTmP_tn.jpg", "IiCsYY8XYL_tn.jpg"]},
-            Comentarios: "",
+            Comentarios: ""
         },
         "/AuraCardonaC/img/RJvR7tR3EO": {
             type: "mult_img",
@@ -195,7 +195,7 @@ var user= {
             title: `SIEMPRE SEGURA🖤`,
             description: ``,
             contents:  {carrContents: ["RJvR7tR3EO_tn.jpg", "Fl5KBGVHMW_tn.jpg", "a6EokwqGy8_tn.jpg"]},
-            Comentarios: "",
+            Comentarios: ""
         },
         "/AuraCardonaC/img/BXYHkUjIUp": {
             type: "mult_img",
@@ -206,7 +206,7 @@ var user= {
             title: `🖤`,
             description: ``,
             contents:  {carrContents: ["BXYHkUjIUp_tn.jpg", "EAhFEACROj_tn.jpg"]},
-            Comentarios: "",
+            Comentarios: ""
         },
         "/AuraCardonaC/img/f6wj8ibxnE": {
             type: "img",
@@ -250,7 +250,7 @@ var user= {
             title: `Me siento orgullosa de mí 🖤`,
             description: ``,
             contents:  {carrContents: ["IEOKvyBsGJ_tn.jpg", "KDoMGssk5c_tn.jpg", "rBudXPAMOB_tn.jpg", "zlZcPDkSxc_tn.jpg"]},
-            Comentarios: "",
+            Comentarios: ""
         },
         "/AuraCardonaC/img/D1RDzGEk70": {
             type: "mult_img",
@@ -260,8 +260,8 @@ var user= {
             },
             title: ``,
             description: ``,
-            contents:  {carrContents: ["D1RDzGEk70_tn.jpg", "RQR9NGtzNR_tn.jpg", "MmtskuMiaS_tn.jpg", "zlZcPDkSxc_tn.jpg"]},
-            Comentarios: "",
+            contents:  {carrContents: ["D1RDzGEk70_tn.jpg", "RQR9NGtzNR_tn.jpg", "MmtskuMiaS_tn.jpg"]},
+            Comentarios: ""
         },
         "/AuraCardonaC/img/OUiQlJofR8": {
             type: "mult_img",
@@ -272,7 +272,7 @@ var user= {
             title: `😎`,
             description: ``,
             contents:  {carrContents: ["OUiQlJofR8_tn.jpg", "TGfy2pGo09_tn.jpg", "TXf3wvC661_tn.jpg", "R9IMhwAIfe_tn.jpg"]},
-            Comentarios: "",
+            Comentarios: ""
         },
         "/AuraCardonaC/img/EZEXYW377I": {
             type: "mult_img",
@@ -283,7 +283,7 @@ var user= {
             title: `Y que los cumplas muy feliz ✨por muchos años más junto a ti con la ayuda de Dios 🙏🏻❤️`,
             description: `Me siento orgullosa del papá y la mamá que tengo! Créanme que son pocas las personas que pueden gozar de un lindo hogar, por eso mi consejo hoy es VALOREN sus familias, honren a sus padres y a sus madres porque gracias a ellos es que hoy somos lo que somos cada uno, la vida es un ciclo primero ellos cuidan de nosotros y luego somos nosotros los que debemos cuidar de ellos! Feliz cumpleaños pa te amo intensamente y jamás me cansaré de decírtelo ❤️`,
             contents:  {carrContents: ["EZEXYW377I_tn.jpg", "DTO1UzJ7c9_tn.jpg"]},
-            Comentarios: "",
+            Comentarios: ""
         },
         "/AuraCardonaC/img/JM7g8Fo8hF": {
             type: "img",
@@ -316,7 +316,7 @@ var user= {
             title: ``,
             description: ``,
             contents:  {carrContents: ["gDlbdBv9CI_tn.jpg", "hN5V2ZHaJj_tn.jpg", "gw1NoHGN5m_tn.jpg"]},
-            Comentarios: "",
+            Comentarios: ""
         },
         "/AuraCardonaC/img/yDyhAb8S3s": {
             type: "img",
@@ -338,7 +338,7 @@ var user= {
             title: `🖤✨`,
             description: ``,
             contents:  {carrContents: ["2ou09DdMDT_tn.jpg", "pLpew54cyQ_tn.jpg", "J8fntbI4d7_tn.jpg", "Gh0dJPNQLm_tn.jpg", "uaifiOwLfQ_tn.jpg"]},
-            Comentarios: "",
+            Comentarios: ""
         },
         "/AuraCardonaC/img/yTQobLkiYy": {
             type: "mult_img",
@@ -349,7 +349,7 @@ var user= {
             title: `🍸`,
             description: ``,
             contents:  {carrContents: ["yTQobLkiYy_tn.jpg", "G5XEnaR7MN_tn.jpg"]},
-            Comentarios: "",
+            Comentarios: ""
         },
         "/AuraCardonaC/img/4FU2Z00I7q": {
             type: "img",
@@ -382,7 +382,7 @@ var user= {
             title: `Cómo me gusta vivir mi propia vida ✨`,
             description: ``,
             contents:  {carrContents: ["EfEQzbHdzv_tn.jpg", "eXHWAPgeZl_tn.jpg", "qyf9LRafkH_tn.jpg", "xkt6Q6jHRc_tn.jpg"]},
-            Comentarios: "",
+            Comentarios: ""
         },
         "/AuraCardonaC/img/eQZeHjWK8V": {
             type: "mult_img",
@@ -393,7 +393,7 @@ var user= {
             title: `🌈`,
             description: ``,
             contents:  {carrContents: ["eQZeHjWK8V_tn.jpg", "c9byLMqcf1_tn.jpg", "IAJZ2Y8Ygy_tn.jpg", "PeePnnXvfW_tn.jpg"]},
-            Comentarios: "",
+            Comentarios: ""
         }
     }
 }
