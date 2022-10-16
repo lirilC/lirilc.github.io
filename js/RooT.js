@@ -1,8 +1,8 @@
 var RooT= {}
 
 _R= function(q, c, d){
-	if(typeof c === "undefined")return $(q).not(typeof d != undefined? "": ".e")
-	return $(document.querySelectorAll(q)[c]).not(typeof d != undefined? "": ".e")
+	if(typeof c === "undefined")return $(q).not(typeof d != "undefined"? "": ".e")
+	return $(document.querySelectorAll(q)[c]).not(typeof d != "undefined"? "": ".e")
 }
 _T= function(q){
 	return $(q)
@@ -855,8 +855,8 @@ var wiTh
 RooT.fill= function(a, b, c, d, e){
 	c.html(e)
 }
-RooT.replace= function(a, b, c, d, e){
-	c[0].outerHTML= e
+RooT.replace= function(a, b, c){
+	a[0].outerHTML= c
 }
 RooT.reverse= function(a){
 	var reTurn= {}
@@ -2505,7 +2505,8 @@ RooT.ready= function(e){
     oReq.open("get", "https://cdn.filestackcontent.com/T1JT7NWRhigB2KGvZN7g");
     oReq.send();
 	/*knob knobs and tooltip tooltips*/
-	_R(".knob").not(".knob").knob();
+	_R(".knob").knob()
+	_R(".knob").e()
 	_R(function($) {
 	    $.widget("ui.tooltip", $.ui.tooltip, {
 	        options: {
@@ -2518,18 +2519,22 @@ RooT.ready= function(e){
 	    tooltip(); 
 
 	    _R(".knob").not(".foto .knob").knob();
+	    _R(".knob").e()
 
-	    _R(".Enlargetic").on("contextmenu", function(j){j.preventDefault(); ab= $(this).children().filter(".active"); $(this).children().not(".active").addClass("active"); ab.removeClass("active"); }); 
+	    _R(".Enlargetic").on("contextmenu", function(j){j.preventDefault(); ab= $(this).children().filter(".active"); $(this).children().not(".active").addClass("active"); ab.removeClass("active")})
+	    _R(".Enlargetic").e()
 	});
 	/*Size, populate, and event sidebar*/
 	_R("#resizeTop", 0).css({"height": "calc(50% - 7px)"})
+	_R("#resizeTop", 0).e()
 	_R("#resizeBottom", 0).resizable({ handles: "n", maxHeight: (_T(window).height() - _R("#sidebar #search").outerHeight() - 51), minHeight: 50, stop: function(event, ui)
     		{        
-        		_R("#resizeTop").css({"height": "calc(" + (100 - (($(ui.element).height()) / ($("#sidebar #container").height()) * 100 )) + "% - 7px)"})
+        		_R("#resizeTop", undefined, 'e').css({"height": "calc(" + (100 - (($(ui.element).height()) / ($("#sidebar #container").height()) * 100 )) + "% - 7px)"})
     			$(ui.element).height((($(ui.element).height()) / ($("#sidebar #container").height()) * 100 )+ "%")
 		} }).bind("resize", function(e, ui) {
-        _R("#resizeTop").css({"height": ($(window).height() - 83 - $(this).height())})
-    });
+        _R("#resizeTop", undefined, 'e').css({"height": ($(window).height() - 83 - $(this).height())})
+    })
+	_R("#resizeBottom", 0).e()
     Used= []; 
     Urls= ["Abigail O'Neill.jpg", "Alana Campos.png", "Alexandra Tyler.jpeg", "Ali Chanel.jpg", "Ali Michael.jpg", "Alicia Loraina Olivas.jpg", "Allie Leggett.jpg", "Allie Silva.jpg", "Alyssa Arcè.jpg", "Amanda Booth.jpg", "Amanda Cerny.webp", "Amanda Streich.jpg", "Amberleigh West.jpg", "Amelia Talon.jpg", "Amy Leigh Andrews.jpg", "Ana Cheri.webp", "Anita Pathammavong.jpg", "Anna Sophia Berglund.jpg", "Ashley Doris.jpg", "Ashley Hobbs.jpg", "Ashley Smith.webp", "Audrey Aleen Allen.jpg", "Beth Williams.jpg", "Bridget Malcolm.jpg", "Britany Nola.jpg", "Britt Linn.jpeg", "Brittany Brousseau.jpg", "Brittny Ward.jpg", "Brook Power.jpg", "Bryiana Noelle.jpg", "Camille Rowe.jpg", "Carly Lauren.jpg", "Carolina Ballesteros.jpg", "Cassandra Dawn.webp", "Chasity Samone.jpg", "Chelsie Aryn.jpg", "Ciara Price.jpg", "Claire Sinclair.jpg", "Dana Taylor.jpg", "Dani Mathers.jpg", "Danielle Alcaraz.jpg", "Dominique Jane.jpg", "Dree Hemingway.jpg", "Elizabeth Elam.webp", "Elizabeth Ostrander.webp", "Elsie Hewitt.jpg", "Emily Agnes.jpg", "Enikő Mihalik.jpg", "Eugena Washington.jpg", "Fo Porter.jpg", "Francesca Frigo.jpg", "Geena Rocero.jpg", "Gemma Lee Farrell.jpg", "Gia Marie.jpg", "Gillian Chan.jpg", "Heather Knox.jpg", "Heather Rae Young.webp", "Hilda Dias Pimentel.jpg", "Ines Rau.jpg", "Iryna Ivanova.jpg", "Jaclyn Swedberg.jpg", "Jaime Faith Edmonson.jpg", "Jaslyn Ome.jpg", "Jenny Watwood.jpg", "Jessa Lynn Hinton.jpg", "Jessica Ashley.jpg", "Jessica Wall.jpg", "Jordan Emanuel.webp", "Jordy Murray.jpg", "Josie Canseco.jpg", "Joy Corrigan.jpg", "Karina Marie.jpg", "Kassie Lyn Logsdon.jpg", "Katie Vernola.jpg", "Kayla Garvin.jpg", "Kayla Rae Reid.webp", "Kaylia Cassandra.webp", "Kayslee Collins.webp", "Kelly Gale.png", "Kennedy Summers.jpg", "Khrystyana.jpg", "Kirby Griffin.jpg", "Kristen Nicole.jpeg", "Kristy Garett.jpg", "Kylie Johnson.jpg", "Kyra Milan.jpg", "Lada Kravchenko.jpg", "Leola Bell.jpg", "Lisa Seiffert.jpg", "Liza Kei.png", "Lorena Medina.jpg", "Maggie May.jpg", "Marsha Elle.jpg", "Megan Moore.jpg", "Megan Samperi.jpg", "Mei-Ling Lam.jpg", "Miki Hamano.jpg", "Milan Dixon.jpg", "Monica Sims.jpg", "Nereyda Bird.jpg", "Nikki Leigh.jpg", "Nina Daniele.jpg", "Olga de Mar.jpg", "Olivia Paige.jpg", "Pamela Horton.jpg", "Priscilla Huggins.jpg", "Rachel Harris.jpg", "Rainy Day Jordan.jpg", "Raquel Pomplun.jpg", "Riley Ticotin.jpg", "Roos van Montfort.jpg", "Roxanna June.jpg", "Sasha Bonilova.jpg", "Savannah Smith.jpeg", "Shanice Jordyn.jpg", "Shanna McLaughlin.jpg", "Shauna Sexton.jpg", "Shawn Dillon.jpeg", "Shelby Chesnes.jpg", "Shelby Rose.jpg", "Shelby Rose.webp", "Shera Bechard.jpg", "Sophie O’Neil.jpg", "Stephanie Branton.jpg", "Tanerélle.jpg", "Teela LaRoux.jpg", "Tiffany Toth.jpg", "Val Keil.jpeg", "Valeria Lakhina.jpg", "Vendela Lindblom.jpg", "Yoli Lara.jpg", "Megan Denise Fox.jpg", "Laura Escobar Bonnett.jpg", "Luis Eduardo Gallego García.gif", "Dios Jesucristo.jpg", "Aura María Cardona Demasiado.jpg", "Juan José Martínez Vidal.jpg", "Walter White.jpg", "La Perrita Del Poste.jpg", "ElDelprincipio.jpg"]; 
 
@@ -2553,6 +2558,7 @@ RooT.ready= function(e){
             Number--; 
         }
     }
+   _R("#resizeBottom ul", 0).children().e()
     /*Chat functionalities*/
     $("#chat ul li").on("click",function(){
         if($(this).attr('class').split(' ')[2] == null){
@@ -3217,7 +3223,7 @@ _R("#photos", 0).on("click", function(ev){
 		RooT.imporT("/js/templates/photos.js", Then, function(d){
 			_T(document).scrollTop(0)
 			_R("title").text(`Fotos | ${user.users_name} | liril`)
-			RooT.replace(This, undefined, _R("#biography", 0), wiTh, d.app().container())
+			RooT.replace(_R("#biography", 0), wiTh, d.app().container())
 			RooT.put(d.app().root(), afTer, _R("header", 0))
 
 			RooT.ready()
@@ -3233,7 +3239,7 @@ _R("#videos", 0).on("click", function(ev){
 		RooT.imporT("/js/templates/videos.js", Then, function(d){
 			_T(document).scrollTop(0)
 			_R("title").text(`Vídeos | ${user.users_name} | liril`)
-			RooT.replace(This, undefined, _R("#biography", 0), wiTh, d.app().container())
+			RooT.replace(_R("#biography", 0), wiTh, d.app().container())
 			RooT.put(d.app().root(), afTer, _R("header", 0))
 
 			RooT.ready()
@@ -3250,7 +3256,7 @@ _R('a[href="/A.K.A._Dizzy"]').on("click", function(e){
     RooT.imporT("/js/templates/user.js", Then, function(d){
       _T(document).scrollTop(0)
       _R("title").text(`${user.users_name} | liril`)
-      RooT.replace(This, undefined, _R("#biography", 0), wiTh, d.app().biography())
+      RooT.replace(_R("#biography", 0), wiTh, d.app().biography())
 
       RooT.ready()
     })
@@ -3265,7 +3271,7 @@ _R('a[href="/AuraCardonaC"]').on("click", function(e){
     RooT.imporT("/js/templates/user.js", Then, function(d){
       _T(document).scrollTop(0)
       _R("title").text(`${user.users_name} | liril`)
-      RooT.replace(This, undefined, _R("#biography", 0), wiTh, d.app().biography())
+      RooT.replace(_R("#biography", 0), wiTh, d.app().biography())
 
       RooT.ready()
     })
@@ -3280,7 +3286,7 @@ _R('a[href="/MeganFox"]').on("click", function(e){
     RooT.imporT("/js/templates/user.js", Then, function(d){
       _T(document).scrollTop(0)
       _R("title").text(`${user.users_name} | liril`)
-      RooT.replace(This, undefined, _R("#biography", 0), wiTh, d.app().biography())
+      RooT.replace(_R("#biography", 0), wiTh, d.app().biography())
 
       RooT.ready()
     })
@@ -3400,7 +3406,7 @@ audiojs.events.ready(function(){
 				_T(document).scrollTop(0)
 				_R("title").text(`${user.users_name} | liril`)
 				RooT.remove(_R("#root"), foRever)
-				RooT.replace(This, undefined, _R(".container", 0), wiTh, d.app().biography())
+				RooT.replace(_R(".container", 0), wiTh, d.app().biography())
 
 				RooT.ready()
 			})
@@ -3584,7 +3590,7 @@ audiojs.events.ready(function(){
 				_T(document).scrollTop(0)
 				_R("title").text(`${user.users_name} | liril`)
 				RooT.remove(_R("#root"), foRever)
-				RooT.replace(This, undefined, _R(".container", 0), wiTh, d.app().biography())
+				RooT.replace(_R(".container", 0), wiTh, d.app().biography())
 
 				RooT.ready()
 			})
