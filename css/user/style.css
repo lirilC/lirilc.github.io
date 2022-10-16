@@ -615,6 +615,17 @@ position: absolute;
 { 
     overflow-x: hidden; 
     position: relative; 
+}
+#biography #content #main #summary aside#sections section#situation p.sp {
+    color: #666;
+    margin-bottom: 11px;
+    padding-right: 180px;
+}
+#biography #content #main #summary aside#sections section#situation p.sp::after {
+    content: ".";
+    right: 41px;
+    position: absolute;
+    font-size: initial;
 } 
 #biography #content #main #summary aside#sections section#ties > div.overflowing:after
 { 

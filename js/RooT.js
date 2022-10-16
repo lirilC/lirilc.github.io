@@ -2473,6 +2473,224 @@ var K0= function(){
     oReq.setRequestHeader('Authorization', "token " + token); 
     oReq.send();
 }
+/*Add document event listeners*/
+/*And scroll event on the document for .current to update on scroll*/
+_T(document).scroll(function(iy){ 
+	(ok)?(function(){ 
+	for(i= 0; i <= $(".story").length - 1; i++){ 
+		($(window).height() / 2 > $(".story")[i].getBoundingClientRect().y && $(window).height() / 2 < $(".story")[i].getBoundingClientRect().y + parseInt($($(".story")[i]).css("height").slice(0, -2)))? (function(){ 
+		    current= $(".story.current"); 
+		    current.removeClass("current"); 
+		    $($(".story")[i]).addClass("current");
+		    current= $($(".story")[i]); 
+		    $($(".story")[i]).attr("tabindex", 0); 
+		    $(".story")[i].focus(); 
+		    })(): 132315
+		}
+	})(): 13124; 
+})
+/**/
+_T(document).keypress(function (e){
+    if(!$("textarea").is(":focus") && !$("input").is(":focus") && !waiting){ 
+        switch(e.keyCode){ 
+            case 108: case 76: 
+                $(".current").find('.options .star').toggleClass("true"); 
+                $("#theater").find('.options .star').toggleClass("true"); 
+                badGuy(); 
+            break; 
+            case 98: case 66: 
+                $(".current").find('.options .bookmark').toggleClass("true"); 
+                $("#theater").find('.options .bookmark').toggleClass("true"); 
+                badGuy(); 
+            break; 
+            case 102: case 70: 
+                if(($(".current").is(".mult_img") || $(".current").is(".mult_carr")) && $("#theater").css("display") != "block"){ 
+                    $($(".current").find(".carr > section")[Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0)]).is( ".video" )? $($(".current").find(".carr > section")[Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0)]).find(".Enlarge").trigger( "click" ): openModal($($(".current").find(".pic")[Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0) - getVideos($(".current"), Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0))])); 
+                    if(Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0) == Math.floor($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0)){
+                        $(".current .carr").stop(true, false); 
+                        $(".current .carr").animate({scrollLeft: (Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0) * $(".current").find(".carr > section").width())}, (400 - (400 * (Math.ceil($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0) - ($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0))))); 
+                        /*$(".current .nav_arrow.left .arrow").click(); */ 
+                    }else{
+                        $(".current .carr").stop(true, false); 
+                        $(".current .carr").animate({scrollLeft: (Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0) * $(".current").find(".carr > section").width())}, (400 * (Math.ceil($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0) - ($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0)))); 
+                        /*$(".current .nav_arrow.right .arrow").click(); */ 
+                    }
+                }else if($(".current").is(".img") && $("#theater").css("display") != "block"){ 
+                    openModal($(".current .pic")); 
+                }else if($(".current").is(".video")){ 
+                    openVideoModal($(".current").find(".Enlarge")); 
+                }; 
+            break; 
+        }
+    }
+  	      	
+	if(!$("textarea").is(":focus") && !$("input").is(":focus") && !waiting && $("#theater").css("display") != "block"){
+    //console.log(e.keyCide) 
+    var forward;
+                 
+    (e.keyCode == 74 || e.keyCode == 106 || e.keyCode == 75 || e.keyCode == 107)? waiting= true: 143; 
+                                               
+    if (e.keyCode == 74 || e.keyCode == 106){
+        forward= true;
+    }else if (e.keyCode == 75 || e.keyCode == 107){
+        forward= false;
+    }else{
+        return true;
+    }
+
+
+    if (!$(".story.current").length){
+        $(".story:first").addClass("current"); 
+    }
+
+    if ($(".story.current").length){
+        next= ""; 
+        if (forward){
+            !!current.next(".story").length? next= current.next(".story"): 1415; 
+        }else{
+            !!current.prev(".story").length? next= current.prev(".story"): 27721; 
+        }
+        if (!!next.length){
+            $(".current").removeClass("current");
+            next.addClass("current"); 
+        }
+    }
+
+    (!!next.length)? (function(){
+                        ok= false; 
+                        $("html").animate({ 
+                        scrollTop: $(".current").offset().top - 56
+                    }, 400, function(){  
+                        waiting= false; 
+                        current= $(".story.current"); 
+                        $(".current").attr("tabindex", 0); 
+                        $(".current")[0].focus();
+                        setTimeout(function(){ok= true;}, 100) 
+                    })})(): waiting= false; 
+    }
+});
+/**/
+_T(document).on("keydown", function (evt){
+	//console.log(evt.keyCode); 
+
+	if( evt.keyCode == 32 ){
+	    console.log( JSON.stringify( localStorage.getItem( "safety_purge" ) ) ); 
+	    if(_R("#theater", und, 'e').css("display") != "none"){ 
+	        videojs(_R(".theater video", 0, 'e')).paused()? videojs(_R(".theater video", 0, 'e')).play(): videojs(_R(".theater video", 0, 'e')).pause()
+	    } 
+	} 
+
+	((!!ar || (_R(".current", und, 'e').is(".mult_img") || _R(".current", und, 'e').is(".mult_carr"))))? (function(){ 
+	    //th= $( th.context ).closest(".story").length? $( th.context ).closest(".story"): $( th.context ).closest(".foto").length? $( th.context ).closest(".foto"): $( th.context ).closest('#profilePic').length? $( th.context ).closest('#profilePic'): th.context;  
+	    switch(evt.keyCode){
+	        case 37: 
+	            th= _R("#theater", und, 'e').css("display") == "none"? _R(".current", und, 'e'): th
+	            if($("#theater .nav_arrow.left").is(".disabled"))
+	                {return}; 
+	            if(th.find(".nav_arrow.left").is(".disabled") && $("#theater").css("display") == "none")
+	                {return}
+	            if($("#theater").css("display") == "none" && !!th.find(".carr").length){ 
+	                lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
+	                if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
+	                !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
+	                    if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4)  + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
+	            }else if(!!th.find(".carr").length){ 
+	                /*console.log( lk )*/ 
+	                th.find(".carr")[0].scrollLeft= th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width(); 
+	                lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4)  + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
+	                lk= un_tn( lk ); 
+	                $("#theater video")[0].src= ""; 
+	                th.is(".mult_carr")? $( (function(){return $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find(".Enlarge")})() ).trigger( "click" ): $("#theater").find("#bigPic")[0].src= (th.is(".story")? $(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src: un_tn($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src)); 
+	                source= un_tn($("#theater").find("#bigPic")[0].src)
+	                history.pushState({page: 1}, "", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4)  + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
+	            }
+	            break; 
+	        case 39: 
+	            th= _R("#theater", und, 'e').css("display") == "none"? _R(".current", und, 'e'): th
+	            if($("#theater .nav_arrow.right").is(".disabled"))
+	                {return}; 
+	            if(th.find(".nav_arrow.right").is(".disabled") && $("#theater").css("display") == "none")
+	                {return}
+	            if($("#theater").css("display") == "none" && !!th.find(".carr").length){ 
+	                lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
+	                if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
+	                !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
+	                    if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4)  + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
+	            }else if(!!th.find(".carr").length){ 
+	                /*console.log( lk )*/ 
+	                th.find(".carr")[0].scrollLeft= th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width(); 
+	                lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4)  + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
+	                lk= un_tn( lk ); 
+	                $("#theater video")[0].src= ""; 
+	                th.is(".mult_carr")? $( (function(){return $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find(".Enlarge")})() ).trigger( "click" ): $("#theater").find("#bigPic")[0].src= (th.is(".story")? $(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src: un_tn($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src)); 
+	                source= un_tn($("#theater").find("#bigPic")[0].src)
+	                history.pushState({page: 1}, "", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4)  + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
+	            }
+	            break; 
+	    }
+	})(): 672; 
+
+	evt= evt || window.event;
+	if (evt.keyCode == 27){
+	    if(_R("#theater", und, 'e').css("display") == "none"){
+	        destroyChat($(document.activeElement))
+	    }else{
+	        closeModal();
+	    }
+	}
+
+	switch(evt.keyCode){
+	  case 40:
+	        if(_R(".result").length && !_R(".result#resaltado").length){
+	            _R(".result", 0).attr("id", "resaltado")
+	            _R(".result", 0).children()[0].focus()
+	            setTimeout(function(){_R(".searchResults > div").scrollTop(0)}, 20)
+	            _R(".searchResults > div").scrollTop(0)
+	        }else if(_R(".result").length && _R(".result#resaltado").index() != _R(".result").length - 1){
+	            _R(".result#resaltado").next().children()[0].focus()
+	            _R(".result#resaltado").next().attr("id", "resaltado")
+	            _R(".result#resaltado", 0).attr("id", "")
+	        }
+	    break;
+	  case 38:
+	        if(_R(".result").length && $(".result#resaltado").length && $(".result#resaltado").index() != 0){
+	            _R(".result#resaltado").prev().children()[0].focus()
+	            _R(".result#resaltado").prev().attr("id", "resaltado")
+	            _R(".result#resaltado", 1).attr("id", "")
+	        }
+	    break;
+	}
+	if(evt.shiftKey && evt.ctrlKey && evt.altKey){
+		evt.preventDefault()
+		_R("#theater", und, 'e').css("display") == "block"? closeModal(): 1
+		_R("#buscar input", und, 'e').val("")
+		_R("#buscar input", und, 'e').trigger("input")
+		_R("#buscar input", und, 'e').focus()
+	}
+})
+document.addEventListener("mousemove", function(event){ 
+	if(_R("#profilePic > img", 0, 'e').length){
+	    circleWidth  = _R("#profilePic > img", 0, 'e').outerWidth( true ),
+	    circleHeight = _R("#profilePic > img", 0, 'e').outerHeight( true ),
+	    circleLeft   = _R("#profilePic > img", 0, 'e').offset().left,
+	    circleTop    = _R("#profilePic > img", 0, 'e').offset().top,
+	    circlePos    ={
+	        x    : circleLeft + circleWidth / 2,
+	        y    : circleTop + circleHeight / 2,
+	        radius: circleWidth / 2
+	    }; 
+
+       distance   = Math.sqrt( Math.pow( event.pageX - circlePos.x, 2 ) + Math.pow( event.pageY - circlePos.y, 2 ) ); 
+
+       	if(distance <= circlePos.radius){ 
+           	$($("#profilePic > div")[0]).css({"pointer-events": "all"}); 
+           	$($("#profilePic > img")[0]).css({"pointer-events": "all"}); 
+       	}else{ 
+           	$($("#profilePic > div")[0]).css({"pointer-events": "none"}); 
+           	$($("#profilePic > img")[0]).css({"pointer-events": "none"}); 
+       	}  
+	}
+})
 /*Bind first pageDOMContentLoaded*/
 RooT.ready= function(e){
 	/*Initialize some variables*/
@@ -2791,101 +3009,6 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
         $(".current")[0].focus(); 
     })
     _R(".story").e()
-    /*And scroll event on the document for .current to update on scroll*/
-    _T(document).scroll(function(iy){ 
-		(ok)?(function(){ 
-		for(i= 0; i <= $(".story").length - 1; i++){ 
-			($(window).height() / 2 > $(".story")[i].getBoundingClientRect().y && $(window).height() / 2 < $(".story")[i].getBoundingClientRect().y + parseInt($($(".story")[i]).css("height").slice(0, -2)))? (function(){ 
-			    current= $(".story.current"); 
-			    current.removeClass("current"); 
-			    $($(".story")[i]).addClass("current");
-			    current= $($(".story")[i]); 
-			    $($(".story")[i]).attr("tabindex", 0); 
-			    $(".story")[i].focus(); 
-			    })(): 132315
-			}
-		})(): 13124; 
-	})
-	/*JKing for navigating stories*/
-	_T(document).keypress(function (e){
-        if(!$("textarea").is(":focus") && !$("input").is(":focus") && !waiting){ 
-            switch(e.keyCode){ 
-                case 108: case 76: 
-                    $(".current").find('.options .star').toggleClass("true"); 
-                    $("#theater").find('.options .star').toggleClass("true"); 
-                    badGuy(); 
-                break; 
-                case 98: case 66: 
-                    $(".current").find('.options .bookmark').toggleClass("true"); 
-                    $("#theater").find('.options .bookmark').toggleClass("true"); 
-                    badGuy(); 
-                break; 
-                case 102: case 70: 
-                    if(($(".current").is(".mult_img") || $(".current").is(".mult_carr")) && $("#theater").css("display") != "block"){ 
-                        $($(".current").find(".carr > section")[Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0)]).is( ".video" )? $($(".current").find(".carr > section")[Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0)]).find(".Enlarge").trigger( "click" ): openModal($($(".current").find(".pic")[Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0) - getVideos($(".current"), Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0))])); 
-                        if(Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0) == Math.floor($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0)){
-                            $(".current .carr").stop(true, false); 
-                            $(".current .carr").animate({scrollLeft: (Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0) * $(".current").find(".carr > section").width())}, (400 - (400 * (Math.ceil($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0) - ($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0))))); 
-                            /*$(".current .nav_arrow.left .arrow").click(); */ 
-                        }else{
-                            $(".current .carr").stop(true, false); 
-                            $(".current .carr").animate({scrollLeft: (Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0) * $(".current").find(".carr > section").width())}, (400 * (Math.ceil($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0) - ($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0)))); 
-                            /*$(".current .nav_arrow.right .arrow").click(); */ 
-                        }
-                    }else if($(".current").is(".img") && $("#theater").css("display") != "block"){ 
-                        openModal($(".current .pic")); 
-                    }else if($(".current").is(".video")){ 
-                        openVideoModal($(".current").find(".Enlarge")); 
-                    }; 
-                break; 
-            }
-        }
-      	      	
-    if(!$("textarea").is(":focus") && !$("input").is(":focus") && !waiting && $("#theater").css("display") != "block"){
-        //console.log(e.keyCide) 
-        var forward;
-                     
-        (e.keyCode == 74 || e.keyCode == 106 || e.keyCode == 75 || e.keyCode == 107)? waiting= true: 143; 
-                                                   
-        if (e.keyCode == 74 || e.keyCode == 106){
-            forward= true;
-        }else if (e.keyCode == 75 || e.keyCode == 107){
-            forward= false;
-        }else{
-            return true;
-        }
-    
-    
-        if (!$(".story.current").length){
-            $(".story:first").addClass("current"); 
-        }
-    
-        if ($(".story.current").length){
-            next= ""; 
-            if (forward){
-                !!current.next(".story").length? next= current.next(".story"): 1415; 
-            }else{
-                !!current.prev(".story").length? next= current.prev(".story"): 27721; 
-            }
-            if (!!next.length){
-                $(".current").removeClass("current");
-                next.addClass("current"); 
-            }
-        }
-    
-        (!!next.length)? (function(){
-                            ok= false; 
-                            $("html").animate({ 
-                            scrollTop: $(".current").offset().top - 56
-                        }, 400, function(){  
-                            waiting= false; 
-                            current= $(".story.current"); 
-                            $(".current").attr("tabindex", 0); 
-                            $(".current")[0].focus();
-                            setTimeout(function(){ok= true;}, 100) 
-                        })})(): waiting= false; 
-        }
-    });
 	/*Close modal on dark wrapper in the background of the theater's click*/
 	_R("#wrapper").on("click", function (){
         closeModal()
@@ -2922,105 +3045,6 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
         badGuy(); 
     }); 
     _R(".bookmark").e()
-	/*Arrow keys for browsing the carrousels*/
-	_T(document).on("keydown", function (evt){
-	    //console.log(evt.keyCode); 
-
-	    if( evt.keyCode == 32 ){
-	        console.log( JSON.stringify( localStorage.getItem( "safety_purge" ) ) ); 
-	        if(_R("#theater", und, 'e').css("display") != "none"){ 
-	            videojs(_R(".theater video", 0, 'e')).paused()? videojs(_R(".theater video", 0, 'e')).play(): videojs(_R(".theater video", 0, 'e')).pause()
-	        } 
-	    } 
-
-	    ((!!ar || (_R(".current", und, 'e').is(".mult_img") || _R(".current", und, 'e').is(".mult_carr"))))? (function(){ 
-	        //th= $( th.context ).closest(".story").length? $( th.context ).closest(".story"): $( th.context ).closest(".foto").length? $( th.context ).closest(".foto"): $( th.context ).closest('#profilePic').length? $( th.context ).closest('#profilePic'): th.context;  
-	        switch(evt.keyCode){
-	            case 37: 
-	                th= _R("#theater", und, 'e').css("display") == "none"? _R(".current", und, 'e'): th
-	                if($("#theater .nav_arrow.left").is(".disabled"))
-	                    {return}; 
-	                if(th.find(".nav_arrow.left").is(".disabled") && $("#theater").css("display") == "none")
-	                    {return}
-	                if($("#theater").css("display") == "none" && !!th.find(".carr").length){ 
-	                    lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
-	                    if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
-	                    !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
-	                        if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4)  + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
-	                }else if(!!th.find(".carr").length){ 
-	                    /*console.log( lk )*/ 
-	                    th.find(".carr")[0].scrollLeft= th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width(); 
-	                    lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4)  + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
-	                    lk= un_tn( lk ); 
-	                    $("#theater video")[0].src= ""; 
-	                    th.is(".mult_carr")? $( (function(){return $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find(".Enlarge")})() ).trigger( "click" ): $("#theater").find("#bigPic")[0].src= (th.is(".story")? $(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src: un_tn($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src)); 
-	                    source= un_tn($("#theater").find("#bigPic")[0].src)
-	                    history.pushState({page: 1}, "", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4)  + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
-	                }
-	                break; 
-	            case 39: 
-	                th= _R("#theater", und, 'e').css("display") == "none"? _R(".current", und, 'e'): th
-	                if($("#theater .nav_arrow.right").is(".disabled"))
-	                    {return}; 
-	                if(th.find(".nav_arrow.right").is(".disabled") && $("#theater").css("display") == "none")
-	                    {return}
-	                if($("#theater").css("display") == "none" && !!th.find(".carr").length){ 
-	                    lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
-	                    if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
-	                    !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
-	                        if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4)  + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
-	                }else if(!!th.find(".carr").length){ 
-	                    /*console.log( lk )*/ 
-	                    th.find(".carr")[0].scrollLeft= th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width(); 
-	                    lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4)  + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
-	                    lk= un_tn( lk ); 
-	                    $("#theater video")[0].src= ""; 
-	                    th.is(".mult_carr")? $( (function(){return $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find(".Enlarge")})() ).trigger( "click" ): $("#theater").find("#bigPic")[0].src= (th.is(".story")? $(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src: un_tn($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src)); 
-	                    source= un_tn($("#theater").find("#bigPic")[0].src)
-	                    history.pushState({page: 1}, "", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4)  + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
-	                }
-	                break; 
-		    }
-		})(): 672; 
-	    
-	    evt= evt || window.event;
-	    if (evt.keyCode == 27){
-	        if(_R("#theater", und, 'e').css("display") == "none"){
-	            destroyChat($(document.activeElement))
-	        }else{
-	            closeModal();
-	        }
-	    }
-
-		switch(evt.keyCode){
-		  case 40:
-		        if(_R(".result").length && !_R(".result#resaltado").length){
-		            _R(".result", 0).attr("id", "resaltado")
-		            _R(".result", 0).children()[0].focus()
-		            setTimeout(function(){_R(".searchResults > div").scrollTop(0)}, 20)
-		            _R(".searchResults > div").scrollTop(0)
-		        }else if(_R(".result").length && _R(".result#resaltado").index() != _R(".result").length - 1){
-		            _R(".result#resaltado").next().children()[0].focus()
-		            _R(".result#resaltado").next().attr("id", "resaltado")
-		            _R(".result#resaltado", 0).attr("id", "")
-		        }
-		    break;
-		  case 38:
-		        if(_R(".result").length && $(".result#resaltado").length && $(".result#resaltado").index() != 0){
-		            _R(".result#resaltado").prev().children()[0].focus()
-		            _R(".result#resaltado").prev().attr("id", "resaltado")
-		            _R(".result#resaltado", 1).attr("id", "")
-		        }
-		    break;
-		}
-		if(evt.shiftKey && evt.ctrlKey && evt.altKey){
-			evt.preventDefault()
-			_R("#theater", und, 'e').css("display") == "block"? closeModal(): 1
-			_R("#buscar input", und, 'e').val("")
-			_R("#buscar input", und, 'e').trigger("input")
-			_R("#buscar input", und, 'e').focus()
-		}
-	})
     /*Activate the arrows on the stories*/
     _R(".carr").on("scroll", function(){ 
 	    rf= $(this)
@@ -3169,7 +3193,8 @@ _R(".knob").knob()
 _R(".knob").e()
 })
 _R(".buscar").e()
-
+/*Prevent default on hashed links in #sections' click*/
+_R("#sections a[href= '#']").on("click", function(e){e.preventDefault()})
 /*Tooltip upsigned users in Situación Sentimental and ties*/
 _R("#situation a").not("#situation a[href= '#']").tooltip({
     items: 'a',
@@ -3246,7 +3271,7 @@ var distance;
 el= $($("#profilePic > img")[0]); 
                     
     
-$(".comentario").on("mousemove", function(event){ 
+_R(".comentario").on("mousemove", function(event){ 
     elx= $($(this).children()[0])
     circleWidth= elx.outerWidth( true ),
     circleHeight = elx.outerHeight( true ),
@@ -3268,6 +3293,7 @@ $(".comentario").on("mousemove", function(event){
         $($(this).children()[0]).css({"pointer-events": "none"}); 
     }  
 }); 
+_R(".comentario")
 $("#theater textarea").on('input', function(){ 
     $(this).height(""); 
     !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2))))): 1; 
