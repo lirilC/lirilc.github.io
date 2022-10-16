@@ -1,10 +1,12 @@
 var RooT= {}
 
-_R= function(q, c, d){
-	if(typeof c === "undefined")return $(q).not(typeof d != "undefined"? "": ".e")
+var und
+var all
+var _R= function(q, c, d){
+	if(typeof c === "undefined" || (typeof c != "undefined" && [all, und].indexOf(c) >= 0))return $(q).not(typeof d != "undefined"? "": ".e")
 	return $(document.querySelectorAll(q)[c]).not(typeof d != "undefined"? "": ".e")
 }
-_T= function(q){
+var _T= function(q){
 	return $(q)
 }
 var Then
@@ -1038,7 +1040,7 @@ var tipo= function( liurl ){
     if(liurl.indexOf( "/images/" ) != -1)return "/img/"; 
 } 
 function newChat(a, b){
-        $(".chats").prepend("<div class='chat open "+b.toString()+"'><div class='chatTitle button'><p class='user'>"+ a.find("p").text() +"</p><span class='close'></span></div><div class='chatBox'><div class='messages'></div><div class='newMessage'><textarea rows='1'/><div class='emoticon'></div></div></div>");
+        $(".chats").prepend(`<div class='chat open ${b.toString()}'><div class='chatTitle button'><p class='user'>${a.find("p").text()}</p><span class='close'></span></div><div class='chatBox'><div class='messages'></div><div class='newMessage'><textarea rows='1'/><div class='emoticon'></div></div></div>`);
         $(".chats .chat:first-child .newMessage textarea").focus();
         $(".chats .chat:first-child .newMessage textarea").on('input', function() { 
             $(this).height(""); 
@@ -1207,7 +1209,6 @@ var openModal= function(a){
     if (a.closest('.story').find(".options .bookmark").hasClass("true")){
         $('.theater .comments .options .bookmark').addClass("true");
     }else{
-        console.log( "And we forgot what it was to love, and loved that of forgetting." ); 
         $('.theater .comments .options .bookmark').removeClass("true");
     }
     if (a.closest('.story').find(".options .star").hasClass("true")){
@@ -1356,8 +1357,7 @@ var openVideoModal= function(a){
     if (a.closest('.story').find(".options .bookmark").hasClass("true")){
         $('.theater .comments .options .bookmark').addClass("true");
     }else{
-        console.log( "And we forgot what it was to love, and loved that of forgetting." ); 
-$('.theater .comments .options .bookmark').removeClass("true");
+		$('.theater .comments .options .bookmark').removeClass("true");
     }
     if (a.closest('.story').find(".options .star").hasClass("true")){
         $('.theater .comments .options .star').addClass("true");
@@ -1514,8 +1514,7 @@ var openOtherModal= function(a){
     if (a.closest('.story').find(".options .bookmark").hasClass("true")){
         $('.theater .comments .options .bookmark').addClass("true");
     }else{
-        console.log( "And we forgot what it was to love, and loved that of forgetting." ); 
-$('.theater .comments .options .bookmark').removeClass("true");
+		$('.theater .comments .options .bookmark').removeClass("true");
     }
     if (a.closest('.story').find(".options .star").hasClass("true")){
         $('.theater .comments .options .star').addClass("true");
@@ -1586,8 +1585,7 @@ var openProfilePicModal= function(a){
     if (a.find(".hidden").find(".options .bookmark").hasClass("true")){
         $('.theater .comments .options .bookmark').addClass("true");
     }else{
-        console.log( "And we forgot what it was to love, and loved that of forgetting." ); 
-$('.theater .comments .options .bookmark').removeClass("true");
+		$('.theater .comments .options .bookmark').removeClass("true");
     }
     if (a.find(".hidden").find(".options .star").hasClass("true")){
         $('.theater .comments .options .star').addClass("true");
@@ -1672,15 +1670,9 @@ var openFotosModal= function(a){
 
     console.log( "OpenFotosModal" )
     if ($( th.context ).closest( ".foto" ).find(".options .bookmark").hasClass("true")){
-        console.log( th, $('.theater .comments .options .bookmark') ); 
         $('.theater .comments .options .bookmark').addClass("true");
-        console.log( $('.theater .comments .options .bookmark').hasClass( "true" ) ); 
     }else{
-        console.log( th, $('.theater .comments .options .bookmark') ); 
-        console.log( "And we forgot what it was to love, and loved that of forgetting." ); 
-
-        console.log( "And we forgot what it was to love, and loved that of forgetting." ); 
-$('.theater .comments .options .bookmark').removeClass("true");
+		$('.theater .comments .options .bookmark').removeClass("true");
     }
     if ($( th.context ).closest( ".foto" ).find(".options .star").hasClass("true")){
         $('.theater .comments .options .star').addClass("true");
@@ -1745,7 +1737,6 @@ $('.theater .comments .options .bookmark').removeClass("true");
                 if($("#theater").css("display") == "none" && !!th.find(".carr").length){ 
                     !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", "/" + user.username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
                 }else if(!!th.find(".carr").length){ 
-                    /*console.log( lk )*/ 
                     th.find(".carr")[0].scrollLeft= th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width(); 
                     lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", "/" + user.username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
                     lk= un_tn( lk ); 
@@ -1763,7 +1754,6 @@ $('.theater .comments .options .bookmark').removeClass("true");
                 if($("#theater").css("display") == "none" && !!th.find(".carr").length){ 
                     !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", "/" + user.username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
                 }else if(!!th.find(".carr").length){ 
-                    /*console.log( lk )*/ 
                     th.find(".carr")[0].scrollLeft= th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width(); 
                     lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", "/" + user.username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
                     lk= un_tn( lk ); 
@@ -2545,7 +2535,7 @@ RooT.ready= function(e){
             randmIntgr= parseInt(Math.random() * Urls.length ); 
         }
 
-        _R("#resizeBottom ul")[0].innerHTML= _R("#resizeBottom ul")[0].innerHTML + '<li class="button offline"><img src="/resources/images/chat/' + Urls[randmIntgr] + '" alt=""><p>' + Urls[randmIntgr].slice(0, Urls[randmIntgr].indexOf(".")) + '</p><span ></span></li>'
+        _R("#resizeBottom ul")[0].innerHTML= `${_R("#resizeBottom ul")[0].innerHTML}<li class="button offline"><img src="/resources/images/chat/${Urls[randmIntgr]}" alt=""><p>${Urls[randmIntgr].slice(0, Urls[randmIntgr].indexOf("."))}</p><span ></span></li>`
         Used[Used.length]= randmIntgr
     }
 
@@ -2558,45 +2548,41 @@ RooT.ready= function(e){
             Number--; 
         }
     }
-   _R("#resizeBottom ul", 0).children().e()
     /*Chat functionalities*/
-    $("#chat ul li").on("click",function(){
-        if($(this).attr('class').split(' ')[2] == null){
-            $(this).addClass( cC.toString() );
-            newChat($(this), cC);
+    _R("#chat ul li").on("click",function(){
+        if($(this).attr('class').split(' ')[3] == null){
+            $(this).addClass(cC.toString())
+            newChat($(this), cC)
             cC++
         }else{
-            $dat =$(".chats .chat."+$(this).attr('class').split(' ')[2])
-            if(! $dat.hasClass("open")){
+            $dat= $(`.chats .chat.${$(this).attr('class').split(' ')[3]}`)
+            if(!$dat.hasClass("open")){
                 prependClass($dat,"open");  
             }
-            $(".chats .chat."+$(this).attr('class').split(' ')[2]+" .newMessage textarea").focus();
+            $(`.chats .chat.${$(this).attr('class').split(' ')[3]} .newMessage textarea`).focus();
         }
     })
-    $("#chats .chats").on("mouseover mouseout", ".chatTitle", function() {
+    _R("#chat ul li").prop("title", function () {
+        return $(this).find("p").text();
+    });
+   	_R("#resizeBottom ul", 0).children().e()
+    _R("#chats .chats").on("mouseover mouseout", ".chatTitle", function() {
         $(this).find(".close").toggleClass("visible");
     });
-    $(".chatTitle .close").on("click",
-		function(){
-			destroyChat($(this));
-		}
-    );
-    $("#chats .chats").on("click", ".chatTitle", function() {
+    _R("#chats .chats").on("click", ".chatTitle", function() {
         $(this).closest(".chat").toggleClass("open");
-       	$(this).parent().find($(".newMessage textarea")).focus()
+       	$(this).parent().find(".newMessage textarea").focus()
 	});
-    $("#chats .chats").on("click", ".chatTitle .close", function() {
+    _R("#chats .chats").on("click", ".chatTitle .close", function() {
 	 	destroyChat($(this))
 	});
-	$("#chats .chats").on("input", ".chat .chatBox .newMessage textarea", function (ev) {
+	_R("#chats .chats").on("input", ".chat .chatBox .newMessage textarea", function (ev) {
 	    sizeMessages($(this));
 	})
-
-	$("#chats .chats").on("keyup", ".chat .chatBox .newMessage textarea", function (ev) {
+	_R("#chats .chats").on("keyup", ".chat .chatBox .newMessage textarea", function (ev) {
 	    sizeMessages($(this));
-	 
 	 })
-	$("#chats .chats").on("keypress", ".chat .chatBox .newMessage textarea", function (ev){
+	_R("#chats .chats").on("keypress", ".chat .chatBox .newMessage textarea", function (ev){
 	    sizeMessages($(this));
 	    if(ev.keyCode == 13 && $(this).val().length !== 0  && !ev.shiftKey){
 	      ev.preventDefault();
@@ -2607,19 +2593,18 @@ RooT.ready= function(e){
 	       $(this).trigger("input")
 	  }
 	})
-	$("#chats .chats").on("keyup", ".chat .chatBox .newMessage textarea", function (ev){
+	_R("#chats .chats").on("keyup", ".chat .chatBox .newMessage textarea", function (ev){
 	    sizeMessages($(this));
 	})
-	$("#chats .chats").on("keydown", ".chat .chatBox .newMessage textarea", function (ev){
+	_R("#chats .chats").on("keydown", ".chat .chatBox .newMessage textarea", function (ev){
 	    sizeMessages($(this));
 	})
-    $("#chat ul li").prop("title", function () {
-        return $(this).find("p").text();
-    });
+	_R("#chats .chats").e()
+/*Define maTch, for matching:*/
 RooT.maTch= {}
-RooT.maTch.user= new RegExp('^\/[^\/]+$')
-RooT.maTch.photos= new RegExp('^(\/.*?\/)photos$');
-RooT.maTch.videos= new RegExp('^(\/.*?\/)videos$');
+RooT.maTch.user= new RegExp('^\/[^\/]+$')//A slash anything but a slash and nothing after; e.g.: /usund8n2982d9ncukansc
+RooT.maTch.photos= new RegExp('^(\/.*?\/)photos$');//A slash anything but a slash and a slash and the word photos after; e.g: /uaocno/photos
+RooT.maTch.videos= new RegExp('^(\/.*?\/)videos$');//A slash anything but a slash and a slash and the word videos after; e.g: /uaocno/photos
 
 if(RooT.maTch.user.exec(window.location.pathname) !== null){
 	/*Redefine badGuy*/
@@ -2702,8 +2687,7 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
 	    if (a.closest('.vid').find(".options .bookmark").hasClass("true")){
 	        $('.theater .comments .options .bookmark').addClass("true");
 	    }else{
-	        console.log( "And we forgot what it was to love, and loved that of forgetting." ); 
-	$('.theater .comments .options .bookmark').removeClass("true");
+			$('.theater .comments .options .bookmark').removeClass("true");
 	    }
 	    if (a.closest('.vid').find(".options .star").hasClass("true")){
 	        $('.theater .comments .options .star').addClass("true");
@@ -2780,7 +2764,7 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
 		history.pushState({page: 1}, "", `/${user.username}`); 
 	}
     /*Activate jQuery UI's tooltips on the badges*/
-    $(".line").tooltip({
+    _R(".line").tooltip({
         track: true,
         position:{
             my: "center bottom-6",
@@ -2796,17 +2780,19 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
             })
             $(".ui-tooltip input").focus(); }
     });
+    _R(".line").e()
     /*Set first post as .current and subsequently the one clicked*/
-    $($("#feed .story")[0]).addClass("current")
+    _R("#feed .story", 0).addClass("current")
 	current= $(".story.current");
-	$(".story").on("click", function (){
+	_R(".story").on("click", function (){
         $(".current").removeClass("current");
         $(this).addClass("current"); 
         $($(".current")[0]).attr("tabindex", 0); 
         $(".current")[0].focus(); 
     })
+    _R(".story").e()
     /*And scroll event on the document for .current to update on scroll*/
-    $(document).scroll(function(iy){ 
+    _T(document).scroll(function(iy){ 
 		(ok)?(function(){ 
 		for(i= 0; i <= $(".story").length - 1; i++){ 
 			($(window).height() / 2 > $(".story")[i].getBoundingClientRect().y && $(window).height() / 2 < $(".story")[i].getBoundingClientRect().y + parseInt($($(".story")[i]).css("height").slice(0, -2)))? (function(){ 
@@ -2821,7 +2807,7 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
 		})(): 13124; 
 	})
 	/*JKing for navigating stories*/
-	$(document).keypress(function (e){
+	_T(document).keypress(function (e){
         if(!$("textarea").is(":focus") && !$("input").is(":focus") && !waiting){ 
             switch(e.keyCode){ 
                 case 108: case 76: 
@@ -2854,6 +2840,7 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
                 break; 
             }
         }
+      	      	
     if(!$("textarea").is(":focus") && !$("input").is(":focus") && !waiting && $("#theater").css("display") != "block"){
         //console.log(e.keyCide) 
         var forward;
@@ -2900,15 +2887,17 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
         }
     });
 	/*Close modal on dark wrapper in the background of the theater's click*/
-	$("#wrapper").on("click", function (){
+	_R("#wrapper").on("click", function (){
         closeModal()
-    });
+    })
+    _R("#wrapper").e()
 	/*Close modal on theater close button's click*/
-    $("#close").on("click", function (){
+    _R("#close").on("click", function (){
         closeModal()
-    });
+    })
+    _R("#close").e()
     /*Add click event listeners to .stars and .bookmarks __rev*/
-    $(".star").on("click", function (){ 
+    _R(".star").on("click", function (){ 
         $(this).toggleClass("true"); 
 
         if(!$(this).closest("#theater").length){ 
@@ -2920,6 +2909,7 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
         }; 
         badGuy(); 
     }); 
+    _R(".star").e()
     $(".bookmark").on("click", function (){ 
         $(this).toggleClass("true"); 
         if(!$(this).closest("#theater").length){ 
@@ -2931,22 +2921,23 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
         }; 
         badGuy(); 
     }); 
+    _R(".bookmark").e()
 	/*Arrow keys for browsing the carrousels*/
-	document.onkeydown= function (evt){
+	_T(document).on("keydown", function (evt){
 	    //console.log(evt.keyCode); 
 
 	    if( evt.keyCode == 32 ){
 	        console.log( JSON.stringify( localStorage.getItem( "safety_purge" ) ) ); 
-	        if($("#theater").css("display") != "none"){ 
-	            videojs($(".theater video")[0]).paused()? videojs($(".theater video")[0]).play(): videojs($(".theater video")[0]).pause(); 
+	        if(_R("#theater", und, 'e').css("display") != "none"){ 
+	            videojs(_R(".theater video", 0, 'e')).paused()? videojs(_R(".theater video", 0, 'e')).play(): videojs(_R(".theater video", 0, 'e')).pause()
 	        } 
 	    } 
 
-	    ((!!ar || ($("#theater").css("display") == "none" && ($(".current").is(".mult_img") || $(".current").is(".mult_carr")))))? (function(){ 
+	    ((!!ar || (_R(".current", und, 'e').is(".mult_img") || _R(".current", und, 'e').is(".mult_carr"))))? (function(){ 
 	        //th= $( th.context ).closest(".story").length? $( th.context ).closest(".story"): $( th.context ).closest(".foto").length? $( th.context ).closest(".foto"): $( th.context ).closest('#profilePic').length? $( th.context ).closest('#profilePic'): th.context;  
 	        switch(evt.keyCode){
 	            case 37: 
-	                th= $("#theater").css("display") == "none"? $(".current"): th; 
+	                th= _R("#theater", und, 'e').css("display") == "none"? _R(".current", und, 'e'): th
 	                if($("#theater .nav_arrow.left").is(".disabled"))
 	                    {return}; 
 	                if(th.find(".nav_arrow.left").is(".disabled") && $("#theater").css("display") == "none")
@@ -2968,7 +2959,7 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
 	                }
 	                break; 
 	            case 39: 
-	                th= $("#theater").css("display") == "none"? $(".current"): th; 
+	                th= _R("#theater", und, 'e').css("display") == "none"? _R(".current", und, 'e'): th
 	                if($("#theater .nav_arrow.right").is(".disabled"))
 	                    {return}; 
 	                if(th.find(".nav_arrow.right").is(".disabled") && $("#theater").css("display") == "none")
@@ -2994,21 +2985,51 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
 	    
 	    evt= evt || window.event;
 	    if (evt.keyCode == 27){
-	        if($("#theater").css("display") == "none"){
+	        if(_R("#theater", und, 'e').css("display") == "none"){
 	            destroyChat($(document.activeElement))
 	        }else{
 	            closeModal();
 	        }
 	    }
-	};
+
+		switch(evt.keyCode){
+		  case 40:
+		        if(_R(".result").length && !_R(".result#resaltado").length){
+		            _R(".result", 0).attr("id", "resaltado")
+		            _R(".result", 0).children()[0].focus()
+		            setTimeout(function(){_R(".searchResults > div").scrollTop(0)}, 20)
+		            _R(".searchResults > div").scrollTop(0)
+		        }else if(_R(".result").length && _R(".result#resaltado").index() != _R(".result").length - 1){
+		            _R(".result#resaltado").next().children()[0].focus()
+		            _R(".result#resaltado").next().attr("id", "resaltado")
+		            _R(".result#resaltado", 0).attr("id", "")
+		        }
+		    break;
+		  case 38:
+		        if(_R(".result").length && $(".result#resaltado").length && $(".result#resaltado").index() != 0){
+		            _R(".result#resaltado").prev().children()[0].focus()
+		            _R(".result#resaltado").prev().attr("id", "resaltado")
+		            _R(".result#resaltado", 1).attr("id", "")
+		        }
+		    break;
+		}
+		if(evt.shiftKey && evt.ctrlKey && evt.altKey){
+			evt.preventDefault()
+			_R("#theater", und, 'e').css("display") == "block"? closeModal(): 1
+			_R("#buscar input", und, 'e').val("")
+			_R("#buscar input", und, 'e').trigger("input")
+			_R("#buscar input", und, 'e').focus()
+		}
+	})
     /*Activate the arrows on the stories*/
-    $(".carr").on("scroll", function(){ 
+    _R(".carr").on("scroll", function(){ 
 	    rf= $(this)
 	    Math.round($(this)[0].scrollLeft / $(this).width()) == $(this).children().length - 1? (function(){rf.parent().find(".nav_arrow.right").addClass("disabled"); $("#theater").find(".nav_arrow.right").addClass("disabled")})(): (function(){rf.parent().find(".nav_arrow.right").removeClass("disabled"); $("#theater").find(".nav_arrow.right").removeClass("disabled")})(); 
 	    $(this)[0].scrollLeft == 0? (function(){rf.parent().find(".nav_arrow.left").addClass("disabled"); $("#theater").find(".nav_arrow.left").addClass("disabled");})(): (function(){rf.parent().find(".nav_arrow.left").removeClass("disabled"); $("#theater").find(".nav_arrow.left").removeClass("disabled")})(); 
 	}) 
+	_R(".carr").e()
 
-    $(".nav_arrow.left .arrow").not("#picContainer .arrow").on("click", function(){
+    _R(".nav_arrow.left .arrow").not("#picContainer .arrow").on("click", function(){
         th= $("#theater").css("display") == "none"? $(".current"): th; 
         if($("#theater .nav_arrow.left").is(".disabled"))
             {return}; 
@@ -3030,8 +3051,8 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
             history.pushState({page: 1}, "", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
         }
     }); 
-
-    $(".nav_arrow.right .arrow").not("#picContainer .arrow").on("click", function(){
+    _R(".nav_arrow.left .arrow").not("#picContainer .arrow").e()
+    _R(".nav_arrow.right .arrow").not("#picContainer .arrow").on("click", function(){
         th= $("#theater").css("display") == "none"? $(".current"): th; 
         if($("#theater .nav_arrow.right").is(".disabled"))
             {return}; 
@@ -3053,8 +3074,9 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
             history.pushState({page: 1}, "", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
         }
     }); 
+    _R(".nav_arrow.right .arrow").not("#picContainer .arrow")
     /**/
-    $(".revelar").on("click", function(){ 
+    _R(".revelar").on("click", function(){ 
         if($(this).text()[0] != "O"){ 
             $(this).parent().css({"height": "auto"}); 
             $(this)[0].tx= $(this).text(); 
@@ -3066,30 +3088,31 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
             $(this).removeClass("activado"); 
         } 
     })
+    _R(".revelar").e()
     /*Use videojs for the videos*/
     VIds= []; 
-    for(e= 0; e < $("video").length; e++){
-        VIds[VIds.length]= videojs($("video")[e].id); 
-
-        videojs($("video")[e].id).on("pause", function(i){ 
+    for(e= 0; e < _R("video").length; e++){
+        VIds[VIds.length]= videojs(_R("video")[e].id); 
+        videojs(_R("video")[e].id).on("pause", function(i){ 
             a= i
             let vId= VIds.length - 1
-            $(videojs(i.target.parentElement.id).L.parentElement).siblings().filter(".Playuse").removeClass("playing"); 
-        });
-        
-        videojs($("video")[e].id).on("play", function(i){ 
-            //console.log(i)
+            $(videojs(i.target.parentElement.id).L.parentElement).siblings().filter(".Playuse").removeClass("playing")
+        })
+        videojs(_R("video")[e].id).on("play", function(i){ 
             let vId= VIds.length - 1
-            $(videojs(i.target.parentElement.id).L.parentElement).siblings().filter(".Playuse").addClass("playing"); 
-        });}
-    $(".Playuse").click(function(i){ 
-        $(i.target).parent().find("video")[0].play(); 
-        $(i.target).addClass("playing"); 
-    }); 
+            $(videojs(i.target.parentElement.id).L.parentElement).siblings().filter(".Playuse").addClass("playing")
+        })
+    }
+    _R("video").e()
+    _R(".Playuse").click(function(i){ 
+        $(i.target).parent().find("video")[0].play()
+        $(i.target).addClass("playing")
+    })
+    _R(".Playuse").e()
 /*Leela is liril's vAssistant, she searches even on the subtitles of the videos*/
 possibleResults=[[["Megan Denise Fox", "MeganFox"], {users_name: "Megan Denise Fox", username: "MeganFox", profilePic: "/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg", rol: ["G", "+100"], type: "Usuario"}], [["Laura Escobar Bonnett", "L"], {users_name: "Laura Escobar Bonnett", username: "L", profilePic: "/resources/images/L/OGnpwD3jys_tn.jpg", rol: ["Princesa", "+100"], type: "Usuario"}], [["Luis Eduardo Gallego García", "A.K.A._Dizzy"], {users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], type: "Usuario"}], [["Dios Jesucristo", "G-Suschrist"], {users_name: "Dios Jesucristo", username: "G-Suschrist", profilePic: "/resources/images/G-Suschrist/Rvu7YjVcXr_tn.jpg", rol: ["G", "+100"], type: "Usuario"}], [["Aura María Cardona Demasiado", "AuraCardonaC"], {users_name: "Aura María Cardona Demasiado", username: "AuraCardonaC", profilePic: "/resources/images/AuraCardonaC/44Cpl8Gig5_tn.jpg", rol: ["Profe de fitness", "+94"], type: "Usuario"}], [["Juan José Martínez Vidal", "LamaMadora"], {users_name: "Juan José Martínez Vidal", username: "LamaMadora", profilePic: "/resources/images/LamaMadora/sdlQg1CoQ3_tn.jpg", rol: ["Dubber", "+88"], type: "Usuario"}], , [["Walter White", "user"], {users_name: "Walter White", username: "user", profilePic: "/resources/images/white.jpg", rol: ["Moderador", "+60"], type: "Usuario"}], [["A0"], {name: "A0", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/A0", type: "Blog"}], [["Algo Más Sobre Mí"], {name: "Algo Más Sobre Mí", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Algo Más Sobre Mí", type: "Blog"}], [["Algunas Propiedades De Mis Escritos"], {name: "Algunas Propiedades De Mis Escritos", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Algunas Propiedades De Mis Escritos", type: "Blog"}], [["Algunos Poemas Que He Escrito"], {name: "Algunos Poemas Que He Escrito", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Algunos Poemas Que He Escrito", type: "Blog"}], [["aNGEL();"], {name: "aNGEL();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/aNGEL();", type: "Blog"}], [["Constructor And Business Partners (Dedicatorias)"], {name: "Constructor And Business Partners (Dedicatorias)", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Constructor And Business Partners (Dedicatorias)", type: "Blog"}], [["Constructor And Business Partners"], {name: "Constructor And Business Partners", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Constructor And Business Partners", type: "Blog"}], [["Dinosaurios"], {name: "Dinosaurios", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Dinosaurios", type: "Blog"}], [["El Pueblo Blanco"], {name: "El Pueblo Blanco", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/El Pueblo Blanco", type: "Blog"}], [["El Salomé Castrillón"], {name: "El Salomé Castrillón", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/El Salomé Castrillón", type: "Blog"}], [["Equilibrio"], {name: "Equilibrio", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Equilibrio", type: "Blog"}], [["FRANCIA Y ElDelprincipio"], {name: "FRANCIA Y ElDelprincipio", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/FRANCIA Y ElDelprincipio", type: "Blog"}], [["La Larga Historia"], {name: "La Larga Historia", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/La Larga Historia", type: "Blog"}], [["La Perrita Del Poste"], {name: "La Perrita Del Poste", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/La Perrita Del Poste", type: "Blog"}], [["La Sagrada Biblia"], {name: "La Sagrada Biblia", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/La Sagrada Biblia", type: "Blog"}], [["Las Flores Malditas (Introducción)"], {name: "Las Flores Malditas (Introducción)", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Las Flores Malditas (Introducción)", type: "Blog"}], [["por_siLaBas();"], {name: "por_siLaBas();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/por_siLaBas();", type: "Blog"}], [["Regalos Para Mí"], {name: "Regalos Para Mí", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Regalos Para Mí", type: "Blog"}], [["Sus Rizos Color Caramelo"], {name: "Sus Rizos Color Caramelo", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Sus Rizos Color Caramelo", type: "Blog"}], [["Una Breve Historia De La Creación"], {name: "Una Breve Historia De La Creación", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Una Breve Historia De La Creación", type: "Blog"}], [["xWo3"], {name: "xWo3", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/xWo3", type: "Blog"}], [["dinosaurios"], {name: "dinosaurios", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/82DcC9s2sS0cZ", type: "Proyecto"}], [["por_siLaBas();"], {name: "por_siLaBas();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/f9d2cCa2Cxc31", type: "Proyecto"}], [["Christmas Gifts From The Gallego Escobar Family"], {name: "Christmas Gifts From The Gallego Escobar Family", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/h3dd2cDcsW2R3", type: "Proyecto"}], [["aNGEL();"], {name: "aNGEL();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/k92dJd29D920d", type: "Proyecto"}], [["Robot De Dedicatorias"], {name: "Robot De Dedicatorias", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/k9u8hH78jJi27", type: "Proyecto"}], [["Robot de dedicatorias"], {name: "Robot de dedicatorias", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/s98f39c0d9090", type: "Proyecto"}], [["Widgets"], {name: "Widgets", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/i9d2g2cftdCds", type: "Proyecto"}], [["ElDelprincipio"], {name: "ElDelprincipio", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/tY829dD0290df", type: "Proyecto"}], [["myProjext1"], {name: "myProjext1", users_name: "Megan Denise Fox", username: "MeganFox", profilePic: "/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg", rol: ["G", "+100"], href: "/MeganFox/p/iD8299D88d3D2", type: "Proyecto"}], [["minesweeper"], {name: "minesweeper", users_name: "Laura Escobar Bonnett", username: "L", profilePic: "/resources/images/L/OGnpwD3jys_tn.jpg", rol: ["Princesa", "+100"], href: "/L/p/2kNoind8JsjD9", type: "Proyecto"}], [["lX"], {name: "lX", users_name: "Aura María Cardona Demasiado", username: "AuraCardonaC", profilePic: "/resources/images/AuraCardonaC/44Cpl8Gig5_tn.jpg", rol: ["Profe de fitness", "+94"], href: "/AuraCardonaC/p/di29D8jj8dj2d", type: "Proyecto"}], [["snka"], {name: "snka", users_name: "Dios Jesucristo", username: "G-Suschrist", profilePic: "/resources/images/G-Suschrist/Rvu7YjVcXr_tn.jpg", rol: ["G", "+100"], href: "/G-Suschrist/p/Jkik39djfX8iX", type: "Proyecto"}], [["Vv11"], {name: "Vv11", users_name: "Juan José Martínez Vidal", username: "LamaMadora", profilePic: "/resources/images/LamaMadora/sdlQg1CoQ3_tn.jpg", rol: ["Dubber", "+88"], href: "/LamaMadora/p/u889Dj8Q22dSC", type: "Proyecto"}], [["_dvlpmt"], {name: "_dvlpmt", users_name: "Walter White", username: "user", profilePic: "/resources/images/white.jpg", rol: ["Moderador", "+60"], href: "/user/p/8d299s2gvkL9", type: "Proyecto"}], [["La Perrita Del Poste", "PpP"], {users_name: "La Perrita Del Poste", username: "PpP", profilePic: "/resources/images/PpP/bZj2vYrklo_tn.jpg", rol: ["G", "+100"], type: "Usuario"}], [["ElDelprincipio", "Eld"], {users_name: "ElDelprincipio", username: "Eld", profilePic: "/resources/images/Eld/oow4doJxKO_tn.jpg", rol: ["G", "+100"], type: "Usuario"}]]
 
-$(".buscar").on("input", function(){  if($(this).val() !== ""){$(".searchResults").removeClass("hidden")}else{ $(".searchResults").addClass("hidden"); return}
+_R(".buscar").on("input", function(){  if($(this).val() !== ""){$(".searchResults").removeClass("hidden")}else{ $(".searchResults").addClass("hidden"); return}
 results= []
 for(var e in possibleResults){
 for(var u in possibleResults[e][0]){
@@ -3099,10 +3122,10 @@ if(results.indexOf(possibleResults[e][1]) == -1)results[results.length]= possibl
 }
 }
 
-$(".searchResults > div").html("")
+_R(".searchResults > div").html("")
 for(var f in results){
 if(results[f].type == "Usuario"){
-$(".searchResults > div").append(
+_R(".searchResults > div").append(
 `<section class="result">
 <a href= "/` + results[f].username + `"></a>
 <div class="profilePic">
@@ -3116,7 +3139,7 @@ $(".searchResults > div").append(
 }
 for(var f in results){
 if(results[f].type == "Blog"){
-$(".searchResults > div").append(
+_R(".searchResults > div").append(
 `<section class="result">
 <a href= "` + results[f].href + `"></a>
 <div class="profilePic">
@@ -3130,7 +3153,7 @@ $(".searchResults > div").append(
 }
 for(var f in results){
 if(results[f].type == "Proyecto"){
-$(".searchResults > div").append(
+_R(".searchResults > div").append(
 `<section class="result">
 <a href= "` + results[f].href + `"></a>
 <div class="profilePic">
@@ -3142,34 +3165,82 @@ $(".searchResults > div").append(
 )
 }
 }
-$(".knob").knob()
+_R(".knob").knob()
+_R(".knob").e()
 })
-$(document).on("keydown", function(r){
-switch(r.keyCode){
-  case 40:
-        if(!$(".result#resaltado").length){
-            $($(".result")[0]).attr("id", "resaltado")
-            $($(".result")[0]).children()[0].focus()
-            setTimeout(function(){$(".searchResults > div").scrollTop(0)}, 20)
-            $(".searchResults > div").scrollTop(0)
-        }else if($(".result#resaltado").index() != $(".result").length - 1){
-            $(".result#resaltado").next().children()[0].focus()
-            $(".result#resaltado").next().attr("id", "resaltado")
-            $($(".result#resaltado")[0]).attr("id", "")
+_R(".buscar").e()
+
+/*Tooltip upsigned users in Situación Sentimental and ties*/
+_R("#situation a").not("#situation a[href= '#']").tooltip({
+    items: 'a',
+    open: function(event, ui) {
+        if (typeof(event.originalEvent) === 'undefined') {
+            return false;
         }
-    break;
-  case 38:
-        if($(".result#resaltado").length && $(".result#resaltado").index() != 0){
-            $(".result#resaltado").prev().children()[0].focus()
-            $(".result#resaltado").prev().attr("id", "resaltado")
-            $($(".result#resaltado")[1]).attr("id", "")
-        }
-    break;
-}
+        $(".knob").not(".foto .knob").knob();
+
+        ý= $(this); 
+
+        $(".chatear").click(function() {
+            u = $(this).parent().parent().find(".username").text();
+
+            $("#chat").find("ul").find("li").each(function() {
+                $(this).find("p").text() === u ? $(this).click() : 1;
+            });
+
+            !!Antheater? (function(){closeModal(); $( ".ui-tooltip.ui-widget.ui-corner-all.ui-widget-content" ).remove(); })(): 1; 
+        })
+        var $id = $(ui.tooltip).attr('id');
+
+        $('div.ui-tooltip').not('#' + $id).remove();
+    },
+    close: function(event, ui) {
+        ui.tooltip.hover(function() {
+                $(this).stop(true).fadeTo(400, 1);
+            },
+            function() {
+                $(this).fadeOut('400', function() {
+                    $(this).remove();
+                });
+            });
+    }
 })
-document.addEventListener("keydown", function(e){if(e.shiftKey && e.ctrlKey && e.altKey){e.preventDefault();$("#theater").css("display") == "block"?closeModal():1;$("#buscar input").val("");$("#buscar input").trigger("input");$("#buscar input").focus()}})
-/*Tooltip logged users in Situación Sentimental*/
-$("#situation a").not("#situation a[href= '#']").tooltip({open: function(){$(".knob").knob()}})
+_R("#situation a").e()
+_R("#ties a").not("#ties a[href= '#']").tooltip({
+    items: 'a',
+    open: function(event, ui) {
+        if (typeof(event.originalEvent) === 'undefined') {
+            return false;
+        }
+        $(".knob").not(".foto .knob").knob();
+
+        ý= $(this); 
+
+        $(".chatear").click(function() {
+            u = $(this).parent().parent().find(".username").text();
+
+            $("#chat").find("ul").find("li").each(function() {
+                $(this).find("p").text() === u ? $(this).click() : 1;
+            });
+
+            !!Antheater? (function(){closeModal(); $( ".ui-tooltip.ui-widget.ui-corner-all.ui-widget-content" ).remove(); })(): 1; 
+        })
+        var $id = $(ui.tooltip).attr('id');
+
+        $('div.ui-tooltip').not('#' + $id).remove();
+    },
+    close: function(event, ui) {
+        ui.tooltip.hover(function() {
+                $(this).stop(true).fadeTo(400, 1);
+            },
+            function() {
+                $(this).fadeOut('400', function() {
+                    $(this).remove();
+                });
+            });
+    }
+})
+_R("#ties a").e()
 /*Some events like the pointer-events adder and remover for the profilePic for it to be circular*/
 var distance; 
 el= $($("#profilePic > img")[0]); 
