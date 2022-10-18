@@ -28,7 +28,7 @@ gOfObj= []
     group = new THREE.Group(); 
 
 const objLoader = new OBJLoader()
-objLoader.load(
+/*objLoader.load(
 '/LamaMadora/raw/p/i8eE2s38vBNE5/resources/caballo.obj',
 (object) => {
 gOfObj[gOfObj.length]= object
@@ -52,7 +52,7 @@ console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
 console.log(error)
 }
 )
-
+*/
 
     loadSVG= function( svgLink, eXDepth, mAterial ){     
         loader.load(
@@ -75,23 +75,20 @@ console.log(error)
                         shape = shapes[ j ];
                         eXtrudagetious = new THREE.ExtrudeGeometry( shape, {depth: eXDepth, bevelEnabled: false} );
                         mesh = new THREE.Mesh( eXtrudagetious, mAterial ); 
-                        console.log( getSizes( mesh ) ); 
                         group.add( mesh );
         
                     }
         
                 }
                 gOfSVG[gOfSVG.length]= group
+
+                gOfSVG[gOfSVG.length - 1].position.x= -getSizes( gOfSVG[gOfSVG.length - 1] ).x / 2
+                gOfSVG[gOfSVG.length - 1].position.y= getSizes( gOfSVG[gOfSVG.length - 1] ).y / 2
+                gOfSVG[gOfSVG.length - 1].position.z= -0.033
+                gOfSVG[gOfSVG.length - 1].scale.y= -0.8573749999999999
+                gOfSVG[gOfSVG.length - 1].scale.x= 0.8573749999999999
+                gOfSVG[gOfSVG.length - 1].scale.z= 0.8573749999999999
                 scene.add( gOfSVG[gOfSVG.length - 1] ); 
-
-                gOfSVG[gOfSVG.length - 1].translate( -getSizes( gOfSVG[gOfSVG.length - 1] ).x / 2, getSizes( gOfSVG[gOfSVG.length - 1] ).y / 2, 0 ); 
-                
-                gOfSVG[gOfSVG.length - 1].scale.y= -1; 
-
-                gOfSVG[0].scale.y= -0.8573749999999999
-                gOfSVG[0].scale.x= 0.8573749999999999
-                gOfSVG[0].scale.z= 0.8573749999999999
-
             },
             // called when loading is in progresses
             function ( xhr ) {
@@ -108,14 +105,26 @@ console.log(error)
         );
     }; 
 
-    loadSVG( '/LamaMadora/raw/p/u889Dj8Q22dSC/resources/Calles/City_2.svg', 1.21352318, new THREE.MeshStandardMaterial({ color: 0xde3f52, roughness: 1, reflectivity: 0.27 }) ); 
-
+    loadSVG( '/LamaMadora/raw/p/u889Dj8Q22dSC/resources/Calles/City_2.svg', 1.21352318, new THREE.MeshStandardMaterial({ color: 0xcfe56f, roughness: 1, reflectivity: 0.27 }) );
+    loadSVG( '/LamaMadora/raw/p/u889Dj8Q22dSC/resources/Calles/City_2-grass1.svg', 0.07822712, new THREE.MeshStandardMaterial({ color: 0x72ff5c, roughness: 1, reflectivity: 0.27 }) ); 
+    loadSVG( '/LamaMadora/raw/p/u889Dj8Q22dSC/resources/Calles/City_2-grass2.svg', 0.07822712, new THREE.MeshStandardMaterial({ color: 0x72ff5c, roughness: 1, reflectivity: 0.27 }) ); 
+    loadSVG( '/LamaMadora/raw/p/u889Dj8Q22dSC/resources/Calles/City_2-grass3.svg', 0.07822712, new THREE.MeshStandardMaterial({ color: 0x72ff5c, roughness: 1, reflectivity: 0.27 }) ); 
+    loadSVG( '/LamaMadora/raw/p/u889Dj8Q22dSC/resources/Calles/City_2-grass4.svg', 0.07822712, new THREE.MeshStandardMaterial({ color: 0x72ff5c, roughness: 1, reflectivity: 0.27 }) ); 
+    loadSVG( '/LamaMadora/raw/p/u889Dj8Q22dSC/resources/Calles/City_2-grass5.svg', 0.07822712, new THREE.MeshStandardMaterial({ color: 0x72ff5c, roughness: 1, reflectivity: 0.27 }) ); 
     camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.001, 89 );
     camera.position.z= 0.888; 
     camera.position.x = -0.01; 
     camera.position.y = -0.7;
     camera.rotation.x= Math.PI / 180 * 90; 
     scene = new THREE.Scene();
+    
+    __v = new THREE.Mesh( new THREE.BoxGeometry( 0.09, 0.03, 0.21 ), new THREE.MeshPhongMaterial({ color: 0xdddddd , reflectivity: 0.47 }) );
+    __v.position.x=   0
+    __v.position.y= 0
+    __v.position.z= -0.033 - 0.02 - 0.5 + 1.2 / 2 - 10; 
+    __v.rotation.z= 0
+    
+    scene.add( __v ); 
     
     geometry = new THREE.BoxGeometry( 0.17, 0.3, 0.06 );
     material = new THREE.MeshPhongMaterial({ color: 0xffdccd });
@@ -255,15 +264,20 @@ console.log(error)
     scene.add( ambiance ); 
     
     
-    scene.add( Vv11 );
     
 
     un_grado_en_radianes= Math.PI / 180; 
     
 
-    Vv11.rotation.z= 218 * un_grado_en_radianes; 
-    Vv11.position.x= -25.231232135123644517733; 
-    Vv11.position.y= 14.452729334533183; 
+    
+    Vv11.position.x= 104
+    Vv11.position.y= -37
+    Vv11.rotation.z= 2.478
+
+
+    oCamera= Vv11
+    
+    scene.add( Vv11 );
 
     renderer = new THREE.WebGLRenderer( { antialias: true } );
     renderer.setSize( window.innerWidth, window.innerHeight );
@@ -315,7 +329,6 @@ console.log(error)
     points = curve.getPoints( 50 );
     x = new THREE.BufferGeometry().setFromPoints( points );
     
-    console.log(x); 
     
     zz = new THREE.LineBasicMaterial( { color: 0x00ff00 } );
     
@@ -578,19 +591,23 @@ console.log(error)
     s= 83; 
     q= 81; 
     e= 69; 
+    f= 70; 
     
-    keysDown= { a: false , d: false , w: false , s: false , q: false , e: false , izquierda: false , derecha: false , arriba: false , abajo: false }
+    keysDown= { a: false , d: false , w: false , s: false , q: false , e: false, f: false , izquierda: false , derecha: false , arriba: false , abajo: false }
     
     
     speed= 0.051; 
+    wSpeed= 0.031
+
+    caminando= false
     
     dCamera= 2.36758210000191832 * 10 ** -1; 
     
 
-    camera.position.x= Vv11.position.x + xEYConElÁngulo( ( 1.5 + dCamera ), getInQuadrant( -getInQuadrant( Vv11.rotation.z / un_grado_en_radianes + 270 ) ) ).x; 
-    camera.position.y= Vv11.position.y + xEYConElÁngulo( ( 1.5 + dCamera ), getInQuadrant( -getInQuadrant( Vv11.rotation.z / un_grado_en_radianes + 270 ) ) ).y; 
+    camera.position.x= oCamera.position.x + xEYConElÁngulo( ( 1.5 + dCamera ), getInQuadrant( -getInQuadrant( oCamera.rotation.z / un_grado_en_radianes + 270 ) ) ).x; 
+    camera.position.y= oCamera.position.y + xEYConElÁngulo( ( 1.5 + dCamera ), getInQuadrant( -getInQuadrant( oCamera.rotation.z / un_grado_en_radianes + 270 ) ) ).y; 
         
-    camera.rotation.y= Vv11.rotation.z; 
+    camera.rotation.y= oCamera.rotation.z; 
     
     
     //c = new THREE.Quaternion();  
@@ -621,6 +638,9 @@ console.log(error)
             case e: 
                 keysDown.e= true; 
                 break; 
+            case f: 
+                keysDown.f= true; 
+                break; 
         }; 
         
         renderer.render( scene, camera ); 
@@ -650,7 +670,34 @@ console.log(error)
             case e: 
                 keysDown.e= false; 
                 break; 
+            case f: 
+                keysDown.f= false; 
+                break; 
         }; 
+        
+        if(zZ.keyCode === f){
+            if(!caminando){
+                caminando= true
+                setTimeout(function(){
+                __v.position.x= Vv11.position.x
+                __v.position.y= Vv11.position.y
+                __v.position.z= -0.033 - 0.02 - 0.5 + 1.2 / 2; 
+                __v.rotation.z= Vv11.rotation.z
+                wRotation= __v.rotation.z / un_grado_en_radianes
+                __v.position.y += 0.2 * Math.cos(Vv11.rotation.z + 90 * un_grado_en_radianes)
+                __v.position.x -= 0.2 * Math.sin(Vv11.rotation.z + 90 * un_grado_en_radianes)
+                oCamera= __v
+    
+                renderer.render( scene, camera ); }, 1682)
+            }else{
+                setTimeout(function(){
+                caminando= false
+                __v.position.z= -100; 
+                oCamera= Vv11
+    
+                renderer.render( scene, camera ); }, 1282)
+            }
+        }
     }); 
     
     
@@ -678,7 +725,9 @@ console.log(error)
             skip--; 
             return; 
         }
+        
         if(keysDown.a){
+            if(!caminando){
                 //Vv11.position.x-= speed; 
                 //console.log(Vv11w3.rotation.y);  
     
@@ -689,8 +738,10 @@ console.log(error)
                 }
     
                 renderer.render( scene, camera ); 
+            }
         }
         if(keysDown.d){
+            if(!caminando){
                 //Vv11.position.x+= speed; 
                 //console.log(Vv11w3.rotation.y);   
                 if(Vv11w3.rotation.y > Math.PI / 4)
@@ -698,24 +749,37 @@ console.log(error)
                     Vv11w3.rotation.y-= 0.023; 
                     Vv11w4.rotation.y-= 0.023; 
                 }
+            }
         }
         if(keysDown.w){
+            if(!caminando){
                 Vv11.position.x+= xEYConElÁngulo(speed, parseFloat($(".bugger").text())).x; 
                 Vv11.position.y+= xEYConElÁngulo(speed, parseFloat($(".bugger").text())).y; 
                 skip= skip == 0? lentitud: skip; 
                 lentitud -= aceleración; 
                 lentitud= lentitud < 0? 0: lentitud; 
+            }else{
+                if(keysDown.a){
+                    __v.position.y += wSpeed * Math.cos(__v.rotation.z + 3.672 * un_grado_en_radianes)
+                    __v.position.x -= wSpeed * Math.sin(__v.rotation.z + 3.672 * un_grado_en_radianes)
+                    __v.rotation.z+= 3.672 * un_grado_en_radianes
+                }
+                if(keysDown.d){
+                    __v.position.y += wSpeed * Math.cos(__v.rotation.z - 3.672 * un_grado_en_radianes)
+                    __v.position.x -= wSpeed * Math.sin(__v.rotation.z - 3.672 * un_grado_en_radianes)
+                    __v.rotation.z-= 3.672 * un_grado_en_radianes
+                }
+                if(!keysDown.a && !keysDown.d){
+                    __v.position.y += wSpeed * Math.cos(__v.rotation.z)
+                    __v.position.x -= wSpeed * Math.sin(__v.rotation.z)
+                }
+            }
         }
         if(keysDown.s){
+            if(!caminando){
                 Vv11.position.y-= xEYConElÁngulo(speed, parseFloat($(".bugger").text())).y; 
                 Vv11.position.x-= xEYConElÁngulo(speed, parseFloat($(".bugger").text())).x; 
-        }
-        if(keysDown.q){
-                Vv11.rotation.z-= 0.023; 
-                //console.log( closestP );  
-        }
-        if(keysDown.e){
-            Vv11.rotation.z+= 0.023; 
+            }
         }
     
         $("debuggers .bugger span").text(getInQuadrant(getInQuadrant(-Vv11.rotation.z / un_grado_en_radianes + 270) + (getInQuadrant(-Vv11w4.rotation.y / un_grado_en_radianes) - 270))); 
@@ -723,12 +787,6 @@ console.log(error)
         $("debuggers .wheel .rotate").css({"rotate": -(Vv11w4.rotation.y / un_grado_en_radianes - 90) + "deg"}); 
         $("debuggers .Vv11 .rotate").css({"rotate": -(Vv11.rotation.z / un_grado_en_radianes + 180) + "deg"}); 
         $("debuggers .wheelRelativoAlMundo .rotate").css({"rotate": (-(Vv11.rotation.z / un_grado_en_radianes + 180) - (Vv11w4.rotation.y / un_grado_en_radianes - 90)) + "deg"}); 
-        while(parseFloat($("debuggers .bugger span").text()) < -360){ 
-            $("debuggers .bugger span").text(parseFloat($("debuggers .bugger span").text()) + 360); 
-        }; 
-        while(parseFloat($("debuggers .bugger span").text()) > 360){ 
-            $("debuggers .bugger span").text(parseFloat($("debuggers .bugger span").text()) - 360); 
-        }; 
         $("debuggers .tan span").text("x: " + xEYConElÁngulo(1, parseFloat($("debuggers .bugger span").text())).x.toFixed(2) + ", y: " + xEYConElÁngulo(1, parseFloat($("debuggers .bugger span").text())).y.toFixed(2)); 
         $("debuggers .tan span").attr("title", "x: " + xEYConElÁngulo(1, parseFloat($("debuggers .bugger span").text())).x.toFixed(2) + ", y: " + xEYConElÁngulo(1, parseFloat($("debuggers .bugger span").text())).y.toFixed(2)); 
         !1? $("debuggers .tan span").css({"background": "#d67274"}): $("debuggers .tan span").css({"background": "#25cc54"}); 
@@ -834,51 +892,55 @@ console.log(error)
         ángulo=  0; 
             //console.log( "<190W " + ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, closestP.x , closestP.y ) );  
             if(keysDown.w){ 
-                //When this, which was before a condition, but then we left the value to be compared by its3lf (without <= sMt... or smt) b3cause any number by itself technically is true. /*But 0 by itself returns false. that's why it got stuck */
-
-                /*if( ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, Vv11w2.getWorldPosition(v3).x , Vv11w2.getWorldPosition(v3).y ) ){
-                    if( ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, closestP.x , closestP.y ) ){
-                        ángulo= ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, Vv11w2.getWorldPosition(v3).x , Vv11w2.getWorldPosition(v3).y ) * -1 + ( ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, closestP.x , closestP.y )); 
-                        //console.log( "-" + ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, Vv11w2.getWorldPosition(v3).x , Vv11w2.getWorldPosition(v3).y) + ", " + ( ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, closestP.x , closestP.y )) + ": " + Vv11w4.getWorldPosition(v3).x + ", " + Vv11w4.getWorldPosition(v3).y + ", " + closestP.x + ", " + closestP.y ); 
-                        //console.log( ángulo ); 
-                    }else{
-                        //console.log( "else" + ángulo ); 
-                    }
-                } */
-                ángulo= ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, Vv11w2.getWorldPosition(v3).x , Vv11w2.getWorldPosition(v3).y ) * -1 + ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, closestP.x , closestP.y ); 
-                /*console.log(ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, Vv11w2.getWorldPosition(v3).x , Vv11w2.getWorldPosition(v3).y ) + ", " + ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, closestP.x , closestP.y ) + ", " + ángulo ); */ 
-                //console.log( ángulo )
+                if(!caminando){
+                    //When this, which was before a condition, but then we left the value to be compared by its3lf (without <= sMt... or smt) b3cause any number by itself technically is true. /*But 0 by itself returns false. that's why it got stuck */
     
-                viejaPosición= { x: Vv11w4.getWorldPosition(v3).x , y: Vv11w4.getWorldPosition(v3).y }
-                recorded_position= Vv11w4.rotation.y <= Math.PI / 2? { x: Vv11w4.getWorldPosition(v3).x , y: Vv11w4.getWorldPosition(v3).y  }: { x: Vv11w3.getWorldPosition(v3).x , y: Vv11w3.getWorldPosition(v3).y  };
-    
-    
-                Vv11.rotation.z -= ángulo * un_grado_en_radianes; 
-                renderer.render( scene, camera ); 
-                
-    
-                Vv11w4.rotation.y <= Math.PI / 2? (function(){Vv11.position.x-= Vv11w4.getWorldPosition(v3).x - recorded_position.x; 
-                                        Vv11.position.y+= recorded_position.y - Vv11w4.getWorldPosition(v3).y; })(): (function(){Vv11.position.x-= Vv11w3.getWorldPosition(v3).x - recorded_position.x; 
-                                        Vv11.position.y+= recorded_position.y - Vv11w3.getWorldPosition(v3).y; })(); 
-                renderer.render( scene, camera ); 
+                    /*if( ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, Vv11w2.getWorldPosition(v3).x , Vv11w2.getWorldPosition(v3).y ) ){
+                        if( ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, closestP.x , closestP.y ) ){
+                            ángulo= ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, Vv11w2.getWorldPosition(v3).x , Vv11w2.getWorldPosition(v3).y ) * -1 + ( ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, closestP.x , closestP.y )); 
+                            //console.log( "-" + ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, Vv11w2.getWorldPosition(v3).x , Vv11w2.getWorldPosition(v3).y) + ", " + ( ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, closestP.x , closestP.y )) + ": " + Vv11w4.getWorldPosition(v3).x + ", " + Vv11w4.getWorldPosition(v3).y + ", " + closestP.x + ", " + closestP.y ); 
+                            //console.log( ángulo ); 
+                        }else{
+                            //console.log( "else" + ángulo ); 
+                        }
+                    } */
+                    ángulo= ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, Vv11w2.getWorldPosition(v3).x , Vv11w2.getWorldPosition(v3).y ) * -1 + ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, closestP.x , closestP.y ); 
+                    /*console.log(ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, Vv11w2.getWorldPosition(v3).x , Vv11w2.getWorldPosition(v3).y ) + ", " + ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, closestP.x , closestP.y ) + ", " + ángulo ); */ 
+                    //console.log( ángulo )
+        
+                    viejaPosición= { x: Vv11w4.getWorldPosition(v3).x , y: Vv11w4.getWorldPosition(v3).y }
+                    recorded_position= Vv11w4.rotation.y <= Math.PI / 2? { x: Vv11w4.getWorldPosition(v3).x , y: Vv11w4.getWorldPosition(v3).y  }: { x: Vv11w3.getWorldPosition(v3).x , y: Vv11w3.getWorldPosition(v3).y  };
+        
+        
+                    Vv11.rotation.z -= ángulo * un_grado_en_radianes; 
+                    renderer.render( scene, camera ); 
+                    
+        
+                    Vv11w4.rotation.y <= Math.PI / 2? (function(){Vv11.position.x-= Vv11w4.getWorldPosition(v3).x - recorded_position.x; 
+                                            Vv11.position.y+= recorded_position.y - Vv11w4.getWorldPosition(v3).y; })(): (function(){Vv11.position.x-= Vv11w3.getWorldPosition(v3).x - recorded_position.x; 
+                                            Vv11.position.y+= recorded_position.y - Vv11w3.getWorldPosition(v3).y; })(); 
+                    renderer.render( scene, camera ); 
+                }
             } 
             //$(".burger span").html("");  
             //$(".burger").attr( "title" , "" );  
     
             if(keysDown.s){ 
-                ángulo= ángDeLaPendiente( Vv11w3.getWorldPosition(v3).x , Vv11w3.getWorldPosition(v3).y, Vv11w3.getWorldPosition(v3).x + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Vv11.rotation.z / un_grado_en_radianes + 90 ) ) ).x , Vv11w3.getWorldPosition(v3).y + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Vv11.rotation.z / un_grado_en_radianes + 90 ) ) ).y ) * -1 + ángDeLaPendiente( Vv11w3.getWorldPosition(v3).x , Vv11w3.getWorldPosition(v3).y, closestP2.x , closestP2.y ); 
-    
-                recorded_position= Vv11w3.rotation.y <= Math.PI / 2? { x: Vv11w4.getWorldPosition(v3).x , y: Vv11w4.getWorldPosition(v3).y  }: { x: Vv11w3.getWorldPosition(v3).x , y: Vv11w3.getWorldPosition(v3).y  };
-    
-    
-                Vv11.rotation.z += ángulo * un_grado_en_radianes; 
-                renderer.render( scene, camera ); 
-                
-    
-                Vv11w3.rotation.y <= Math.PI / 2? (function(){Vv11.position.x-= Vv11w4.getWorldPosition(v3).x - recorded_position.x; 
-                                        Vv11.position.y+= recorded_position.y - Vv11w4.getWorldPosition(v3).y; })(): (function(){Vv11.position.x-= Vv11w3.getWorldPosition(v3).x - recorded_position.x; 
-                                        Vv11.position.y+= recorded_position.y - Vv11w3.getWorldPosition(v3).y; })(); 
-                renderer.render( scene, camera ); 
+                if(!caminando){
+                    ángulo= ángDeLaPendiente( Vv11w3.getWorldPosition(v3).x , Vv11w3.getWorldPosition(v3).y, Vv11w3.getWorldPosition(v3).x + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Vv11.rotation.z / un_grado_en_radianes + 90 ) ) ).x , Vv11w3.getWorldPosition(v3).y + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Vv11.rotation.z / un_grado_en_radianes + 90 ) ) ).y ) * -1 + ángDeLaPendiente( Vv11w3.getWorldPosition(v3).x , Vv11w3.getWorldPosition(v3).y, closestP2.x , closestP2.y ); 
+        
+                    recorded_position= Vv11w3.rotation.y <= Math.PI / 2? { x: Vv11w4.getWorldPosition(v3).x , y: Vv11w4.getWorldPosition(v3).y  }: { x: Vv11w3.getWorldPosition(v3).x , y: Vv11w3.getWorldPosition(v3).y  };
+        
+        
+                    Vv11.rotation.z += ángulo * un_grado_en_radianes; 
+                    renderer.render( scene, camera ); 
+                    
+        
+                    Vv11w3.rotation.y <= Math.PI / 2? (function(){Vv11.position.x-= Vv11w4.getWorldPosition(v3).x - recorded_position.x; 
+                                            Vv11.position.y+= recorded_position.y - Vv11w4.getWorldPosition(v3).y; })(): (function(){Vv11.position.x-= Vv11w3.getWorldPosition(v3).x - recorded_position.x; 
+                                            Vv11.position.y+= recorded_position.y - Vv11w3.getWorldPosition(v3).y; })(); 
+                    renderer.render( scene, camera ); 
+                }
             } 
     
     
@@ -929,10 +991,10 @@ console.log(error)
     
 
 
-        camera.position.x= Vv11.position.x + xEYConElÁngulo( ( 1.5 + dCamera ), getInQuadrant( -getInQuadrant( Vv11.rotation.z / un_grado_en_radianes + 270 ) ) ).x; 
-        camera.position.y= Vv11.position.y + xEYConElÁngulo( ( 1.5 + dCamera ), getInQuadrant( -getInQuadrant( Vv11.rotation.z / un_grado_en_radianes + 270 ) ) ).y; 
+        camera.position.x= oCamera.position.x + xEYConElÁngulo( ( 1.5 + dCamera ), getInQuadrant( -getInQuadrant( oCamera.rotation.z / un_grado_en_radianes + 270 ) ) ).x; 
+        camera.position.y= oCamera.position.y + xEYConElÁngulo( ( 1.5 + dCamera ), getInQuadrant( -getInQuadrant( oCamera.rotation.z / un_grado_en_radianes + 270 ) ) ).y; 
         
-        camera.rotation.y= Vv11.rotation.z; 
+        camera.rotation.y= oCamera.rotation.z; 
     
         renderer.render( scene, camera ); 
     
