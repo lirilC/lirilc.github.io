@@ -61,3 +61,24 @@ display
 	box-sizing: border-box;
 	border-top: 6px double black;
 }
+display map svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+display log {
+    width: 100%;
+    height: 58px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #01021334;
+    padding: 13px 20px 12px 20px;
+    box-sizing: border-box;
+    color: #fdd9aa;
+    font-family: consolas;
+    white-space: nowrap;
+    overflow: hidden;
+}
