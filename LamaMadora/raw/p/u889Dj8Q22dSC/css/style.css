@@ -47,3 +47,17 @@ debuggers > div > span
 	overflow: hidden; 
 	text-overflow: ellipsis; 
 } 
+display
+{
+	width: 210px;
+	height: 220px;
+	display: block;
+	position: absolute;
+	right: 20px;
+	background-color: #97736f;
+	top: 14px;
+	opacity: 0.4;
+	padding: 7px 2px;
+	box-sizing: border-box;
+	border-top: 6px double black;
+}

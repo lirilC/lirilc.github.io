@@ -279,6 +279,10 @@ console.log(error)
     
     scene.add( Vv11 );
 
+    Car= Vv11
+    Cars= []
+    Cars[Cars.length]= Vv11
+
     renderer = new THREE.WebGLRenderer( { antialias: true } );
     renderer.setSize( window.innerWidth, window.innerHeight );
     document.body.appendChild( renderer.domElement );
@@ -320,7 +324,7 @@ console.log(error)
     v3 = new THREE.Vector3( 0, 0, 0 ); 
     
     curve = new THREE.QuadraticBezierCurve(
-        new THREE.Vector3( Vv11w2.getWorldPosition(v3).x, Vv11w2.getWorldPosition(v3).y, -1.1 ),
+        new THREE.Vector3( Car.children[8].getWorldPosition(v3).x, Car.children[8].getWorldPosition(v3).y, -1.1 ),
         new THREE.Vector3( 0.20, 0.15, -1.1 ),
         new THREE.Vector3( 0.10, 0, -1.1 )
     );
@@ -352,9 +356,9 @@ console.log(error)
     
 
     curve2 = new THREE.QuadraticBezierCurve3( 
-        new THREE.Vector3( Vv11w3.getWorldPosition(v3).x + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Vv11.rotation.z / un_grado_en_radianes + 90 ) ) ).x , Vv11w3.getWorldPosition(v3).y + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Vv11.rotation.z / un_grado_en_radianes + 90 ) ) ).y , (-0.033 - 0.012) ),
-        new THREE.Vector3( Vv11w3.getWorldPosition(v3).x , Vv11w3.getWorldPosition(v3).y , (-0.033 - 0.012) ),
-        new THREE.Vector3( (Vv11w3.getWorldPosition(v3).x - xEYConElÁngulo( 0.22, parseFloat($(".bugger").text()) ).x) , (Vv11w3.getWorldPosition(v3).y - xEYConElÁngulo( 0.22, parseFloat($(".bugger").text())).y), (-0.033 - 0.012) )
+        new THREE.Vector3( Car.children[9].getWorldPosition(v3).x + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Vv11.rotation.z / un_grado_en_radianes + 90 ) ) ).x , Car.children[9].getWorldPosition(v3).y + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Vv11.rotation.z / un_grado_en_radianes + 90 ) ) ).y , (-0.033 - 0.012) ),
+        new THREE.Vector3( Car.children[9].getWorldPosition(v3).x , Car.children[9].getWorldPosition(v3).y , (-0.033 - 0.012) ),
+        new THREE.Vector3( (Car.children[9].getWorldPosition(v3).x - xEYConElÁngulo( 0.22, parseFloat($(".bugger").text()) ).x) , (Car.children[9].getWorldPosition(v3).y - xEYConElÁngulo( 0.22, parseFloat($(".bugger").text())).y), (-0.033 - 0.012) )
     ); 
         
     points2 = curve2.getPoints( 50 );
@@ -420,6 +424,24 @@ console.log(error)
     scene.add( elps2 ); 
 
 
+    _x = new THREE.EllipseCurve(
+        0,  0,            
+        0.35, 0.35,           
+        0,  2 * Math.PI,  
+        false,            
+        0                 
+    );
+    
+    geometry = new THREE.BufferGeometry().setFromPoints( _x.getPoints( 360 ) );
+    
+    
+    __sx = new THREE.Line( geometry, new THREE.LineBasicMaterial( { color: 0x7c7dff } ) ); 
+    
+    __sx.position.x= Vv11.position.x; 
+    __sx.position.y= Vv11.position.y; 
+    __sx.position.z= -78; 
+
+    scene.add( __sx ); 
 
     
     closestP= {}; 
@@ -645,7 +667,7 @@ console.log(error)
         
         renderer.render( scene, camera ); 
         
-        // console.log(getInQuadrant(-Vv11w4.rotation.y / un_grado_en_radianes));  
+        // console.log(getInQuadrant(-Car.children[10].rotation.y / un_grado_en_radianes));  
         
     
     }); 
@@ -689,11 +711,11 @@ console.log(error)
                 oCamera= __v
     
                 renderer.render( scene, camera ); }, 1682)
-            }else{
+            }else if(distanceFromCar <= 0.35){
                 setTimeout(function(){
                 caminando= false
                 __v.position.z= -100; 
-                oCamera= Vv11
+                oCamera= cC
     
                 renderer.render( scene, camera ); }, 1282)
             }
@@ -729,12 +751,12 @@ console.log(error)
         if(keysDown.a){
             if(!caminando){
                 //Vv11.position.x-= speed; 
-                //console.log(Vv11w3.rotation.y);  
+                //console.log(Car.children[9].rotation.y);  
     
-                if(Vv11w3.rotation.y < Math.PI / 4 * 3)
+                if(Car.children[9].rotation.y < Math.PI / 4 * 3)
                 {
-                    Vv11w3.rotation.y+= 0.023; 
-                    Vv11w4.rotation.y+= 0.023;  
+                    Car.children[9].rotation.y+= 0.023; 
+                    Car.children[10].rotation.y+= 0.023;  
                 }
     
                 renderer.render( scene, camera ); 
@@ -743,11 +765,11 @@ console.log(error)
         if(keysDown.d){
             if(!caminando){
                 //Vv11.position.x+= speed; 
-                //console.log(Vv11w3.rotation.y);   
-                if(Vv11w3.rotation.y > Math.PI / 4)
+                //console.log(Car.children[9].rotation.y);   
+                if(Car.children[9].rotation.y > Math.PI / 4)
                 {
-                    Vv11w3.rotation.y-= 0.023; 
-                    Vv11w4.rotation.y-= 0.023; 
+                    Car.children[9].rotation.y-= 0.023; 
+                    Car.children[10].rotation.y-= 0.023; 
                 }
             }
         }
@@ -782,11 +804,11 @@ console.log(error)
             }
         }
     
-        $("debuggers .bugger span").text(getInQuadrant(getInQuadrant(-Vv11.rotation.z / un_grado_en_radianes + 270) + (getInQuadrant(-Vv11w4.rotation.y / un_grado_en_radianes) - 270))); 
-        $("debuggers .bugger span").attr("title", getInQuadrant(getInQuadrant(-Vv11.rotation.z / un_grado_en_radianes + 270) + (getInQuadrant(-Vv11w4.rotation.y / un_grado_en_radianes) - 270))); 
-        $("debuggers .wheel .rotate").css({"rotate": -(Vv11w4.rotation.y / un_grado_en_radianes - 90) + "deg"}); 
+        $("debuggers .bugger span").text(getInQuadrant(getInQuadrant(-Vv11.rotation.z / un_grado_en_radianes + 270) + (getInQuadrant(-Car.children[10].rotation.y / un_grado_en_radianes) - 270))); 
+        $("debuggers .bugger span").attr("title", getInQuadrant(getInQuadrant(-Vv11.rotation.z / un_grado_en_radianes + 270) + (getInQuadrant(-Car.children[10].rotation.y / un_grado_en_radianes) - 270))); 
+        $("debuggers .wheel .rotate").css({"rotate": -(Car.children[10].rotation.y / un_grado_en_radianes - 90) + "deg"}); 
         $("debuggers .Vv11 .rotate").css({"rotate": -(Vv11.rotation.z / un_grado_en_radianes + 180) + "deg"}); 
-        $("debuggers .wheelRelativoAlMundo .rotate").css({"rotate": (-(Vv11.rotation.z / un_grado_en_radianes + 180) - (Vv11w4.rotation.y / un_grado_en_radianes - 90)) + "deg"}); 
+        $("debuggers .wheelRelativoAlMundo .rotate").css({"rotate": (-(Vv11.rotation.z / un_grado_en_radianes + 180) - (Car.children[10].rotation.y / un_grado_en_radianes - 90)) + "deg"}); 
         $("debuggers .tan span").text("x: " + xEYConElÁngulo(1, parseFloat($("debuggers .bugger span").text())).x.toFixed(2) + ", y: " + xEYConElÁngulo(1, parseFloat($("debuggers .bugger span").text())).y.toFixed(2)); 
         $("debuggers .tan span").attr("title", "x: " + xEYConElÁngulo(1, parseFloat($("debuggers .bugger span").text())).x.toFixed(2) + ", y: " + xEYConElÁngulo(1, parseFloat($("debuggers .bugger span").text())).y.toFixed(2)); 
         !1? $("debuggers .tan span").css({"background": "#d67274"}): $("debuggers .tan span").css({"background": "#25cc54"}); 
@@ -807,11 +829,11 @@ console.log(error)
     
         //yProjection= parseFloat($("debuggers .tan span").text()) <= 1? parseFloat($("debuggers .tan span").text()) * 0.22: (1 - -(1 - parseFloat($("debuggers .tan span").text()))) * 0.22;  
         //xProjection= parseFloat($("debuggers .tan span").text()) <= 1? (1 - parseFloat($("debuggers .tan span").text())) * 0.22: -(1 - parseFloat($("debuggers .tan span").text())) * -0.22;  
-        elps.position.x= Vv11w4.getWorldPosition(v3).x; 
-        elps.position.y= Vv11w4.getWorldPosition(v3).y; 
+        elps.position.x= Car.children[10].getWorldPosition(v3).x; 
+        elps.position.y= Car.children[10].getWorldPosition(v3).y; 
 
-        elps2.position.x= Vv11w3.getWorldPosition(v3).x; 
-        elps2.position.y= Vv11w3.getWorldPosition(v3).y; 
+        elps2.position.x= Car.children[9].getWorldPosition(v3).x; 
+        elps2.position.y= Car.children[9].getWorldPosition(v3).y; 
         
     
     
@@ -890,35 +912,35 @@ console.log(error)
 
         
         ángulo=  0; 
-            //console.log( "<190W " + ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, closestP.x , closestP.y ) );  
+            //console.log( "<190W " + ángDeLaPendiente( Car.children[10].getWorldPosition(v3).x , Car.children[10].getWorldPosition(v3).y, closestP.x , closestP.y ) );  
             if(keysDown.w){ 
                 if(!caminando){
                     //When this, which was before a condition, but then we left the value to be compared by its3lf (without <= sMt... or smt) b3cause any number by itself technically is true. /*But 0 by itself returns false. that's why it got stuck */
     
-                    /*if( ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, Vv11w2.getWorldPosition(v3).x , Vv11w2.getWorldPosition(v3).y ) ){
-                        if( ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, closestP.x , closestP.y ) ){
-                            ángulo= ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, Vv11w2.getWorldPosition(v3).x , Vv11w2.getWorldPosition(v3).y ) * -1 + ( ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, closestP.x , closestP.y )); 
-                            //console.log( "-" + ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, Vv11w2.getWorldPosition(v3).x , Vv11w2.getWorldPosition(v3).y) + ", " + ( ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, closestP.x , closestP.y )) + ": " + Vv11w4.getWorldPosition(v3).x + ", " + Vv11w4.getWorldPosition(v3).y + ", " + closestP.x + ", " + closestP.y ); 
+                    /*if( ángDeLaPendiente( Car.children[10].getWorldPosition(v3).x , Car.children[10].getWorldPosition(v3).y, Car.children[8].getWorldPosition(v3).x , Car.children[8].getWorldPosition(v3).y ) ){
+                        if( ángDeLaPendiente( Car.children[10].getWorldPosition(v3).x , Car.children[10].getWorldPosition(v3).y, closestP.x , closestP.y ) ){
+                            ángulo= ángDeLaPendiente( Car.children[10].getWorldPosition(v3).x , Car.children[10].getWorldPosition(v3).y, Car.children[8].getWorldPosition(v3).x , Car.children[8].getWorldPosition(v3).y ) * -1 + ( ángDeLaPendiente( Car.children[10].getWorldPosition(v3).x , Car.children[10].getWorldPosition(v3).y, closestP.x , closestP.y )); 
+                            //console.log( "-" + ángDeLaPendiente( Car.children[10].getWorldPosition(v3).x , Car.children[10].getWorldPosition(v3).y, Car.children[8].getWorldPosition(v3).x , Car.children[8].getWorldPosition(v3).y) + ", " + ( ángDeLaPendiente( Car.children[10].getWorldPosition(v3).x , Car.children[10].getWorldPosition(v3).y, closestP.x , closestP.y )) + ": " + Car.children[10].getWorldPosition(v3).x + ", " + Car.children[10].getWorldPosition(v3).y + ", " + closestP.x + ", " + closestP.y ); 
                             //console.log( ángulo ); 
                         }else{
                             //console.log( "else" + ángulo ); 
                         }
                     } */
-                    ángulo= ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, Vv11w2.getWorldPosition(v3).x , Vv11w2.getWorldPosition(v3).y ) * -1 + ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, closestP.x , closestP.y ); 
-                    /*console.log(ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, Vv11w2.getWorldPosition(v3).x , Vv11w2.getWorldPosition(v3).y ) + ", " + ángDeLaPendiente( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y, closestP.x , closestP.y ) + ", " + ángulo ); */ 
+                    ángulo= ángDeLaPendiente( Car.children[10].getWorldPosition(v3).x , Car.children[10].getWorldPosition(v3).y, Car.children[8].getWorldPosition(v3).x , Car.children[8].getWorldPosition(v3).y ) * -1 + ángDeLaPendiente( Car.children[10].getWorldPosition(v3).x , Car.children[10].getWorldPosition(v3).y, closestP.x , closestP.y ); 
+                    /*console.log(ángDeLaPendiente( Car.children[10].getWorldPosition(v3).x , Car.children[10].getWorldPosition(v3).y, Car.children[8].getWorldPosition(v3).x , Car.children[8].getWorldPosition(v3).y ) + ", " + ángDeLaPendiente( Car.children[10].getWorldPosition(v3).x , Car.children[10].getWorldPosition(v3).y, closestP.x , closestP.y ) + ", " + ángulo ); */ 
                     //console.log( ángulo )
         
-                    viejaPosición= { x: Vv11w4.getWorldPosition(v3).x , y: Vv11w4.getWorldPosition(v3).y }
-                    recorded_position= Vv11w4.rotation.y <= Math.PI / 2? { x: Vv11w4.getWorldPosition(v3).x , y: Vv11w4.getWorldPosition(v3).y  }: { x: Vv11w3.getWorldPosition(v3).x , y: Vv11w3.getWorldPosition(v3).y  };
+                    viejaPosición= { x: Car.children[10].getWorldPosition(v3).x , y: Car.children[10].getWorldPosition(v3).y }
+                    recorded_position= Car.children[10].rotation.y <= Math.PI / 2? { x: Car.children[10].getWorldPosition(v3).x , y: Car.children[10].getWorldPosition(v3).y  }: { x: Car.children[9].getWorldPosition(v3).x , y: Car.children[9].getWorldPosition(v3).y  };
         
         
                     Vv11.rotation.z -= ángulo * un_grado_en_radianes; 
                     renderer.render( scene, camera ); 
                     
         
-                    Vv11w4.rotation.y <= Math.PI / 2? (function(){Vv11.position.x-= Vv11w4.getWorldPosition(v3).x - recorded_position.x; 
-                                            Vv11.position.y+= recorded_position.y - Vv11w4.getWorldPosition(v3).y; })(): (function(){Vv11.position.x-= Vv11w3.getWorldPosition(v3).x - recorded_position.x; 
-                                            Vv11.position.y+= recorded_position.y - Vv11w3.getWorldPosition(v3).y; })(); 
+                    Car.children[10].rotation.y <= Math.PI / 2? (function(){Vv11.position.x-= Car.children[10].getWorldPosition(v3).x - recorded_position.x; 
+                                            Vv11.position.y+= recorded_position.y - Car.children[10].getWorldPosition(v3).y; })(): (function(){Vv11.position.x-= Car.children[9].getWorldPosition(v3).x - recorded_position.x; 
+                                            Vv11.position.y+= recorded_position.y - Car.children[9].getWorldPosition(v3).y; })(); 
                     renderer.render( scene, camera ); 
                 }
             } 
@@ -927,18 +949,18 @@ console.log(error)
     
             if(keysDown.s){ 
                 if(!caminando){
-                    ángulo= ángDeLaPendiente( Vv11w3.getWorldPosition(v3).x , Vv11w3.getWorldPosition(v3).y, Vv11w3.getWorldPosition(v3).x + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Vv11.rotation.z / un_grado_en_radianes + 90 ) ) ).x , Vv11w3.getWorldPosition(v3).y + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Vv11.rotation.z / un_grado_en_radianes + 90 ) ) ).y ) * -1 + ángDeLaPendiente( Vv11w3.getWorldPosition(v3).x , Vv11w3.getWorldPosition(v3).y, closestP2.x , closestP2.y ); 
+                    ángulo= ángDeLaPendiente( Car.children[9].getWorldPosition(v3).x , Car.children[9].getWorldPosition(v3).y, Car.children[9].getWorldPosition(v3).x + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Vv11.rotation.z / un_grado_en_radianes + 90 ) ) ).x , Car.children[9].getWorldPosition(v3).y + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Vv11.rotation.z / un_grado_en_radianes + 90 ) ) ).y ) * -1 + ángDeLaPendiente( Car.children[9].getWorldPosition(v3).x , Car.children[9].getWorldPosition(v3).y, closestP2.x , closestP2.y ); 
         
-                    recorded_position= Vv11w3.rotation.y <= Math.PI / 2? { x: Vv11w4.getWorldPosition(v3).x , y: Vv11w4.getWorldPosition(v3).y  }: { x: Vv11w3.getWorldPosition(v3).x , y: Vv11w3.getWorldPosition(v3).y  };
+                    recorded_position= Car.children[9].rotation.y <= Math.PI / 2? { x: Car.children[10].getWorldPosition(v3).x , y: Car.children[10].getWorldPosition(v3).y  }: { x: Car.children[9].getWorldPosition(v3).x , y: Car.children[9].getWorldPosition(v3).y  };
         
         
                     Vv11.rotation.z += ángulo * un_grado_en_radianes; 
                     renderer.render( scene, camera ); 
                     
         
-                    Vv11w3.rotation.y <= Math.PI / 2? (function(){Vv11.position.x-= Vv11w4.getWorldPosition(v3).x - recorded_position.x; 
-                                            Vv11.position.y+= recorded_position.y - Vv11w4.getWorldPosition(v3).y; })(): (function(){Vv11.position.x-= Vv11w3.getWorldPosition(v3).x - recorded_position.x; 
-                                            Vv11.position.y+= recorded_position.y - Vv11w3.getWorldPosition(v3).y; })(); 
+                    Car.children[9].rotation.y <= Math.PI / 2? (function(){Vv11.position.x-= Car.children[10].getWorldPosition(v3).x - recorded_position.x; 
+                                            Vv11.position.y+= recorded_position.y - Car.children[10].getWorldPosition(v3).y; })(): (function(){Vv11.position.x-= Car.children[9].getWorldPosition(v3).x - recorded_position.x; 
+                                            Vv11.position.y+= recorded_position.y - Car.children[9].getWorldPosition(v3).y; })(); 
                     renderer.render( scene, camera ); 
                 }
             } 
@@ -946,9 +968,9 @@ console.log(error)
     
     
         curve = new THREE.QuadraticBezierCurve3(
-                new THREE.Vector3( Vv11w2.getWorldPosition(v3).x , Vv11w2.getWorldPosition(v3).y , (-0.033 - 0.012) ),
-                new THREE.Vector3( Vv11w4.getWorldPosition(v3).x , Vv11w4.getWorldPosition(v3).y , (-0.033 - 0.012) ),
-                new THREE.Vector3( (Vv11w4.getWorldPosition(v3).x + xEYConElÁngulo(0.22, parseFloat($(".bugger").text())).x) , (Vv11w4.getWorldPosition(v3).y + xEYConElÁngulo(0.22, parseFloat($(".bugger").text())).y), (-0.033 - 0.012) )
+                new THREE.Vector3( Car.children[8].getWorldPosition(v3).x , Car.children[8].getWorldPosition(v3).y , (-0.033 - 0.012) ),
+                new THREE.Vector3( Car.children[10].getWorldPosition(v3).x , Car.children[10].getWorldPosition(v3).y , (-0.033 - 0.012) ),
+                new THREE.Vector3( (Car.children[10].getWorldPosition(v3).x + xEYConElÁngulo(0.22, parseFloat($(".bugger").text())).x) , (Car.children[10].getWorldPosition(v3).y + xEYConElÁngulo(0.22, parseFloat($(".bugger").text())).y), (-0.033 - 0.012) )
             ); 
     
         
@@ -970,9 +992,9 @@ console.log(error)
     
 
         curve2 = new THREE.QuadraticBezierCurve3( 
-            new THREE.Vector3( Vv11w3.getWorldPosition(v3).x + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Vv11.rotation.z / un_grado_en_radianes + 90 ) ) ).x , Vv11w3.getWorldPosition(v3).y + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Vv11.rotation.z / un_grado_en_radianes + 90 ) ) ).y , (-0.033 - 0.012) ),
-            new THREE.Vector3( Vv11w3.getWorldPosition(v3).x , Vv11w3.getWorldPosition(v3).y , (-0.033 - 0.012) ),
-            new THREE.Vector3( (Vv11w3.getWorldPosition(v3).x - xEYConElÁngulo( 0.22, parseFloat($(".bugger").text()) ).x) , (Vv11w3.getWorldPosition(v3).y - xEYConElÁngulo( 0.22, parseFloat($(".bugger").text())).y), (-0.033 - 0.012) )
+            new THREE.Vector3( Car.children[9].getWorldPosition(v3).x + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Vv11.rotation.z / un_grado_en_radianes + 90 ) ) ).x , Car.children[9].getWorldPosition(v3).y + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Vv11.rotation.z / un_grado_en_radianes + 90 ) ) ).y , (-0.033 - 0.012) ),
+            new THREE.Vector3( Car.children[9].getWorldPosition(v3).x , Car.children[9].getWorldPosition(v3).y , (-0.033 - 0.012) ),
+            new THREE.Vector3( (Car.children[9].getWorldPosition(v3).x - xEYConElÁngulo( 0.22, parseFloat($(".bugger").text()) ).x) , (Car.children[9].getWorldPosition(v3).y - xEYConElÁngulo( 0.22, parseFloat($(".bugger").text())).y), (-0.033 - 0.012) )
         ); 
             
         points2 = curve2.getPoints( 50 );
@@ -987,7 +1009,24 @@ console.log(error)
         scene.add( curveObject2 ); 
         
         
-                    
+        if(caminando){
+            cTC=false
+            for(var c in Cars){
+                distanceFromCar= Math.sqrt( Math.pow( __v.position.x - Cars[c].position.x, 2 ) + Math.pow( __v.position.y - Cars[c].position.y, 2 ) )
+                if(distanceFromCar <= 0.35){
+                    cTC= true
+                    cC= Cars[c]
+                    __sx.position.x= Cars[c].position.x
+                    __sx.position.y= Cars[c].position.y
+                    __sx.position.z= -0.033; 
+                }
+            }
+            if(!cTC){
+                __sx.position.z= -79; 
+            }   
+        }else{
+            __sx.position.z= -79; 
+        }   
     
 
 
