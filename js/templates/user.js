@@ -266,22 +266,30 @@ export function app () {
                             <section id="main">
                                 <section id="summary">
                                     <aside id="sections">
-                                        <section id="situation">
+                              ${(function(){if(Object.entries(user.situation).length){
+                              return   `<section id="situation">
                                             <h2 class="title">Situación Sentimental</h2>
                                             ${one("situation", foReach, user.situation)}
-                                        </section>
-                                        <section id="pics">
+                                        </section>`
+                              }else{return ``}})()}
+                              ${(function(){if(user.fotos.quantity){
+                              return   `<section id="pics">
                                             <h2 class="title"><a id= "photos" href="/${user.username}/photos">Fotos</a> (${user.fotos.quantity})</h2>
                                             ${one("foto", foReach, user.fotos.fotos)}
-                                        </section>
-                                        <section id="vids">
+                                        </section>`
+                              }else{return ``}})()}
+                              ${(function(){if(user.videos.quantity){
+                              return   `<section id="vids">
                                             <h2 class="title"><a id= "videos" href="/${user.username}/videos">Vídeos</a> (${user.videos.quantity})</h2>
                                             ${one("video", foReach, user.videos.videos)}
-                                        </section>
-                                        <section id="ties">
+                                        </section>`
+                              }else{return ``}})()}
+                              ${(function(){if(Object.entries(user.ties).length){
+                              return   `<section id="ties">
                                             <h2 class="title">Lazos Familiares</h2>
                                             ${one("tie", foReach, user.ties)}
-                                        </section>
+                                        </section>`
+                              }else{return ``}})()}                                        
                                     </aside>
                                     <aside id="updates">
                                         <aside id="feed">
