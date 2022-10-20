@@ -3389,6 +3389,21 @@ _R('a[href="/MeganFox"]').on("click", function(e){
     })
   })
 })
+_R('a[href="/LamaMadora"]').on("click", function(e){
+	e.preventDefault()
+	
+	history.pushState({page: 1}, "", `/MeganFox`)
+  RooT.imporT("/js/LamaMadora/DB.js", Then, function(d){
+    window.user= d._user()
+    RooT.imporT("/js/templates/user.js", Then, function(d){
+      _T(document).scrollTop(0)
+      _R("title").text(`${user.users_name} | liril`)
+      RooT.replace(_R("#biography", 0), wiTh, d.app().biography())
+
+      RooT.ready()
+    })
+  })
+})
 /*
 $("a").each(function(){
 	if(RooT.maTch.user.exec($(this).attr("href"))){
