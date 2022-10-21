@@ -132,9 +132,10 @@ console.log(error)
     //Beruda Vv11
     Vv11 = new THREE.Object3D();
     Vv11.car_name= `Beruda Vv11`
-    Vv11.speed= 0.001
+    Vv11.startingSpeed= 0.005
+    Vv11.speed= Vv11.startingSpeed
     Vv11.speedIncrement= 0.000999
-    Vv11.speedDecrement= 0.001411
+    Vv11.speedDecrement= 0.011411
     Vv11.topSpeed= 0.051
     Vv11c = new THREE.Mesh( geometry, material );
     
@@ -263,9 +264,10 @@ console.log(error)
     //GueRddx d6687
     d6687 = new THREE.Object3D();
     d6687.car_name= `GueRddx d6687`
-    d6687.speed= 0.001
+    d6687.startingSpeed= 0.008
+    d6687.speed= d6687.startingSpeed
     d6687.speedIncrement= 0.008545
-    d6687.speedDecrement= 0.002992
+    d6687.speedDecrement= 0.012992
     d6687.topSpeed= 0.093
     d6687c = new THREE.Mesh( new THREE.BoxGeometry( 0.17, 0.308, 0.051 ), new THREE.MeshPhongMaterial({ color: 0xf71215 }) );
     
@@ -392,9 +394,10 @@ console.log(error)
     //Exclude n9r
     n9r = new THREE.Object3D();
     n9r.car_name= `Exclude n9r`
-    n9r.speed= 0.001
+    n9r.startingSpeed= 0.004
+    n9r.speed= n9r.startingSpeed
     n9r.speedIncrement= 0.000622
-    n9r.speedDecrement= 0.001876
+    n9r.speedDecrement= 0.011876
     n9r.topSpeed= 0.041
     n9rc = new THREE.Mesh( new THREE.BoxGeometry( 0.21, 0.327, 0.063 ), new THREE.MeshPhongMaterial({ color: 0xf7baad }) );
     
@@ -907,7 +910,7 @@ console.log(error)
     window.display= {}
     
     display.log= function(t){
-        document.querySelector("display log").innerHTML= `${t}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`
+        document.querySelector("display log").innerHTML= `${t}`.replaceAll(`i̇́`, `<i>`).replaceAll(`ᶖ`, `</i>`).indexOf(`</i>`) < `${t}`.replaceAll(`i̇́`, `<i>`).replaceAll(`ᶖ`, `</i>`).indexOf(`<i>`)? `<i>${t}`.replaceAll(`i̇́`, `<i>`).replaceAll(`ᶖ`, `</i>`): `${t}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`.replaceAll(`i̇́`, `<i>`).replaceAll(`ᶖ`, `</i>`)
     }
     
     display.narrator= function(){
@@ -916,8 +919,8 @@ console.log(error)
             logInterval= setInterval(function(){
                 (function(){
                     if(typeof logMarqueInterval == "undefined"){
-                        display.log(typeof display.logs[xx] == "undefined"? '': display.logs[xx])
-                        marque(document.querySelector("display log").innerText, "log", 0)
+                        display.log(typeof display.logs[xx] == "undefined"? '': display.logs[xx].replaceAll(`<i>`, `i̇́`).replaceAll(`</i>`, `ᶖ`).replaceAll(`&nbsp;`, ``))
+                        marque(document.querySelector("display log").innerHTML.replaceAll(`<i>`, `i̇́`).replaceAll(`</i>`, `ᶖ`), "log", 0)
                         if(xx == display.logs.length - 1){clearInterval(logInterval); display.logs= []; return}
                         xx++
                     }
@@ -931,23 +934,23 @@ console.log(error)
     text = i; 
     a= document.querySelectorAll(a)
     if(typeof logMarqueInterval != "undefined")return
-    logLength= text.length
+    logLength= text.replaceAll(`i̇́`, ``).replaceAll(`ᶖ`, ``).replaceAll(`&nbsp;`, ` `).length
     var d= 0
-    if(logLength - 15 <= 21)return
+    if(logLength - 14 <= 21)return
     logMarqueInterval= setInterval( 
         function(){
-                if(d >= logLength - 25){
+                if(d >= logLength - 24){
                     clearInterval(logMarqueInterval)
                     logMarqueInterval= undefined
                 }
                 d++
                 text = `${text.slice(1, text.length)}${text[0]}`; 
-                b != -1? a[b].innerText = text: a.innerText = text; 
+                display.log(text)
     }, 1000) 
     }; 
     
     setTimeout(function(){
-        display.logs= [,`_`,,`_`,,`Hola, bienvenido a El Refugio, __v.`,,,,`Pásatela bien un rato. Es seguro este lugar; uno de pocos en Vv11.`,,`¡Además está increíble!`,,`_`,,`_`,,,,,,,,`Presiona <i>f</i> para bajarte del carro. ¡No te subas de nuevo todavía, porque perderás estas instrucciones!`,,`_`,,  `Puedes correr con <i>w</i>, <i>a</i> y <i>d</i>, pero si quieres correr cansándote debes tener siempre presionada la tecla <i>Shift</i>`,, `Puedes subirte a cualquier coche acercándote a él y presionando <i>Shift</i>`]
+        display.logs= [,`_`,,`_`,,`Hola, bienvenido a El Refugio, __v.`,,,,`Pásatela bien un rato. Es seguro este lugar; uno de pocos en Vv11.`,,`¡Además está increíble!`,,`_`,,`_`,,,,,,,`_`,,`_`,,`Presiona i̇́fᶖ para bajarte del carro.`,,`_`,,  `Puedes correr con i̇́wᶖ, i̇́aᶖ y i̇́dᶖ, pero si quieres correr cansándote debes tener siempre presionada la tecla i̇́Shiftᶖ.`,, `Puedes subirte a cualquier carro acercándote a él y presionando i̇́Shiftᶖ.`,,`_`,,`_`,,]
         display.narrator()
     }, 5853)
     
@@ -1053,8 +1056,10 @@ console.log(error)
                 Car= cC
     
                 renderer.render( scene, camera ); }, 1282)
-                display.logs= [cC.car_name, cC.car_name, ``, `_`, ``]
-                display.narrator()
+                if(!display.logs.length){
+                    display.logs= [cC.car_name, cC.car_name, ``, `_`, ``]
+                    display.narrator()
+                }
             }
         }
         
@@ -1115,7 +1120,7 @@ console.log(error)
         }
         if(keysDown.w && !keysDown.s){
             if(!caminando){
-                if(Car.speed + Car.speedIncrement <= Car.topSpeed)Car.speed+= Car.speedIncrement
+                if(Car.speed + Car.speedIncrement <= Car.topSpeed){Car.speed+= Car.speedIncrement}else{Car.speed= Car.topSpeed}
             }else{
                 if(keysDown.a){
                     if(wRotation + wRotationIncrement <= wRotationLimit)wRotation+= wRotationIncrement
@@ -1139,9 +1144,10 @@ console.log(error)
             }
         }else{
             wRotation= 0
-            if(Car.speed - Car.speedDecrement > 0.001){Car.speed-= Car.speedDecrement}else{Car.speed= 0.001}
+            if(Car.speed - Car.speedDecrement > Car.startingSpeed){Car.speed-= Car.speedDecrement}else{Car.speed= Car.startingSpeed}
         }
-        if(Car.speed > 0.001){
+
+        if(Car.speed > Car.startingSpeed){
             Car.position.x+= xEYConElÁngulo(Car.speed, parseFloat($(".bugger").text())).x; 
             Car.position.y+= xEYConElÁngulo(Car.speed, parseFloat($(".bugger").text())).y; 
             skip= skip == 0? lentitud: skip; 
@@ -1265,7 +1271,7 @@ console.log(error)
         
         ángulo=  0; 
             //console.log( "<190W " + ángDeLaPendiente( Car.children[10].getWorldPosition(v3).x , Car.children[10].getWorldPosition(v3).y, closestP.x , closestP.y ) );  
-            if(keysDown.w && !keysDown.s){ 
+            if((Car.speed > Car.startingSpeed && keysDown.w || Car.speed > Car.startingSpeed) && !keysDown.s){ 
                 if(!caminando){
                     //When this, which was before a condition, but then we left the value to be compared by its3lf (without <= sMt... or smt) b3cause any number by itself technically is true. /*But 0 by itself returns false. that's why it got stuck */
     
