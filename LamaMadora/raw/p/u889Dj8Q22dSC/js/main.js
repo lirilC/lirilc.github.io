@@ -131,6 +131,11 @@ console.log(error)
     
     //Beruda Vv11
     Vv11 = new THREE.Object3D();
+    Vv11.car_name= `Beruda Vv11`
+    Vv11.speed= 0.001
+    Vv11.speedIncrement= 0.000999
+    Vv11.speedDecrement= 0.001411
+    Vv11.topSpeed= 0.051
     Vv11c = new THREE.Mesh( geometry, material );
     
     
@@ -257,6 +262,11 @@ console.log(error)
     
     //GueRddx d6687
     d6687 = new THREE.Object3D();
+    d6687.car_name= `GueRddx d6687`
+    d6687.speed= 0.001
+    d6687.speedIncrement= 0.008545
+    d6687.speedDecrement= 0.002992
+    d6687.topSpeed= 0.093
     d6687c = new THREE.Mesh( new THREE.BoxGeometry( 0.17, 0.308, 0.051 ), new THREE.MeshPhongMaterial({ color: 0xf71215 }) );
     
     
@@ -378,9 +388,138 @@ console.log(error)
     //
     //
     
-    ambiance = new THREE.PointLight( 0xcddde7, 5,  2.8 ); 
-    ambiance.color= {r: 0.37, g: 1, b: 0.863}; 
-    ambiance.intensity= 1.58; 
+    
+    //Exclude n9r
+    n9r = new THREE.Object3D();
+    n9r.car_name= `Exclude n9r`
+    n9r.speed= 0.001
+    n9r.speedIncrement= 0.000622
+    n9r.speedDecrement= 0.001876
+    n9r.topSpeed= 0.041
+    n9rc = new THREE.Mesh( new THREE.BoxGeometry( 0.21, 0.327, 0.063 ), new THREE.MeshPhongMaterial({ color: 0xf7baad }) );
+    
+    
+    n9rw = new THREE.Shape();
+    n9rw.absarc(0, 0, 0.02);
+    
+    n9rw1 = new THREE.ExtrudeGeometry(n9rw, {depth: 0.009, bevelEnabled: false});
+    n9rw2 = new THREE.ExtrudeGeometry(n9rw, {depth: 0.009, bevelEnabled: false});
+    n9rw3 = new THREE.ExtrudeGeometry(n9rw, {depth: 0.009, bevelEnabled: false});
+    n9rw4 = new THREE.ExtrudeGeometry(n9rw, {depth: 0.009, bevelEnabled: false});
+    
+    
+    
+    
+    right_head_light = new THREE.Mesh( new THREE.BoxGeometry( 0.01895, 0.0062, 0.0092 ), new THREE.MeshBasicMaterial({ color: 0xffffff }) ); 
+    
+    right_head_light.position.x= 0.088; 
+    right_head_light.position.y= 0.173; 
+    right_head_light.position.z= -0.003; 
+    
+    n9r.add( right_head_light ); 
+    
+    
+    head_light = new THREE.Mesh( new THREE.BoxGeometry( 0.01895, 0.0062, 0.0092 ), new THREE.MeshBasicMaterial({ color: 0xffffff }) ); 
+    
+    head_light.position.x= -0.088; 
+    head_light.position.y= 0.173; 
+    head_light.position.z= -0.003; 
+    
+    
+    n9r.add( head_light ); 
+    
+    
+    targetHL1P = new THREE.Object3D();
+    targetHL2P = new THREE.Object3D();
+    
+    
+    head_light1 = new THREE.SpotLight( 0xd7a6a7, 5,  2.8 ); 
+    head_light1.color= {r: 1, g: 1, b: 1}; 
+    head_light1.intensity= 6.38; 
+    head_light1.penumbra= 0.73;
+    head_light1.power= 8;
+    head_light1.position.x= -0.066; 
+    head_light1.position.y= 0.173; 
+    head_light1.position.z= -0.003; 
+    head_light1.rotation.x= -Math.PI / 4; 
+    head_light1.rotation.y= 0; 
+    head_light1.rotation.z= 0; 
+    head_light1.target = targetHL1P;
+    head_light1.target.position.x= -0.07; 
+    head_light1.target.position.y= 1.28; 
+    head_light1.target.position.z= -0.003; 
+    
+    head_light2 = new THREE.SpotLight( 0xd7a6a7, 5,  2.8 ); 
+    head_light2.color= {r: 1, g: 1, b: 1}; 
+    head_light2.intensity= 6.38; 
+    head_light2.penumbra= 0.73;
+    head_light2.power= 8;
+    head_light2.position.x= 0.066; 
+    head_light2.position.y= 0.173; 
+    head_light2.position.z= -0.003; 
+    head_light2.rotation.x= -Math.PI / 4; 
+    head_light2.rotation.y= 0; 
+    head_light2.rotation.z= 0; 
+    head_light2.target = targetHL2P;
+    head_light2.target.position.x= 0.07; 
+    head_light2.target.position.y= 1.28; 
+    head_light2.target.position.z= -0.003; 
+    
+    
+    n9r.add( head_light1.target ); 
+    n9r.add( head_light1 ); 
+    
+    
+    n9r.add( head_light2.target ); 
+    n9r.add( head_light2 ); 
+
+
+    n9rw1 = new THREE.Mesh(n9rw1, new THREE.MeshPhongMaterial({ color: 0x7fbda7 }));
+    n9rw2 = new THREE.Mesh(n9rw2, new THREE.MeshPhongMaterial({ color: 0x7fbda7 }));
+    n9rw3 = new THREE.Mesh(n9rw3, new THREE.MeshPhongMaterial({ color: 0x7fbda7 }));
+    n9rw4 = new THREE.Mesh(n9rw4, new THREE.MeshPhongMaterial({ color: 0x7fbda7 }));
+    
+    n9rw1.rotation.x= Math.PI / 2
+    n9rw2.rotation.x= Math.PI / 2
+    n9rw3.rotation.x= Math.PI / 2
+    n9rw4.rotation.x= Math.PI / 2
+    n9rw1.rotation.y= Math.PI / 2
+    n9rw2.rotation.y= Math.PI / 2
+    n9rw3.rotation.y= Math.PI / 2
+    n9rw4.rotation.y= Math.PI / 2
+    n9rw1.rotation.z= 0
+    n9rw2.rotation.z= 0
+    n9rw3.rotation.z= 0
+    n9rw4.rotation.z= 0
+    
+    n9rw1.position.x= -0.095
+    n9rw2.position.x= 0.085
+    n9rw3.position.x= -0.095
+    n9rw4.position.x= 0.085
+    
+    n9rw1.position.y= -0.11
+    n9rw2.position.y= -0.11
+    n9rw3.position.y= 0.11
+    n9rw4.position.y= 0.11
+    
+    
+    n9rw1.position.z= -0.033; 
+    n9rw2.position.z= -0.033; 
+    n9rw3.position.z= -0.033; 
+    n9rw4.position.z= -0.033; 
+    
+    n9r.add( n9rc )
+    n9r.add( n9rw1 );
+    n9r.add( n9rw2 );
+    n9r.add( n9rw3 );
+    n9r.add( n9rw4 );
+    
+    //
+    //
+    
+    ambiance = new THREE.PointLight( 0x000000, 5,  2.8 ); 
+    ambiance.color= {r: 0.37, g: 0.5788, b: 0.363}; 
+    ambiance.intensity= 0.28; 
     ambiance.position.x= 0; 
     ambiance.position.y= -1; 
     ambiance.position.z= 0.3; 
@@ -405,16 +544,22 @@ console.log(error)
     d6687.position.x= 70.73400670029389
     d6687.position.y= -52.08887428552435
     d6687.rotation.z= 6.5449846949787664
+    
+    n9r.position.x= 71.73400670029389
+    n9r.position.y= -52.08887428552435
+    n9r.rotation.z= 6.5449846949787664
 
     oCamera= Vv11
     
     scene.add( Vv11 );
     scene.add( d6687 );
+    scene.add( n9r );
 
     Car= Vv11
     Cars= []
     Cars[Cars.length]= Vv11
     Cars[Cars.length]= d6687
+    Cars[Cars.length]= n9r
 
     renderer = new THREE.WebGLRenderer( { antialias: true } );
     renderer.setSize( window.innerWidth, window.innerHeight );
@@ -589,7 +734,7 @@ console.log(error)
 
     
     
-    Terreno = new THREE.Mesh( new THREE.BoxGeometry( 517, 517, 1.89 ), new THREE.MeshStandardMaterial({ color: 0xd2e2c1, roughness: 1, reflectivity: 0.47 }) );
+    Terreno = new THREE.Mesh( new THREE.BoxGeometry( 1711, 1711, 1.89 ), new THREE.MeshStandardMaterial({ color: 0xd2e2c1, roughness: 1, reflectivity: 0.47 }) );
     
     Terreno.position.z= ( -0.033 - 0.02 - 0.5 - 0.445 )
     
@@ -748,12 +893,15 @@ console.log(error)
     e= 69; 
     f= 70; 
     
-    keysDown= { a: false , d: false , w: false , s: false , q: false , e: false, f: false , izquierda: false , derecha: false , arriba: false , abajo: false }
+    keysDown= { a: false , d: false , w: false , s: false , q: false , e: false, f: false , izquierda: false , derecha: false , arriba: false , abajo: false, Shift: false }
     
     
     speed= 0.051; 
     wSpeed= 0.031
-
+    wRotation=0
+    wRotationIncrement=0.22
+    wRotationLimit=3.672
+    
     caminando= false
     
     window.display= {}
@@ -799,7 +947,7 @@ console.log(error)
     }; 
     
     setTimeout(function(){
-        display.logs= [,`_`,,`_`,,`Hola, bienvenido a El Refugio, __v.`,,,,`Pásatela bien un rato. Es seguro este lugar; uno de pocos en Vv11.`,,`¡Además está increíble!`,,`_`,,`_`,,]
+        display.logs= [,`_`,,`_`,,`Hola, bienvenido a El Refugio, __v.`,,,,`Pásatela bien un rato. Es seguro este lugar; uno de pocos en Vv11.`,,`¡Además está increíble!`,,`_`,,`_`,,,,,,,,`Presiona <i>f</i> para bajarte del carro. ¡No te subas de nuevo todavía, porque perderás estas instrucciones!`,,`_`,,  `Puedes correr con <i>w</i>, <i>a</i> y <i>d</i>, pero si quieres correr cansándote debes tener siempre presionada la tecla <i>Shift</i>`,, `Puedes subirte a cualquier coche acercándote a él y presionando <i>Shift</i>`]
         display.narrator()
     }, 5853)
     
@@ -845,6 +993,10 @@ console.log(error)
                 break; 
         }; 
         
+        if(i.shiftKey){
+            keysDown.Shift= true
+        }
+        
         renderer.render( scene, camera ); 
         
         // console.log(getInQuadrant(-Car.children[10].rotation.y / un_grado_en_radianes));  
@@ -876,6 +1028,9 @@ console.log(error)
                 keysDown.f= false; 
                 break; 
         }; 
+        if(!zZ.shiftKey){
+            keysDown.Shift= false
+        }
         
         if(zZ.keyCode === f){
             if(!caminando){
@@ -885,7 +1040,6 @@ console.log(error)
                 __v.position.y= Car.position.y
                 __v.position.z= -0.033 - 0.02 - 0.5 + 1.2 / 2; 
                 __v.rotation.z= Car.rotation.z
-                wRotation= __v.rotation.z / un_grado_en_radianes
                 __v.position.y += 0.2 * Math.cos(Car.rotation.z + 90 * un_grado_en_radianes)
                 __v.position.x -= 0.2 * Math.sin(Car.rotation.z + 90 * un_grado_en_radianes)
                 oCamera= __v
@@ -899,12 +1053,17 @@ console.log(error)
                 Car= cC
     
                 renderer.render( scene, camera ); }, 1282)
+                display.logs= [cC.car_name, cC.car_name, ``, `_`, ``]
+                display.narrator()
             }
         }
+        
     }); 
     
     
-    
+    document.addEventListener("blur", function(){
+        wRotation= 0
+    })
     
     
     
@@ -954,31 +1113,43 @@ console.log(error)
                 }
             }
         }
-        if(keysDown.w){
+        if(keysDown.w && !keysDown.s){
             if(!caminando){
-                Car.position.x+= xEYConElÁngulo(speed, parseFloat($(".bugger").text())).x; 
-                Car.position.y+= xEYConElÁngulo(speed, parseFloat($(".bugger").text())).y; 
-                skip= skip == 0? lentitud: skip; 
-                lentitud -= aceleración; 
-                lentitud= lentitud < 0? 0: lentitud; 
+                if(Car.speed + Car.speedIncrement <= Car.topSpeed)Car.speed+= Car.speedIncrement
             }else{
                 if(keysDown.a){
-                    __v.position.y += wSpeed * Math.cos(__v.rotation.z + 3.672 * un_grado_en_radianes)
-                    __v.position.x -= wSpeed * Math.sin(__v.rotation.z + 3.672 * un_grado_en_radianes)
-                    __v.rotation.z+= 3.672 * un_grado_en_radianes
+                    if(wRotation + wRotationIncrement <= wRotationLimit)wRotation+= wRotationIncrement
+                    __v.position.y += wSpeed * Math.cos(__v.rotation.z + wRotation * un_grado_en_radianes)
+                    __v.position.x -= wSpeed * Math.sin(__v.rotation.z + wRotation * un_grado_en_radianes)
+                    __v.rotation.z+= wRotation * un_grado_en_radianes
                 }
                 if(keysDown.d){
-                    __v.position.y += wSpeed * Math.cos(__v.rotation.z - 3.672 * un_grado_en_radianes)
-                    __v.position.x -= wSpeed * Math.sin(__v.rotation.z - 3.672 * un_grado_en_radianes)
-                    __v.rotation.z-= 3.672 * un_grado_en_radianes
+                    if(wRotation - wRotationIncrement >= -wRotationLimit)wRotation-= wRotationIncrement
+                    __v.position.y += wSpeed * Math.cos(__v.rotation.z + wRotation * un_grado_en_radianes)
+                    __v.position.x -= wSpeed * Math.sin(__v.rotation.z + wRotation * un_grado_en_radianes)
+                    __v.rotation.z+= wRotation * un_grado_en_radianes
                 }
                 if(!keysDown.a && !keysDown.d){
                     __v.position.y += wSpeed * Math.cos(__v.rotation.z)
                     __v.position.x -= wSpeed * Math.sin(__v.rotation.z)
                 }
+                if(!keysDown.a && !keysDown.d && keysDown.Shift){
+                    wRotation= 0
+                }
             }
+        }else{
+            wRotation= 0
+            if(Car.speed - Car.speedDecrement > 0.001){Car.speed-= Car.speedDecrement}else{Car.speed= 0.001}
         }
-        if(keysDown.s){
+        if(Car.speed > 0.001){
+            Car.position.x+= xEYConElÁngulo(Car.speed, parseFloat($(".bugger").text())).x; 
+            Car.position.y+= xEYConElÁngulo(Car.speed, parseFloat($(".bugger").text())).y; 
+            skip= skip == 0? lentitud: skip; 
+            lentitud -= aceleración; 
+            lentitud= lentitud < 0? 0: lentitud; 
+        }
+        
+        if(keysDown.s && !keysDown.w){
             if(!caminando){
                 Car.position.y-= xEYConElÁngulo(speed, parseFloat($(".bugger").text())).y; 
                 Car.position.x-= xEYConElÁngulo(speed, parseFloat($(".bugger").text())).x; 
@@ -988,7 +1159,7 @@ console.log(error)
         $("debuggers .bugger span").text(getInQuadrant(getInQuadrant(-Car.rotation.z / un_grado_en_radianes + 270) + (getInQuadrant(-Car.children[10].rotation.y / un_grado_en_radianes) - 270))); 
         $("debuggers .bugger span").attr("title", getInQuadrant(getInQuadrant(-Car.rotation.z / un_grado_en_radianes + 270) + (getInQuadrant(-Car.children[10].rotation.y / un_grado_en_radianes) - 270))); 
         $("debuggers .wheel .rotate").css({"rotate": -(Car.children[10].rotation.y / un_grado_en_radianes - 90) + "deg"}); 
-        $("debuggers .Car .rotate").css({"rotate": -(Car.rotation.z / un_grado_en_radianes + 180) + "deg"}); 
+        $("debuggers .Vv11 .rotate").css({"rotate": -(Car.rotation.z / un_grado_en_radianes + 180) + "deg"}); 
         $("debuggers .wheelRelativoAlMundo .rotate").css({"rotate": (-(Car.rotation.z / un_grado_en_radianes + 180) - (Car.children[10].rotation.y / un_grado_en_radianes - 90)) + "deg"}); 
         $("debuggers .tan span").text("x: " + xEYConElÁngulo(1, parseFloat($("debuggers .bugger span").text())).x.toFixed(2) + ", y: " + xEYConElÁngulo(1, parseFloat($("debuggers .bugger span").text())).y.toFixed(2)); 
         $("debuggers .tan span").attr("title", "x: " + xEYConElÁngulo(1, parseFloat($("debuggers .bugger span").text())).x.toFixed(2) + ", y: " + xEYConElÁngulo(1, parseFloat($("debuggers .bugger span").text())).y.toFixed(2)); 
@@ -1094,7 +1265,7 @@ console.log(error)
         
         ángulo=  0; 
             //console.log( "<190W " + ángDeLaPendiente( Car.children[10].getWorldPosition(v3).x , Car.children[10].getWorldPosition(v3).y, closestP.x , closestP.y ) );  
-            if(keysDown.w){ 
+            if(keysDown.w && !keysDown.s){ 
                 if(!caminando){
                     //When this, which was before a condition, but then we left the value to be compared by its3lf (without <= sMt... or smt) b3cause any number by itself technically is true. /*But 0 by itself returns false. that's why it got stuck */
     
@@ -1128,7 +1299,7 @@ console.log(error)
             //$(".burger span").html("");  
             //$(".burger").attr( "title" , "" );  
     
-            if(keysDown.s){ 
+            if(keysDown.s && !keysDown.w){ 
                 if(!caminando){
                     ángulo= ángDeLaPendiente( Car.children[9].getWorldPosition(v3).x , Car.children[9].getWorldPosition(v3).y, Car.children[9].getWorldPosition(v3).x + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Car.rotation.z / un_grado_en_radianes + 90 ) ) ).x , Car.children[9].getWorldPosition(v3).y + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Car.rotation.z / un_grado_en_radianes + 90 ) ) ).y ) * -1 + ángDeLaPendiente( Car.children[9].getWorldPosition(v3).x , Car.children[9].getWorldPosition(v3).y, closestP2.x , closestP2.y ); 
         
