@@ -819,6 +819,13 @@ console.log(error)
     
     scene.add( gM10 ); 
     
+    Stereo = new THREE.Mesh( new THREE.BoxGeometry( 0.2, 0.78, 0.8 ), new THREE.MeshPhongMaterial({ color: 0xf9a6d6 , reflectivity: 0.47 }) );
+    Stereo.position.x=  9.5; 
+    Stereo.position.y= -0.008; 
+    Stereo.position.z= -0.033 - 0.02 - 0.5 + 2.8 / 2 + 1; 
+    
+    scene.add( Stereo ); 
+    
     
     luz_direccional = new THREE.DirectionalLight( 0xfdfdde ); 
     luz_direccional.intensity= 1.5; 
@@ -1387,9 +1394,16 @@ console.log(error)
         }else{
             __sx.position.z= -79; 
         }   
-    
-
-
+        
+        distanceFromStereo= Math.sqrt( Math.pow( (caminando? __v.position.x: Car.position.x) - Stereo.position.x, 2 ) + Math.pow( (caminando? __v.position.y: Car.position.y) - Stereo.position.y, 2 ) )
+        
+        if(distanceFromStereo > 21){
+            $("audio")[0].volume= 0
+        }else{
+            $("audio")[0].play()
+            $("audio")[0].volume= (100 - distanceFromStereo * 100 / 21) / 100
+        }
+        
         camera.position.x= oCamera.position.x + xEYConElÁngulo( ( 1.5 + dCamera ), getInQuadrant( -getInQuadrant( oCamera.rotation.z / un_grado_en_radianes + 270 ) ) ).x; 
         camera.position.y= oCamera.position.y + xEYConElÁngulo( ( 1.5 + dCamera ), getInQuadrant( -getInQuadrant( oCamera.rotation.z / un_grado_en_radianes + 270 ) ) ).y; 
         
