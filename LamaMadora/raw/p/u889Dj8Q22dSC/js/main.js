@@ -957,7 +957,7 @@ console.log(error)
     }; 
     
     setTimeout(function(){
-        display.logs= [,`_`,,`_`,,`Hola, bienvenido a El Refugio, __v.`,,,,`Pásatela bien un rato. Es seguro este lugar; uno de pocos en Vv11.`,,`¡Además está increíble!`,,`_`,,`_`,,,,,,,`_`,,`_`,,`Presiona i̇́fᶖ para bajarte del carro.`,,`_`,,  `Puedes correr con i̇́wᶖ, i̇́aᶖ y i̇́dᶖ, pero si quieres correr cansándote debes tener siempre presionada la tecla i̇́Shiftᶖ.`,, `Puedes subirte a cualquier carro acercándote a él y presionando i̇́Shiftᶖ.`,,`_`,,`_`,,]
+        display.logs= [,`_`,,`_`,,`Hola, bienvenido a El Refugio, __v.`,,,,`Pásatela bien un rato. Es seguro este lugar; uno de pocos en Vv11.`,,`¡Además está increíble!`,,`_`,,`_`,,,,,,,`_`,,`_`,,`Presiona i̇́fᶖ para bajarte de un carro en el que estés.`,,`_`,,  `Puedes correr con i̇́wᶖ, i̇́aᶖ y i̇́dᶖ, pero si quieres correr cansándote debes tener siempre presionado i̇́Shiftᶖ.`,, `Puedes subirte a cualquier carro acercándote a él y presionando i̇́fᶖ.`,,`_`,,`_`,,]
         display.narrator()
     }, 5853)
     
@@ -1041,13 +1041,10 @@ console.log(error)
         if(!zZ.shiftKey){
             keysDown.Shift= false
         }
-        
         if(zZ.keyCode === f){
             if(!caminando){
                 caminando= true
                 setTimeout(function(){
-                __v.position.x= Car.position.x
-                __v.position.y= Car.position.y
                 __v.position.z= -0.033 - 0.02 - 0.5 + 1.2 / 2; 
                 __v.rotation.z= Car.rotation.z
                 __v.position.y += 0.2 * Math.cos(Car.rotation.z + 90 * un_grado_en_radianes)
@@ -1095,6 +1092,10 @@ console.log(error)
     aceleración= 1; 
     
     setInterval(function(){ 
+        if(!caminando)(function()
+            {__v.position.x= Car.position.x
+            __v.position.y= Car.position.y})()
+
         if(skip > 0){
             skip--; 
             return; 
