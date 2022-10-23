@@ -38,6 +38,9 @@ var user= {
     situation: {
         "###": `<div id="sión" style="border: 1px dotted #636363; width: 100%; height: 41px; position: relative; cursor: s-resize;" onmousemove='L= function(e){(e.movementX >= 0 &amp;&amp; e.movementY >= 0)? ((e.movementX / e.movementY) < 0.5)? (function(){e.target.style.cursor= "s-resize"})(): ((e.movementX / e.movementY) > 2)? (function(){e.target.style.cursor= "e-resize"})(): (function(){e.target.style.cursor= "se-resize"})(): (e.movementX < 0 &amp;&amp; e.movementY >= 0)? ((e.movementX / e.movementY) > -0.5)? (function(){e.target.style.cursor= "s-resize"})(): ((e.movementX / e.movementY) < -2)? (function(){e.target.style.cursor= "w-resize"})(): (function(){e.target.style.cursor= "sw-resize"})(): (e.movementX >= 0 &amp;&amp; e.movementY < 0)? ((e.movementX / e.movementY) > -0.5)? (function(){e.target.style.cursor= "n-resize"})(): ((e.movementX / e.movementY) < -2)? (function(){e.target.style.cursor= "e-resize"})(): (function(){e.target.style.cursor= "ne-resize"})(): (e.movementX < 0 &amp;&amp; e.movementY < 0)? ((e.movementX / e.movementY) < 0.5)? (function(){e.target.style.cursor= "n-resize"})(): ((e.movementX / e.movementY) > 2)? (function(){e.target.style.cursor= "w-resize"})(): (function(){e.target.style.cursor= "nw-resize"})(): 1}; L(event); '></div>`
     },
+    ties: [
+        ["Hermana de", {name: "#Juan Camilo Cardona C."}]
+    ],
     fotos: {
         quantity: 89,
         fotos: {
@@ -582,7 +585,7 @@ var user= {
         "/A.K.A._Dizzy/pos/THKgcCyzBy": {
             type: "repostContainments",
             date: {
-                full: "24 de Diciembre de 2021 a las 0:00 pm",
+                full: "24 de Diciembre de 2021 a las 0:00 am",
                 min: "Diciembre de 2021"
             },
             originalPoster: {
@@ -611,7 +614,7 @@ var user= {
                             <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
                         </div>`
             },
-            title: "Christmas Gifts From The Gallego Escobar Familym,",
+            title: "Christmas Gifts From The Gallego Escobar Family",
             description: ``,
             contents:  `<containment>
                             <section id="links">

@@ -43,8 +43,8 @@ var user= {
     situation: {
         "###": `<p class= "sp">Esposa de <a href= "#" title="Juan José Martínez Vidal se hizo un cambio de género y se casó con el hombre que más amó jamás, sigo mism@ antes de la cirugía de reasignación de género, se puso sus apellidos... y hasta sus nombres" class="" style="position: absolute;/*! top: 46px; */z-index: 1;user-select: none;cursor: text;" onclick="if(!$(event.target).hasClass('animate__animated')){$(event.target).toggleClass('animate__animated animate__headShake'); setTimeout(function(){$('#situation a').removeClass('animate__animated animate__headShake')}, 1000)}">&nbsp;Juan José Martínez Vidal</a></p>`
     },
-    ties: {
-    },
+    ties: [
+    ],
     fotos: {
         quantity: 11,
         fotos: {

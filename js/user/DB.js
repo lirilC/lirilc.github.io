@@ -11,6 +11,10 @@ user= {
 	                <div title="Hum " class="line" style="top: 20%;"></div>
 	                <div title="Hum " class="line" style="top: 60%;"></div>`
     },
+    situation: {
+    },
+    ties: [
+    ],
     stories: {
     	"/user/pos/kZCvatjUhF": {
     		type: "links",

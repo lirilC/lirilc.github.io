@@ -206,7 +206,7 @@ var one= function(a, b, c, d){
 				                                    </a>
 				                                </p>
 				                            </video>
-				                        </section
+				                        </section>
 		                                <div class="Comentarios">${c[e].Comentarios}</div>
 		                                <div class="options button">
 		                                    <ul>
@@ -843,9 +843,9 @@ var one= function(a, b, c, d){
 		case "tie":
 			var reTurn= ""
 			for(var e in c){
-				if(e === "###"){reTurn+=c[e]}else{
-					reTurn+= c[e].name[0] === '#'? (function(){return `<p>${e} <a href= "#" title= "No está en liril" style= "cursor: not-allowed; color: #bdbdbd; ">${c[e].name.slice(1, c[e].name.length)}</a>.</p>
-																																																					`})(): (function(){return `<p>${e} <a title="${c[e].tool}" href="/${c[e].username}">${c[e].name}</a>.</p>`})()
+				if(c[e][0] === "###"){reTurn+=c[e][1]}else{
+					reTurn+= c[e][1].name[0] === '#'? (function(){return `<p>${c[e][0]} <a href= "#" title= "No está en liril" style= "cursor: not-allowed; color: #bdbdbd; ">${c[e][1].name.slice(1, c[e][1].name.length)}</a>.</p>
+																																																					`})(): (function(){return `<p>${c[e][0]} <a title="${c[e][1].tool}" href="/${c[e][1].username}">${c[e][1].name}</a>.</p>`})()
 				}
 			}
 			return reTurn
@@ -3344,6 +3344,21 @@ _R("#videos", 0).on("click", function(ev){
 	})
 })
 /*RooT RooTed users' links*/
+_R('a[href="/L"]').on("click", function(e){
+	e.preventDefault()
+	
+	history.pushState({page: 1}, "", `/L`)
+  RooT.imporT("/js/L/DB.js", Then, function(d){
+    window.user= d._user()
+    RooT.imporT("/js/templates/user.js", Then, function(d){
+      _T(document).scrollTop(0)
+      _R("title").text(`${user.users_name} | liril`)
+      RooT.replace(_R("#biography", 0), wiTh, d.app().biography())
+
+      RooT.ready()
+    })
+  })
+})
 _R('a[href="/A.K.A._Dizzy"]').on("click", function(e){
 	e.preventDefault()
 	

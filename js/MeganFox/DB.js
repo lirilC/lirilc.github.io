@@ -38,61 +38,61 @@ var user= {
     situation: {
         "Comprometida con": {name: "#Colson Baker"}
     },
-    ties: {
-        "Hija de": {name: "#Satanás Belcebú"},
-        "Hermana de": {username: "A.K.A._Dizzy", name: "Luis Eduardo Gallego García", tool:   `<div class='tool'>
-                                                                                                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                                                                                                <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
-                                                                                                <div class='datos'>
-                                                                                                    <ul class='actions'>
-                                                                                                        <li class='chatear' title='Chatear'>C</li>
-                                                                                                        <li class='agregar' title='Agregar'>A</li>
-                                                                                                        <li class='juzgar' title='Juzgar'>J</li>
-                                                                                                    </ul>                  
-                                                                                                    <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
-                                                                                                    <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
-                                                                                                </div>`},
-        "Tía de": {username: "PpP", name: "La Perrita Del Poste", tool:    `<div class='tool'>
-                                                                                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                                                                                <img src='/resources/images/PpP/bZj2vYrklo_tn.jpg'>
-                                                                                <div class='datos'>
-                                                                                    <ul class='actions'>
-                                                                                        <li class='chatear' title='Chatear'>C</li>
-                                                                                        <li class='agregar' title='Agregar'>A</li>
-                                                                                        <li class='juzgar' title='Juzgar'>J</li>
-                                                                                    </ul>
-                                                                                    <p class='username' title= 'La Perrita Del Poste'>La Perrita Del Poste</p>
-                                                                                    <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                                                                                </div>
-                                                                            </div>`},
-        "Tía de": {username: "Eld", name: "ElDelprincipio", tool:      `<div class='tool'>
-                                                                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                                                                            <img src='/resources/images/Eld/oow4doJxKO_tn.jpg'>
-                                                                            <div class='datos'>
-                                                                                <ul class='actions'>
-                                                                                    <li class='chatear' title='Chatear'>C</li>
-                                                                                    <li class='agregar' title='Agregar'>A</li>
-                                                                                    <li class='juzgar' title='Juzgar'>J</li>
-                                                                                </ul>                  
-                                                                                <p class='username' title= 'ElDelprincipio'>ElDelprincipio</p>
-                                                                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                                                                            </div>
-                                                                        </div>`},
-        "Nieta de": {username: "G-Suschrist", name: "Dios Jesucristo", tool:   `<div class='tool'>
+    ties: [
+        ["Hija de", {name: "#Satanás Belcebú"}],
+        ["Hermana de", {username: "A.K.A._Dizzy", name: "Luis Eduardo Gallego García", tool:   `<div class='tool'>
+                                                                                                        <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                                                                                                        <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                                                                                                        <div class='datos'>
+                                                                                                            <ul class='actions'>
+                                                                                                                <li class='chatear' title='Chatear'>C</li>
+                                                                                                                <li class='agregar' title='Agregar'>A</li>
+                                                                                                                <li class='juzgar' title='Juzgar'>J</li>
+                                                                                                            </ul>                  
+                                                                                                            <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
+                                                                                                            <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
+                                                                                                        </div>`}],
+        ["Tía de", {username: "PpP", name: "La Perrita Del Poste", tool:    `<div class='tool'>
+                                                                                        <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                                                                                        <img src='/resources/images/PpP/bZj2vYrklo_tn.jpg'>
+                                                                                        <div class='datos'>
+                                                                                            <ul class='actions'>
+                                                                                                <li class='chatear' title='Chatear'>C</li>
+                                                                                                <li class='agregar' title='Agregar'>A</li>
+                                                                                                <li class='juzgar' title='Juzgar'>J</li>
+                                                                                            </ul>
+                                                                                            <p class='username' title= 'La Perrita Del Poste'>La Perrita Del Poste</p>
+                                                                                            <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+                                                                                        </div>
+                                                                                    </div>`}],
+        ["Tía de", {username: "Eld", name: "ElDelprincipio", tool:      `<div class='tool'>
                                                                                     <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                                                                                    <img src='/resources/images/G-Suschrist/Rvu7YjVcXr.jpg'>
+                                                                                    <img src='/resources/images/Eld/oow4doJxKO_tn.jpg'>
                                                                                     <div class='datos'>
                                                                                         <ul class='actions'>
                                                                                             <li class='chatear' title='Chatear'>C</li>
                                                                                             <li class='agregar' title='Agregar'>A</li>
                                                                                             <li class='juzgar' title='Juzgar'>J</li>
                                                                                         </ul>                  
-                                                                                        <p class='username' title= 'Dios Jesucristo'>Dios Jesucristo</p>
+                                                                                        <p class='username' title= 'ElDelprincipio'>ElDelprincipio</p>
                                                                                         <p class='rol'>G <b style='color:#fff;'>+100</b></p>
                                                                                     </div>
-                                                                                </div>`}, 
-        "Sobrina de": {name: "#Jesús De Nazareth"}
-    },
+                                                                                </div>`}],
+        ["Nieta de", {username: "G-Suschrist", name: "Dios Jesucristo", tool:   `<div class='tool'>
+                                                                                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                                                                                            <img src='/resources/images/G-Suschrist/Rvu7YjVcXr.jpg'>
+                                                                                            <div class='datos'>
+                                                                                                <ul class='actions'>
+                                                                                                    <li class='chatear' title='Chatear'>C</li>
+                                                                                                    <li class='agregar' title='Agregar'>A</li>
+                                                                                                    <li class='juzgar' title='Juzgar'>J</li>
+                                                                                                </ul>                  
+                                                                                                <p class='username' title= 'Dios Jesucristo'>Dios Jesucristo</p>
+                                                                                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+                                                                                            </div>
+                                                                                        </div>`}], 
+        ["Sobrina de", {name: "#Jesús De Nazareth"}]
+    ],
     fotos: {
         quantity: 92,
         fotos: {
@@ -458,7 +458,7 @@ var user= {
         "/A.K.A._Dizzy/pos/THKgcCyzBy": {
             type: "repostContainments",
             date: {
-                full: "24 de Diciembre de 2021 a las 0:00 pm",
+                full: "24 de Diciembre de 2021 a las 0:00 am",
                 min: "Diciembre de 2021"
             },
             originalPoster: {
@@ -487,7 +487,7 @@ var user= {
                             <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
                         </div>`
             },
-            title: "Christmas Gifts From The Gallego Escobar Familym,",
+            title: "Christmas Gifts From The Gallego Escobar Family",
             description: ``,
             contents:  `<containment>
                             <section id="links">
