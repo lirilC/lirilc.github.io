@@ -131,6 +131,7 @@ console.log(error)
     
     //Beruda Vv11
     Vv11 = new THREE.Object3D();
+    Vv11.dimensions= {width: 0.17, height: 0.06, depth: 0.3}
     Vv11.car_name= `Beruda Vv11`
     Vv11.startingSpeed= 0.005
     Vv11.speed= Vv11.startingSpeed
@@ -263,6 +264,7 @@ console.log(error)
     
     //GueRddx d6687
     d6687 = new THREE.Object3D();
+    d6687.dimensions= {width: 0.17, height: 0.051, depth: 0.308}
     d6687.car_name= `GueRddx d6687`
     d6687.startingSpeed= 0.008
     d6687.speed= d6687.startingSpeed
@@ -393,6 +395,7 @@ console.log(error)
     
     //Exclude n9r
     n9r = new THREE.Object3D();
+    n9r.dimensions= {width: 0.21, height: 0.063, depth: 0.327}
     n9r.car_name= `Exclude n9r`
     n9r.startingSpeed= 0.004
     n9r.speed= n9r.startingSpeed
@@ -601,7 +604,30 @@ console.log(error)
         }; 
     } 
     
-
+    distanceCRF= 0
+    castRayFromThisFarFromCenterInTheseDegrees= function(cdx,cdy,degr, rayLength){
+        points = []
+        points.push( new THREE.Vector3( Car.position.x + Math.cos(Car.rotation.z) * cdx, Car.position.y + Math.sin(Car.rotation.z) * cdy, Car.position.z ) )
+        points.push( new THREE.Vector3( Car.position.x + Math.cos(Car.rotation.z + degr * un_grado_en_radianes) * rayLength + Math.cos(Car.rotation.z) * cdx, Car.position.y  + Math.sin(Car.rotation.z + degr * un_grado_en_radianes) * rayLength + Math.sin(Car.rotation.z) * cdy , Car.position.z ) )
+        
+        //line = new THREE.Line( new THREE.BufferGeometry().setFromPoints( points ),  new THREE.LineBasicMaterial({color: 0x0000ff}) );
+        raycaster = new THREE.Raycaster();
+        var from = new THREE.Vector3( Car.position.x + Math.cos(Car.rotation.z) * cdx, Car.position.y + Math.sin(Car.rotation.z) * cdy, Car.position.z );
+        var to = new THREE.Vector3( Car.position.x + Math.cos(Car.rotation.z + degr * un_grado_en_radianes) * rayLength + Math.cos(Car.rotation.z) * cdx, Car.position.y  + Math.sin(Car.rotation.z + degr * un_grado_en_radianes) * rayLength + Math.sin(Car.rotation.z) * cdy , Car.position.z );
+        to.sub( from ).normalize()
+        raycaster.set( from, to );
+        /*pnt= raycaster.intersectObject(gOfSVG[0])[0].point
+        Inte.position.x= pnt.x
+        Inte.position.y= pnt.y
+        Inte.position.z= pnt.z*/
+        //scene.add( line );
+        if(raycaster.intersectObject(gOfSVG[0])[0].distance <= rayLength){
+            distanceCRF= rayLength - raycaster.intersectObject(gOfSVG[0])[0].distance 
+            return true
+        }else{
+            return false
+        }
+    }
     v3 = new THREE.Vector3( 0, 0, 0 ); 
     
     curve = new THREE.QuadraticBezierCurve(
@@ -828,7 +854,7 @@ console.log(error)
     
     
     luz_direccional = new THREE.DirectionalLight( 0xfdfdde ); 
-    luz_direccional.intensity= 1.5; 
+    luz_direccional.intensity= 0.5; 
     luz_direccional.castShadow= true; 
     luz_direccional.position.set( 5, 2.04, 2.991 ); 
     
@@ -1155,6 +1181,16 @@ console.log(error)
             if(Car.speed - Car.speedDecrement > Car.startingSpeed){Car.speed-= Car.speedDecrement}else{Car.speed= Car.startingSpeed}
         }
 
+        if(
+            castRayFromThisFarFromCenterInTheseDegrees(Car.dimensions.width / 2, 0, 90, Car.dimensions.depth / 2 + Car.speed) ||
+            castRayFromThisFarFromCenterInTheseDegrees(Car.dimensions.width / 4, 0, 90, Car.dimensions.depth / 2 + Car.speed) ||
+            castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, Car.dimensions.depth / 2 + Car.speed) ||
+            castRayFromThisFarFromCenterInTheseDegrees(-Car.dimensions.width / 2, 0, 90, Car.dimensions.depth / 2 + Car.speed) ||
+            castRayFromThisFarFromCenterInTheseDegrees(-Car.dimensions.width / 4, 0, 90, Car.dimensions.depth / 2 + Car.speed)
+            ){
+            Car.speed= 0
+        }
+
         if(Car.speed > Car.startingSpeed){
             Car.position.x+= xEYConElÁngulo(Car.speed, parseFloat($(".bugger").text())).x; 
             Car.position.y+= xEYConElÁngulo(Car.speed, parseFloat($(".bugger").text())).y; 
@@ -1163,7 +1199,10 @@ console.log(error)
             lentitud= lentitud < 0? 0: lentitud; 
         }
         
-        if(keysDown.s && !keysDown.w){
+        if(keysDown.s && !keysDown.w && !(
+                castRayFromThisFarFromCenterInTheseDegrees(Car.dimensions.width / 2, 0, 270, Car.dimensions.depth / 2 + speed) ||
+                castRayFromThisFarFromCenterInTheseDegrees(-Car.dimensions.width / 2, 0, 270, Car.dimensions.depth / 2 + speed)
+            )){
             if(!caminando){
                 Car.position.y-= xEYConElÁngulo(speed, parseFloat($(".bugger").text())).y; 
                 Car.position.x-= xEYConElÁngulo(speed, parseFloat($(".bugger").text())).x; 
@@ -1313,7 +1352,10 @@ console.log(error)
             //$(".burger span").html("");  
             //$(".burger").attr( "title" , "" );  
     
-            if(keysDown.s && !keysDown.w){ 
+            if(keysDown.s && !keysDown.w && !(
+                castRayFromThisFarFromCenterInTheseDegrees(Car.dimensions.width / 2, 0, 270, Car.dimensions.depth / 2 + speed) ||
+                castRayFromThisFarFromCenterInTheseDegrees(-Car.dimensions.width / 2, 0, 270, Car.dimensions.depth / 2 + speed)
+            )){ 
                 if(!caminando){
                     ángulo= ángDeLaPendiente( Car.children[9].getWorldPosition(v3).x , Car.children[9].getWorldPosition(v3).y, Car.children[9].getWorldPosition(v3).x + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Car.rotation.z / un_grado_en_radianes + 90 ) ) ).x , Car.children[9].getWorldPosition(v3).y + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Car.rotation.z / un_grado_en_radianes + 90 ) ) ).y ) * -1 + ángDeLaPendiente( Car.children[9].getWorldPosition(v3).x , Car.children[9].getWorldPosition(v3).y, closestP2.x , closestP2.y ); 
         
@@ -1409,7 +1451,7 @@ console.log(error)
         camera.position.y= oCamera.position.y + xEYConElÁngulo( ( 1.5 + dCamera ), getInQuadrant( -getInQuadrant( oCamera.rotation.z / un_grado_en_radianes + 270 ) ) ).y; 
         
         camera.rotation.y= oCamera.rotation.z; 
-    
+
         renderer.render( scene, camera ); 
     
         /*console.log( curveObject == oldCurve ); */ 
