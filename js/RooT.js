@@ -508,6 +508,35 @@ var one= function(a, b, c, d){
 		                                </div>
 		                            </section>
 		                            `
+						break;
+					case "fork":
+						reTurn+=   `<section class="story fork links">
+		                                <div class="info">
+		                                    <img class="fork" src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
+		                                    <div class="forkedFrom"></div>
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalRepoOwner.rol.level}'>
+		                                    <img class="fork" src="${c[e].originalRepoOwner.profilePic}" alt="">
+		                                    <p class="username fork"><a class="target" href="/${user.username}" title= "${user.tool}">${user.users_name}</a> Forkeó de <a class="target" href="/${c[e].originalRepoOwner.username}" title="${c[e].originalRepoOwner.tool}">${c[e].originalRepoOwner.users_name}</a><br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                ${c[e].contents}
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${e}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
 						break
 				}
 			}
@@ -848,6 +877,13 @@ var one= function(a, b, c, d){
 																																																					`})(): (function(){return `<p>${c[e][0]} <a title="${c[e][1].tool}" href="/${c[e][1].username}">${c[e][1].name}</a>.</p>`})()
 				}
 			}
+			reTurn= `<div>
+                        <div>
+                            <containment>
+                            ${reTurn}
+                            </containment>
+                        </div>
+                    </div>`
 			return reTurn
 	}
 }
@@ -3394,6 +3430,21 @@ _R('a[href="/MeganFox"]').on("click", function(e){
 	
 	history.pushState({page: 1}, "", `/MeganFox`)
   RooT.imporT("/js/MeganFox/DB.js", Then, function(d){
+    window.user= d._user()
+    RooT.imporT("/js/templates/user.js", Then, function(d){
+      _T(document).scrollTop(0)
+      _R("title").text(`${user.users_name} | liril`)
+      RooT.replace(_R("#biography", 0), wiTh, d.app().biography())
+
+      RooT.ready()
+    })
+  })
+})
+_R('a[href="/G-Suschrist"]').on("click", function(e){
+	e.preventDefault()
+	
+	history.pushState({page: 1}, "", `/G-Suschrist`)
+  RooT.imporT("/js/G-Suschrist/DB.js", Then, function(d){
     window.user= d._user()
     RooT.imporT("/js/templates/user.js", Then, function(d){
       _T(document).scrollTop(0)
