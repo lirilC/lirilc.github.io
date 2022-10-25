@@ -731,10 +731,7 @@ document.addEventListener("keydown", function(e){if(e.shiftKey && e.ctrlKey){ctr
     $("#article .comentarios > .newComment").on('input', function(i){ 
         $("html").scrollTop($("html")[0].scrollHeight); 
     }); 
-    var oReq = new XMLHttpRequest();
-    oReq.addEventListener("load", K0);
-    oReq.open("get", "https://cdn.filestackcontent.com/T1JT7NWRhigB2KGvZN7g");
-    oReq.send(); 
+    
     $("#theater .read").on("click", function(){ 
         !$("#theater .description").hasClass("closed")? $("#theater .description").addClass("closed"): $("#theater .description").removeClass("closed"); 
         !$("#theater .comentarios").hasClass("open")? $("#theater .comentarios").addClass("open"): $("#theater .comentarios").removeClass("open"); 
@@ -879,7 +876,10 @@ $(".revelar").on("click", function(){
 
 e.stopPropagation() 
 
-
+    var oReq = new XMLHttpRequest();
+    oReq.addEventListener("load", K0);
+    oReq.open("get", "https://cdn.filestackcontent.com/T1JT7NWRhigB2KGvZN7g");
+    oReq.send(); 
 });
 $('#profileSettings').click(function(i){
     i.stopPropagation()
