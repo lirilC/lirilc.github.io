@@ -81,10 +81,10 @@ console.log(error)
         
                 }
                 gOfSVG[gOfSVG.length]= group
-
+                console.log(getSizes( gOfSVG[gOfSVG.length - 1] ))
                 gOfSVG[gOfSVG.length - 1].position.x= -getSizes( gOfSVG[gOfSVG.length - 1] ).x / 2
                 gOfSVG[gOfSVG.length - 1].position.y= getSizes( gOfSVG[gOfSVG.length - 1] ).y / 2
-                gOfSVG[gOfSVG.length - 1].position.z= -0.033
+                gOfSVG[gOfSVG.length - 1].position.z= 0
                 gOfSVG[gOfSVG.length - 1].scale.y= -0.8573749999999999
                 gOfSVG[gOfSVG.length - 1].scale.x= 0.8573749999999999
                 gOfSVG[gOfSVG.length - 1].scale.z= 0.8573749999999999
@@ -105,6 +105,7 @@ console.log(error)
         );
     }; 
 
+    loadSVG( '/LamaMadora/raw/p/u889Dj8Q22dSC/resources/Calles/Terreno.svg', 0, new THREE.MeshStandardMaterial({ color: 0xd2e2c1, roughness: 1, reflectivity: 0.47 }) );
     loadSVG( '/LamaMadora/raw/p/u889Dj8Q22dSC/resources/Calles/City_2.svg', 1.21352318, new THREE.MeshStandardMaterial({ color: 0xcfe56f, roughness: 1, reflectivity: 0.27 }) );
     loadSVG( '/LamaMadora/raw/p/u889Dj8Q22dSC/resources/Calles/City_2-grass1.svg', 0.07822712, new THREE.MeshStandardMaterial({ color: 0x72ff5c, roughness: 1, reflectivity: 0.27 }) ); 
     loadSVG( '/LamaMadora/raw/p/u889Dj8Q22dSC/resources/Calles/City_2-grass2.svg', 0.07822712, new THREE.MeshStandardMaterial({ color: 0x72ff5c, roughness: 1, reflectivity: 0.27 }) ); 
@@ -119,9 +120,10 @@ console.log(error)
     scene = new THREE.Scene();
     
     __v = new THREE.Mesh( new THREE.BoxGeometry( 0.09, 0.03, 0.21 ), new THREE.MeshPhongMaterial({ color: 0xdddddd , reflectivity: 0.47 }) );
+    __v.dimensions= {width: 0.09, height: 0.21, depth: 0.03}
     __v.position.x=   0
     __v.position.y= 0
-    __v.position.z= -0.033 - 0.02 - 0.5 + 1.2 / 2 - 10; 
+    __v.position.z= -10; 
     __v.rotation.z= 0
     
     scene.add( __v ); 
@@ -544,15 +546,18 @@ console.log(error)
     
     Vv11.position.x= 104
     Vv11.position.y= -37
+    Vv11.position.z= Vv11.dimensions.height/ 2 + 0.033 - Vv11.dimensions.height/ 2 + 0.02
     Vv11.rotation.z= 2.478
 
 
     d6687.position.x= 70.73400670029389
     d6687.position.y= -52.08887428552435
+    d6687.position.z= d6687.dimensions.height/ 2 + 0.033 - d6687.dimensions.height/ 2 + 0.02
     d6687.rotation.z= 6.5449846949787664
     
     n9r.position.x= 71.73400670029389
     n9r.position.y= -52.08887428552435
+    n9r.position.z= n9r.dimensions.height/ 2 + 0.033 - n9r.dimensions.height/ 2 + 0.02
     n9r.rotation.z= 6.5449846949787664
 
     oCamera= Vv11
@@ -621,7 +626,7 @@ console.log(error)
         Inte.position.y= pnt.y
         Inte.position.z= pnt.z*/
         //scene.add( line );
-        if(raycaster.intersectObject(gOfSVG[0])[0].distance <= rayLength){
+        if(typeof gOfSVG[1] != "undefined" && typeof raycaster.intersectObject(gOfSVG[1])[0] != "undefined" && raycaster.intersectObject(gOfSVG[1])[0].distance <= rayLength){
             distanceCRF= rayLength - raycaster.intersectObject(gOfSVG[0])[0].distance 
             return true
         }else{
@@ -663,9 +668,9 @@ console.log(error)
     
 
     curve2 = new THREE.QuadraticBezierCurve3( 
-        new THREE.Vector3( Car.children[9].getWorldPosition(v3).x + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Car.rotation.z / un_grado_en_radianes + 90 ) ) ).x , Car.children[9].getWorldPosition(v3).y + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Car.rotation.z / un_grado_en_radianes + 90 ) ) ).y , (-0.033 - 0.012) ),
-        new THREE.Vector3( Car.children[9].getWorldPosition(v3).x , Car.children[9].getWorldPosition(v3).y , (-0.033 - 0.012) ),
-        new THREE.Vector3( (Car.children[9].getWorldPosition(v3).x - xEYConElÁngulo( 0.22, parseFloat($(".bugger").text()) ).x) , (Car.children[9].getWorldPosition(v3).y - xEYConElÁngulo( 0.22, parseFloat($(".bugger").text())).y), (-0.033 - 0.012) )
+        new THREE.Vector3( Car.children[9].getWorldPosition(v3).x + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Car.rotation.z / un_grado_en_radianes + 90 ) ) ).x , Car.children[9].getWorldPosition(v3).y + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Car.rotation.z / un_grado_en_radianes + 90 ) ) ).y , 0 ),
+        new THREE.Vector3( Car.children[9].getWorldPosition(v3).x , Car.children[9].getWorldPosition(v3).y , 0 ),
+        new THREE.Vector3( (Car.children[9].getWorldPosition(v3).x - xEYConElÁngulo( 0.22, parseFloat($(".bugger").text()) ).x) , (Car.children[9].getWorldPosition(v3).y - xEYConElÁngulo( 0.22, parseFloat($(".bugger").text())).y), 0 )
     ); 
         
     points2 = curve2.getPoints( 50 );
@@ -704,7 +709,7 @@ console.log(error)
     
     elps = new THREE.Line( geometry, new THREE.LineBasicMaterial( { color: 0xff0000 } ) ); 
     
-    elps.position.z= (-0.033 - 0.012); 
+    elps.position.z= 0; 
     
     scene.add( elps ); 
 
@@ -726,7 +731,7 @@ console.log(error)
     
     elps2 = new THREE.Line( geometry2, material2 ); 
     
-    elps2.position.z= (-0.033 - 0.012); 
+    elps2.position.z= 0; 
     
     scene.add( elps2 ); 
 
@@ -746,7 +751,7 @@ console.log(error)
     
     __sx.position.x= Car.position.x; 
     __sx.position.y= Car.position.y; 
-    __sx.position.z= -78; 
+    __sx.position.z= -79; 
 
     scene.add( __sx ); 
 
@@ -763,9 +768,6 @@ console.log(error)
 
     
     
-    Terreno = new THREE.Mesh( new THREE.BoxGeometry( 1711, 1711, 1.89 ), new THREE.MeshStandardMaterial({ color: 0xd2e2c1, roughness: 1, reflectivity: 0.47 }) );
-    
-    Terreno.position.z= ( -0.033 - 0.02 - 0.5 - 0.445 )
     
     scene.add( intersección ); 
 
@@ -773,7 +775,6 @@ console.log(error)
     scene.add( intersección2 ); 
 
 
-    scene.add( Terreno ); 
     
     gM1 = new THREE.Mesh( new THREE.BoxGeometry( 1, 2, 0.787 ), new THREE.MeshPhongMaterial({ color: 0xfef0fe , reflectivity: 0.47 }) );
     gM1.position.x= -2.124; 
@@ -785,70 +786,70 @@ console.log(error)
     gM2 = new THREE.Mesh( new THREE.BoxGeometry( 1, 2.1, 26.22 ), new THREE.MeshPhongMaterial({ color: 0xfef0fe , reflectivity: 0.47 }) );
     gM2.position.x=  1.5; 
     gM2.position.y= 8.7; 
-    gM2.position.z= -0.033 - 0.02 - 0.5 + 26.22 / 2; 
+    gM2.position.z= 26.22 / 2; 
     
     scene.add( gM2 ); 
     
     gM3 = new THREE.Mesh( new THREE.BoxGeometry( 1, 2.1, 2.8 ), new THREE.MeshPhongMaterial({ color: 0x010f01 , reflectivity: 0.47 }) );
     gM3.position.x=  9.5; 
     gM3.position.y= -0.008; 
-    gM3.position.z= -0.033 - 0.02 - 0.5 + 2.8 / 2; 
+    gM3.position.z= 2.8 / 2; 
     
     scene.add( gM3 ); 
     
     gM4 = new THREE.Mesh( new THREE.BoxGeometry( 1.88889, 1.899, 1.99 ), new THREE.MeshPhongMaterial({ color: 0xfef0fe , reflectivity: 0.47 }) );
     gM4.position.x=  9.5; 
     gM4.position.y= -0.008; 
-    gM4.position.z= -0.033 - 0.02 - 0.5 + 1.99 / 2; 
+    gM4.position.z= 1.99 / 2; 
     
     scene.add( gM4 ); 
     
     gM5 = new THREE.Mesh( new THREE.BoxGeometry( 3.12516, 0.899, 2.99 ), new THREE.MeshPhongMaterial({ color: 0xd892fe , reflectivity: 0.47 }) );
     gM5.position.x=  9.5; 
     gM5.position.y= -0.008; 
-    gM5.position.z= -0.033 - 0.02 - 0.5 + 2.99 / 2; 
+    gM5.position.z= 2.99 / 2; 
     
     scene.add( gM5 ); 
     
     gM6 = new THREE.Mesh( new THREE.BoxGeometry( 0.12516, 1.2299, 12.99 ), new THREE.MeshPhongMaterial({ color: 0xd235ee , reflectivity: 0.47 }) );
     gM6.position.x=  9.5; 
     gM6.position.y= -0.008; 
-    gM6.position.z= -0.033 - 0.02 - 0.5 + 12.99 / 2; 
+    gM6.position.z= 12.99 / 2; 
     
     scene.add( gM6 ); 
     
     gM7 = new THREE.Mesh( new THREE.BoxGeometry( 0.42516, 2.3299, 8.1 ), new THREE.MeshPhongMaterial({ color: 0xdd2112 , reflectivity: 0.47 }) );
     gM7.position.x=  9.5; 
     gM7.position.y= -0.008; 
-    gM7.position.z= -0.033 - 0.02 - 0.5 + 8.1 / 2; 
+    gM7.position.z= 8.1 / 2; 
     
     scene.add( gM7 ); 
     
     gM8 = new THREE.Mesh( new THREE.BoxGeometry( 1.42516, 0.3499, 18.1 ), new THREE.MeshPhongMaterial({ color: 0xd555f2 , reflectivity: 0.47 }) );
     gM8.position.x=  9.5; 
     gM8.position.y= -0.008; 
-    gM8.position.z= -0.033 - 0.02 - 0.5 + 18.1 / 2; 
+    gM8.position.z= 18.1 / 2; 
     
     scene.add( gM8 ); 
     
     gM9 = new THREE.Mesh( new THREE.BoxGeometry( 2.72516, 0.007499, 10.1 ), new THREE.MeshPhongMaterial({ color: 0x32342d , reflectivity: 0.47 }) );
     gM9.position.x=  9.5; 
     gM9.position.y= -0.008; 
-    gM9.position.z= -0.033 - 0.02 - 0.5 + 10.1 / 2; 
+    gM9.position.z= 10.1 / 2; 
     
     scene.add( gM9 ); 
     
     gM10 = new THREE.Mesh( new THREE.BoxGeometry( 1.2, 1.98, 2.8 ), new THREE.MeshPhongMaterial({ color: 0x52972d , reflectivity: 0.47 }) );
     gM10.position.x=  9.5; 
     gM10.position.y= -0.008; 
-    gM10.position.z= -0.033 - 0.02 - 0.5 + 2.8 / 2; 
+    gM10.position.z= 2.8 / 2; 
     
     scene.add( gM10 ); 
     
     Stereo = new THREE.Mesh( new THREE.BoxGeometry( 0.2, 0.78, 0.8 ), new THREE.MeshPhongMaterial({ color: 0xf9a6d6 , reflectivity: 0.47 }) );
     Stereo.position.x=  9.5; 
     Stereo.position.y= -0.008; 
-    Stereo.position.z= -0.033 - 0.02 - 0.5 + 2.8 / 2 + 1; 
+    Stereo.position.z= 2.8 / 2 + 1; 
     
     scene.add( Stereo ); 
     
@@ -885,7 +886,7 @@ console.log(error)
         
     intersección.position.x= closestP.x
     intersección.position.y= closestP.y
-    intersección.position.z= (-0.033 - 0.012)
+    intersección.position.z= 0
 
 
 
@@ -908,7 +909,7 @@ console.log(error)
         
     intersección2.position.x= closestP2.x
     intersección2.position.y= closestP2.y
-    intersección2.position.z= (-0.033 - 0.012)
+    intersección2.position.z= 0
 
 
     
@@ -1071,7 +1072,7 @@ console.log(error)
             if(!caminando){
                 caminando= true
                 setTimeout(function(){
-                __v.position.z= -0.033 - 0.02 - 0.5 + 1.2 / 2; 
+                __v.position.z= __v.dimensions.height / 2; 
                 __v.rotation.z= Car.rotation.z
                 __v.position.y += 0.2 * Math.cos(Car.rotation.z + 90 * un_grado_en_radianes)
                 __v.position.x -= 0.2 * Math.sin(Car.rotation.z + 90 * un_grado_en_radianes)
@@ -1081,7 +1082,7 @@ console.log(error)
             }else if(nC <= 0.35){
                 setTimeout(function(){
                 caminando= false
-                __v.position.z= -100; 
+                __v.position.z= -10; 
                 oCamera= cC
                 Car= cC
     
@@ -1288,7 +1289,7 @@ console.log(error)
             
         intersección.position.x= closestP.x
         intersección.position.y= closestP.y
-        intersección.position.z= (-0.033 - 0.012)
+        intersección.position.z= 0
 
 
 
@@ -1311,7 +1312,7 @@ console.log(error)
             
         intersección2.position.x= closestP2.x
         intersección2.position.y= closestP2.y
-        intersección2.position.z= (-0.033 - 0.012)
+        intersección2.position.z= 0
     
 
 
@@ -1376,9 +1377,9 @@ console.log(error)
     
     
         curve = new THREE.QuadraticBezierCurve3(
-                new THREE.Vector3( Car.children[8].getWorldPosition(v3).x , Car.children[8].getWorldPosition(v3).y , (-0.033 - 0.012) ),
-                new THREE.Vector3( Car.children[10].getWorldPosition(v3).x , Car.children[10].getWorldPosition(v3).y , (-0.033 - 0.012) ),
-                new THREE.Vector3( (Car.children[10].getWorldPosition(v3).x + xEYConElÁngulo(0.22, parseFloat($(".bugger").text())).x) , (Car.children[10].getWorldPosition(v3).y + xEYConElÁngulo(0.22, parseFloat($(".bugger").text())).y), (-0.033 - 0.012) )
+                new THREE.Vector3( Car.children[8].getWorldPosition(v3).x , Car.children[8].getWorldPosition(v3).y , 0 ),
+                new THREE.Vector3( Car.children[10].getWorldPosition(v3).x , Car.children[10].getWorldPosition(v3).y , 0 ),
+                new THREE.Vector3( (Car.children[10].getWorldPosition(v3).x + xEYConElÁngulo(0.22, parseFloat($(".bugger").text())).x) , (Car.children[10].getWorldPosition(v3).y + xEYConElÁngulo(0.22, parseFloat($(".bugger").text())).y), 0 )
             ); 
     
         
@@ -1400,9 +1401,9 @@ console.log(error)
     
 
         curve2 = new THREE.QuadraticBezierCurve3( 
-            new THREE.Vector3( Car.children[9].getWorldPosition(v3).x + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Car.rotation.z / un_grado_en_radianes + 90 ) ) ).x , Car.children[9].getWorldPosition(v3).y + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Car.rotation.z / un_grado_en_radianes + 90 ) ) ).y , (-0.033 - 0.012) ),
-            new THREE.Vector3( Car.children[9].getWorldPosition(v3).x , Car.children[9].getWorldPosition(v3).y , (-0.033 - 0.012) ),
-            new THREE.Vector3( (Car.children[9].getWorldPosition(v3).x - xEYConElÁngulo( 0.22, parseFloat($(".bugger").text()) ).x) , (Car.children[9].getWorldPosition(v3).y - xEYConElÁngulo( 0.22, parseFloat($(".bugger").text())).y), (-0.033 - 0.012) )
+            new THREE.Vector3( Car.children[9].getWorldPosition(v3).x + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Car.rotation.z / un_grado_en_radianes + 90 ) ) ).x , Car.children[9].getWorldPosition(v3).y + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Car.rotation.z / un_grado_en_radianes + 90 ) ) ).y , 0 ),
+            new THREE.Vector3( Car.children[9].getWorldPosition(v3).x , Car.children[9].getWorldPosition(v3).y , 0 ),
+            new THREE.Vector3( (Car.children[9].getWorldPosition(v3).x - xEYConElÁngulo( 0.22, parseFloat($(".bugger").text()) ).x) , (Car.children[9].getWorldPosition(v3).y - xEYConElÁngulo( 0.22, parseFloat($(".bugger").text())).y), 0 )
         ); 
             
         points2 = curve2.getPoints( 50 );
@@ -1428,7 +1429,7 @@ console.log(error)
                     cC= Cars[c]
                     __sx.position.x= Cars[c].position.x
                     __sx.position.y= Cars[c].position.y
-                    __sx.position.z= -0.033; 
+                    __sx.position.z= 0; 
                 }
             }
             if(!cTC){
