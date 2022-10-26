@@ -12,7 +12,7 @@
 }
 #grid.fried 
 { 
-	caret-color: #c1c15e; 
+	caret-color: #b2b25c; 
 } 
 #water 
 { 
@@ -29,6 +29,7 @@
 	border: 1px inset #000; 
 	font-size: 20px; 
 	padding: 0 5px; 
+	font-family: serif;
 } 
 #currency 
 { 
@@ -37,4 +38,5 @@
 	border: 1px inset #000; 
 	font-size: 20px; 
 	padding: 0 5px; 
+	font-family: serif;
 } 
