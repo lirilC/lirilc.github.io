@@ -17,10 +17,10 @@ selfDestructableSetIntervalWhichWaitsForSomething= setInterval(function(){
         return { x: boundingBox.max.x - boundingBox.min.x, y: boundingBox.max.y - boundingBox.min.y, z: boundingBox.max.z - boundingBox.min.z }; 
     } 
     
-    THREE.Group.prototype.translate= function( x, y, z ){ 
-        this.translateX( x ); 
-        this.translateY( y ); 
-        this.translateX( z ); 
+    THREE.Group.prototype.positio= function( x, y, z ){ 
+        this.position.x= x 
+        this.position.y= y
+        this.position.z= z
     } 
 gOfSVG= []
 gOfObj= []
@@ -125,6 +125,44 @@ console.log(error)
     __v.position.y= 0
     __v.position.z= -10; 
     __v.rotation.z= 0
+    
+    ai= []
+    ai.push(new THREE.Mesh( new THREE.BoxGeometry( 0.03, 0.13, 0.04 ), new THREE.MeshPhongMaterial({ color: 0x181716 , reflectivity: 0.47 }) ))
+    ai.push(new THREE.Mesh( new THREE.BoxGeometry( 0.03, 0.13, 0.04 ), new THREE.MeshPhongMaterial({ color: 0xfb6da1 , reflectivity: 0.47 }) ))
+    ai.push(new THREE.Mesh( new THREE.BoxGeometry( 0.03, 0.13, 0.04 ), new THREE.MeshPhongMaterial({ color: 0xabd27c , reflectivity: 0.47 }) ))
+    ai.push(new THREE.Mesh( new THREE.BoxGeometry( 0.03, 0.13, 0.04 ), new THREE.MeshPhongMaterial({ color: 0x102902 , reflectivity: 0.47 }) ))
+    ai.push(new THREE.Mesh( new THREE.BoxGeometry( 0.03, 0.13, 0.04 ), new THREE.MeshPhongMaterial({ color: 0x509d9d , reflectivity: 0.47 }) ))
+    ai.push(new THREE.Mesh( new THREE.BoxGeometry( 0.03, 0.13, 0.04 ), new THREE.MeshPhongMaterial({ color: 0xcad29d , reflectivity: 0.47 }) ))
+    ai.push(new THREE.Mesh( new THREE.BoxGeometry( 0.03, 0.13, 0.04 ), new THREE.MeshPhongMaterial({ color: 0xf9e9f8 , reflectivity: 0.47 }) ))
+    ai.push(new THREE.Mesh( new THREE.BoxGeometry( 0.03, 0.13, 0.04 ), new THREE.MeshPhongMaterial({ color: 0xd920d9 , reflectivity: 0.47 }) ))
+    ai.push(new THREE.Mesh( new THREE.BoxGeometry( 0.03, 0.13, 0.04 ), new THREE.MeshPhongMaterial({ color: 0xfeab23 , reflectivity: 0.47 }) ))
+    
+    ai[0].speed= 0.01
+    ai[0].deambProb= 11
+    ai[1].speed= 0.0142
+    ai[1].deambProb= 6.7
+    ai[2].speed= 0.0242
+    ai[2].deambProb= 19.2
+    ai[3].speed= 0.0121
+    ai[3].deambProb= 10.5
+    ai[4].speed= 0.0112515
+    ai[4].deambProb= 18.2
+    ai[5].speed= 0.016121
+    ai[5].deambProb= 2.3
+    ai[6].speed= 0.002111
+    ai[6].deambProb= 5.8
+    ai[7].speed= 0.01
+    ai[7].deambProb= 2
+    ai[8].speed= 0.01
+    ai[8].deambProb= 14.2
+    
+    
+    for(var ii in ai){
+        ai[ii].position.x= 80.45
+        ai[ii].position.y= -51.68
+        ai[ii].position.z= 0.02
+        scene.add(ai[ii])
+    }
     
     scene.add( __v ); 
     
@@ -610,24 +648,24 @@ console.log(error)
     } 
     
     distanceCRF= 0
-    castRayFromThisFarFromCenterInTheseDegrees= function(cdx,cdy,degr, rayLength){
+    castRayFromThisFarFromCenterInTheseDegrees= function(cdx,cdy,degr, rayLength, ob, chkob, cdz){
         points = []
-        points.push( new THREE.Vector3( Car.position.x + Math.cos(Car.rotation.z) * cdx, Car.position.y + Math.sin(Car.rotation.z) * cdy, Car.position.z ) )
-        points.push( new THREE.Vector3( Car.position.x + Math.cos(Car.rotation.z + degr * un_grado_en_radianes) * rayLength + Math.cos(Car.rotation.z) * cdx, Car.position.y  + Math.sin(Car.rotation.z + degr * un_grado_en_radianes) * rayLength + Math.sin(Car.rotation.z) * cdy , Car.position.z ) )
+        points.push( new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.z) * cdx, ob.position.y + Math.sin(ob.rotation.z) * cdy, ob.position.z ) )
+        points.push( new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.z + degr * un_grado_en_radianes) * rayLength + Math.cos(ob.rotation.z) * cdx, ob.position.y  + Math.sin(ob.rotation.z + degr * un_grado_en_radianes) * rayLength + Math.sin(ob.rotation.z) * cdy , ob.position.z ) )
         
         //line = new THREE.Line( new THREE.BufferGeometry().setFromPoints( points ),  new THREE.LineBasicMaterial({color: 0x0000ff}) );
         raycaster = new THREE.Raycaster();
-        var from = new THREE.Vector3( Car.position.x + Math.cos(Car.rotation.z) * cdx, Car.position.y + Math.sin(Car.rotation.z) * cdy, Car.position.z );
-        var to = new THREE.Vector3( Car.position.x + Math.cos(Car.rotation.z + degr * un_grado_en_radianes) * rayLength + Math.cos(Car.rotation.z) * cdx, Car.position.y  + Math.sin(Car.rotation.z + degr * un_grado_en_radianes) * rayLength + Math.sin(Car.rotation.z) * cdy , Car.position.z );
+        var from = new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.z) * cdx, ob.position.y + Math.sin(ob.rotation.z) * cdy, ob.position.z );
+        var to = new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.z + degr * un_grado_en_radianes) * rayLength + Math.cos(ob.rotation.z) * cdx, ob.position.y  + Math.sin(ob.rotation.z + degr * un_grado_en_radianes) * rayLength + Math.sin(ob.rotation.z) * cdy , ob.position.z );
         to.sub( from ).normalize()
         raycaster.set( from, to );
         /*pnt= raycaster.intersectObject(gOfSVG[0])[0].point
         Inte.position.x= pnt.x
         Inte.position.y= pnt.y
         Inte.position.z= pnt.z*/
-        //scene.add( line );
-        if(typeof gOfSVG[1] != "undefined" && typeof raycaster.intersectObject(gOfSVG[1])[0] != "undefined" && raycaster.intersectObject(gOfSVG[1])[0].distance <= rayLength){
-            distanceCRF= rayLength - raycaster.intersectObject(gOfSVG[0])[0].distance 
+        //scene.add( line )
+        if(typeof chkob != "undefined" && typeof raycaster.intersectObject(chkob)[0] != "undefined" && raycaster.intersectObject(chkob)[0].distance <= rayLength){
+            distanceCRF= rayLength - raycaster.intersectObject(chkob)[0].distance 
             return true
         }else{
             return false
@@ -1183,11 +1221,11 @@ console.log(error)
         }
 
         if(
-            castRayFromThisFarFromCenterInTheseDegrees(Car.dimensions.width / 2, 0, 90, Car.dimensions.depth / 2 + Car.speed) ||
-            castRayFromThisFarFromCenterInTheseDegrees(Car.dimensions.width / 4, 0, 90, Car.dimensions.depth / 2 + Car.speed) ||
-            castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, Car.dimensions.depth / 2 + Car.speed) ||
-            castRayFromThisFarFromCenterInTheseDegrees(-Car.dimensions.width / 2, 0, 90, Car.dimensions.depth / 2 + Car.speed) ||
-            castRayFromThisFarFromCenterInTheseDegrees(-Car.dimensions.width / 4, 0, 90, Car.dimensions.depth / 2 + Car.speed)
+            castRayFromThisFarFromCenterInTheseDegrees(Car.dimensions.width / 2, 0, 90, Car.dimensions.depth / 2 + Car.speed, Car, gOfSVG[1]) ||
+            castRayFromThisFarFromCenterInTheseDegrees(Car.dimensions.width / 4, 0, 90, Car.dimensions.depth / 2 + Car.speed, Car, gOfSVG[1]) ||
+            castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, Car.dimensions.depth / 2 + Car.speed, Car, gOfSVG[1]) ||
+            castRayFromThisFarFromCenterInTheseDegrees(-Car.dimensions.width / 2, 0, 90, Car.dimensions.depth / 2 + Car.speed, Car, gOfSVG[1]) ||
+            castRayFromThisFarFromCenterInTheseDegrees(-Car.dimensions.width / 4, 0, 90, Car.dimensions.depth / 2 + Car.speed, Car, gOfSVG[1])
             ){
             Car.speed= 0
         }
@@ -1201,8 +1239,8 @@ console.log(error)
         }
         
         if(keysDown.s && !keysDown.w && !(
-                castRayFromThisFarFromCenterInTheseDegrees(Car.dimensions.width / 2, 0, 270, Car.dimensions.depth / 2 + speed) ||
-                castRayFromThisFarFromCenterInTheseDegrees(-Car.dimensions.width / 2, 0, 270, Car.dimensions.depth / 2 + speed)
+                castRayFromThisFarFromCenterInTheseDegrees(Car.dimensions.width / 2, 0, 270, Car.dimensions.depth / 2 + speed, Car, gOfSVG[1]) ||
+                castRayFromThisFarFromCenterInTheseDegrees(-Car.dimensions.width / 2, 0, 270, Car.dimensions.depth / 2 + speed, Car, gOfSVG[1])
             )){
             if(!caminando){
                 Car.position.y-= xEYConElÁngulo(speed, parseFloat($(".bugger").text())).y; 
@@ -1354,8 +1392,8 @@ console.log(error)
             //$(".burger").attr( "title" , "" );  
     
             if(keysDown.s && !keysDown.w && !(
-                castRayFromThisFarFromCenterInTheseDegrees(Car.dimensions.width / 2, 0, 270, Car.dimensions.depth / 2 + speed) ||
-                castRayFromThisFarFromCenterInTheseDegrees(-Car.dimensions.width / 2, 0, 270, Car.dimensions.depth / 2 + speed)
+                castRayFromThisFarFromCenterInTheseDegrees(Car.dimensions.width / 2, 0, 270, Car.dimensions.depth / 2 + speed, Car, gOfSVG[1]) ||
+                castRayFromThisFarFromCenterInTheseDegrees(-Car.dimensions.width / 2, 0, 270, Car.dimensions.depth / 2 + speed, Car, gOfSVG[1])
             )){ 
                 if(!caminando){
                     ángulo= ángDeLaPendiente( Car.children[9].getWorldPosition(v3).x , Car.children[9].getWorldPosition(v3).y, Car.children[9].getWorldPosition(v3).x + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Car.rotation.z / un_grado_en_radianes + 90 ) ) ).x , Car.children[9].getWorldPosition(v3).y + xEYConElÁngulo( 0.22, getInQuadrant( -getInQuadrant( Car.rotation.z / un_grado_en_radianes + 90 ) ) ).y ) * -1 + ángDeLaPendiente( Car.children[9].getWorldPosition(v3).x , Car.children[9].getWorldPosition(v3).y, closestP2.x , closestP2.y ); 
@@ -1453,6 +1491,17 @@ console.log(error)
         
         camera.rotation.y= oCamera.rotation.z; 
 
+        for(var ii in ai){
+            ai[ii].position.x+= Math.cos(ai[ii].rotation.z + 90 * un_grado_en_radianes) * ai[ii].speed
+            ai[ii].position.y+= Math.sin(ai[ii].rotation.z + 90 * un_grado_en_radianes) * ai[ii].speed
+            if(castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(ai[ii]).y / 2 + ai[ii].speed, ai[ii], gOfSVG[1]) || castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(ai[ii]).y / 2 + ai[ii].speed, ai[ii], Car) || castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(ai[ii]).y / 2 + ai[ii].speed, ai[ii], __v)){
+                ai[ii].rotation.z+= Math.random() * 360 * un_grado_en_radianes
+            }
+            if(Math.random() * 100 < ai[ii].deambProb){
+                ai[ii].rotation.z+= (Math.random() * 20 - 10) * un_grado_en_radianes
+            }
+        }
+        
         renderer.render( scene, camera ); 
     
         /*console.log( curveObject == oldCurve ); */ 
