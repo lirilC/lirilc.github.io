@@ -693,7 +693,7 @@ console.log(error)
         points.push( new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.z) * cdx, ob.position.y + Math.sin(ob.rotation.z) * cdy, ob.position.z ) )
         points.push( new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.z + degr * un_grado_en_radianes) * rayLength + Math.cos(ob.rotation.z) * cdx, ob.position.y  + Math.sin(ob.rotation.z + degr * un_grado_en_radianes) * rayLength + Math.sin(ob.rotation.z) * cdy , ob.position.z ) )
         
-        line = new THREE.Line( new THREE.BufferGeometry().setFromPoints( points ),  new THREE.LineBasicMaterial({color: 0x0000ff}) );
+        //line = new THREE.Line( new THREE.BufferGeometry().setFromPoints( points ),  new THREE.LineBasicMaterial({color: 0x0000ff}) );
         raycaster = new THREE.Raycaster();
         var from = new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.z) * cdx, ob.position.y + Math.sin(ob.rotation.z) * cdy, ob.position.z );
         var to = new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.z + degr * un_grado_en_radianes) * rayLength + Math.cos(ob.rotation.z) * cdx, ob.position.y  + Math.sin(ob.rotation.z + degr * un_grado_en_radianes) * rayLength + Math.sin(ob.rotation.z) * cdy , ob.position.z );
@@ -703,7 +703,7 @@ console.log(error)
         Inte.position.x= pnt.x
         Inte.position.y= pnt.y
         Inte.position.z= pnt.z*/
-        Evil_ai.indexOf(ob)!=-1?scene.add( line ):1
+        //scene.add( line )
         if(typeof chkob != "undefined" && typeof raycaster.intersectObject(chkob)[0] != "undefined" && raycaster.intersectObject(chkob)[0].distance <= rayLength){
             distanceCRF= rayLength - raycaster.intersectObject(chkob)[0].distance 
             return true
