@@ -703,7 +703,7 @@ console.log(error)
         Inte.position.x= pnt.x
         Inte.position.y= pnt.y
         Inte.position.z= pnt.z*/
-        //scene.add( line )
+        //Evil_ai.indexOf(ob)!=-1?scene.add( line ):1
         if(typeof chkob != "undefined" && typeof raycaster.intersectObject(chkob)[0] != "undefined" && raycaster.intersectObject(chkob)[0].distance <= rayLength){
             distanceCRF= rayLength - raycaster.intersectObject(chkob)[0].distance 
             return true
@@ -715,7 +715,11 @@ console.log(error)
     //
     evildetectrays= []
     castEvil_aiRays= function(cdx,cdy,degr, rayLength, ob, chkob, cdz){
+        points = []
+        points.push( new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.y) * cdx, ob.position.y + Math.sin(ob.rotation.y) * cdy, ob.position.z ) )
+        points.push( new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.y + degr * un_grado_en_radianes) * rayLength + Math.cos(ob.rotation.y) * cdx, ob.position.y  + Math.sin(ob.rotation.y + degr * un_grado_en_radianes) * rayLength + Math.sin(ob.rotation.y) * cdy , ob.position.z ) )
         
+        //line = new THREE.Line( new THREE.BufferGeometry().setFromPoints( points ),  new THREE.LineBasicMaterial({color: 0x0000ff}) );
         raycaster = new THREE.Raycaster();
         var from = new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.y) * cdx, ob.position.y + Math.sin(ob.rotation.y) * cdy, ob.position.z );
         var to = new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.y + degr * un_grado_en_radianes) * rayLength + Math.cos(ob.rotation.y) * cdx, ob.position.y  + Math.sin(ob.rotation.y + degr * un_grado_en_radianes) * rayLength + Math.sin(ob.rotation.y) * cdy , ob.position.z );
@@ -725,7 +729,7 @@ console.log(error)
         Inte.position.x= pnt.x
         Inte.position.y= pnt.y
         Inte.position.z= pnt.z*/
-        Evil_ai.indexOf(ob)!=-1?scene.add( line ):1
+        //Evil_ai.indexOf(ob)!=-1?scene.add( line ):1
         if(typeof chkob != "undefined" && typeof raycaster.intersectObject(chkob)[0] != "undefined" && raycaster.intersectObject(chkob)[0].distance <= rayLength){
             console.log(raycaster.intersectObject(chkob)[0])
             distanceCRF= rayLength - raycaster.intersectObject(chkob)[0].distance
