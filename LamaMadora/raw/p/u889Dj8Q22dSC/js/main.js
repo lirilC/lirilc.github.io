@@ -175,6 +175,9 @@ console.log(error)
     Evil_aii.add(Evil_aiBody)
     Evil_aii.add(Evil_aiRightWing)
     Evil_aii.add(Evil_aiLeftWing)
+    Evil_aii.speed= 0.009741
+    Evil_aii.deambProb= 1.7216
+    Evil_aii.vision= 0.05741
     Evil_ai.push(Evil_aii)
     
     for(var ii in Evil_ai){
@@ -688,15 +691,15 @@ console.log(error)
     } 
     
     distanceCRF= 0
-    castRayFromThisFarFromCenterInTheseDegrees= function(cdx,cdy,degr, rayLength, ob, chkob, cdz){
+    castRayFromThisFarFromCenterInTheseDegrees= function(cdx,cdy,degr, rayLength, ob, chkob, cdz, r=ob.rotation.z){
         points = []
-        points.push( new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.z) * cdx, ob.position.y + Math.sin(ob.rotation.z) * cdy, ob.position.z ) )
-        points.push( new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.z + degr * un_grado_en_radianes) * rayLength + Math.cos(ob.rotation.z) * cdx, ob.position.y  + Math.sin(ob.rotation.z + degr * un_grado_en_radianes) * rayLength + Math.sin(ob.rotation.z) * cdy , ob.position.z ) )
+        points.push( new THREE.Vector3( ob.position.x + Math.cos(r) * cdx, ob.position.y + Math.sin(r) * cdy, ob.position.z ) )
+        points.push( new THREE.Vector3( ob.position.x + Math.cos(r + degr * un_grado_en_radianes) * rayLength + Math.cos(r) * cdx, ob.position.y  + Math.sin(r + degr * un_grado_en_radianes) * rayLength + Math.sin(r) * cdy , ob.position.z ) )
         
         //line = new THREE.Line( new THREE.BufferGeometry().setFromPoints( points ),  new THREE.LineBasicMaterial({color: 0x0000ff}) );
         raycaster = new THREE.Raycaster();
-        var from = new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.z) * cdx, ob.position.y + Math.sin(ob.rotation.z) * cdy, ob.position.z );
-        var to = new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.z + degr * un_grado_en_radianes) * rayLength + Math.cos(ob.rotation.z) * cdx, ob.position.y  + Math.sin(ob.rotation.z + degr * un_grado_en_radianes) * rayLength + Math.sin(ob.rotation.z) * cdy , ob.position.z );
+        var from = new THREE.Vector3( ob.position.x + Math.cos(r) * cdx, ob.position.y + Math.sin(r) * cdy, ob.position.z );
+        var to = new THREE.Vector3( ob.position.x + Math.cos(r + degr * un_grado_en_radianes) * rayLength + Math.cos(r) * cdx, ob.position.y  + Math.sin(r + degr * un_grado_en_radianes) * rayLength + Math.sin(r) * cdy , ob.position.z );
         to.sub( from ).normalize()
         raycaster.set( from, to );
         /*pnt= raycaster.intersectObject(gOfSVG[0])[0].point
@@ -1584,6 +1587,19 @@ console.log(error)
         
         
         //
+        //⚠ Uncommenting next comment will make aliens walk✧✧✧✧
+        /*
+        for(var ii in Evil_ai){
+            Evil_ai[ii].position.x+= Math.cos(Evil_ai[ii].rotation.y - 90 * un_grado_en_radianes) * Evil_ai[ii].speed
+            Evil_ai[ii].position.y+= Math.sin(Evil_ai[ii].rotation.y - 90 * un_grado_en_radianes) * Evil_ai[ii].speed
+            if(castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(Evil_ai[ii]).y / 2 + Evil_ai[ii].speed + Evil_ai[ii].vision, Evil_ai[ii], gOfSVG[1], Evil_ai[ii].rotation.y) || castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(Evil_ai[ii]).y / 2 + Evil_ai[ii].speed + Evil_ai[ii].vision, Evil_ai[ii], Car, Evil_ai[ii].rotation.y) || castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(Evil_ai[ii]).y / 2 + Evil_ai[ii].speed + Evil_ai[ii].vision, Evil_ai[ii], __v, Evil_ai[ii].rotation.y)){
+                Evil_ai[ii].rotation.y+= Math.random() * 360 * un_grado_en_radianes
+            }
+            if(Math.random() * 100 < Evil_ai[ii].deambProb){
+                Evil_ai[ii].rotation.y+= (Math.random() * 39 - 15) * un_grado_en_radianes
+            }
+        }
+        */
         for(var edr in evildetectrays){
             scene.remove(evildetectrays[edr])
         }
