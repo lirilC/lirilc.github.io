@@ -118,6 +118,8 @@ console.log(error)
     camera.position.y = -0.7;
     camera.rotation.x= Math.PI / 180 * 90; 
     scene = new THREE.Scene();
+
+    un_grado_en_radianes= Math.PI / 180; 
     
     __v = new THREE.Mesh( new THREE.BoxGeometry( 0.09, 0.03, 0.21 ), new THREE.MeshPhongMaterial({ color: 0xdddddd , reflectivity: 0.47 }) );
     __v.dimensions= {width: 0.09, height: 0.21, depth: 0.03}
@@ -155,6 +157,45 @@ console.log(error)
     ai[7].deambProb= 2
     ai[8].speed= 0.01
     ai[8].deambProb= 14.2
+    
+    
+    
+    //
+    Evil_ai= []
+    Evil_aii = new THREE.Object3D();
+    Evil_aiBody= new THREE.Mesh( new THREE.BoxGeometry( 0.16, 0.35, 0.03 ), new THREE.MeshPhongMaterial({ color: 0xff0028 , reflectivity: 0.47 }) )
+    Evil_aiRightWing= new THREE.Mesh( new THREE.BoxGeometry( 0.16, 0.20, 0.008 ), new THREE.MeshPhongMaterial({ color: 0xcc0028 , reflectivity: 0.26 }) )
+    Evil_aiRightWing.position.x= 0.09
+    Evil_aiRightWing.position.y= 0.20
+    Evil_aiRightWing.position.z= -0.0154
+    Evil_aiLeftWing= new THREE.Mesh( new THREE.BoxGeometry( 0.16, 0.20, 0.008 ), new THREE.MeshPhongMaterial({ color: 0xcc0028 , reflectivity: 0.26 }) )
+    Evil_aiLeftWing.position.x= -0.09
+    Evil_aiLeftWing.position.y= 0.20
+    Evil_aiLeftWing.position.z= -0.0154
+    Evil_aii.add(Evil_aiBody)
+    Evil_aii.add(Evil_aiRightWing)
+    Evil_aii.add(Evil_aiLeftWing)
+    Evil_ai.push(Evil_aii)
+    
+    for(var ii in Evil_ai){
+        Evil_ai[0].position.x= 90.50877826417093;
+    gM2 = new THREE.Mesh( new THREE.BoxGeometry( 1, 2.1, 26.22 ), new THREE.MeshPhongMaterial({ color: 0xfef0fe , reflectivity: 0.47 }) );
+    gM2.position.x=  1.5; 
+
+        Evil_ai[0].position.y= -46.35976688160602;
+        Evil_ai[ii].position.z= getSizes(Evil_ai[ii]).x / 2
+        Evil_ai[0].rotation.x= 90* un_grado_en_radianes;
+        Evil_ai[0].rotation.y= 90* un_grado_en_radianes;
+        scene.add(Evil_ai[ii])
+    }
+    
+    /**/
+    evilNaNHolder = new THREE.Mesh( new THREE.BoxGeometry( 0.24, 0.26, 0.07 ), new THREE.MeshPhongMaterial({ color: 0xfef0fe , reflectivity: 0.47 }) );
+    evilNaNHolder.position.x= Evil_ai[0].position.x; 
+    evilNaNHolder.position.y= Evil_ai[0].position.y; 
+    evilNaNHolder.position.z= 0.045; 
+    scene.add(evilNaNHolder)
+    //
     
     
     for(var ii in ai){
@@ -578,7 +619,6 @@ console.log(error)
     
     
 
-    un_grado_en_radianes= Math.PI / 180; 
     
 
     
@@ -653,7 +693,7 @@ console.log(error)
         points.push( new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.z) * cdx, ob.position.y + Math.sin(ob.rotation.z) * cdy, ob.position.z ) )
         points.push( new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.z + degr * un_grado_en_radianes) * rayLength + Math.cos(ob.rotation.z) * cdx, ob.position.y  + Math.sin(ob.rotation.z + degr * un_grado_en_radianes) * rayLength + Math.sin(ob.rotation.z) * cdy , ob.position.z ) )
         
-        //line = new THREE.Line( new THREE.BufferGeometry().setFromPoints( points ),  new THREE.LineBasicMaterial({color: 0x0000ff}) );
+        line = new THREE.Line( new THREE.BufferGeometry().setFromPoints( points ),  new THREE.LineBasicMaterial({color: 0x0000ff}) );
         raycaster = new THREE.Raycaster();
         var from = new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.z) * cdx, ob.position.y + Math.sin(ob.rotation.z) * cdy, ob.position.z );
         var to = new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.z + degr * un_grado_en_radianes) * rayLength + Math.cos(ob.rotation.z) * cdx, ob.position.y  + Math.sin(ob.rotation.z + degr * un_grado_en_radianes) * rayLength + Math.sin(ob.rotation.z) * cdy , ob.position.z );
@@ -663,7 +703,7 @@ console.log(error)
         Inte.position.x= pnt.x
         Inte.position.y= pnt.y
         Inte.position.z= pnt.z*/
-        //scene.add( line )
+        Evil_ai.indexOf(ob)!=-1?scene.add( line ):1
         if(typeof chkob != "undefined" && typeof raycaster.intersectObject(chkob)[0] != "undefined" && raycaster.intersectObject(chkob)[0].distance <= rayLength){
             distanceCRF= rayLength - raycaster.intersectObject(chkob)[0].distance 
             return true
@@ -671,6 +711,42 @@ console.log(error)
             return false
         }
     }
+    
+    //
+    evildetectrays= []
+    castEvil_aiRays= function(cdx,cdy,degr, rayLength, ob, chkob, cdz){
+        
+        raycaster = new THREE.Raycaster();
+        var from = new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.y) * cdx, ob.position.y + Math.sin(ob.rotation.y) * cdy, ob.position.z );
+        var to = new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.y + degr * un_grado_en_radianes) * rayLength + Math.cos(ob.rotation.y) * cdx, ob.position.y  + Math.sin(ob.rotation.y + degr * un_grado_en_radianes) * rayLength + Math.sin(ob.rotation.y) * cdy , ob.position.z );
+        to.sub( from ).normalize()
+        raycaster.set( from, to );
+        /*pnt= raycaster.intersectObject(gOfSVG[0])[0].point
+        Inte.position.x= pnt.x
+        Inte.position.y= pnt.y
+        Inte.position.z= pnt.z*/
+        Evil_ai.indexOf(ob)!=-1?scene.add( line ):1
+        if(typeof chkob != "undefined" && typeof raycaster.intersectObject(chkob)[0] != "undefined" && raycaster.intersectObject(chkob)[0].distance <= rayLength){
+            console.log(raycaster.intersectObject(chkob)[0])
+            distanceCRF= rayLength - raycaster.intersectObject(chkob)[0].distance
+            points = []
+            points.push( new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.y) * cdx, ob.position.y + Math.sin(ob.rotation.y) * cdy, ob.position.z ) )
+            points.push( new THREE.Vector3( raycaster.intersectObject(chkob)[0].point.x, raycaster.intersectObject(chkob)[0].point.y, raycaster.intersectObject(chkob)[0].point.z ) )
+            
+            evildetectrays.push(new THREE.Line( new THREE.BufferGeometry().setFromPoints( points ),  new THREE.LineBasicMaterial({color: 0xff1011}) ));
+            scene.add(evildetectrays[evildetectrays.length - 1])
+            return true
+        }else{
+            points = []
+            points.push( new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.y) * cdx, ob.position.y + Math.sin(ob.rotation.y) * cdy, ob.position.z ) )
+            points.push( new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.y + degr * un_grado_en_radianes) * rayLength + Math.cos(ob.rotation.y) * cdx, ob.position.y  + Math.sin(ob.rotation.y + degr * un_grado_en_radianes) * rayLength + Math.sin(ob.rotation.y) * cdy , ob.position.z ) )
+            
+            evildetectrays.push(new THREE.Line( new THREE.BufferGeometry().setFromPoints( points ),  new THREE.LineBasicMaterial({color: 0x0000ff}) ));
+            scene.add(evildetectrays[evildetectrays.length - 1])
+            return false
+        }
+    }
+    //
     v3 = new THREE.Vector3( 0, 0, 0 ); 
     
     curve = new THREE.QuadraticBezierCurve(
@@ -1022,7 +1098,7 @@ console.log(error)
     }; 
     
     setTimeout(function(){
-        display.logs= [,`_`,,`_`,,`Hola, bienvenido a El Refugio, __v.`,,,,`Pásatela bien un rato. Es seguro este lugar; uno de pocos en Vv11.`,,`¡Además está increíble!`,,`_`,,`_`,,,,,,,`_`,,`_`,,`Presiona i̇́fᶖ para bajarte de un carro en el que estés.`,,`_`,,  `Puedes correr con i̇́wᶖ, i̇́aᶖ y i̇́dᶖ, pero si quieres correr cansándote debes tener siempre presionado i̇́Shiftᶖ.`,, `Puedes subirte a cualquier carro acercándote a él y presionando i̇́fᶖ.`,,`_`,,`_`,,]
+        display.logs= [,`_`,,`_`,,`Hola, bienvenido a El Refugio, __v.`,,,,`Pásatela bien un rato. Es seguro este lugar; uno de pocos en Vv11.`,,`¡Además está increíble!`,, `No te preocupes por ese "alien", está bien sujetado y siendo frecuentemente dormido.`,,`_`,,`_`,,,,,,,`_`,,`_`,,`Presiona i̇́fᶖ para bajarte de un carro en el que estés.`,,`_`,,  `Puedes correr con i̇́wᶖ, i̇́aᶖ y i̇́dᶖ, pero si quieres correr cansándote debes tener siempre presionado i̇́Shiftᶖ.`,, `Puedes subirte a cualquier carro acercándote a él y presionando i̇́fᶖ.`,,`_`,,`_`,,]
         display.narrator()
     }, 5853)
     
@@ -1501,6 +1577,18 @@ console.log(error)
                 ai[ii].rotation.z+= (Math.random() * 20 - 10) * un_grado_en_radianes
             }
         }
+        
+        
+        //
+        for(var edr in evildetectrays){
+            scene.remove(evildetectrays[edr])
+        }
+        evildetectrays= []
+        
+        for( var n= 242; n <= 298; n++){
+          castEvil_aiRays(-0.03, 0, n, 3, Evil_ai[0], __v)
+        }
+        //
         
         renderer.render( scene, camera ); 
     
