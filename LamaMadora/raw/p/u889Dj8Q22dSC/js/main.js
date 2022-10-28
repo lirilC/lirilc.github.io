@@ -739,17 +739,15 @@ console.log(error)
             points = []
             points.push( new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.y) * cdx, ob.position.y + Math.sin(ob.rotation.y) * cdy, ob.position.z ) )
             points.push( new THREE.Vector3( raycaster.intersectObject(chkob)[0].point.x, raycaster.intersectObject(chkob)[0].point.y, raycaster.intersectObject(chkob)[0].point.z ) )
-            
-            evildetectrays.push(new THREE.Line( new THREE.BufferGeometry().setFromPoints( points ),  new THREE.LineBasicMaterial({color: 0xff1011}) ));
-            scene.add(evildetectrays[evildetectrays.length - 1])
+            aaa= evildetectrays.length
+            evildetectrays.push(["col", new THREE.Line( new THREE.BufferGeometry().setFromPoints( points ),  new THREE.LineBasicMaterial({color: 0xff1011}) ), points, aaa]);
             return true
         }else{
             points = []
             points.push( new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.y) * cdx, ob.position.y + Math.sin(ob.rotation.y) * cdy, ob.position.z ) )
             points.push( new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.y + degr * un_grado_en_radianes) * rayLength + Math.cos(ob.rotation.y) * cdx, ob.position.y  + Math.sin(ob.rotation.y + degr * un_grado_en_radianes) * rayLength + Math.sin(ob.rotation.y) * cdy , ob.position.z ) )
-            
-            evildetectrays.push(new THREE.Line( new THREE.BufferGeometry().setFromPoints( points ),  new THREE.LineBasicMaterial({color: 0x0000ff}) ));
-            scene.add(evildetectrays[evildetectrays.length - 1])
+            aaa= evildetectrays.length
+            evildetectrays.push(["no_col", new THREE.Line( new THREE.BufferGeometry().setFromPoints( points ),  new THREE.LineBasicMaterial({color: 0x0000ff}) ), points, aaa]);
             return false
         }
     }
@@ -1600,13 +1598,44 @@ console.log(error)
             }
         }
         */
+        if(typeof fingernail != "undefined")scene.remove(fingernail)
+        if(typeof evildetectrays != "undefined"){
         for(var edr in evildetectrays){
-            scene.remove(evildetectrays[edr])
+            scene.remove(evildetectrays[edr][1])
         }
+        }
+        if(typeof possibleHitPoints != "undefined"){
+        for(var edr in possibleHitPoints){
+            scene.remove(possibleHitPoints[edr][1])
+        }
+        }
+        
+        
+        
         evildetectrays= []
         
         for( var n= 242; n <= 298; n++){
           castEvil_aiRays(-0.03, 0, n, 3, Evil_ai[0], __v)
+        }
+        
+        possibleHitPoints= []
+        for(var edr in evildetectrays){
+            if(evildetectrays[edr][0] === "col"){
+               possibleHitPoints.push(evildetectrays[edr])
+            }else{
+                scene.add(evildetectrays[edr][1])
+            }
+        }
+        if(typeof possibleHitPoints != "undefined" && possibleHitPoints.length){
+            effectiveHit= parseInt(Math.random() * possibleHitPoints.length - 1)
+        }
+        for(var edr in possibleHitPoints){
+            if(/*Removing next argument will make aliens shoot quickly outgrown then disattached with acid fingernails*/!!false && /**/parseInt(edr) === effectiveHit){
+                fingernail= new THREE.Line( new THREE.BufferGeometry().setFromPoints( possibleHitPoints[effectiveHit][2] ),  new THREE.LineBasicMaterial({color: 0xffffff}) )
+                scene.add(fingernail)
+            }else{
+                scene.add(possibleHitPoints[edr][1])
+            }
         }
         //
         

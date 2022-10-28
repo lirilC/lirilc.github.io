@@ -19,7 +19,8 @@ debuggers > div
     height: 100%; 
     display: inline-block; 
 	position: relative; 
-	vertical-align: top; 
+	vertical-align: top;
+	margin-right: 4px;
 } 
 debuggers > div:not(.bugger):not(.burger):not(.tan) 
 { 
@@ -47,6 +48,25 @@ debuggers > div > span
 	overflow: hidden; 
 	text-overflow: ellipsis; 
 } 
+debuggers > #barra_de_salud 
+{
+    margin-right: 0;
+    width: calc(100% - 484px);
+    height: 12px;
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 3px;
+    padding: 0 2px;
+    box-sizing: content-box;
+    margin-top: 11px;
+}
+debuggers > #barra_de_salud > #salud
+{
+    background-color: red;
+    margin-top: 2px;
+    height: 8px;
+    width: 100%;
+}
 display
 {
 	width: 210px;
