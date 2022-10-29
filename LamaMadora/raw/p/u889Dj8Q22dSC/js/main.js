@@ -1587,7 +1587,7 @@ console.log(error)
         
         //
         //⚠ Uncommenting next comment will make aliens walk✧✧✧✧
-        
+        /*
         for(var ii in Evil_ai){
             Evil_ai[ii].position.x+= Math.cos(Evil_ai[ii].rotation.y - 90 * un_grado_en_radianes) * Evil_ai[ii].speed
             Evil_ai[ii].position.y+= Math.sin(Evil_ai[ii].rotation.y - 90 * un_grado_en_radianes) * Evil_ai[ii].speed
@@ -1598,6 +1598,7 @@ console.log(error)
                 Evil_ai[ii].rotation.y+= (Math.random() * 41 - 20) * un_grado_en_radianes
             }
         }
+        */
         
         if(typeof fingernail != "undefined")scene.remove(fingernail)
         if(typeof evildetectrays != "undefined"){
@@ -1631,7 +1632,7 @@ console.log(error)
             effectiveHit= parseInt(Math.random() * possibleHitPoints.length)
         }
         for(var edr in possibleHitPoints){
-            if(parseInt(edr) === effectiveHit){
+            if(/*Removing next argument will make aliens shoot quickly outgrown then disattached with acid fingernails*/!!false && /**/parseInt(edr) === effectiveHit){
                 fingernail= new THREE.Line( new THREE.BufferGeometry().setFromPoints( possibleHitPoints[effectiveHit][2] ),  new THREE.LineBasicMaterial({color: 0xffffff}) )
                 scene.add(fingernail)
                 health -= 0.2
