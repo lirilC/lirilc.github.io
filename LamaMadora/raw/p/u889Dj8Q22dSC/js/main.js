@@ -81,7 +81,6 @@ console.log(error)
         
                 }
                 gOfSVG[gOfSVG.length]= group
-                console.log(getSizes( gOfSVG[gOfSVG.length - 1] ))
                 gOfSVG[gOfSVG.length - 1].position.x= -getSizes( gOfSVG[gOfSVG.length - 1] ).x / 2
                 gOfSVG[gOfSVG.length - 1].position.y= getSizes( gOfSVG[gOfSVG.length - 1] ).y / 2
                 gOfSVG[gOfSVG.length - 1].position.z= 0
@@ -657,7 +656,10 @@ console.log(error)
     renderer.setSize( window.innerWidth, window.innerHeight );
     document.body.appendChild( renderer.domElement );
     
-    
+    var health= 100
+    var setHealth= function(hh){
+        document.querySelector("#barra_de_salud > #salud").style.width= `${hh}%`
+    }
     getInQuadrant= function(ángulo){ 
         ángulo= ángulo; 
         while(ángulo < -360)ángulo+=360; 
@@ -734,7 +736,6 @@ console.log(error)
         Inte.position.z= pnt.z*/
         //Evil_ai.indexOf(ob)!=-1?scene.add( line ):1
         if(typeof chkob != "undefined" && typeof raycaster.intersectObject(chkob)[0] != "undefined" && raycaster.intersectObject(chkob)[0].distance <= rayLength){
-            console.log(raycaster.intersectObject(chkob)[0])
             distanceCRF= rayLength - raycaster.intersectObject(chkob)[0].distance
             points = []
             points.push( new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.y) * cdx, ob.position.y + Math.sin(ob.rotation.y) * cdy, ob.position.z ) )
@@ -1576,28 +1577,28 @@ console.log(error)
             ai[ii].position.x+= Math.cos(ai[ii].rotation.z + 90 * un_grado_en_radianes) * ai[ii].speed
             ai[ii].position.y+= Math.sin(ai[ii].rotation.z + 90 * un_grado_en_radianes) * ai[ii].speed
             if(castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(ai[ii]).y / 2 + ai[ii].speed, ai[ii], gOfSVG[1]) || castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(ai[ii]).y / 2 + ai[ii].speed, ai[ii], Car) || castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(ai[ii]).y / 2 + ai[ii].speed, ai[ii], __v)){
-                ai[ii].rotation.z+= Math.random() * 360 * un_grado_en_radianes
+                ai[ii].rotation.z+= Math.random() * 361 * un_grado_en_radianes
             }
-            if(Math.random() * 100 < ai[ii].deambProb){
-                ai[ii].rotation.z+= (Math.random() * 20 - 10) * un_grado_en_radianes
+            if(Math.random() * 101 < ai[ii].deambProb){
+                ai[ii].rotation.z+= (Math.random() * 21 - 10) * un_grado_en_radianes
             }
         }
         
         
         //
         //⚠ Uncommenting next comment will make aliens walk✧✧✧✧
-        /*
+        
         for(var ii in Evil_ai){
             Evil_ai[ii].position.x+= Math.cos(Evil_ai[ii].rotation.y - 90 * un_grado_en_radianes) * Evil_ai[ii].speed
             Evil_ai[ii].position.y+= Math.sin(Evil_ai[ii].rotation.y - 90 * un_grado_en_radianes) * Evil_ai[ii].speed
             if(castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(Evil_ai[ii]).y / 2 + Evil_ai[ii].speed + Evil_ai[ii].vision, Evil_ai[ii], gOfSVG[1], Evil_ai[ii].rotation.y) || castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(Evil_ai[ii]).y / 2 + Evil_ai[ii].speed + Evil_ai[ii].vision, Evil_ai[ii], Car, Evil_ai[ii].rotation.y) || castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(Evil_ai[ii]).y / 2 + Evil_ai[ii].speed + Evil_ai[ii].vision, Evil_ai[ii], __v, Evil_ai[ii].rotation.y)){
-                Evil_ai[ii].rotation.y+= Math.random() * 360 * un_grado_en_radianes
+                Evil_ai[ii].rotation.y+= Math.random() * 361 * un_grado_en_radianes
             }
-            if(Math.random() * 100 < Evil_ai[ii].deambProb){
-                Evil_ai[ii].rotation.y+= (Math.random() * 39 - 15) * un_grado_en_radianes
+            if(Math.random() * 101 < Evil_ai[ii].deambProb){
+                Evil_ai[ii].rotation.y+= (Math.random() * 41 - 20) * un_grado_en_radianes
             }
         }
-        */
+        
         if(typeof fingernail != "undefined")scene.remove(fingernail)
         if(typeof evildetectrays != "undefined"){
         for(var edr in evildetectrays){
@@ -1627,12 +1628,14 @@ console.log(error)
             }
         }
         if(typeof possibleHitPoints != "undefined" && possibleHitPoints.length){
-            effectiveHit= parseInt(Math.random() * possibleHitPoints.length - 1)
+            effectiveHit= parseInt(Math.random() * possibleHitPoints.length)
         }
         for(var edr in possibleHitPoints){
-            if(/*Removing next argument will make aliens shoot quickly outgrown then disattached with acid fingernails*/!!false && /**/parseInt(edr) === effectiveHit){
+            if(parseInt(edr) === effectiveHit){
                 fingernail= new THREE.Line( new THREE.BufferGeometry().setFromPoints( possibleHitPoints[effectiveHit][2] ),  new THREE.LineBasicMaterial({color: 0xffffff}) )
                 scene.add(fingernail)
+                health -= 0.2
+                setHealth(health)
             }else{
                 scene.add(possibleHitPoints[edr][1])
             }
