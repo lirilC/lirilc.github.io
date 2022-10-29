@@ -160,8 +160,8 @@ console.log(error)
     rightArm.position.x= 0.0375
     rightArm.position.z= 0.09
     __v.add(rightArm)
-    __v.position.x=   0
-    __v.position.y= 0
+    __v.position.x=   60
+    __v.position.y= 60
     __v.position.z= -10; 
     __v.rotation.z= 0
     
@@ -215,6 +215,7 @@ console.log(error)
     Evil_aii.speed= 0.009741
     Evil_aii.deambProb= 1.7216
     Evil_aii.vision= 0.05741
+    Evil_aii.aslept= false
     Evil_ai.push(Evil_aii)
     
     for(var ii in Evil_ai){
@@ -1260,6 +1261,9 @@ console.log(error)
     })
     
     crosshair = new THREE.Raycaster()
+    validshotcount= ''
+    intervals= 1
+    timeFromLastShot= -1
     document.addEventListener('mousedown', function(event){
         crosshair.setFromCamera(
             {
@@ -1269,7 +1273,62 @@ console.log(error)
             camera
         )
         
-        intersections= crosshair.intersectObject(Evil_ai[0])
+        intersections= crosshair.intersectObject(Evil_ai[0].children[0])
+        if (intersections.length && typeof bullet == "undefined" && intersections[0].distance < 5) {
+            right_forearm.rotation.x= 90 * un_grado_en_radianes
+            points = []
+            points.push( new THREE.Vector3( cannonend.getWorldPosition(new THREE.Vector3( 0, 0, 0 )).x, cannonend.getWorldPosition(new THREE.Vector3( 0, 0, 0 )).y, cannonend.getWorldPosition(new THREE.Vector3( 0, 0, 0 )).z ) )
+            points.push( new THREE.Vector3( intersections[0].point.x, intersections[0].point.y , intersections[0].point.z ) )
+            bullet = new THREE.Line( new THREE.BufferGeometry().setFromPoints( points ),  new THREE.LineBasicMaterial({color: 0x898989}) );
+            scene.add(bullet)
+            if(intersections[0].point.z > 0.27 && timeFromLastShot < intervals){
+                validshotcount= `${validshotcount}h`
+                if(validshotcount == "hhhch"){Evil_ai[0].aslept= true; setTimeout(function(){Evil_ai[0].aslept= false}, 155000)}
+                console.log(validshotcount)
+                timeFromLastShot= -1
+                if(typeof dstrct != "undefined")clearInterval(dstrct)
+                dstrct= setInterval(function(){
+                    console.log(timeFromLastShot)
+                    timeFromLastShot++
+                    if(timeFromLastShot >= intervals){
+                        validshotcount= ''
+                        timeFromLastShot= -1
+                        clearInterval(dstrct)
+                    }
+                }, 793)
+            }
+            if(intersections[0].point.z > 0.12 && intersections[0].point.z < 0.18 && timeFromLastShot < intervals){
+                validshotcount= `${validshotcount}c`
+                console.log(validshotcount)
+                timeFromLastShot= -1
+                if(typeof dstrct != "undefined")clearInterval(dstrct)
+                dstrct= setInterval(function(){
+                    console.log(timeFromLastShot)
+                    timeFromLastShot++
+                    if(timeFromLastShot >= intervals){
+                        validshotcount= ''
+                        timeFromLastShot= -1
+                        clearInterval(dstrct)
+                    }
+                }, 793)
+            }
+            setTimeout(function(){
+                if(typeof bullet != "undefined"){scene.remove(bullet); delete bullet; right_forearm.rotation.x= 0}
+            }, Math.random() * 16)
+        }
+        intersections= crosshair.intersectObject(Evil_ai[0].children[1])
+        if (intersections.length && typeof bullet == "undefined" && intersections[0].distance < 5) {
+            right_forearm.rotation.x= 90 * un_grado_en_radianes
+            points = []
+            points.push( new THREE.Vector3( cannonend.getWorldPosition(new THREE.Vector3( 0, 0, 0 )).x, cannonend.getWorldPosition(new THREE.Vector3( 0, 0, 0 )).y, cannonend.getWorldPosition(new THREE.Vector3( 0, 0, 0 )).z ) )
+            points.push( new THREE.Vector3( intersections[0].point.x, intersections[0].point.y , intersections[0].point.z ) )
+            bullet = new THREE.Line( new THREE.BufferGeometry().setFromPoints( points ),  new THREE.LineBasicMaterial({color: 0x898989}) );
+            scene.add(bullet)
+            setTimeout(function(){
+                if(typeof bullet != "undefined"){scene.remove(bullet); delete bullet; right_forearm.rotation.x= 0}
+            }, Math.random() * 16)
+        }
+        intersections= crosshair.intersectObject(Evil_ai[0].children[2])
         if (intersections.length && typeof bullet == "undefined" && intersections[0].distance < 5) {
             right_forearm.rotation.x= 90 * un_grado_en_radianes
             points = []
@@ -1648,17 +1707,20 @@ console.log(error)
         
         //
         //⚠ Uncommenting next comment will make aliens walk✧✧✧✧
-        
+        /*
         for(var ii in Evil_ai){
-            Evil_ai[ii].position.x+= Math.cos(Evil_ai[ii].rotation.y - 90 * un_grado_en_radianes) * Evil_ai[ii].speed
-            Evil_ai[ii].position.y+= Math.sin(Evil_ai[ii].rotation.y - 90 * un_grado_en_radianes) * Evil_ai[ii].speed
-            while(castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(Evil_ai[ii]).y / 2 + Evil_ai[ii].speed + Evil_ai[ii].vision, Evil_ai[ii], gOfSVG[1], Evil_ai[ii].rotation.y) || castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(Evil_ai[ii]).y / 2 + Evil_ai[ii].speed + Evil_ai[ii].vision, Evil_ai[ii], Car, Evil_ai[ii].rotation.y) || castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(Evil_ai[ii]).y / 2 + Evil_ai[ii].speed + Evil_ai[ii].vision, Evil_ai[ii], __v, Evil_ai[ii].rotation.y)){
-                Evil_ai[ii].rotation.y+= Math.random() * 361 * un_grado_en_radianes
-            }
-            if(Math.random() * 101 < Evil_ai[ii].deambProb){
-                Evil_ai[ii].rotation.y+= (Math.random() * 41 - 20) * un_grado_en_radianes
+            if(!Evil_ai[ii].aslept){
+                Evil_ai[ii].position.x+= Math.cos(Evil_ai[ii].rotation.y - 90 * un_grado_en_radianes) * Evil_ai[ii].speed
+                Evil_ai[ii].position.y+= Math.sin(Evil_ai[ii].rotation.y - 90 * un_grado_en_radianes) * Evil_ai[ii].speed
+                while(castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(Evil_ai[ii]).y / 2 + Evil_ai[ii].speed + Evil_ai[ii].vision, Evil_ai[ii], gOfSVG[1], Evil_ai[ii].rotation.y) || castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(Evil_ai[ii]).y / 2 + Evil_ai[ii].speed + Evil_ai[ii].vision, Evil_ai[ii], Car, Evil_ai[ii].rotation.y) || castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(Evil_ai[ii]).y / 2 + Evil_ai[ii].speed + Evil_ai[ii].vision, Evil_ai[ii], __v, Evil_ai[ii].rotation.y)){
+                    Evil_ai[ii].rotation.y+= Math.random() * 361 * un_grado_en_radianes
+                }
+                if(Math.random() * 101 < Evil_ai[ii].deambProb){
+                    Evil_ai[ii].rotation.y+= (Math.random() * 41 - 20) * un_grado_en_radianes
+                }
             }
         }
+        */
         
         if(typeof fingernail != "undefined")scene.remove(fingernail)
         if(typeof evildetectrays != "undefined"){
@@ -1673,32 +1735,33 @@ console.log(error)
         }
         
         
-        
-        evildetectrays= []
-        
-        for( var n= 242; n <= 298; n++){
-          castEvil_aiRays(-0.03, 0, n, 3, Evil_ai[0], __v)
-        }
-        
-        possibleHitPoints= []
-        for(var edr in evildetectrays){
-            if(evildetectrays[edr][0] === "col"){
-               possibleHitPoints.push(evildetectrays[edr])
-            }else{
-                scene.add(evildetectrays[edr][1])
+        if(!Evil_ai[0].aslept){
+            evildetectrays= []
+            
+            for( var n= 242; n <= 298; n++){
+              castEvil_aiRays(-0.03, 0, n, 3, Evil_ai[0], __v)
             }
-        }
-        if(typeof possibleHitPoints != "undefined" && possibleHitPoints.length){
-            effectiveHit= parseInt(Math.random() * possibleHitPoints.length)
-        }
-        for(var edr in possibleHitPoints){
-            if(parseInt(edr) === effectiveHit){
-                fingernail= new THREE.Line( new THREE.BufferGeometry().setFromPoints( possibleHitPoints[effectiveHit][2] ),  new THREE.LineBasicMaterial({color: 0xffffff}) )
-                scene.add(fingernail)
-                health -= 0.2
-                setHealth(health)
-            }else{
-                scene.add(possibleHitPoints[edr][1])
+            
+            possibleHitPoints= []
+            for(var edr in evildetectrays){
+                if(evildetectrays[edr][0] === "col"){
+                   possibleHitPoints.push(evildetectrays[edr])
+                }else{
+                    scene.add(evildetectrays[edr][1])
+                }
+            }
+            if(typeof possibleHitPoints != "undefined" && possibleHitPoints.length){
+                effectiveHit= parseInt(Math.random() * possibleHitPoints.length)
+            }
+            for(var edr in possibleHitPoints){
+                if(/*Removing next argument will make aliens shoot quickly outgrown then disattached with acid fingernails*/!!false && /**/ parseInt(edr) === effectiveHit){
+                    fingernail= new THREE.Line( new THREE.BufferGeometry().setFromPoints( possibleHitPoints[effectiveHit][2] ),  new THREE.LineBasicMaterial({color: 0xffffff}) )
+                    scene.add(fingernail)
+                    health -= 0.2
+                    setHealth(health)
+                }else{
+                    scene.add(possibleHitPoints[edr][1])
+                }
             }
         }
         //
