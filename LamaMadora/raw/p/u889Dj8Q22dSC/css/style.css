@@ -3,28 +3,29 @@ body
     margin: 0; 
     height: 100vh; 
     width: 100vw; 
+    cursor: col-resize;
 } 
 debuggers 
 { 
-	max-width: 100%; 
-	width: 100vw; 
-	height: 36px; 
-	bottom: 0px; 
-	background: aliceblue; 
-	position: fixed; 
-	display: inline-block; 
+    max-width: 100%; 
+    width: 100vw; 
+    height: 36px; 
+    bottom: 0px; 
+    background: aliceblue; 
+    position: fixed; 
+    display: inline-block; 
 } 
 debuggers > div
 { 
     height: 100%; 
     display: inline-block; 
-	position: relative; 
-	vertical-align: top;
-	margin-right: 4px;
+    position: relative; 
+    vertical-align: top;
+    margin-right: 4px;
 } 
 debuggers > div:not(.bugger):not(.burger):not(.tan) 
 { 
-	width: 36px; 
+    width: 36px; 
 } 
 debuggers > div > .rotate 
 { 
@@ -33,20 +34,20 @@ debuggers > div > .rotate
     top: 14%; 
     left: calc(50% - 2px); 
     background: #df4876; 
-	position: absolute; 
+    position: absolute; 
 } 
 debuggers > div > span 
 { 
-	width: 7em; 
-	height: 72%; 
-	margin-top: 14%; 
-	font-size: 16px; 
-	font-family: "consolas"; 
-	display: inline-block; 
-	height: 20px; 
-	margin: 8px 0; 
-	overflow: hidden; 
-	text-overflow: ellipsis; 
+    width: 7em; 
+    height: 72%; 
+    margin-top: 14%; 
+    font-size: 16px; 
+    font-family: "consolas"; 
+    display: inline-block; 
+    height: 20px; 
+    margin: 8px 0; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
 } 
 debuggers > #barra_de_salud 
 {
@@ -69,17 +70,17 @@ debuggers > #barra_de_salud > #salud
 }
 display
 {
-	width: 210px;
-	height: 220px;
-	display: block;
-	position: absolute;
-	right: 20px;
-	background-color: #97736f;
-	top: 14px;
-	opacity: 0.4;
-	padding: 7px 2px;
-	box-sizing: border-box;
-	border-top: 6px double black;
+    width: 210px;
+    height: 220px;
+    display: block;
+    position: absolute;
+    right: 20px;
+    background-color: #97736f;
+    top: 14px;
+    opacity: 0.4;
+    padding: 7px 2px;
+    box-sizing: border-box;
+    border-top: 6px double black;
 }
 display map svg {
     width: 100%;

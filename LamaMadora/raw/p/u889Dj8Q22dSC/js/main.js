@@ -120,8 +120,46 @@ console.log(error)
 
     un_grado_en_radianes= Math.PI / 180; 
     
-    __v = new THREE.Mesh( new THREE.BoxGeometry( 0.09, 0.03, 0.21 ), new THREE.MeshPhongMaterial({ color: 0xdddddd , reflectivity: 0.47 }) );
+    __v = new THREE.Object3D();
     __v.dimensions= {width: 0.09, height: 0.21, depth: 0.03}
+    trunkAndLegs = new THREE.Mesh( new THREE.BoxGeometry( 0.06, 0.03, 0.21 ), new THREE.MeshPhongMaterial({ color: 0xdddddd , reflectivity: 0.47 }) );
+    __v.add(trunkAndLegs)
+    leftArm = new THREE.Object3D();
+    left_arm = new THREE.Object3D();
+    Left_Arm = new THREE.Mesh( new THREE.BoxGeometry( 0.015, 0.03, 0.045 ), new THREE.MeshPhongMaterial({ color: 0xdddddd , reflectivity: 0.47 }) );
+    Left_Arm.position.z= -0.0225
+    left_arm.add(Left_Arm)
+    leftArm.add(left_arm)
+    left_forearm = new THREE.Object3D();
+    Left_Forearm = new THREE.Mesh( new THREE.BoxGeometry( 0.015, 0.03, 0.045 ), new THREE.MeshPhongMaterial({ color: 0xdddddd , reflectivity: 0.47 }) );
+    Left_Forearm.position.z= -0.0225
+    left_forearm.add(Left_Forearm)
+    left_forearm.position.z= -0.045
+    leftArm.add(left_forearm)
+    leftArm.position.x= -0.0375
+    leftArm.position.z= 0.09
+    __v.add(leftArm)
+    rightArm = new THREE.Object3D();
+    right_arm = new THREE.Object3D();
+    Right_Arm = new THREE.Mesh( new THREE.BoxGeometry( 0.015, 0.03, 0.045 ), new THREE.MeshPhongMaterial({ color: 0xdddddd , reflectivity: 0.47 }) );
+    Right_Arm.position.z= -0.0225
+    right_arm.add(Right_Arm)
+    rightArm.add(right_arm)
+    right_forearm = new THREE.Object3D();
+    Right_Forearm = new THREE.Mesh( new THREE.BoxGeometry( 0.015, 0.03, 0.045 ), new THREE.MeshPhongMaterial({ color: 0xdddddd , reflectivity: 0.47 }) );
+    Right_Forearm.position.z= -0.0225
+    right_forearm.add(Right_Forearm)
+    handgun = new THREE.Mesh( new THREE.BoxGeometry( 0.015, 0.03, 0.03 ), new THREE.MeshPhongMaterial({ color: 0x000000 , reflectivity: 0.77 }) );
+    handgun.position.z= -0.060
+    right_forearm.add(handgun)
+    cannonend = new THREE.Mesh( new THREE.BoxGeometry( 0.015, 0.03, 0.002 ), new THREE.MeshPhongMaterial({ color: 0x000000 , reflectivity: 0.77 }) );
+    cannonend.position.z= -0.074
+    right_forearm.add(cannonend)
+    right_forearm.position.z= -0.045
+    rightArm.add(right_forearm)
+    rightArm.position.x= 0.0375
+    rightArm.position.z= 0.09
+    __v.add(rightArm)
     __v.position.x=   0
     __v.position.y= 0
     __v.position.z= -10; 
@@ -1221,7 +1259,29 @@ console.log(error)
         wRotation= 0
     })
     
-    
+    crosshair = new THREE.Raycaster()
+    document.addEventListener('mousedown', function(event){
+        crosshair.setFromCamera(
+            {
+                x: (event.clientX / renderer.domElement.clientWidth) * 2 - 1,
+                y: -(event.clientY / renderer.domElement.clientHeight) * 2 + 1
+            },
+            camera
+        )
+        
+        intersections= crosshair.intersectObject(Evil_ai[0])
+        if (intersections.length && typeof bullet == "undefined" && intersections[0].distance < 5) {
+            right_forearm.rotation.x= 90 * un_grado_en_radianes
+            points = []
+            points.push( new THREE.Vector3( cannonend.getWorldPosition(new THREE.Vector3( 0, 0, 0 )).x, cannonend.getWorldPosition(new THREE.Vector3( 0, 0, 0 )).y, cannonend.getWorldPosition(new THREE.Vector3( 0, 0, 0 )).z ) )
+            points.push( new THREE.Vector3( intersections[0].point.x, intersections[0].point.y , intersections[0].point.z ) )
+            bullet = new THREE.Line( new THREE.BufferGeometry().setFromPoints( points ),  new THREE.LineBasicMaterial({color: 0x898989}) );
+            scene.add(bullet)
+            setTimeout(function(){
+                if(typeof bullet != "undefined"){scene.remove(bullet); delete bullet; right_forearm.rotation.x= 0}
+            }, Math.random() * 16)
+        }
+    })
     
     
     
@@ -1573,10 +1633,11 @@ console.log(error)
         
         camera.rotation.y= oCamera.rotation.z; 
 
+        
         for(var ii in ai){
             ai[ii].position.x+= Math.cos(ai[ii].rotation.z + 90 * un_grado_en_radianes) * ai[ii].speed
             ai[ii].position.y+= Math.sin(ai[ii].rotation.z + 90 * un_grado_en_radianes) * ai[ii].speed
-            if(castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(ai[ii]).y / 2 + ai[ii].speed, ai[ii], gOfSVG[1]) || castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(ai[ii]).y / 2 + ai[ii].speed, ai[ii], Car) || castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(ai[ii]).y / 2 + ai[ii].speed, ai[ii], __v)){
+            while(castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(ai[ii]).y / 2 + ai[ii].speed, ai[ii], gOfSVG[1]) || castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(ai[ii]).y / 2 + ai[ii].speed, ai[ii], Car) || castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(ai[ii]).y / 2 + ai[ii].speed, ai[ii], __v)){
                 ai[ii].rotation.z+= Math.random() * 361 * un_grado_en_radianes
             }
             if(Math.random() * 101 < ai[ii].deambProb){
@@ -1587,18 +1648,17 @@ console.log(error)
         
         //
         //⚠ Uncommenting next comment will make aliens walk✧✧✧✧
-        /*
+        
         for(var ii in Evil_ai){
             Evil_ai[ii].position.x+= Math.cos(Evil_ai[ii].rotation.y - 90 * un_grado_en_radianes) * Evil_ai[ii].speed
             Evil_ai[ii].position.y+= Math.sin(Evil_ai[ii].rotation.y - 90 * un_grado_en_radianes) * Evil_ai[ii].speed
-            if(castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(Evil_ai[ii]).y / 2 + Evil_ai[ii].speed + Evil_ai[ii].vision, Evil_ai[ii], gOfSVG[1], Evil_ai[ii].rotation.y) || castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(Evil_ai[ii]).y / 2 + Evil_ai[ii].speed + Evil_ai[ii].vision, Evil_ai[ii], Car, Evil_ai[ii].rotation.y) || castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(Evil_ai[ii]).y / 2 + Evil_ai[ii].speed + Evil_ai[ii].vision, Evil_ai[ii], __v, Evil_ai[ii].rotation.y)){
+            while(castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(Evil_ai[ii]).y / 2 + Evil_ai[ii].speed + Evil_ai[ii].vision, Evil_ai[ii], gOfSVG[1], Evil_ai[ii].rotation.y) || castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(Evil_ai[ii]).y / 2 + Evil_ai[ii].speed + Evil_ai[ii].vision, Evil_ai[ii], Car, Evil_ai[ii].rotation.y) || castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(Evil_ai[ii]).y / 2 + Evil_ai[ii].speed + Evil_ai[ii].vision, Evil_ai[ii], __v, Evil_ai[ii].rotation.y)){
                 Evil_ai[ii].rotation.y+= Math.random() * 361 * un_grado_en_radianes
             }
             if(Math.random() * 101 < Evil_ai[ii].deambProb){
                 Evil_ai[ii].rotation.y+= (Math.random() * 41 - 20) * un_grado_en_radianes
             }
         }
-        */
         
         if(typeof fingernail != "undefined")scene.remove(fingernail)
         if(typeof evildetectrays != "undefined"){
@@ -1632,7 +1692,7 @@ console.log(error)
             effectiveHit= parseInt(Math.random() * possibleHitPoints.length)
         }
         for(var edr in possibleHitPoints){
-            if(/*Removing next argument will make aliens shoot quickly outgrown then disattached with acid fingernails*/!!false && /**/parseInt(edr) === effectiveHit){
+            if(parseInt(edr) === effectiveHit){
                 fingernail= new THREE.Line( new THREE.BufferGeometry().setFromPoints( possibleHitPoints[effectiveHit][2] ),  new THREE.LineBasicMaterial({color: 0xffffff}) )
                 scene.add(fingernail)
                 health -= 0.2
@@ -1642,6 +1702,7 @@ console.log(error)
             }
         }
         //
+        
         
         renderer.render( scene, camera ); 
     
