@@ -701,6 +701,21 @@
         $(this).siblings(".code-scroll").scrollLeft($(this).scrollLeft());
 
     });
+    typeof videojs != "undefined"? (function(){ 
+        $(".Playuse").click(function(i){ 
+            $(i.target).parent().find("video")[0].play(); 
+            $(i.target).addClass("playing"); 
+        }); 
+
+        videojs("Dinosaurios7").on("pause", function(i){ 
+            $(videojs(i.target.parentElement.id).L.parentElement).siblings().filter(".Playuse").removeClass("playing"); 
+        });
+        
+        videojs("Dinosaurios7").on("play", function(i){ 
+            //console.log(i)
+            $(videojs(i.target.parentElement.id).L.parentElement).siblings().filter(".Playuse").addClass("playing"); 
+        });
+    })(): 1;
     </script>
 </body>
 

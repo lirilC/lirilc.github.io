@@ -735,22 +735,7 @@ document.addEventListener("keydown", function(e){if(e.shiftKey && e.ctrlKey){ctr
     $("#theater .read").on("click", function(){ 
         !$("#theater .description").hasClass("closed")? $("#theater .description").addClass("closed"): $("#theater .description").removeClass("closed"); 
         !$("#theater .comentarios").hasClass("open")? $("#theater .comentarios").addClass("open"): $("#theater .comentarios").removeClass("open"); 
-    })
-    typeof videojs != "undefined"? (function(){ 
-        $(".Playuse").click(function(i){ 
-            $(i.target).parent().find("video")[0].play(); 
-            $(i.target).addClass("playing"); 
-        }); 
-
-        videojs("Dinosaurios7").on("pause", function(i){ 
-            $(videojs(i.target.parentElement.id).L.parentElement).siblings().filter(".Playuse").removeClass("playing"); 
-        });
-        
-        videojs("Dinosaurios7").on("play", function(i){ 
-            //console.log(i)
-            $(videojs(i.target.parentElement.id).L.parentElement).siblings().filter(".Playuse").addClass("playing"); 
-        });
-    })(): 1; 
+    }) 
 
     $("#theater").on("click", function(i){$(i.target).is("#theater")? closeModal(): 1; }); 
 
