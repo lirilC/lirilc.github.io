@@ -1283,7 +1283,7 @@ console.log(error)
             scene.add(bullet)
             if(intersections[0].point.z > 0.27 && timeFromLastShot < intervals){
                 validshotcount= `${validshotcount}h`
-                if(validshotcount == "hhhch"){Evil_ai[0].aslept= true; setTimeout(function(){Evil_ai[0].aslept= false}, 155000)}
+                if(validshotcount.indexOf("hhhch") != -1){Evil_ai[0].aslept= true; setTimeout(function(){Evil_ai[0].aslept= false}, 155000)}
                 console.log(validshotcount)
                 timeFromLastShot= -1
                 if(typeof dstrct != "undefined")clearInterval(dstrct)
