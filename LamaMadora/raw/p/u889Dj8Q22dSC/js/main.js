@@ -199,43 +199,36 @@ console.log(error)
     
     //
     Evil_ai= []
-    Evil_aii = new THREE.Object3D();
-    Evil_aiBody= new THREE.Mesh( new THREE.BoxGeometry( 0.16, 0.35, 0.03 ), new THREE.MeshPhongMaterial({ color: 0xff0028 , reflectivity: 0.47 }) )
-    Evil_aiRightWing= new THREE.Mesh( new THREE.BoxGeometry( 0.16, 0.20, 0.008 ), new THREE.MeshPhongMaterial({ color: 0xcc0028 , reflectivity: 0.26 }) )
-    Evil_aiRightWing.position.x= 0.09
-    Evil_aiRightWing.position.y= 0.20
-    Evil_aiRightWing.position.z= -0.0154
-    Evil_aiLeftWing= new THREE.Mesh( new THREE.BoxGeometry( 0.16, 0.20, 0.008 ), new THREE.MeshPhongMaterial({ color: 0xcc0028 , reflectivity: 0.26 }) )
-    Evil_aiLeftWing.position.x= -0.09
-    Evil_aiLeftWing.position.y= 0.20
-    Evil_aiLeftWing.position.z= -0.0154
-    Evil_aii.add(Evil_aiBody)
-    Evil_aii.add(Evil_aiRightWing)
-    Evil_aii.add(Evil_aiLeftWing)
-    Evil_aii.speed= 0.009741
-    Evil_aii.deambProb= 1.7216
-    Evil_aii.vision= 0.05741
-    Evil_aii.aslept= false
-    Evil_ai.push(Evil_aii)
+    for(var eai= 0; eai < 1; eai++){
+        Evil_aii = new THREE.Object3D();
+        Evil_aiBody= new THREE.Mesh( new THREE.BoxGeometry( 0.16, 0.35, 0.03 ), new THREE.MeshPhongMaterial({ color: 0xff0028 , reflectivity: 0.47 }) )
+        Evil_aiRightWing= new THREE.Mesh( new THREE.BoxGeometry( 0.16, 0.20, 0.008 ), new THREE.MeshPhongMaterial({ color: 0xcc0028 , reflectivity: 0.26 }) )
+        Evil_aiRightWing.position.x= 0.09
+        Evil_aiRightWing.position.y= 0.20
+        Evil_aiRightWing.position.z= -0.0154
+        Evil_aiLeftWing= new THREE.Mesh( new THREE.BoxGeometry( 0.16, 0.20, 0.008 ), new THREE.MeshPhongMaterial({ color: 0xcc0028 , reflectivity: 0.26 }) )
+        Evil_aiLeftWing.position.x= -0.09
+        Evil_aiLeftWing.position.y= 0.20
+        Evil_aiLeftWing.position.z= -0.0154
+        Evil_aii.add(Evil_aiBody)
+        Evil_aii.add(Evil_aiRightWing)
+        Evil_aii.add(Evil_aiLeftWing)
+        Evil_aii.speed= 0.009741
+        Evil_aii.deambProb= 1.7216
+        Evil_aii.vision= 0.125741
+        Evil_aii.aslept= false
+        Evil_ai.push(Evil_aii)
+    }
+        Evil_ai[0].position.x= 70.03236191159085;
+        Evil_ai[0].position.y= -54.58558867982699;
+        Evil_ai[0].rotation.y= 4.066617157146804;
     
     for(var ii in Evil_ai){
-        Evil_ai[0].position.x= 90.50877826417093;
-    gM2 = new THREE.Mesh( new THREE.BoxGeometry( 1, 2.1, 26.22 ), new THREE.MeshPhongMaterial({ color: 0xfef0fe , reflectivity: 0.47 }) );
-    gM2.position.x=  1.5; 
-
-        Evil_ai[0].position.y= -46.35976688160602;
+        Evil_ai[ii].rotation.x= 90* un_grado_en_radianes;
         Evil_ai[ii].position.z= getSizes(Evil_ai[ii]).x / 2
-        Evil_ai[0].rotation.x= 90* un_grado_en_radianes;
-        Evil_ai[0].rotation.y= 90* un_grado_en_radianes;
         scene.add(Evil_ai[ii])
     }
     
-    /**/
-    evilNaNHolder = new THREE.Mesh( new THREE.BoxGeometry( 0.24, 0.26, 0.07 ), new THREE.MeshPhongMaterial({ color: 0xfef0fe , reflectivity: 0.47 }) );
-    evilNaNHolder.position.x= Evil_ai[0].position.x; 
-    evilNaNHolder.position.y= Evil_ai[0].position.y; 
-    evilNaNHolder.position.z= 0.045; 
-    scene.add(evilNaNHolder)
     //
     
     
@@ -737,7 +730,7 @@ console.log(error)
         points.push( new THREE.Vector3( ob.position.x + Math.cos(r) * cdx, ob.position.y + Math.sin(r) * cdy, ob.position.z ) )
         points.push( new THREE.Vector3( ob.position.x + Math.cos(r + degr * un_grado_en_radianes) * rayLength + Math.cos(r) * cdx, ob.position.y  + Math.sin(r + degr * un_grado_en_radianes) * rayLength + Math.sin(r) * cdy , ob.position.z ) )
         
-        //line = new THREE.Line( new THREE.BufferGeometry().setFromPoints( points ),  new THREE.LineBasicMaterial({color: 0x0000ff}) );
+        line = new THREE.Line( new THREE.BufferGeometry().setFromPoints( points ),  new THREE.LineBasicMaterial({color: 0x0000ff}) );
         raycaster = new THREE.Raycaster();
         var from = new THREE.Vector3( ob.position.x + Math.cos(r) * cdx, ob.position.y + Math.sin(r) * cdy, ob.position.z );
         var to = new THREE.Vector3( ob.position.x + Math.cos(r + degr * un_grado_en_radianes) * rayLength + Math.cos(r) * cdx, ob.position.y  + Math.sin(r + degr * un_grado_en_radianes) * rayLength + Math.sin(r) * cdy , ob.position.z );
@@ -747,7 +740,7 @@ console.log(error)
         Inte.position.x= pnt.x
         Inte.position.y= pnt.y
         Inte.position.z= pnt.z*/
-        //Evil_ai.indexOf(ob)!=-1?scene.add( line ):1
+        Evil_ai.indexOf(ob)!=-1?scene.add( line ):1
         if(typeof chkob != "undefined" && typeof raycaster.intersectObject(chkob)[0] != "undefined" && raycaster.intersectObject(chkob)[0].distance <= rayLength){
             distanceCRF= rayLength - raycaster.intersectObject(chkob)[0].distance 
             return true
@@ -758,7 +751,7 @@ console.log(error)
     
     //
     evildetectrays= []
-    castEvil_aiRays= function(cdx,cdy,degr, rayLength, ob, chkob, cdz){
+    castEvil_aiRays= function(cdx,cdy,degr, rayLength, ob, chkob, cdz, nJCR){
         points = []
         points.push( new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.y) * cdx, ob.position.y + Math.sin(ob.rotation.y) * cdy, ob.position.z ) )
         points.push( new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.y + degr * un_grado_en_radianes) * rayLength + Math.cos(ob.rotation.y) * cdx, ob.position.y  + Math.sin(ob.rotation.y + degr * un_grado_en_radianes) * rayLength + Math.sin(ob.rotation.y) * cdy , ob.position.z ) )
@@ -769,6 +762,9 @@ console.log(error)
         var to = new THREE.Vector3( ob.position.x + Math.cos(ob.rotation.y + degr * un_grado_en_radianes) * rayLength + Math.cos(ob.rotation.y) * cdx, ob.position.y  + Math.sin(ob.rotation.y + degr * un_grado_en_radianes) * rayLength + Math.sin(ob.rotation.y) * cdy , ob.position.z );
         to.sub( from ).normalize()
         raycaster.set( from, to );
+        if(typeof nJCR != "undefined" && !nJCR){
+            return raycaster.intersectObject(chkob)[0]
+        }
         /*pnt= raycaster.intersectObject(gOfSVG[0])[0].point
         Inte.position.x= pnt.x
         Inte.position.y= pnt.y
@@ -1143,7 +1139,7 @@ console.log(error)
     }; 
     
     setTimeout(function(){
-        display.logs= [,`_`,,`_`,,`Hola, bienvenido a El Refugio, __v.`,,,,`Pásatela bien un rato. Es seguro este lugar; uno de pocos en Vv11.`,,`¡Además está increíble!`,, `No te preocupes por ese "alien", está bien sujetado y siendo frecuentemente dormido.`,,`_`,,`_`,,,,,,,`_`,,`_`,,`Presiona i̇́fᶖ para bajarte de un carro en el que estés.`,,`_`,,  `Puedes correr con i̇́wᶖ, i̇́aᶖ y i̇́dᶖ, pero si quieres correr cansándote debes tener siempre presionado i̇́Shiftᶖ.`,, `Puedes subirte a cualquier carro acercándote a él y presionando i̇́fᶖ.`,,`_`,,`_`,,]
+        display.logs= [,`_`,,`_`,,`Hola, bienvenido a El Refugio, __v.`,,`⚠✧✧Los aliens tienen alas, pero no pueden volar en El Planeta Vv11.✧✧`,,` ✧ Son inmatables por las personas; se regeneran de inmediato de cualquier daño infringible. ✧ `,,`✧✧✧ Los aliens se regeneran de inmediato, pero también generan extremadamente rápido uñas y luego, en medio del crecimiento, las desprenden de sus dedos con ácido que éstos segregan, son letales, pero esa armadura hace que sólo te afecte la fuerza del impacto en ésta. ✧✧✧✧`,,`Sin embargo, si destruyes su motor de regeneración, que está en su cabeza, un alien quedará como muerto por unos minutos. ✧✧`,,`_`,,`_`,,,,,,,`✧`,,`✧`,,`Para dormir un alien debes destruir su motor de regeneración, con esa pistola de mano, __v, tres tiros muy seguidos el uno del otro en la cabeza. Luego, deberás muy rápidamente causar un daño letal; un tiro al centro vertical de su cuerpo, excluyendo las alas, con esa pistola de mano, hará el trabajo; y luego tendrás tan rápidamente como todo destruir su centro de generación disparándole a su cabeza.`,,`⚠ Los aliens revivirán después de unos minutos ✧`,,`Pásatela bien un rato.`,,`¡Este lugar está increíble!`,,`_`,,`_`,,,,,,,`_`,,`_`,,`Presiona i̇́fᶖ para bajarte de un carro en el que estés.`,,`_`,,  `Puedes correr con i̇́wᶖ, i̇́aᶖ y i̇́dᶖ, pero si quieres correr cansándote debes tener siempre presionado i̇́Shiftᶖ.`,, `Puedes subirte a cualquier carro acercándote a él y presionando i̇́fᶖ.`,,`_`,,`_`,,]
         display.narrator()
     }, 5853)
     
@@ -1284,11 +1280,9 @@ console.log(error)
             if(intersections[0].point.z > 0.27 && timeFromLastShot < intervals){
                 validshotcount= `${validshotcount}h`
                 if(validshotcount.indexOf("hhhch") != -1){Evil_ai[0].aslept= true; setTimeout(function(){Evil_ai[0].aslept= false}, 155000)}
-                console.log(validshotcount)
                 timeFromLastShot= -1
                 if(typeof dstrct != "undefined")clearInterval(dstrct)
                 dstrct= setInterval(function(){
-                    console.log(timeFromLastShot)
                     timeFromLastShot++
                     if(timeFromLastShot >= intervals){
                         validshotcount= ''
@@ -1299,11 +1293,9 @@ console.log(error)
             }
             if(intersections[0].point.z > 0.12 && intersections[0].point.z < 0.18 && timeFromLastShot < intervals){
                 validshotcount= `${validshotcount}c`
-                console.log(validshotcount)
                 timeFromLastShot= -1
                 if(typeof dstrct != "undefined")clearInterval(dstrct)
                 dstrct= setInterval(function(){
-                    console.log(timeFromLastShot)
                     timeFromLastShot++
                     if(timeFromLastShot >= intervals){
                         validshotcount= ''
@@ -1697,7 +1689,7 @@ console.log(error)
             ai[ii].position.x+= Math.cos(ai[ii].rotation.z + 90 * un_grado_en_radianes) * ai[ii].speed
             ai[ii].position.y+= Math.sin(ai[ii].rotation.z + 90 * un_grado_en_radianes) * ai[ii].speed
             while(castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(ai[ii]).y / 2 + ai[ii].speed, ai[ii], gOfSVG[1]) || castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(ai[ii]).y / 2 + ai[ii].speed, ai[ii], Car) || castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(ai[ii]).y / 2 + ai[ii].speed, ai[ii], __v)){
-                ai[ii].rotation.z+= Math.random() * 361 * un_grado_en_radianes
+                ai[ii].rotation.z+= Math.random() * 360 * un_grado_en_radianes
             }
             if(Math.random() * 101 < ai[ii].deambProb){
                 ai[ii].rotation.z+= (Math.random() * 21 - 10) * un_grado_en_radianes
@@ -1707,20 +1699,21 @@ console.log(error)
         
         //
         //⚠ Uncommenting next comment will make aliens walk✧✧✧✧
-        /*
+        
         for(var ii in Evil_ai){
             if(!Evil_ai[ii].aslept){
                 Evil_ai[ii].position.x+= Math.cos(Evil_ai[ii].rotation.y - 90 * un_grado_en_radianes) * Evil_ai[ii].speed
                 Evil_ai[ii].position.y+= Math.sin(Evil_ai[ii].rotation.y - 90 * un_grado_en_radianes) * Evil_ai[ii].speed
-                while(castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(Evil_ai[ii]).y / 2 + Evil_ai[ii].speed + Evil_ai[ii].vision, Evil_ai[ii], gOfSVG[1], Evil_ai[ii].rotation.y) || castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(Evil_ai[ii]).y / 2 + Evil_ai[ii].speed + Evil_ai[ii].vision, Evil_ai[ii], Car, Evil_ai[ii].rotation.y) || castRayFromThisFarFromCenterInTheseDegrees(0, 0, 90, getSizes(Evil_ai[ii]).y / 2 + Evil_ai[ii].speed + Evil_ai[ii].vision, Evil_ai[ii], __v, Evil_ai[ii].rotation.y)){
-                    Evil_ai[ii].rotation.y+= Math.random() * 361 * un_grado_en_radianes
+                console.log(castEvil_aiRays(-0.03, 0, 270, 3, Evil_ai[ii], gOfSVG[1], 0, false))
+                while(typeof castEvil_aiRays(-0.03, 0, 270, 3, Evil_ai[ii], gOfSVG[1], 0, false) != "undefined" && castEvil_aiRays(-0.03, 0, 270, 3, Evil_ai[ii], gOfSVG[1], 0, false).distance <= 0.015 + Evil_ai[ii].speed + Evil_ai[ii].vision){
+                    Evil_ai[ii].rotation.y+= (Math.random() * 360) * un_grado_en_radianes
                 }
                 if(Math.random() * 101 < Evil_ai[ii].deambProb){
                     Evil_ai[ii].rotation.y+= (Math.random() * 41 - 20) * un_grado_en_radianes
                 }
             }
         }
-        */
+        
         
         if(typeof fingernail != "undefined")scene.remove(fingernail)
         if(typeof evildetectrays != "undefined"){
@@ -1734,33 +1727,34 @@ console.log(error)
         }
         }
         
-        
-        if(!Evil_ai[0].aslept){
-            evildetectrays= []
-            
-            for( var n= 242; n <= 298; n++){
-              castEvil_aiRays(-0.03, 0, n, 3, Evil_ai[0], __v)
-            }
-            
-            possibleHitPoints= []
-            for(var edr in evildetectrays){
-                if(evildetectrays[edr][0] === "col"){
-                   possibleHitPoints.push(evildetectrays[edr])
-                }else{
-                    scene.add(evildetectrays[edr][1])
+        evildetectrays= []
+        for(var t in Evil_ai){
+            if(!Evil_ai[t].aslept){
+                
+                for( var n= 242; n <= 298; n++){
+                  castEvil_aiRays(-0.03, 0, n, 3, Evil_ai[t], __v)
                 }
-            }
-            if(typeof possibleHitPoints != "undefined" && possibleHitPoints.length){
-                effectiveHit= parseInt(Math.random() * possibleHitPoints.length)
-            }
-            for(var edr in possibleHitPoints){
-                if(/*Removing next argument will make aliens shoot quickly outgrown then disattached with acid fingernails*/!!false && /**/ parseInt(edr) === effectiveHit){
-                    fingernail= new THREE.Line( new THREE.BufferGeometry().setFromPoints( possibleHitPoints[effectiveHit][2] ),  new THREE.LineBasicMaterial({color: 0xffffff}) )
-                    scene.add(fingernail)
-                    health -= 0.2
-                    setHealth(health)
-                }else{
-                    scene.add(possibleHitPoints[edr][1])
+                
+                possibleHitPoints= []
+                for(var edr in evildetectrays){
+                    if(evildetectrays[edr][0] === "col"){
+                       possibleHitPoints.push(evildetectrays[edr])
+                    }else{
+                        scene.add(evildetectrays[edr][1])
+                    }
+                }
+                if(typeof possibleHitPoints != "undefined" && possibleHitPoints.length){
+                    effectiveHit= parseInt(Math.random() * possibleHitPoints.length)
+                }
+                for(var edr in possibleHitPoints){
+                    if(parseInt(edr) === effectiveHit){
+                        fingernail= new THREE.Line( new THREE.BufferGeometry().setFromPoints( possibleHitPoints[effectiveHit][2] ),  new THREE.LineBasicMaterial({color: 0xffffff}) )
+                        scene.add(fingernail)
+                        health -= 0.2
+                        setHealth(health)
+                    }else{
+                        scene.add(possibleHitPoints[edr][1])
+                    }
                 }
             }
         }
