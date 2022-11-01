@@ -1210,7 +1210,7 @@ body .achievements-tooltip{
     max-width: 100%; 
 } 
 header nav ul li#right-menu #store::before {
-    background-image: url("https://cdn-icons-png.flaticon.com/512/3768/3768482.png");
+    /*background-image: url("https://cdn-icons-png.flaticon.com/512/3768/3768482.png");*/
     background-repeat: no-repeat;
     height: 16px;
     display: inline-block;
