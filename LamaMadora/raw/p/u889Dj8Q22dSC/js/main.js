@@ -225,7 +225,7 @@ console.log(error)
     
     for(var ii in Evil_ai){
         Evil_ai[ii].rotation.x= 90* un_grado_en_radianes;
-        Evil_ai[ii].position.z= getSizes(Evil_ai[ii]).x / 2
+        Evil_ai[ii].position.z= 0.175
         scene.add(Evil_ai[ii])
     }
     
@@ -1277,6 +1277,7 @@ console.log(error)
             points.push( new THREE.Vector3( intersections[0].point.x, intersections[0].point.y , intersections[0].point.z ) )
             bullet = new THREE.Line( new THREE.BufferGeometry().setFromPoints( points ),  new THREE.LineBasicMaterial({color: 0x898989}) );
             scene.add(bullet)
+            console.log(intersections[0].point.z)
             if(intersections[0].point.z > 0.27 && timeFromLastShot < intervals){
                 validshotcount= `${validshotcount}h`
                 if(validshotcount.indexOf("hhhch") != -1){Evil_ai[0].aslept= true; setTimeout(function(){Evil_ai[0].aslept= false}, 155000)}
@@ -1704,7 +1705,6 @@ console.log(error)
             if(!Evil_ai[ii].aslept){
                 Evil_ai[ii].position.x+= Math.cos(Evil_ai[ii].rotation.y - 90 * un_grado_en_radianes) * Evil_ai[ii].speed
                 Evil_ai[ii].position.y+= Math.sin(Evil_ai[ii].rotation.y - 90 * un_grado_en_radianes) * Evil_ai[ii].speed
-                console.log(castEvil_aiRays(-0.03, 0, 270, 3, Evil_ai[ii], gOfSVG[1], 0, false))
                 while(typeof castEvil_aiRays(-0.03, 0, 270, 3, Evil_ai[ii], gOfSVG[1], 0, false) != "undefined" && castEvil_aiRays(-0.03, 0, 270, 3, Evil_ai[ii], gOfSVG[1], 0, false).distance <= 0.015 + Evil_ai[ii].speed + Evil_ai[ii].vision){
                     Evil_ai[ii].rotation.y+= (Math.random() * 360) * un_grado_en_radianes
                 }
