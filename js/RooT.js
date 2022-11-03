@@ -542,6 +542,534 @@ var one= function(a, b, c, d){
 			}
 			return reTurn
 			break
+		case "_story":
+			var reTurn= ""
+			for(var e= 1; e <= c.length - 1; e += 2){
+				switch(c[e].type){
+					case "links":
+						reTurn+=   `<section class="story links">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                ${c[e].contents}
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "containments":
+						reTurn+=   `<section class="story containments">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                ${c[e].contents}
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "embed":
+						reTurn+=   `<section class="story embed">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                ${c[e].contents}
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "multimedia":
+						reTurn+=   `<section class="story multimedia">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                ${c[e].contents}
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "informativeImg":
+						reTurn+=   `<section class="story informative img">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> ${c[e].information}<br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                ${c[e].contents}
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "img":
+						reTurn+=   `<section class="story img">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
+																																								               <div class='tool city'>
+																																								                   <figure>
+																																								                       <img class='thumbnail' src= '${c[e].city.pic}'></img>
+																																								                   </figure>
+																																								               	   <div class='introduction'>
+																																								                       ${c[e].city.description}
+																																								                   </div>
+																																								               </div>">${c[e].city.name}</a> `: ``}<br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                <section id="picture">
+		                                    <img class="pic" src="/resources/images/${c[e].user.username}/${c[e].contents.image}" alt="" class="big">
+		                                </section>
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "vid":
+						reTurn+=   `<section class="story video">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
+																																								               <div class='tool city'>
+																																								                   <figure>
+																																								                       <img class='thumbnail' src= '${c[e].city.pic}'></img>
+																																								                   </figure>
+																																								               	   <div class='introduction'>
+																																								                       ${c[e].city.description}
+																																								                   </div>
+																																								               </div>">${c[e].city.name}</a> `: ``}<br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <section class="video">
+				                            <div class="Enlarge">
+				                            </div>
+				                            <div class="Playuse">
+				                            </div>
+				                            <video id="x${(function(){vX++; return vX})()}" controls class="video-js d88fer vjs-default-skin" preload="none" width="100%" height="264" data-setup='{"poster":"/resources/images/${c[e].user.username}/${c[e].contents.video}_poster.png"}' data-setup="{}">
+				                                <source src="/resources/videos/${c[e].user.username}/${c[e].contents.video}.mp4" type='video/mp4' />
+				                                <p class="vjs-no-js">
+				                                    Para ver este vídeo, por favor activa el Javascript y considera actualizar tu navegador a uno que
+				                                    <a href="http://videojs.com/       html5-video-support/" target="_blank">
+				                                        soporte vídeo en Html5
+				                                    </a>
+				                                </p>
+				                            </video>
+				                        </section>
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "mult_img":
+						reTurn+=   `<section class="story mult_img">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
+																																								               <div class='tool city'>
+																																								                   <figure>
+																																								                       <img class='thumbnail' src= '${c[e].city.pic}'></img>
+																																								                   </figure>
+																																								               	   <div class='introduction'>
+																																								                       ${c[e].city.description}
+																																								                   </div>
+																																								               </div>">${c[e].city.name}</a> `: ``}<br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                <section class="navigation">
+				                            <div class="nav_arrow left disabled">
+				                                <div class="arrow"></div>
+				                            </div>
+				                            <div class="nav_arrow right">
+				                                <div class="arrow"></div>
+				                            </div>
+				                            <section class="carr">
+		                                		${one("_carrItem", foReach, c[e].contents.carrContents, {user: c[e].user})}
+		                                	</section>
+		                                </section>
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "mult_carr":
+						reTurn+=   `<section class="story mult_carr">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
+																																								               <div class='tool city'>
+																																								                   <figure>
+																																								                       <img class='thumbnail' src= '${c[e].city.pic}'></img>
+																																								                   </figure>
+																																								               	   <div class='introduction'>
+																																								                       ${c[e].city.description}
+																																								                   </div>
+																																								               </div>">${c[e].city.name}</a> `: ``}<br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                <section class="navigation">
+				                            <div class="nav_arrow left disabled">
+				                                <div class="arrow"></div>
+				                            </div>
+				                            <div class="nav_arrow right">
+				                                <div class="arrow"></div>
+				                            </div>
+				                            <section class="carr">
+		                                		${one("_carrItem", foReach, c[e].contents.carrContents, {user: c[e].user})}
+		                                	</section>
+		                                </section>
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "repostLinks":
+						reTurn+=   `<section class="story repost links">
+		                                <div class="info">
+		                                    <img class="repost" src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <div class="repostedFrom"></div>
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
+		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                ${c[e].contents}
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "repostContainments":
+						reTurn+=   `<section class="story repost containments">
+		                                <div class="info">
+		                                    <img class="repost" src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <div class="repostedFrom"></div>
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
+		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                ${c[e].contents}
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "repostImg":
+						reTurn+=   `<section class="story repost img">
+		                                <div class="info">
+		                                    <img class="repost" src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <div class="repostedFrom"></div>
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
+		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                <section id="picture">
+		                                    <img class="pic" src="/resources/images/${c[e].originalPoster.username}/${c[e].contents.image}" alt="" class="big">
+		                                </section>
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+		                break;
+		            case "repostMult_img":
+						reTurn+=   `<section class="story repost mult_img">
+		                                <div class="info">
+		                                    <img class="repost" src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <div class="repostedFrom"></div>
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
+		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                <section class="navigation">
+				                            <div class="nav_arrow left disabled">
+				                                <div class="arrow"></div>
+				                            </div>
+				                            <div class="nav_arrow right">
+				                                <div class="arrow"></div>
+				                            </div>
+				                            <section class="carr">
+		                                		${one("repost_carrItem", foReach, (function(){mini_reTurn= {}; for(var t in c[e].contents.carrContents){mini_reTurn[t]= c[e].contents.carrContents[t]}return mini_reTurn})(), {originalPoster: c[e].originalPoster})}
+		                                	</section>
+		                                </section>
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+		                break;
+					case "repostVideo":
+						reTurn+=   `<section class="story repost video">
+		                                <div class="info">
+		                                    <img class="repost" src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <div class="repostedFrom"></div>
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
+		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                <section class="video">
+		                                    <div class="Enlarge">
+		                                    </div>
+		                                    <div class="Playuse">
+		                                    </div>
+		                                    <video id="x${(function(){vX++; return vX})()}" controls class="video-js d88fer vjs-default-skin" preload="none" width="100%" height="264" data-setup='{"poster":"/resources/images/${c[e].originalPoster.username}/${c[e].contents.video}_poster.png"}' data-setup="{}">
+		                                        <source src="/resources/videos/${c[e].originalPoster.username}/${c[e].contents.video}.mp4" type='video/mp4' />
+		                                        <p class="vjs-no-js">
+		                                            Para ver este vídeo, por favor activa el Javascript y considera actualizar tu navegador a uno que
+		                                            <a href="http://videojs.com/       html5-video-support/" target="_blank">
+		                                                soporte vídeo en Html5
+		                                            </a>
+		                                        </p>
+		                                    </video>
+		                                </section>
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+		                break;
+		            case "repost_multimedia":
+						reTurn+=   `<section class="story repost containments">
+		                                <div class="info">
+		                                    <img class="repost" src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <div class="repostedFrom"></div>
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
+		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                ${c[e].contents}
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break;
+					case "fork":
+						reTurn+=   `<section class="story fork links">
+		                                <div class="info">
+		                                    <img class="fork" src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <div class="forkedFrom"></div>
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalRepoOwner.rol.level}'>
+		                                    <img class="fork" src="${c[e].originalRepoOwner.profilePic}" alt="">
+		                                    <p class="username fork"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Forkeó de <a class="target" href="/${c[e].originalRepoOwner.username}" title="${c[e].originalRepoOwner.tool}">${c[e].originalRepoOwner.users_name}</a><br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                ${c[e].contents}
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+				}
+			}
+			return reTurn
+			break
 		case "foto":
 			var reTurn= ""
 			for(var e in c){
@@ -854,6 +1382,43 @@ var one= function(a, b, c, d){
 	                default:
 						reTurn+=   `<section class="picture">
 	                                    <img class="pic" src="/resources/images/${d.originalPoster.username}/${c[e]}" alt="" class="big">
+	                                </section>
+	                                `
+	                    break;
+				}
+			}
+			return reTurn
+		case "_carrItem":
+			var reTurn= ""
+			for(var e in c){
+				switch(c[e][0]){
+					case "vi":
+						reTurn+=   `<section class="video">
+	                                    <div class="Playuse">
+	                                    </div>
+	                                    <div class="Enlarge">
+	                                    </div>
+	                                    <video id="x${(function(){vX++; return vX})()}" controls class="video-js d88fer vjs-default-skin" preload="none" width="100%" height="325" data-setup='{"poster":"/resources/images/${d.user.username}/${c[e][1]}_poster.png"}' data-setup="{}">
+	                                        <source src="/resources/videos/${d.user.username}/${c[e][1]}.mp4" type='video/mp4' />
+	                                        <p class="vjs-no-js">
+	                                            Para ver este vídeo, por favor activa el Javascript y considera actualizar tu navegador a uno que
+	                                            <a href="http://videojs.com/html5-video-support/" target="_blank">
+	                                                soporte vídeo en Html5
+	                                            </a>
+	                                        </p>
+	                                    </video>
+	                                </section>
+	                                `
+	                    break;
+	                case "im":
+						reTurn+=   `<section class="picture">
+	                                    <img class="pic" src="/resources/images/${d.user.username}/${c[e][1]}" alt="" class="big">
+	                                </section>
+	                                `
+	                    break;
+	                default:
+						reTurn+=   `<section class="picture">
+	                                    <img class="pic" src="/resources/images/${d.user.username}/${c[e]}" alt="" class="big">
 	                                </section>
 	                                `
 	                    break;
@@ -3400,6 +3965,36 @@ _R('a[href="/A.K.A._Dizzy"]').on("click", function(e){
 	
 	history.pushState({page: 1}, "", `/A.K.A._Dizzy`)
   RooT.imporT("/js/A.K.A._Dizzy/DB.js", Then, function(d){
+    window.user= d._user()
+    RooT.imporT("/js/templates/user.js", Then, function(d){
+      _T(document).scrollTop(0)
+      _R("title").text(`${user.users_name} | liril`)
+      RooT.replace(_R("#biography", 0), wiTh, d.app().biography())
+
+      RooT.ready()
+    })
+  })
+})
+_R('a[href="/PpP"]').on("click", function(e){
+	e.preventDefault()
+	
+	history.pushState({page: 1}, "", `/L`)
+  RooT.imporT("/js/PpP/DB.js", Then, function(d){
+    window.user= d._user()
+    RooT.imporT("/js/templates/user.js", Then, function(d){
+      _T(document).scrollTop(0)
+      _R("title").text(`${user.users_name} | liril`)
+      RooT.replace(_R("#biography", 0), wiTh, d.app().biography())
+
+      RooT.ready()
+    })
+  })
+})
+_R('a[href="/Eld"]').on("click", function(e){
+	e.preventDefault()
+	
+	history.pushState({page: 1}, "", `/L`)
+  RooT.imporT("/js/Eld/DB.js", Then, function(d){
     window.user= d._user()
     RooT.imporT("/js/templates/user.js", Then, function(d){
       _T(document).scrollTop(0)

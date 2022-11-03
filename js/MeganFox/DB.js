@@ -276,6 +276,7 @@ var user= {
                 full: "7 de Septiembre de 2022 a las 7:9 pm",
                 min: "7 de Septiembre a las 7:9 pm"
             },
+            city: {name: "Nueva York", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Qwertyliberty123.jpg/800px-Qwertyliberty123.jpg", description: `Nueva York​ (en inglés, New York, (EE. UU.: pronunciado /nuˈjɔɹk/), oficialmente New York City o NYC en siglas) es la ciudad más poblada de los Estados Unidos de América y una de las más pobladas del mundo, con un área urbana de 24 millones de habitantes.​ Desde finales del siglo xix es uno de los centros de la política y la economía mundial, albergando la sede de la Organización de las Naciones Unidas y de numerosas empresas e instituciones financieras de importancia global. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nueva_York'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: ``,
             description: ``,
             contents:  {carrContents: [["vi", "wD9Afzs350"], ["im", "6GkCGsC8nJ.jpg"], ["im", "vlBKsINxWb.jpg"], ["im", "qQLm6kZ8cK.jpg"], ["im", "NHJgCGBEjz.jpg"], ["im", "El7Vz6B2ZB.jpg"], ["im", "4kZDzNjH8e.jpg"], ["im", "6tWSc2iY4s.jpg"]]},
@@ -450,6 +451,7 @@ var user= {
                 full: "12 de Enero de 2022 a las 11:2 pm",
                 min: "12 de Enero a las 11:2 pm"
             },
+            city: {name: "Dorado", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Dorado%2C_Puerto_Rico%2C_Central_Square.jpg/250px-Dorado%2C_Puerto_Rico%2C_Central_Square.jpg", description: `Dorado es un municipio de la costa norte de Puerto Rico. Fundado en el 1842 por Jacinto López. También conocido como 'La Ciudad Ejemplar', 'Ciudad Dorada', y 'La Más Limpia de Puerto Rico'. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Dorado_(Puerto_Rico)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: `In July of 2020 we sat under this banyan tree `,
             description: `<br>We asked for magic<br><br>We were oblivious to the pain we would face together in such a short, frenetic period of time. Unaware of the work and sacrifices the relationship would require from us but intoxicated off of the love. And the karma.<br><br>Somehow a year and a half later, having walked through Hell together, and having laughed more than I ever imagined possible, he asked me to marry him.<br><br>And just as in every lifetime before this one, and as in every lifetime that will follow it, I said yes.<br><br>…and then we drank each other’s blood<br><br>1.11.22 ✨`,
             contents:  {video: "fDFmX5MXBa"},
