@@ -1,11 +1,6 @@
 user= {
 	username: "user",
 	users_name: "Walter White",
-    profilePic: {
-        "/user/img/white": {
-    
-        }
-    },
     profilePic: "/resources/images/white.jpg",
     rol:{
     	rol: "Moderador",
