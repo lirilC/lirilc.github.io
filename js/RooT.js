@@ -542,6 +542,534 @@ var one= function(a, b, c, d){
 			}
 			return reTurn
 			break
+		case "_story":
+			var reTurn= ""
+			for(var e= 1; e <= c.length - 1; e += 2){
+				switch(c[e].type){
+					case "links":
+						reTurn+=   `<section class="story links">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                ${c[e].contents}
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "containments":
+						reTurn+=   `<section class="story containments">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                ${c[e].contents}
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "embed":
+						reTurn+=   `<section class="story embed">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                ${c[e].contents}
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "multimedia":
+						reTurn+=   `<section class="story multimedia">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                ${c[e].contents}
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "informativeImg":
+						reTurn+=   `<section class="story informative img">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> ${c[e].information}<br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                ${c[e].contents}
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "img":
+						reTurn+=   `<section class="story img">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
+																																								               <div class='tool city'>
+																																								                   <figure>
+																																								                       <img class='thumbnail' src= '${c[e].city.pic}'></img>
+																																								                   </figure>
+																																								               	   <div class='introduction'>
+																																								                       ${c[e].city.description}
+																																								                   </div>
+																																								               </div>">${c[e].city.name}</a> `: ``}<br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                <section id="picture">
+		                                    <img class="pic" src="/resources/images/${c[e].user.username}/${c[e].contents.image}" alt="" class="big">
+		                                </section>
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "vid":
+						reTurn+=   `<section class="story video">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
+																																								               <div class='tool city'>
+																																								                   <figure>
+																																								                       <img class='thumbnail' src= '${c[e].city.pic}'></img>
+																																								                   </figure>
+																																								               	   <div class='introduction'>
+																																								                       ${c[e].city.description}
+																																								                   </div>
+																																								               </div>">${c[e].city.name}</a> `: ``}<br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <section class="video">
+				                            <div class="Enlarge">
+				                            </div>
+				                            <div class="Playuse">
+				                            </div>
+				                            <video id="x${(function(){vX++; return vX})()}" controls class="video-js d88fer vjs-default-skin" preload="none" width="100%" height="264" data-setup='{"poster":"/resources/images/${c[e].user.username}/${c[e].contents.video}_poster.png"}' data-setup="{}">
+				                                <source src="/resources/videos/${c[e].user.username}/${c[e].contents.video}.mp4" type='video/mp4' />
+				                                <p class="vjs-no-js">
+				                                    Para ver este vídeo, por favor activa el Javascript y considera actualizar tu navegador a uno que
+				                                    <a href="http://videojs.com/       html5-video-support/" target="_blank">
+				                                        soporte vídeo en Html5
+				                                    </a>
+				                                </p>
+				                            </video>
+				                        </section>
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "mult_img":
+						reTurn+=   `<section class="story mult_img">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
+																																								               <div class='tool city'>
+																																								                   <figure>
+																																								                       <img class='thumbnail' src= '${c[e].city.pic}'></img>
+																																								                   </figure>
+																																								               	   <div class='introduction'>
+																																								                       ${c[e].city.description}
+																																								                   </div>
+																																								               </div>">${c[e].city.name}</a> `: ``}<br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                <section class="navigation">
+				                            <div class="nav_arrow left disabled">
+				                                <div class="arrow"></div>
+				                            </div>
+				                            <div class="nav_arrow right">
+				                                <div class="arrow"></div>
+				                            </div>
+				                            <section class="carr">
+		                                		${one("_carrItem", foReach, c[e].contents.carrContents, {user: c[e].user})}
+		                                	</section>
+		                                </section>
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "mult_carr":
+						reTurn+=   `<section class="story mult_carr">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
+																																								               <div class='tool city'>
+																																								                   <figure>
+																																								                       <img class='thumbnail' src= '${c[e].city.pic}'></img>
+																																								                   </figure>
+																																								               	   <div class='introduction'>
+																																								                       ${c[e].city.description}
+																																								                   </div>
+																																								               </div>">${c[e].city.name}</a> `: ``}<br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                <section class="navigation">
+				                            <div class="nav_arrow left disabled">
+				                                <div class="arrow"></div>
+				                            </div>
+				                            <div class="nav_arrow right">
+				                                <div class="arrow"></div>
+				                            </div>
+				                            <section class="carr">
+		                                		${one("_carrItem", foReach, c[e].contents.carrContents, {user: c[e].user})}
+		                                	</section>
+		                                </section>
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "repostLinks":
+						reTurn+=   `<section class="story repost links">
+		                                <div class="info">
+		                                    <img class="repost" src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <div class="repostedFrom"></div>
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
+		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                ${c[e].contents}
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "repostContainments":
+						reTurn+=   `<section class="story repost containments">
+		                                <div class="info">
+		                                    <img class="repost" src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <div class="repostedFrom"></div>
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
+		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                ${c[e].contents}
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "repostImg":
+						reTurn+=   `<section class="story repost img">
+		                                <div class="info">
+		                                    <img class="repost" src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <div class="repostedFrom"></div>
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
+		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                <section id="picture">
+		                                    <img class="pic" src="/resources/images/${c[e].originalPoster.username}/${c[e].contents.image}" alt="" class="big">
+		                                </section>
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+		                break;
+		            case "repostMult_img":
+						reTurn+=   `<section class="story repost mult_img">
+		                                <div class="info">
+		                                    <img class="repost" src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <div class="repostedFrom"></div>
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
+		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                <section class="navigation">
+				                            <div class="nav_arrow left disabled">
+				                                <div class="arrow"></div>
+				                            </div>
+				                            <div class="nav_arrow right">
+				                                <div class="arrow"></div>
+				                            </div>
+				                            <section class="carr">
+		                                		${one("repost_carrItem", foReach, (function(){mini_reTurn= {}; for(var t in c[e].contents.carrContents){mini_reTurn[t]= c[e].contents.carrContents[t]}return mini_reTurn})(), {originalPoster: c[e].originalPoster})}
+		                                	</section>
+		                                </section>
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+		                break;
+					case "repostVideo":
+						reTurn+=   `<section class="story repost video">
+		                                <div class="info">
+		                                    <img class="repost" src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <div class="repostedFrom"></div>
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
+		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                <section class="video">
+		                                    <div class="Enlarge">
+		                                    </div>
+		                                    <div class="Playuse">
+		                                    </div>
+		                                    <video id="x${(function(){vX++; return vX})()}" controls class="video-js d88fer vjs-default-skin" preload="none" width="100%" height="264" data-setup='{"poster":"/resources/images/${c[e].originalPoster.username}/${c[e].contents.video}_poster.png"}' data-setup="{}">
+		                                        <source src="/resources/videos/${c[e].originalPoster.username}/${c[e].contents.video}.mp4" type='video/mp4' />
+		                                        <p class="vjs-no-js">
+		                                            Para ver este vídeo, por favor activa el Javascript y considera actualizar tu navegador a uno que
+		                                            <a href="http://videojs.com/       html5-video-support/" target="_blank">
+		                                                soporte vídeo en Html5
+		                                            </a>
+		                                        </p>
+		                                    </video>
+		                                </section>
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+		                break;
+		            case "repost_multimedia":
+						reTurn+=   `<section class="story repost containments">
+		                                <div class="info">
+		                                    <img class="repost" src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <div class="repostedFrom"></div>
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
+		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                ${c[e].contents}
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break;
+					case "fork":
+						reTurn+=   `<section class="story fork links">
+		                                <div class="info">
+		                                    <img class="fork" src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
+		                                    <div class="forkedFrom"></div>
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalRepoOwner.rol.level}'>
+		                                    <img class="fork" src="${c[e].originalRepoOwner.profilePic}" alt="">
+		                                    <p class="username fork"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Forkeó de <a class="target" href="/${c[e].originalRepoOwner.username}" title="${c[e].originalRepoOwner.tool}">${c[e].originalRepoOwner.users_name}</a><br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                ${c[e].contents}
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${c[e - 1]}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+				}
+			}
+			return reTurn
+			break
 		case "foto":
 			var reTurn= ""
 			for(var e in c){
@@ -854,6 +1382,43 @@ var one= function(a, b, c, d){
 	                default:
 						reTurn+=   `<section class="picture">
 	                                    <img class="pic" src="/resources/images/${d.originalPoster.username}/${c[e]}" alt="" class="big">
+	                                </section>
+	                                `
+	                    break;
+				}
+			}
+			return reTurn
+		case "_carrItem":
+			var reTurn= ""
+			for(var e in c){
+				switch(c[e][0]){
+					case "vi":
+						reTurn+=   `<section class="video">
+	                                    <div class="Playuse">
+	                                    </div>
+	                                    <div class="Enlarge">
+	                                    </div>
+	                                    <video id="x${(function(){vX++; return vX})()}" controls class="video-js d88fer vjs-default-skin" preload="none" width="100%" height="325" data-setup='{"poster":"/resources/images/${d.user.username}/${c[e][1]}_poster.png"}' data-setup="{}">
+	                                        <source src="/resources/videos/${d.user.username}/${c[e][1]}.mp4" type='video/mp4' />
+	                                        <p class="vjs-no-js">
+	                                            Para ver este vídeo, por favor activa el Javascript y considera actualizar tu navegador a uno que
+	                                            <a href="http://videojs.com/html5-video-support/" target="_blank">
+	                                                soporte vídeo en Html5
+	                                            </a>
+	                                        </p>
+	                                    </video>
+	                                </section>
+	                                `
+	                    break;
+	                case "im":
+						reTurn+=   `<section class="picture">
+	                                    <img class="pic" src="/resources/images/${d.user.username}/${c[e][1]}" alt="" class="big">
+	                                </section>
+	                                `
+	                    break;
+	                default:
+						reTurn+=   `<section class="picture">
+	                                    <img class="pic" src="/resources/images/${d.user.username}/${c[e]}" alt="" class="big">
 	                                </section>
 	                                `
 	                    break;
@@ -2859,6 +3424,7 @@ RooT.maTch= {}
 RooT.maTch.user= new RegExp('^\/[^\/]+$')//A slash anything but a slash and nothing after; e.g.: /usund8n2982d9ncukansc
 RooT.maTch.photos= new RegExp('^(\/.*?\/)photos$');//A slash anything but a slash and a slash and the word photos after; e.g: /uaocno/photos
 RooT.maTch.videos= new RegExp('^(\/.*?\/)videos$');//A slash anything but a slash and a slash and the word videos after; e.g: /uaocno/photos
+RooT.maTch.root= new RegExp('^\/$')//A slash
 
 if(RooT.maTch.user.exec(window.location.pathname) !== null){
 	/*Redefine badGuy*/
@@ -3410,6 +3976,36 @@ _R('a[href="/A.K.A._Dizzy"]').on("click", function(e){
     })
   })
 })
+_R('a[href="/PpP"]').on("click", function(e){
+	e.preventDefault()
+	
+	history.pushState({page: 1}, "", `/L`)
+  RooT.imporT("/js/PpP/DB.js", Then, function(d){
+    window.user= d._user()
+    RooT.imporT("/js/templates/user.js", Then, function(d){
+      _T(document).scrollTop(0)
+      _R("title").text(`${user.users_name} | liril`)
+      RooT.replace(_R("#biography", 0), wiTh, d.app().biography())
+
+      RooT.ready()
+    })
+  })
+})
+_R('a[href="/Eld"]').on("click", function(e){
+	e.preventDefault()
+	
+	history.pushState({page: 1}, "", `/L`)
+  RooT.imporT("/js/Eld/DB.js", Then, function(d){
+    window.user= d._user()
+    RooT.imporT("/js/templates/user.js", Then, function(d){
+      _T(document).scrollTop(0)
+      _R("title").text(`${user.users_name} | liril`)
+      RooT.replace(_R("#biography", 0), wiTh, d.app().biography())
+
+      RooT.ready()
+    })
+  })
+})
 _R('a[href="/AuraCardonaC"]').on("click", function(e){
 	e.preventDefault()
 	
@@ -3774,7 +4370,586 @@ audiojs.events.ready(function(){
 			})
 		})
 	})	
-}
+}else if(RooT.maTch.root.exec(window.location.pathname) !== null){
+	//To _R()
+	/*RooT RooTed users' links*/
+	_R('a[href="/L"]').on("click", function(e){
+		e.preventDefault()
+		
+		history.pushState({page: 1}, "", `/L`)
+	  RooT.imporT("/js/L/DB.js", Then, function(d){
+	    window.user= d._user()
+	    RooT.imporT("/js/templates/user.js", Then, function(d){
+	      _T(document).scrollTop(0)
+	      _R("title").text(`${user.users_name} | liril`)
+	      RooT.replace(_R("#feed", 0), wiTh, d.app().biography())
+
+	      RooT.ready()
+	    })
+	  })
+	})
+	_R('a[href="/A.K.A._Dizzy"]').on("click", function(e){
+		e.preventDefault()
+		
+		history.pushState({page: 1}, "", `/A.K.A._Dizzy`)
+	  RooT.imporT("/js/A.K.A._Dizzy/DB.js", Then, function(d){
+	    window.user= d._user()
+	    RooT.imporT("/js/templates/user.js", Then, function(d){
+	      _T(document).scrollTop(0)
+	      _R("title").text(`${user.users_name} | liril`)
+	      RooT.replace(_R("#feed", 0), wiTh, d.app().biography())
+
+	      RooT.ready()
+	    })
+	  })
+	})
+	_R('a[href="/PpP"]').on("click", function(e){
+		e.preventDefault()
+		
+		history.pushState({page: 1}, "", `/L`)
+	  RooT.imporT("/js/PpP/DB.js", Then, function(d){
+	    window.user= d._user()
+	    RooT.imporT("/js/templates/user.js", Then, function(d){
+	      _T(document).scrollTop(0)
+	      _R("title").text(`${user.users_name} | liril`)
+	      RooT.replace(_R("#feed", 0), wiTh, d.app().biography())
+
+	      RooT.ready()
+	    })
+	  })
+	})
+	_R('a[href="/Eld"]').on("click", function(e){
+		e.preventDefault()
+		
+		history.pushState({page: 1}, "", `/L`)
+	  RooT.imporT("/js/Eld/DB.js", Then, function(d){
+	    window.user= d._user()
+	    RooT.imporT("/js/templates/user.js", Then, function(d){
+	      _T(document).scrollTop(0)
+	      _R("title").text(`${user.users_name} | liril`)
+	      RooT.replace(_R("#feed", 0), wiTh, d.app().biography())
+
+	      RooT.ready()
+	    })
+	  })
+	})
+	_R('a[href="/AuraCardonaC"]').on("click", function(e){
+		e.preventDefault()
+		
+		history.pushState({page: 1}, "", `/AuraCardonaC`)
+	  RooT.imporT("/js/AuraCardonaC/DB.js", Then, function(d){
+	    window.user= d._user()
+	    RooT.imporT("/js/templates/user.js", Then, function(d){
+	      _T(document).scrollTop(0)
+	      _R("title").text(`${user.users_name} | liril`)
+	      RooT.replace(_R("#feed", 0), wiTh, d.app().biography())
+
+	      RooT.ready()
+	    })
+	  })
+	})
+	_R('a[href="/MeganFox"]').on("click", function(e){
+		e.preventDefault()
+		
+		history.pushState({page: 1}, "", `/MeganFox`)
+	  RooT.imporT("/js/MeganFox/DB.js", Then, function(d){
+	    window.user= d._user()
+	    RooT.imporT("/js/templates/user.js", Then, function(d){
+	      _T(document).scrollTop(0)
+	      _R("title").text(`${user.users_name} | liril`)
+	      RooT.replace(_R("#feed", 0), wiTh, d.app().biography())
+
+	      RooT.ready()
+	    })
+	  })
+	})
+	_R('a[href="/G-Suschrist"]').on("click", function(e){
+		e.preventDefault()
+		
+		history.pushState({page: 1}, "", `/G-Suschrist`)
+	  RooT.imporT("/js/G-Suschrist/DB.js", Then, function(d){
+	    window.user= d._user()
+	    RooT.imporT("/js/templates/user.js", Then, function(d){
+	      _T(document).scrollTop(0)
+	      _R("title").text(`${user.users_name} | liril`)
+	      RooT.replace(_R("#feed", 0), wiTh, d.app().biography())
+
+	      RooT.ready()
+	    })
+	  })
+	})
+	_R('a[href="/LamaMadora"]').on("click", function(e){
+		e.preventDefault()
+		
+		history.pushState({page: 1}, "", `/MeganFox`)
+	  RooT.imporT("/js/LamaMadora/DB.js", Then, function(d){
+	    window.user= d._user()
+	    RooT.imporT("/js/templates/user.js", Then, function(d){
+	      _T(document).scrollTop(0)
+	      _R("title").text(`${user.users_name} | liril`)
+	      RooT.replace(_R("#feed", 0), wiTh, d.app().biography())
+
+	      RooT.ready()
+	    })
+	  })
+	})
+	$(".Editado").on("contextmenu", function(er){er.preventDefault()})
+	$(".Editado").on("mouseup", function(e){
+	console.log(e)
+	if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHistory).length - 1){
+	    console.log(edHistory[rvsdatefinder(datefinder($(this).attr("title")) + 1)]); 
+
+	    var wReq = new XMLHttpRequest();
+	    wReq.addEventListener("load", function(e){edition(e)}); 
+	    wReq.open("get", edHistory[rvsdatefinder(datefinder($(this).attr("title")) + 1)], true);
+	    wReq.send();
+	    rvsdatefinder(datefinder($(this).attr("title")) + 1).indexOf("Editado") != 0? $(this).css({"text-decoration": "line-through", "color": "#3773639f"}): $(this).css({"text-decoration": "", "color": "rgb(221, 221, 144)"})
+	    $(this).attr("title", rvsdatefinder(datefinder($(this).attr("title")) + 1))
+	}else if(e.which === 3 && datefinder($(this).attr("title")) - 1 >= 0){
+
+	    console.log(edHistory[rvsdatefinder(datefinder($(this).attr("title")) - 1)]); 
+
+	    var wReq = new XMLHttpRequest();
+	    wReq.addEventListener("load", function(e){edition(e)}); 
+	    wReq.open("get", edHistory[rvsdatefinder(datefinder($(this).attr("title")) - 1)], true);
+	    wReq.send();
+
+	    rvsdatefinder(datefinder($(this).attr("title")) - 1).indexOf("Editado") != 0? $(this).css({"text-decoration": "line-through", "color": "#3773639f"}): $(this).css({"text-decoration": "", "color": ""})
+	    $(this).attr("title", rvsdatefinder(datefinder($(this).attr("title")) - 1))
+	    if(datefinder($(this).attr("title"))== 0){$(this).css({"color": ""})}else{$(this).css({"color": "rgb(221, 221, 144)"})}
+	}
+
+	})
+
+	$("a").click(function(ed){if($(this).attr("target") !== "_blank" && $(this).attr("href") != undefined){ed.preventDefault(); loadPage($(this).attr("href"))}})
+	possibleResults=[[["Megan Denise Fox", "MeganFox"], {users_name: "Megan Denise Fox", username: "MeganFox", profilePic: "/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg", rol: ["G", "+100"], type: "Usuario"}], [["Laura Escobar Bonnett", "L"], {users_name: "Laura Escobar Bonnett", username: "L", profilePic: "/resources/images/L/OGnpwD3jys_tn.jpg", rol: ["Princesa", "+100"], type: "Usuario"}], [["Luis Eduardo Gallego García", "A.K.A._Dizzy"], {users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], type: "Usuario"}], [["Dios Jesucristo", "G-Suschrist"], {users_name: "Dios Jesucristo", username: "G-Suschrist", profilePic: "/resources/images/G-Suschrist/Rvu7YjVcXr_tn.jpg", rol: ["G", "+100"], type: "Usuario"}], [["Aura María Cardona Demasiado", "AuraCardonaC"], {users_name: "Aura María Cardona Demasiado", username: "AuraCardonaC", profilePic: "/resources/images/AuraCardonaC/44Cpl8Gig5_tn.jpg", rol: ["Profe de fitness", "+94"], type: "Usuario"}], [["Juan José Martínez Vidal", "LamaMadora"], {users_name: "Juan José Martínez Vidal", username: "LamaMadora", profilePic: "/resources/images/LamaMadora/sdlQg1CoQ3_tn.jpg", rol: ["Dubber", "+88"], type: "Usuario"}], , [["Walter White", "user"], {users_name: "Walter White", username: "user", profilePic: "/resources/images/white.jpg", rol: ["Moderador", "+60"], type: "Usuario"}], [["A0"], {name: "A0", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/A0", type: "Blog"}], [["Algo Más Sobre Mí"], {name: "Algo Más Sobre Mí", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Algo Más Sobre Mí", type: "Blog"}], [["Algunas Propiedades De Mis Escritos"], {name: "Algunas Propiedades De Mis Escritos", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Algunas Propiedades De Mis Escritos", type: "Blog"}], [["Algunos Poemas Que He Escrito"], {name: "Algunos Poemas Que He Escrito", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Algunos Poemas Que He Escrito", type: "Blog"}], [["aNGEL();"], {name: "aNGEL();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/aNGEL();", type: "Blog"}], [["Constructor And Business Partners (Dedicatorias)"], {name: "Constructor And Business Partners (Dedicatorias)", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Constructor And Business Partners (Dedicatorias)", type: "Blog"}], [["Constructor And Business Partners"], {name: "Constructor And Business Partners", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Constructor And Business Partners", type: "Blog"}], [["Dinosaurios"], {name: "Dinosaurios", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Dinosaurios", type: "Blog"}], [["El Pueblo Blanco"], {name: "El Pueblo Blanco", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/El Pueblo Blanco", type: "Blog"}], [["El Salomé Castrillón"], {name: "El Salomé Castrillón", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/El Salomé Castrillón", type: "Blog"}], [["Equilibrio"], {name: "Equilibrio", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Equilibrio", type: "Blog"}], [["FRANCIA Y ElDelprincipio"], {name: "FRANCIA Y ElDelprincipio", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/FRANCIA Y ElDelprincipio", type: "Blog"}], [["La Larga Historia"], {name: "La Larga Historia", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/La Larga Historia", type: "Blog"}], [["La Perrita Del Poste"], {name: "La Perrita Del Poste", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/La Perrita Del Poste", type: "Blog"}], [["La Sagrada Biblia"], {name: "La Sagrada Biblia", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/La Sagrada Biblia", type: "Blog"}], [["Las Flores Malditas (Introducción)"], {name: "Las Flores Malditas (Introducción)", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Las Flores Malditas (Introducción)", type: "Blog"}], [["por_siLaBas();"], {name: "por_siLaBas();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/por_siLaBas();", type: "Blog"}], [["Regalos Para Mí"], {name: "Regalos Para Mí", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Regalos Para Mí", type: "Blog"}], [["Sus Rizos Color Caramelo"], {name: "Sus Rizos Color Caramelo", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Sus Rizos Color Caramelo", type: "Blog"}], [["Una Breve Historia De La Creación"], {name: "Una Breve Historia De La Creación", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Una Breve Historia De La Creación", type: "Blog"}], [["xWo3"], {name: "xWo3", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/xWo3", type: "Blog"}], [["dinosaurios"], {name: "dinosaurios", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/82DcC9s2sS0cZ", type: "Proyecto"}], [["por_siLaBas();"], {name: "por_siLaBas();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/f9d2cCa2Cxc31", type: "Proyecto"}], [["Christmas Gifts From The Gallego Escobar Family"], {name: "Christmas Gifts From The Gallego Escobar Family", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/h3dd2cDcsW2R3", type: "Proyecto"}], [["aNGEL();"], {name: "aNGEL();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/k92dJd29D920d", type: "Proyecto"}], [["Robot De Dedicatorias"], {name: "Robot De Dedicatorias", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/k9u8hH78jJi27", type: "Proyecto"}], [["Robot de dedicatorias"], {name: "Robot de dedicatorias", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/s98f39c0d9090", type: "Proyecto"}], [["Widgets"], {name: "Widgets", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/i9d2g2cftdCds", type: "Proyecto"}], [["ElDelprincipio"], {name: "ElDelprincipio", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/tY829dD0290df", type: "Proyecto"}], [["myProjext1"], {name: "myProjext1", users_name: "Megan Denise Fox", username: "MeganFox", profilePic: "/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg", rol: ["G", "+100"], href: "/MeganFox/p/iD8299D88d3D2", type: "Proyecto"}], [["minesweeper"], {name: "minesweeper", users_name: "Laura Escobar Bonnett", username: "L", profilePic: "/resources/images/L/OGnpwD3jys_tn.jpg", rol: ["Princesa", "+100"], href: "/L/p/2kNoind8JsjD9", type: "Proyecto"}], [["lX"], {name: "lX", users_name: "Aura María Cardona Demasiado", username: "AuraCardonaC", profilePic: "/resources/images/AuraCardonaC/44Cpl8Gig5_tn.jpg", rol: ["Profe de fitness", "+94"], href: "/AuraCardonaC/p/di29D8jj8dj2d", type: "Proyecto"}], [["snka"], {name: "snka", users_name: "Dios Jesucristo", username: "G-Suschrist", profilePic: "/resources/images/G-Suschrist/Rvu7YjVcXr_tn.jpg", rol: ["G", "+100"], href: "/G-Suschrist/p/Jkik39djfX8iX", type: "Proyecto"}], [["Vv11"], {name: "Vv11", users_name: "Juan José Martínez Vidal", username: "LamaMadora", profilePic: "/resources/images/LamaMadora/sdlQg1CoQ3_tn.jpg", rol: ["Dubber", "+88"], href: "/LamaMadora/p/u889Dj8Q22dSC", type: "Proyecto"}], [["_dvlpmt"], {name: "_dvlpmt", users_name: "Walter White", username: "user", profilePic: "/resources/images/white.jpg", rol: ["Moderador", "+60"], href: "/user/p/8d299s2gvkL9", type: "Proyecto"}], [["La Perrita Del Poste", "PpP"], {users_name: "La Perrita Del Poste", username: "PpP", profilePic: "/resources/images/PpP/bZj2vYrklo_tn.jpg", rol: ["G", "+100"], type: "Usuario"}], [["ElDelprincipio", "Eld"], {users_name: "ElDelprincipio", username: "Eld", profilePic: "/resources/images/Eld/oow4doJxKO_tn.jpg", rol: ["G", "+100"], type: "Usuario"}]]
+
+	$(".buscar").on("input", function(){  if($(this).val() !== ""){$(".searchResults").removeClass("hidden")}else{ $(".searchResults").addClass("hidden"); return}
+	results= []
+	for(var e in possibleResults){
+	for(var u in possibleResults[e][0]){
+	if(possibleResults[e][0][u].toLowerCase().indexOf($(this).val().toLowerCase()) == 0){
+	if(results.indexOf(possibleResults[e][1]) == -1)results[results.length]= possibleResults[e][1]
+	}
+	}
+	}
+
+	$(".searchResults > div").html("")
+	for(var f in results){
+	if(results[f].type == "Usuario"){
+	$(".searchResults > div").append(
+	`<section class="result">
+	<a href= "/` + results[f].username + `"></a>
+	<div class="profilePic">
+	<img src="` + results[f].profilePic + `" alt="">
+	<input class="knob button" data-width="106" data-height="106" data-fgColor="#2ecc71" data-bgColor="rgba(0,0,0,0)" data-displayInput=false data-thickness=".06" readonly value="` + results[f].rol[1].slice(1) + `"></div>
+	<div class="username">` + results[f].users_name + `<p class="rol">` + results[f].rol[0] + ` <b>` + results[f].rol[1] + `</b></p></div>               
+	<span class="resulttype">Usuario</span>
+	</section>`
+	)
+	}
+	}
+	for(var f in results){
+	if(results[f].type == "Blog"){
+	$(".searchResults > div").append(
+	`<section class="result">
+	<a href= "` + results[f].href + `"></a>
+	<div class="profilePic">
+	<img src="` + results[f].profilePic + `" alt="">
+	<input class="knob button" data-width="106" data-height="106" data-fgColor="#2ecc71" data-bgColor="rgba(0,0,0,0)" data-displayInput=false data-thickness=".06" readonly value="` + results[f].rol[1].slice(1) + `"></div>
+	<div class="username">` + results[f].users_name + `<a class= "name">&nbsp; | ` + results[f].name + `</a></div>               
+	<span class="resulttype">Blog</span>
+	</section>`
+	)
+	}
+	}
+	for(var f in results){
+	if(results[f].type == "Proyecto"){
+	$(".searchResults > div").append(
+	`<section class="result">
+	<a href= "` + results[f].href + `"></a>
+	<div class="profilePic">
+	<img src="` + results[f].profilePic + `" alt="">
+	<input class="knob button" data-width="106" data-height="106" data-fgColor="#2ecc71" data-bgColor="rgba(0,0,0,0)" data-displayInput=false data-thickness=".06" readonly value="` + results[f].rol[1].slice(1) + `"></div>
+	<div class="username">` + results[f].users_name + `<a class= "name">&nbsp; | ` + results[f].name + `</a></div>               
+	<span class="resulttype">Proyecto</span>
+	</section>`
+	)
+	}
+	}
+	$(".searchResults a").click(function(ed){if($(this).attr("target") !== "_blank" && $(this).attr("href") != undefined){ed.preventDefault(); loadPage($(this).attr("href"))}})
+	$(".knob").knob()
+	})
+	$(document).on("keydown", function(r){
+	switch(r.keyCode){
+	  case 40:
+	        if(!$(".searchResults").is(".hidden") && !$(".result#resaltado").length){
+	            $($(".result")[0]).attr("id", "resaltado")
+	            $($(".result")[0]).children()[0].focus()
+	            setTimeout(function(){$(".searchResults > div").scrollTop(0)}, 20)
+	        }else if(!$(".searchResults").is(".hidden") && $(".result#resaltado").index() != $(".result").length - 1){
+	            $(".result#resaltado").next().children()[0].focus()
+	            $(".result#resaltado").next().attr("id", "resaltado")
+	            $($(".result#resaltado")[0]).attr("id", "")
+	        }
+	    break;
+	  case 38:
+	        if(!$(".searchResults").is(".hidden") && $(".result#resaltado").length && $(".result#resaltado").index() != 0){
+	            $(".result#resaltado").prev().children()[0].focus()
+	            $(".result#resaltado").prev().attr("id", "resaltado")
+	            $($(".result#resaltado")[1]).attr("id", "")
+	        }
+	    break;
+	}
+	})
+
+	document.addEventListener("keydown", function(e){if(e.shiftKey && e.ctrlKey && e.altKey){e.preventDefault();$("#theater").css("display") == "block"?closeModal():1;$("#buscar input").val("");$("#buscar input").trigger("input");$("#buscar input").focus()}})
+	    $("#theater textarea").on('input', function() { 
+	        $(this).height(""); 
+	        !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2))))): 1; 
+	    }); 
+	    $(".comentarios > .newComment").on('keydown', function(i){ 
+	                abc= $("#theater .Comentarios"); 
+
+	                (!i.shiftKey && i.keyCode == 13)? (function(){abc.append("<div class='comentario'>" + localStorage.getItem("knob") + '"' +  localStorage.getItem("tooltip") + '"' + localStorage.getItem("user") + $(".comentarios > .newComment textarea").val().replaceAll("\n", "<br>") + "</span><span class='Responder'></span></div>"); $(".comentarios > .newComment textarea").val(""); $($($("#theater .Comentarios").children()[$("#theater .Comentarios").children().length - 1]).find(".Responder")).on("click", function(){wD($(this))}); $("#theater .Comentarios").scrollTop($("#theater .Comentarios")[0].scrollHeight); $($($("#theater .Comentarios").children()[$("#theater .Comentarios").children().length - 1])).on("mousemove", function(event){elx= $($(this).children()[0]); circleWidth = elx.outerWidth( true ),circleHeight  = elx.outerHeight( true ),circleLeft    = elx.offset().left,circleTop     = elx.offset().top,circlePos     = {x     : circleLeft + circleWidth / 2,y     : circleTop + circleHeight / 2,radius: circleWidth / 2};distance    = Math.sqrt( Math.pow( event.pageX - circlePos.x, 2 ) + Math.pow( event.pageY - circlePos.y, 2 ) );if(distance <= circlePos.radius){$($(this).children()[0]).css({"pointer-events": "all"});$($(this).children()[0]).css({"pointer-events": "all"});}else{$($(this).children()[0]).css({"pointer-events": "none"});$($(this).children()[0]).css({"pointer-events": "none"});}}); document.activeElement.blur(); $(".comentarios > .newComment textarea").css({"height": ""}); badGuy(); })(): 1; 
+
+	                $(".knob").knob(); 
+
+	                tooltipComentarios(); 
+	            }); 
+	    $("#theater .read").on("click", function(){ 
+	        !$("#theater .description").hasClass("closed")? $("#theater .description").addClass("closed"): $("#theater .description").removeClass("closed"); 
+	        !$("#theater .comentarios").hasClass("open")? $("#theater .comentarios").addClass("open"): $("#theater .comentarios").removeClass("open"); 
+	    }); 
+
+	    
+	    /*$(".story").each(function(){ 
+	        cold= JSON.parse(localStorage.getItem($(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + $(this).find(".carr").find("img")[0].src.slice($(this).find(".carr").find("img")[0].src.lastIndexOf("/"), $(this).find(".carr").find("img")[0].src.lastIndexOf(".")): $(this).find(".options a").attr("href"))); 
+	                           
+	        var t= $(this)[0]; 
+	                           
+	        !!cold? (function(){ 
+	            cold.B? $(t).find(".options .bookmark").addClass("true"): $(t).find(".options .bookmark").removeClass("true"); 
+	            cold.S? $(t).find(".options .star").addClass("true"): $(t).find(".options .star").removeClass("true"); 
+	            $(t).find(".Comentarios")[0].innerHTML= cold.C; 
+	        })(): 1; 
+	    }); */
+
+	    current= $(".story.current");
+	    $(document).keypress(function (e){
+	        if(!$("textarea").is(":focus") && !$("input").is(":focus") && !waiting){ 
+	            switch(e.keyCode){ 
+	                case 108: case 76: 
+	                    $(".current").find('.options .star').toggleClass("true"); 
+	                    $("#theater").find('.options .star').toggleClass("true"); 
+	                    badGuy(); 
+	                break; 
+	                case 98: case 66: 
+	                    $(".current").find('.options .bookmark').toggleClass("true"); 
+	                    $("#theater").find('.options .bookmark').toggleClass("true"); 
+	                    badGuy(); 
+	                break; 
+	                case 102: case 70: 
+	                    if(($(".current").is(".mult_img") || $(".current").is(".mult_carr")) && $("#theater").css("display") != "block"){ 
+	                        $($(".current").find(".carr > section")[Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0)]).is( ".video" )? $($(".current").find(".carr > section")[Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0)]).find(".Enlarge").trigger( "click" ): openModal($($(".current").find(".pic")[Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0) - getVideos($(".current"), Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0))])); 
+	                        if(Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0) == Math.floor($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0)){
+	                            $(".current .carr").stop(true, false); 
+	                            $(".current .carr").animate({scrollLeft: (Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0) * $(".current").find(".carr > section").width())}, (400 - (400 * (Math.ceil($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0) - ($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0))))); 
+	                            /*$(".current .nav_arrow.left .arrow").click(); */ 
+	                        }else{
+	                            $(".current .carr").stop(true, false); 
+	                            $(".current .carr").animate({scrollLeft: (Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0) * $(".current").find(".carr > section").width())}, (400 * (Math.ceil($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0) - ($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0)))); 
+	                            /*$(".current .nav_arrow.right .arrow").click(); */ 
+	                        }
+	                    }else if($(".current").is(".img") && $("#theater").css("display") != "block"){ 
+	                        openModal($(".current .pic")); 
+	                    }else if($(".current").is(".video")){ 
+	                        openVideoModal($(".current").find(".Enlarge")); 
+	                    }; 
+	                break; 
+	            }
+	        }
+	    if(!$("textarea").is(":focus") && !$("input").is(":focus") && !waiting && $("#theater").css("display") != "block"){
+	        //console.log(e.keyCide) 
+	        var forward;
+	                     
+	        (e.keyCode == 74 || e.keyCode == 106 || e.keyCode == 75 || e.keyCode == 107)? waiting= true: 143; 
+	                                                   
+	        if (e.keyCode == 74 || e.keyCode == 106){
+	            forward= true;
+	        }else if (e.keyCode == 75 || e.keyCode == 107){
+	            forward= false;
+	        }else{
+	            return true;
+	        }
+	    
+	    
+	        if (!$(".story.current").length){
+	            $(".story:first").addClass("current"); 
+	        }
+	    
+	        if ($(".story.current").length){
+	            next= ""; 
+	            if (forward){
+	                !!current.next(".story").length? next= current.next(".story"): 1415; 
+	            }else{
+	                !!current.prev(".story").length? next= current.prev(".story"): 27721; 
+	            }
+	            if (!!next.length){
+	                $(".current").removeClass("current");
+	                next.addClass("current"); 
+	            }
+	        }
+	    
+	        (!!next.length)? (function(){
+	                            ok= false; 
+	                            $("html").animate({ 
+	                            scrollTop: $(".current").offset().top - 56
+	                        }, 400, function(){  
+	                            waiting= false; 
+	                            current= $(".story.current"); 
+	                            $(".current").attr("tabindex", 0); 
+	                            $(".current")[0].focus();
+	                            setTimeout(function(){ok= true;}, 100) 
+	                        })})(): waiting= false; 
+	        }
+	    });
+	    $("#search input").on("keyup", function(){for(a= 0; a < $("#resizeBottom")[0].children[0].children[0].children[0].children[0].children.length; a++){ 
+	        $("#resizeBottom")[0].children[0].children[0].children[0].children[0].children[a].style.display= ""; 
+	        $("#resizeBottom")[0].children[0].children[0].children[0].children[0].children[a].innerText.toLowerCase().indexOf($("#search input")[0].value.toLowerCase()) == -1? $("#resizeBottom")[0].children[0].children[0].children[0].children[0].children[a].style.display= "none": 1; 
+	    }})
+	    document.getElementsByClassName("buscar")[0].addEventListener("keydown", function(i){
+	        i.keyCode == 13? document.getElementsByTagName("body")[0].style.cursor= "text": 1; 
+
+	            i.keyCode == 13? setTimeout(function(){aNGEL(document.getElementsByClassName("buscar")[0].value)}, 152): 1; 
+	    }); 
+	    document.getElementsByTagName("input")[2].addEventListener("keydown", function(i){i.keyCode == 13? por_siLaBas(document.getElementsByTagName("input")[2].value): 1; }); 
+	    document.getElementsByTagName("input")[2].addEventListener("keydown", function(i){i.keyCode == 53? parse("header", 0): 1; }); 
+	    console.log('parse("header", 0);   '); 
+	    $('.chats').click(function(e){ 
+	    aa= e.target; 
+	    ii= false; 
+	    while(!!aa.parentElement && !ii){ 
+	        (!!aa.parentElement.getAttribute("class") && aa.parentElement.getAttribute("class").indexOf("chat ") != -1)? ii = true: 1; 
+	        aa= aa.parentElement; 
+	    }
+	        if(!ii){ 
+	            $(this).hide(); 
+	            $(document.elementFromPoint(e.clientX, e.clientY)).trigger("click"); 
+	            $(this).show(); 
+	        } 
+	    }); 
+	    $(".story .overflowing").on("scroll", function(k){ 
+	   var current = $(".story.current"); 
+	    current.removeClass("current"); 
+	    $(this).closest(".story").addClass("current"); 
+	}) 
+
+	$(".carr").on("scroll", function(){ 
+	    rf= $(this)
+	    Math.round($(this)[0].scrollLeft / $(this).width()) == $(this).children().length - 1? (function(){rf.parent().find(".nav_arrow.right").addClass("disabled"); $("#theater").find(".nav_arrow.right").addClass("disabled")})(): (function(){rf.parent().find(".nav_arrow.right").removeClass("disabled"); $("#theater").find(".nav_arrow.right").removeClass("disabled")})(); 
+	    $(this)[0].scrollLeft == 0? (function(){rf.parent().find(".nav_arrow.left").addClass("disabled"); $("#theater").find(".nav_arrow.left").addClass("disabled");})(): (function(){rf.parent().find(".nav_arrow.left").removeClass("disabled"); $("#theater").find(".nav_arrow.left").removeClass("disabled")})(); 
+	}) 
+	    $(".nav_arrow.left .arrow").not("#picContainer .arrow").on("click", function(){
+	        th= $("#theater").css("display") == "none"? $(".current"): th; 
+	        if($("#theater .nav_arrow.left").is(".disabled"))
+	            {return}; 
+	        if(th.find(".nav_arrow.left").is(".disabled") && $("#theater").css("display") == "none")
+	            {return}
+	        if($("#theater").css("display") == "none" && !!th.find(".carr").length){ 
+	            lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
+	            if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
+	            !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
+	                if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
+	        }else if(!!th.find(".carr").length){ 
+	            /*console.log( lk )*/ 
+	            th.find(".carr")[0].scrollLeft= th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width(); 
+	            lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
+	            lk= un_tn( lk ); 
+	            $("#theater video")[0].src= ""; 
+	            th.is(".mult_carr")? $( (function(){return $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find(".Enlarge")})() ).trigger( "click" ): $("#theater").find("#bigPic")[0].src= (th.is(".story")? $(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src: un_tn($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src)); 
+	            source= un_tn($("#theater").find("#bigPic")[0].src)
+	            history.pushState({page: 1}, "", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
+	        }
+	    }); 
+
+	    $(".nav_arrow.right .arrow").not("#picContainer .arrow").on("click", function(){
+	        th= $("#theater").css("display") == "none"? $(".current"): th; 
+	        if($("#theater .nav_arrow.right").is(".disabled"))
+	            {return}; 
+	        if(th.find(".nav_arrow.right").is(".disabled") && $("#theater").css("display") == "none")
+	            {return}
+	        if($("#theater").css("display") == "none" && !!th.find(".carr").length){ 
+	            lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
+	            if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
+	            !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
+	                if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
+	        }else if(!!th.find(".carr").length){ 
+	            /*console.log( lk )*/ 
+	            th.find(".carr")[0].scrollLeft= th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width(); 
+	            lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
+	            lk= un_tn( lk ); 
+	            $("#theater video")[0].src= ""; 
+	            th.is(".mult_carr")? $( (function(){return $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find(".Enlarge")})() ).trigger( "click" ): $("#theater").find("#bigPic")[0].src= (th.is(".story")? $(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src: un_tn($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src)); 
+	            source= un_tn($("#theater").find("#bigPic")[0].src)
+	            history.pushState({page: 1}, "", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
+	        }
+	    }); 
+
+	    
+
+
+	    Used= []; 
+	    Urls= ["Abigail O'Neill.jpg", "Alana Campos.png", "Alexandra Tyler.jpeg", "Ali Chanel.jpg", "Ali Michael.jpg", "Alicia Loraina Olivas.jpg", "Allie Leggett.jpg", "Allie Silva.jpg", "Alyssa Arcè.jpg", "Amanda Booth.jpg", "Amanda Cerny.webp", "Amanda Streich.jpg", "Amberleigh West.jpg", "Amelia Talon.jpg", "Amy Leigh Andrews.jpg", "Ana Cheri.webp", "Anita Pathammavong.jpg", "Anna Sophia Berglund.jpg", "Ashley Doris.jpg", "Ashley Hobbs.jpg", "Ashley Smith.webp", "Audrey Aleen Allen.jpg", "Beth Williams.jpg", "Bridget Malcolm.jpg", "Britany Nola.jpg", "Britt Linn.jpeg", "Brittany Brousseau.jpg", "Brittny Ward.jpg", "Brook Power.jpg", "Bryiana Noelle.jpg", "Camille Rowe.jpg", "Carly Lauren.jpg", "Carolina Ballesteros.jpg", "Cassandra Dawn.webp", "Chasity Samone.jpg", "Chelsie Aryn.jpg", "Ciara Price.jpg", "Claire Sinclair.jpg", "Dana Taylor.jpg", "Dani Mathers.jpg", "Danielle Alcaraz.jpg", "Dominique Jane.jpg", "Dree Hemingway.jpg", "Elizabeth Elam.webp", "Elizabeth Ostrander.webp", "Elsie Hewitt.jpg", "Emily Agnes.jpg", "Enikő Mihalik.jpg", "Eugena Washington.jpg", "Fo Porter.jpg", "Francesca Frigo.jpg", "Geena Rocero.jpg", "Gemma Lee Farrell.jpg", "Gia Marie.jpg", "Gillian Chan.jpg", "Heather Knox.jpg", "Heather Rae Young.webp", "Hilda Dias Pimentel.jpg", "Ines Rau.jpg", "Iryna Ivanova.jpg", "Jaclyn Swedberg.jpg", "Jaime Faith Edmonson.jpg", "Jaslyn Ome.jpg", "Jenny Watwood.jpg", "Jessa Lynn Hinton.jpg", "Jessica Ashley.jpg", "Jessica Wall.jpg", "Jordan Emanuel.webp", "Jordy Murray.jpg", "Josie Canseco.jpg", "Joy Corrigan.jpg", "Karina Marie.jpg", "Kassie Lyn Logsdon.jpg", "Katie Vernola.jpg", "Kayla Garvin.jpg", "Kayla Rae Reid.webp", "Kaylia Cassandra.webp", "Kayslee Collins.webp", "Kelly Gale.png", "Kennedy Summers.jpg", "Khrystyana.jpg", "Kirby Griffin.jpg", "Kristen Nicole.jpeg", "Kristy Garett.jpg", "Kylie Johnson.jpg", "Kyra Milan.jpg", "Lada Kravchenko.jpg", "Leola Bell.jpg", "Lisa Seiffert.jpg", "Liza Kei.png", "Lorena Medina.jpg", "Maggie May.jpg", "Marsha Elle.jpg", "Megan Moore.jpg", "Megan Samperi.jpg", "Mei-Ling Lam.jpg", "Miki Hamano.jpg", "Milan Dixon.jpg", "Monica Sims.jpg", "Nereyda Bird.jpg", "Nikki Leigh.jpg", "Nina Daniele.jpg", "Olga de Mar.jpg", "Olivia Paige.jpg", "Pamela Horton.jpg", "Priscilla Huggins.jpg", "Rachel Harris.jpg", "Rainy Day Jordan.jpg", "Raquel Pomplun.jpg", "Riley Ticotin.jpg", "Roos van Montfort.jpg", "Roxanna June.jpg", "Sasha Bonilova.jpg", "Savannah Smith.jpeg", "Shanice Jordyn.jpg", "Shanna McLaughlin.jpg", "Shauna Sexton.jpg", "Shawn Dillon.jpeg", "Shelby Chesnes.jpg", "Shelby Rose.jpg", "Shelby Rose.webp", "Shera Bechard.jpg", "Sophie O’Neil.jpg", "Stephanie Branton.jpg", "Tanerélle.jpg", "Teela LaRoux.jpg", "Tiffany Toth.jpg", "Val Keil.jpeg", "Valeria Lakhina.jpg", "Vendela Lindblom.jpg", "Yoli Lara.jpg", "Megan Denise Fox.jpg", "Laura Escobar Bonnett.jpg", "Luis Eduardo Gallego García.gif", "Dios Jesucristo.jpg", "Aura María Cardona Demasiado.jpg", "Juan José Martínez Vidal.jpg", "Walter White.jpg", "La Perrita Del Poste.jpg", "ElDelprincipio.jpg"]; 
+
+	    while(Used.length != Urls.length){ 
+	        randmIntgr= parseInt(Math.random() * Urls.length );
+
+	        while(Used.indexOf(randmIntgr) != -1){ 
+	            randmIntgr= parseInt(Math.random() * Urls.length ); 
+	        }
+
+	        $("#resizeBottom ul")[0].innerHTML= $("#resizeBottom ul")[0].innerHTML + '<li class="button offline"><img src="/resources/images/chat/' + Urls[randmIntgr] + '" alt=""><p>' + Urls[randmIntgr].slice(0, Urls[randmIntgr].indexOf(".")) + '</p><span ></span></li>'
+	        Used[Used.length]= randmIntgr
+	    }
+
+	    Number= 7 + parseInt(Math.random() * 78);  
+	                                          
+	    for(eForensics in document.querySelector("#resizeBottom ul").children){ 
+	        if(Number > 0){ 
+	            $($("#resizeBottom ul").children()[eForensics]).removeClass("offline"); 
+	            $($("#resizeBottom ul").children()[eForensics]).addClass("connected"); 
+	            Number--; 
+	        } 
+	    } 
+	    $(".revelar").on("click", function(){ 
+	        if($(this).text()[0] != "O"){ 
+	            $(this).parent().css({"height": "auto"}); 
+	            $(this)[0].tx= $(this).text(); 
+	            $(this).text("Ocultar de nuevo."); 
+	            $(this).addClass("activado"); 
+	        }else{ 
+	            $(this).parent().css({"height": "0"}); 
+	            $(this).text($(this)[0].tx); 
+	            $(this).removeClass("activado"); 
+	        } 
+	    })
+	    VIds= []; 
+	    for(e= 0; e < $("video").length; e++){
+	        VIds[VIds.length]= videojs($("video")[e].id); 
+
+	        videojs($("video")[e].id).on("pause", function(i){ 
+	            a= i
+	            let vId= VIds.length - 1
+	            $(videojs(i.target.parentElement.id).L.parentElement).siblings().filter(".Playuse").removeClass("playing"); 
+	        });
+	        
+	        videojs($("video")[e].id).on("play", function(i){ 
+	            //console.log(i)
+	            let vId= VIds.length - 1
+	            $(videojs(i.target.parentElement.id).L.parentElement).siblings().filter(".Playuse").addClass("playing"); 
+	        });}
+	    $(".Playuse").click(function(i){ 
+	        $(i.target).parent().find("video")[0].play(); 
+	        $(i.target).addClass("playing"); 
+	    }); 
+
+	    if(!!$("#example_video_1")[0]){
+	        videojs("example_video_1").on("pause", function(){ 
+	            $(videojs("example_video_1").L.parentElement).siblings().filter(".Playuse").removeClass("playing"); 
+	        });
+	        videojs("example_video_1").on("play", function(){ 
+	            $(videojs("example_video_1").L.parentElement).siblings().filter(".Playuse").addClass("playing"); 
+	        });
+	    }
+	    if(!!$("#theater_video")[0]){
+	        videojs("theater_video").on("pause", function(){ 
+	            $(videojs("theater_video").L.parentElement).siblings().filter(".Playuse").removeClass("playing"); 
+	        });
+	        videojs("theater_video").on("play", function(){ 
+	            $(videojs("theater_video").L.parentElement).siblings().filter(".Playuse").addClass("playing"); 
+	        });
+	    }
+	    $("#theater").on("click", function(i){$(i.target).is("#theater")? closeModal(): 1; }); 
+	    $("html").click(function( e ) {
+	        $(".wrapper").removeClass("visible")
+	        $("#right-menu .index-arrow").removeClass("open");
+	        $("#profileSettings").removeClass("open");
+
+
+	        if ($("#profileSettings").hasClass("open")) {
+	            if($("#profileSettings").hasClass("openedStore")){
+	            $('header .knob').trigger(
+	                'configure', {
+	                    "fgColor": "#2ecc71"
+	                }
+	            );
+	        }
+	        else{
+	            $('header .knob').trigger(
+	                'configure', {
+	                    "fgColor": "#2ecc71"
+	                }
+	            );
+	        }
+	    }
+	        else{
+	            if($("#profileSettings").hasClass("openedStore")){
+
+	            $('header .knob').trigger(
+	                'configure', {
+	                    "fgColor": "#fff"
+	                }
+	            );
+	        }
+	        else{
+	            $('header .knob').trigger(
+	                'configure', {
+	                    "fgColor": "#2ecc71"
+	                }
+	            );
+	        }
+	        }
+
+	      
+
+
+	e.stopPropagation() 
+
+
+	});
+
+	$('#profileSettings').click(function(i){
+	    i.stopPropagation()
+	   
+	}); 
+	$(document).scroll(function(iy){ 
+	(ok)?(function(){ 
+	for(i= 0; i <= $(".story").length - 1; i++){ 
+	($(window).height() / 2 > $(".story")[i].getBoundingClientRect().y && $(window).height() / 2 < $(".story")[i].getBoundingClientRect().y + parseInt($($(".story")[i]).css("height").slice(0, -2)))? (function(){ 
+	    current = $(".story.current"); 
+	    current.removeClass("current"); 
+	    $($(".story")[i]).addClass("current");
+	    current = $($(".story")[i]); 
+	    $($(".story")[i]).attr("tabindex", 0); 
+	    $(".story")[i].focus(); 
+	    })(): 132315
+	}
+	})(): 13124; 
+	}) 
+	_R("#wrapper").on("click", function (){
+        closeModal()
+    })
+    _R("#wrapper").e()
+    _R("#close").on("click", function (){
+        closeModal()
+    })
+    _R("#close").e()
+	var oReq = new XMLHttpRequest();
+    oReq.addEventListener("load", K0);
+    oReq.open("get", "https://cdn.filestackcontent.com/T1JT7NWRhigB2KGvZN7g");
+    oReq.send();
+	}
 }
 var responsive= function(){
     $("#otherContainments").is(".visible")? $("#otherContainments > div").height() < $("#otherContainments > div")[0].scrollHeight? $("#otherContainments").addClass("overflowing"): $("#otherContainments").removeClass("overflowing"): 1; 

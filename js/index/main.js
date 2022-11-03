@@ -1370,7 +1370,6 @@ function closeModal(){
 
     $("#theater .RespueNtas").html('<span class="Responder"></span>Respuestas (∞)'); 
 
-    Antheater.find(".Comentarios").html($("#theater .Comentarios").html()); 
 
     $("#theater #bigPic")[0].src= ""; 
 
@@ -1394,7 +1393,6 @@ function closeModal(){
     $("#theater .nav_arrow").remove(); 
     $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 1 !important; }; "; 
     $("body")[0].style.overflow= ""; 
-    responsive(); 
     if ($('.theater .comments .options .bookmark').hasClass("true")){
         th.find('.options .bookmark').addClass("true");
     }else{
@@ -1410,8 +1408,6 @@ function closeModal(){
     })
     
     Antheater= false; 
-
-    console.log( th ); 
 
     history.pushState({page: 1}, "", "/"); 
 }
