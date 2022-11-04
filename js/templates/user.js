@@ -372,6 +372,86 @@ export function app () {
                                                           </section>
                                                       </section>
                                                   </section>
-                                              </aside>`}
+                                              </aside>`},
+              sidebar: function (){return `<aside id="sidebar">
+                        <div id="container">
+                            <div id="resizeTop">
+                                <div id="notifications">
+                                    <ul>
+                                        <div class="info button">
+                                            <img src="/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif" alt="">
+                                            <p class="username"><b href="#">A.K.A._Dizzy:</b> <br> 😉 Revisen Mi Perfil: <a target="_blank" href="/A.K.A._Dizzy">A.K.A._Dizzy</a></p>
+                                        </div>
+                                        <div class="info button">
+                                            <img src="/resources/images/white.jpg" alt="">
+                                            <p class="username"><b href="#">Walter White</b> Es ahora amigo de Walter White.</p>
+                                        </div>
+                                        <div class="info button">
+                                            <img src="/resources/images/white.jpg" alt="">
+                                            <p class="username"><b href="#">Walter White</b> hizo un commit a eBay.</p>
+                                        </div>
+                                        <div class="info button">
+                                            <img src="/resources/images/white.jpg" alt="">
+                                            <p class="username"><b href="#">Walter White</b> Es ahora Moderador.</p>
+                                        </div>
+                                        <div class="info button">
+                                            <img src="/resources/images/white.jpg" alt="">
+                                            <p class="username"><b href="#">Walter White</b> Es ahora amigo de Walter White.</p>
+                                        </div>
+                                        <div class="info button">
+                                            <img src="/resources/images/white.jpg" alt="">
+                                            <p class="username"><b href="#">Walter White</b> hizo un commit a eBay.</p>
+                                        </div>
+                                        <div class="info button">
+                                            <img src="/resources/images/white.jpg" alt="">
+                                            <p class="username"><b href="#">Walter White</b> Es ahora Moderador.</p>
+                                        </div>
+                                        <div class="info button">
+                                            <img src="/resources/images/white.jpg" alt="">
+                                            <p class="username"><b href="#">Walter White</b> Es ahora amigo de Walter White.</p>
+                                        </div>
+                                        <div class="info button">
+                                            <img src="/resources/images/white.jpg" alt="">
+                                            <p class="username"><b href="#">Walter White</b> hizo un commit a eBay.</p>
+                                        </div>
+                                        <div class="info button">
+                                            <img src="/resources/images/white.jpg" alt="">
+                                            <p class="username"><b href="#">Walter White</b> Es ahora Moderador.</p>
+                                        </div>
+                                        <div class="info button">
+                                            <img src="/resources/images/white.jpg" alt="">
+                                            <p class="username"><b href="#">Walter White</b> Es ahora amigo de Walter White.</p>
+                                        </div>
+                                        <div class="info button">
+                                            <img src="/resources/images/white.jpg" alt="">
+                                            <p class="username"><b href="#">Walter White</b> hizo un commit a eBay.</p>
+                                        </div>
+                                        <div class="info button">
+                                            <img src="/resources/images/white.jpg" alt="">
+                                            <p class="username"><b href="#">Walter White</b> Es ahora Moderador.</p>
+                                        </div>
+                                        <div class="info button">
+                                            <img src="/resources/images/white.jpg" alt="">
+                                            <p class="username"><b href="#">Walter White</b> Es ahora amigo de Walter White.</p>
+                                        </div>
+                                        <div class="info button">
+                                            <img src="/resources/images/white.jpg" alt="">
+                                            <p class="username"><b href="#">Walter White</b> hizo un commit a eBay.</p>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="resizeBottom">
+                                <div id="chat">
+                                    <ul>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <section id="search">
+                            <i id="searchIcon"></i>
+                            <input type="text" placeholder="Buscar">
+                        </section>
+                    </aside>`}
           }
       };
