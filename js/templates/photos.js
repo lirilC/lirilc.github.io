@@ -106,11 +106,6 @@ export function app () {
                                     </aside>
                                 </section>
                             </section>
-                            <div class="container"> 
-                                <div id="gallery">
-                                    ${one("photo", foReach, RooT.reverse(user.photos))}
-                                </div>
-                            </aside>
                             <aside id="sidebar">
                               <div id="container">
                                   <div id="resizeTop">
@@ -228,7 +223,12 @@ export function app () {
                           <section id="chats">
                               <div class="chats">
                               </div>
-                          </section>`, 
+                          </section>
+                            <div class="container"> 
+                                <div id="gallery">
+                                    ${one("photo", foReach, RooT.reverse(user.photos))}
+                                </div>
+                            </aside>`, 
                 container: function (){return `<div class="container"> 
                                                     <div id="gallery">
                                                         ${one("photo", foReach, RooT.reverse(user.photos))}
