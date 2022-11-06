@@ -790,10 +790,6 @@ content: "\e904"
     height: 100% !important;
     width: 100% !important;
 }
-#sidebar #container{
-    position: relative;
-    flex-grow: 1; 
-}
 #sidebar  #container #resizeBottom{
     position: absolute;
     bottom: 0;

@@ -88,7 +88,7 @@ var index= {
             },
             title: `Cómo me gusta vivir mi propia vida ✨`,
             description: ``,
-            contents:  {carrContents: ["EfEQzbHdzv_tn.jpg", "eXHWAPgeZl_tn.jpg", "qyf9LRafkH_tn.jpg", "xkt6Q6jHRc_tn.jpg"]},
+            contents:  {carrContents: ["EfEQzbHdzv.jpg", "eXHWAPgeZl.jpg", "qyf9LRafkH.jpg", "xkt6Q6jHRc.jpg"]},
             Comentarios: ""
         },
         "/MeganFox/img/qTaHNrHo4j", {
@@ -2457,7 +2457,7 @@ var index= {
             },
             title: ``,
             description: ``,
-            contents:  {carrContents: ["bHq7JUZnFM_tn.jpg", "HnmFSxVyQi_tn.jpg"]},
+            contents:  {carrContents: ["bHq7JUZnFM.jpg", "HnmFSxVyQi.jpg"]},
             Comentarios: ""
         },
         "/user/img/avatar", {
