@@ -1,5 +1,5 @@
-export function app () {
-        return {__app:     `<header>
+export function app (){
+        return {__app:`<header>
                           <nav>
                               <ul>
                                   <li id="index">
@@ -266,25 +266,25 @@ export function app () {
                             <section id="main">
                                 <section id="summary">
                                     <aside id="sections">
-                              ${(function(){if(Object.entries(user.situation).length){
+                              ${(function (){if(Object.entries(user.situation).length){
                               return   `<section id="situation">
                                             <h2 class="title">Situación Sentimental</h2>
                                             ${one("situation", foReach, user.situation)}
                                         </section>`
                               }else{return ``}})()}
-                              ${(function(){if(user.fotos.quantity){
+                              ${(function (){if(user.fotos.quantity){
                               return   `<section id="pics">
                                             <h2 class="title"><a id= "photos" href="/${user.username}/photos">Fotos</a> (${user.fotos.quantity})</h2>
                                             ${one("foto", foReach, user.fotos.fotos)}
                                         </section>`
                               }else{return ``}})()}
-                              ${(function(){if(user.videos.quantity){
+                              ${(function (){if(user.videos.quantity){
                               return   `<section id="vids">
                                             <h2 class="title"><a id= "videos" href="/${user.username}/videos">Vídeos</a> (${user.videos.quantity})</h2>
                                             ${one("video", foReach, user.videos.videos)}
                                         </section>`
                               }else{return ``}})()}
-                              ${(function(){if(Object.entries(user.ties).length){
+                              ${(function (){if(Object.entries(user.ties).length){
                               return   `<section id="ties">
                                             <h2 class="title">Lazos Familiares</h2>
                                             ${one("tie", foReach, user.ties)}
@@ -300,6 +300,71 @@ export function app () {
                             </section>
                         </section>
                     </aside>`,
+                sections: {
+                  situation: function (){return  `<section id="situation">
+                                                      <h2 class="title">Situación Sentimental</h2>
+                                                      ${one("situation", foReach, user.situation)}
+                                                  </section>`},
+                  fotos: function (){return      `<section id="pics">
+                                                      <h2 class="title"><a id= "photos" href="/${user.username}/photos">Fotos</a> (${user.fotos.quantity})</h2>
+                                                      ${one("foto", foReach, user.fotos.fotos)}
+                                                  </section>`},
+                  videos: function (){return     `<section id="vids">
+                                                      <h2 class="title"><a id= "videos" href="/${user.username}/videos">Vídeos</a> (${user.videos.quantity})</h2>
+                                                      ${one("video", foReach, user.videos.videos)}
+                                                  </section>`},
+                  ties: function (){return       `<section id="ties">
+                                                      <h2 class="title">Lazos Familiares</h2>
+                                                      ${one("tie", foReach, user.ties)}
+                                                  </section>`
+                  }
+                },
+                updates: function (){return  `<aside id="updates">
+                                                  <aside id="feed">
+                                                      ${one("story", foReach, user.stories)}
+                                                  </aside>
+                                              </aside>`
+                },
+                cover: function (){return  `<section id="cover">
+                                                ${user.cover.insignias}
+                                                <figure ondragstart= "return false" id="profilePic">
+                                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+                                                    <input class="knob button" data-width="195" data-height="195" data-fgColor="#2ecc71" data-bgColor="rgba(0,0,0,0)" data-displayInput=false data-thickness=".06" readonly value="${user.rol.level}">
+                                                    <section class="hidden">
+                                                        <div class="info">
+                                                            <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
+                                                            <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+                                                            <p class="username"><a href="/${user.username}" title= "${user.tool}">${user.users_name}</a>${typeof user.profilePic[Object.keys(user.profilePic)[0]].city !== "undefined"? `; en <a class="target" title="         
+                                                                                                                                                                                                                                                 <div class='tool city'>
+                                                                                                                                                                                                                                                     <figure>
+                                                                                                                                                                                                                                                         <img class='thumbnail' src= '${user.profilePic[Object.keys(user.profilePic)[0]].city.pic}'></img>
+                                                                                                                                                                                                                                                     </figure>
+                                                                                                                                                                                                                                                     <div class='introduction'>
+                                                                                                                                                                                                                                                         ${user.profilePic[Object.keys(user.profilePic)[0]].city.description}
+                                                                                                                                                                                                                                                     </div>
+                                                                                                                                                                                                                                                 </div>">${user.profilePic[Object.keys(user.profilePic)[0]].city.name}</a> `: ``}<br>
+                                                                <span title="${user.profilePic[Object.keys(user.profilePic)[0]].date.full}" class="time">${user.profilePic[Object.keys(user.profilePic)[0]].date.min}</span>
+                                                            </p>
+                                                        </div>
+                                                        <p class="title">${user.profilePic[Object.keys(user.profilePic)[0]].title}</p>
+                                                        <section id="picture">
+                                                            <img class="pic" src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="" class="big">
+                                                        </section>
+                                                        <div class="Comentarios"></div>
+                                                        <div class="options button">
+                                                            <ul>
+                                                                <li class="bookmark"></li>
+                                                                <li class="star"></li>
+                                                                <a href="" target= "_blank">
+                                                                    <li class="read"></li>
+                                                                </a>
+                                                            </ul>
+                                                        </div>
+                                                    </section>
+                                                </figure>
+                                                <p id="rol">${user.rol.rol} <b>+${user.rol.level}</b></p>
+                                            </section>`
+                },
                 biography: function (){return `<aside id="biography">
                                                   <section id="content">
                                                       <section id="cover">

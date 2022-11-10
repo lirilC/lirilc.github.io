@@ -1453,8 +1453,8 @@ var one= function(a, b, c, d){
 	}
 }
 
-var This
-var wiTh
+var This= "0m22m0ncn89asd2d1v4b4"
+var wiTh= "bavin2ncn882n8dn2das1"
 RooT.fill= function(a, b, c, d, e){
 	c.html(e)
 }
@@ -1468,16 +1468,11 @@ RooT.reverse= function(a){
 	}
 	return reTurn
 }
-var To
-RooT.prepend= function(a, b, c){
-	c.prepend(a)
-}
-RooT.append= function(a, b, c){
-	c.append(a)
-}
-var afTer
-var befoRe
 
+var afTer= "ashd9812h39d81h92hd10"
+var befoRe= "jbv39bcib9hb09asd12ac"
+var befoReEndOf= "a2w9nc9sa9c8n2ncloia1"
+var aTTheBeginningOf= "1asdaDD2dDDD27scCSDDs"
 RooT.put= function(a, b, c){
 	switch(b){
 		case afTer:
@@ -1486,11 +1481,49 @@ RooT.put= function(a, b, c){
 		case befoRe:
 			c.before(a)
 			break
+		case befoReEndOf:
+			c.append(a)
+			break
+		case aTTheBeginningOf:
+			c.prepend(a)
+			break
 	}
 }
-var foRever
+var foRever= "b0o2n9n9Nahd2dNii2nd2"
 RooT.remove= function(a, b){
 	b === foRever? a.remove(): undefined
+}
+var useR= "naksck2hibdiabkcuubcc"
+var To= "asdkn298cn2nonrfofyhv"
+RooT.change= function(a, b, c, d){
+	if(b!=To)return
+  _R("title").text(`${c.users_name} | liril`)
+  if (!!c)(function(){
+  	if(_R("#updates").length)RooT.replace(_R("#updates", 0), wiTh, d.app().updates())
+  })()
+	  if (!!c)(function(){
+  	if(_R("#cover").length)RooT.replace(_R("#cover", 0), wiTh, d.app().cover())
+  })()
+  Object.keys(c.situation).length? (function(){
+  	if(_R("#situation").length)RooT.replace(_R("#situation", 0), wiTh, d.app().sections.situation())
+  	if(!!_R("#situation").length)return
+  	RooT.put(d.app().sections.situation(), befoReEndOf, _R("#sections", 0))
+  })(): RooT.remove(_R("#situation", 0), foRever)
+  c.fotos.quantity? (function(){
+  	if(_R("#pics").length)RooT.replace(_R("#pics", 0), wiTh, d.app().sections.fotos())
+  	if(!!_R("#pics").length)return
+  	RooT.put(d.app().sections.fotos(), befoReEndOf, _R("#sections", 0))
+  })(): RooT.remove(_R("#pics", 0), foRever)
+  c.videos.quantity? (function(){
+  	if(_R("#vids").length)RooT.replace(_R("#vids", 0), wiTh, d.app().sections.videos())
+  	if(!!_R("#vids").length)return
+  	RooT.put(d.app().sections.videos(), befoReEndOf, _R("#sections", 0))
+  })(): RooT.remove(_R("#vids", 0), foRever)
+  c.ties.length? (function(){
+  	if(_R("#ties").length)RooT.replace(_R("#ties", 0), wiTh, d.app().sections.ties())
+  	if(!!_R("#ties").length)return
+  	RooT.put(d.app().sections.ties(), befoReEndOf, _R("#sections", 0))
+  })(): RooT.remove(_R("#ties", 0), foRever) 
 }
 /*Initialize some variables*/
 var vX= -1
@@ -4225,120 +4258,96 @@ _R("#videos", 0).on("click", function(ev){
 /*RooT RooTed users' links*/
 _R('a[href="/L"]').on("click", function(e){
 	e.preventDefault()
-	
 	history.pushState({page: 1}, "", `/L`)
   RooT.imporT("/js/L/DB.js", Then, function(d){
     window.user= d._user()
     RooT.imporT("/js/templates/user.js", Then, function(d){
       _T(document).scrollTop(0)
-      _R("title").text(`${user.users_name} | liril`)
-      RooT.replace(_R("#biography", 0), wiTh, d.app().biography())
-
+  	  RooT.change(useR, To, user, d)
       RooT.ready()
     })
   })
 })
 _R('a[href="/A.K.A._Dizzy"]').on("click", function(e){
 	e.preventDefault()
-	
 	history.pushState({page: 1}, "", `/A.K.A._Dizzy`)
   RooT.imporT("/js/A.K.A._Dizzy/DB.js", Then, function(d){
     window.user= d._user()
     RooT.imporT("/js/templates/user.js", Then, function(d){
       _T(document).scrollTop(0)
-      _R("title").text(`${user.users_name} | liril`)
-      RooT.replace(_R("#biography", 0), wiTh, d.app().biography())
-
+  	  RooT.change(useR, To, user, d)
       RooT.ready()
     })
   })
 })
 _R('a[href="/PpP"]').on("click", function(e){
 	e.preventDefault()
-	
-	history.pushState({page: 1}, "", `/L`)
+	history.pushState({page: 1}, "", `/PpP`)
   RooT.imporT("/js/PpP/DB.js", Then, function(d){
     window.user= d._user()
     RooT.imporT("/js/templates/user.js", Then, function(d){
       _T(document).scrollTop(0)
-      _R("title").text(`${user.users_name} | liril`)
-      RooT.replace(_R("#biography", 0), wiTh, d.app().biography())
-
+  	  RooT.change(useR, To, user, d)
       RooT.ready()
     })
   })
 })
 _R('a[href="/Eld"]').on("click", function(e){
 	e.preventDefault()
-	
-	history.pushState({page: 1}, "", `/L`)
+	history.pushState({page: 1}, "", `/Eld`)
   RooT.imporT("/js/Eld/DB.js", Then, function(d){
     window.user= d._user()
     RooT.imporT("/js/templates/user.js", Then, function(d){
       _T(document).scrollTop(0)
-      _R("title").text(`${user.users_name} | liril`)
-      RooT.replace(_R("#biography", 0), wiTh, d.app().biography())
-
+  	  RooT.change(useR, To, user, d)
       RooT.ready()
     })
   })
 })
 _R('a[href="/AuraCardonaC"]').on("click", function(e){
 	e.preventDefault()
-	
 	history.pushState({page: 1}, "", `/AuraCardonaC`)
   RooT.imporT("/js/AuraCardonaC/DB.js", Then, function(d){
     window.user= d._user()
     RooT.imporT("/js/templates/user.js", Then, function(d){
       _T(document).scrollTop(0)
-      _R("title").text(`${user.users_name} | liril`)
-      RooT.replace(_R("#biography", 0), wiTh, d.app().biography())
-
+  	  RooT.change(useR, To, user, d)
       RooT.ready()
     })
   })
 })
 _R('a[href="/MeganFox"]').on("click", function(e){
 	e.preventDefault()
-	
 	history.pushState({page: 1}, "", `/MeganFox`)
   RooT.imporT("/js/MeganFox/DB.js", Then, function(d){
     window.user= d._user()
     RooT.imporT("/js/templates/user.js", Then, function(d){
       _T(document).scrollTop(0)
-      _R("title").text(`${user.users_name} | liril`)
-      RooT.replace(_R("#biography", 0), wiTh, d.app().biography())
-
+  	  RooT.change(useR, To, user, d)
       RooT.ready()
     })
   })
 })
 _R('a[href="/G-Suschrist"]').on("click", function(e){
 	e.preventDefault()
-	
 	history.pushState({page: 1}, "", `/G-Suschrist`)
   RooT.imporT("/js/G-Suschrist/DB.js", Then, function(d){
     window.user= d._user()
     RooT.imporT("/js/templates/user.js", Then, function(d){
       _T(document).scrollTop(0)
-      _R("title").text(`${user.users_name} | liril`)
-      RooT.replace(_R("#biography", 0), wiTh, d.app().biography())
-
+  	  RooT.change(useR, To, user, d)
       RooT.ready()
     })
   })
 })
 _R('a[href="/LamaMadora"]').on("click", function(e){
 	e.preventDefault()
-	
-	history.pushState({page: 1}, "", `/MeganFox`)
+	history.pushState({page: 1}, "", `/LamaMadora`)
   RooT.imporT("/js/LamaMadora/DB.js", Then, function(d){
     window.user= d._user()
     RooT.imporT("/js/templates/user.js", Then, function(d){
       _T(document).scrollTop(0)
-      _R("title").text(`${user.users_name} | liril`)
-      RooT.replace(_R("#biography", 0), wiTh, d.app().biography())
-
+  	  RooT.change(useR, To, user, d)
       RooT.ready()
     })
   })
@@ -4765,127 +4774,6 @@ oReq.send();
 	})
 	_R("#chats .chats").e()
 	//To _R()
-	/*RooT RooTed users' links*/
-	_R('a[href="/L"]').on("click", function(e){
-		e.preventDefault()
-		
-		history.pushState({page: 1}, "", `/L`)
-	  RooT.imporT("/js/L/DB.js", Then, function(d){
-	    window.user= d._user()
-	    RooT.imporT("/js/templates/user.js", Then, function(d){
-	      _T(document).scrollTop(0)
-	      _R("title").text(`${user.users_name} | liril`)
-	      RooT.replace(_R("#feed", 0), wiTh, d.app().biography())
-
-	      RooT.ready()
-	    })
-	  })
-	})
-	_R('a[href="/A.K.A._Dizzy"]').on("click", function(e){
-		e.preventDefault()
-		
-		history.pushState({page: 1}, "", `/A.K.A._Dizzy`)
-	  RooT.imporT("/js/A.K.A._Dizzy/DB.js", Then, function(d){
-	    window.user= d._user()
-	    RooT.imporT("/js/templates/user.js", Then, function(d){
-	      _T(document).scrollTop(0)
-	      _R("title").text(`${user.users_name} | liril`)
-	      RooT.replace(_R("#feed", 0), wiTh, d.app().biography())
-
-	      RooT.ready()
-	    })
-	  })
-	})
-	_R('a[href="/PpP"]').on("click", function(e){
-		e.preventDefault()
-		
-		history.pushState({page: 1}, "", `/L`)
-	  RooT.imporT("/js/PpP/DB.js", Then, function(d){
-	    window.user= d._user()
-	    RooT.imporT("/js/templates/user.js", Then, function(d){
-	      _T(document).scrollTop(0)
-	      _R("title").text(`${user.users_name} | liril`)
-	      RooT.replace(_R("#feed", 0), wiTh, d.app().biography())
-
-	      RooT.ready()
-	    })
-	  })
-	})
-	_R('a[href="/Eld"]').on("click", function(e){
-		e.preventDefault()
-		
-		history.pushState({page: 1}, "", `/L`)
-	  RooT.imporT("/js/Eld/DB.js", Then, function(d){
-	    window.user= d._user()
-	    RooT.imporT("/js/templates/user.js", Then, function(d){
-	      _T(document).scrollTop(0)
-	      _R("title").text(`${user.users_name} | liril`)
-	      RooT.replace(_R("#feed", 0), wiTh, d.app().biography())
-
-	      RooT.ready()
-	    })
-	  })
-	})
-	_R('a[href="/AuraCardonaC"]').on("click", function(e){
-		e.preventDefault()
-		
-		history.pushState({page: 1}, "", `/AuraCardonaC`)
-	  RooT.imporT("/js/AuraCardonaC/DB.js", Then, function(d){
-	    window.user= d._user()
-	    RooT.imporT("/js/templates/user.js", Then, function(d){
-	      _T(document).scrollTop(0)
-	      _R("title").text(`${user.users_name} | liril`)
-	      RooT.replace(_R("#feed", 0), wiTh, d.app().biography())
-
-	      RooT.ready()
-	    })
-	  })
-	})
-	_R('a[href="/MeganFox"]').on("click", function(e){
-		e.preventDefault()
-		
-		history.pushState({page: 1}, "", `/MeganFox`)
-	  RooT.imporT("/js/MeganFox/DB.js", Then, function(d){
-	    window.user= d._user()
-	    RooT.imporT("/js/templates/user.js", Then, function(d){
-	      _T(document).scrollTop(0)
-	      _R("title").text(`${user.users_name} | liril`)
-	      RooT.replace(_R("#feed", 0), wiTh, d.app().biography())
-
-	      RooT.ready()
-	    })
-	  })
-	})
-	_R('a[href="/G-Suschrist"]').on("click", function(e){
-		e.preventDefault()
-		
-		history.pushState({page: 1}, "", `/G-Suschrist`)
-	  RooT.imporT("/js/G-Suschrist/DB.js", Then, function(d){
-	    window.user= d._user()
-	    RooT.imporT("/js/templates/user.js", Then, function(d){
-	      _T(document).scrollTop(0)
-	      _R("title").text(`${user.users_name} | liril`)
-	      RooT.replace(_R("#feed", 0), wiTh, d.app().biography())
-
-	      RooT.ready()
-	    })
-	  })
-	})
-	_R('a[href="/LamaMadora"]').on("click", function(e){
-		e.preventDefault()
-		
-		history.pushState({page: 1}, "", `/MeganFox`)
-	  RooT.imporT("/js/LamaMadora/DB.js", Then, function(d){
-	    window.user= d._user()
-	    RooT.imporT("/js/templates/user.js", Then, function(d){
-	      _T(document).scrollTop(0)
-	      _R("title").text(`${user.users_name} | liril`)
-	      RooT.replace(_R("#feed", 0), wiTh, d.app().biography())
-
-	      RooT.ready()
-	    })
-	  })
-	})
 	$(".Editado").on("contextmenu", function(er){er.preventDefault()})
 	$(".Editado").on("mouseup", function(e){
 	console.log(e)

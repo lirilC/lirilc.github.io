@@ -1,5 +1,5 @@
 export function app () {
-        return {__app:     `<header>
+        return {__app:    `<header>
                               <nav>
                                   <ul>
                                       <li id="index">
