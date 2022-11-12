@@ -1182,7 +1182,7 @@ NAccents= /*Were I able to access it*/{
     "ś", 
     "ṥ", 
     "ŝ", 
-    "š", 
+    "š",
     "ṧ", 
     "̈s̈", 
     "ṡ", 
@@ -1688,6 +1688,7 @@ document.addEventListener("mouseup", function(i){
     /*me= w.keyCode; */ 
                                          
     i.target.outerHTML.indexOf("Rwawwr") == 9? sSeloMeteoryte(): 289118; 
+    i.target.outerHTML.indexOf("Rwawwr") == 9? $("#dinosaurios").addClass("sc"): 215418;
 }); //The question, the quest off...  
     
 offseT= {

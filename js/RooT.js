@@ -1547,14 +1547,14 @@ H= asdknki4
 var token
 var hashes= {}
 var nonBuilt
-function rvsdatefinder(e){
+var rvsdatefinder= function(e){
 var indc= -1
 for(ind in edHistory){
     indc++
     if(indc == e) 
         return ind
 }}
-function datefinder(e){
+var datefinder= function(e){
 var indc= -1
 for(ind in edHistory){
     indc++
