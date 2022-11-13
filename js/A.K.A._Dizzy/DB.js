@@ -252,6 +252,34 @@ var user= {
         }
     },
     stories: {
+        /*"/A.K.A._Dizzy/pos/p413w4Mawl": {
+            type: "links",
+            date: {
+                full: "17 de Septiembre de 2022 a las 2:52 pm",
+                min: "17 de Septiembre a las 2:52 pm"
+            },
+            title: `Christmas Gifts From The Gallego Escobar Family`,
+            description: ``,
+            contents:  `<containment>
+                            <section id="links">
+                                <a title= "Christmas Gifts From The Gallego Escobar Family > ... > Mobile" class="link" target="_blank" href="/A.K.A._Dizzy/p/h3dd2cDcsW2R3/(!) Dont Open Until Christmas/(!)/Gifts/Mobile"><span class="Title">Christmas Gifts From The G... ly > ... > Mobile </span><span class="linktype">Proyecto</span></a>
+                            </section>
+                            <text>
+                                <p style="color: #aaa; text-align: left;">I averaged <i>the right</i> Christmases; those of the right years; and obtained this day as Christmas, because, pretty much, average, it's Christmas. So, even though it's not the day which 11 months and 24 days later of the 0 after Christ; it's Christmas average. 🎄</p>
+                                <p style="color: #aaa; text-align: left;">&nbsp&nbspPuedes ejecutar aNGEL(); por_siLaBas(); y dinosaurios con el contenido de #dieded escribiendo comandos en la consola o usar el <i>touch</i> de tu dispositivo para usar dinosaurios mobile. 🎄</p>
+                                <p style="color: #aaa; text-align: left;">&nbsp&nbspPara ejecutar aNGEL(); con el contenido de #dieded escribe <i>a</i> en la consola y presiona el botón que dice <i>>></i>. 🎄</p>
+                                <p style="color: #aaa; text-align: left;">&nbsp&nbspPara ejecutar por_siLaBas(); con el contenido de #dieded escribe <i>p</i> en la consola y presiona el botón que dice <i>>></i>. 🎄</p>
+                                <p style="color: #aaa; text-align: left;">&nbsp&nbspPara ejecutar dinosaurios con el contenido de #dieded escribe <i>d</i> en la consola y presiona el botón que dice <i>>></i>. 🎄</p>
+                                <p style="color: #aaa; text-align: left;">&nbsp&nbspUsa el botón <i>#ckl</i>, el botón rectangular alargado verticalmente que hay a la derecha abajo de #Sara, donde están los <i>Suave Efecto Cafeteros</i> para ver el resultado; deberás hundirlo varias veces, ya que éste en ciertos milisegundos se tapará con un nuevo <i>Suave Efecto Cafetero</i>. 🎄</p>
+                                <p style="color: #aaa; text-align: left;">&nbsp&nbspPara usar dinosaurios mobile, úsalo como se usa dinosaurios, pero aparece rectángulos escribiendo <i>rwr</i> en la consola y luego presiona el botón <i>>></i>, cuando quieras aparecer el rectángulo rojo para ejecutar dinosaurios, escribe <i>rwawwr</i> en la consola y presiona <i>>></i>. 🎄</p>
+                                <p style="text-align: center; ">
+                                    La Familia Gallego Escobar <br>
+                                    Everyone's
+                                </p>
+                            </text>
+                        </containment>`,
+            Comentarios: ""
+        },*/
     	"/A.K.A._Dizzy/vid/YGrUmbzaP6": {
     		type: "mult_carr",
     		date: {

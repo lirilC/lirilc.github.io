@@ -1,5 +1,7 @@
 paused= false; 
              
+sLS= 0
+
 //var a; 
              
 sECF= false; 
@@ -32,16 +34,16 @@ if(!o.keyCode == 53 && !o.keyCode == 54){
 for(i = 0; i+= 1;i<localStorage.getItem("Bonnett").length){
 switch(i){
     //¡Ah, bueno!.. Es que así no se puede, es que así no se puede... ... ¿También en el pasado, marica?; gonorrea.
-	case u2fined:
+    case u2fined:
                document.getElementsByTagName("body")[0].innerText="<body style='background-color: red;width: 100%;height:100%'>dead3d</body>"
                document.getElementsByTagName("body")[0].style.backgroundColor = "red"
             document.getElementsByTagName("body")[0].style.color = "white"
 
                break;
-								
-	default:
-				alert(localStorage.getItem("Bonnett")[i])
-				break;
+                                
+    default:
+                alert(localStorage.getItem("Bonnett")[i])
+                break;
 
 }
 }
@@ -200,6 +202,9 @@ document.addEventListener("mousedown", function(i){
     } 
 }); 
     
+document.querySelector("#Sara").addEventListener("scroll", function(){
+    if(!$("#Sara")[0].querySelectorAll("p:not(#parsed)").length)sLS= $("#Sara")[0].scrollLeft
+})
 Ariana("video", "a", "c", 0); 
 
 /*ü= 0; 
@@ -1321,13 +1326,14 @@ NAccents= /*Were I able to access it*/{
   ] 
 } 
 
+
 aNGEL= function(r){ 
   Mistery= r.toLowerCase().replaceAll('ʻ', "'").replaceAll('’', "'"); 
   Cinnamon= ""; 
   Dizzy= ""; 
   Winter= false; 
                  
-  for(i= 0; (i+= 1); i < Mistery.length){ 
+  for(i= 0; i <= Mistery.length; i+= 1){ 
     if(Mistery[i] == " " || i == Mistery.length){ 
       walkiwalki= true; 
                         
@@ -1422,34 +1428,28 @@ por_siLaBas= function(í){
   } 
 } 
   
-document.addEventListener("keydown", function(i){ 
-    i.keyCode == 16? por_siLaBas(document.getElementById("dieded").value): 1; 
+dinosaurios= function(ï){
+    rsT= ""
+  for(var i= ï.length - 1; i > -1; i--){
+        rsT= `${rsT}${ï[i]}`
+    }
+    Cinnamon= rsT
+}
 
-    i.keyCode == 13? aNGEL(document.getElementById("dieded").value): 1; 
-
-    (!!Cinnamon && i.keyCode == 17)? parse("#Sara", -1): 1; 
-                        
-    if(!!Cinnamon && i.keyCode == 17) 
-    { 
-      document.getElementById('pause').innerText == '>'? document.getElementById('pause').innerText = 'll': 252; 
-                                   
-      !paused? 252: paused= false; 
-    } 
-    }); 
 parse= function(a, b){ 
-	switch(a[0]){ 
+    switch(a[0]){ 
   case "#": 
      a= document.getElementById(a.slice(1, a.length)); 
      break; 
   case ".": 
     a= document.getElementsByClassName(a.slice(1, a.length)); 
     break; 
-	default: 
-  	a= document.getElementsByTagName(a); 
+    default: 
+    a= document.getElementsByTagName(a); 
     break; 
-	}; 
+    }; 
      
-	b != -1? a[b].innerHTML= "<p id= 'parsed'>" + Cinnamon + "</p>": a.innerHTML= "<p id= 'parsed'>" + Cinnamon + "</p>"; 
+    b != -1? a[b].innerHTML= "<p id= 'parsed'>" + Cinnamon + "</p>": a.innerHTML= "<p id= 'parsed'>" + Cinnamon + "</p>"; 
 }; 
 
 
@@ -1460,7 +1460,7 @@ himno= 0;
 
 setInterval( function(){
     (!paused && document.activeElement == document.getElementsByTagName("textarea")[0])? sECF= true: sECF= false; 
-  !paused? document.getElementById("Sara").innerHTML= "<p style= 'font-size: 15px; display: inline-block; '>" + contr( fe[himno] )[0][0] + " Palabras. " + "</br>" + contr( fe[himno] )[0][1] + " Caracteres (Sin espacios)." + "</p>" +  "<textarea spellcheck= 'false'>" + contr( fe[himno] )[1] + "</textarea>": 28918; !paused? himno < 15? himno++: himno= 0: 1882; }, 5000); 
+  !paused? document.getElementById("Sara").innerHTML= "<p style= 'font-size: 15px; display: inline-block; '>" + contr( fe[himno] )[0][0] + " Palabras. " + "</br>" + contr( fe[himno] )[0][1] + " Caracteres (Sin espacios)." + "</p>" +  "<textarea spellcheck= 'false'>" + contr( fe[himno] )[1] + "</textarea>": 28918; !paused? himno < 15? himno++: himno= 0: 1882}, 5000); 
 //No va a haber zona cardíaca en la zona cardíaca... fuente. No. 
 console.log('parse("#Sara", -1);   '); 
 //onClipEvent(load){ 
@@ -1480,7 +1480,7 @@ function sSeloMeteoryte(){
     rwrrw= rwrrw + document.getElementById("rawr").children[0].outerHTML; 
                                                       
     document.getElementById("rawr").innerHTML= rwrrw; 
-               
+    document.getElementById("dinosaurios").scrollLeft= 0
     rwrrw= ""; 
 } 
   
@@ -1500,9 +1500,7 @@ dsrcrs= [
   "#51a2ca", 
   "#96f064", 
   "#597c2d" 
-]; 
-
-document.getElementsByTagName("input")[2].style.top= document.body.clientHeight - 5.9898 + "px"; 
+];
                     
 shift_droped= true; 
 
@@ -1802,6 +1800,7 @@ window.addEventListener("resize", function(){
 
 
 document.addEventListener("DOMContentLoaded", function(){ 
+    $("a > input").on("input", function(e){e.target.value= ""})
     $(document).bind('keydown', function(event) {
         event.preventDefaul
         if(event.keyCode == 65 && event.ctrlKey) {

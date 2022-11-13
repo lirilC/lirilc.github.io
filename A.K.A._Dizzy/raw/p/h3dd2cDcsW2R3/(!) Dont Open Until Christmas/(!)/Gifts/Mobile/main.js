@@ -1480,7 +1480,8 @@ function sSeloMeteoryte(){
     rwrrw= rwrrw + document.getElementById("rawr").children[0].outerHTML; 
                                                       
     document.getElementById("rawr").innerHTML= rwrrw; 
-               
+    document.getElementById("Rwawwr").remove()
+    document.getElementById("dinosaurios").scrollLeft= 0
     rwrrw= ""; 
 } 
   
@@ -1653,21 +1654,18 @@ $(document).on("touchstart touchmove", function(i){
 document.addEventListener("keydown", function(i){ 
     me= i.keyCode; 
                    
-    !!document.getElementById("Rwawwr") && i.keyCode != 17? lastChild.outerHTML= "": 289118; 
+    
+    lastChild= document.getElementById("rawr").children[document.getElementById("rawr").children.length - 1]; /*Random is the RAM and the hour, that is why it is called random*/
                    
-    i.keyCode == 16 && shift_droped? document.getElementById("rawr").innerHTML= document.getElementById("rawr").innerHTML + "<div class= 'rwr'></div>" :3251; 
                                                 
-    i.keyCode == 16? shift_droped= false: 1152; 
                                                 
-    i.keyCode == 17 && !!lastChild && lastChild.outerHTML.indexOf("Rwawwr") == -1? document.getElementById("rawr").innerHTML= document.getElementById("rawr").innerHTML + "<div id= 'Rwawwr'></div>": 3251; 
+    
                               
-    (i.keyCode == 17 && !!lastChild && lastChild.outerHTML.indexOf("Rwawwr") == -1 && document.activeElement != $("input")[0] && document.activeElement != $("textarea")[0])? document.getElementsByTagName("h1")[0].removeAttribute("corrupt"): 3251; 
+    
 
-    (i.keyCode == 17 && !!lastChild && lastChild.outerHTML.indexOf("Rwawwr") == -1 && document.activeElement != $("input")[0] && document.activeElement != $("textarea")[0])? document.getElementsByTagName("h1")[0].focus(): 3251; 
+    
 
-    i.keyCode == 16? document.getElementById("dinosaurios").scrollLeft= (90.8 + 5.89) * document.getElementById("rawr").children.length - document.body.clientWidth / 2: 21198291; 
-                                                                                                              
-    lastChild= document.getElementById("rawr").children[document.getElementById("rawr").children.length - 1]; /*Random is the RAM and the hour, that is why it is called random*/ 
+
 }); 
     
 document.addEventListener("mousedown", function(i){ 
@@ -1683,14 +1681,16 @@ document.addEventListener("mousedown", function(i){
     
 document.addEventListener("mouseup", function(i){ 
     mousedown= false; 
-    vrbl= "mousedown" + ": "+ mousedown; 
                                          
     /*me= w.keyCode; */ 
                                          
+}); //The question, the quest off...  
+ 
+$(document).on("touchend", function(i){
+    //vrbl= "touchend" + ": "+ mousedown; 
     i.target.outerHTML.indexOf("Rwawwr") == 9? sSeloMeteoryte(): 289118; 
     i.target.outerHTML.indexOf("Rwawwr") == 9? $("#dinosaurios").addClass("sc"): 215418;
-}); //The question, the quest off...  
-    
+})
 offseT= {
     x: 0,
     y: 187
@@ -1708,12 +1708,12 @@ $(document).on("touchstart touchmove", function(i){
     dsrcrs[L] == "#597c2d"? MNSWMTG = false: 214;                                   
                                                                
     PpPE= dsrcrs[L] == "#597c2d"? "; z-index: 2": "; border-radius: 50%; z-index: " + MNSWMTG; 
-                                                                                               
+                       //                                                                       
     console.log(i.touches[0].pageY);
     let {x, y, width, height} = i.target.getBoundingClientRect();
     offsetX = (i.touches[0].clientX-x)/width*i.target.offsetWidth;
     offsetY = (i.touches[0].clientY-y)/height*i.target.offsetHeight;
-    (rawrrawrrawrrawr)? i.target == lastChild? $(lastChild).append("<div class= '" + dsrcrs[L] + "' style= 'width: 5.88px; height: 5.88px; background-color: " + dsrcrs[L] + PpPE + "; position: absolute; left: " + offsetX + "px; top: " + /*(i.touches[0].pageY - offseT.y)*/offsetY +  "px; '></div>" + (MNSWMTG > 1? "<div class= '#597c2d24cc36' style= 'width: 5.88px; height: 5.88px; background-color: #597c2d; z-index: 2; position: absolute; left: " + offsetX + "px; top: " + offsetY +  "px; '></div>": "")): 1: 13781; 
+    (rawrrawrrawrrawr && (offsetX >= 0 && offsetX <= 90.8) && (offsetY >= 0 && offsetY <= 140))? i.target == lastChild? $(lastChild).append("<div class= '" + dsrcrs[L] + "' style= 'width: 5.88px; height: 5.88px; background-color: " + dsrcrs[L] + PpPE + "; position: absolute; left: " + offsetX + "px; top: " + /*(i.touches[0].pageY - offseT.y)*/offsetY +  "px; '></div>" + (MNSWMTG > 1? "<div class= '#597c2d24cc36' style= 'width: 5.88px; height: 5.88px; background-color: #597c2d; z-index: 2; position: absolute; left: " + offsetX + "px; top: " + offsetY +  "px; '></div>": "")): 1: 13781; 
 }); 
     
 document.addEventListener("keyup", function(i){ 
@@ -1887,6 +1887,28 @@ $("#console .Ex").on("click", function(e){
             dinosaurios($("#dieded").val())
             sLS= 0
             break;
+        case ('rwr'):
+            $("#console").css({background: "#52ef60"})          
+            setTimeout(function(){$("#console").css({background: ""})}, 200)
+            if(document.getElementById("Rwawwr") !== null)document.getElementById("Rwawwr").remove()
+            document.getElementById("rawr").innerHTML= document.getElementById("rawr").innerHTML + "<div class= 'rwr'></div>"
+            document.getElementById("dinosaurios").scrollLeft= (90.8 + 5.89) * document.getElementById("rawr").children.length - document.body.clientWidth / 2
+            lastChild= document.getElementById("rawr").children[document.getElementById("rawr").children.length - 1]; /*Random is the RAM and the hour, that is why it is called random*/
+            sLS= 0
+            break;
+        case ('rwawwr'):
+            $("#console").css({background: "#52ef60"})          
+            setTimeout(function(){$("#console").css({background: ""})}, 200)
+            if(document.getElementById("rawr").innerHTML.indexOf("Rwawwr") == -1){
+                !!document.getElementById("Rwawwr")? lastChild.outerHTML= "": 289118; 
+                lastChild.outerHTML.indexOf("Rwawwr") == -1? document.getElementById("rawr").innerHTML= document.getElementById("rawr").innerHTML + "<div id= 'Rwawwr'></div>": 3251; 
+                (lastChild.outerHTML.indexOf("Rwawwr") == -1 && document.activeElement != $("input")[0] && document.activeElement != $("textarea")[0])? document.getElementsByTagName("h1")[0].removeAttribute("corrupt"): 3251; 
+                (lastChild.outerHTML.indexOf("Rwawwr") == -1 && document.activeElement != $("input")[0] && document.activeElement != $("textarea")[0])? document.getElementsByTagName("h1")[0].focus(): 3251; 
+            }else{
+                document.getElementById("Rwawwr").remove()
+            }
+            sLS= 0
+            break
         default:
             $("#console").css({background: "#cd7777"})
             setTimeout(function(){$("#console").css({background: ""})}, 200)
