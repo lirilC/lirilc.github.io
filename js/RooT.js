@@ -1649,7 +1649,7 @@ return videos}
 /**/
 var purger= {}; 
             
-purger.index= 18; 
+purger.index= 19; 
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return
@@ -2311,7 +2311,6 @@ var openFotosModal= function(a){
 
     th= $( th.context ).closest( ".foto" ); 
 
-    console.log( "OpenFotosModal" )
     if ($( th.context ).closest( ".foto" ).find(".options .bookmark").hasClass("true")){
         $('.theater .comments .options .bookmark').addClass("true");
     }else{
@@ -2512,10 +2511,6 @@ var openVidModal= function(a){
 
     $("#theater").find(".comentarios").css({"padding-top": ($("#theater").find(".info").height() + 35) + "px"}); 
 
-      $(".more").mCustomScrollbar({theme: 
-        "minimal-dark", 
-        autoExpandScrollbar: true,
-        scrollInertia: 100});
       
 
     responsive()
@@ -2711,7 +2706,6 @@ var closeModal= function(){
 	        "display": "none"
 	    })
 	    Antheater= false; 
-	    console.log( th ); 
 		history.pushState({page: 1}, "", `/${user.username}/videos`); 
 	}else if(RooT.maTch.videos.exec(actualLocation) !== null){
 	    if( typeof th == "undefined" ){ th= $( th.context ).closest(".story").length? $( th.context ).closest(".story"): $( th.context ).closest(".foto").length? $( th.context ).closest(".foto"): $( th.context ).closest('#profilePic').length? $( th.context ).closest('#profilePic'): th.context }else{ th= Antheater }; 
@@ -2749,7 +2743,6 @@ var closeModal= function(){
 	        "display": "none"
 	    })
 	    Antheater= false; 
-	    console.log( th ); 
 		history.pushState({page: 1}, "", `/${user.username}/videos`); 
 	}else if(RooT.maTch.root.exec(actualLocation) !== null){
 	    $(".Comentario .media > div").prop('outerHTML', function(){return $(this).find("audio").prop("outerHTML")}); 
@@ -2987,11 +2980,9 @@ bGComments= function(arg){
     return bG; 
 }
 badGuy= function(){ 
-	if(RooT.maTch.user.exec(actualLocation) !== null || RooT.maTch.root.exec(actualLocation) !== null){
+	if(RooT.maTch.root.exec(actualLocation) !== null){
 		Antheater= typeof th != "undefined" && !th.is(".story")? th: $(".current")
-	    console.log(Antheater)
 	    iTS= $(Antheater).is(".mult_carr")? $(Antheater.find(".carr section")[0]).is(".picture")? `${$(Antheater).find(".options a").attr("href").slice(0, $(Antheater).find(".options a").attr("href").lastIndexOf("/") - 4)}/img/${$($(Antheater).find(".carr section")[0]).find("img").attr("src").slice(-14, -4)}`: `${$(Antheater).find(".options a").attr("href").slice(0, $(Antheater).find(".options a").attr("href").lastIndexOf("/") - 4)}/vid/${$($(Antheater).find(".carr section")[0]).find("video").attr("src").slice(-14, -4)}`: (!Antheater.is(".current")? !!Antheater.find(".carr").length? window.location.pathname.slice(0, window.location.pathname.lastIndexOf("/")) + $(Antheater).find(".carr").find("img")[0].src.slice($(Antheater).find(".carr").find("img")[0].src.lastIndexOf("/"), $(Antheater).find(".carr").find("img")[0].src.lastIndexOf(".")): window.location.pathname: $(".current").is(".mult_img")? $(".current").find(".options a").attr("href").slice(0, $(".current").find(".options a").attr("href").lastIndexOf("/")) + $(".current").find(".carr").find("img")[0].src.slice($(".current").find(".carr").find("img")[0].src.lastIndexOf("/"), $(".current").find(".carr").find("img")[0].src.lastIndexOf(".")): $(".current").find(".options a").attr("href")); 
-	    console.log(iTS, JSON.stringify({B: ($("#theater").css("display") == "block"? $("#theater .options .bookmark").hasClass("true"): $(".current").find(".options .bookmark").hasClass("true"))? true: false, S: ($("#theater").css("display") == "block"? $("#theater .options .star").hasClass("true"): $(".current").find(".options .star").hasClass("true"))? true: false, C: bGComments(), hash: ((localStorage.getItem(iTS) != null && (typeof JSON.parse(localStorage.getItem(iTS)).hash != "undefined"))? JSON.parse(localStorage.getItem(iTS)).hash: hashes[iTS])}))
 	    localStorage.setItem(iTS, JSON.stringify({B: ($("#theater").css("display") == "block"? $("#theater .options .bookmark").hasClass("true"): $(".current").find(".options .bookmark").hasClass("true"))? true: false, S: ($("#theater").css("display") == "block"? $("#theater .options .star").hasClass("true"): $(".current").find(".options .star").hasClass("true"))? true: false, C: bGComments(), hash: ((localStorage.getItem(iTS) != null && (typeof JSON.parse(localStorage.getItem(iTS)).hash != "undefined"))? JSON.parse(localStorage.getItem(iTS)).hash: hashes[iTS])})); 
 	    $(".story").each(function(){ 
 	        cold= JSON.parse(localStorage.getItem($(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + $(this).find(".carr").find("img")[0].src.slice($(this).find(".carr").find("img")[0].src.lastIndexOf("/"), $(this).find(".carr").find("img")[0].src.lastIndexOf(".")): $(this).find(".options a").attr("href"))); 
@@ -3004,6 +2995,60 @@ badGuy= function(){
 	            $(t).find(".Comentarios")[0].innerHTML= cold.C; 
 	        })(): 1; 
 	    }); 
+	}else if(RooT.maTch.user.exec(actualLocation) !== null){
+		Antheater= typeof th != "undefined" && !th.is(".story")? th: $(".current")
+	    iTS= $(Antheater).is(".mult_carr")? $(Antheater.find(".carr section")[0]).is(".picture")? `${$(Antheater).find(".options a").attr("href").slice(0, $(Antheater).find(".options a").attr("href").lastIndexOf("/") - 4)}/img/${$($(Antheater).find(".carr section")[0]).find("img").attr("src").slice(-14, -4)}`: `${$(Antheater).find(".options a").attr("href").slice(0, $(Antheater).find(".options a").attr("href").lastIndexOf("/") - 4)}/vid/${$($(Antheater).find(".carr section")[0]).find("video").attr("src").slice(-14, -4)}`: (!Antheater.is(".current")? !!Antheater.find(".carr").length? window.location.pathname.slice(0, window.location.pathname.lastIndexOf("/")) + $(Antheater).find(".carr").find("img")[0].src.slice($(Antheater).find(".carr").find("img")[0].src.lastIndexOf("/"), $(Antheater).find(".carr").find("img")[0].src.lastIndexOf(".")): window.location.pathname: $(".current").is(".mult_img")? $(".current").find(".options a").attr("href").slice(0, $(".current").find(".options a").attr("href").lastIndexOf("/")) + $(".current").find(".carr").find("img")[0].src.slice($(".current").find(".carr").find("img")[0].src.lastIndexOf("/"), $(".current").find(".carr").find("img")[0].src.lastIndexOf(".")): $(".current").find(".options a").attr("href")); 
+	    if(iTS.indexOf("_tn") != -1)iTS= un_tn(iTS)
+	    	console.log(iTS)
+	    localStorage.setItem(iTS, JSON.stringify({B: ($("#theater").css("display") == "block"? $("#theater .options .bookmark").hasClass("true"): $(".current").find(".options .bookmark").hasClass("true"))? true: false, S: ($("#theater").css("display") == "block"? $("#theater .options .star").hasClass("true"): $(".current").find(".options .star").hasClass("true"))? true: false, C: bGComments(), hash: ((localStorage.getItem(iTS) != null && (typeof JSON.parse(localStorage.getItem(iTS)).hash != "undefined"))? JSON.parse(localStorage.getItem(iTS)).hash: hashes[iTS])})); 
+	    $(".story").each(function(){ 
+	        cold= JSON.parse(localStorage.getItem($(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + $(this).find(".carr").find("img")[0].src.slice($(this).find(".carr").find("img")[0].src.lastIndexOf("/"), $(this).find(".carr").find("img")[0].src.lastIndexOf(".")): $(this).find(".options a").attr("href"))); 
+	                            
+	        var t= $(this)[0]; 
+	                            
+	        !!cold? (function(){ 
+	            cold.B? $(t).find(".options .bookmark").addClass("true"): $(t).find(".options .bookmark").removeClass("true"); 
+	            cold.S? $(t).find(".options .star").addClass("true"): $(t).find(".options .star").removeClass("true"); 
+	            $(t).find(".Comentarios")[0].innerHTML= cold.C; 
+	        })(): 1; 
+	    }); 
+	    $(".foto").each(function(){ 
+	        src= $(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src); 
+
+	        cold= JSON.parse(localStorage.getItem("/" + username + "/img" + src.slice(src.lastIndexOf("/"), src.lastIndexOf(".")))); 
+	        var t= $(this)[0]; 
+	        !!cold? (function(){ 
+	            cold.B? $(t).find(".options .bookmark").addClass("true"): $(t).find(".options .bookmark").removeClass("true"); 
+	            cold.S? $(t).find(".options .star").addClass("true"): $(t).find(".options .star").removeClass("true"); 
+	            $(t).find(".Comentarios")[0].innerHTML= cold.C; 
+	        })(): 1; 
+	    }); 
+	    $(".vid").each(function(){ 
+	        src= `/${user.username}/vid/${$(this).find("video")[0].src.slice($(this).find("video")[0].src.lastIndexOf("/") + 1, -4)}`; 
+	        cold= JSON.parse(localStorage.getItem(src)); 
+	        var t= $(this)[0]; 
+
+	        !!cold? (function(){ 
+	            cold.B? $(t).find(".options .bookmark").addClass("true"): $(t).find(".options .bookmark").removeClass("true"); 
+	            cold.S? $(t).find(".options .star").addClass("true"): $(t).find(".options .star").removeClass("true"); 
+	            $(t).find(".Comentarios")[0].innerHTML= cold.C; 
+	        })(): 1; 
+	    }); 
+	    if($("#profilePic").length){ 
+	        src= $("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src); 
+
+	        "/" + username + "/img" + src.slice(src.lastIndexOf("/"), src.lastIndexOf("."))
+
+	        cold= JSON.parse(localStorage.getItem("/" + username + "/img" + src.slice(src.lastIndexOf("/"), src.lastIndexOf(".")))); 
+
+	        var t= $("#profilePic")[0]; 
+
+	        !!cold? (function(){ 
+	            cold.B? $(t).find(".options .bookmark").addClass("true"): $(t).find(".options .bookmark").removeClass("true"); 
+	            cold.S? $(t).find(".options .star").addClass("true"): $(t).find(".options .star").removeClass("true"); 
+	            $(t).find(".Comentarios")[0].innerHTML= cold.C; 
+	        })(): 1; 
+	    }
 	}else if(RooT.maTch.photos.exec(actualLocation) !== null){
 		iTS= ($this.is(".mult_img")? un_tn(window.location.pathname.slice(0, window.location.pathname.lastIndexOf("/")) + $(ar).find(".carr").find("img")[0].src.slice($(ar).find(".carr").find("img")[0].src.lastIndexOf("/"), $(ar).find(".carr").find("img")[0].src.lastIndexOf("."))): window.location.pathname); 
 	    localStorage.setItem(iTS, JSON.stringify({B: ($("#theater .options .bookmark").hasClass("true")? true: false), S: ($("#theater .options .star").hasClass("true")? true: false), C: bGComments(), hash: ((localStorage.getItem(iTS) != null && (typeof JSON.parse(localStorage.getItem(iTS)).hash != "undefined"))? JSON.parse(localStorage.getItem(iTS)).hash: hashes[iTS])})); 
@@ -3132,7 +3177,6 @@ tooltipComentarios= function(){
 }
 k200= function(f, ww1, a, u, ty){ 
 if(f.target.responseURL.slice(98, -5) == "")return
-    console.log("Entered!")
 switch(ty){
 	case "foto": 
         $(".foto").each(function(){ 
@@ -3146,7 +3190,7 @@ switch(ty){
     break; 
     case "video": 
         $(".vid").each(function(){ 
-            if($(this).find(".options a").attr("href") == C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))){ 
+            if(`/${user.username}/vid/${$(this).find("video")[0].src.slice($(this).find("video")[0].src.lastIndexOf("/") + 1, -4)}` == C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))){ 
                 a= $(this); 
                 (function(){ 
                     a.prev().on("click", function(){openVidModal($(this).next().find(".Enlarge"))}); 
@@ -3191,7 +3235,6 @@ switch(ty){
     break; 
 }; 
 
-	console.log((f.target.responseURL.slice(98, -5)))
     aS= a; 
     if(JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).hash != hashes[f.target.responseURL.slice(98, -5)]){
             $("badguy").remove();
@@ -3237,8 +3280,6 @@ switch(ty){
                 } 
             } 
         } 
-        console.log(u[0])
-        console.log(f.target.responseURL.slice(98, -5))
         localStorage.setItem(f.target.responseURL.slice(98, -5), JSON.stringify({B: JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).B, S: JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).S, C: bGComments(aS), hash: u[0].sha})); 
     }else{
         JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).B? aS.find(".options .bookmark").addClass("true"): aS.find(".options .bookmark").removeClass("true");
@@ -3248,24 +3289,25 @@ switch(ty){
 }
 k300= function(C, p, y, ty){ 
     typeof JSON.parse(C.target.response)[0] == "undefined"? console.log(C): 1; 
-
     hashes[C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))]= (function(){built= true; for(eForensics in JSON.parse(C.target.response)){ 
             if(nonBuilt.indexOf(JSON.parse(C.target.response)[eForensics].sha) != -1){ 
                 built= parseInt(eForensics) + 1; 
             } 
-        }; 
-        console.log(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")), JSON.parse(C.target.response)); return built !== true? JSON.parse(C.target.response)[built].sha: JSON.parse(C.target.response)[0].sha; })(); 
+        };
+        return built !== true? JSON.parse(C.target.response)[built].sha: JSON.parse(C.target.response)[0].sha 
+	})(); 
     if(!!JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))) && JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).hash != JSON.parse(C.target.response)[0].sha){
         var oReq= new XMLHttpRequest(); 
         oReq.addEventListener("load", function(e){k200(e, p, y, JSON.parse(C.target.response), ty)}); 
         oReq.open("GET", "https://raw.githubusercontent.com/LirilC/Lirilc.github.io/" + JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).hash + C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")) + ".html"); 
         oReq.send(); 
     }else if(!!JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))))){
+
         switch(ty){
         	case "foto": 
                 $(".foto").each(function(){ 
                     if(("/" + user.username+ "/img" + ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).slice(($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("/"), ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("."))) == C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))){
-                        a= $(this); 
+                        a= $(this);
                         (function(){ 
                             a.find("img").on("click", function(){openFotosModal($(this));}); 
                         })(); 
@@ -3274,7 +3316,7 @@ k300= function(C, p, y, ty){
             break; 
             case "video": 
                 $(".vid").each(function(){ 
-                    if($(this).find(".options a").attr("href") == C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))){
+                    if(`/${user.username}/vid/${$(this).find("video")[0].src.slice($(this).find("video")[0].src.lastIndexOf("/") + 1, -4)}` == C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))){
                         a= $(this); 
                         (function(){ 
                             a.prev().on("click", function(){openVidModal($(this).next().find(".Enlarge"))}); 
@@ -3318,9 +3360,9 @@ k300= function(C, p, y, ty){
                 }); 
             break; 
         }; 
-        JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).B? storyFromLink(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))).find(".options .bookmark").addClass("true"): storyFromLink(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))).find(".options .bookmark").removeClass("true"); 
-        JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).S? storyFromLink(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))).find(".options .star").addClass("true"): storyFromLink(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))).find(".options .star").removeClass("true"); 
-        !!JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).C? (function(){storyFromLink(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))).find(".Comentarios")[0].innerHTML= JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).C})(): 1; 
+        JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).B? a.find(".options .bookmark").addClass("true"): a.find(".options .bookmark").removeClass("true"); 
+        JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).S? a.find(".options .star").addClass("true"): a.find(".options .star").removeClass("true"); 
+        !!JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).C? (function(){a.find(".Comentarios")[0].innerHTML= JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).C})(): 1; 
 
     }
 } 
@@ -3339,7 +3381,6 @@ K100= function(builds){
     	$(".foto").each(function(){ 
 	        src= $(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src); 
 	        w1=  "/" + username + "/img" + src.slice(src.lastIndexOf("/"), src.lastIndexOf(".")); 
-	        console.log(w1) 
 	        cold= JSON.parse(localStorage.getItem(w1)); 
 	        t= $(this); 
 	        (!hashes[w1] || (!!cold && (cold.hash)))? (function(){ 
@@ -3353,8 +3394,7 @@ K100= function(builds){
 	        })(); 
 	    }); 
 	    $(".vid").each(function(){ 
-	        w1= $(this).find(".options a").attr("href"); 
-	        console.log(w1) 
+	        w1= `/${user.username}/vid/${$(this).find("video")[0].src.slice($(this).find("video")[0].src.lastIndexOf("/") + 1, -4)}`
 	        cold= JSON.parse(localStorage.getItem(w1)); 
 	        t= $(this); 
 	        (!hashes[w1] || (!!cold && (cold.hash)))? (function(){ 
@@ -3379,7 +3419,6 @@ K100= function(builds){
 	            oReq.send(); 
 	            a= t; 
 	            !(!!cold && (cold.hash))? (function(){
-	            	console.log(a)
 	                a.on( "click", function(r){ 
 	                    $( r.target ).is( ".pic" )? openModal( $( r.target ) ): 1; 
 	                    $( r.target ).is( ".video .Enlarge" )? openVideoModal( $( r.target ) ): 1; 
@@ -3393,7 +3432,6 @@ K100= function(builds){
 	    $(".photo").each(function(){ 
 	        src= $(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src); 
 	        w1=  "/" + username + "/img" + src.slice(src.lastIndexOf("/"), src.lastIndexOf(".")); 
-	        console.log(w1) 
 	        cold= JSON.parse(localStorage.getItem(w1)); 
 	        t= $(this); 
 	        (!hashes[w1] || (!!cold && (cold.hash)))? (function(){ 
@@ -3424,8 +3462,6 @@ K100= function(builds){
 } 
 K0= function(){
     token= this.responseText; 
-	console.log(token)
-
     var oReq= new XMLHttpRequest(); 
     oReq.addEventListener("load", function(e){K100(e)}); 
     oReq.open("GET", "https://api.github.com/repos/LirilC/lirilc.github.io/pages/builds"); 
@@ -3533,7 +3569,6 @@ _T(document).on("keydown", function (evt){
 	//console.log(evt.keyCode); 
 
 	if( evt.keyCode == 32 ){
-	    console.log( JSON.stringify( localStorage.getItem( "safety_purge" ) ) ); 
 	    if(_R("#theater", und, 'e').css("display") != "none"){ 
 	        videojs(_R(".theater video", 0, 'e')).paused()? videojs(_R(".theater video", 0, 'e')).play(): videojs(_R(".theater video", 0, 'e')).pause()
 	    } 
@@ -4374,9 +4409,7 @@ $("a").each(function(){
 /*Story edition management*/
 $(".Editado").on("contextmenu", function(er){er.preventDefault()})
 $(".Editado").on("mouseup", function(e){
-console.log(e)
 if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHistory).length - 1){
-    console.log(edHistory[rvsdatefinder(datefinder($(this).attr("title")) + 1)]); 
     var wReq = new XMLHttpRequest();
     var yS= $(this).closest(".story")
     wReq.addEventListener("load", function(e){edition(e, yS)}); 
@@ -4385,7 +4418,6 @@ if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHisto
     rvsdatefinder(datefinder($(this).attr("title")) + 1).indexOf("Editado") != 0? $(this).css({"text-decoration": "line-through", "color": "#3773639f"}): $(this).css({"text-decoration": "", "color": "rgb(221, 221, 144)"})
     $(this).attr("title", rvsdatefinder(datefinder($(this).attr("title")) + 1))
 }else if(e.which === 3 && datefinder($(this).attr("title")) - 1 >= 0){
-    console.log(edHistory[rvsdatefinder(datefinder($(this).attr("title")) - 1)]); 
     var wReq = new XMLHttpRequest();
     var yS= $(this).closest(".story")
     wReq.addEventListener("load", function(e){edition(e, yS)}); 
@@ -4914,10 +4946,7 @@ oReq.send();
 	//To _R()
 	$(".Editado").on("contextmenu", function(er){er.preventDefault()})
 	$(".Editado").on("mouseup", function(e){
-	console.log(e)
 	if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHistory).length - 1){
-	    console.log(edHistory[rvsdatefinder(datefinder($(this).attr("title")) + 1)]); 
-
 	    var wReq = new XMLHttpRequest();
 	    wReq.addEventListener("load", function(e){edition(e)}); 
 	    wReq.open("get", edHistory[rvsdatefinder(datefinder($(this).attr("title")) + 1)], true);
@@ -4925,9 +4954,6 @@ oReq.send();
 	    rvsdatefinder(datefinder($(this).attr("title")) + 1).indexOf("Editado") != 0? $(this).css({"text-decoration": "line-through", "color": "#3773639f"}): $(this).css({"text-decoration": "", "color": "rgb(221, 221, 144)"})
 	    $(this).attr("title", rvsdatefinder(datefinder($(this).attr("title")) + 1))
 	}else if(e.which === 3 && datefinder($(this).attr("title")) - 1 >= 0){
-
-	    console.log(edHistory[rvsdatefinder(datefinder($(this).attr("title")) - 1)]); 
-
 	    var wReq = new XMLHttpRequest();
 	    wReq.addEventListener("load", function(e){edition(e)}); 
 	    wReq.open("get", edHistory[rvsdatefinder(datefinder($(this).attr("title")) - 1)], true);
@@ -5458,14 +5484,12 @@ oReq.send();
 
 		            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
 		            W= e.target.responseText
-		            console.log($("badguy").html())
 		            $("badguy").remove()
 		            break; 
 		        case "b":
 		            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('id="text"') - 7, e.target.responseText.slice(e.target.responseText.lastIndexOf('id="text"') - 7, e.target.responseText.length).indexOf("</aside>") + e.target.responseText.lastIndexOf('id="text"') - 7)); 
 		            $("#text").not("badguy #text").html("")
 		            $("#text").not("badguy #text").html($("badguy #text").html())
-		            console.log($("badguy #text").html())
 		            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('id="title"') + 11, e.target.responseText.slice(e.target.responseText.lastIndexOf('id="title"') + 11, e.target.responseText.length).indexOf("</aside>") + e.target.responseText.lastIndexOf('id="title"') + 11)); 
 
 		            $("#title").not("badguy #title").html($("badguy").html())
@@ -5665,10 +5689,7 @@ _R('a').on("click", function(e){
 })
 		$(".Editado").on("contextmenu", function(er){er.preventDefault()})
 		$(".Editado").on("mouseup", function(e){
-		console.log(e)
 		if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHistory).length - 1){
-		    console.log(edHistory[rvsdatefinder(datefinder($(this).attr("title")) + 1)]); 
-
 		    var wReq = new XMLHttpRequest();
 		    wReq.addEventListener("load", function(e){edition(e)}); 
 		    wReq.open("get", edHistory[rvsdatefinder(datefinder($(this).attr("title")) + 1)], true);
@@ -5676,9 +5697,6 @@ _R('a').on("click", function(e){
 		    rvsdatefinder(datefinder($(this).attr("title")) + 1).indexOf("Editado") != 0? $(this).css({"text-decoration": "line-through", "color": "#3773639f"}): $(this).css({"text-decoration": "", "color": "rgb(221, 221, 144)"})
 		    $(this).attr("title", rvsdatefinder(datefinder($(this).attr("title")) + 1))
 		}else if(e.which === 3 && datefinder($(this).attr("title")) - 1 >= 0){
-
-		    console.log(edHistory[rvsdatefinder(datefinder($(this).attr("title")) - 1)]); 
-
 		    var wReq = new XMLHttpRequest();
 		    wReq.addEventListener("load", function(e){edition(e)}); 
 		    wReq.open("get", edHistory[rvsdatefinder(datefinder($(this).attr("title")) - 1)], true);
