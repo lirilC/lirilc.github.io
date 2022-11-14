@@ -1649,7 +1649,7 @@ return videos}
 /**/
 var purger= {}; 
             
-purger.index= 17; 
+purger.index= 18; 
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return
@@ -2824,7 +2824,7 @@ var closeModal= function(){
 	    $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 1 !important; }; "; 
 	}
 }
-var getNewComments= function(m, h){ 
+getNewComments= function(m, h){ 
     var arr= []; 
                  
     for(f= (m.children().filter(".comentario").length - (m.children().filter(".comentario").length - h.children().filter(".comentario").length)); f <= (m.children().filter(".comentario").length - 1); f++){ 
@@ -2836,7 +2836,7 @@ var getNewComments= function(m, h){
                 
     return arr; 
 } 
-var pathfinder= function(w){ 
+pathfinder= function(w){ 
     tt= w; 
     c= []; 
     
@@ -2846,7 +2846,7 @@ var pathfinder= function(w){
     }
     return c; 
 }
-var finder= function(i, n){ 
+finder= function(i, n){ 
     y= n.find(".Comentarios"); 
     
     typeof i.is == "undefined"? (function(){c= []; for(ie in i){c[c.length]= i[ie]}})(): pathfinder(i); 
@@ -2858,7 +2858,7 @@ var finder= function(i, n){
     
     return $(y.children().filter(".comentario")[c[c.length - 1]]).next(); 
 }
-var getCommentsAndAnswers= function(u, l){ 
+getCommentsAndAnswers= function(u, l){ 
     $(u).filter(".Comentarios").children().filter(".comentario").each(function(){ 
         if(!$(this).next().is(".respuestas") && $(l.find(".Comentarios").children().filter(".comentario")[$(this).parent().children().filter(".comentario").index($(this))]).next().is(".respuestas")){ 
             $(l.find(".Comentarios").children().filter(".comentario")[$(this).parent().children().filter(".comentario").index($(this))]).next().find(".Respuestas").remove(); 
@@ -2876,7 +2876,7 @@ var getCommentsAndAnswers= function(u, l){
         getCommentsAndAnswers($(this), l); 
     }); 
 } 
-var wD= function(thi, b){ 
+wD= function(thi, b){ 
     if(typeof b == "undefined"){ 
         if(!thi.parent().next(".newComment").find("textarea").length){ 
             $(".newComment").not(".comentarios > .newComment").remove(); 
@@ -2947,7 +2947,7 @@ var wD= function(thi, b){
         }
     }
 }
-var wd= function(Tt, l){ 
+wd= function(Tt, l){ 
     $(l.target).is(".Respuestas")? (function(){ 
         ///*console.log(l.target); */ 
 
@@ -2962,7 +2962,7 @@ var wd= function(Tt, l){
         Tt.find(".Responder").on("click",function(){wD($(this), 1)}) 
     })(): 1; 
 }
-var wwd= function(t, tr){ 
+wwd= function(t, tr){ 
     $(".respuestas .newComment").remove(); 
 
     $(t.parentElement.parentElement).children().each(function(){ 
@@ -2975,8 +2975,8 @@ var wwd= function(t, tr){
                                                                 
     (U.length == 2)? (function(){$(U[1]).html("<span class='Responder'></span>Respuestas (" + $(U[1]).parent().children().filter(".comentario").length + ")"); $(U[1]).click(function(l){wd($(this), l)}); $($(U[1]).find(".Responder")).on("click", function(){wD($(this), 1)}); U[0].remove()})(): (function(){U.html("<span class='Responder'></span>Respuestas (" + U.parent().children().filter(".comentario").length + ")"); U.click(function(l){wd($(this), l)}); $(U.find(".Responder")).on("click", function(){wD($(this), 1)}); })(); 
 }
-var bGComments= function(arg){ 
-    ($("#theater").css("display") == "block" && (typeof arg == "undefined"))? (function(){ 
+bGComments= function(arg){ 
+	($("#theater").css("display") == "block" && (typeof arg == "undefined"))? (function(){ 
         $("body").prepend("<badguy></badguy>"); 
         $("badguy").html($("#theater .Comentarios").html()); 
         $("badguy .Comentario .media > div").prop('outerHTML', function(){return $(this).find("audio").prop("outerHTML")}); 
@@ -2986,11 +2986,12 @@ var bGComments= function(arg){
     })(): (function(){bG= (typeof arg == "undefined")? $(".current .Comentarios")[0].innerHTML: $(arg).find(".Comentarios")[0].innerHTML; })(); 
     return bG; 
 }
-var badGuy= function(){ 
-	if(RooT.maTch.user.exec(window.location.pathname) !== null || RooT.maTch.root.exec(window.location.pathname) !== null){
+badGuy= function(){ 
+	if(RooT.maTch.user.exec(actualLocation) !== null || RooT.maTch.root.exec(actualLocation) !== null){
 		Antheater= typeof th != "undefined" && !th.is(".story")? th: $(".current")
 	    console.log(Antheater)
 	    iTS= $(Antheater).is(".mult_carr")? $(Antheater.find(".carr section")[0]).is(".picture")? `${$(Antheater).find(".options a").attr("href").slice(0, $(Antheater).find(".options a").attr("href").lastIndexOf("/") - 4)}/img/${$($(Antheater).find(".carr section")[0]).find("img").attr("src").slice(-14, -4)}`: `${$(Antheater).find(".options a").attr("href").slice(0, $(Antheater).find(".options a").attr("href").lastIndexOf("/") - 4)}/vid/${$($(Antheater).find(".carr section")[0]).find("video").attr("src").slice(-14, -4)}`: (!Antheater.is(".current")? !!Antheater.find(".carr").length? window.location.pathname.slice(0, window.location.pathname.lastIndexOf("/")) + $(Antheater).find(".carr").find("img")[0].src.slice($(Antheater).find(".carr").find("img")[0].src.lastIndexOf("/"), $(Antheater).find(".carr").find("img")[0].src.lastIndexOf(".")): window.location.pathname: $(".current").is(".mult_img")? $(".current").find(".options a").attr("href").slice(0, $(".current").find(".options a").attr("href").lastIndexOf("/")) + $(".current").find(".carr").find("img")[0].src.slice($(".current").find(".carr").find("img")[0].src.lastIndexOf("/"), $(".current").find(".carr").find("img")[0].src.lastIndexOf(".")): $(".current").find(".options a").attr("href")); 
+	    console.log(iTS, JSON.stringify({B: ($("#theater").css("display") == "block"? $("#theater .options .bookmark").hasClass("true"): $(".current").find(".options .bookmark").hasClass("true"))? true: false, S: ($("#theater").css("display") == "block"? $("#theater .options .star").hasClass("true"): $(".current").find(".options .star").hasClass("true"))? true: false, C: bGComments(), hash: ((localStorage.getItem(iTS) != null && (typeof JSON.parse(localStorage.getItem(iTS)).hash != "undefined"))? JSON.parse(localStorage.getItem(iTS)).hash: hashes[iTS])}))
 	    localStorage.setItem(iTS, JSON.stringify({B: ($("#theater").css("display") == "block"? $("#theater .options .bookmark").hasClass("true"): $(".current").find(".options .bookmark").hasClass("true"))? true: false, S: ($("#theater").css("display") == "block"? $("#theater .options .star").hasClass("true"): $(".current").find(".options .star").hasClass("true"))? true: false, C: bGComments(), hash: ((localStorage.getItem(iTS) != null && (typeof JSON.parse(localStorage.getItem(iTS)).hash != "undefined"))? JSON.parse(localStorage.getItem(iTS)).hash: hashes[iTS])})); 
 	    $(".story").each(function(){ 
 	        cold= JSON.parse(localStorage.getItem($(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + $(this).find(".carr").find("img")[0].src.slice($(this).find(".carr").find("img")[0].src.lastIndexOf("/"), $(this).find(".carr").find("img")[0].src.lastIndexOf(".")): $(this).find(".options a").attr("href"))); 
@@ -3003,15 +3004,15 @@ var badGuy= function(){
 	            $(t).find(".Comentarios")[0].innerHTML= cold.C; 
 	        })(): 1; 
 	    }); 
-	}else if(RooT.maTch.photos.exec(window.location.pathname) !== null){
+	}else if(RooT.maTch.photos.exec(actualLocation) !== null){
 		iTS= ($this.is(".mult_img")? un_tn(window.location.pathname.slice(0, window.location.pathname.lastIndexOf("/")) + $(ar).find(".carr").find("img")[0].src.slice($(ar).find(".carr").find("img")[0].src.lastIndexOf("/"), $(ar).find(".carr").find("img")[0].src.lastIndexOf("."))): window.location.pathname); 
 	    localStorage.setItem(iTS, JSON.stringify({B: ($("#theater .options .bookmark").hasClass("true")? true: false), S: ($("#theater .options .star").hasClass("true")? true: false), C: bGComments(), hash: ((localStorage.getItem(iTS) != null && (typeof JSON.parse(localStorage.getItem(iTS)).hash != "undefined"))? JSON.parse(localStorage.getItem(iTS)).hash: hashes[iTS])})); 
-	}else if(RooT.maTch.blog.exec(window.location.pathname) !== null){
+	}else if(RooT.maTch.blog.exec(actualLocation) !== null){
 	    iTS=  window.location.pathname.replaceAll(".html", ""); 
 	    localStorage.setItem(iTS, JSON.stringify({C: bGComments(), hash: ((localStorage.getItem(iTS) != null && (typeof JSON.parse(localStorage.getItem(iTS)).hash != "undefined"))? JSON.parse(localStorage.getItem(iTS)).hash: hashes[window.location.pathname.replaceAll(".html", "")])})); 
 	}
 }
-var tooltip= function(){ 
+tooltip= function(){ 
     $('.title').tooltip({
         items: 'a.target',
         open: function(event, ui) {
@@ -3088,7 +3089,7 @@ var tooltip= function(){
         }
     });
 }
-function tooltipComentarios(){ 
+tooltipComentarios= function(){ 
     $('.comentario').tooltip({ 
         items: 'img', 
         open: function(event, ui) 
@@ -3129,7 +3130,7 @@ function tooltipComentarios(){
         } 
     }); 
 }
-var k200= function(f, ww1, a, u, ty){ 
+k200= function(f, ww1, a, u, ty){ 
 if(f.target.responseURL.slice(98, -5) == "")return
     console.log("Entered!")
 switch(ty){
@@ -3245,7 +3246,7 @@ switch(ty){
         !!JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).C? (function(){aS.find(".Comentarios")[0].innerHTML= JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).C})(): 1;
     }
 }
-var k300= function(C, p, y, ty){ 
+k300= function(C, p, y, ty){ 
     typeof JSON.parse(C.target.response)[0] == "undefined"? console.log(C): 1; 
 
     hashes[C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))]= (function(){built= true; for(eForensics in JSON.parse(C.target.response)){ 
@@ -3323,7 +3324,7 @@ var k300= function(C, p, y, ty){
 
     }
 } 
-var K100= function(builds){ 
+K100= function(builds){ 
     nonBuilt= (function(){ 
         non_built= []; 
 
@@ -3421,7 +3422,7 @@ var K100= function(builds){
 	        })(); 
 	    }); 
 } 
-var K0= function(){
+K0= function(){
     token= this.responseText; 
 	console.log(token)
 
@@ -4399,6 +4400,11 @@ if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHisto
 audiojs.events.ready(function(){
    var as= audiojs.createAll()
 })
+
+/***/
+
+
+/***/
 /*Request Github token from safe page*/
 var oReq = new XMLHttpRequest();
 oReq.addEventListener("load", K0);

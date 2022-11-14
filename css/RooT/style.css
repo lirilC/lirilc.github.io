@@ -7456,6 +7456,17 @@ background-color: #ddd}
     margin-top: unset; 
     height: 100%; 
 }
+#book #theater
+{
+    height: 100%; 
+    box-sizing: border-box; 
+    width: 100%; 
+    margin: 0; 
+    padding: 0 205px 0 0; 
+    position: static; 
+    float: right;
+    max-width: unset;
+}
 #sidebar
 {
     height: 100% !important; 
