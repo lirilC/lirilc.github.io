@@ -3301,7 +3301,7 @@ k300= function(C, p, y, ty){
         oReq.addEventListener("load", function(e){k200(e, p, y, JSON.parse(C.target.response), ty)}); 
         oReq.open("GET", "https://raw.githubusercontent.com/LirilC/Lirilc.github.io/" + JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).hash + C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")) + ".html"); 
         oReq.send(); 
-    }else if(!!JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))))){
+    }else{
 
         switch(ty){
         	case "foto": 
@@ -4236,11 +4236,12 @@ _R(".comentario").on("mousemove", function(event){
     }  
 }); 
 _R(".comentario")
-$("#theater textarea").on('input', function(){ 
+_R("#theater textarea", 0).on('input', function(){ 
     $(this).height(""); 
     !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2))))): 1; 
 }); 
-$(".comentarios > .newComment").on('keydown', function(i){ 
+_R("#theater textarea", 0).e()
+_R(".comentarios > .newComment", 0).on('keydown', function(i){ 
     abc= $("#theater .Comentarios"); 
 
     (!i.shiftKey && i.keyCode == 13)? (function(){abc.append("<div class='comentario'>" + localStorage.getItem("knob") + '"' +  localStorage.getItem("tooltip") + '"' + localStorage.getItem("user") + $(".comentarios > .newComment textarea").val().replaceAll("\n", "<br>") + "</span><span class='Responder'></span></div>"); $(".comentarios > .newComment textarea").val(""); $($($("#theater .Comentarios").children()[$("#theater .Comentarios").children().length - 1]).find(".Responder")).on("click", function(){wD($(this))}); $("#theater .Comentarios").scrollTop($("#theater .Comentarios")[0].scrollHeight); $($($("#theater .Comentarios").children()[$("#theater .Comentarios").children().length - 1])).on("mousemove", function(event){elx= $($(this).children()[0]); circleWidth= elx.outerWidth( true ),circleHeight = elx.outerHeight( true ),circleLeft   = elx.offset().left,circleTop    = elx.offset().top,circlePos    ={x    : circleLeft + circleWidth / 2,y    : circleTop + circleHeight / 2,radius: circleWidth / 2};distance   = Math.sqrt( Math.pow( event.pageX - circlePos.x, 2 ) + Math.pow( event.pageY - circlePos.y, 2 ) );if(distance <= circlePos.radius){$($(this).children()[0]).css({"pointer-events": "all"});$($(this).children()[0]).css({"pointer-events": "all"});}else{$($(this).children()[0]).css({"pointer-events": "none"});$($(this).children()[0]).css({"pointer-events": "none"});}}); document.activeElement.blur(); $(".comentarios > .newComment textarea").css({"height": ""}); badGuy(); })(): 1; 
@@ -4249,10 +4250,12 @@ $(".comentarios > .newComment").on('keydown', function(i){
 
     tooltipComentarios(); 
 }); 
-$("#theater .read").on("click", function(){ 
+_R(".comentarios > .newComment", 0).e()
+_R("#theater .read", 0).on("click", function(){ 
     !$("#theater .description").hasClass("closed")? $("#theater .description").addClass("closed"): $("#theater .description").removeClass("closed"); 
     !$("#theater .comentarios").hasClass("open")? $("#theater .comentarios").addClass("open"): $("#theater .comentarios").removeClass("open"); 
 })
+_R("#theater .read", 0).e()
 /*RooT photos' link*/
 _R("#photos", 0).on("click", function(ev){
 	history.pushState({page: 1}, "", `/${user.username}/photos`); 
@@ -5049,11 +5052,12 @@ oReq.send();
 	})
 
 	document.addEventListener("keydown", function(e){if(e.shiftKey && e.ctrlKey && e.altKey){e.preventDefault();$("#theater").css("display") == "block"?closeModal():1;$("#buscar input").val("");$("#buscar input").trigger("input");$("#buscar input").focus()}})
-	    $("#theater textarea").on('input', function() { 
+	    _R("#theater textarea", 0).on('input', function() { 
 	        $(this).height(""); 
 	        !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2))))): 1; 
 	    }); 
-	    $(".comentarios > .newComment").on('keydown', function(i){ 
+	    _R("#theater textarea", 0).e()
+	    _R(".comentarios > .newComment", 0).on('keydown', function(i){ 
 	                abc= $("#theater .Comentarios"); 
 
 	                (!i.shiftKey && i.keyCode == 13)? (function(){abc.append("<div class='comentario'>" + localStorage.getItem("knob") + '"' +  localStorage.getItem("tooltip") + '"' + localStorage.getItem("user") + $(".comentarios > .newComment textarea").val().replaceAll("\n", "<br>") + "</span><span class='Responder'></span></div>"); $(".comentarios > .newComment textarea").val(""); $($($("#theater .Comentarios").children()[$("#theater .Comentarios").children().length - 1]).find(".Responder")).on("click", function(){wD($(this))}); $("#theater .Comentarios").scrollTop($("#theater .Comentarios")[0].scrollHeight); $($($("#theater .Comentarios").children()[$("#theater .Comentarios").children().length - 1])).on("mousemove", function(event){elx= $($(this).children()[0]); circleWidth = elx.outerWidth( true ),circleHeight  = elx.outerHeight( true ),circleLeft    = elx.offset().left,circleTop     = elx.offset().top,circlePos     = {x     : circleLeft + circleWidth / 2,y     : circleTop + circleHeight / 2,radius: circleWidth / 2};distance    = Math.sqrt( Math.pow( event.pageX - circlePos.x, 2 ) + Math.pow( event.pageY - circlePos.y, 2 ) );if(distance <= circlePos.radius){$($(this).children()[0]).css({"pointer-events": "all"});$($(this).children()[0]).css({"pointer-events": "all"});}else{$($(this).children()[0]).css({"pointer-events": "none"});$($(this).children()[0]).css({"pointer-events": "none"});}}); document.activeElement.blur(); $(".comentarios > .newComment textarea").css({"height": ""}); badGuy(); })(): 1; 
@@ -5062,10 +5066,12 @@ oReq.send();
 
 	                tooltipComentarios(); 
 	            }); 
-	    $("#theater .read").on("click", function(){ 
+	    _R(".comentarios > .newComment", 0).e()
+	    _R("#theater .read", 0).on("click", function(){ 
 	        !$("#theater .description").hasClass("closed")? $("#theater .description").addClass("closed"): $("#theater .description").removeClass("closed"); 
 	        !$("#theater .comentarios").hasClass("open")? $("#theater .comentarios").addClass("open"): $("#theater .comentarios").removeClass("open"); 
 	    }); 
+	    _R("#theater .read", 0).e()
 
 	    
 	    /*$(".story").each(function(){ 
@@ -5855,11 +5861,11 @@ _R('a').on("click", function(e){
 		        $("html").scrollTop($("html")[0].scrollHeight); 
 		    }); 
 		    
-		    $("#theater .read").on("click", function(){ 
+		    _R("#theater .read", 0).on("click", function(){ 
 		        !$("#theater .description").hasClass("closed")? $("#theater .description").addClass("closed"): $("#theater .description").removeClass("closed"); 
 		        !$("#theater .comentarios").hasClass("open")? $("#theater .comentarios").addClass("open"): $("#theater .comentarios").removeClass("open"); 
 		    }) 
-
+		    _R("#theater .read", 0).e()
 		    $("#theater").on("click", function(i){$(i.target).is("#theater")? closeModal(): 1; }); 
 
 
