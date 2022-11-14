@@ -3694,6 +3694,9 @@ RooT.maTch.photos= new RegExp('^(\/.*?\/)photos$');//A slash anything but a slas
 RooT.maTch.videos= new RegExp('^(\/.*?\/)videos$');//A slash anything but a slash and a slash and the word videos after; e.g: /uaocno/photos
 RooT.maTch.blog= new RegExp('^(\/.*?\/)blog(\/.*?)$')//A slash anything but a slash a slash and the word blog after, a slash and anything; e.g: /uaocno/blog/onvesb
 RooT.maTch.root= new RegExp('^\/$')//A slash
+RooT.maTch.posStatic= new RegExp('^(\/.*?\/)pos(\/.*?)$')//A slash anything but a slash a slash and the word pos after, a slash and anything; e.g: /uaocno/pos/onvesb
+RooT.maTch.imgStatic= new RegExp('^(\/.*?\/)img(\/.*?)$')//A slash anything but a slash a slash and the word img after, a slash and anything; e.g: /uaocno/img/onvesb
+RooT.maTch.vidStatic= new RegExp('^(\/.*?\/)vid(\/.*?)$')//A slash anything but a slash a slash and the word vid after, a slash and anything; e.g: /uaocno/vid/onvesb
 
 if(RooT.maTch.user.exec(window.location.pathname) !== null){
 	/*Define actual location*/
@@ -6262,7 +6265,9 @@ _R('a').on("click", function(e){
 
 
 		    });
-	}
+	}else if(RooT.maTch.posStatic.exec(window.location.pathname) !== null){
+    	alert("RooT")
+    }
 }
 responsive= function(){
     $("#otherContainments").is(".visible")? $("#otherContainments > div").height() < $("#otherContainments > div")[0].scrollHeight? $("#otherContainments").addClass("overflowing"): $("#otherContainments").removeClass("overflowing"): 1; 
