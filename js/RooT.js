@@ -1311,6 +1311,43 @@ var one= function(a, b, c, d){
 				}
 			}
 			return reTurn
+		case "unTnCarrItem":
+			var reTurn= ""
+			for(var e in c){
+				switch(c[e][0]){
+					case "vi":
+						reTurn+=   `<section class="video">
+	                                    <div class="Playuse">
+	                                    </div>
+	                                    <div class="Enlarge">
+	                                    </div>
+	                                    <video id="x${(function(){vX++; return vX})()}" controls class="video-js d88fer vjs-default-skin" preload="none" width="100%" height="325" data-setup='{"poster":"/resources/images/${user.username}/${c[e][1]}_poster.png"}' data-setup="{}">
+	                                        <source src="/resources/videos/${user.username}/${c[e][1]}.mp4" type='video/mp4' />
+	                                        <p class="vjs-no-js">
+	                                            Para ver este vídeo, por favor activa el Javascript y considera actualizar tu navegador a uno que
+	                                            <a href="http://videojs.com/html5-video-support/" target="_blank">
+	                                                soporte vídeo en Html5
+	                                            </a>
+	                                        </p>
+	                                    </video>
+	                                </section>
+	                                `
+	                    break;
+	                case "im":
+						reTurn+=   `<section class="picture">
+	                                    <img class="pic" src="/resources/images/${user.username}/${un_tn(c[e][1])}" alt="" class="big">
+	                                </section>
+	                                `
+	                    break;
+	                default:
+						reTurn+=   `<section class="picture">
+	                                    <img class="pic" src="/resources/images/${user.username}/${un_tn(c[e])}" alt="" class="big">
+	                                </section>
+	                                `
+	                    break;
+				}
+			}
+			return reTurn
 		case "tnCarrItem":
 			var reTurn= ""
 			for(var e in c){
@@ -1547,94 +1584,8 @@ H= asdknki4
 var token
 var hashes= {}
 var nonBuilt
-var rvsdatefinder= function(e){
-var indc= -1
-for(ind in edHistory){
-    indc++
-    if(indc == e) 
-        return ind
-}}
-var datefinder= function(e){
-var indc= -1
-for(ind in edHistory){
-    indc++
-    if(edHistory[ind] ==edHistory[e])return indc
-}}
-var edition= function(e, d){
-    $("body").prepend("<badguy></badguy>"); 
-    switch(type){
-        case "oC":
-            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.length).indexOf("<aside") + e.target.responseText.lastIndexOf("otherContainments") - 9)); 
-            d.find("containment").remove()
-            d.find("media").remove()
-            d.find(".Comentarios").before($("badguy").find("#otherContainments").html())
-            d.find("text").html()
-            for(var er= 0; er <= d.find(".media audio").length - 1; er++){
-                audiojs.create(d.find(".media audio")[er])
-            }
 
-            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
 
-            if(d.find(".title").text().indexOf("We're L") != 0)d.find(".title").html($("badguy").html())
-            $("badguy").remove()
-            break;
-        case "c":
-            $("badguy").html(e.target.responseText.slice(e.target.responseText.indexOf("<containment") , e.target.responseText.slice(e.target.responseText.lastIndexOf("<containment"), e.target.responseText.length).indexOf("</containment") + e.target.responseText.indexOf("<containment"))); 
-            d.find("containment").remove()
-            d.find(".Comentarios").before($("badguy").find("containment")[0].outerHTML)
-
-            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
-
-            d.find(".title").html($("badguy").html())
-            $("badguy").remove()
-            break;
-        case "mult_img":
-            $("badguy").html(e.target.responseText.slice(e.target.responseText.indexOf('"navigation"') - 15, e.target.responseText.slice(e.target.responseText.indexOf('"navigation"') - 15, e.target.responseText.length).indexOf("Playuse") - 3 + e.target.responseText.indexOf('"navigation"') - 15)); 
-            $(".current .Comentarios").prev().remove()
-            $(".current .Comentarios").before($("badguy").find(".navigation")[0].outerHTML)
-            $(".current").find("text").html()
-            
-            $(".current .nav_arrow.left .arrow").not("#picContainer .arrow").on("click", function(){
-                th= $(".current");
-                if($("#theater .nav_arrow.left").is(".disabled"))
-                    {return}; 
-                if(th.find(".nav_arrow.left").is(".disabled") && $("#theater").css("display") == "none")
-                    {return}
-                if($("#theater").css("display") == "none" && !!th.find(".carr").length){ 
-                    lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
-                    if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
-                    !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
-                        if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); th.find(".options a").attr("href", "/" + user.username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
-                }
-            }); 
-
-            $(".current .nav_arrow.right .arrow").not("#picContainer .arrow").on("click", function(){
-                th= $(".current");
-                if($("#theater .nav_arrow.right").is(".disabled"))
-                    {return}; 
-                if(th.find(".nav_arrow.right").is(".disabled") && $("#theater").css("display") == "none")
-                    {return}
-                if($("#theater").css("display") == "none" && !!th.find(".carr").length){ 
-                    lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
-                    if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
-                    !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
-                        if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); th.find(".options a").attr("href", "/" + user.username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
-                }
-            }); 
-
-            $(".current .carr").on("scroll", function(){ 
-                rf= $(this)
-                Math.round($(this)[0].scrollLeft / $(this).width()) == $(this).children().length - 1? (function(){rf.parent().find(".nav_arrow.right").addClass("disabled"); $("#theater").find(".nav_arrow.right").addClass("disabled")})(): (function(){rf.parent().find(".nav_arrow.right").removeClass("disabled"); $("#theater").find(".nav_arrow.right").removeClass("disabled")})(); 
-                $(this)[0].scrollLeft == 0? (function(){rf.parent().find(".nav_arrow.left").addClass("disabled"); $("#theater").find(".nav_arrow.left").addClass("disabled");})(): (function(){rf.parent().find(".nav_arrow.left").removeClass("disabled"); $("#theater").find(".nav_arrow.left").removeClass("disabled")})(); 
-            }) 
-
-            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') - 9, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') - 9, e.target.responseText.length).indexOf('"more"') - 9 + e.target.responseText.lastIndexOf('"title"') - 9)); 
-            W= e.target.responseText
-            $(".current .title").html($("badguy p").html())
-            $("badguy").remove()
-            break; 
-    }
-}
 getVideos= function($c, $C){videos= 0
 for(var r= 0; r < $C; r++){
     videos= $($c.find(".carr").children()[r]).is(".video")? videos + 1: videos; 
@@ -3360,9 +3311,9 @@ k300= function(C, p, y, ty){
                 }); 
             break; 
         }; 
-        JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).B? a.find(".options .bookmark").addClass("true"): a.find(".options .bookmark").removeClass("true"); 
-        JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).S? a.find(".options .star").addClass("true"): a.find(".options .star").removeClass("true"); 
-        !!JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).C? (function(){a.find(".Comentarios")[0].innerHTML= JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).C})(): 1; 
+        localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))) !== null && JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).B? a.find(".options .bookmark").addClass("true"): a.find(".options .bookmark").removeClass("true"); 
+        localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))) !== null && JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).S? a.find(".options .star").addClass("true"): a.find(".options .star").removeClass("true"); 
+        localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))) !== null && !!JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).C? (function(){a.find(".Comentarios")[0].innerHTML= JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).C})(): 1; 
 
     }
 } 
@@ -4410,6 +4361,95 @@ $("a").each(function(){
 })
 */
 /*Story edition management*/
+ rvsdatefinder= function(e){
+var indc= -1
+for(ind in edHistory){
+    indc++
+    if(indc == e) 
+        return ind
+}}
+ datefinder= function(e){
+var indc= -1
+for(ind in edHistory){
+    indc++
+    if(edHistory[ind] ==edHistory[e])return indc
+}}
+
+ edition= function(e, d){
+    $("body").prepend("<badguy></badguy>"); 
+    switch(type){
+        case "oC":
+            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.length).indexOf("<aside") + e.target.responseText.lastIndexOf("otherContainments") - 9)); 
+            d.find("#otherContainments").remove()
+            d.find("media").remove()
+            d.find(".Comentarios").before($("badguy").find("#otherContainments")[0].outerHTML)
+            d.find("text").html()
+            for(var er= 0; er <= d.find(".media audio").length - 1; er++){
+                audiojs.create(d.find(".media audio")[er])
+            }
+
+            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
+
+            if(d.find(".title").text().indexOf("We're L") != 0)d.find(".title").html($("badguy").html())
+            $("badguy").remove()
+            break;
+        case "c":
+            $("badguy").html(e.target.responseText.slice(e.target.responseText.indexOf("<containment") , e.target.responseText.slice(e.target.responseText.lastIndexOf("<containment"), e.target.responseText.length).indexOf("</containment") + e.target.responseText.indexOf("<containment"))); 
+            d.find("containment").remove()
+            d.find(".Comentarios").before($("badguy").find("containment")[0].outerHTML)
+
+            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
+
+            d.find(".title").html($("badguy").html())
+            $("badguy").remove()
+            break;
+        case "mult_img":
+            $("badguy").html(e.target.responseText.slice(e.target.responseText.indexOf('"navigation"') - 15, e.target.responseText.slice(e.target.responseText.indexOf('"navigation"') - 15, e.target.responseText.length).indexOf("Playuse") - 3 + e.target.responseText.indexOf('"navigation"') - 15)); 
+            $(".current .Comentarios").prev().remove()
+            $(".current .Comentarios").before($("badguy").find(".navigation")[0].outerHTML)
+            $(".current").find("text").html()
+            
+            $(".current .nav_arrow.left .arrow").not("#picContainer .arrow").on("click", function(){
+                th= $(".current");
+                if($("#theater .nav_arrow.left").is(".disabled"))
+                    {return}; 
+                if(th.find(".nav_arrow.left").is(".disabled") && $("#theater").css("display") == "none")
+                    {return}
+                if($("#theater").css("display") == "none" && !!th.find(".carr").length){ 
+                    lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
+                    if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
+                    !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
+                        if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); th.find(".options a").attr("href", "/" + user.username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
+                }
+            }); 
+
+            $(".current .nav_arrow.right .arrow").not("#picContainer .arrow").on("click", function(){
+                th= $(".current");
+                if($("#theater .nav_arrow.right").is(".disabled"))
+                    {return}; 
+                if(th.find(".nav_arrow.right").is(".disabled") && $("#theater").css("display") == "none")
+                    {return}
+                if($("#theater").css("display") == "none" && !!th.find(".carr").length){ 
+                    lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
+                    if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
+                    !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
+                        if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); th.find(".options a").attr("href", "/" + user.username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
+                }
+            }); 
+
+            $(".current .carr").on("scroll", function(){ 
+                rf= $(this)
+                Math.round($(this)[0].scrollLeft / $(this).width()) == $(this).children().length - 1? (function(){rf.parent().find(".nav_arrow.right").addClass("disabled"); $("#theater").find(".nav_arrow.right").addClass("disabled")})(): (function(){rf.parent().find(".nav_arrow.right").removeClass("disabled"); $("#theater").find(".nav_arrow.right").removeClass("disabled")})(); 
+                $(this)[0].scrollLeft == 0? (function(){rf.parent().find(".nav_arrow.left").addClass("disabled"); $("#theater").find(".nav_arrow.left").addClass("disabled");})(): (function(){rf.parent().find(".nav_arrow.left").removeClass("disabled"); $("#theater").find(".nav_arrow.left").removeClass("disabled")})(); 
+            }) 
+
+            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') - 9, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') - 9, e.target.responseText.length).indexOf('"more"') - 9 + e.target.responseText.lastIndexOf('"title"') - 9)); 
+            W= e.target.responseText
+            $(".current .title").html($("badguy p").html())
+            $("badguy").remove()
+            break; 
+    }
+}
 $(".Editado").on("contextmenu", function(er){er.preventDefault()})
 $(".Editado").on("mouseup", function(e){
 if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHistory).length - 1){
@@ -4947,6 +4987,95 @@ oReq.send();
 	})
 	_R("#chats .chats").e()
 	//To _R()
+	 rvsdatefinder= function(e){
+var indc= -1
+for(ind in edHistory){
+    indc++
+    if(indc == e) 
+        return ind
+}}
+ datefinder= function(e){
+var indc= -1
+for(ind in edHistory){
+    indc++
+    if(edHistory[ind] ==edHistory[e])return indc
+}}
+
+ edition= function(e, d){
+    $("body").prepend("<badguy></badguy>"); 
+    switch(type){
+        case "oC":
+            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.length).indexOf("<aside") + e.target.responseText.lastIndexOf("otherContainments") - 9)); 
+            d.find("#otherContainments").remove()
+            d.find("media").remove()
+            d.find(".Comentarios").before($("badguy").find("#otherContainments")[0].outerHTML)
+            d.find("text").html()
+            for(var er= 0; er <= d.find(".media audio").length - 1; er++){
+                audiojs.create(d.find(".media audio")[er])
+            }
+
+            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
+
+            if(d.find(".title").text().indexOf("We're L") != 0)d.find(".title").html($("badguy").html())
+            $("badguy").remove()
+            break;
+        case "c":
+            $("badguy").html(e.target.responseText.slice(e.target.responseText.indexOf("<containment") , e.target.responseText.slice(e.target.responseText.lastIndexOf("<containment"), e.target.responseText.length).indexOf("</containment") + e.target.responseText.indexOf("<containment"))); 
+            d.find("containment").remove()
+            d.find(".Comentarios").before($("badguy").find("containment")[0].outerHTML)
+
+            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
+
+            d.find(".title").html($("badguy").html())
+            $("badguy").remove()
+            break;
+        case "mult_img":
+            $("badguy").html(e.target.responseText.slice(e.target.responseText.indexOf('"navigation"') - 15, e.target.responseText.slice(e.target.responseText.indexOf('"navigation"') - 15, e.target.responseText.length).indexOf("Playuse") - 3 + e.target.responseText.indexOf('"navigation"') - 15)); 
+            $(".current .Comentarios").prev().remove()
+            $(".current .Comentarios").before($("badguy").find(".navigation")[0].outerHTML)
+            $(".current").find("text").html()
+            
+            $(".current .nav_arrow.left .arrow").not("#picContainer .arrow").on("click", function(){
+                th= $(".current");
+                if($("#theater .nav_arrow.left").is(".disabled"))
+                    {return}; 
+                if(th.find(".nav_arrow.left").is(".disabled") && $("#theater").css("display") == "none")
+                    {return}
+                if($("#theater").css("display") == "none" && !!th.find(".carr").length){ 
+                    lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
+                    if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
+                    !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
+                        if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); th.find(".options a").attr("href", "/" + user.username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
+                }
+            }); 
+
+            $(".current .nav_arrow.right .arrow").not("#picContainer .arrow").on("click", function(){
+                th= $(".current");
+                if($("#theater .nav_arrow.right").is(".disabled"))
+                    {return}; 
+                if(th.find(".nav_arrow.right").is(".disabled") && $("#theater").css("display") == "none")
+                    {return}
+                if($("#theater").css("display") == "none" && !!th.find(".carr").length){ 
+                    lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
+                    if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
+                    !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
+                        if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); th.find(".options a").attr("href", "/" + user.username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
+                }
+            }); 
+
+            $(".current .carr").on("scroll", function(){ 
+                rf= $(this)
+                Math.round($(this)[0].scrollLeft / $(this).width()) == $(this).children().length - 1? (function(){rf.parent().find(".nav_arrow.right").addClass("disabled"); $("#theater").find(".nav_arrow.right").addClass("disabled")})(): (function(){rf.parent().find(".nav_arrow.right").removeClass("disabled"); $("#theater").find(".nav_arrow.right").removeClass("disabled")})(); 
+                $(this)[0].scrollLeft == 0? (function(){rf.parent().find(".nav_arrow.left").addClass("disabled"); $("#theater").find(".nav_arrow.left").addClass("disabled");})(): (function(){rf.parent().find(".nav_arrow.left").removeClass("disabled"); $("#theater").find(".nav_arrow.left").removeClass("disabled")})(); 
+            }) 
+
+            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') - 9, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') - 9, e.target.responseText.length).indexOf('"more"') - 9 + e.target.responseText.lastIndexOf('"title"') - 9)); 
+            W= e.target.responseText
+            $(".current .title").html($("badguy p").html())
+            $("badguy").remove()
+            break; 
+    }
+}
 	$(".Editado").on("contextmenu", function(er){er.preventDefault()})
 	$(".Editado").on("mouseup", function(e){
 	if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHistory).length - 1){
@@ -5426,16 +5555,17 @@ oReq.send();
 		    switch(type){
 		        case "oC":
 		            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.length).indexOf("<aside") + e.target.responseText.lastIndexOf("otherContainments") - 9)); 
-		            $(".current .title").next().remove()
-		            $(".current .title").after($("badguy").find("#otherContainments").html())
-		            $(".current").find("text").html()
-		            for(var er= 0; er <= $(".current .media audio").length - 1; er++){
-		                audiojs.create($(".current .media audio")[er])
+		            d.find("#otherContainments").remove()
+		            d.find("media").remove()
+		            d.find(".Comentarios").before($("badguy").find("#otherContainments")[0].outerHTML)
+		            d.find("text").html()
+		            for(var er= 0; er <= d.find(".media audio").length - 1; er++){
+		                audiojs.create(d.find(".media audio")[er])
 		            }
 
 		            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
 
-		            if($(".current").find(".title").text().indexOf("We're L") != 0)$(".current").find(".title").html($("badguy").html())
+		            if(d.find(".title").text().indexOf("We're L") != 0)d.find(".title").html($("badguy").html())
 		            $("badguy").remove()
 		            break;
 		        case "c":
