@@ -1890,7 +1890,6 @@ $("#console .Ex").on("click", function(e){
         case ('rwr'):
             $("#console").css({background: "#52ef60"})          
             setTimeout(function(){$("#console").css({background: ""})}, 200)
-            if(document.getElementById("Rwawwr") !== null)document.getElementById("Rwawwr").remove()
             document.getElementById("rawr").innerHTML= document.getElementById("rawr").innerHTML + "<div class= 'rwr'></div>"
             document.getElementById("dinosaurios").scrollLeft= (90.8 + 5.89) * document.getElementById("rawr").children.length - document.body.clientWidth / 2
             lastChild= document.getElementById("rawr").children[document.getElementById("rawr").children.length - 1]; /*Random is the RAM and the hour, that is why it is called random*/
