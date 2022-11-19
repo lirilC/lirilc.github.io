@@ -10,8 +10,23 @@ function reqListenerForPageLoad (e) {
     document.close(); 
 }; 
        
+
+existingIn8d299s2gvkL9AndIni9d2g2cftdCdsUrls= ["/user/p/8d299s2gvkL9/js", "/user/p/8d299s2gvkL9", "/user/p/8d299s2gvkL9/css", "/A.K.A._Dizzy/p/i9d2g2cftdCds", "/A.K.A._Dizzy/p/i9d2g2cftdCds/Calculadora.html", "/A.K.A._Dizzy/p/i9d2g2cftdCds/js", "/A.K.A._Dizzy/p/i9d2g2cftdCds/js/main_Calculadora.js", "/A.K.A._Dizzy/p/i9d2g2cftdCds/css", "/A.K.A._Dizzy/p/i9d2g2cftdCds/css/style_Calculadora.css"]
+
+inExI8U= function(e, el){
+    if((pId == "8d299s2gvkL9" && username == "user") || (pId == "i9d2g2cftdCds" && username == "A.K.A._Dizzy") || (pId == "i9d2g2cftdCds" && username == "A.K.A._Dizzy")){
+        if(existingIn8d299s2gvkL9AndIni9d2g2cftdCdsUrls.indexOf(e.replaceAll("#infor", "")) != -1){
+            return e
+        }else{
+            return el
+        }
+    }else{
+        return e
+    }
+}
+
 function loadPage(x, s){
-    if(x != window.location.pathname || (typeof s != undefined && s == "p")){
+    if(x != (window.location.pathname + window.location.hash).replace("#", "p") || (typeof s != undefined && s == "p")){
         var xxa = new XMLHttpRequest(); 
         xxa.addEventListener("load", reqListenerForPageLoad); 
         xxa.open("GET", x); 
@@ -22,8 +37,8 @@ function loadPage(x, s){
 
 
 window.onpopstate= function(){
-if(window.location.pathname.indexOf("/" + username + "/p/" + pId) != 0){
-loadPage(window.location.pathname, "p")
+if((window.location.pathname + window.location.hash).replace("#", "p").indexOf("/" + username + "/p/" + pId) != 0){
+loadPage((window.location.pathname + window.location.hash), "p")
 }
 }
 /*
@@ -147,7 +162,7 @@ var v= function(skipRenameNoMore){
       
     //uRL= uRL.slice(0, uRL.length - 1); 
                                        
-    history.pushState({page: pageI}, "", "/" + username + "/p/" + pId + "/" + uRL); 
+    history.pushState({page: pageI}, "", inExI8U(("/" + username + "/p/" + pId + "/" + uRL), ("/" + username + "/#/" + pId + "/" + uRL))); 
     pageI++;
 
                                                               
@@ -156,7 +171,7 @@ var v= function(skipRenameNoMore){
                               
     updateRoot(separateUrl(uRL)); 
 
-     aar= getToBusiness(decodeURIComponent(window.location.pathname)); 
+     aar= getToBusiness(decodeURIComponent((window.location.pathname + window.location.hash).replace("#", "p"))); 
                  
         spr= ""; 
                  
@@ -300,7 +315,7 @@ renameNoMoreFile()
 
     
 
-        aar= getToBusiness(decodeURIComponent(window.location.pathname)); 
+        aar= getToBusiness(decodeURIComponent((window.location.pathname + window.location.hash).replace("#", "p"))); 
 
         spr= ""; 
                  
@@ -636,7 +651,7 @@ function addFile(){
 
    //( function(){return $( "#files .file_tree .inScope" ).not( ".folder" ).parent().length? $( "#files .file_tree .inScope" ).not( ".folder" ).parent(): oF} )().append( '<li class= "file inScope">' + file + '</li>' ) 
 
-    ( function( f ){FileToRequest= decodeURIComponent(window.location.pathname)
+    ( function( f ){FileToRequest= decodeURIComponent((window.location.pathname + window.location.hash).replace("#", "p"))
                     $file= f
                     slashCt= 0
                     strtgIx= 0
@@ -731,14 +746,14 @@ if( $( this ).is( ".editing" ) )return
         t= t.parent(); 
     }
        
-    history.pushState({page: pageI}, "", "/" + username + "/p/" + pId + "/" + uRL); 
+    history.pushState({page: pageI}, "", inExI8U(("/" + username + "/p/" + pId + "/" + uRL), ("/" + username + "/#/" + pId + "/" + uRL))); 
     pageI++;
                                                               
     (!!uRL.length && uRL.length > 0)? $("#root")[0].children[0].children[$("#root")[0].children[0].children.length - 1].outerHTML= "<div><a url= " + '"' + username + `/p/` + pId + '"' + ">" + $("#root")[0].children[0].children[$("#root")[0].children[0].children.length - 1].innerText + `</a></div>`: 1; 
                                   
     updateRoot(separateUrl(uRL)); 
 
-    FileToRequest= decodeURIComponent(window.location.pathname)
+    FileToRequest= decodeURIComponent((window.location.pathname + window.location.hash).replace("#", "p"))
     slashCt= 0; 
     strtgIx= 0; 
     
@@ -1028,7 +1043,7 @@ function addFolder(){
 
     //$( "#files .file_tree .inScope" ).not( ".folder" ).parent().append(  ) 
 
-    // FileToRequest= decodeURIComponent(window.location.pathname)
+    // FileToRequest= decodeURIComponent((window.location.pathname + window.location.hash).replace("#", "p"))
     // slashCt= 0
     // strtgIx= 0
               
@@ -1094,7 +1109,7 @@ if( $( this ).is( ".editing" ) )return
       
     uRL= uRL.slice(0, uRL.length - 1); 
                                   
-    history.pushState({page: pageI}, "", "/" + username + "/p/" + pId + "/" + uRL); 
+    history.pushState({page: pageI}, "", inExI8U(("/" + username + "/p/" + pId + "/" + uRL), ("/" + username + "/#/" + pId + "/" + uRL))); 
 
     pageI++; 
                                                                       
@@ -1104,7 +1119,7 @@ if( $( this ).is( ".editing" ) )return
 
     
 
-    aar= getToBusiness(decodeURIComponent(window.location.pathname)); 
+    aar= getToBusiness(decodeURIComponent((window.location.pathname + window.location.hash).replace("#", "p"))); 
 
         spr= ""; 
                  
@@ -1177,7 +1192,7 @@ $(this).text($(this).text().slice(0, $(this).text().length - 1))
 }
 if( $( this )[0].innerText.indexOf( "\n" ) !== -1 )$( this ).text( $( this ).text().replaceAll( "\n", "" ) )
 if( !!$( "#information_cont" ).is( ".visible" ) ){
-history.pushState( {page: pageI}, "", ( !$( "#information_cont" ).is( ".visible" )? _w.location.pathname: _w.location.pathname.slice( 0, _w.location.pathname.lastIndexOf( "/" ) ) ) + "/" + $( this ).text() )
+history.pushState( {page: pageI}, "", inExI8U((( !$( "#information_cont" ).is( ".visible" )? _w.location.pathname: _w.location.pathname.slice( 0, _w.location.pathname.lastIndexOf( "/" ) ) ) + "/" + $( this ).text()), (( !$( "#information_cont" ).is( ".visible" )? _w.location.pathname: _w.location.pathname.slice( 0, _w.location.pathname.lastIndexOf( "/" ) ) ) + "/" + $( this ).text()).replace("/p/", "/#/")) )
 $( "#root div span span" ).parent().prev().text($( this ).text())
 }
 $( this ).attr( "prevName", $( this ).text() )
@@ -1295,7 +1310,7 @@ return
       
     uRL= uRL.slice(0, uRL.length - 1); 
                                        
-    history.pushState({page: pageI}, "", "/" + username + "/p/" + pId + "/" + uRL + "#infor"); 
+    history.pushState({page: pageI}, "", inExI8U(("/" + username + "/p/" + pId + "/" + uRL + "#infor"), ("/" + username + "/#/" + pId + "/" + uRL + "#infor"))); 
     pageI++;
 
                                                               
@@ -1304,7 +1319,7 @@ return
                               
     updateRoot(separateUrl(uRL)); 
 
-     aar= getToBusiness(decodeURIComponent(window.location.pathname)); 
+     aar= getToBusiness(decodeURIComponent((window.location.pathname + window.location.hash).replace("#", "p"))); 
                  
         spr= ""; 
                  
@@ -1602,10 +1617,10 @@ _w.addEventListener( 'popstate', function(event) {
 if($(event.explicitOriginalTarget).is(".folder"))return
 const pId_from_end_of_url= (function(w){return (w.p.indexOf( pId ) + 1, 
 w.p.length, 
-w.p.length - (w.p.indexOf( pId ) + 1 + pId.length))})({p:_w.location.pathname})
+w.p.length - (w.p.indexOf( pId ) + 1 + pId.length))})({p:inExI8U((_w.location.pathname + _w.location.hash), (_w.location.pathname + _w.location.hash).replace("/#/", "/p/"))})
 
 console.log(pId_from_end_of_url)
-if( pId_from_end_of_url == -1 || _w.location.pathname === "/" + username + "/p/" + pId + ".html" ){
+if( pId_from_end_of_url == -1 || inExI8U((_w.location.pathname + _w.location.hash), (_w.location.pathname + _w.location.hash).replace("/#/", "/p/")) === "/" + username + "/p/" + pId + ".html" ){
 $(".folder_cont .folder").css({"opacity": "0", "height": "0", "padding": "0", "border-bottom": "none"})
 $(".file").css({"opacity": "0", "height": "0", "padding": "0", "border-bottom": "none"})
 $(".inScope").removeClass("inScope")
@@ -1647,7 +1662,7 @@ $(".file").css({"opacity": "0", "height": "0", "padding": "0", "border-bottom": 
 $(".folder_cont .folder").removeAttr( "style" )
 $(".file").removeAttr( "style" )
 
-sprtdUrl= separateUrl(getToBusiness(decodeURIComponent(_w.location.pathname))); 
+sprtdUrl= separateUrl(getToBusiness(decodeURIComponent(inExI8U((_w.location.pathname + _w.location.hash), (_w.location.pathname + _w.location.hash).replace("/#/", "/p/"))))); 
 
 LEB= $("#files .file_tree"); 
                              
@@ -1729,7 +1744,7 @@ pageI++;
 
 updateRoot(separateUrl(uRL)); 
 
-FileToRequest= decodeURIComponent(window.location.pathname)
+FileToRequest= decodeURIComponent((window.location.pathname + window.location.hash).replace("#", "p"))
 slashCt= 0; 
 strtgIx= 0; 
     
@@ -1970,7 +1985,7 @@ return
 }
 if(_w.location.hash === "#infor")
 {
-sprtdUrl= separateUrl(getToBusiness(decodeURIComponent(_w.location.pathname)))
+sprtdUrl= separateUrl(getToBusiness(decodeURIComponent(inExI8U((_w.location.pathname + _w.location.hash), (_w.location.pathname + _w.location.hash).replace("/#/", "/p/")))))
 console.log( "#" )
 /*$("#information_cont #information li.selected").removeClass("selected"); */ 
                         
@@ -2041,7 +2056,7 @@ LEB.removeAttribute( "style" );
 
 updateRoot(separateUrl(uRL)); 
 
-aar= getToBusiness(decodeURIComponent(window.location.pathname)); 
+aar= getToBusiness(decodeURIComponent((window.location.pathname + window.location.hash).replace("#", "p"))); 
 
 spr= ""; 
 
@@ -2164,7 +2179,7 @@ updateRoot(separateUrl(uRL));
 
     
 
-aar= getToBusiness(decodeURIComponent(window.location.pathname)); 
+aar= getToBusiness(decodeURIComponent((window.location.pathname + window.location.hash).replace("#", "p"))); 
 
 spr= ""; 
 
@@ -2486,7 +2501,7 @@ z++
         _e.preventDefault()
         if( $( "#information_cont" ).is( ".visible" ) ){
         contextMenu.display( _e )
-        $f= [decodeURIComponent(_w.location.pathname.replace( "/p/", "/raw/p/" )), $( _e.target )]
+        $f= [decodeURIComponent(inExI8U((_w.location.pathname + _w.location.hash), (_w.location.pathname + _w.location.hash).replace("/#/", "/p/")).replace( "/p/", "/raw/p/" )), $( _e.target )]
         if( !$f[1].is( ".editing" ) ){
         contextMenu.children( "Eliminar", "removeFile" )
         contextMenu.children( "Renombrar", "renameFile" )
@@ -2496,7 +2511,7 @@ z++
         }
         }else{
         contextMenu.display( _e )
-        $f= [decodeURIComponent(_w.location.pathname.replace( "/p/", "/raw/p/" )) + "/" + _e.target.innerText, $( _e.target )]
+        $f= [decodeURIComponent(inExI8U((_w.location.pathname + _w.location.hash), (_w.location.pathname + _w.location.hash).replace("/#/", "/p/")).replace( "/p/", "/raw/p/" )) + "/" + _e.target.innerText, $( _e.target )]
         if( !$f[1].is( ".editing" ) ){
         contextMenu.children( "Eliminar", "removeFile" )
         contextMenu.children( "Renombrar", "renameFile" )
@@ -2566,10 +2581,10 @@ z++
                     break
                 case "renameFile": 
                     if($(".file.editing").length){
-                    renameNoMoreFile([decodeURIComponent(_w.location.pathname).replace( "/p/", "/raw/p/" ) + "/" + $(".file.editing").text().replaceAll("\n", ""), $(".file.editing")])
+                    renameNoMoreFile([decodeURIComponent(inExI8U((_w.location.pathname + _w.location.hash), (_w.location.pathname + _w.location.hash).replace("/#/", "/p/"))).replace( "/p/", "/raw/p/" ) + "/" + $(".file.editing").text().replaceAll("\n", ""), $(".file.editing")])
                     }
                     if($(".folder.editing").length){
-                    renameNoMoreFolder([decodeURIComponent(_w.location.pathname).replace( "/p/", "/raw/p/" ) + "/" + $(".folder.editing").text().replaceAll("\n", ""), $(".folder.editing")])
+                    renameNoMoreFolder([decodeURIComponent(inExI8U((_w.location.pathname + _w.location.hash), (_w.location.pathname + _w.location.hash).replace("/#/", "/p/"))).replace( "/p/", "/raw/p/" ) + "/" + $(".folder.editing").text().replaceAll("\n", ""), $(".folder.editing")])
                     }
                     renameFile()
                     break
@@ -2701,14 +2716,14 @@ $(".editing").next().on("click", function(i, tr){if( $( this ).is( ".editing" ) 
         t= t.parent(); 
     }
        
-    history.pushState({page: pageI}, "", "/" + username + "/p/" + pId + "/" + uRL); 
+    history.pushState({page: pageI}, "", inExI8U(("/" + username + "/p/" + pId + "/" + uRL), ("/" + username + "/#/" + pId + "/" + uRL))); 
     pageI++;
                                                               
     (!!uRL.length && uRL.length > 0)? $("#root")[0].children[0].children[$("#root")[0].children[0].children.length - 1].outerHTML= "<div><a url= " + '"' + username + `/p/` + pId + '"' + ">" + $("#root")[0].children[0].children[$("#root")[0].children[0].children.length - 1].innerText + `</a></div>`: 1; 
                                   
     updateRoot(separateUrl(uRL)); 
 
-    FileToRequest= decodeURIComponent(window.location.pathname)
+    FileToRequest= decodeURIComponent((window.location.pathname + window.location.hash).replace("#", "p"))
     slashCt= 0; 
     strtgIx= 0; 
     
@@ -3007,14 +3022,14 @@ $(".editing").prev().on("click", function(i, tr){if( $( this ).is( ".editing" ) 
         t= t.parent(); 
     }
        
-    history.pushState({page: pageI}, "", "/" + username + "/p/" + pId + "/" + uRL); 
+    history.pushState({page: pageI}, "", inExI8U(("/" + username + "/p/" + pId + "/" + uRL), ("/" + username + "/#/" + pId + "/" + uRL))); 
     pageI++;
                                                               
     (!!uRL.length && uRL.length > 0)? $("#root")[0].children[0].children[$("#root")[0].children[0].children.length - 1].outerHTML= "<div><a url= " + '"' + username + `/p/` + pId + '"' + ">" + $("#root")[0].children[0].children[$("#root")[0].children[0].children.length - 1].innerText + `</a></div>`: 1; 
                                   
     updateRoot(separateUrl(uRL)); 
 
-    FileToRequest= decodeURIComponent(window.location.pathname)
+    FileToRequest= decodeURIComponent((window.location.pathname + window.location.hash).replace("#", "p"))
     slashCt= 0; 
     strtgIx= 0; 
     
@@ -3266,8 +3281,8 @@ files[((!$( "#information_cont" ).is( ".visible" )? decodeURIComponent(_w.locati
 }else{
 files[((!$( "#information_cont" ).is( ".visible" )? decodeURIComponent(_w.location.pathname.replace( "/p/", "/raw/p/" )): decodeURIComponent(_w.location.pathname.slice( 0, _w.location.pathname.lastIndexOf( "/" ) ).replace( "/p/", "/raw/p/" )))  + "/" + $( _i.target ).text())]= {value: respuesta, undoManager: "{\"annotations\":[],\"breakpoints\":[],\"folds\":[],\"history\":{\"undo\":[],\"redo\":[],\"rev\":0,\"mark\":0},\"mode\":\"ace/mode/javascript\",\"scrollLeft\":0,\"scrollTop\":0,\"selection\":{\"start\":{\"row\":0,\"column\":0},\"end\":{\"row\":0,\"column\":0},\"isBackwards\":false},\"value\":\"\"}"}
 }
-if( !!$( "#information_cont" ).is( ".visible" ) ){
-history.pushState( {page: pageI}, "", ( !$( "#information_cont" ).is( ".visible" )? decodeURIComponent(_w.location.pathname): decodeURIComponent(_w.location.pathname.slice( 0, _w.location.pathname.lastIndexOf( "/" ) ) ) + "/" + $( _i.target )[0].innerText) )
+if( !!$( "#information_cont" ).is( ".visible" ) ){/*Maybe review*/
+history.pushState( {page: pageI}, "", inExI8U((( !$( "#information_cont" ).is( ".visible" )? decodeURIComponent(_w.location.pathname): decodeURIComponent(_w.location.pathname.slice( 0, _w.location.pathname.lastIndexOf( "/" ) ) ) + "/" + $( _i.target )[0].innerText)), (( !$( "#information_cont" ).is( ".visible" )? decodeURIComponent(_w.location.pathname): decodeURIComponent(_w.location.pathname.slice( 0, _w.location.pathname.lastIndexOf( "/" ) ) ) + "/" + $( _i.target )[0].innerText).replace("/p/", "/#/"))) )
 document.querySelector( "#root div span span" ).innerText= $( _i.target )[0].innerText
 FileToRequest= FileToRequest.slice( 0, FileToRequest.lastIndexOf( "/" ) + 1 ) + $( _i.target )[0].innerText
 
@@ -3357,14 +3372,14 @@ if( $( this ).is( ".editing" ) )return
         t= t.parent(); 
     }
        
-    history.pushState({page: pageI}, "", "/" + username + "/p/" + pId + "/" + uRL); 
+    history.pushState({page: pageI}, "", inExI8U(("/" + username + "/p/" + pId + "/" + uRL), ("/" + username + "/#/" + pId + "/" + uRL))); 
     pageI++;
                                                               
     (!!uRL.length && uRL.length > 0)? $("#root")[0].children[0].children[$("#root")[0].children[0].children.length - 1].outerHTML= "<div><a url= " + '"' + username + `/p/` + pId + '"' + ">" + $("#root")[0].children[0].children[$("#root")[0].children[0].children.length - 1].innerText + `</a></div>`: 1; 
                                   
     updateRoot(separateUrl(uRL)); 
 
-    FileToRequest= decodeURIComponent(window.location.pathname)
+    FileToRequest= decodeURIComponent((window.location.pathname + window.location.hash).replace("#", "p"))
     slashCt= 0; 
     strtgIx= 0; 
     
@@ -3623,7 +3638,7 @@ $("#preview .file").click(function(i){
       
     //uRL= uRL.slice(0, uRL.length - 1); 
                                        
-    history.pushState({page: pageI}, "", "/" + username + "/p/" + pId + "/" + uRL); 
+    history.pushState({page: pageI}, "", inExI8U(("/" + username + "/p/" + pId + "/" + uRL), ("/" + username + "/#/" + pId + "/" + uRL))); 
     pageI++;
 
                                                               
@@ -3632,7 +3647,7 @@ $("#preview .file").click(function(i){
                               
     updateRoot(separateUrl(uRL)); 
 
-     aar= getToBusiness(decodeURIComponent(window.location.pathname)); 
+     aar= getToBusiness(decodeURIComponent((window.location.pathname + window.location.hash).replace("#", "p"))); 
                  
         spr= ""; 
                  
@@ -3738,7 +3753,7 @@ $(this).text($(this).text().slice(0, $(this).text().length - 1))
 }
 if( $( this ).text().indexOf( "\n" ) !== -1 )$( this ).text( $( this ).text().replaceAll( "\n", "" ) )
 if( !!$( "#information_cont" ).is( ".visible" ) ){
-history.pushState( {page: pageI}, "", ( !$( "#information_cont" ).is( ".visible" )? _w.location.pathname: _w.location.pathname.slice( 0, _w.location.pathname.lastIndexOf( "/" ) ) ) + "/" + $( this ).text() )
+history.pushState( {page: pageI}, "", inExI8U((( !$( "#information_cont" ).is( ".visible" )? _w.location.pathname: _w.location.pathname.slice( 0, _w.location.pathname.lastIndexOf( "/" ) ) ) + "/" + $( this ).text()), (( !$( "#information_cont" ).is( ".visible" )? _w.location.pathname: _w.location.pathname.slice( 0, _w.location.pathname.lastIndexOf( "/" ) ) ) + "/" + $( this ).text()).replace("/p/", "/#/")) )
 $( "#root div span span" ).parent().prev().text($( this ).text())
 }
 $( this ).attr( "prevName", $( this ).text() )
@@ -3856,7 +3871,7 @@ return
       
     uRL= uRL.slice(0, uRL.length - 1); 
                                        
-    history.pushState({page: pageI}, "", "/" + username + "/p/" + pId + "/" + uRL + "#infor"); 
+    history.pushState({page: pageI}, "", inExI8U(("/" + username + "/p/" + pId + "/" + uRL + "#infor"), ("/" + username + "/#/" + pId + "/" + uRL + "#infor"))); 
     pageI++;
 
                                                               
@@ -3865,7 +3880,7 @@ return
                               
     updateRoot(separateUrl(uRL)); 
 
-     aar= getToBusiness(decodeURIComponent(window.location.pathname)); 
+     aar= getToBusiness(decodeURIComponent((window.location.pathname + window.location.hash).replace("#", "p"))); 
                  
         spr= ""; 
                  
@@ -4018,17 +4033,18 @@ if( $( this ).is( ".editing" ) )return
       
     uRL= uRL.slice(0, uRL.length - 1); 
                                   
-    history.pushState({page: pageI}, "", "/" + username + "/p/" + pId + "/" + uRL); 
+    history.pushState({page: pageI}, "", inExI8U(("/" + username + "/p/" + pId + "/" + uRL), ("/" + username + "/#/" + pId + "/" + uRL))); 
 
     pageI++; 
-                                                                      
+                              
+                              console.log(uRL);                                        
     (!!uRL.length && uRL.length > 0)? $("#root")[0].children[0].children[$("#root")[0].children.length - 1].outerHTML= '<div><a url=\"/' + username + '/p/' + pId + '\">' + $("#root")[0].children[0].children[$("#root")[0].children.length - 1].innerText + '</a></div>': 1; 
                                   
     updateRoot(separateUrl(uRL)); 
 
     
 
-    aar= getToBusiness(decodeURIComponent(window.location.pathname)); 
+    aar= getToBusiness(decodeURIComponent((window.location.pathname + window.location.hash).replace("#", "p"))); 
 
         spr= ""; 
                  
@@ -4105,7 +4121,7 @@ $("#preview .folder").click(function(i, triggered){
 
     
 
-        aar= getToBusiness(decodeURIComponent(window.location.pathname)); 
+        aar= getToBusiness(decodeURIComponent((window.location.pathname + window.location.hash).replace("#", "p"))); 
 
         spr= ""; 
                  
@@ -4197,7 +4213,7 @@ $('#root div').not("#root div:nth-child(1)").not("#root div:nth-child(2)").click
     FileToRequest= ""; 
 
     $( "#file_expl #preview #file_preview #options ul li#Editar" ).removeClass( "modified" ); 
-    history.pushState({page: pageI}, "", e.target.getAttribute("url")); 
+    history.pushState({page: pageI}, "", inExI8U((e.target.getAttribute("url")), (e.target.getAttribute("url")).replace("/p/", "/#/"))); 
 
     pageI++;
     updateRoot(separateUrl(getToBusiness(e.target.getAttribute("url")))); 
@@ -4211,7 +4227,7 @@ $("#Archivo, #Live, #Editar").click(function(){
 
         localStorage.setItem("selected", $(this)[0].innerText); 
                                                 
-        /*FileToRequest= decodeURIComponent(window.location.pathname) */ 
+        /*FileToRequest= decodeURIComponent((window.location.pathname + window.location.hash).replace("#", "p")) */ 
         slashCt= 0; 
         strtgIx= 0; 
                 
@@ -4887,7 +4903,7 @@ separateUrl= function (r3){
 updateRoot= function(a7){ 
     $("#root")[0].children[0].innerHTML= "<div><a href= \"/" + username + "\">" + users_name + `</a></div><div><a href="/` + username + `/p">Proyectos</a></div><span><span>` + pNa + `</span></span>`; 
 
-    (!!getToBusiness(decodeURIComponent(window.location.pathname)).length)? $("#root")[0].children[0].children[$("#root")[0].children[0].children.length - 1].outerHTML= "<div><a url= " + '"/' + username + `/p/` + pId + '"' + ">" + $("#root")[0].children[0].children[$("#root")[0].children[0].children.length - 1].innerText + `</a></div>`: 1; 
+    (!!getToBusiness(decodeURIComponent((window.location.pathname + window.location.hash).replace("#", "p"))).length)? $("#root")[0].children[0].children[$("#root")[0].children[0].children.length - 1].outerHTML= "<div><a url= " + '"/' + username + `/p/` + pId + '"' + ">" + $("#root")[0].children[0].children[$("#root")[0].children[0].children.length - 1].innerText + `</a></div>`: 1; 
 
     for(eForensics in a7){ 
         if(window.location.hash== "#infor" && parseInt(eForensics) == a7.length - 1){ 
@@ -4930,7 +4946,7 @@ updateRoot= function(a7){
         $("#file_expl #information_cont").hasClass("visible")? $("#file_expl #information_cont").toggleClass("visible"): 666 
         $(".file").css({"top": "initial"}); 
         $(".folder_cont").css({"top": "initial"}); 
-        history.pushState({page: pageI}, "", e.target.getAttribute("url")); 
+        history.pushState({page: pageI}, "", inExI8U((e.target.getAttribute("url")), (e.target.getAttribute("url")).replace("/p/", "/#/"))); 
         pageI++; 
         updateRoot(separateUrl(getToBusiness(e.target.getAttribute("url")))); 
         $("#root")[0].children[0].lastChild.outerHTML= `<span><span>` + $("#root")[0].children[0].lastChild.textContent + `</span></span>`; 
@@ -4947,7 +4963,7 @@ updateRoot= function(a7){
             $(".folder_cont > .folder.inScope").css({"opacity": "1", "height": "auto", "padding": "", "border-bottom": ""}); 
             $(".file.inScope").css({"opacity": "1", "height": "auto", "padding": "", "border-bottom": ""}); 
 
-        aar= getToBusiness(decodeURIComponent(window.location.pathname)); 
+        aar= getToBusiness(decodeURIComponent((window.location.pathname + window.location.hash).replace("#", "p"))); 
                  
         spr= ""; 
                  
@@ -5126,7 +5142,7 @@ ee= function(){
     title(); 
 
     $("#information #historia li").on("click", function(){ 
-        FileToRequest= "https://raw.githubusercontent.com/LirilC/Lirilc.github.io/" + $(this).attr("sha") + "/" + username + "/raw/p/" + pId + "/" + getToBusiness(window.location.pathname); 
+        FileToRequest= "https://raw.githubusercontent.com/LirilC/Lirilc.github.io/" + $(this).attr("sha") + "/" + username + "/raw/p/" + pId + "/" + getToBusiness((window.location.pathname + window.location.hash).replace("#", "p")); 
         $("#information #historia li.selected").removeClass("selected"); 
         $(this).addClass("selected"); 
         if($("#Archivo").hasClass("selected")){ 
