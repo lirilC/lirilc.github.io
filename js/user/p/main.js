@@ -37,7 +37,7 @@ function loadPage(x, s){
 
 
 window.onpopstate= function(){
-if((window.location.pathname + window.location.hash).replace("/#/", "/p/").indexOf("/" + username + "/p/" + pId) != 0){
+if((window.location.pathname + window.location.hash).replace("#infor", "").replace("/#/", "/p/").indexOf("/" + username + "/p/" + pId) != 0){
 loadPage((window.location.pathname + window.location.hash), "p")
 }
 }
@@ -1617,10 +1617,10 @@ _w.addEventListener( 'popstate', function(event) {
 if($(event.explicitOriginalTarget).is(".folder"))return
 const pId_from_end_of_url= (function(w){return (w.p.indexOf( pId ) + 1, 
 w.p.length, 
-w.p.length - (w.p.indexOf( pId ) + 1 + pId.length))})({p:inExI8U((_w.location.pathname + _w.location.hash), (_w.location.pathname + _w.location.hash).replace("/#/", "/p/"))})
+w.p.length - (w.p.indexOf( pId ) + 1 + pId.length))})({p:inExI8U((_w.location.pathname + _w.location.hash).replace("#infor", ""), (_w.location.pathname + _w.location.hash).replace("#infor", "").replace("/#/", "/p/"))})
 
 console.log(pId_from_end_of_url)
-if( pId_from_end_of_url == -1 || inExI8U((_w.location.pathname + _w.location.hash), (_w.location.pathname + _w.location.hash).replace("/#/", "/p/")) === "/" + username + "/p/" + pId + ".html" ){
+if( pId_from_end_of_url == -1 || inExI8U((_w.location.pathname + _w.location.hash).replace("#infor", ""), (_w.location.pathname + _w.location.hash).replace("#infor", "").replace("/#/", "/p/")) === "/" + username + "/p/" + pId + ".html" ){
 $(".folder_cont .folder").css({"opacity": "0", "height": "0", "padding": "0", "border-bottom": "none"})
 $(".file").css({"opacity": "0", "height": "0", "padding": "0", "border-bottom": "none"})
 $(".inScope").removeClass("inScope")
@@ -1983,7 +1983,7 @@ title();
 
 return
 }
-if((window.location.pathname + window.location.hash).replace("#infor", "").indexOf("#infor") != -1)
+if((window.location.pathname + window.location.hash).indexOf("#infor") != -1)
 {
 sprtdUrl= separateUrl(getToBusiness(decodeURIComponent(inExI8U((_w.location.pathname + _w.location.hash).replace("#infor", ""), (_w.location.pathname + _w.location.hash).replace("#infor", "").replace("/#/", "/p/")))))
 console.log( "#" )
