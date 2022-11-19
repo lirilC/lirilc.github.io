@@ -32,10 +32,10 @@ $("a").click(function(ed){if($(this).attr("target") !== "_blank" && $(this).attr
 _w= window
 const pId_from_end_of_url= (function(w){return (w.p.indexOf( pId ) + 1, 
 w.p.length, 
-w.p.length - (w.p.indexOf( pId ) + 1 + pId.length))})({p:decodeURIComponent((_w.location.pathname + _w.location.hash).replace("#", "p"))})
+w.p.length - (w.p.indexOf( pId ) + 1 + pId.length))})({p:decodeURIComponent((_w.location.pathname + _w.location.hash).replace("#infor", "").replace("#", "p"))})
 
 console.log(pId_from_end_of_url)
-if( pId_from_end_of_url == -1 || decodeURIComponent((_w.location.pathname + _w.location.hash).replace("#", "p")) === "/" + username + "/p/" + pId + ".html" ){
+if( pId_from_end_of_url == -1 || decodeURIComponent((_w.location.pathname + _w.location.hash).replace("#infor", "").replace("#", "p")) === "/" + username + "/p/" + pId + ".html" ){
 $(".folder_cont .folder").css({"opacity": "0", "height": "0", "padding": "0", "border-bottom": "none"})
 $(".file").css({"opacity": "0", "height": "0", "padding": "0", "border-bottom": "none"})
 $(".inScope").removeClass("inScope")
@@ -76,7 +76,7 @@ $(".file").css({"opacity": "0", "height": "0", "padding": "0", "border-bottom": 
 $(".folder_cont .folder").removeAttr( "style" )
 $(".file").removeAttr( "style" )
 
-sprtdUrl= separateUrl(getToBusiness(decodeURIComponent((_w.location.pathname + _w.location.hash).replace("#", "p")))); 
+sprtdUrl= separateUrl(getToBusiness(decodeURIComponent((_w.location.pathname + _w.location.hash).replace("#infor", "").replace("#", "p")))); 
 
 LEB= $("#files .file_tree"); 
                              
@@ -158,7 +158,7 @@ pageI++;
 
 updateRoot(separateUrl(uRL)); 
 
-FileToRequest= decodeURIComponent((window.location.pathname + window.location.hash).replace("#", "p"))
+FileToRequest= decodeURIComponent((window.location.pathname + window.location.hash).replace("#infor", "").replace("#", "p"))
 slashCt= 0; 
 strtgIx= 0; 
     
@@ -378,9 +378,9 @@ title();
 
 return
 }
-if(_w.location.hash === "#infor")
+if((window.location.pathname + window.location.hash).indexOf("#infor") != -1)
 {
-sprtdUrl= separateUrl(getToBusiness(decodeURIComponent((_w.location.pathname + _w.location.hash).replace("#", "p"))))
+sprtdUrl= separateUrl(getToBusiness(decodeURIComponent((_w.location.pathname + _w.location.hash).replace("#infor", "").replace("#", "p"))))
 console.log( "#" )
 /*$("#information_cont #information li.selected").removeClass("selected"); */ 
                         
@@ -451,7 +451,7 @@ LEB.removeAttribute( "style" );
 
 updateRoot(separateUrl(uRL)); 
 
-aar= getToBusiness(decodeURIComponent((window.location.pathname + window.location.hash).replace("#", "p"))); 
+aar= getToBusiness(decodeURIComponent((window.location.pathname + window.location.hash).replace("#infor", "").replace("#", "p"))); 
 
 spr= ""; 
 
@@ -574,7 +574,7 @@ updateRoot(separateUrl(uRL));
 
     
 
-aar= getToBusiness(decodeURIComponent((window.location.pathname + window.location.hash).replace("#", "p"))); 
+aar= getToBusiness(decodeURIComponent((window.location.pathname + window.location.hash).replace("#infor", "").replace("#", "p"))); 
 
 spr= ""; 
 
