@@ -4142,6 +4142,20 @@ _R(".searchResults > div").append(
 }
 _R(".knob").knob()
 _R(".knob").e()
+$(".searchResults a").click(function(ed){if($(this).attr("target") !== "_blank" && $(this).attr("href") != undefined){if($(this).parent().find(".resulttype").text() == "Usuario"){
+		ed.preventDefault()
+		history.pushState({page: 1}, "", $(this).attr("href"))
+	  RooT.imporT(`/js/${$(this).attr("href").slice(1)}/DB.js`, Then, function(d){
+	  	$(".buscar").val("")
+		$(".buscar").trigger("input")
+	    window.user= d._user()
+	    RooT.imporT("/js/templates/user.js", Then, function(d){
+	      _T(document).scrollTop(0)
+	  	  RooT.change(useR, To, user, d)
+	      RooT.ready()
+	    })
+	})
+}}})
 })
 _R(".buscar").e()
 /*Prevent default on hashed links in #sections' click*/
@@ -5228,28 +5242,7 @@ for(ind in edHistory){
 	}}})
 	$(".knob").knob()
 	})
-	$(document).on("keydown", function(r){
-	switch(r.keyCode){
-	  case 40:
-	        if(!$(".searchResults").is(".hidden") && !$(".result#resaltado").length){
-	            $($(".result")[0]).attr("id", "resaltado")
-	            $($(".result")[0]).children()[0].focus()
-	            setTimeout(function(){$(".searchResults > div").scrollTop(0)}, 20)
-	        }else if(!$(".searchResults").is(".hidden") && $(".result#resaltado").index() != $(".result").length - 1){
-	            $(".result#resaltado").next().children()[0].focus()
-	            $(".result#resaltado").next().attr("id", "resaltado")
-	            $($(".result#resaltado")[0]).attr("id", "")
-	        }
-	    break;
-	  case 38:
-	        if(!$(".searchResults").is(".hidden") && $(".result#resaltado").length && $(".result#resaltado").index() != 0){
-	            $(".result#resaltado").prev().children()[0].focus()
-	            $(".result#resaltado").prev().attr("id", "resaltado")
-	            $($(".result#resaltado")[1]).attr("id", "")
-	        }
-	    break;
-	}
-	})
+	
 
 	document.addEventListener("keydown", function(e){if(e.shiftKey && e.ctrlKey && e.altKey){e.preventDefault();$("#theater").css("display") == "block"?closeModal():1;$("#buscar input").val("");$("#buscar input").trigger("input");$("#buscar input").focus()}})
 	    _R("#theater textarea", 0).on('input', function() { 
@@ -5985,7 +5978,6 @@ _R('a').on("click", function(e){
 		)
 		}
 		}
-		$(".searchResults a").click(function(ed){if($(this).attr("target") !== "_blank" && $(this).attr("href") != undefined){ed.preventDefault(); loadPage($(this).attr("href"))}})
 		$(".knob").knob()
 		})
 		$(document).on("keydown", function(r){
