@@ -192,6 +192,7 @@ var one= function(a, b, c, d){
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
 		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
 		                                <section class="video">
 				                            <div class="Enlarge">
 				                            </div>
@@ -199,6 +200,62 @@ var one= function(a, b, c, d){
 				                            </div>
 				                            <video id="x${(function(){vX++; return vX})()}" controls class="video-js d88fer vjs-default-skin" preload="none" width="100%" height="264" data-setup='{"poster":"/resources/images/${user.username}/${c[e].contents.video}_poster.png"}' data-setup="{}">
 				                                <source src="/resources/videos/${user.username}/${c[e].contents.video}.mp4" type='video/mp4' />
+				                                <p class="vjs-no-js">
+				                                    Para ver este vídeo, por favor activa el Javascript y considera actualizar tu navegador a uno que
+				                                    <a href="http://videojs.com/       html5-video-support/" target="_blank">
+				                                        soporte vídeo en Html5
+				                                    </a>
+				                                </p>
+				                            </video>
+				                        </section>
+		                                <div class="Comentarios">${c[e].Comentarios}</div>
+		                                <div class="options button">
+		                                    <ul>
+		                                        <li class="bookmark"></li>
+		                                        <li class="star"></li>
+		                                        <li class="Enlargetic">
+		                                            <a href="${e}" target="_blank" class="read active" title=""></a>
+		                                            <span title="" class="Enlarge"></span>
+		                                        </li>
+		                                    </ul>
+		                                </div>
+		                            </section>
+		                            `
+						break
+					case "external_vid":
+						reTurn+=   `<section class="story video">
+		                                <div class="info">
+		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
+		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <p class="username"><a class="target" href="/${user.username}" title= "${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
+																																								               <div class='tool city'>
+																																								                   <figure>
+																																								                       <img class='thumbnail' src= '${c[e].city.pic}'></img>
+																																								                   </figure>
+																																								               	   <div class='introduction'>
+																																								                       ${c[e].city.description}
+																																								                   </div>
+																																								               </div>">${c[e].city.name}</a> `: ``}<br>
+		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
+		                                </div>
+		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
+		                                <section class="video">
+				                            <div class="Enlarge">
+				                            </div>
+				                            <div class="Playuse">
+				                            </div>
+				                            <video id="x${(function(){vX++; return vX})()}" controls class="video-js d88fer vjs-default-skin" preload="none" width="100%" height="264" data-setup='{"poster":"/resources/images/${user.username}/${c[e].contents.video}_poster.png"}' data-setup="{}">
+				                                <source src="${c[e].contents.external_video}" type='video/mp4' />
+				                                ${(function(){if(typeof c[e].contents.subtitles != "undefined"){
+				                                	tracks= ``;
+				                                	for(sub in c[e].contents.subtitles){
+				                                		tracks= tracks + `<track kind='subtitles' src='${c[e].contents.subtitles[sub]}' srclang='es' label='${sub}' default ></track>
+				                                						 `
+				                                	}
+				                                	return tracks
+				                                }})()}
 				                                <p class="vjs-no-js">
 				                                    Para ver este vídeo, por favor activa el Javascript y considera actualizar tu navegador a uno que
 				                                    <a href="http://videojs.com/       html5-video-support/" target="_blank">
@@ -720,6 +777,7 @@ var one= function(a, b, c, d){
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
 		                                <p class="title">${c[e].title}</p>
+		                                <p class="moreI">${c[e].description}</p>
 		                                <section class="video">
 				                            <div class="Enlarge">
 				                            </div>
@@ -5154,7 +5212,20 @@ for(ind in edHistory){
 	)
 	}
 	}
-	$(".searchResults a").click(function(ed){if($(this).attr("target") !== "_blank" && $(this).attr("href") != undefined){ed.preventDefault(); loadPage($(this).attr("href"))}})
+	$(".searchResults a").click(function(ed){if($(this).attr("target") !== "_blank" && $(this).attr("href") != undefined){if($(this).parent().find(".resulttype").text() == "Usuario"){
+			ed.preventDefault()
+			history.pushState({page: 1}, "", $(this).attr("href"))
+		  RooT.imporT(`/js/${$(this).attr("href").slice(1)}/DB.js`, Then, function(d){
+		  	$(".buscar").val("")
+			$(".buscar").trigger("input")
+		    window.user= d._user()
+		    RooT.imporT("/js/templates/user.js", Then, function(d){
+		      _T(document).scrollTop(0)
+		  	  RooT.change(inde_x, To, user, d)
+		      RooT.ready()
+		    })
+		})
+	}}})
 	$(".knob").knob()
 	})
 	$(document).on("keydown", function(r){
