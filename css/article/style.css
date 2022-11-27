@@ -1154,7 +1154,6 @@ a:hover
     vertical-align: middle;
     display: inline;
     color: #666;
-    font-size: ;
     top: 10px;
 }
 .repostedFrom::after {
@@ -1787,3 +1786,7 @@ display: inline-block;
 color: #808080}
 .searchResults .result#resaltado{
 background-color: #ddd}
+.informH{
+    color: #666;
+    text-align: center
+}
