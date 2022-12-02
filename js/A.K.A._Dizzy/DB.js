@@ -265,7 +265,7 @@ export function _user(){
                                     <a title= "Christmas Gifts From The Gallego Escobar Family > ... > Mobile" class="link" target="_blank" href="/A.K.A._Dizzy/p/h3dd2cDcsW2R3/(!) Dont Open Until Christmas/(!)/Gifts/Mobile"><span class="Title">Christmas Gifts From The G... ly > ... > Mobile </span><span class="linktype">Proyecto</span></a>
                                 </section>
                                 <text>
-                                    <p style="color: #aaa; text-align: left;">I averaged <i>the right</i> Christmases; those of the right years; and obtained this day as Christmas, because, pretty much, average, it's Christmas. So, even though it's not the day which 11 months and 24 days later of the 0 after Christ was born my uncle Jesus Of Nazareth, it's Christmas average. 🎄</p>
+                                    <p style="color: #aaa; text-align: left;">I averaged <i>the right</i> Christmases; those of the right years; and obtained this day as Christmas, because, pretty much, average, it's Christmas. So, even though it's not the day in which, 11 months and 24 days later of the 0 after Christ, was born my uncle Jesus Of Nazareth, it's Christmas average. 🎄</p>
                                     <p style="color: #aaa; text-align: left;">&nbsp&nbspAbre el archivo <i>index.html</i> y dale click a la pestaña <i>Raw</i> para poder usarlo. 🎄</p>
                                     <p style="color: #aaa; text-align: left;">&nbsp&nbspPuedes ejecutar aNGEL(); por_siLaBas(); y dinosaurios con el contenido de #dieded escribiendo comandos en la consola o usar el <i>touch</i> de tu dispositivo para usar dinosaurios mobile. 🎄</p>
                                     <p style="color: #aaa; text-align: left;">&nbsp&nbspPara ejecutar aNGEL(); con el contenido de #dieded escribe <i>a</i> en la consola y presiona el botón que dice <i>>></i>. 🎄</p>
@@ -357,15 +357,13 @@ export function _user(){
                 },
                 title: `...¡Puedes editar los proyectos!; <strike>hum... ¡intenta arreglar los proyectos con módulos!</strike> Ja, ja, ja. Sé MUUUUUY cuidadoso con los módulos. ¡NO los modifiques!`,
                 description: ``,
-                contents:  `<div id= "otherContainments">
-                                <div>
-                                    <section id="links">
-                                        <a class="link" target="_blank" href="/A.K.A._Dizzy/p/k9u8hH78jJi27"><span class="Title">Robot De Dedicatorias</span><span class="linktype">Proyecto</span></a>
-                                    </section>
-                                    <text>
-                                        <p style="color: #aaa; text-align: left;">Actualización: Puedes ver los archivos con las ediciones que les hayas hecho en el Raw&nbsp&nbspdándole click derecho al botón del Raw&nbsp</p>
-                                    </text>
-                                </div>
+                contents:  `<div>
+                                <section id="links">
+                                    <a class="link" target="_blank" href="/A.K.A._Dizzy/p/k9u8hH78jJi27"><span class="Title">Robot De Dedicatorias</span><span class="linktype">Proyecto</span></a>
+                                </section>
+                                <text>
+                                    <p style="color: #aaa; text-align: left;">Actualización: Puedes ver los archivos con las ediciones que les hayas hecho en el Raw&nbsp&nbspdándole click derecho al botón del Raw&nbsp</p>
+                                </text>
                             </div>`,
                 Comentarios: "",
                 Editado: [ 'type= "oC"; edHistory= {"Editado el 10 de Julio de 2022 a las 8:55 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/8f7354d4e2cc556b82e0e14f47787119ef00b259/A.K.A._Dizzy/pos/hptI4FO7Tv.html", "3 de Julio de 2022 a las 0:52 am": "https://raw.githubusercontent.com/lirilCo/lirilco.github.io/11d7faa7fda75e0e72ad7f32b8bed9d0d4909b91/A.K.A._Dizzy/pos/hptI4FO7Tv.html"}', "Editado el 10 de Julio de 2022 a las 8:55 pm"]
@@ -432,7 +430,7 @@ export function _user(){
                                         <li class='juzgar' title='Juzgar'>J</li>
                                     </ul>                  
                                     <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                                    <div class='Cont'><p title= 'Profe  de fitness' class='rol'>Profe  de fitness</p><b style='color:#fff;'>+94</b></div>
+                                    <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
                                 </div>
                             </div>`
                 },
@@ -657,7 +655,7 @@ export function _user(){
                                 </div>
                             </media>`,
                 Comentarios: "",
-                Editado: [ 'type= "oC"; edHistory= {"Editado el 31 de Agosto de 2022 a las 3:38 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/217e1b57c5435fc2bbd612547fcecac4eb679f7c/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 10 de Febrero de 2022 a las 10:10 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/bddd6cbfa15e6e2bb27bde6bef42f86914f21b3e/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 25 de Octubre de 2021 a las 1:4 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/503dbef970047386769e56c222383c0db0f29ead/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 15 de Junio de 2021 a las 2:5 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/4c2ca79928a725ae354503865d01d703ef674098/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "10 de Marzo de 2021 a las 8:38 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/f4905f92a5eea07f0259cdd31cfea213d30a925b/A.K.A._Dizzy/pos/r1WjYcRQhw.html"}', "Editado el 31 de Agosto de 2022 a las 3:38 pm"]
+                Editado: [ 'type= "oC"; edHistory= {"Editado el 31 de Agosto de 2022 a las 3:38 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/217e1b57c5435fc2bbd612547fcecac4eb679f7c/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 10 de Febrero de 2022 a las 10:10 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/bddd6cbfa15e6e2bb27bde6bef42f86914f21b3e/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 25 de Octubre de 2021 a la 1:4 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/503dbef970047386769e56c222383c0db0f29ead/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 15 de Junio de 2021 a las 2:5 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/4c2ca79928a725ae354503865d01d703ef674098/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "10 de Marzo de 2021 a las 8:38 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/f4905f92a5eea07f0259cdd31cfea213d30a925b/A.K.A._Dizzy/pos/r1WjYcRQhw.html"}', "Editado el 31 de Agosto de 2022 a las 3:38 pm"]
             },
             "/A.K.A._Dizzy/vid/CHFZVxsnIK": {
                 type: "vid",
@@ -721,7 +719,7 @@ export function _user(){
             "/A.K.A._Dizzy/pos/YEOxwElo0s": {
                 type: "links",
                 date: {
-                    full: "26 de Noviembre de 2020 a las 1:35 pm",
+                    full: "26 de Noviembre de 2020 a la 1:35 pm",
                     min: "Noviembre de 2020"
                 },
                 title: "La Perrita Del Poste",
@@ -773,7 +771,7 @@ export function _user(){
             "/A.K.A._Dizzy/img/CLakPAdCCN": {
                 type: "img",
                 date: {
-                    full: "2 de Septiembre de 2020 a las 1:38 pm",
+                    full: "2 de Septiembre de 2020 a la 1:38 pm",
                     min: "Septiembre de 2020"
                 },
                 city: {name: "Rionegro", pic: "https://upload.wikimedia.org/wikipedia/commons/2/26/Atardecer-parque.jpg", description: `Rionegro es una pequeña ciudad en los Andes colombianos. Aquí se encuentra el aeropuerto internacional de Medellín. En la Plaza de la Libertad está la Catedral de San Nicolás, con sus cúpulas. El Museo Histórico Casa de la Convención se encuentra en un edificio en el que se sancionó una versión de la constitución colombiana en 1863. Al sudoeste, está Tutucán, que es una réplica de un pueblo típico local, con una iglesia, un molino y una granja. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Rionegro_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},

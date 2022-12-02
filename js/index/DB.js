@@ -32,7 +32,7 @@ var index= {
                                     <li class='juzgar' title='Juzgar'>J</li>
                                 </ul>                  
                                 <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                                <div class='Cont'><p title= 'Profe  de fitness' class='rol'>Profe  de fitness</p><b style='color:#fff;'>+94</b></div>
+                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
                             </div>
                         </div>`
             },
@@ -77,7 +77,7 @@ var index= {
                                     <li class='juzgar' title='Juzgar'>J</li>
                                 </ul>                  
                                 <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                                <div class='Cont'><p title= 'Profe  de fitness' class='rol'>Profe  de fitness</p><b style='color:#fff;'>+94</b></div>
+                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
                             </div>
                         </div>`
             },
@@ -333,14 +333,14 @@ var index= {
                                     <li class='juzgar' title='Juzgar'>J</li>
                                 </ul>                  
                                 <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                                <div class='Cont'><p title= 'Profe  de fitness' class='rol'>Profe  de fitness</p><b style='color:#fff;'>+94</b></div>
+                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
                             </div>
                         </div>`
             },
             type: "img",
             date: {
-                full: "31 de Septiembre de 2022 a las 1:4 pm",
-                min: "31 de Septiembre a las 1:4 pm"
+                full: "31 de Septiembre de 2022 a la 1:4 pm",
+                min: "31 de Septiembre a la 1:4 pm"
             },
             title: `Disciplina - constancia 💪🏼`,
             description: `Pereza a un lado<br>Excusas a un lado<br>Para todo tenemos tiempo es solo buscar el momento y organizar tu espacio 💪🏼`,
@@ -666,14 +666,14 @@ var index= {
                                     <li class='juzgar' title='Juzgar'>J</li>
                                 </ul>                  
                                 <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                                <div class='Cont'><p title= 'Profe  de fitness' class='rol'>Profe  de fitness</p><b style='color:#fff;'>+94</b></div>
+                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
                             </div>
                         </div>`
             },
             type: "mult_carr",
             date: {
-                full: "8 de Septiembre de 2022 a las 1:31 pm",
-                min: "8 de Septiembre a las 1:31 pm"
+                full: "8 de Septiembre de 2022 a la 1:31 pm",
+                min: "8 de Septiembre a la 1:31 pm"
             },
             city: {name: "Isla de San Andrés", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Panor%C3%A1mica_de_San_Andres.JPG/1024px-Panor%C3%A1mica_de_San_Andres.JPG", description: `La Isla de San Andrés (conocida también como San Andrés Isla) es una isla colombiana del mar Caribe, ubicada frente a las costas de Nicaragua. Es la más grande de las islas que forman parte del Archipiélago de San Andrés, Providencia y Santa Catalina, con una extensión total de 26 km² siendo así, la isla más grande del país. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Isla_de_San_Andr%C3%A9s_(Colombia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: `¡San Andrés Isla!`,
@@ -825,7 +825,7 @@ var index= {
                             </div>
                         </media>`,
             Comentarios: "",
-            Editado: [ 'type= "oC"; edHistory= {"Editado el 31 de Agosto de 2022 a las 3:38 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/217e1b57c5435fc2bbd612547fcecac4eb679f7c/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 10 de Febrero de 2022 a las 10:10 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/bddd6cbfa15e6e2bb27bde6bef42f86914f21b3e/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 25 de Octubre de 2021 a las 1:4 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/503dbef970047386769e56c222383c0db0f29ead/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 15 de Junio de 2021 a las 2:5 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/4c2ca79928a725ae354503865d01d703ef674098/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "10 de Marzo de 2021 a las 8:38 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/f4905f92a5eea07f0259cdd31cfea213d30a925b/A.K.A._Dizzy/pos/r1WjYcRQhw.html"}', "Editado el 31 de Agosto de 2022 a las 3:38 pm"]
+            Editado: [ 'type= "oC"; edHistory= {"Editado el 31 de Agosto de 2022 a las 3:38 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/217e1b57c5435fc2bbd612547fcecac4eb679f7c/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 10 de Febrero de 2022 a las 10:10 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/bddd6cbfa15e6e2bb27bde6bef42f86914f21b3e/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 25 de Octubre de 2021 a la 1:4 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/503dbef970047386769e56c222383c0db0f29ead/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 15 de Junio de 2021 a las 2:5 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/4c2ca79928a725ae354503865d01d703ef674098/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "10 de Marzo de 2021 a las 8:38 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/f4905f92a5eea07f0259cdd31cfea213d30a925b/A.K.A._Dizzy/pos/r1WjYcRQhw.html"}', "Editado el 31 de Agosto de 2022 a las 3:38 pm"]
         },
         "/A.K.A._Dizzy/pos/CvXsC3PQ5A", {
             user: {
@@ -915,7 +915,7 @@ var index= {
                                     <li class='juzgar' title='Juzgar'>J</li>
                                 </ul>                  
                                 <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                                <div class='Cont'><p title= 'Profe  de fitness' class='rol'>Profe  de fitness</p><b style='color:#fff;'>+94</b></div>
+                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
                             </div>
                         </div>`
             },
@@ -1181,7 +1181,7 @@ var index= {
                         </section>`,
             Comentarios: ``
         },
-        "/L/pos/NXUSCXdibV", {
+        "/L/img/CT8HFtH57Y", {
             user: {
                 username: "LamaMadora",
                 users_name: "Juan José Martínez Vidal",
@@ -1329,7 +1329,7 @@ var index= {
                         </section>`,
             Comentarios: ""
         },
-        "/L/pos/NXUSCXdibV", {
+        "/L/img/CT8HFtH57Y", {
             user: {
                 username: "MeganFox",
                 users_name: "Megan Denise Fox",
@@ -1396,7 +1396,7 @@ var index= {
             contents:  {image: "CT8HFtH57Y.jpg"},
             Comentarios: ""
         },
-        "/L/pos/NXUSCXdibV", {
+        "/L/img/CT8HFtH57Y", {
             user: {
                 username: "AuraCardonaC",
                 users_name: "Aura María Cardona Demasiado",
@@ -1427,7 +1427,7 @@ var index= {
                                     <li class='juzgar' title='Juzgar'>J</li>
                                 </ul>                  
                                 <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                                <div class='Cont'><p title= 'Profe  de fitness' class='rol'>Profe  de fitness</p><b style='color:#fff;'>+94</b></div>
+                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
                             </div>
                         </div>`
             },
@@ -1558,7 +1558,7 @@ var index= {
                             </div>
                         </media>`,
             Comentarios: "",
-            Editado: [ 'type= "oC"; edHistory= {"Editado el 31 de Agosto de 2022 a las 3:38 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/217e1b57c5435fc2bbd612547fcecac4eb679f7c/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 10 de Febrero de 2022 a las 10:10 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/bddd6cbfa15e6e2bb27bde6bef42f86914f21b3e/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 25 de Octubre de 2021 a las 1:4 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/503dbef970047386769e56c222383c0db0f29ead/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 15 de Junio de 2021 a las 2:5 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/4c2ca79928a725ae354503865d01d703ef674098/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "10 de Marzo de 2021 a las 8:38 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/f4905f92a5eea07f0259cdd31cfea213d30a925b/A.K.A._Dizzy/pos/r1WjYcRQhw.html"}', "Editado el 31 de Agosto de 2022 a las 3:38 pm"]
+            Editado: [ 'type= "oC"; edHistory= {"Editado el 31 de Agosto de 2022 a las 3:38 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/217e1b57c5435fc2bbd612547fcecac4eb679f7c/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 10 de Febrero de 2022 a las 10:10 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/bddd6cbfa15e6e2bb27bde6bef42f86914f21b3e/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 25 de Octubre de 2021 a la 1:4 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/503dbef970047386769e56c222383c0db0f29ead/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 15 de Junio de 2021 a las 2:5 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/4c2ca79928a725ae354503865d01d703ef674098/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "10 de Marzo de 2021 a las 8:38 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/f4905f92a5eea07f0259cdd31cfea213d30a925b/A.K.A._Dizzy/pos/r1WjYcRQhw.html"}', "Editado el 31 de Agosto de 2022 a las 3:38 pm"]
         },
         "/A.K.A._Dizzy/pos/hptI4FO7Tv", {
             user: {
@@ -1769,7 +1769,7 @@ var index= {
                                     <li class='juzgar' title='Juzgar'>J</li>
                                 </ul>                  
                                 <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                                <div class='Cont'><p title= 'Profe  de fitness' class='rol'>Profe  de fitness</p><b style='color:#fff;'>+94</b></div>
+                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
                             </div>
                         </div>`
             },
@@ -1910,7 +1910,7 @@ var index= {
                                     <li class='juzgar' title='Juzgar'>J</li>
                                 </ul>                  
                                 <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                                <div class='Cont'><p title= 'Profe  de fitness' class='rol'>Profe  de fitness</p><b style='color:#fff;'>+94</b></div>
+                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
                             </div>
                         </div>`
             },

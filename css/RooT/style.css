@@ -1852,8 +1852,6 @@ header nav ul li#right-menu #store::before {
 .Cont .rol{
     flex-grow: 1; 
     white-space: nowrap; 
-    overflow: hidden; 
-    text-overflow: ellipsis; 
     position: unset !important; 
 }
 .uOn_hover:hover{ 
@@ -2648,13 +2646,13 @@ position: absolute;
     text-align: right; 
     padding: 12px 0; 
     background-color: #fff; 
-    float: right; 
 } 
   
 #biography #content #options ul li:first-child
 {
     box-shadow: none;
     padding: 0 1em 0 0;
+    margin-left: 300px
 }
 #biography #content #options ul li
 {
@@ -3784,6 +3782,7 @@ display: inline-block;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    height: 367px;
 } 
 .foto .navigation, .foto .carr, .foto .picture{ 
     height: 106px; 
@@ -3791,6 +3790,7 @@ display: inline-block;
 .foto .carr, .mult_img .carr, .mult_carr .carr{ 
     writing-mode: vertical-lr; 
     width: 100%; 
+    height: 100%; 
     overflow: hidden; 
     position: relative; 
 } 
@@ -4119,8 +4119,6 @@ header nav ul li#right-menu #store::before {
 .Cont .rol{
     flex-grow: 1; 
     white-space: nowrap; 
-    overflow: hidden; 
-    text-overflow: ellipsis; 
     position: unset !important; 
 }
 .story.video {
@@ -5556,8 +5554,6 @@ body{
 .Cont .rol{
     flex-grow: 1; 
     white-space: nowrap; 
-    overflow: hidden; 
-    text-overflow: ellipsis; 
     position: unset !important; 
 }
 .searchResults{
@@ -7424,6 +7420,7 @@ outline: none !important}
 .carr .video{ 
 width: 100%;
 height: 100%;
+bottom: 0
 padding-bottom: unset !important} 
 .carr .Playuse{ 
 display: block} 
@@ -7511,3 +7508,54 @@ background-color: #ddd}
 }
 #book .video-js .vjs-tech {
 padding-bottom: 45px}
+.cc-attribution-icon{
+background-image: url(https://creativecommons.org/images/deed/attribution_icon_white_x2.png);
+width: 1.7em;
+height: 1.7em;
+display: inline-block;
+background-color: #ddd;
+background-size: cover;
+box-sizing: border-box;
+border: 0.1em solid #ddd;
+border-radius: 50%;
+margin-bottom: -0.5em;
+}
+.cc-nd-icon{
+background-image: url(https://creativecommons.org/images/deed/nd_white_x2.png);
+width: 1.7em;
+height: 1.7em;
+display: inline-block;
+background-color: #ddd;
+background-size: cover;
+box-sizing: border-box;
+border: 0.1em solid #ddd;
+border-radius: 50%;
+margin-bottom: -0.5em;
+}
+.cc-cc-icon{
+background-image: url(https://creativecommons.org/images/deed/cc_icon_white_x2.png);
+width: 1.7em;
+height: 1.7em;
+display: inline-block;
+background-color: #ddd;
+background-size: cover;
+box-sizing: border-box;
+border: 0.1em solid #ddd;
+border-radius: 50%;
+margin-bottom: -0.5em;
+}
+.cc-no_copyright-icon{
+background-image: url(https://creativecommons.org/images/deed/no_copyright_blue_x2.png);
+width: 1.7em;
+height: 1.7em;
+display: inline-block;
+background-color: #ddd;
+background-size: cover;
+box-sizing: border-box;
+border: 0.1em solid #ddd;
+border-radius: 50%;
+margin-bottom: -0.5em;
+}
+text{
+    color: #666
+}

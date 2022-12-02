@@ -138,6 +138,39 @@ var user= {
         }
     },
     stories: {
+        "/L/img/CT8HFtH57Y": {
+            type: "repostImg",
+            date: {
+                full: "23 de Noviembre de 2022 a las 6:55 pm",
+                min: "23 de Noviembre a las 6:55 pm"
+            },
+            originalPoster: {
+                username: "L",
+                users_name: "Laura Escobar Bonnett",
+                profilePic: "/resources/images/L/OGnpwD3jys_tn.jpg",
+                rol: {
+                    rol: "Princesa",
+                    level: "100"
+                },
+                tool:  `<div class='tool'>
+                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                            <img src='/resources/images/L/OGnpwD3jys_tn.jpg'>
+                            <div class='datos'>
+                                <ul class='actions'>
+                                    <li class='chatear' title='Chatear'>C</li>
+                                    <li class='agregar' title='Agregar'>A</li>
+                                    <li class='juzgar' title='Juzgar'>J</li>
+                                </ul>                  
+                                <p class='username' title= 'Laura Escobar Bonnett'>Laura Escobar Bonnett</p>
+                                <p class='rol'>Princesa <b style='color:#fff;'>+100</b></p>
+                            </div>
+                        </div>`
+            },
+            title: "...",
+            description: ``,
+            contents:  {image: "CT8HFtH57Y.jpg"},
+            Comentarios: ""
+        },
         "/A.K.A._Dizzy/pos/YEOxwElo0s": {
             type: "repostLinks",
             date: {

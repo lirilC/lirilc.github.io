@@ -29,7 +29,7 @@ var user= {
                         <li class='juzgar' title='Juzgar'>J</li>
                     </ul>                  
                     <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                    <div class='Cont'><p title= 'Profe  de fitness' class='rol'>Profe  de fitness</p><b style='color:#fff;'>+94</b></div>
+                    <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
                 </div>
             </div>`,
     cover: {
@@ -69,8 +69,8 @@ var user= {
             "/AuraCardonaC/img/1uI4nhQwrH": {
                 type: "img",
                 date: {
-                    full: "31 de Septiembre de 2022 a las 1:4 pm",
-                    min: "31 de Septiembre a las 1:4 pm"
+                    full: "31 de Septiembre de 2022 a la 1:4 pm",
+                    min: "31 de Septiembre a la 1:4 pm"
                 },
                 title: `Disciplina - constancia 💪🏼`,
                 description: `Pereza a un lado<br>Excusas a un lado<br>Para todo tenemos tiempo es solo buscar el momento y organizar tu espacio 💪🏼`,
@@ -198,8 +198,8 @@ var user= {
         "/AuraCardonaC/img/1uI4nhQwrH": {
             type: "img",
             date: {
-                full: "31 de Septiembre de 2022 a las 1:4 pm",
-                min: "31 de Septiembre a las 1:4 pm"
+                full: "31 de Septiembre de 2022 a la 1:4 pm",
+                min: "31 de Septiembre a la 1:4 pm"
             },
             title: `Disciplina - constancia 💪🏼`,
             description: `Pereza a un lado<br>Excusas a un lado<br>Para todo tenemos tiempo es solo buscar el momento y organizar tu espacio 💪🏼`,
@@ -231,8 +231,8 @@ var user= {
         "/AuraCardonaC/img/4dWE1Axo8k": {
             type: "mult_carr",
             date: {
-                full: "8 de Septiembre de 2022 a las 1:31 pm",
-                min: "8 de Septiembre a las 1:31 pm"
+                full: "8 de Septiembre de 2022 a la 1:31 pm",
+                min: "8 de Septiembre a la 1:31 pm"
             },
             city: {name: "Isla de San Andrés", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Panor%C3%A1mica_de_San_Andres.JPG/1024px-Panor%C3%A1mica_de_San_Andres.JPG", description: `La Isla de San Andrés (conocida también como San Andrés Isla) es una isla colombiana del mar Caribe, ubicada frente a las costas de Nicaragua. Es la más grande de las islas que forman parte del Archipiélago de San Andrés, Providencia y Santa Catalina, con una extensión total de 26 km² siendo así, la isla más grande del país. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Isla_de_San_Andr%C3%A9s_(Colombia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: `¡San Andrés Isla!`,
@@ -332,7 +332,7 @@ var user= {
             contents:  {video: "CHFZVxsnIK"},
             Comentarios: ""
         },
-        "/L/pos/NXUSCXdibV": {
+        "/L/img/CT8HFtH57Y": {
             type: "repostImg",
             date: {
                 full: "24 de Julio de 2022 a las 3:58 pm",
@@ -434,8 +434,8 @@ var user= {
         "/AuraCardonaC/img/fluSEmpSi7": {
             type: "img",
             date: {
-                full: "20 de Junio de 2022 a las 1:17 pm",
-                min: "20 de Junio a las 1:17 pm"
+                full: "20 de Junio de 2022 a la 1:17 pm",
+                min: "20 de Junio a la 1:17 pm"
             },
             title: `AMOR POR LOS ANIMALES!❤️ RESPETO SIEMPRE PARA ELLOS!!❣️`,
             description: ``,

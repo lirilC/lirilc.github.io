@@ -697,17 +697,17 @@ left: 240px;  text-align: center;
   margin: 0;
   position: absolute;
   width: 10em;
-  bottom: 1.5em;
+  bottom: 0;
   /* Same bottom as vjs-menu border-top */
 
   max-height: 15em;
   overflow: auto;
   left: -5em;
+  z-index: 2;
   /* Width of menu - width of button / 2 */
 
   /* background-color-with-alpha */
-  background-color: #07141e;
-  background-color: rgba(7, 20, 30, 0.7);
+  background-color: rgb(255, 255, 255);
   /* box-shadow */
   -webkit-box-shadow: -0.2em -0.2em 0.3em rgba(255, 255, 255, 0.2);
   -moz-box-shadow: -0.2em -0.2em 0.3em rgba(255, 255, 255, 0.2);
@@ -724,28 +724,23 @@ left: 240px;  text-align: center;
   line-height: 1.4em;
   font-size: 1.2em;
   text-align: center;
-  text-transform: lowercase;
 }
 .vjs-default-skin .vjs-menu-button ul li.vjs-selected {
-  background-color: #000;
+  background-color: #dcdcdc;
+  color: #bfbfbf;
+
 }
 .vjs-default-skin .vjs-menu-button ul li:focus,
 .vjs-default-skin .vjs-menu-button ul li:hover,
 .vjs-default-skin .vjs-menu-button ul li.vjs-selected:focus,
 .vjs-default-skin .vjs-menu-button ul li.vjs-selected:hover {
   outline: 0;
-  color: #111;
-  /* background-color-with-alpha */
-  background-color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.75);
-  /* box-shadow */
-  -webkit-box-shadow: 0 0 1em #ffffff;
-  -moz-box-shadow: 0 0 1em #ffffff;
-  box-shadow: 0 0 1em #ffffff;
+  color: #9f9f9f;
+  /* background-color-without-alpha */
+  background-color: rgb(224, 224, 224)
 }
 .vjs-default-skin .vjs-menu-button ul li.vjs-menu-title {
   text-align: center;
-  text-transform: uppercase;
   font-size: 1em;
   line-height: 2em;
   padding: 0;
@@ -755,7 +750,8 @@ left: 240px;  text-align: center;
 }
 /* Subtitles Button */
 .vjs-default-skin .vjs-subtitles-button:before {
-  content: "\e00c";
+  font-family: 'icomoon';
+  content: "\e909"
 }
 /* Captions Button */
 .vjs-default-skin .vjs-captions-button:before {

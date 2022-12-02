@@ -222,8 +222,8 @@ var user= {
         "/AuraCardonaC/img/fluSEmpSi7": {
             type: "img",
             date: {
-                full: "20 de Junio de 2022 a las 1:17 pm",
-                min: "20 de Junio a las 1:17 pm"
+                full: "20 de Junio de 2022 a la 1:17 pm",
+                min: "20 de Junio a la 1:17 pm"
             },
             title: `AMOR POR LOS ANIMALES!❤️ RESPETO SIEMPRE PARA ELLOS!!❣️`,
             description: ``,
@@ -365,8 +365,8 @@ var user= {
         "/AuraCardonaC/img/1uI4nhQwrH": {
             type: "img",
             date: {
-                full: "31 de Septiembre de 2022 a las 1:4 pm",
-                min: "31 de Septiembre a las 1:4 pm"
+                full: "31 de Septiembre de 2022 a la 1:4 pm",
+                min: "31 de Septiembre a la 1:4 pm"
             },
             title: `Disciplina - constancia 💪🏼`,
             description: `Pereza a un lado<br>Excusas a un lado<br>Para todo tenemos tiempo es solo buscar el momento y organizar tu espacio 💪🏼`,

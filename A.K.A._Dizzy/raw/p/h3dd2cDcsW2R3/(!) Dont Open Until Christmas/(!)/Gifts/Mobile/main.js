@@ -1909,8 +1909,48 @@ $("#console .Ex").on("click", function(e){
             sLS= 0
             break
         default:
-            $("#console").css({background: "#cd7777"})
-            setTimeout(function(){$("#console").css({background: ""})}, 200)
+            True_fell= false;
+            if(!!$("#console > div > input").val().length){
+                switch($("#console > div > input").val()[0].toLowerCase()){
+                    case "d":(function(){R= {};R.maTch= {};R.maTch.string= function(S){return  new RegExp(`(?:^|\s)${S}(.*?)(?:$|\s)`)}; R.maTch.numbers= (function(){return  new RegExp('\[0-9]+')})(); R.maTch.d_c= {}; R.maTch.d_c.setSEC= new RegExp(/d\ssECF\sset\s[0-9]+/g); R.maTch.d_c.pauseSEC= new RegExp(/d\ssECF\sll/g); R.maTch.d_c.continueSEC= new RegExp(/d\ssECF\s>/g);tITW= function(Z){return (function(){sp_ces= 0;for(var a= 0;a<Z.length;a++){if(sp_ces!==2){if(Z[a] == " ")sp_ces++}else{Z= Z.slice(0, a-1)}} return Z})()}; getNumbers= function(F){return (function(){return (R.maTch.numbers.exec(F) != null)?R.maTch.numbers.exec(F):null})(F)}
+                        if(R.maTch.d_c.setSEC.exec($("#console > div > input").val()) !== null){
+                            if(parseInt(getNumbers($("#console > div > input").val())) <= 15){
+                                himno= parseInt(getNumbers($("#console > div > input").val()))
+                                True_fell= true
+                                $("#console").css({background: "#52ef60"})          
+                                setTimeout(function(){$("#console").css({background: ""})}, 200)
+                            }
+                            if(parseInt(getNumbers($("#console > div > input").val())) <= 15){
+                                himno= parseInt(getNumbers($("#console > div > input").val()))
+                                True_fell= true
+                                $("#console").css({background: "#52ef60"})          
+                                setTimeout(function(){$("#console").css({background: ""})}, 200)
+                            }
+                        }else if(R.maTch.d_c.pauseSEC.exec($("#console > div > input").val()) !== null){
+                            if($("#pause")[0].innerText === "ll"){
+                                $("#pause").trigger("click")
+                                $("#console > div > input").val(`d sECF >`)
+                                True_fell= true
+                                $("#console").css({background: "#52ef60"})          
+                                setTimeout(function(){$("#console").css({background: ""})}, 200)
+                            }
+                        }else if(R.maTch.d_c.continueSEC.exec($("#console > div > input").val()) !== null){
+                            if($("#pause")[0].innerText === ">"){
+                                $("#pause").trigger("click")
+                                $("#console > div > input").val(`d sECF ll`)
+                                True_fell= true
+                                $("#console").css({background: "#52ef60"})          
+                                setTimeout(function(){$("#console").css({background: ""})}, 200)
+                            }
+                        }
+                    })();break;
+                }
+            }
+            if(!True_fell){
+                $("#console").css({background: "#cd7777"})
+                setTimeout(function(){$("#console").css({background: ""})}, 200)
+            };
+            delete True_fell;
             break;
     }
 })

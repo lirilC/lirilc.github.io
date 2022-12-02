@@ -282,7 +282,7 @@ var user= {
             contents:  {carrContents: [["vi", "wD9Afzs350"], ["im", "6GkCGsC8nJ.jpg"], ["im", "vlBKsINxWb.jpg"], ["im", "qQLm6kZ8cK.jpg"], ["im", "NHJgCGBEjz.jpg"], ["im", "El7Vz6B2ZB.jpg"], ["im", "4kZDzNjH8e.jpg"], ["im", "6tWSc2iY4s.jpg"]]},
             Comentarios: ""
         },
-        "/L/pos/NXUSCXdibV": {
+        "/L/img/CT8HFtH57Y": {
             type: "repostImg",
             date: {
                 full: "24 de Julio de 2022 a las 5:2 pm",
@@ -652,7 +652,7 @@ var user= {
         "/A.K.A._Dizzy/pos/gujcNPk8fT": {
             type: "repostLinks",
             date: {
-                full: "5 de Diciembre de 2021 a las 1:28 am",
+                full: "5 de Diciembre de 2021 a la 1:28 am",
                 min: "Diciembre de 2021"
             },
             originalPoster: {
@@ -802,7 +802,7 @@ var user= {
                             </div>
                         </media>`,
             Comentarios: "",
-            Editado: [ 'type= "oC"; edHistory= {"Editado el 31 de Agosto de 2022 a las 3:38 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/217e1b57c5435fc2bbd612547fcecac4eb679f7c/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 10 de Febrero de 2022 a las 10:10 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/bddd6cbfa15e6e2bb27bde6bef42f86914f21b3e/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 25 de Octubre de 2021 a las 1:4 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/503dbef970047386769e56c222383c0db0f29ead/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 15 de Junio de 2021 a las 2:5 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/4c2ca79928a725ae354503865d01d703ef674098/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "10 de Marzo de 2021 a las 8:38 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/f4905f92a5eea07f0259cdd31cfea213d30a925b/A.K.A._Dizzy/pos/r1WjYcRQhw.html"}', "Editado el 31 de Agosto de 2022 a las 3:38 pm"]
+            Editado: [ 'type= "oC"; edHistory= {"Editado el 31 de Agosto de 2022 a las 3:38 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/217e1b57c5435fc2bbd612547fcecac4eb679f7c/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 10 de Febrero de 2022 a las 10:10 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/bddd6cbfa15e6e2bb27bde6bef42f86914f21b3e/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 25 de Octubre de 2021 a la 1:4 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/503dbef970047386769e56c222383c0db0f29ead/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 15 de Junio de 2021 a las 2:5 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/4c2ca79928a725ae354503865d01d703ef674098/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "10 de Marzo de 2021 a las 8:38 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/f4905f92a5eea07f0259cdd31cfea213d30a925b/A.K.A._Dizzy/pos/r1WjYcRQhw.html"}', "Editado el 31 de Agosto de 2022 a las 3:38 pm"]
         },
         "/G-Suschrist/pos/bp2NlhDANW": {
             type: "repostContainments",

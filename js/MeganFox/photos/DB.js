@@ -292,7 +292,7 @@ var user= {
         "/MeganFox/img/9mnOddx7UX": {
             type: "img",
             date: {
-                full: "4 de Abril de 2019 a las 1:54 pm",
+                full: "4 de Abril de 2019 a la 1:54 pm",
                 min: "Abril de 2019"
             },
             city: {name: "Los Ángeles", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wiki_training_0226.jpg/1024px-Wiki_training_0226.jpg", description: `Los Ángeles, oficialmente Ciudad de Los Ángeles y de manera abreviada LA, es la ciudad más poblada del estado estadounidense de California y la segunda ciudad más poblada de Estados Unidos, tras Nueva York. Tiene, según el Censo de los Estados Unidos de 2020, una población de 3 979 576 habitantes, experimentando un crecimiento de un 4,9 % en 10 años. Está ubicada en el sur de California y abarca una superficie de 1215 km².  <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Los_%C3%81ngeles'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
@@ -375,7 +375,7 @@ var user= {
         "/MeganFox/img/n7YREaO6u1": {
             type: "img",
             date: {
-                full: "1 de Febrero de 2021 a las 1:33 pm",
+                full: "1 de Febrero de 2021 a la 1:33 pm",
                 min: "Febrero de 2021"
             },
             title: `👼🏻👽💫`,

@@ -233,46 +233,13 @@ var user= {
                             </div>
                         </media>`,
             Comentarios: "",
-            Editado: [ 'type= "oC"; edHistory= {"Editado el 31 de Agosto de 2022 a las 3:38 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/217e1b57c5435fc2bbd612547fcecac4eb679f7c/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 10 de Febrero de 2022 a las 10:10 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/bddd6cbfa15e6e2bb27bde6bef42f86914f21b3e/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 25 de Octubre de 2021 a las 1:4 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/503dbef970047386769e56c222383c0db0f29ead/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 15 de Junio de 2021 a las 2:5 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/4c2ca79928a725ae354503865d01d703ef674098/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "10 de Marzo de 2021 a las 8:38 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/f4905f92a5eea07f0259cdd31cfea213d30a925b/A.K.A._Dizzy/pos/r1WjYcRQhw.html"}', "Editado el 31 de Agosto de 2022 a las 3:38 pm"]
+            Editado: [ 'type= "oC"; edHistory= {"Editado el 31 de Agosto de 2022 a las 3:38 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/217e1b57c5435fc2bbd612547fcecac4eb679f7c/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 10 de Febrero de 2022 a las 10:10 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/bddd6cbfa15e6e2bb27bde6bef42f86914f21b3e/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 25 de Octubre de 2021 a la 1:4 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/503dbef970047386769e56c222383c0db0f29ead/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 15 de Junio de 2021 a las 2:5 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/4c2ca79928a725ae354503865d01d703ef674098/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "10 de Marzo de 2021 a las 8:38 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/f4905f92a5eea07f0259cdd31cfea213d30a925b/A.K.A._Dizzy/pos/r1WjYcRQhw.html"}', "Editado el 31 de Agosto de 2022 a las 3:38 pm"]
         },
-        "/L/pos/NXUSCXdibV": {
+        "/L/img/CT8HFtH57Y": {
             type: "repostImg",
             date: {
                 full: "24 de Julio de 2022 a las 5:2 pm",
                 min: "24 de Julio a las 5:2 pm"
-            },
-            originalPoster: {
-                username: "L",
-                users_name: "Laura Escobar Bonnett",
-                profilePic: "/resources/images/L/OGnpwD3jys_tn.jpg",
-                rol: {
-                    rol: "Princesa",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/L/OGnpwD3jys_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Laura Escobar Bonnett'>Laura Escobar Bonnett</p>
-                                <p class='rol'>Princesa <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
-            title: "...",
-            description: ``,
-            contents:  {image: "CT8HFtH57Y.jpg"},
-            Comentarios: ""
-        },
-        "/L/pos/NXUSCXdibV": {
-            type: "repostImg",
-            date: {
-                full: "24 de Julio de 2022 a las 7:33 pm",
-                min: "24 de Julio a las 7:33 pm"
             },
             originalPoster: {
                 username: "L",
