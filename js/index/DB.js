@@ -1,6 +1,175 @@
 export function _index(){
 var index= {
     stories: [
+        "/L/img/CT8HFtH57Y", {
+            user: {
+                username: "whale_Shailene",
+                users_name: "Shailene Diann Woodley",
+                profilePic: {
+                        "/whale_Shailene/img/RKRWeNhDgJ": {
+                            type: "img",
+                            date: {
+                                full: "19 de Noviembre de 2022 a las 7:4 pm",
+                                min: "19 de Noviembre a las 7:4 pm"
+                            },
+                            title: `.monot.`,
+                            description: ``,
+                            contents:  {image: "RKRWeNhDgJ_tn.jpg"},
+                            Comentarios: ``
+                        }
+                    },
+                rol:{
+                    rol: "SEO",
+                    level: "94"
+                },
+                tool:  `<div class='tool'>
+                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='98'>
+                            <img src='/resources/images/whale_Shailene/RKRWeNhDgJ_tn.jpg'>
+                            <div class='datos'>
+                              <ul class='actions'>
+                                <li class='chatear' title='Chatear'>C</li>
+                                <li class='agregar' title='Agregar'>A</li>
+                                <li class='juzgar' title='Juzgar'>J</li>
+                              </ul>
+                              <p class='username' title= 'whale_Shailene'>Shailene Diann Woodley</p>
+                              <p class='rol'>SEO <b style='color:#fff;'>+98</b></p>
+                            </div>
+                        </div>`
+            },
+            type: "repostImg",
+            date: {
+                full: "3 de Diciembre de 2022 a las 2:2 pm",
+                min: "3 de Diciembre a las 2:2 pm"
+            },
+            originalPoster: {
+                username: "L",
+                users_name: "Laura Escobar Bonnett",
+                profilePic: "/resources/images/L/OGnpwD3jys_tn.jpg",
+                rol: {
+                    rol: "Princesa",
+                    level: "100"
+                },
+                tool:  `<div class='tool'>
+                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                            <img src='/resources/images/L/OGnpwD3jys_tn.jpg'>
+                            <div class='datos'>
+                                <ul class='actions'>
+                                    <li class='chatear' title='Chatear'>C</li>
+                                    <li class='agregar' title='Agregar'>A</li>
+                                    <li class='juzgar' title='Juzgar'>J</li>
+                                </ul>                  
+                                <p class='username' title= 'Laura Escobar Bonnett'>Laura Escobar Bonnett</p>
+                                <p class='rol'>Princesa <b style='color:#fff;'>+100</b></p>
+                            </div>
+                        </div>`
+            },
+            title: "...",
+            description: ``,
+            contents:  {image: "CT8HFtH57Y.jpg"},
+            Comentarios: ""
+        },
+        "/whale_Shailene/pos/4rNglo8BUN", {
+            user: {
+                username: "whale_Shailene",
+                users_name: "Shailene Diann Woodley",
+                profilePic: {
+                        "/whale_Shailene/img/RKRWeNhDgJ": {
+                            type: "img",
+                            date: {
+                                full: "19 de Noviembre de 2022 a las 7:4 pm",
+                                min: "19 de Noviembre a las 7:4 pm"
+                            },
+                            title: `.monot.`,
+                            description: ``,
+                            contents:  {image: "RKRWeNhDgJ_tn.jpg"},
+                            Comentarios: ``
+                        }
+                    },
+                rol:{
+                    rol: "SEO",
+                    level: "94"
+                },
+                tool:  `<div class='tool'>
+                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='98'>
+                            <img src='/resources/images/whale_Shailene/RKRWeNhDgJ_tn.jpg'>
+                            <div class='datos'>
+                              <ul class='actions'>
+                                <li class='chatear' title='Chatear'>C</li>
+                                <li class='agregar' title='Agregar'>A</li>
+                                <li class='juzgar' title='Juzgar'>J</li>
+                              </ul>
+                              <p class='username' title= 'whale_Shailene'>Shailene Diann Woodley</p>
+                              <p class='rol'>SEO <b style='color:#fff;'>+98</b></p>
+                            </div>
+                        </div>`
+            },
+            type: "links",
+            date: {
+                full: "3 de Diciembre de 2022 a la 1:6 pm",
+                min: "3 de Diciembre a la 1:6 pm"
+            },
+            title: "Hello_World",
+            description: ``,
+            contents:  `<section id="links">
+                            <a class="link" target="_blank" href="/whale_Shailene/p/l8dDch127S1c9"><span class="Title">Hello_World</span><span class="linktype">Proyecto</span></a>
+                        </section>`,
+            Comentarios: ""
+        },
+        "/whale_Shailene/pos/oGRrvbxcAF", {
+            user: {
+                username: "whale_Shailene",
+                users_name: "Shailene Diann Woodley",
+                profilePic: {
+                        "/whale_Shailene/img/RKRWeNhDgJ": {
+                            type: "img",
+                            date: {
+                                full: "19 de Noviembre de 2022 a las 7:4 pm",
+                                min: "19 de Noviembre a las 7:4 pm"
+                            },
+                            title: `.monot.`,
+                            description: ``,
+                            contents:  {image: "RKRWeNhDgJ_tn.jpg"},
+                            Comentarios: ``
+                        }
+                    },
+                rol:{
+                    rol: "SEO",
+                    level: "94"
+                },
+                tool:  `<div class='tool'>
+                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='98'>
+                            <img src='/resources/images/whale_Shailene/RKRWeNhDgJ_tn.jpg'>
+                            <div class='datos'>
+                              <ul class='actions'>
+                                <li class='chatear' title='Chatear'>C</li>
+                                <li class='agregar' title='Agregar'>A</li>
+                                <li class='juzgar' title='Juzgar'>J</li>
+                              </ul>
+                              <p class='username' title= 'whale_Shailene'>Shailene Diann Woodley</p>
+                              <p class='rol'>SEO <b style='color:#fff;'>+98</b></p>
+                            </div>
+                        </div>`
+            },
+            type: "containments",
+            date: {
+                full: "2 de Diciembre de 2022 a las 6:22 pm",
+                min: "2 de Diciembre a las 6:22 pm"
+            },
+            title: "Important information",
+            description: ``,
+            contents:  `<section>
+                            <text>
+                                <p>Remember!, liril is undergoing big changes and under heavy construction; you may experience some unexpected behaviours and things not working, this is being worked on! If you need to reset liril to try to recover some functionalities <i>purger</i> may help you...
+                                <p>If you purge, you'll lose all your Bookmarks, Stars and comments, but the files on your projects and the editions you make to others' will be kept.</p>
+                                <div class="oculto">
+                                    <a class="revelar">Mostrar el texto oculto.</a>
+                                    <text>Abre el Inspector De Elementos presionando F12, ve a la pestaña Consola, escribe el siguiente código y presiona Enter:</text>
+                                    <pre>purger.purge("bypass")</pre>
+                                </div>
+                            </text>
+                        </section>`,
+            Comentarios: ``
+        },
     	"/AuraCardonaC/img/eQZeHjWK8V", {
             user: {
                 username: "AuraCardonaC",

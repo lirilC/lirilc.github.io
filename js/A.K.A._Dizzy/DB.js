@@ -281,6 +281,41 @@ export function _user(){
                             </containment>`,
                 Comentarios: ""
             },*/
+            "/whale_Shailene/pos/4rNglo8BUN": {
+                type: "repostLinks",
+                date: {
+                    full: "3 de Diciembre de 2022 a la 1:42 pm",
+                    min: "3 de Diciembre a la 1:42 pm"
+                },
+                originalPoster: {
+                    username: "whale_Shailene",
+                    users_name: "Shailene Diann Woodley",
+                    profilePic: "/resources/images/whale_Shailene/RKRWeNhDgJ_tn.jpg",
+                    rol: {
+                        rol: "SEO",
+                        level: "94"
+                    },
+                    tool:  `<div class='tool'>
+                                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='98'>
+                                <img src='/resources/images/whale_Shailene/RKRWeNhDgJ_tn.jpg'>
+                                <div class='datos'>
+                                  <ul class='actions'>
+                                    <li class='chatear' title='Chatear'>C</li>
+                                    <li class='agregar' title='Agregar'>A</li>
+                                    <li class='juzgar' title='Juzgar'>J</li>
+                                  </ul>
+                                  <p class='username' title= 'whale_Shailene'>Shailene Diann Woodley</p>
+                                  <p class='rol'>SEO <b style='color:#fff;'>+98</b></p>
+                                </div>
+                            </div>`
+                },
+                title: "Hello_World",
+                description: ``,
+                contents:  `<section id="links">
+                                <a class="link" target="_blank" href="/whale_Shailene/p/l8dDch127S1c9"><span class="Title">Hello_World</span><span class="linktype">Proyecto</span></a>
+                            </section>`,
+                Comentarios: ""
+            },
             "/A.K.A._Dizzy/vid/YGrUmbzaP6": {
                 type: "mult_carr",
                 date: {

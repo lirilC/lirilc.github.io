@@ -1721,7 +1721,7 @@ return videos}
 /**/
 var purger= {}; 
             
-purger.index= 20; 
+purger.index= 21; 
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return
@@ -3683,6 +3683,8 @@ document.addEventListener("mousemove", function(event){
 })
 /*Bind first pageDOMContentLoaded*/
 RooT.ready= function(e){
+	/*Purge if safety_purge is different than purger.index*/
+	purger.purge()
 	/*Initialize some variables*/
 	var vX= -1
 	var cC= 1
@@ -4436,6 +4438,19 @@ _R('a[href="/LamaMadora"]').on("click", function(e){
     })
   })
 })
+_R('a[href="/whale_Shailene"]').on("click", function(e){
+	e.preventDefault()
+	history.pushState({page: 1}, "", `/whale_Shailene`)
+  RooT.imporT("/js/whale_Shailene/DB.js", Then, function(d){
+    $(".ui-tooltip").remove()
+    window.user= d._user()
+    RooT.imporT("/js/templates/user.js", Then, function(d){
+      _T(document).scrollTop(0)
+  	  RooT.change(useR, To, user, d)
+      RooT.ready()
+    })
+  })
+})
 /*
 $("a").each(function(){
 	if(RooT.maTch.user.exec($(this).attr("href"))){
@@ -4957,6 +4972,19 @@ oReq.send();
 		e.preventDefault()
 		history.pushState({page: 1}, "", `/LamaMadora`)
 	  RooT.imporT("/js/LamaMadora/DB.js", Then, function(d){
+    $(".ui-tooltip").remove()
+	    window.user= d._user()
+	    RooT.imporT("/js/templates/user.js", Then, function(d){
+	      _T(document).scrollTop(0)
+	  	  RooT.change(inde_x, To, user, d)
+	      RooT.ready()
+	    })
+	  })
+	})
+	_R('a[href="/whale_Shailene"]').on("click", function(e){
+		e.preventDefault()
+		history.pushState({page: 1}, "", `/whale_Shailene`)
+	  RooT.imporT("/js/whale_Shailene/DB.js", Then, function(d){
     $(".ui-tooltip").remove()
 	    window.user= d._user()
 	    RooT.imporT("/js/templates/user.js", Then, function(d){

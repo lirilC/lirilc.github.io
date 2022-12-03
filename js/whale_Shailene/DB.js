@@ -62,6 +62,52 @@ var user= {
         }
     },
     stories: {
+        "/L/img/CT8HFtH57Y": {
+            type: "repostImg",
+            date: {
+                full: "3 de Diciembre de 2022 a las 2:2 pm",
+                min: "3 de Diciembre a las 2:2 pm"
+            },
+            originalPoster: {
+                username: "L",
+                users_name: "Laura Escobar Bonnett",
+                profilePic: "/resources/images/L/OGnpwD3jys_tn.jpg",
+                rol: {
+                    rol: "Princesa",
+                    level: "100"
+                },
+                tool:  `<div class='tool'>
+                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                            <img src='/resources/images/L/OGnpwD3jys_tn.jpg'>
+                            <div class='datos'>
+                                <ul class='actions'>
+                                    <li class='chatear' title='Chatear'>C</li>
+                                    <li class='agregar' title='Agregar'>A</li>
+                                    <li class='juzgar' title='Juzgar'>J</li>
+                                </ul>                  
+                                <p class='username' title= 'Laura Escobar Bonnett'>Laura Escobar Bonnett</p>
+                                <p class='rol'>Princesa <b style='color:#fff;'>+100</b></p>
+                            </div>
+                        </div>`
+            },
+            title: "...",
+            description: ``,
+            contents:  {image: "CT8HFtH57Y.jpg"},
+            Comentarios: ""
+        },
+        "/whale_Shailene/pos/4rNglo8BUN": {
+            type: "links",
+            date: {
+                full: "3 de Diciembre de 2022 a la 1:6 pm",
+                min: "3 de Diciembre a la 1:6 pm"
+            },
+            title: "Hello_World",
+            description: ``,
+            contents:  `<section id="links">
+                            <a class="link" target="_blank" href="/whale_Shailene/p/l8dDch127S1c9"><span class="Title">Hello_World</span><span class="linktype">Proyecto</span></a>
+                        </section>`,
+            Comentarios: ""
+        },
         "/whale_Shailene/pos/oGRrvbxcAF": {
                 type: "containments",
                 date: {
@@ -97,20 +143,20 @@ var user= {
         "/whale_Shailene/vid/tDKwGSQRHh": {
             type: "external_vid",
             date: {
-                full: "19 de Noviembre de 2022 a las 8:46 pm",
-                min: "19 de Noviembre a las 8:46 pm"
+                full: "21 de Noviembre de 2022 a las 10:51 pm",
+                min: "21 de Noviembre a las 10:51 pm"
             },
             poster: `/resources/images/whale_Shailene/tDKwGSQRHh_poster.png`,
             title: `The Emperor's New Groove`,
             description: `Thanks to Disney ♡<br><a target= "_blank" href= "https://creativecommons.org/publicdomain/mark/1.0/">Public Domain Mark 1.0&nbsp;&nbsp;&nbsp;<span class= "cc-cc-icon"></span>&nbsp;&nbsp;<span class= "cc-no_copyright-icon"></span></a>`,
-            contents:  {url: "https://ia803402.us.archive.org/30/items/the-emperors-new-groove/The%20Emperors%20New%20Groove.mp4", rCI: "tDKwGSQRHh", subtitles: {Español: "/resources/videos/whale_Shailene/Spanish.vtt", "عرب.": "/resources/videos/whale_Shailene/Arabic.srt"}},
+            contents:  {url: "https://ia803402.us.archive.org/30/items/the-emperors-new-groove/The%20Emperors%20New%20Groove.mp4", rCI: "tDKwGSQRHh", subtitles: {Español: "/resources/videos/whale_Shailene/Spanish.vtt", "عرب.": "/resources/videos/whale_Shailene/Arabic.vtt"}},
             Comentarios: ""
         },
         "/whale_Shailene/vid/vB6zk582DE": {
             type: "external_vid",
             date: {
-                full: "21 de Noviembre de 2022 a las 8:45 pm",
-                min: "21 de Noviembre a las 8:56 pm"
+                full: "21 de Noviembre de 2022 a las 10:5 pm",
+                min: "21 de Noviembre a las 10:5 pm"
             },
             poster: `/resources/images/whale_Shailene/vB6zk582DE_poster.png`,
             title: `Phineas And Ferb - Summer Belongs To You!`,
@@ -118,22 +164,22 @@ var user= {
             contents:  {url: "https://ia902306.us.archive.org/22/items/phineas-and-ferb-summer-belongs-to-you-1/Phineas%20And%20Ferb%20Summer%20Belongs%20To%20You%21-1.mp4", rCI: "vB6zk582DE"},
             Comentarios: ""
         },
-        "/whale_Shailene/vid/8wuzcn3VDF": {
+        /*"/whale_Shailene/vid/8wuzcn3VDF": {
             type: "external_mult_carr",
             date: {
-                full: "21 de Noviembre de 2022 a las 10:5 pm",
-                min: "21 de Noviembre a las 10:5 pm"
+                full: "21 de Noviembre de 2022 a las 8:45 pm",
+                min: "21 de Noviembre a las 8:56 pm"
             },
             title: `Winnie the Pooh: Boo to You Too!`,
             description: `Thanks to Disney ♡<br><a target= "_blank" href= "https://creativecommons.org/licenses/by-nd/4.0/">Attribution-NoDerivatives 4.0 International&nbsp;&nbsp;&nbsp;<span class= "cc-cc-icon"></span>&nbsp;&nbsp;<span class= "cc-attribution-icon"></span>&nbsp;&nbsp;<span class= "cc-nd-icon"></span></a>`,
             contents:  {carrContents: [["vi", {url: "https://ia801409.us.archive.org/15/items/winnie-the-pooh-boo-to-you-too-1999-full-vhs/Winnie%20the%20Pooh%20Boo%20to%20You%20Too%21%20%281999%29%20Full%20VHS.ia.mp4", rCI: "8wuzcn3VDF", poster: `/resources/images/whale_Shailene/8wuzcn3VDF0_poster.png`}], ["vi", {url: "https://ia601508.us.archive.org/1/items/winnie-the-pooh-spookable-pooh-1995-full-vhs/Winnie%20The%20Pooh%20Spookable%20Pooh%20%281995%29%20Full%20VHS.mp4", rCI: "AT7GsL3ZSI", poster: `/resources/images/whale_Shailene/Y04fcPZRCB_poster.png`}]]},
             Comentarios: ""
-        },
+        },*/
         "/whale_Shailene/vid/EQwKbqHv7P": {
             type: "external_vid",
             date: {
-                full: "21 de Noviembre de 2022 a las 10:51 pm",
-                min: "21 de Noviembre a las 10:51 pm"
+                full: "19 de Noviembre de 2022 a las 8:46 pm",
+                min: "19 de Noviembre a las 8:46 pm"
             },
             poster: `/resources/images/whale_Shailene/EQwKbqHv7P_poster.png`,
             title: `A Bug's Life`,

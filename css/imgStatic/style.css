@@ -84,3 +84,57 @@ body
 }
 .video-js .vjs-tech {
 padding-bottom: 45px}
+.cc-attribution-icon{
+background-image: url(https://creativecommons.org/images/deed/attribution_icon_white_x2.png);
+width: 1.7em;
+height: 1.7em;
+display: inline-block;
+background-color: #ddd;
+background-size: cover;
+box-sizing: border-box;
+border: 0.1em solid #ddd;
+border-radius: 50%;
+margin-bottom: -0.5em;
+}
+.cc-nd-icon{
+background-image: url(https://creativecommons.org/images/deed/nd_white_x2.png);
+width: 1.7em;
+height: 1.7em;
+display: inline-block;
+background-color: #ddd;
+background-size: cover;
+box-sizing: border-box;
+border: 0.1em solid #ddd;
+border-radius: 50%;
+margin-bottom: -0.5em;
+}
+.cc-cc-icon{
+background-image: url(https://creativecommons.org/images/deed/cc_icon_white_x2.png);
+width: 1.7em;
+height: 1.7em;
+display: inline-block;
+background-color: #ddd;
+background-size: cover;
+box-sizing: border-box;
+border: 0.1em solid #ddd;
+border-radius: 50%;
+margin-bottom: -0.5em;
+}
+.cc-no_copyright-icon{
+background-image: url(https://creativecommons.org/images/deed/no_copyright_blue_x2.png);
+width: 1.7em;
+height: 1.7em;
+display: inline-block;
+background-color: #ddd;
+background-size: cover;
+box-sizing: border-box;
+border: 0.1em solid #ddd;
+border-radius: 50%;
+margin-bottom: -0.5em;
+}
+text{
+    color: #666
+}
+#theater .vjs-text-track-display {
+    bottom: 8em;
+}
