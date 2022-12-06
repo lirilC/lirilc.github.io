@@ -1976,10 +1976,11 @@ var openModal= function(a){
 }
 var openVideoModal= function(a){ 
 player= videojs($(".current video").attr("id")).player()
+selectedSu= $(".current").find(".vjs-subtitles-button .vjs-menu-item.vjs-selected").text()
 su= []
 for(var n= 0; n < player.textTrackDisplay.c.Ea.length; n++){
 console.log(player.textTrackDisplay.c.Ea[n])
-su.push({src: player.textTrackDisplay.c.Ea[n].Lc, kind: "subtitles", srclang: player.textTrackDisplay.c.Ea[n].Ua, label: player.textTrackDisplay.c.Ea[n].Ed})
+selectedSu == player.textTrackDisplay.c.Ea[n].Ed? su.push({src: player.textTrackDisplay.c.Ea[n].Lc, kind: "subtitles", srclang: player.textTrackDisplay.c.Ea[n].Ua, label: player.textTrackDisplay.c.Ea[n].Ed, default: true}): su.push({src: player.textTrackDisplay.c.Ea[n].Lc, kind: "subtitles", srclang: player.textTrackDisplay.c.Ea[n].Ua, label: player.textTrackDisplay.c.Ea[n].Ed})
 }
 $("#theater #theater_video").replaceWith(`<video id="theater_video" controls class="video-js d88fer vjs-default-skin" preload="none" width="100%" height="264" data-setup='{"poster":""}' data-setup="{}">
 												<source src='${$(".current video")[0].src}' type='video/mp4' />
@@ -2661,6 +2662,10 @@ var openPhotoModal= function(a) {
     !!$(".XWW").length? $(".XWW")[0].innerHTML= "#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; ": $("head").append("<style class='XWW'>#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; </style>"); 
 }
 var closeModal= function(){
+selectedSu= $("#theater").find(".vjs-subtitles-button .vjs-menu-item.vjs-selected").text()
+$(".current").find(".vjs-subtitles-button .vjs-menu-item").each(function(){
+if($(this).text() == selectedSu)$(this).click()
+})
 	if(RooT.maTch.user.exec(actualLocation) !== null){
 	    $(".Comentario .media > div").prop('outerHTML', function(){return $(this).find("audio").prop("outerHTML")}); 
     
