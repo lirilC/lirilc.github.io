@@ -1974,7 +1974,7 @@ var openModal= function(a){
     $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 310 !important; }; "; 
     !!$(".XWW").length? $(".XWW")[0].innerHTML= "#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; ": $("head").append("<style class='XWW'>#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; </style>"); 
 }
-var openVideoModal= function(a){ 
+var openVideoModal= function(a, c){ 
 player= videojs($(".current video").attr("id")).player()
 selectedSu= $(".current").find(".vjs-subtitles-button .vjs-menu-item.vjs-selected").text()
 su= []
@@ -2023,6 +2023,13 @@ $(videojs("theater_video").L.parentElement).siblings().filter(".Playuse").addCla
 
     $('.theater video').attr('autoplay', "true");
 
+    if(typeof c != "undefined"){
+    	$("#theater video")[0].currentTime= $(".current video")[0].currentTime
+		Controlled= true
+	}else{
+		$("#theater video")[0].currentTime= 0
+		Controlled= false
+	}
     if(Antheater.is(".repost")){ 
         history.pushState({page: 1}, "", Antheater.find(".options li.read").parent().attr("href")); 
     }else if(Antheater.is(".external")){ 
@@ -2662,6 +2669,11 @@ var openPhotoModal= function(a) {
     !!$(".XWW").length? $(".XWW")[0].innerHTML= "#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; ": $("head").append("<style class='XWW'>#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; </style>"); 
 }
 var closeModal= function(){
+if(Controlled && !ctrl){
+	$(".current video")[0].currentTime= $("#theater video")[0].currentTime
+}else if(!Controlled && ctrl){
+	$(".current video")[0].currentTime= $("#theater video")[0].currentTime
+}
 selectedSu= $("#theater").find(".vjs-subtitles-button .vjs-menu-item.vjs-selected").text()
 $(".current").find(".vjs-subtitles-button .vjs-menu-item").each(function(){
 if($(this).text() == selectedSu)$(this).click()
@@ -3380,7 +3392,7 @@ k300= function(C, p, y, ty){
                         (function(){ 
                             a.on( "click", function(r){ 
                                 $( r.target ).is( ".pic" )? openModal( $( r.target ) ): 1; 
-                                $( r.target ).is( ".video .Enlarge" )? openVideoModal( $( r.target ) ): 1; 
+                                $( r.target ).is( ".video .Enlarge" )? openVideoModal( $( r.target ), ctrl?ctrl:undefined ): 1; 
                                 $( r.target ).is( ".options .Enlarge" )? openOtherModal( $( r.target ) ): 1; 
                             } ); 
                         })(); 
@@ -4494,6 +4506,18 @@ $("a").each(function(){
 	}
 })
 */
+/*ctrl key downess capture*/
+ctrl= false
+document.addEventListener("keyup", function(e){if(!e.ctrlKey)ctrl= false})
+window.onblur= function(){
+    ctrl= false
+    $(".nombre").attr("contenteditable", "false") 
+}
+document.addEventListener("keydown", function(e){
+    if(e.ctrlKey){
+    	ctrl= true
+    }
+   })
 /*Story edition management*/
  rvsdatefinder= function(e){
 var indc= -1
@@ -5352,9 +5376,16 @@ for(ind in edHistory){
 	}}})
 	$(".knob").knob()
 	})
-	
-
+	ctrl= false
+	document.addEventListener("keyup", function(e){e.ctrlKey?ctrl= false: 1})
+	window.onblur= function(){
+	    ctrl= false
+	    $(".nombre").attr("contenteditable", "false") 
+	}
 	document.addEventListener("keydown", function(e){if(e.shiftKey && e.ctrlKey && e.altKey){e.preventDefault();$("#theater").css("display") == "block"?closeModal():1;$("#buscar input").val("");$("#buscar input").trigger("input");$("#buscar input").focus()}})
+	    if(e.ctrlKey){
+	    	ctrl= true
+	    }
 	    _R("#theater textarea", 0).on('input', function() { 
 	        $(this).height(""); 
 	        !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2))))): 1; 
