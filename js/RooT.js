@@ -1975,6 +1975,35 @@ var openModal= function(a){
     !!$(".XWW").length? $(".XWW")[0].innerHTML= "#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; ": $("head").append("<style class='XWW'>#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; </style>"); 
 }
 var openVideoModal= function(a){ 
+player= videojs($(".current video").attr("id")).player()
+su= []
+for(var n= 0; n < player.textTrackDisplay.c.Ea.length; n++){
+console.log(player.textTrackDisplay.c.Ea[n])
+su.push({src: player.textTrackDisplay.c.Ea[n].Lc, kind: "subtitles", srclang: player.textTrackDisplay.c.Ea[n].Ua, label: player.textTrackDisplay.c.Ea[n].Ed})
+}
+$("#theater #theater_video").replaceWith(`<video id="theater_video" controls class="video-js d88fer vjs-default-skin" preload="none" width="100%" height="264" data-setup='{"poster":""}' data-setup="{}">
+												<source src='${$(".current video")[0].src}' type='video/mp4' />
+												<p class="vjs-no-js">
+														Para ver este vídeo, por favor activa el Javascript y considera actualizar tu navegador a uno que
+														<a href="http://videojs.com/       html5-video-support/" target="_blank">
+																soporte vídeo en Html5
+														</a>
+												</p>
+											</video>`)
+sudo= su.flat()
+if(sudo.length){
+videojs($("#theater_video")[0], {tracks: sudo})
+}else{
+videojs($("#theater_video")[0])
+}
+if(!!$("#theater_video")[0]){
+videojs("theater_video").on("pause", function(){ 
+$(videojs("theater_video").L.parentElement).siblings().filter(".Playuse").removeClass("playing"); 
+});
+videojs("theater_video").on("play", function(){ 
+$(videojs("theater_video").L.parentElement).siblings().filter(".Playuse").addClass("playing"); 
+});
+}
     Antheater= $(a).closest(".story"); 
 
     th= a.closest(".story");// 
@@ -3790,6 +3819,8 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
             }
             $(`.chats .chat.${$(this).attr('class').split(' ')[3]} .newMessage textarea`).focus();
         }
+        _R("#search input", und, 'e').val(``)
+        _R("#search input", und, 'e').trigger("input")
     })
     _R("#chat ul li").e()
    	_R("#resizeBottom ul", 0).children().e()
@@ -3827,7 +3858,7 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
 	    sizeMessages($(this));
 	})
 	_R("#chats .chats").e()
-	_R("#search input").on("keydown keyup", function(){for(a= 0; a < $("#resizeBottom")[0].children[0].children[0].children.length; a++){ 
+	_R("#search input").on("input", function(){for(a= 0; a < $("#resizeBottom")[0].children[0].children[0].children.length; a++){ 
         $("#resizeBottom")[0].children[0].children[0].children[a].style.display= ""; 
         $("#resizeBottom")[0].children[0].children[0].children[a].innerText.toLowerCase().indexOf($("#search input")[0].value.toLowerCase()) == -1? $("#resizeBottom")[0].children[0].children[0].children[a].style.display= "none": 1; 
     }})
@@ -4068,19 +4099,19 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
     _R(".revelar").e()
     /*Use videojs for the videos*/
     VIds= []; 
-    for(e= 0; e < _R("video").length; e++){
-        VIds[VIds.length]= videojs(_R("video")[e].id); 
-        videojs(_R("video")[e].id).on("pause", function(i){ 
+    for(e= 0; e < _R("video").not("#theater video").length; e++){
+        VIds[VIds.length]= videojs(_R("video").not("#theater video")[e].id); 
+        videojs(_R("video").not("#theater video")[e].id).on("pause", function(i){ 
             a= i
             let vId= VIds.length - 1
             $(videojs(i.target.parentElement.id).L.parentElement).siblings().filter(".Playuse").removeClass("playing")
         })
-        videojs(_R("video")[e].id).on("play", function(i){ 
+        videojs(_R("video").not("#theater video")[e].id).on("play", function(i){ 
             let vId= VIds.length - 1
             $(videojs(i.target.parentElement.id).L.parentElement).siblings().filter(".Playuse").addClass("playing")
         })
     }
-    _R("video").e()
+    _R("video").not("#theater video").e()
     _R(".Playuse").click(function(i){ 
         $(i.target).parent().find("video")[0].play()
         $(i.target).addClass("playing")
@@ -5552,16 +5583,16 @@ for(ind in edHistory){
 	        } 
 	    })
 	    VIds= []; 
-	    for(e= 0; e < $("video").length; e++){
-	        VIds[VIds.length]= videojs($("video")[e].id); 
+	    for(e= 0; e < $("video").not("#theater video").length; e++){
+	        VIds[VIds.length]= videojs($("video").not("#theater video")[e].id); 
 
-	        videojs($("video")[e].id).on("pause", function(i){ 
+	        videojs($("video").not("#theater video")[e].id).on("pause", function(i){ 
 	            a= i
 	            let vId= VIds.length - 1
 	            $(videojs(i.target.parentElement.id).L.parentElement).siblings().filter(".Playuse").removeClass("playing"); 
 	        });
 	        
-	        videojs($("video")[e].id).on("play", function(i){ 
+	        videojs($("video").not("#theater video")[e].id).on("play", function(i){ 
 	            //console.log(i)
 	            let vId= VIds.length - 1
 	            $(videojs(i.target.parentElement.id).L.parentElement).siblings().filter(".Playuse").addClass("playing"); 
@@ -5583,14 +5614,14 @@ for(ind in edHistory){
 	            $(videojs("example_video_1").L.parentElement).siblings().filter(".Playuse").addClass("playing"); 
 	        });
 	    }
-	    if(!!$("#theater_video")[0]){
+	    /*if(!!$("#theater_video")[0]){
 	        videojs("theater_video").on("pause", function(){ 
 	            $(videojs("theater_video").L.parentElement).siblings().filter(".Playuse").removeClass("playing"); 
 	        });
 	        videojs("theater_video").on("play", function(){ 
 	            $(videojs("theater_video").L.parentElement).siblings().filter(".Playuse").addClass("playing"); 
 	        });
-	    }
+	    }*/
 	    $("#theater").on("click", function(i){$(i.target).is("#theater")? closeModal(): 1; }); 
 	    $("html").click(function( e ) {
 	        $(".wrapper").removeClass("visible")

@@ -954,6 +954,9 @@ body.vjs-full-window {
 .vjs-no-js a:visited {
   color: #F4A460;
 }
+#theater .vjs-text-track-display {
+    bottom: 8em;
+}
 /* -----------------------------------------------------------------------------
 The original source of this file lives at
 https://github.com/videojs/video.js/blob/master/src/css/video-js.less */
