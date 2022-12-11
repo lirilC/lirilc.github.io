@@ -20,11 +20,6 @@ function loadPage(x, s){
 }
    
 
-window.onpopstate= function(){
-if(decodeURIComponent((window.location.pathname + window.location.hash).replace("#", "p")).indexOf("/" + username + "/p/" + pId) != 0){
-loadPage(decodeURIComponent((window.location.pathname + window.location.hash).replace("#", "p")), "p")
-}
-}
 
 
 document.addEventListener("DOMContentLoaded", function(){ 

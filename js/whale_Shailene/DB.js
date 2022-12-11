@@ -93,7 +93,31 @@ var user= {
             title: "...",
             description: ``,
             contents:  {image: "CT8HFtH57Y.jpg"},
-            Comentarios: ""
+            Comentarios: `<div class="comentario">
+                            <input class='knob button' data-width='28' data-height='28' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.18' readonly value='100'>
+                            <img title="         
+        <div class='tool'>
+            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+            <div class='datos'>
+                <ul class='actions'>
+                <li class='chatear' title='Chatear'>C</li>
+                <li class='agregar' title='Agregar'>A</li>
+                <li class='juzgar' title='Juzgar'>J</li>
+                </ul>                  
+                <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
+                <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
+            </div>
+            <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
+            <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
+            <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
+            <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
+        </div>" src="/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif" alt="">
+                            &nbsp<a target="_blank" href="/A.K.A._Dizzy">Luis Eduardo Gallego García</a><span class="is">: </span><span class="Comentario">
+                                <img src="/resources/images/A.K.A._Dizzy/TmIAHZHTOs.jpg" style="width: 100%; height: auto; border-radius: 0; ">
+                            </span>
+                            <span class="Responder"></span>
+                        </div>`
         },
         "/whale_Shailene/pos/4rNglo8BUN": {
             type: "links",

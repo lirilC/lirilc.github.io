@@ -35,12 +35,6 @@ function loadPage(x, s){
 }
    
 
-
-window.onpopstate= function(){
-if((window.location.pathname + window.location.hash).replace("#infor", "").replace("/#/", "/p/").indexOf("/" + username + "/p/" + pId) != 0){
-loadPage((window.location.pathname + window.location.hash), "p")
-}
-}
 /*
 
 
@@ -2313,7 +2307,6 @@ $(".searchResults > div").append(
 )
 }
 }
-$(".searchResults a").click(function(ed){if($(this).attr("target") !== "_blank" && $(this).attr("href") != undefined){ed.preventDefault(); loadPage($(this).attr("href"))}})
 $(".knob").knob()
 })
 $(document).on("keydown", function(r){
@@ -5345,7 +5338,7 @@ ee= function(){
   
 purger= {}; 
             
-purger.index= 21;
+purger.index= 22;
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return

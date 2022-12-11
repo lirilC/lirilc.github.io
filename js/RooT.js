@@ -1721,7 +1721,7 @@ return videos}
 /**/
 var purger= {}; 
             
-purger.index= 21; 
+purger.index= 22; 
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return
@@ -2669,9 +2669,9 @@ var openPhotoModal= function(a) {
     !!$(".XWW").length? $(".XWW")[0].innerHTML= "#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; ": $("head").append("<style class='XWW'>#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; </style>"); 
 }
 var closeModal= function(){
-if(Controlled && !ctrl){
+if((typeof Controlled != "undefined"? Controlled: false) && !ctrl){
 	$(".current video")[0].currentTime= $("#theater video")[0].currentTime
-}else if(!Controlled && ctrl){
+}else if((typeof Controlled != "undefined"? !Controlled: true) && ctrl){
 	$(".current video")[0].currentTime= $("#theater video")[0].currentTime
 }
 selectedSu= $("#theater").find(".vjs-subtitles-button .vjs-menu-item.vjs-selected").text()
@@ -3266,7 +3266,7 @@ switch(ty){
                 (function(){ 
                     a.on( "click", function(r){ 
                         $( r.target ).is( ".pic" )? openModal( $( r.target ) ): 1; 
-                        $( r.target ).is( ".video .Enlarge" )? openVideoModal( $( r.target ) ): 1; 
+                        $( r.target ).is( ".video .Enlarge" )? openVideoModal( $( r.target ), ctrl?ctrl:undefined): 1; 
                         $( r.target ).is( ".options .Enlarge" )? openOtherModal( $( r.target ) ): 1; 
                     } ); 
                 })(); 
@@ -3363,7 +3363,6 @@ k300= function(C, p, y, ty){
         oReq.open("GET", "https://raw.githubusercontent.com/LirilC/Lirilc.github.io/" + JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).hash + C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")) + ".html"); 
         oReq.send(); 
     }else{
-
         switch(ty){
         	case "foto": 
                 $(".foto").each(function(){ 
@@ -3373,7 +3372,7 @@ k300= function(C, p, y, ty){
                             a.find("img").on("click", function(){openFotosModal($(this));}); 
                         })(); 
                     }
-                })
+                });
             break; 
             case "video": 
                 $(".vid").each(function(){ 
@@ -3383,21 +3382,15 @@ k300= function(C, p, y, ty){
                             a.prev().on("click", function(){openVidModal($(this).next().find(".Enlarge"))}); 
                         })(); 
                     }
-                })
+                });
             break; 
             case "story": 
-                $(".story").each(function(){ 
-                    if(($(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + $(this).find(".carr").find("img")[0].src.slice($(this).find(".carr").find("img")[0].src.lastIndexOf("/"), $(this).find(".carr").find("img")[0].src.lastIndexOf(".")): $(this).find(".options a").attr("href")) == C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))){
-                        a= $(this); 
-                        (function(){ 
-                            a.on( "click", function(r){ 
-                                $( r.target ).is( ".pic" )? openModal( $( r.target ) ): 1; 
-                                $( r.target ).is( ".video .Enlarge" )? openVideoModal( $( r.target ), ctrl?ctrl:undefined ): 1; 
-                                $( r.target ).is( ".options .Enlarge" )? openOtherModal( $( r.target ) ): 1; 
-                            } ); 
-                        })(); 
-                    }
-                }); 
+            	a= $(".story").filter(function(){if(($(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + $(this).find(".carr").find("img")[0].src.slice($(this).find(".carr").find("img")[0].src.lastIndexOf("/"), $(this).find(".carr").find("img")[0].src.lastIndexOf(".")): $(this).find(".options a").attr("href")) == C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))){return true}else{return false}})
+                a.on( "click", function(r){ 
+                    $( r.target ).is( ".pic" )? openModal( $( r.target ) ): 1; 
+                    $( r.target ).is( ".video .Enlarge" )? openVideoModal( $( r.target ), ctrl?ctrl:undefined ): 1; 
+                    $( r.target ).is( ".options .Enlarge" )? openOtherModal( $( r.target ) ): 1; 
+                } ); 
             break; 
             case "photo": 
                 $(".photo").each(function(){ 
@@ -3407,7 +3400,7 @@ k300= function(C, p, y, ty){
                             a.find("img").on("click", function(){openPhotoModal($(this))}); 
                         })(); 
                     } 
-                }) 
+                });
             break; 
 			case "profilePic": 
                 $("#profilePic").each(function(){ 
@@ -3421,6 +3414,7 @@ k300= function(C, p, y, ty){
                 }); 
             break; 
         }; 
+        console.log(a, " b");
         localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))) !== null && JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).B? a.find(".options .bookmark").addClass("true"): a.find(".options .bookmark").removeClass("true"); 
         localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))) !== null && JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).S? a.find(".options .star").addClass("true"): a.find(".options .star").removeClass("true"); 
         localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))) !== null && !!JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).C? (function(){a.find(".Comentarios")[0].innerHTML= JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).C})(): 1; 
@@ -3472,7 +3466,7 @@ K100= function(builds){
 	        w1=  $(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + $(this).find(".carr").find("img")[0].src.slice($(this).find(".carr").find("img")[0].src.lastIndexOf("/"), $(this).find(".carr").find("img")[0].src.lastIndexOf(".")): $(this).find(".options a").attr("href");                                                   
 	        cold= JSON.parse(localStorage.getItem(w1)); 
 	        t= $(this); 
-	        (!hashes[w1] || (!!cold && (cold.hash)))? (function(){ 
+	        (typeof hashes[w1] == "undefined" || (!!cold && (cold.hash)))? (function(){ 
 	            var oReq= new XMLHttpRequest(); 
 	            oReq.addEventListener("load", function(e){k300(e, w1, t, "story")}); 
 	            oReq.open("GET", "https://api.github.com/repos/LirilC/lirilc.github.io/commits?path=" +  w1 + ".html"); 
@@ -3482,7 +3476,7 @@ K100= function(builds){
 	            !(!!cold && (cold.hash))? (function(){
 	                a.on( "click", function(r){ 
 	                    $( r.target ).is( ".pic" )? openModal( $( r.target ) ): 1; 
-	                    $( r.target ).is( ".video .Enlarge" )? openVideoModal( $( r.target ) ): 1; 
+	                    $( r.target ).is( ".video .Enlarge" )? openVideoModal( $( r.target ), ctrl?ctrl:undefined ): 1; 
 	                    $( r.target ).is( ".options .Enlarge" )? openOtherModal( $( r.target ) ): 1; 
 	                } ); 
     				_R(a).e()
@@ -3574,7 +3568,7 @@ _T(document).keypress(function (e){
                 }else if($(".current").is(".img") && $("#theater").css("display") != "block"){ 
                     openModal($(".current .pic")); 
                 }else if($(".current").is(".video")){ 
-                    openVideoModal($(".current").find(".Enlarge")); 
+                    openVideoModal($(".current").find(".Enlarge"), ctrl?ctrl:undefined); 
                 }; 
             break; 
             case 32:
@@ -4510,14 +4504,14 @@ $("a").each(function(){
 ctrl= false
 document.addEventListener("keyup", function(e){if(!e.ctrlKey)ctrl= false})
 window.onblur= function(){
-    ctrl= false
-    $(".nombre").attr("contenteditable", "false") 
+ctrl= false
+$(".nombre").attr("contenteditable", "false") 
 }
 document.addEventListener("keydown", function(e){
-    if(e.ctrlKey){
-    	ctrl= true
-    }
-   })
+if(e.ctrlKey){
+ctrl= true
+}
+})
 /*Story edition management*/
  rvsdatefinder= function(e){
 var indc= -1
@@ -5216,6 +5210,7 @@ for(ind in edHistory){
             d.find("media").remove()
             d.find(".Comentarios").before($("badguy").find("#otherContainments")[0].outerHTML)
             d.find("text").html()
+            console.log(d)
             for(var er= 0; er <= d.find(".media audio").length - 1; er++){
                 audiojs.create(d.find(".media audio")[er])
             }
@@ -5283,28 +5278,32 @@ for(ind in edHistory){
     }
 }
 	$(".Editado").on("contextmenu", function(er){er.preventDefault()})
-	$(".Editado").on("mouseup", function(e){
-	if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHistory).length - 1){
-	    var wReq = new XMLHttpRequest();
-	    wReq.addEventListener("load", function(e){edition(e)}); 
-	    wReq.open("get", edHistory[rvsdatefinder(datefinder($(this).attr("title")) + 1)], true);
-	    wReq.send();
-	    rvsdatefinder(datefinder($(this).attr("title")) + 1).indexOf("Editado") != 0? $(this).css({"text-decoration": "line-through", "color": "#3773639f"}): $(this).css({"text-decoration": "", "color": "rgb(221, 221, 144)"})
-	    $(this).attr("title", rvsdatefinder(datefinder($(this).attr("title")) + 1))
-	}else if(e.which === 3 && datefinder($(this).attr("title")) - 1 >= 0){
-	    var wReq = new XMLHttpRequest();
-	    wReq.addEventListener("load", function(e){edition(e)}); 
-	    wReq.open("get", edHistory[rvsdatefinder(datefinder($(this).attr("title")) - 1)], true);
-	    wReq.send();
+$(".Editado").on("mouseup", function(e){
+if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHistory).length - 1){
+    var wReq = new XMLHttpRequest();
+    var yS= $(this).closest(".story")
+    wReq.addEventListener("load", function(e){edition(e, yS)}); 
+    wReq.open("get", edHistory[rvsdatefinder(datefinder($(this).attr("title")) + 1)], true);
+    wReq.send();
+    rvsdatefinder(datefinder($(this).attr("title")) + 1).indexOf("Editado") != 0? $(this).css({"text-decoration": "line-through", "color": "#3773639f"}): $(this).css({"text-decoration": "", "color": "rgb(221, 221, 144)"})
+    $(this).attr("title", rvsdatefinder(datefinder($(this).attr("title")) + 1))
+}else if(e.which === 3 && datefinder($(this).attr("title")) - 1 >= 0){
+    var wReq = new XMLHttpRequest();
+    var yS= $(this).closest(".story")
+    wReq.addEventListener("load", function(e){edition(e, yS)}); 
+    wReq.open("get", edHistory[rvsdatefinder(datefinder($(this).attr("title")) - 1)], true);
+    wReq.send();
+    rvsdatefinder(datefinder($(this).attr("title")) - 1).indexOf("Editado") != 0? $(this).css({"text-decoration": "line-through", "color": "#3773639f"}): $(this).css({"text-decoration": "", "color": ""})
+    $(this).attr("title", rvsdatefinder(datefinder($(this).attr("title")) - 1))
+    if(datefinder($(this).attr("title"))== 0){$(this).css({"color": ""})}else{$(this).css({"color": "rgb(221, 221, 144)"})}
+}
+})
+/*Create all audiojs instances*/
+audiojs.events.ready(function(){
+   var as= audiojs.createAll()
+})
 
-	    rvsdatefinder(datefinder($(this).attr("title")) - 1).indexOf("Editado") != 0? $(this).css({"text-decoration": "line-through", "color": "#3773639f"}): $(this).css({"text-decoration": "", "color": ""})
-	    $(this).attr("title", rvsdatefinder(datefinder($(this).attr("title")) - 1))
-	    if(datefinder($(this).attr("title"))== 0){$(this).css({"color": ""})}else{$(this).css({"color": "rgb(221, 221, 144)"})}
-	}
-
-	})
-
-	/*$("a").click(function(ed){if($(this).attr("target") !== "_blank" && $(this).attr("href") != undefined){ed.preventDefault(); loadPage($(this).attr("href"))}})*/ 
+	/**/ 
 	possibleResults=[[["Megan Denise Fox", "MeganFox"], {users_name: "Megan Denise Fox", username: "MeganFox", profilePic: "/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg", rol: ["G", "+100"], type: "Usuario"}], [["Laura Escobar Bonnett", "L"], {users_name: "Laura Escobar Bonnett", username: "L", profilePic: "/resources/images/L/OGnpwD3jys_tn.jpg", rol: ["Princesa", "+100"], type: "Usuario"}], [["Shailene Diann Woodley", "whale_Shailene"], {users_name: "Shailene Diann Woodley", username: "whale_Shailene", profilePic: "/resources/images/whale_Shailene/RKRWeNhDgJ_tn.jpg", rol: ["SEO", "+98"], type: "Usuario"}], [["Luis Eduardo Gallego García", "A.K.A._Dizzy"], {users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], type: "Usuario"}], [["Dios Jesucristo", "G-Suschrist"], {users_name: "Dios Jesucristo", username: "G-Suschrist", profilePic: "/resources/images/G-Suschrist/Rvu7YjVcXr_tn.jpg", rol: ["G", "+100"], type: "Usuario"}], [["Aura María Cardona Demasiado", "AuraCardonaC"], {users_name: "Aura María Cardona Demasiado", username: "AuraCardonaC", profilePic: "/resources/images/AuraCardonaC/44Cpl8Gig5_tn.jpg", rol: ["Profe de fitness", "+94"], type: "Usuario"}], [["Juan José Martínez Vidal", "LamaMadora"], {users_name: "Juan José Martínez Vidal", username: "LamaMadora", profilePic: "/resources/images/LamaMadora/sdlQg1CoQ3_tn.jpg", rol: ["Dubber", "+88"], type: "Usuario"}], , [["Walter White", "user"], {users_name: "Walter White", username: "user", profilePic: "/resources/images/white.jpg", rol: ["Moderador", "+60"], type: "Usuario"}], [["A0"], {name: "A0", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/A0", type: "Blog"}], [["Algo Más Sobre Mí"], {name: "Algo Más Sobre Mí", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Algo Más Sobre Mí", type: "Blog"}], [["Algunas Propiedades De Mis Escritos"], {name: "Algunas Propiedades De Mis Escritos", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Algunas Propiedades De Mis Escritos", type: "Blog"}], [["Algunos Poemas Que He Escrito"], {name: "Algunos Poemas Que He Escrito", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Algunos Poemas Que He Escrito", type: "Blog"}], [["aNGEL();"], {name: "aNGEL();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/aNGEL();", type: "Blog"}], [["Constructor And Business Partners (Dedicatorias)"], {name: "Constructor And Business Partners (Dedicatorias)", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Constructor And Business Partners (Dedicatorias)", type: "Blog"}], [["Constructor And Business Partners"], {name: "Constructor And Business Partners", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Constructor And Business Partners", type: "Blog"}], [["Dinosaurios"], {name: "Dinosaurios", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Dinosaurios", type: "Blog"}], [["El Pueblo Blanco"], {name: "El Pueblo Blanco", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/El Pueblo Blanco", type: "Blog"}], [["El Salomé Castrillón"], {name: "El Salomé Castrillón", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/El Salomé Castrillón", type: "Blog"}], [["Equilibrio"], {name: "Equilibrio", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Equilibrio", type: "Blog"}], [["FRANCIA Y ElDelprincipio"], {name: "FRANCIA Y ElDelprincipio", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/FRANCIA Y ElDelprincipio", type: "Blog"}], [["La Larga Historia"], {name: "La Larga Historia", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/La Larga Historia", type: "Blog"}], [["La Perrita Del Poste"], {name: "La Perrita Del Poste", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/La Perrita Del Poste", type: "Blog"}], [["La Sagrada Biblia"], {name: "La Sagrada Biblia", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/La Sagrada Biblia", type: "Blog"}], [["Las Flores Malditas (Introducción)"], {name: "Las Flores Malditas (Introducción)", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Las Flores Malditas (Introducción)", type: "Blog"}], [["por_siLaBas();"], {name: "por_siLaBas();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/por_siLaBas();", type: "Blog"}], [["Regalos Para Mí"], {name: "Regalos Para Mí", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Regalos Para Mí", type: "Blog"}], [["Sus Rizos Color Caramelo"], {name: "Sus Rizos Color Caramelo", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Sus Rizos Color Caramelo", type: "Blog"}], [["Una Breve Historia De La Creación"], {name: "Una Breve Historia De La Creación", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Una Breve Historia De La Creación", type: "Blog"}], [["xWo3"], {name: "xWo3", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/xWo3", type: "Blog"}], [["dinosaurios"], {name: "dinosaurios", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/82DcC9s2sS0cZ", type: "Proyecto"}], [["por_siLaBas();"], {name: "por_siLaBas();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/f9d2cCa2Cxc31", type: "Proyecto"}], [["Christmas Gifts From The Gallego Escobar Family"], {name: "Christmas Gifts From The Gallego Escobar Family", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/h3dd2cDcsW2R3", type: "Proyecto"}], [["aNGEL();"], {name: "aNGEL();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/k92dJd29D920d", type: "Proyecto"}], [["Robot De Dedicatorias"], {name: "Robot De Dedicatorias", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/k9u8hH78jJi27", type: "Proyecto"}], [["Robot de dedicatorias"], {name: "Robot de dedicatorias", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/s98f39c0d9090", type: "Proyecto"}], [["Widgets"], {name: "Widgets", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/i9d2g2cftdCds", type: "Proyecto"}], [["ElDelprincipio"], {name: "ElDelprincipio", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/tY829dD0290df", type: "Proyecto"}], [["myProjext1"], {name: "myProjext1", users_name: "Megan Denise Fox", username: "MeganFox", profilePic: "/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg", rol: ["G", "+100"], href: "/MeganFox/p/iD8299D88d3D2", type: "Proyecto"}], [["minesweeper"], {name: "minesweeper", users_name: "Laura Escobar Bonnett", username: "L", profilePic: "/resources/images/L/OGnpwD3jys_tn.jpg", rol: ["Princesa", "+100"], href: "/L/p/2kNoind8JsjD9", type: "Proyecto"}], [["lX"], {name: "lX", users_name: "Aura María Cardona Demasiado", username: "AuraCardonaC", profilePic: "/resources/images/AuraCardonaC/44Cpl8Gig5_tn.jpg", rol: ["Profe de fitness", "+94"], href: "/AuraCardonaC/p/di29D8jj8dj2d", type: "Proyecto"}], [["snka"], {name: "snka", users_name: "Dios Jesucristo", username: "G-Suschrist", profilePic: "/resources/images/G-Suschrist/Rvu7YjVcXr_tn.jpg", rol: ["G", "+100"], href: "/G-Suschrist/p/Jkik39djfX8iX", type: "Proyecto"}], [["Vv11"], {name: "Vv11", users_name: "Juan José Martínez Vidal", username: "LamaMadora", profilePic: "/resources/images/LamaMadora/sdlQg1CoQ3_tn.jpg", rol: ["Dubber", "+88"], href: "/LamaMadora/p/u889Dj8Q22dSC", type: "Proyecto"}], [["_dvlpmt"], {name: "_dvlpmt", users_name: "Walter White", username: "user", profilePic: "/resources/images/white.jpg", rol: ["Moderador", "+60"], href: "/user/p/8d299s2gvkL9", type: "Proyecto"}], [["La Perrita Del Poste", "PpP"], {users_name: "La Perrita Del Poste", username: "PpP", profilePic: "/resources/images/PpP/bZj2vYrklo_tn.jpg", rol: ["G", "+100"], type: "Usuario"}], [["ElDelprincipio", "Eld"], {users_name: "ElDelprincipio", username: "Eld", profilePic: "/resources/images/Eld/oow4doJxKO_tn.jpg", rol: ["G", "+100"], type: "Usuario"}]]
 
 	$(".buscar").on("input", function(){  if($(this).val() !== ""){$(".searchResults").removeClass("hidden")}else{ $(".searchResults").addClass("hidden"); return}
@@ -5376,17 +5375,17 @@ for(ind in edHistory){
 	}}})
 	$(".knob").knob()
 	})
-	ctrl= false
-	document.addEventListener("keyup", function(e){e.ctrlKey?ctrl= false: 1})
-	window.onblur= function(){
-	    ctrl= false
-	    $(".nombre").attr("contenteditable", "false") 
-	}
-	document.addEventListener("keydown", function(e){if(e.shiftKey && e.ctrlKey && e.altKey){e.preventDefault();$("#theater").css("display") == "block"?closeModal():1;$("#buscar input").val("");$("#buscar input").trigger("input");$("#buscar input").focus()}
-	    if(e.ctrlKey){
-	    	ctrl= true
-	    }
-	})
+ctrl= false
+document.addEventListener("keyup", function(e){if(!e.ctrlKey)ctrl= false})
+window.onblur= function(){
+ctrl= false
+$(".nombre").attr("contenteditable", "false") 
+}
+document.addEventListener("keydown", function(e){
+if(e.ctrlKey){
+ctrl= true
+}
+})
 	    _R("#theater textarea", 0).on('input', function() { 
 	        $(this).height(""); 
 	        !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2))))): 1; 
@@ -5421,85 +5420,6 @@ for(ind in edHistory){
 	        })(): 1; 
 	    }); */
 
-	    current= $(".story.current");
-	    $(document).keypress(function (e){
-	        if(!$("textarea").is(":focus") && !$("input").is(":focus") && !waiting){ 
-	            switch(e.keyCode){ 
-	                case 108: case 76: 
-	                    $(".current").find('.options .star').toggleClass("true"); 
-	                    $("#theater").find('.options .star').toggleClass("true"); 
-	                    badGuy(); 
-	                break; 
-	                case 98: case 66: 
-	                    $(".current").find('.options .bookmark').toggleClass("true"); 
-	                    $("#theater").find('.options .bookmark').toggleClass("true"); 
-	                    badGuy(); 
-	                break; 
-	                case 102: case 70: 
-	                    if(($(".current").is(".mult_img") || $(".current").is(".mult_carr")) && $("#theater").css("display") != "block"){ 
-	                        $($(".current").find(".carr > section")[Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0)]).is( ".video" )? $($(".current").find(".carr > section")[Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0)]).find(".Enlarge").trigger( "click" ): openModal($($(".current").find(".pic")[Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0) - getVideos($(".current"), Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0))])); 
-	                        if(Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0) == Math.floor($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0)){
-	                            $(".current .carr").stop(true, false); 
-	                            $(".current .carr").animate({scrollLeft: (Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0) * $(".current").find(".carr > section").width())}, (400 - (400 * (Math.ceil($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0) - ($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0))))); 
-	                            /*$(".current .nav_arrow.left .arrow").click(); */ 
-	                        }else{
-	                            $(".current .carr").stop(true, false); 
-	                            $(".current .carr").animate({scrollLeft: (Math.round($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0) * $(".current").find(".carr > section").width())}, (400 * (Math.ceil($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0) - ($(".current").find(".carr")[0].scrollLeft != 0? $(".current").find(".carr")[0].scrollLeft / $(".current").find(".carr").width(): 0)))); 
-	                            /*$(".current .nav_arrow.right .arrow").click(); */ 
-	                        }
-	                    }else if($(".current").is(".img") && $("#theater").css("display") != "block"){ 
-	                        openModal($(".current .pic")); 
-	                    }else if($(".current").is(".video")){ 
-	                        openVideoModal($(".current").find(".Enlarge")); 
-	                    }; 
-	                break; 
-	            }
-	        }
-	    if(!$("textarea").is(":focus") && !$("input").is(":focus") && !waiting && $("#theater").css("display") != "block"){
-	        //console.log(e.keyCide) 
-	        var forward;
-	                     
-	        (e.keyCode == 74 || e.keyCode == 106 || e.keyCode == 75 || e.keyCode == 107)? waiting= true: 143; 
-	                                                   
-	        if (e.keyCode == 74 || e.keyCode == 106){
-	            forward= true;
-	        }else if (e.keyCode == 75 || e.keyCode == 107){
-	            forward= false;
-	        }else{
-	            return true;
-	        }
-	    
-	    
-	        if (!$(".story.current").length){
-	            $(".story:first").addClass("current"); 
-	        }
-	    
-	        if ($(".story.current").length){
-	            next= ""; 
-	            if (forward){
-	                !!current.next(".story").length? next= current.next(".story"): 1415; 
-	            }else{
-	                !!current.prev(".story").length? next= current.prev(".story"): 27721; 
-	            }
-	            if (!!next.length){
-	                $(".current").removeClass("current");
-	                next.addClass("current"); 
-	            }
-	        }
-	    
-	        (!!next.length)? (function(){
-	                            ok= false; 
-	                            $("html").animate({ 
-	                            scrollTop: $(".current").offset().top - 56
-	                        }, 400, function(){  
-	                            waiting= false; 
-	                            current= $(".story.current"); 
-	                            $(".current").attr("tabindex", 0); 
-	                            $(".current")[0].focus();
-	                            setTimeout(function(){ok= true;}, 100) 
-	                        })})(): waiting= false; 
-	        }
-	    });
 	   
 	    document.getElementsByClassName("buscar")[0].addEventListener("keydown", function(i){
 	        i.keyCode == 13? document.getElementsByTagName("body")[0].style.cursor= "text": 1; 
@@ -6575,17 +6495,6 @@ _R('a').on("click", function(e){
 
 		    };
 
-		$(document).on("keypress", function(e){ 
-		    if (e.keyCode == 108) {
-		        $("#theater").find('.options .star').toggleClass("true");        
-		        $(".current").find('.options .star').toggleClass("true");
-		    }
-		    if (e.keyCode == 98) {
-		        $("#theater").find('.options .bookmark').toggleClass("true");
-		        $(".current").find('.options .bookmark').toggleClass("true");
-		        
-		    }
-		})
 			$("#profileTrigger").on("click", function (e) {
 		        $(".wrapper").toggleClass("visible")
 		        $("#right-menu .index-arrow").toggleClass("open");

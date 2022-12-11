@@ -112,7 +112,7 @@ sizeWidgetero()
 $(document).on("ready",function(){ 
 	purger.purge(); 
 					
-$("a").click(function(ed){if($(this).attr("target") !== "_blank" && $(this).attr("href") != undefined){ed.preventDefault(); loadPage($(this).attr("href"))}})
+
 $("video")[0].addEventListener('loadeddata', (e) => {
     !firstPlay? (function(){sizeWidgetero(); firstPlay= true})(): 1;
 });
@@ -810,7 +810,7 @@ setInterval(function(){caSe(); }, 1);
 
 purger= {}; 
             
-purger.index= 21;
+purger.index= 22;
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return

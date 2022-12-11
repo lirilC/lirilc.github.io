@@ -448,7 +448,7 @@ $(function(){
     oReq.send();
 })
 document.addEventListener("DOMContentLoaded", function(){
-    $("a").click(function(ed){if($(this).attr("target") !== "_blank" && $(this).attr("href") != undefined){ed.preventDefault(); loadPage($(this).attr("href"))}})
+    
     $("header").after(`<aside class="searchResults hidden">
         <div>
         </div>
