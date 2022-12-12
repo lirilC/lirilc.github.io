@@ -18,6 +18,12 @@
 a{
     text-decoration: none;
     }
+a.xWo3InstaLink {
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-size: 18px;
+}
 html,
 body {
     height: 100%;
@@ -1652,6 +1658,10 @@ time{
     position: relative; 
     margin: 0 auto 27px auto !important; 
 } 
+#article figure.vertical{ 
+    width: 224px;
+    margin: 27px auto 0 auto !important; 
+} 
 #article figure img{ 
     width: 100%; 
 } 
@@ -1671,6 +1681,9 @@ time{
 } 
 #article figure > div {
     width: 23.4px;
+}
+#article figure.vertical > div {
+    width: 10px;
 }
 #article .comentarios{ 
     width: 100%; 
