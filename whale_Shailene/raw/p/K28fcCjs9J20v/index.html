@@ -57,10 +57,18 @@ $("#acquire").on("click", function(){
         if("undefined"!=typeof recTangle_info[active_recTangle])recTangle_info[active_recTangle].funcTion()
         setTimeout(function(){
         	nextChar= activeChar + 1 <= 3? activeChar + 1: 0
-        	while(chaR(nextChar).skip){
+            bReak= false
+        	while(chaR(nextChar).skip && !bReak){
 				chaR(nextChar).skip--
+                if(!chaR(nextChar).skip){
+                    chaR(nextChar).desterrado= true
+                }
         		nextChar= nextChar + 1 <= 3? nextChar + 1: 0
         	}
+            if("undefined"!==typeof chaR(nextChar).desterrado){
+                physic.matrix( [ { name:CARS[activeChar].name, pos: [ 32.5, 1, -45.5], noVelocity:true } ] )
+                delete chaR(nextChar).desterrado
+            }
         	changeChar(nextChar)
             dices.setThrower(nextChar)
             activeChar= nextChar
@@ -74,8 +82,15 @@ $("#refuse").on("click", function(){
         	nextChar= activeChar + 1 <= 3? activeChar + 1: 0
         	while(chaR(nextChar).skip){
 				chaR(nextChar).skip--
+                if(!chaR(nextChar).skip){
+                    chaR(nextChar).desterrado= true
+                }
         		nextChar= nextChar + 1 <= 3? nextChar + 1: 0
         	}
+            if("undefined"!==typeof chaR(nextChar).desterrado){
+                physic.matrix( [ { name:CARS[activeChar].name, pos: [ 32.5, 1, -45.5], noVelocity:true } ] )
+                delete chaR(nextChar).desterrado
+            }
         	changeChar(nextChar)
             dices.setThrower(nextChar)
             activeChar= nextChar

@@ -92,7 +92,7 @@ function vehicle ( id, pos, shapeType ) {
 
     //o.name = 'car_'+ id;
 
-    o.helper = true;
+    o.helper = false;
 
     return o;
 
@@ -103,6 +103,7 @@ var recTangle_info= [
 
     }, re_fusTion: function(){
         chaR(activeChar).skip= 2
+        physic.matrix( [ { name:CARS[activeChar].name, pos: [ -63, 2, -68], noVelocity:true } ] )
     }},
     {pic: "http://canadajournal.net/wp-content/uploads/2014/12/Lost-Luggage-Found-20-Years-Later-Video.jpg", title: "Where're my bags?", description: "Recuberarás tus maletas.", price: 82, funcTion: function(){
         for(var i= 2 + parseInt(Math.random()* 19); i; i--){
