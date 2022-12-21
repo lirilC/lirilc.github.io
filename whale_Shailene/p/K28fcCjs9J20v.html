@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>
+      --The Whole Board-- | Proyectos | Shailene Diann Woodley | liril
+    </title>
+    <link rel="shortcut icon" type="image/ico" href="/resources/icons/favicon.ico"  />
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,600,700' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/courses/style.css">
+    <link rel="stylesheet" href="/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/video-js.css">
+    <link rel="stylesheet" href="/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="/css/user/p/style.css">
+    <link rel="stylesheet" href="/css/prism.css">
+    <script type="text/javascript">
+        var pId= "K28fcCjs9J20v"; 
+        var pNa= "--The Whole Board--"; 
+        var username= "whale_Shailene"; 
+        var users_name= "Shailene Diann Woodley"; 
+    </script>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/video.js"></script>
+    <script src="/js/jquery-ui.min.js"
+    ></script>
+    <script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/js/prism.js"></script>
+    <script type="module" src= "/js/ace/ext/ext-searchbox.js"></script>
+    <script src="/js/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cloud9ide.github.io/emmet-core/emmet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.13/ext-emmet.js"></script>
+    <script src="/js/theme-monokai.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/Ace's Modes/mode-css.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/Ace's Modes/mode-html.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/Ace's Modes/mode-javascript.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src= "/js/ext-language_tools.js"></script>
+
+    <script src="/js/user/p/main.js"></script>
+
+    <script src="/js/courses/modernizr.custom.js"></script>
+
+ <script src="/js/jquery.knob.js">
+
+    </script>
+
+    <script>
+        $(function ($) {
+
+            $(".knob").knob({
+                change: function (value) {
+                    //console.log("change : " + value);
+                },
+                release: function (value) {
+                    //console.log(this.$.attr('value'));
+                    console.log("release : " + value);
+                },
+                cancel: function () {
+                    console.log("cancel : ", this);
+                },
+                /*format : function (value) {
+                  return value + '%';
+                  }
+                  ,*/
+                draw: function () {
+
+                    // "tron" case
+                    if (this.$.data('skin') == 'tron') {
+
+                        this.cursorExt = 0.3;
+
+                        var a = this.arc(this.cv) // Arc
+                            ,
+                            pa // Previous arc
+                            , r = 1;
+
+                        this.g.lineWidth = this.lineWidth;
+
+                        if (this.o.displayPrevious) {
+                            pa = this.arc(this.v);
+                            this.g.beginPath();
+                            this.g.strokeStyle = this.pColor;
+                            this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, pa.s, pa.e, pa.d);
+                            this.g.stroke();
+                        }
+
+                        this.g.beginPath();
+                        this.g.strokeStyle = r ? this.o.fgColor : this.fgColor;
+                        this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, a.s, a.e, a.d);
+                        this.g.stroke();
+
+                        this.g.lineWidth = 2;
+                        this.g.beginPath();
+                        this.g.strokeStyle = this.o.fgColor;
+                        this.g.arc(this.xy, this.xy, this.radius - this.lineWidth + 1 + this.lineWidth * 2 / 3, 0, 2 * Math.PI, false);
+                        this.g.stroke();
+
+                        return false;
+                    }
+                }
+            });
+
+            // Example of infinite knob, iPod click wheel
+            var v, up = 0,
+                down = 0,
+                i = 0,
+                $idir = $("div.idir"),
+                $ival = $("div.ival"),
+                incr = function () {
+                    i++;
+                    $idir.show().html("+").fadeOut();
+                    $ival.html(i);
+                },
+                decr = function () {
+                    i--;
+                    $idir.show().html("-").fadeOut();
+                    $ival.html(i);
+                };
+            $("input.infinite").knob({
+                min: 0,
+                max: 20,
+                stopper: false,
+                change: function () {
+                    if (v > this.cv) {
+                        if (up) {
+                            decr();
+                            up = 0;
+                        } else {
+                            up = 1;
+                            down = 0;
+                        }
+                    } else {
+                        if (v < this.cv) {
+                            if (down) {
+                                incr();
+                                down = 0;
+                            } else {
+                                down = 1;
+                                up = 0;
+                            }
+                        }
+                    }
+                    v = this.cv;
+                }
+            });
+        });
+    </script>
+    <style type="text/css" media="screen">
+        body {
+            overflow: hidden;
+        }
+        
+        #editor { 
+            margin: 0;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+<div class="wrapper"></div>
+    <header>
+        <nav>
+            <ul>
+                <li id="index">
+                    <a href="/"><section id="index-trigger">
+                        <span class="back-arrow button">
+              </span>
+                        <span id="index-text" class="text button">
+                Inicio
+              </span>
+                    </section></a>
+
+                </li>
+               
+                 <li id= "buscar">
+          <input class="buscar" type="text" placeholder="Busca aquí cursos, personas o cualquier cosa">
+          </li>
+                <li id="right-menu" class="button">
+                    <section id="dots" class="button">
+                        <span id="store" class="button">
+              </span>
+                        <span id="dots-icon" class="button">
+              </span>
+                        <span id="dots-text" class="button">
+                6'000.600
+              </span>
+
+                    </section>
+                    <section id="profileTrigger">
+                    </section>
+                    <div id="profile" class="button">
+                        <img id="profile-pic" src="/resources/images/white.jpg" alt="Walter White">
+                        <input class="knob button" data-width="35" data-height="35" data-fgColor="#2ecc71" data-bgColor="rgba(0,0,0,0)" data-displayInput=false data-thickness=".15" readonly value="60">
+                    </div>
+                    <span class="index-arrow button">
+              </span>
+
+                    <section id="profileSettings">
+                    </section>
+                </li>
+
+                <li>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="root">
+        <div class="contnr">
+            <div>
+                <a href="/whale_Shailene">Shailene Diann Woodley</a>
+            </div>
+            <div>
+                <a href="/whale_Shailene/p">Proyectos</a>
+            </div>
+            <span>
+                <span>--The Whole Board--</span>
+            </span>
+        </div>
+    </div>
+
+    <section id= "file_expl">
+        <aside id="files">
+            <aside id="information_cont"><aside id="information"><i>Infor</i></aside></aside>
+            <ul class="file_tree">
+                <div class="folder_cont">
+                    <li class= "folder inScope">assets</li>
+                    <div class="folder_cont">
+                        <li class= "folder">bvh</li>
+                        <li class="file">action.z</li>
+                    </div>
+                    <div class="folder_cont">
+                        <li class= "folder inScope">models</li>
+                        <li class="file">avatar.sea</li>
+                        <li class="file">avatar_low.sea</li>
+                        <li class="file">basic.sea</li>
+                        <li class="file">basket.sea</li>
+                        <li class="file">bol.sea</li>
+                        <li class="file">bot.sea</li>
+                        <li class="file">buggy.sea</li>
+                        <li class="file">buggy_draco.sea</li>
+                        <li class="file">cars.sea</li>
+                        <li class="file">chess.sea</li>
+                        <li class="file">diamond.sea</li>
+                        <li class="file">dragon.sea</li>
+                        <li class="file">drone.sea</li>
+                        <li class="file">gaz.sea</li>
+                        <li class="file">heros.sea</li>
+                        <li class="file">hog.sea</li>
+                        <li class="file">kaneda.sea</li>
+                        <li class="file">kaneda_draco.sea</li>
+                        <li class="file">mecanum.sea</li>
+                        <li class="file">mecaX.sea</li>
+                        <li class="file">million.sea</li>
+                        <li class="file">pig.sea</li>
+                        <li class="file">test.sea</li>
+                        <li class="file">test2.sea</li>
+                        <li class="file">track.sea</li>
+                    </div>
+                    <div class="folder_cont">
+                        <li class= "folder inScope">sounds</li>
+                        <li class="file">engine1.mp3</li>
+                        <li class="file">engine2.mp3</li>
+                        <li class="file">engine3.mp3</li>
+                        <li class="file">engine4.mp3</li>
+                        <li class="file">ping_pong.mp3</li>
+                    </div>
+                    <div class="folder_cont">
+                        <li class= "folder inScope">textures</li>
+                        <div class="folder_cont">
+                            <li class= "folder">buggy</li>
+                            <li class="file">body.jpg</li>
+                            <li class="file">extra.jpg</li>
+                            <li class="file">extra_n.jpg</li>
+                            <li class="file">pilote.jpg</li>
+                            <li class="file">suspension.jpg</li>
+                            <li class="file">wheel_c.jpg</li>
+                            <li class="file">wheel_n.jpg</li>
+                        </div>
+                        <div class="folder_cont">
+                            <li class= "folder">envmap</li>
+                            <li class="file">downtown.jpg</li>
+                            <li class="file">milkyway.jpg</li>
+                            <li class="file">parking.hdr</li>
+                            <li class="file">parking.jpg</li>
+                            <li class="file">photo.hdr</li>
+                            <li class="file">photo.jpg</li>
+                            <li class="file">red.jpg</li>
+                            <li class="file">river.hdr</li>
+                            <li class="file">river.jpg</li>
+                            <li class="file">stars.jpg</li>
+                            <li class="file">studio.jpg</li>
+                            <li class="file">studio2.jpg</li>
+                            <li class="file">tunnel.hdr</li>
+                            <li class="file">tunnel.jpg</li>
+                        </div>
+                        <div class="folder_cont">
+                            <li class= "folder">kaneda</li>
+                            <li class="file">bike_1_a.jpg</li>
+                            <li class="file">bike_1_c.jpg</li>
+                            <li class="file">bike_1_m.jpg</li>
+                            <li class="file">bike_1_n.jpg</li>
+                            <li class="file">bike_1_n.png</li>
+                            <li class="file">bike_1_r.jpg</li>
+                            <li class="file">bike_2_a.jpg</li>
+                            <li class="file">bike_2_c.jpg</li>
+                            <li class="file">bike_2_m.jpg</li>
+                            <li class="file">bike_2_r.jpg</li>
+                            <li class="file">bike_3_a.jpg</li>
+                            <li class="file">bike_3_c.jpg</li>
+                            <li class="file">bike_3_l.jpg</li>
+                            <li class="file">bike_3_m.jpg</li>
+                            <li class="file">bike_3_n.jpg</li>
+                            <li class="file">bike_3_r.jpg</li>
+                            <li class="file">kaneda_a.jpg</li>
+                            <li class="file">kaneda_c.jpg</li>
+                            <li class="file">kaneda_m.jpg</li>
+                            <li class="file">kaneda_n.jpg</li>
+                            <li class="file">kaneda_r.jpg</li>
+                            <li class="file">tires_c.jpg</li>
+                            <li class="file">tires_n.jpg</li>
+                        </div>
+                        <div class="folder_cont">
+                            <li class= "folder">sky</li>
+                            <li class="file">lens0.png</li>
+                            <li class="file">lens1.png</li>
+                            <li class="file">lensMoon.png</li>
+                            <li class="file">lensSun.png</li>
+                            <li class="file">noise.png</li>
+                        </div>
+                        <div class="folder_cont">
+                            <li class= "folder">spherical</li>
+                            <li class="file">black.jpg</li>
+                            <li class="file">blue.jpg</li>
+                            <li class="file">brush.jpg</li>
+                            <li class="file">ceramic.jpg</li>
+                            <li class="file">chrome.jpg</li>
+                            <li class="file">env.jpg</li>
+                            <li class="file">env0.jpg</li>
+                            <li class="file">env1.jpg</li>
+                            <li class="file">env9.jpg</li>
+                            <li class="file">glow.jpg</li>
+                            <li class="file">metal.jpg</li>
+                            <li class="file">plastic.jpg</li>
+                            <li class="file">red.jpg</li>
+                            <li class="file">sky.jpg</li>
+                            <li class="file">smooth.jpg</li>
+                            <li class="file">wireframe.jpg</li>
+                        </div>
+                        <div class="folder_cont">
+                            <li class= "folder">terrain</li>
+                            <div class="folder_cont">
+                                <li class= "folder">old</li>
+                                <li class="file">crater_n.jpg</li>
+                                <li class="file">grass_n.jpg</li>
+                                <li class="file">rock_n.jpg</li>
+                                <li class="file">sand_n.jpg</li>
+                                <li class="file">water_n.jpg</li>
+                            </div>
+                            <li class="file">crater.jpg</li>
+                            <li class="file">crater_n.jpg</li>
+                            <li class="file">grass.jpg</li>
+                            <li class="file">grass_b.jpg</li>
+                            <li class="file">grass_n.jpg</li>
+                            <li class="file">rock.jpg</li>
+                            <li class="file">rock_n.jpg</li>
+                            <li class="file">sand.jpg</li>
+                            <li class="file">sand_n.jpg</li>
+                            <li class="file">snow.jpg</li>
+                            <li class="file">underwater_sand_by_dabbex30-d9irnog.jpg</li>
+                            <li class="file">water.jpg</li>
+                            <li class="file">water_n.jpg</li>
+                        </div>
+                        <li class="file">avatar.jpg</li>
+                        <li class="file">base.jpg</li>
+                        <li class="file">basket.png</li>
+                        <li class="file">bball.jpg</li>
+                        <li class="file">bball_n.jpg</li>
+                        <li class="file">bg.png</li>
+                        <li class="file">carbon.png</li>
+                        <li class="file">carbon_n.png</li>
+                        <li class="file">cars.png</li>
+                        <li class="file">check.jpg</li>
+                        <li class="file">chess.jpg</li>
+                        <li class="file">chess_m.jpg</li>
+                        <li class="file">D60</li>
+                        <li class="file">dragon.jpg</li>
+                        <li class="file">dragon_m.jpg</li>
+                        <li class="file">dragon_n.jpg</li>
+                        <li class="file">drone.jpg</li>
+                        <li class="file">heros_c.jpg</li>
+                        <li class="file">logo.png</li>
+                        <li class="file">logo.svg</li>
+                        <li class="file">meca_chassis.jpg</li>
+                        <li class="file">meca_tire.jpg</li>
+                        <li class="file">meca_tools.jpg</li>
+                        <li class="file">meca_wheel.jpg</li>
+                        <li class="file">meca_wheel_n.jpg</li>
+                        <li class="file">net256.png</li>
+                        <li class="file">net256_n.png</li>
+                        <li class="file">plate.jpg</li>
+                        <li class="file">wheel.jpg</li>
+                    </div>
+                </div>
+                <div class="folder_cont">
+                    <li class= "folder inScope">build</li>
+                    <li class= "file">ammo.hex</li>
+                    <li class= "file">ammo.js</li>
+                    <li class= "file">ammo.wasm.js</li>
+                    <li class= "file">ammo.wasm.wasm</li>
+                    <li class= "file">ammo_w.hex</li>
+                    <li class= "file">ammo_w.js</li>
+                    <li class= "file">code.hex</li>
+                    <li class= "file">code.js</li>
+                    <li class= "file">code.min.js</li>
+                    <li class= "file">extract.js</li>
+                    <li class= "file">gun.js</li>
+                    <li class= "file">gun.min.js</li>
+                    <li class= "file">gun.module.js</li>
+                    <li class= "file">lab.hex</li>
+                    <li class= "file">lab.js</li>
+                    <li class= "file">lab.min.js</li>
+                    <li class= "file">shot.js</li>
+                    <li class= "file">shot.min.js</li>
+                    <li class= "file">shot.module.js</li>
+                    <li class= "file">three.js</li>
+                </div>
+                <div class="folder_cont">
+                    <li class= "folder inScope">css</li>            
+                    <li class= "file">style.css</li>
+                </div>
+                <div class="folder_cont">
+                    <li class= "folder inScope">demos</li>
+                    <li class="file">kinematics.js</li>
+                </div>
+                <div class="folder_cont">
+                    <li class= "folder inScope">js</li>
+                    <div class="folder_cont">
+                        <li class= "folder">controls</li>
+                        <li class="file">OrbitControls.js</li>
+                    </div>
+                    <div class="folder_cont">
+                        <li class= "folder">libs</li>
+                        <li class="file">draco_decoder.js</li>
+                    </div>
+                    <li class="file">main.js</li>
+                </div>
+                <div class="folder_cont">
+                    <li class= "folder inScope">src</li>
+                    <div class="folder_cont">
+                        <li class= "folder">gun</li>
+                        <li class="file">Character.js</li>
+                        <li class="file">Collision.js</li>
+                        <li class="file">Constraint.js</li>
+                        <li class="file">engine.js</li>
+                        <li class="file">math.js</li>
+                        <li class="file">RayCaster.js</li>
+                        <li class="file">RigidBody.js</li>
+                        <li class="file">root.js</li>
+                        <li class="file">SoftBody.js</li>
+                        <li class="file">Terrain.js</li>
+                        <li class="file">Vehicle.js</li>
+                    </div>
+                    <div class="folder_cont">
+                        <li class= "folder">shot</li>
+                        <li class="file">Character.js</li>
+                        <li class="file">Collision.js</li>
+                        <li class="file">Constraint.js</li>
+                        <li class="file">ConvexHull.js</li>
+                        <li class="file">ConvexObjectBreaker.js</li>
+                        <li class="file">engine.js</li>
+                        <li class="file">Geometry.js</li>
+                        <li class="file">lzma.js</li>
+                        <li class="file">RayCaster.js</li>
+                        <li class="file">RigidBody.js</li>
+                        <li class="file">root.js</li>
+                        <li class="file">SoftBody.js</li>
+                        <li class="file">Terrain.js</li>
+                        <li class="file">Vehicle.js</li>
+                    </div>
+                    <li class="file">ext_gun.js</li>
+                    <li class="file">ext_shot.js</li>
+                    <li class="file">Gun.js</li>
+                    <li class="file">Shot.js</li>
+                </div>
+                <li class= "file inScope">index.html</li>
+                <li class="file inScope">favicon.ico</li>
+                <li class="file inScope">index.html</li>
+                <li class="file inScope">LICENSE</li>
+                <li class="file inScope">package.json</li>
+                <li class="file inScope">README.md</li>
+                <li class="file inScope">rollup.config.js</li>
+            </ul> 
+        </aside>
+        <aside id="preview">
+            <aside id="file_preview"> 
+                <aside id="options"> 
+                    <ul> 
+                        <li id= "Archivo" class= "selected"><a>Archivo</a></li>
+                        <li id= "Live"><a>Live</a></li>
+                         | 
+                        <li id= "Raw"><a>Raw</a></li>
+                         | 
+                        <li id= "Editar"><a>Editar</a></li>
+                    </ul>
+                </aside> 
+                <div class="code-scroll"><div class="code-filler"></div></div>
+                <aside id="file">
+                    
+                </aside>
+                <aside id="filePr">
+                    
+                </aside>
+                <aside id="edit">
+                    
+                </aside>
+            </aside> 
+                     
+            <ul class="file_tree">
+                <div class="folder_cont">
+                    <li class= "folder inScope">assets</li>
+                    <div class="folder_cont">
+                        <li class= "folder">bvh</li>
+                        <li class="file">action.z</li>
+                    </div>
+                    <div class="folder_cont">
+                        <li class= "folder inScope">models</li>
+                        <li class="file">avatar.sea</li>
+                        <li class="file">avatar_low.sea</li>
+                        <li class="file">basic.sea</li>
+                        <li class="file">basket.sea</li>
+                        <li class="file">bol.sea</li>
+                        <li class="file">bot.sea</li>
+                        <li class="file">buggy.sea</li>
+                        <li class="file">buggy_draco.sea</li>
+                        <li class="file">cars.sea</li>
+                        <li class="file">chess.sea</li>
+                        <li class="file">diamond.sea</li>
+                        <li class="file">dragon.sea</li>
+                        <li class="file">drone.sea</li>
+                        <li class="file">gaz.sea</li>
+                        <li class="file">heros.sea</li>
+                        <li class="file">hog.sea</li>
+                        <li class="file">kaneda.sea</li>
+                        <li class="file">kaneda_draco.sea</li>
+                        <li class="file">mecanum.sea</li>
+                        <li class="file">mecaX.sea</li>
+                        <li class="file">million.sea</li>
+                        <li class="file">pig.sea</li>
+                        <li class="file">test.sea</li>
+                        <li class="file">test2.sea</li>
+                        <li class="file">track.sea</li>
+                    </div>
+                    <div class="folder_cont">
+                        <li class= "folder inScope">sounds</li>
+                        <li class="file">engine1.mp3</li>
+                        <li class="file">engine2.mp3</li>
+                        <li class="file">engine3.mp3</li>
+                        <li class="file">engine4.mp3</li>
+                        <li class="file">ping_pong.mp3</li>
+                    </div>
+                    <div class="folder_cont">
+                        <li class= "folder inScope">textures</li>
+                        <div class="folder_cont">
+                            <li class= "folder">buggy</li>
+                            <li class="file">body.jpg</li>
+                            <li class="file">extra.jpg</li>
+                            <li class="file">extra_n.jpg</li>
+                            <li class="file">pilote.jpg</li>
+                            <li class="file">suspension.jpg</li>
+                            <li class="file">wheel_c.jpg</li>
+                            <li class="file">wheel_n.jpg</li>
+                        </div>
+                        <div class="folder_cont">
+                            <li class= "folder">envmap</li>
+                            <li class="file">downtown.jpg</li>
+                            <li class="file">milkyway.jpg</li>
+                            <li class="file">parking.hdr</li>
+                            <li class="file">parking.jpg</li>
+                            <li class="file">photo.hdr</li>
+                            <li class="file">photo.jpg</li>
+                            <li class="file">red.jpg</li>
+                            <li class="file">river.hdr</li>
+                            <li class="file">river.jpg</li>
+                            <li class="file">stars.jpg</li>
+                            <li class="file">studio.jpg</li>
+                            <li class="file">studio2.jpg</li>
+                            <li class="file">tunnel.hdr</li>
+                            <li class="file">tunnel.jpg</li>
+                        </div>
+                        <div class="folder_cont">
+                            <li class= "folder">kaneda</li>
+                            <li class="file">bike_1_a.jpg</li>
+                            <li class="file">bike_1_c.jpg</li>
+                            <li class="file">bike_1_m.jpg</li>
+                            <li class="file">bike_1_n.jpg</li>
+                            <li class="file">bike_1_n.png</li>
+                            <li class="file">bike_1_r.jpg</li>
+                            <li class="file">bike_2_a.jpg</li>
+                            <li class="file">bike_2_c.jpg</li>
+                            <li class="file">bike_2_m.jpg</li>
+                            <li class="file">bike_2_r.jpg</li>
+                            <li class="file">bike_3_a.jpg</li>
+                            <li class="file">bike_3_c.jpg</li>
+                            <li class="file">bike_3_l.jpg</li>
+                            <li class="file">bike_3_m.jpg</li>
+                            <li class="file">bike_3_n.jpg</li>
+                            <li class="file">bike_3_r.jpg</li>
+                            <li class="file">kaneda_a.jpg</li>
+                            <li class="file">kaneda_c.jpg</li>
+                            <li class="file">kaneda_m.jpg</li>
+                            <li class="file">kaneda_n.jpg</li>
+                            <li class="file">kaneda_r.jpg</li>
+                            <li class="file">tires_c.jpg</li>
+                            <li class="file">tires_n.jpg</li>
+                        </div>
+                        <div class="folder_cont">
+                            <li class= "folder">sky</li>
+                            <li class="file">lens0.png</li>
+                            <li class="file">lens1.png</li>
+                            <li class="file">lensMoon.png</li>
+                            <li class="file">lensSun.png</li>
+                            <li class="file">noise.png</li>
+                        </div>
+                        <div class="folder_cont">
+                            <li class= "folder">spherical</li>
+                            <li class="file">black.jpg</li>
+                            <li class="file">blue.jpg</li>
+                            <li class="file">brush.jpg</li>
+                            <li class="file">ceramic.jpg</li>
+                            <li class="file">chrome.jpg</li>
+                            <li class="file">env.jpg</li>
+                            <li class="file">env0.jpg</li>
+                            <li class="file">env1.jpg</li>
+                            <li class="file">env9.jpg</li>
+                            <li class="file">glow.jpg</li>
+                            <li class="file">metal.jpg</li>
+                            <li class="file">plastic.jpg</li>
+                            <li class="file">red.jpg</li>
+                            <li class="file">sky.jpg</li>
+                            <li class="file">smooth.jpg</li>
+                            <li class="file">wireframe.jpg</li>
+                        </div>
+                        <div class="folder_cont">
+                            <li class= "folder">terrain</li>
+                            <div class="folder_cont">
+                                <li class= "folder">old</li>
+                                <li class="file">crater_n.jpg</li>
+                                <li class="file">grass_n.jpg</li>
+                                <li class="file">rock_n.jpg</li>
+                                <li class="file">sand_n.jpg</li>
+                                <li class="file">water_n.jpg</li>
+                            </div>
+                            <li class="file">crater.jpg</li>
+                            <li class="file">crater_n.jpg</li>
+                            <li class="file">grass.jpg</li>
+                            <li class="file">grass_b.jpg</li>
+                            <li class="file">grass_n.jpg</li>
+                            <li class="file">rock.jpg</li>
+                            <li class="file">rock_n.jpg</li>
+                            <li class="file">sand.jpg</li>
+                            <li class="file">sand_n.jpg</li>
+                            <li class="file">snow.jpg</li>
+                            <li class="file">underwater_sand_by_dabbex30-d9irnog.jpg</li>
+                            <li class="file">water.jpg</li>
+                            <li class="file">water_n.jpg</li>
+                        </div>
+                        <li class="file">avatar.jpg</li>
+                        <li class="file">base.jpg</li>
+                        <li class="file">basket.png</li>
+                        <li class="file">bball.jpg</li>
+                        <li class="file">bball_n.jpg</li>
+                        <li class="file">bg.png</li>
+                        <li class="file">carbon.png</li>
+                        <li class="file">carbon_n.png</li>
+                        <li class="file">cars.png</li>
+                        <li class="file">check.jpg</li>
+                        <li class="file">chess.jpg</li>
+                        <li class="file">chess_m.jpg</li>
+                        <li class="file">D60</li>
+                        <li class="file">dragon.jpg</li>
+                        <li class="file">dragon_m.jpg</li>
+                        <li class="file">dragon_n.jpg</li>
+                        <li class="file">drone.jpg</li>
+                        <li class="file">heros_c.jpg</li>
+                        <li class="file">logo.png</li>
+                        <li class="file">logo.svg</li>
+                        <li class="file">meca_chassis.jpg</li>
+                        <li class="file">meca_tire.jpg</li>
+                        <li class="file">meca_tools.jpg</li>
+                        <li class="file">meca_wheel.jpg</li>
+                        <li class="file">meca_wheel_n.jpg</li>
+                        <li class="file">net256.png</li>
+                        <li class="file">net256_n.png</li>
+                        <li class="file">plate.jpg</li>
+                        <li class="file">wheel.jpg</li>
+                    </div>
+                </div>
+                <div class="folder_cont">
+                    <li class= "folder inScope">build</li>
+                    <li class= "file">ammo.hex</li>
+                    <li class= "file">ammo.js</li>
+                    <li class= "file">ammo.wasm.js</li>
+                    <li class= "file">ammo.wasm.wasm</li>
+                    <li class= "file">ammo_w.hex</li>
+                    <li class= "file">ammo_w.js</li>
+                    <li class= "file">code.hex</li>
+                    <li class= "file">code.js</li>
+                    <li class= "file">code.min.js</li>
+                    <li class= "file">extract.js</li>
+                    <li class= "file">gun.js</li>
+                    <li class= "file">gun.min.js</li>
+                    <li class= "file">gun.module.js</li>
+                    <li class= "file">lab.hex</li>
+                    <li class= "file">lab.js</li>
+                    <li class= "file">lab.min.js</li>
+                    <li class= "file">shot.js</li>
+                    <li class= "file">shot.min.js</li>
+                    <li class= "file">shot.module.js</li>
+                    <li class= "file">three.js</li>
+                </div>
+                <div class="folder_cont">
+                    <li class= "folder inScope">css</li>            
+                    <li class= "file">style.css</li>
+                </div>
+                <div class="folder_cont">
+                    <li class= "folder inScope">demos</li>
+                    <li class="file">kinematics.js</li>
+                </div>
+                <div class="folder_cont">
+                    <li class= "folder inScope">js</li>
+                    <div class="folder_cont">
+                        <li class= "folder">controls</li>
+                        <li class="file">OrbitControls.js</li>
+                    </div>
+                    <div class="folder_cont">
+                        <li class= "folder">libs</li>
+                        <li class="file">draco_decoder.js</li>
+                    </div>
+                    <li class="file">main.js</li>
+                </div>
+                <div class="folder_cont">
+                    <li class= "folder inScope">src</li>
+                    <div class="folder_cont">
+                        <li class= "folder">gun</li>
+                        <li class="file">Character.js</li>
+                        <li class="file">Collision.js</li>
+                        <li class="file">Constraint.js</li>
+                        <li class="file">engine.js</li>
+                        <li class="file">math.js</li>
+                        <li class="file">RayCaster.js</li>
+                        <li class="file">RigidBody.js</li>
+                        <li class="file">root.js</li>
+                        <li class="file">SoftBody.js</li>
+                        <li class="file">Terrain.js</li>
+                        <li class="file">Vehicle.js</li>
+                    </div>
+                    <div class="folder_cont">
+                        <li class= "folder">shot</li>
+                        <li class="file">Character.js</li>
+                        <li class="file">Collision.js</li>
+                        <li class="file">Constraint.js</li>
+                        <li class="file">ConvexHull.js</li>
+                        <li class="file">ConvexObjectBreaker.js</li>
+                        <li class="file">engine.js</li>
+                        <li class="file">Geometry.js</li>
+                        <li class="file">lzma.js</li>
+                        <li class="file">RayCaster.js</li>
+                        <li class="file">RigidBody.js</li>
+                        <li class="file">root.js</li>
+                        <li class="file">SoftBody.js</li>
+                        <li class="file">Terrain.js</li>
+                        <li class="file">Vehicle.js</li>
+                    </div>
+                    <li class="file">ext_gun.js</li>
+                    <li class="file">ext_shot.js</li>
+                    <li class="file">Gun.js</li>
+                    <li class="file">Shot.js</li>
+                </div>
+                <li class= "file inScope">index.html</li>
+                <li class="file inScope">favicon.ico</li>
+                <li class="file inScope">index.html</li>
+                <li class="file inScope">LICENSE</li>
+                <li class="file inScope">package.json</li>
+                <li class="file inScope">README.md</li>
+                <li class="file inScope">rollup.config.js</li>
+            </ul> 
+        </aside>
+    </section>
+    
+    <section id="Store" class="button">
+        <aside id="storeHeader" class="button">
+            
+        </aside>
+        <aside id="actualStore" class="button">
+            <aside id="storeList" class="button">
+                <ul>
+                    <a>
+                        <li class="button">Sección</li>
+                    </a>
+                    <a>
+                        <li class="button">Sección</li>
+                    </a>
+                    <a>
+                        <li class="button">Sección</li>
+                    </a>
+                    <a>
+                        <li class="button">Sección</li>
+                    </a>
+                    <a>
+                        <li class="button">Sección</li>
+                    </a>
+                    <a>
+                        <li class="button">Sección</li>
+                    </a>
+                    <a>
+                        <li class="button">Sección</li>
+                    </a>
+                    <a>
+                        <li class="button">Sección</li>
+                    </a>
+                </ul>
+            </aside>
+            <aside id="storeSection">
+                
+            </aside>
+        </aside>
+       
+    </section>
+
+
+
+        <script>
+            $( "#files" ).resizable({
+                handles: "e",maxWidth: ($(window).width()), resize: function(){if($("#Live").hasClass("selected")){$("#edit")[0].style.zIndex= "6"; $("#edit")[0].style.visibility= "visible"}else if($("#Editar").hasClass("selected")){$("#filePr")[0].style.zIndex= "6"; $("#filePr")[0].style.visibility= "visible"}}, stop: function(){localStorage.setItem("filesWidth", $("#files").width()); if($("#Live").hasClass("selected")){$("#edit")[0].style.zIndex= ""; $("#edit")[0].style.visibility= ""}else if($("#Editar").hasClass("selected")){$("#filePr")[0].style.zIndex= ""; $("#filePr")[0].style.visibility= ""}} }); 
+
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){ 
+                localStorage.getItem("filesWidth") != null? $("#files").width(parseInt(localStorage.getItem("filesWidth")) + "px"): 1216564; 
+                          
+            responsive(); 
+                          
+            localStorage.getItem("selected") != null? $("#"+ localStorage.getItem("selected")).click(): 3413221227; 
+            })
+        </script>
+</body>
+</html>
