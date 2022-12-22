@@ -3764,7 +3764,7 @@ RooT.ready= function(e){
 /*Define maTch, for matching:*/
 RooT.maTch= {}
 
-RooT.maTch.user= new RegExp('^\/[^\/]+$')//A slash anything but a slash and nothing after; e.g.: /usund8n2982d9ncukansc
+RooT.maTch.user= new RegExp('^\/[^\/]+\/$|^\/[^\/]+$')//A slash anything but a slash a slash and nothing after, or A slash anything but a slash and nothing after; e.g.: /usund8n2982d9ncukansc/, /usund8n2982d9ncukansc
 RooT.maTch.photos= new RegExp('^(\/.*?\/)photos$');//A slash anything but a slash and a slash and the word photos after; e.g: /uaocno/photos
 RooT.maTch.videos= new RegExp('^(\/.*?\/)videos$');//A slash anything but a slash and a slash and the word videos after; e.g: /uaocno/photos
 RooT.maTch.blog= new RegExp('^(\/.*?\/)blog(\/.*?)$')//A slash anything but a slash a slash and the word blog after, a slash and anything; e.g: /uaocno/blog/onvesb
