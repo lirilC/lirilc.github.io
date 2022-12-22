@@ -62,6 +62,19 @@ var user= {
         }
     },
     stories: {
+        "/whale_Shailene/pos/zxMaLXAkxg": {
+            type: "links",
+            date: {
+                full: "20 de Diciembre de 2022 a las 7:1 pm",
+                min: "20 de Diciembre a las 7:1 pm"
+            },
+            title: "--The Whole Board--",
+            description: ``,
+            contents:  `<section id="links">
+                            <a class="link" target="_blank" href="/whale_Shailene/p/K28fcCjs9J20v"><span class="Title">--The Whole Board--</span><span class="linktype">Proyecto</span></a>
+                        </section>`,
+            Comentarios: ""
+        },
         "/L/img/CT8HFtH57Y": {
             type: "repostImg",
             date: {
