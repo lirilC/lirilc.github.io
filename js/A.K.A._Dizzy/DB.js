@@ -252,27 +252,36 @@ export function _user(){
             }
         },
         stories: {
-            /*"/A.K.A._Dizzy/pos/p413w4Mawl": {
+            "/A.K.A._Dizzy/pos/p413w4Mawl": {
                 type: "links",
                 date: {
-                    full: "17 de Septiembre de 2022 a las 2:52 pm",
-                    min: "17 de Septiembre a las 2:52 pm"
+                    full: "24 de Diciembre de 2022 a las 0:0 pm",
+                    min: "24 de Diciembre a las 0:0 pm"
                 },
-                title: `Christmas Gifts From The Gallego Escobar Family`,
+                title: `Christmas Gifts From The Gallego Escobar Family Mobile`,
                 description: ``,
                 contents:  `<containment>
                                 <section id="links">
-                                    <a title= "Christmas Gifts From The Gallego Escobar Family > ... > Mobile" class="link" target="_blank" href="/A.K.A._Dizzy/p/h3dd2cDcsW2R3/(!) Dont Open Until Christmas/(!)/Gifts/Mobile"><span class="Title">Christmas Gifts From The G... ly > ... > Mobile </span><span class="linktype">Proyecto</span></a>
+                                    <a title= "/raw/ > ... > Christmas Gifts From The Gallego Escobar Family > Mobile" class="link" target="_blank" href="/A.K.A._Dizzy/raw/p/h3dd2cDcsW2R3/(!)%20Dont%20Open%20Until%20Christmas/(!)/Gifts/Mobile/"><span class="Title">/raw/ > ... > Christmas Gifts From The G... ly > Mobile </span><span class="linktype">Proyecto</span></a>
                                 </section>
                                 <text>
-                                    <p style="color: #aaa; text-align: left;">I averaged <i>the right</i> Christmases; those of the right years; and obtained this day as Christmas, because, pretty much, average, it's Christmas. So, even though it's not the day in which, 11 months and 24 days later of the 0 after Christ, was born my uncle Jesus Of Nazareth, it's Christmas average. 🎄</p>
-                                    <p style="color: #aaa; text-align: left;">&nbsp&nbspAbre el archivo <i>index.html</i> y dale click a la pestaña <i>Raw</i> para poder usarlo. 🎄</p>
-                                    <p style="color: #aaa; text-align: left;">&nbsp&nbspPuedes ejecutar aNGEL(); por_siLaBas(); y dinosaurios con el contenido de #dieded escribiendo comandos en la consola o usar el <i>touch</i> de tu dispositivo para usar dinosaurios mobile. 🎄</p>
-                                    <p style="color: #aaa; text-align: left;">&nbsp&nbspPara ejecutar aNGEL(); con el contenido de #dieded escribe <i>a</i> en la consola y presiona el botón que dice <i>>></i>. 🎄</p>
-                                    <p style="color: #aaa; text-align: left;">&nbsp&nbspPara ejecutar por_siLaBas(); con el contenido de #dieded escribe <i>p</i> en la consola y presiona el botón que dice <i>>></i>. 🎄</p>
-                                    <p style="color: #aaa; text-align: left;">&nbsp&nbspPara ejecutar dinosaurios con el contenido de #dieded escribe <i>d</i> en la consola y presiona el botón que dice <i>>></i>. 🎄</p>
-                                    <p style="color: #aaa; text-align: left;">&nbsp&nbspUsa el botón <i>#ckl</i>, el botón rectangular alargado verticalmente que hay a la derecha abajo de #Sara, donde están los <i>Suave Efecto Cafeteros</i> para ver el resultado; deberás hundirlo varias veces, ya que éste en ciertos milisegundos se tapará con un nuevo <i>Suave Efecto Cafetero</i>. 🎄</p>
-                                    <p style="color: #aaa; text-align: left;">&nbsp&nbspPara usar dinosaurios mobile, úsalo como se usa dinosaurios, pero aparece rectángulos escribiendo <i>rwr</i> en la consola y luego presiona el botón <i>>></i>. Cuando quieras aparecer el rectángulo rojo para ejecutar dinosaurios, escribe <i>rwawwr</i> en la consola y presiona <i>>></i>. 🎄</p>
+                                    <p style="color: #aaa; text-align: left;">¡Feliz Navidad! 🎄</p>
+                                    <p style="color: #aaa; text-align: left;">&nbsp&nbspAbre el link de arriba para poder usarlo. 🎄</p>
+                                    <p style="color: #aaa; text-align: left;">&nbsp&nbspEl rectángulo de arriba a la derecha se llama <i>#dieded</i>, el botón grande de abajo a la derecha se llama <i>#ckl</i>, el rectángulo rojo grande con los textos de los cuales se cuentan las palabras y los caracteres se llama <i>#Sara</i> y los textos son los <i>Suave Efecto Cafetero</i>s, la entrada de texto de abajo de <i>#Sara</i> es la consola, y el botón que tiene a la derecha y dice <b>>></b> se llama <i>.Ex</i>. 🎄</p>
+                                    <p style="color: #aaa; text-align: left;">&nbsp&nbspPuedes ejecutar comandos que introduzcas en la consola presionando <i>.Ex</i>. 🎄</p>
+                                    <br>
+                                    <p style="color: #aaa; text-align: left;"><b>Estos son los comandos que puede ejecutar la consola</b> 🎄</p>
+                                    <p style="color: #aaa; text-align: left;">&nbsp&nbsp<b>a</b>: ejecutas <a target="_blank" href="/A.K.A._Dizzy/blog/aNGEL();">aNGEL();</a> con el contenido de <i>#dieded</i>. 🎄</p>
+                                    <p style="color: #aaa; text-align: left;">&nbsp&nbsp<b>p</b>: ejecutas <a target="_blank" href="/A.K.A._Dizzy/blog/por_siLaBas();">por_siLaBas();</a> con el contenido de <i>#dieded</i>. 🎄</p>
+                                    <p style="color: #aaa; text-align: left;">&nbsp&nbsp<b>d</b>: ejecutas <a target="_blank" href="/A.K.A._Dizzy/blog/Dinosaurios">dinosaurios</a> con el contenido de <i>#dieded</i>. 🎄</p>
+                                    <p style="color: #aaa; text-align: left;">&nbsp&nbspPresiona <i>#ckl</i> para ver el resultado; deberás hundirlo varias veces, ya que <i>#Sara</i> en ciertos milisegundos se tapará con un nuevo <i>Suave Efecto Cafetero</i>. 🎄</p>
+                                    <p style="color: #aaa; text-align: left;">&nbsp&nbsp<b>de</b>: abres el <a target="_blank" href="/A.K.A._Dizzy/blog/Algunas Propiedades De Mis Escritos#%C2%BFPropiedades?,%20%C2%A1propietarios!">Robot De Dedicatorias</a>. 🎄</p>
+                                    <p style="color: #aaa; text-align: left;"><b>Ciertos comandos son peligrosos, debes escribir <i>d</i> (dangerous.) al principio del comando; estos son:</b> 🎄</p>
+                                    <p style="color: #aaa; text-align: left;">&nbsp&nbsp<b>d sECF ll</b>: pausas los <i>Suave Efecto Cafero</i>s. 🎄</p>
+                                    <p style="color: #aaa; text-align: left;">&nbsp&nbsp<b>d sECF ></b>: reanudas los <i>Suave Efecto Cafero</i>s. 🎄</p>
+                                    <p style="color: #aaa; text-align: left;">&nbsp&nbsp<b>d sECF get</b>: obtienes la posición del <i>Suave Efecto Cafetero</i> actual (empiezan en <i>0</i>). 🎄</p>
+                                    <p style="color: #aaa; text-align: left;">&nbsp&nbsp<b>d sECF set <i>{#}</i></b>: haces que el próximo <i>Suave Efecto Cafetero</i> sea el que escribas en vez de <i>{#}</i> (empiezan en <i>0</i>)&nbsp;&nbsp;<i>E. g.: </i><b>d sECF set 13</b>. 🎄</p>
+                                    <p style="color: #aaa; text-align: left;">&nbsp&nbspPara usar dinosaurios mobile, úsalo como se usa dinosaurios; aparece rectángulos escribiendo <b>rwr</b> en la consola y luego presiona el botón <i>.Ex</i>; dibuja con el táctil. Cuando quieras aparecer el rectángulo rojo para ejecutar dinosaurios, escribe <b>rwawwr</b> en la consola y presiona <i>.Ex</i>. 🎄</p>
                                     <p style="text-align: center; ">
                                         La Familia Gallego Escobar <br>
                                         Everyone's
@@ -280,7 +289,7 @@ export function _user(){
                                 </text>
                             </containment>`,
                 Comentarios: ""
-            },*/
+            },
             "/whale_Shailene/pos/zxMaLXAkxg": {
                 type: "repostLinks",
                 date: {
@@ -596,7 +605,7 @@ export function _user(){
             "/A.K.A._Dizzy/pos/THKgcCyzBy": {
                 type: "links",
                 date: {
-                    full: "24 de Diciembre de 2021 a las 0:00 am",
+                    full: "24 de Diciembre de 2021 a las 0:0 am",
                     min: "Diciembre de 2021"
                 },
                 title: `Christmas Gifts From The Gallego Escobar Family`,
@@ -616,7 +625,7 @@ export function _user(){
                                 </text>
                             </containment>`,
                 Comentarios: "",
-                Editado: [ 'type= "c"; edHistory= {"Editado el 25 de Diciembre de 2021 a las 8:11 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/fa22c59c827424670fa7d5a42362e9ee069eb5e8/A.K.A._Dizzy/pos/THKgcCyzBy.html", "Editado el 25 de Diciembre de 2021 a las 8:38 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/815df2d46e0cb28c17080f2fe6faa9ad5591908d/A.K.A._Dizzy/pos/THKgcCyzBy.html",  "Editado el 24 de Diciembre de 2021 a las 6:00 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/cc20cfd3645362371e27a6e82afe3ad62584dc00/A.K.A._Dizzy/pos/THKgcCyzBy.html", "Editado el 24 de Diciembre de 2021 a las 5:23 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/7d6960a98076abd762f1d5897b328dcde170fe47/A.K.A._Dizzy/pos/THKgcCyzBy.html", "24 de Diciembre a las 0:00 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/86f2ee25494787a1f456467f6d937728ff9433d0/A.K.A._Dizzy/pos/THKgcCyzBy.html"}', "Editado el 25 de Diciembre de 2021 a las 8:11 pm"]
+                Editado: [ 'type= "c"; edHistory= {"Editado el 25 de Diciembre de 2021 a las 8:11 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/fa22c59c827424670fa7d5a42362e9ee069eb5e8/A.K.A._Dizzy/pos/THKgcCyzBy.html", "Editado el 25 de Diciembre de 2021 a las 8:38 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/815df2d46e0cb28c17080f2fe6faa9ad5591908d/A.K.A._Dizzy/pos/THKgcCyzBy.html",  "Editado el 24 de Diciembre de 2021 a las 6:00 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/cc20cfd3645362371e27a6e82afe3ad62584dc00/A.K.A._Dizzy/pos/THKgcCyzBy.html", "Editado el 24 de Diciembre de 2021 a las 5:23 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/7d6960a98076abd762f1d5897b328dcde170fe47/A.K.A._Dizzy/pos/THKgcCyzBy.html", "24 de Diciembre a las 0:0 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/86f2ee25494787a1f456467f6d937728ff9433d0/A.K.A._Dizzy/pos/THKgcCyzBy.html"}', "Editado el 25 de Diciembre de 2021 a las 8:11 pm"]
             },
             "/A.K.A._Dizzy/pos/W0l0mD51G1": {
                 type: "links",

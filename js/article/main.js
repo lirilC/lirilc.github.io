@@ -557,7 +557,7 @@ K0= function(){
 $(document).on("ready",function(){ 
     purger.purge(); 
 
-
+if("undefined"!=typeof $("h2").filter(function(){if($(this).text() == decodeURI(window.location.hash).slice(1)){return true}else{return false}})[0])$("h2").filter(function(){if($(this).text() == decodeURI(window.location.hash).slice(1)){return true}else{return false}})[0].scrollIntoView({block:"center"})
 $(".Editado").on("contextmenu", function(er){er.preventDefault()})
 $(".Editado").on("mouseup", function(e){
 console.log(e)
@@ -1032,39 +1032,39 @@ function closeModal() {
 
     $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 1 !important; }; "; 
 }
-		$('header .knob').trigger(
-        		'configure',
-        		{   
-        		    "fgColor":"#fff"
-        		}
-    		);
+        $('header .knob').trigger(
+                'configure',
+                {   
+                    "fgColor":"#fff"
+                }
+            );
     
     $(".star").on("click",function(){
-		 $(this).toggleClass("true")
-	});
+         $(this).toggleClass("true")
+    });
     $(".bookmark").on("click",function(){
-		 $(this).toggleClass("true")
-	});
+         $(this).toggleClass("true")
+    });
     
      $(".options.first .bookmark").on("click",function(){
         $('.options.ending .bookmark').toggleClass("true")
           
-	});
+    });
     $(".options.ending .bookmark").on("click",function(){
         $('.options.first .bookmark').toggleClass("true")
           
-	});
+    });
     
      $(".options.first .star").on("click",function(){
         $('.options.ending .star').toggleClass("true")
           
-	});
+    });
     $(".options.ending .star").on("click",function(){
         $('.options.first .star').toggleClass("true")
           
-	});
+    });
     
-	$("#dots").on("click", function () {
+    $("#dots").on("click", function () {
         $("#Store").toggleClass("open");
         $("#index-trigger").children().toggleClass("openedStore");
         $("#right-menu #dots").children().toggleClass("openedStore");
@@ -1113,11 +1113,11 @@ function closeModal() {
     });
     $("#close").on("click",function(){
         closeModal() 
-	});
+    });
     
     $("#wrapper").on("click",function(){
          closeModal() 
-	});
+    });
     document.onkeydown = function(evt) {
         evt = evt || window.event;
         if (evt.keyCode == 27) {
@@ -1137,7 +1137,7 @@ $(document).on("keypress", function(e){
         
     }
 })
-	$("#profileTrigger").on("click", function (e) {
+    $("#profileTrigger").on("click", function (e) {
         $(".wrapper").toggleClass("visible")
         $("#right-menu .index-arrow").toggleClass("open");
         $("#profileSettings").toggleClass("open");
@@ -1186,8 +1186,8 @@ e.stopPropagation()
 
 
     });
-	
-	
+    
+    
 });
 
 $( window ).on("resize", function(){

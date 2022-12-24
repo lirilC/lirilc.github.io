@@ -138,3 +138,11 @@ text{
 #theater .vjs-text-track-display {
     bottom: 8em;
 }
+i, q, b, sup  
+{ 
+  color: inherit; 
+  font-weight: lighter} 
+b
+{
+    color: #666262;
+}
