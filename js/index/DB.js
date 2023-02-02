@@ -1,6 +1,65 @@
 export function _index(){
 var index= {
     stories: [
+    "/A.K.A._Dizzy/pos/kdm0g0dTee", {
+            user: {
+                username: "A.K.A._Dizzy",
+                users_name: "Luis Eduardo Gallego García",
+                profilePic: {
+                        "/A.K.A._Dizzy/img/1AzV0qwVwn": {
+                            type: "img",
+                            date: {
+                                full: "13 de Enero de 2022 a las 7:57 pm",
+                                min: "13 de Enero a las 7:57 pm"
+                            },
+                            city: {name: "Nariño", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG/250px-Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG", description: `Nariño es un municipio de Colombia, localizado en la subregión Oriente del departamento de Antioquia. Limita por el norte con los municipios de Sonsón y Argelia, por el este y sur con el departamento de Caldas y por el oeste con el municipio de Sonsón. </br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nari%C3%B1o_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+                            title: `You start truly appreciating life once you realize you're special, not better.`,
+                            description: ``,
+                            contents:  {image: "1AzV0qwVwn_tn.gif"},
+                            Comentarios: ""
+                        }
+                    },
+                rol:{
+                    rol: "CEO",
+                    level: "100"
+                },
+                tool:  `<div class='tool'>
+                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <div class='datos'>
+                                <ul class='actions'>
+                                    <li class='chatear' title='Chatear'>C</li>
+                                    <li class='agregar' title='Agregar'>A</li>
+                                    <li class='juzgar' title='Juzgar'>J</li>
+                                </ul>                  
+                                <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
+                                <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
+                            </div>
+                            <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
+                            <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
+                            <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
+                            <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
+                        </div>`
+            },
+            type: "links",
+            date: {
+                full: "2 de Febrero de 2023 a la 1:17 pm",
+                min: "2 de Febrero a la 1:17 pm"
+            },
+            title: `Algo Más Sobre Mí (corregido y actualizado)`,
+            description: ``,
+            contents:  `<containment>
+                            <section id="links">
+                                <a class="link" target="_blank" href="/A.K.A._Dizzy/blog/Algo Más Sobre Mí"><span class="Title">Algo Más Sobre Mí</span><span class="linktype">Blog</span></a>
+                            </section>
+                            <text>
+                                <br>
+                                <br>
+                                <p style="color: #aaa; text-align: left;">Con muchas más funcionalidades y todos los "Cuídeme a las niñas" y "Take care of the ladies for me" corregidos, un nuevo Algo Más Sobre Mí; igual está en construcción.</p>
+                            </text>
+                        </containment>`,
+            Comentarios: ""
+        },
         "/A.K.A._Dizzy/pos/p413w4Mawl", {
             user: {
                 username: "A.K.A._Dizzy",
@@ -76,6 +135,53 @@ var index= {
                                 </p>
                             </text>
                         </containment>`,
+            Comentarios: ""
+        },
+        "/whale_Shailene/pos/zxMaLXAkxg", {
+            user: {
+                username: "whale_Shailene",
+                users_name: "Shailene Diann Woodley",
+                profilePic: {
+                        "/whale_Shailene/img/RKRWeNhDgJ": {
+                            type: "img",
+                            date: {
+                                full: "19 de Noviembre de 2022 a las 7:4 pm",
+                                min: "19 de Noviembre a las 7:4 pm"
+                            },
+                            title: `.monot.`,
+                            description: ``,
+                            contents:  {image: "RKRWeNhDgJ_tn.jpg"},
+                            Comentarios: ``
+                        }
+                    },
+                rol:{
+                    rol: "SEO",
+                    level: "94"
+                },
+                tool:  `<div class='tool'>
+                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='98'>
+                            <img src='/resources/images/whale_Shailene/RKRWeNhDgJ_tn.jpg'>
+                            <div class='datos'>
+                              <ul class='actions'>
+                                <li class='chatear' title='Chatear'>C</li>
+                                <li class='agregar' title='Agregar'>A</li>
+                                <li class='juzgar' title='Juzgar'>J</li>
+                              </ul>
+                              <p class='username' title= 'whale_Shailene'>Shailene Diann Woodley</p>
+                              <p class='rol'>SEO <b style='color:#fff;'>+98</b></p>
+                            </div>
+                        </div>`
+            },
+            type: "links",
+            date: {
+                full: "20 de Diciembre de 2022 a las 7:1 pm",
+                min: "20 de Diciembre a las 7:1 pm"
+            },
+            title: "--The Whole Board--",
+            description: ``,
+            contents:  `<section id="links">
+                            <a class="link" target="_blank" href="/whale_Shailene/p/K28fcCjs9J20v"><span class="Title">--The Whole Board--</span><span class="linktype">Proyecto</span></a>
+                        </section>`,
             Comentarios: ""
         },
         "/L/img/CT8HFtH57Y", {
@@ -271,7 +377,7 @@ var index= {
                         </section>`,
             Comentarios: ``
         },
-        "/AuraCardonaC/img/eQZeHjWK8V", {
+    	"/AuraCardonaC/img/eQZeHjWK8V", {
             user: {
                 username: "AuraCardonaC",
                 users_name: "Aura María Cardona Demasiado",

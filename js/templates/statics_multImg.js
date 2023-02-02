@@ -252,7 +252,7 @@ export function app () {
                               <div class="info">
                                   <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
                                   <img id="pic" alt="" src="/resources/images/${user.username}/${Object.values(user.profilePic)[0].contents.image}">
-                                  <p class="username"><a class= "target" href= "/${user.username}" title= "${user.tool}">${user.users_name}</a> <br><span title= "24 de Diciembre de 2021 a las 0:0 am" class="time">Diciembre de 2021</span></p>
+                                  <p class="username"><a class= "target" href= "/${user.username}" title= "${user.tool}">${user.users_name}</a> <br><span title= "24 de Diciembre de 2021 a las 0:00 am" class="time">Diciembre de 2021</span></p>
                                                                 ${typeof user.fotos.fotos[_co].Editado !== "undefined"? `<span onmousedown= '${user.fotos.fotos[_co].Editado[0]}' title='${user.fotos.fotos[_co].Editado[1]}' class="Editado">Editado</span>`: ``}
                               </div>
                               <div class="description" style="padding-top: 76px;">
@@ -299,7 +299,7 @@ export function app () {
                                                 <div class="info">
                                                     <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
                                                     <img id="pic" alt="" src="/resources/images/${user.username}/${Object.values(user.profilePic)[0].contents.image}">
-                                                    <p class="username"><a class= "target" href= "/${user.username}" title= "${user.tool}">${user.users_name}</a> <br><span title= "24 de Diciembre de 2021 a las 0:0 am" class="time">Diciembre de 2021</span></p>
+                                                    <p class="username"><a class= "target" href= "/${user.username}" title= "${user.tool}">${user.users_name}</a> <br><span title= "24 de Diciembre de 2021 a las 0:00 am" class="time">Diciembre de 2021</span></p>
                                                                                   ${typeof user.fotos.fotos[_co].Editado !== "undefined"? `<span onmousedown= '${user.fotos.fotos[_co].Editado[0]}' title='${user.fotos.fotos[_co].Editado[1]}' class="Editado">Editado</span>`: ``}
                                                 </div>
                                                 <div class="description" style="padding-top: 76px;">

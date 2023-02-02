@@ -873,8 +873,17 @@ content: "\e904"
 #article #text p
 {
     color: #7A7A7A;
-    
- } 
+    hyphens: auto;    
+} 
+#article #text .poema span
+{
+    color: #7A7A7A;
+} 
+#article #text .poema span:hover
+{
+    text-decoration: underline;
+    text-decoration-style: dashed;
+}
 #article #text h2
 {
     color: #7A7A7A;
@@ -1508,7 +1517,7 @@ time{
     border-radius: 2px !important;
   }
 .ui-tooltip-content {
-    color: #f1c40f !important;
+    color: #443e24 !important;
    position: relative;
   }
 .tool
@@ -1802,4 +1811,33 @@ background-color: #ddd}
 .informH{
     color: #666;
     text-align: center
+}
+.hdn p:first-child {
+  margin-top: 0;
+}
+.hdn p {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.nombre.activeforURIinfo {
+  color: #2b4880 !important;
+  cursor: pointer;
+}
+.nombre.activeforURIinfo:before {
+  font-family: icomoon;
+}
+.nombre.activeforURIinfo:before {
+  content: "\f0c1";
+  position: absolute;
+  left: -1.2em;
+  top: 29px;
+  font-size: 0.7em;
+  cursor: pointer;
+}
+.auCT {
+    color: #b9a3a3;
+    /*text-shadow: 1px 1px #a1a6aa;*/
+    padding: 3px 6px;
+    width: 200px;
+    max-height: calc(100vh - 30px);
 }

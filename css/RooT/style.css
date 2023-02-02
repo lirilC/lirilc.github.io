@@ -1889,6 +1889,13 @@ border-radius: 50%;
 position: absolute;
 left: 18px;
 top: 18px}
+.searchResults .result .screenshot img{
+height: 96px;
+}
+.searchResults .result .screenshot{
+display: inline-block;
+padding-right: 23px
+}
 .searchResults .result .username{
 display: inline-block;
 height: 111px;
@@ -1896,6 +1903,14 @@ position: absolute;
 line-height: 111px;
 padding-left: 23px;
 border-left: 1px solid #ccc}
+.searchResults .result .appName{
+display: inline-block;
+height: 111px;
+position: absolute;
+line-height: 111px;
+padding-left: 23px;
+border-left: 1px solid #ccc;
+top: 8px;}
 .searchResults .result .username .rol{
 display: inline-block;
 padding: 9px 9px;
@@ -7562,4 +7577,17 @@ text{
 b
 {
     color: #666262;
+}
+.vjs-text-track{
+    background-color: #e5daec17 !important;
+}
+.vjs-tt-cue {
+    color: #dbdada;
+    text-shadow: 1px 1px #ded8e3;
+}
+.vjs-default-skin .vjs-menu-button .vjs-menu .vjs-menu-content
+{
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
 }

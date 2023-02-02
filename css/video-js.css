@@ -895,10 +895,11 @@ body.vjs-full-window {
 .video-js .vjs-text-track-display {
   text-align: center;
   position: absolute;
-  bottom: 4em;
+  bottom: calc(10.1634%);
   /* Leave padding on left and right */
   left: 1em;
   right: 1em;
+  pointer-events: none;
 }
 /* Move captions down when controls aren't being shown */
 
@@ -955,7 +956,7 @@ body.vjs-full-window {
   color: #F4A460;
 }
 #theater .vjs-text-track-display {
-    bottom: 8em;
+    bottom: calc(10.1634% + 50px);
 }
 /* -----------------------------------------------------------------------------
 The original source of this file lives at

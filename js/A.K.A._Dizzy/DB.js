@@ -252,6 +252,26 @@ export function _user(){
             }
         },
         stories: {
+            "/A.K.A._Dizzy/pos/kdm0g0dTee": {
+                type: "links",
+                date: {
+                    full: "2 de Febrero de 2023 a la 1:17 pm",
+                    min: "2 de Febrero a la 1:17 pm"
+                },
+                title: `Algo Más Sobre Mí (corregido y actualizado)`,
+                description: ``,
+                contents:  `<containment>
+                                <section id="links">
+                                    <a class="link" target="_blank" href="/A.K.A._Dizzy/blog/Algo Más Sobre Mí"><span class="Title">Algo Más Sobre Mí</span><span class="linktype">Blog</span></a>
+                                </section>
+                                <text>
+                                    <br>
+                                    <br>
+                                    <p style="color: #aaa; text-align: left;">Con muchas más funcionalidades y todos los "Cuídeme a las niñas" y "Take care of the ladies for me" corregidos, un nuevo Algo Más Sobre Mí; igual está en construcción.</p>
+                                </text>
+                            </containment>`,
+                Comentarios: ""
+            },
             "/A.K.A._Dizzy/pos/p413w4Mawl": {
                 type: "links",
                 date: {
