@@ -7,7 +7,7 @@ var user= {
                 type: "img",
                 date: {
                     full: "13 de Agosto de 2022 a las 10:8 pm",
-                    min: "13 de Agosto a las 10:8 pm"
+                    min: "Enero de 2022"
                 },
                 title: `El mejor momento 😍🌅`,
                 description: ``,
@@ -454,7 +454,7 @@ var user= {
             type: "img",
             date: {
                 full: "14 de Enero de 2022 a las 4:27 pm",
-                min: "14 de Enero a las 4:27 pm"
+                min: "Enero de 2022"
             },
             city: {name: "Dorado", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Dorado%2C_Puerto_Rico%2C_Central_Square.jpg/250px-Dorado%2C_Puerto_Rico%2C_Central_Square.jpg", description: `Dorado es un municipio de la costa norte de Puerto Rico. Fundado en el 1842 por Jacinto López. También conocido como 'La Ciudad Ejemplar', 'Ciudad Dorada', y 'La Más Limpia de Puerto Rico'. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Dorado_(Puerto_Rico)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: ``,
@@ -466,7 +466,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "20 de Enero de 2022 a las 5:10 pm",
-                min: "20 de Enero a las 5:10 pm"
+                min: "Enero de 2022"
             },
             city: {name: "Lago de Como", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Bellagio_2.jpg/1024px-Bellagio_2.jpg", description: `El lago de Como o Lario (en italiano: lago di Como o Lario), es un lago situado en la región de Lombardia, en Italia, más específicamente en las provincias de Como y Lecco. Está situado a 199 metros de altitud sobre el nivel del mar y tiene una superficie de 146 km². Con sus 416 metros de profundidad (en la presa de Argegno) es uno de los lagos más profundos de Europa. Es el tercer lago más grande de Italia, después del lago de Garda (1º) y el lago Mayor. Tiene forma de una 'Y' invertida. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Lago_de_Como'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: `Lake Como`,
@@ -478,7 +478,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "27 de Enero de 2022 a las 3:16 pm",
-                min: "27 de Enero a las 3:16 pm"
+                min: "Enero de 2022"
             },
             title: ``,
             description: ``,
@@ -489,7 +489,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "9 de Febrero de 2022 a las 9:19 am",
-                min: "9 de Febrero a las 9:19 am"
+                min: "Febrero de 2022"
             },
             title: `It’s giving Dracula’s maid`,
             description: ``,
@@ -500,7 +500,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "21 de Febrero de 2022 a las 2:21 am",
-                min: "21 de Febrero a las 2:21 am"
+                min: "Febrero de 2022"
             },
             title: `Was going for business casual Bratz doll 🧡`,
             description: ``,
@@ -511,7 +511,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "5 de Marzo de 2022 a las 8:10 pm",
-                min: "5 de Marzo a las 8:10 pm"
+                min: "Marzo de 2022"
             },
             title: `My underwire is poking out of my dress and I have white nail polish all over my hand from a failed in-car manicure, but don’t look at that. just focus on what’s working 🧁 🧁`,
             description: ``,
@@ -522,7 +522,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "28 de Marzo de 2022 a las 6:40 pm",
-                min: "28 de Marzo a las 6:40 pm"
+                min: "Marzo de 2022"
             },
             title: `Everybody’s grandma had that one sofa…swipe`,
             description: ``,
@@ -533,7 +533,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "28 de Marzo de 2022 a las 6:40 pm",
-                min: "28 de Marzo a las 6:40 pm"
+                min: "Marzo de 2022"
             },
             city: {name: "São Paulo​", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/CENU%2C_S%C3%A3o_Paulo%2C_Brasil_%28cropped%29.jpg/1280px-CENU%2C_S%C3%A3o_Paulo%2C_Brasil_%28cropped%29.jpg", description: `São Paulo​ (en español San Pablo)​ y oficialmente denominada como Município de São Paulo, es la ciudad más poblada de Brasil y capital del Estado de São Paulo y la principal ciudad de la región Metropolitana de São Paulo, en la región sudeste del país. Con una población de 12 176 866 habitantes (en 2018)​ en la ciudad propia y de 21 893 053 habitantes en su área metropolitana (en 2010)​, son la ciudad y la metrópoli más pobladas de América y del hemisferio occidental, ​ además de ser entre las aglomeraciones urbanas más pobladas del mundo.​ También es la ciudad más poblada de la lusofonia (mayor ciudad/metrópoli del mundo hablante del idioma portugués). São Paulo es la ciudad brasileña más influyente en el escenario global, siendo, en 2016, la 11ª ciudad más globalizada del planeta, recibiendo la clasificación de ciudad global alfa, por parte del Globalization and World Cities Study Group & Network (GaWC). Asimismo, es la ciudad lusófona más poblada e importante del mundo en términos tanto demográficos como culturales y económicos. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/São_Paulo'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: `❤️`,
@@ -545,7 +545,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "16 de Septiembre de 2022 a las 8:40 pm",
-                min: "16 de Septiembre a las 8:40 pm"
+                min: "Septiembre de 2022"
             },
             title: `The theme was roller disco`,
             description: ``,
@@ -556,7 +556,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "30 de Septiembre de 2022 a las 6:7 am",
-                min: "30 de Septiembre a las 6:7 am"
+                min: "Septiembre de 2022"
             },
             title: `Britney and Justin if they had been Greenwich Village art school drop outs instead of Disney channel sweethearts`,
             description: ``,
@@ -567,7 +567,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "1 de Octubre de 2022 a las 8:17 pm",
-                min: "1 de Octubre a las 8:17 pm"
+                min: "Octubre de 2022"
             },
             title: `deadly nightshade 🌸🙇🏻‍♀️`,
             description: ``,
@@ -578,7 +578,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "3 de Octubre de 2022 a las 5:16 pm",
-                min: "3 de Octubre a las 5:16 pm"
+                min: "Octubre de 2022"
             },
             title: `a slutty but studious Targaryen goes to Paris`,
             description: ``,

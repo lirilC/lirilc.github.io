@@ -7,7 +7,7 @@ var user= {
                 type: "img",
                 date: {
                     full: "13 de Enero de 2022 a las 7:57 pm",
-                    min: "13 de Enero a las 7:57 pm"
+                    min: "Enero de 2022"
                 },
                 city: {name: "Nariño", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia._tn.jpg/250px-Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia._tn.jpg", description: `Nariño es un municipio de Colombia, localizado en la subregión Oriente del departamento de Antioquia. Limita por el norte con los municipios de Sonsón y Argelia, por el este y sur con el departamento de Caldas y por el oeste con el municipio de Sonsón. </br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nari%C3%B1o_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
                 title: `You start truly appreciating life once you realize you're special, not better.`,

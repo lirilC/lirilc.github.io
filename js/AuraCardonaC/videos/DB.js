@@ -7,7 +7,7 @@ var user= {
                 type: "img",
                 date: {
                     full: "13 de Agosto de 2022 a las 10:8 pm",
-                    min: "13 de Agosto a las 10:8 pm"
+                    min: "Agosto de 2022"
                 },
                 title: `El mejor momento 😍🌅`,
                 description: ``,
@@ -48,7 +48,7 @@ var user= {
             type: "video",
             date: {
                 full: "5 de Marzo de 2022 a las 2:14 pm",
-                min: "5 de Marzo a las 2:14 pm"
+                min: "Marzo de 2022"
             },
             title: `¡Pensé ponerle un fondo de canción a este video pero luego me di cuenta de que cada sonido que hay en él vale la pena escucharlo y sentirlo!`,
             description: `¡Playa!, ¡brisa!, ¡mar!, ¡gaviotas! <br><br>💙`,

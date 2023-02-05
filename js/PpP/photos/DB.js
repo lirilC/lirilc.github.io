@@ -7,7 +7,7 @@ var user= {
                 type: "img",
                 date: {
                     full: "20 de Septiembre de 2022 a las 4:7 pm",
-                    min: "20 de Septiembre a las 4:7 pm"
+                    min: "Septiembre de 2022"
                 },
                 city: {name: "Rionegro", pic: "https://upload.wikimedia.org/wikipedia/commons/2/26/Atardecer-parque.jpg", description: `Rionegro es una pequeña ciudad en los Andes colombianos. Aquí se encuentra el aeropuerto internacional de Medellín. En la Plaza de la Libertad está la Catedral de San Nicolás, con sus cúpulas. El Museo Histórico Casa de la Convención se encuentra en un edificio en el que se sancionó una versión de la constitución colombiana en 1863. Al sudoeste, está Tutucán, que es una réplica de un pueblo típico local, con una iglesia, un molino y una granja. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Rionegro_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
                 title: ``,
@@ -38,7 +38,7 @@ var user= {
             type: "img",
             date: {
                 full: "20 de Septiembre de 2022 a las 4:7 pm",
-                min: "20 de Septiembre a las 4:7 pm"
+                min: "Septiembre de 2022"
             },
             city: {name: "Rionegro", pic: "https://upload.wikimedia.org/wikipedia/commons/2/26/Atardecer-parque.jpg", description: `Rionegro es una pequeña ciudad en los Andes colombianos. Aquí se encuentra el aeropuerto internacional de Medellín. En la Plaza de la Libertad está la Catedral de San Nicolás, con sus cúpulas. El Museo Histórico Casa de la Convención se encuentra en un edificio en el que se sancionó una versión de la constitución colombiana en 1863. Al sudoeste, está Tutucán, que es una réplica de un pueblo típico local, con una iglesia, un molino y una granja. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Rionegro_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: ``,

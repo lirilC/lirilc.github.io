@@ -10,7 +10,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "13 de Enero de 2022 a las 7:57 pm",
-                                min: "13 de Enero a las 7:57 pm"
+                                min: "Enero de 2022"
                             },
                             city: {name: "Nariño", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG/250px-Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG", description: `Nariño es un municipio de Colombia, localizado en la subregión Oriente del departamento de Antioquia. Limita por el norte con los municipios de Sonsón y Argelia, por el este y sur con el departamento de Caldas y por el oeste con el municipio de Sonsón. </br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nari%C3%B1o_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
                             title: `You start truly appreciating life once you realize you're special, not better.`,
@@ -55,10 +55,11 @@ var index= {
                             <text>
                                 <br>
                                 <br>
-                                <p style="color: #aaa; text-align: left;">Con muchas más funcionalidades y todos los "Cuídeme a las niñas" y "Take care of the ladies for me" corregidos, un nuevo Algo Más Sobre Mí; igual está en construcción.</p>
+                                <p style="color: #aaa; text-align: left;">Con muchas más funcionalidades y todos los "Cuídeme a las niñas" y "Take care of the ladies for me" corregidos, un nuevo Algo Más Sobre Mí; igual está en construcción. <br><br>&nbsp;&nbsp;En la última edición corregí los países, los departamentos (estados) y las ciudades, ahora sí está todo bien.</p>
                             </text>
                         </containment>`,
-            Comentarios: ""
+            Comentarios: "",
+            Editado: [ 'type= "c"; edHistory= {"Editado el 5 de Febrero de 2023 a la 1:7 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/db21ec804c9352254baf282bc0321493f92a7106/pos/kdm0g0dTee.html", "2 de Febrero de 2023 a la 1:17 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/ffc96d089a6bbfb588ac2e358ffd7433224be8f5/pos/kdm0g0dTee.html"}', "Editado el 5 de Febrero de 2023 a la 1:7 pm"]
         },
         "/A.K.A._Dizzy/pos/p413w4Mawl", {
             user: {
@@ -69,7 +70,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "13 de Enero de 2022 a las 7:57 pm",
-                                min: "13 de Enero a las 7:57 pm"
+                                min: "Enero de 2022"
                             },
                             city: {name: "Nariño", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG/250px-Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG", description: `Nariño es un municipio de Colombia, localizado en la subregión Oriente del departamento de Antioquia. Limita por el norte con los municipios de Sonsón y Argelia, por el este y sur con el departamento de Caldas y por el oeste con el municipio de Sonsón. </br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nari%C3%B1o_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
                             title: `You start truly appreciating life once you realize you're special, not better.`,
@@ -103,7 +104,7 @@ var index= {
             type: "links",
             date: {
                 full: "24 de Diciembre de 2022 a las 0:0 pm",
-                min: "24 de Diciembre a las 0:0 pm"
+                min: "Diciembre de 2022"
             },
             title: `Christmas Gifts From The Gallego Escobar Family Mobile`,
             description: ``,
@@ -146,7 +147,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "19 de Noviembre de 2022 a las 7:4 pm",
-                                min: "19 de Noviembre a las 7:4 pm"
+                                min: "Noviembre de 2022"
                             },
                             title: `.monot.`,
                             description: ``,
@@ -175,7 +176,7 @@ var index= {
             type: "links",
             date: {
                 full: "20 de Diciembre de 2022 a las 7:1 pm",
-                min: "20 de Diciembre a las 7:1 pm"
+                min: "Diciembre de 2022"
             },
             title: "--The Whole Board--",
             description: ``,
@@ -193,7 +194,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "19 de Noviembre de 2022 a las 7:4 pm",
-                                min: "19 de Noviembre a las 7:4 pm"
+                                min: "Noviembre de 2022"
                             },
                             title: `.monot.`,
                             description: ``,
@@ -222,7 +223,7 @@ var index= {
             type: "repostImg",
             date: {
                 full: "3 de Diciembre de 2022 a las 2:2 pm",
-                min: "3 de Diciembre a las 2:2 pm"
+                min: "Diciembre de 2022"
             },
             originalPoster: {
                 username: "L",
@@ -284,7 +285,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "19 de Noviembre de 2022 a las 7:4 pm",
-                                min: "19 de Noviembre a las 7:4 pm"
+                                min: "Noviembre de 2022"
                             },
                             title: `.monot.`,
                             description: ``,
@@ -313,7 +314,7 @@ var index= {
             type: "links",
             date: {
                 full: "3 de Diciembre de 2022 a la 1:6 pm",
-                min: "3 de Diciembre a la 1:6 pm"
+                min: "Diciembre de 2022"
             },
             title: "Hello_World",
             description: ``,
@@ -331,7 +332,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "19 de Noviembre de 2022 a las 7:4 pm",
-                                min: "19 de Noviembre a las 7:4 pm"
+                                min: "Noviembre de 2022"
                             },
                             title: `.monot.`,
                             description: ``,
@@ -360,7 +361,7 @@ var index= {
             type: "containments",
             date: {
                 full: "2 de Diciembre de 2022 a las 6:22 pm",
-                min: "2 de Diciembre a las 6:22 pm"
+                min: "Diciembre de 2022"
             },
             title: "Important information",
             description: ``,
@@ -386,7 +387,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "13 de Agosto de 2022 a las 10:8 pm",
-                                min: "13 de Agosto a las 10:8 pm"
+                                min: "Agosto de 2022"
                             },
                             title: `El mejor momento 😍🌅`,
                             description: ``,
@@ -415,7 +416,7 @@ var index= {
             type: "mult_img",
             date: {
                 full: "5 de Octubre de 2022 a las 2:6 pm",
-                min: "5 de Octubre a las 2:6 pm"
+                min: "Octubre de 2022"
             },
             title: `🌈`,
             description: ``,
@@ -431,7 +432,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "13 de Agosto de 2022 a las 10:8 pm",
-                                min: "13 de Agosto a las 10:8 pm"
+                                min: "Agosto de 2022"
                             },
                             title: `El mejor momento 😍🌅`,
                             description: ``,
@@ -460,7 +461,7 @@ var index= {
             type: "mult_img",
             date: {
                 full: "4 de Octubre de 2022 a las 3:3 pm",
-                min: "4 de Octubre a las 3:3 pm"
+                min: "Octubre de 2022"
             },
             title: `Cómo me gusta vivir mi propia vida ✨`,
             description: ``,
@@ -476,7 +477,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "3 de Octubre de 2022 a las 5:16 pm",
-                                min: "3 de Octubre a las 5:16 pm"
+                                min: "Octubre de 2022"
                             },
                             title: `a slutty but studious Targaryen goes to Paris`,
                             description: ``,
@@ -505,7 +506,7 @@ var index= {
             type: "mult_img",
             date: {
                 full: "3 de Octubre de 2022 a las 5:16 pm",
-                min: "3 de Octubre a las 5:16 pm"
+                min: "Octubre de 2022"
             },
             title: `a slutty but studious Targaryen goes to Paris`,
             description: ``,
@@ -553,7 +554,7 @@ var index= {
             type: "repostLinks",
             date: {
                 full: "1 de Octubre de 2022 a las 8:54 pm",
-                min: "1 de Octubre a las 8:54 pm"
+                min: "Octubre de 2022"
             },
             originalPoster: {
                 username: "A.K.A._Dizzy",
@@ -597,7 +598,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "3 de Octubre de 2022 a las 5:16 pm",
-                                min: "3 de Octubre a las 5:16 pm"
+                                min: "Octubre de 2022"
                             },
                             title: `a slutty but studious Targaryen goes to Paris`,
                             description: ``,
@@ -626,7 +627,7 @@ var index= {
             type: "mult_img",
             date: {
                 full: "1 de Octubre de 2022 a las 8:17 pm",
-                min: "1 de Octubre a las 8:17 pm"
+                min: "Octubre de 2022"
             },
             title: `deadly nightshade 🌸🙇🏻‍♀️`,
             description: ``,
@@ -642,7 +643,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "3 de Octubre de 2022 a las 5:16 pm",
-                                min: "3 de Octubre a las 5:16 pm"
+                                min: "Octubre de 2022"
                             },
                             title: `a slutty but studious Targaryen goes to Paris`,
                             description: ``,
@@ -671,7 +672,7 @@ var index= {
             type: "mult_img",
             date: {
                 full: "30 de Septiembre de 2022 a las 6:7 am",
-                min: "30 de Septiembre a las 6:7 am"
+                min: "Septiembre de 2022"
             },
             title: `Britney and Justin if they had been Greenwich Village art school drop outs instead of Disney channel sweethearts`,
             description: ``,
@@ -687,7 +688,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "13 de Agosto de 2022 a las 10:8 pm",
-                                min: "13 de Agosto a las 10:8 pm"
+                                min: "Agosto de 2022"
                             },
                             title: `El mejor momento 😍🌅`,
                             description: ``,
@@ -716,7 +717,7 @@ var index= {
             type: "img",
             date: {
                 full: "31 de Septiembre de 2022 a la 1:4 pm",
-                min: "31 de Septiembre a la 1:4 pm"
+                min: "Septiembre de 2022"
             },
             title: `Disciplina - constancia 💪🏼`,
             description: `Pereza a un lado<br>Excusas a un lado<br>Para todo tenemos tiempo es solo buscar el momento y organizar tu espacio 💪🏼`,
@@ -732,7 +733,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "3 de Octubre de 2022 a las 5:16 pm",
-                                min: "3 de Octubre a las 5:16 pm"
+                                min: "Octubre de 2022"
                             },
                             title: `a slutty but studious Targaryen goes to Paris`,
                             description: ``,
@@ -761,7 +762,7 @@ var index= {
             type: "mult_carr",
             date: {
                 full: "27 de Septiembre de 2022 a las 9:41 pm",
-                min: "27 de Septiembre a las 9:41 pm"
+                min: "Septiembre de 2022"
             },
             title: `Guys you don’t understand it’s just like…really hard when the only thing anyone ever notices about you is how smart you are`,
             description: ``,
@@ -777,7 +778,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "20 de Septiembre de 2022 a las 4:20 pm",
-                                min: "20 de Septiembre a las 4:20 pm"
+                                min: "Septiembre de 2022"
                             },
                             title: ``,
                             description: ``,
@@ -806,7 +807,7 @@ var index= {
             type: "repostLinks",
             date: {
                 full: "20 de Septiembre de 2022 a las 5:17 pm",
-                min: "20 de Septiembre a las 5:17 pm"
+                min: "Septiembre de 2022"
             },
             originalPoster: {
                 username: "A.K.A._Dizzy",
@@ -851,7 +852,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "20 de Septiembre de 2022 a las 4:7 pm",
-                                min: "20 de Septiembre a las 4:7 pm"
+                                min: "Septiembre de 2022"
                             },
                             city: {name: "Rionegro", pic: "https://upload.wikimedia.org/wikipedia/commons/2/26/Atardecer-parque.jpg", description: `Rionegro es una pequeña ciudad en los Andes colombianos. Aquí se encuentra el aeropuerto internacional de Medellín. En la Plaza de la Libertad está la Catedral de San Nicolás, con sus cúpulas. El Museo Histórico Casa de la Convención se encuentra en un edificio en el que se sancionó una versión de la constitución colombiana en 1863. Al sudoeste, está Tutucán, que es una réplica de un pueblo típico local, con una iglesia, un molino y una granja. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Rionegro_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
                             title: ``,
@@ -881,7 +882,7 @@ var index= {
             type: "repostLinks",
             date: {
                 full: "20 de Septiembre de 2022 a las 4:58 pm",
-                min: "20 de Septiembre a las 4:58 pm"
+                min: "Septiembre de 2022"
             },
             originalPoster: {
                 username: "A.K.A._Dizzy",
@@ -925,7 +926,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "13 de Enero de 2022 a las 7:57 pm",
-                                min: "13 de Enero a las 7:57 pm"
+                                min: "Enero de 2022"
                             },
                             city: {name: "Nariño", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG/250px-Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG", description: `Nariño es un municipio de Colombia, localizado en la subregión Oriente del departamento de Antioquia. Limita por el norte con los municipios de Sonsón y Argelia, por el este y sur con el departamento de Caldas y por el oeste con el municipio de Sonsón. </br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nari%C3%B1o_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
                             title: `You start truly appreciating life once you realize you're special, not better.`,
@@ -959,7 +960,7 @@ var index= {
             type: "mult_carr",
             date: {
                 full: "17 de Septiembre de 2022 a las 2:52 pm",
-                min: "17 de Septiembre a las 2:52 pm"
+                min: "Septiembre de 2022"
             },
             title: `¡Mis lunares forman La Constelación De Orión!`,
             description: `No me sobra UN lunar ni me falta una estrella (excepto, intermitentemente, π³).<br>&nbsp;&nbsp;Está reflejada horizontalmente; es decir, volteada horizontalmente en mi cuerpo, como si se hubiera impregnado en mí La Constelación De Orión.<br>&nbsp;&nbsp;A veces, lunares que representan otras estrellas resultan en medio de otros, pero están asignados.`,
@@ -975,7 +976,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "3 de Octubre de 2022 a las 5:16 pm",
-                                min: "3 de Octubre a las 5:16 pm"
+                                min: "Octubre de 2022"
                             },
                             title: `a slutty but studious Targaryen goes to Paris`,
                             description: ``,
@@ -1004,7 +1005,7 @@ var index= {
             type: "mult_img",
             date: {
                 full: "16 de Septiembre de 2022 a las 8:40 pm",
-                min: "16 de Septiembre a las 8:40 pm"
+                min: "Octubre de 2022"
             },
             title: `The theme was roller disco`,
             description: ``,
@@ -1020,7 +1021,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "13 de Agosto de 2022 a las 10:8 pm",
-                                min: "13 de Agosto a las 10:8 pm"
+                                min: "Agosto de 2022"
                             },
                             title: `El mejor momento 😍🌅`,
                             description: ``,
@@ -1049,7 +1050,7 @@ var index= {
             type: "mult_carr",
             date: {
                 full: "8 de Septiembre de 2022 a la 1:31 pm",
-                min: "8 de Septiembre a la 1:31 pm"
+                min: "Septiembre de 2022"
             },
             city: {name: "Isla de San Andrés", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Panor%C3%A1mica_de_San_Andres.JPG/1024px-Panor%C3%A1mica_de_San_Andres.JPG", description: `La Isla de San Andrés (conocida también como San Andrés Isla) es una isla colombiana del mar Caribe, ubicada frente a las costas de Nicaragua. Es la más grande de las islas que forman parte del Archipiélago de San Andrés, Providencia y Santa Catalina, con una extensión total de 26 km² siendo así, la isla más grande del país. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Isla_de_San_Andr%C3%A9s_(Colombia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: `¡San Andrés Isla!`,
@@ -1066,7 +1067,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "3 de Octubre de 2022 a las 5:16 pm",
-                                min: "3 de Octubre a las 5:16 pm"
+                                min: "Octubre de 2022"
                             },
                             title: `a slutty but studious Targaryen goes to Paris`,
                             description: ``,
@@ -1095,7 +1096,7 @@ var index= {
             type: "mult_carr",
             date: {
                 full: "7 de Septiembre de 2022 a las 7:9 pm",
-                min: "7 de Septiembre a las 7:9 pm"
+                min: "Septiembre de 2022"
             },
             city: {name: "Nueva York", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Qwertyliberty123.jpg/800px-Qwertyliberty123.jpg", description: `Nueva York​ (en inglés, New York, (EE. UU.: pronunciado /nuˈjɔɹk/), oficialmente New York City o NYC en siglas) es la ciudad más poblada de los Estados Unidos de América y una de las más pobladas del mundo, con un área urbana de 24 millones de habitantes.​ Desde finales del siglo xix es uno de los centros de la política y la economía mundial, albergando la sede de la Organización de las Naciones Unidas y de numerosas empresas e instituciones financieras de importancia global. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nueva_York'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: ``,
@@ -1144,7 +1145,7 @@ var index= {
             type: "repost_multimedia",
             date: {
                 full: "31 de Agosto de 2022 a las 3:43 pm",
-                min: "31 de Agosto a las 3:43 pm"
+                min: "Agosto de 2022"
             },
             originalPoster: {
                 username: "A.K.A._Dizzy",
@@ -1212,7 +1213,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "13 de Enero de 2022 a las 7:57 pm",
-                                min: "13 de Enero a las 7:57 pm"
+                                min: "Enero de 2022"
                             },
                             city: {name: "Nariño", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG/250px-Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG", description: `Nariño es un municipio de Colombia, localizado en la subregión Oriente del departamento de Antioquia. Limita por el norte con los municipios de Sonsón y Argelia, por el este y sur con el departamento de Caldas y por el oeste con el municipio de Sonsón. </br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nari%C3%B1o_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
                             title: `You start truly appreciating life once you realize you're special, not better.`,
@@ -1246,7 +1247,7 @@ var index= {
             type: "links",
             date: {
                 full: "2 de Agosto de 2022 a las 9:31 pm",
-                min: "2 de Agosto a las 9:31 pm"
+                min: "Agosto de 2022"
             },
             title: "_d♡lpmt",
             description: ``,
@@ -1269,7 +1270,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "13 de Agosto de 2022 a las 10:8 pm",
-                                min: "13 de Agosto a las 10:8 pm"
+                                min: "Agosto de 2022"
                             },
                             title: `El mejor momento 😍🌅`,
                             description: ``,
@@ -1370,7 +1371,7 @@ var index= {
             type: "repostLinks",
             date: {
                 full: "24 de Julio de 2022 a las 8:1 pm",
-                min: "24 de Julio a las 8:1 pm"
+                min: "Julio de 2022"
             },
             originalPoster: {
                 username: "A.K.A._Dizzy",
@@ -1445,7 +1446,7 @@ var index= {
             type: "repostLinks",
             date: {
                 full: "24 de Julio de 2022 a las 7:55 pm",
-                min: "24 de Julio a las 7:55 pm"
+                min: "Julio de 2022"
             },
             originalPoster: {
                 username: "A.K.A._Dizzy",
@@ -1520,7 +1521,7 @@ var index= {
             type: "repostLinks",
             date: {
                 full: "24 de Julio de 2022 a las 7:27 pm",
-                min: "24 de Julio a las 7:27 pm"
+                min: "Julio de 2022"
             },
             originalPoster: {
                 username: "A.K.A._Dizzy",
@@ -1598,7 +1599,7 @@ var index= {
             type: "repostImg",
             date: {
                 full: "24 de Julio de 2022 a las 5:2 pm",
-                min: "24 de Julio a las 5:2 pm"
+                min: "Julio de 2022"
             },
             originalPoster: {
                 username: "L",
@@ -1660,7 +1661,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "13 de Enero de 2022 a las 7:57 pm",
-                                min: "13 de Enero a las 7:57 pm"
+                                min: "Enero de 2022"
                             },
                             city: {name: "Nariño", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG/250px-Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG", description: `Nariño es un municipio de Colombia, localizado en la subregión Oriente del departamento de Antioquia. Limita por el norte con los municipios de Sonsón y Argelia, por el este y sur con el departamento de Caldas y por el oeste con el municipio de Sonsón. </br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nari%C3%B1o_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
                             title: `You start truly appreciating life once you realize you're special, not better.`,
@@ -1694,7 +1695,7 @@ var index= {
             type: "repostLinks",
             date: {
                 full: "24 de Julio de 2022 a las 7:8 pm",
-                min: "24 de Julio a las 7:8 pm"
+                min: "Julio de 2022"
             },
             originalPoster: {
                 username: "user",
@@ -1738,7 +1739,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "3 de Octubre de 2022 a las 5:16 pm",
-                                min: "3 de Octubre a las 5:16 pm"
+                                min: "Octubre de 2022"
                             },
                             title: `a slutty but studious Targaryen goes to Paris`,
                             description: ``,
@@ -1767,7 +1768,7 @@ var index= {
             type: "repostImg",
             date: {
                 full: "24 de Julio de 2022 a las 5:2 pm",
-                min: "24 de Julio a las 5:2 pm"
+                min: "Julio de 2022"
             },
             originalPoster: {
                 username: "L",
@@ -1829,7 +1830,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "13 de Agosto de 2022 a las 10:8 pm",
-                                min: "13 de Agosto a las 10:8 pm"
+                                min: "Agosto de 2022"
                             },
                             title: `El mejor momento 😍🌅`,
                             description: ``,
@@ -1858,7 +1859,7 @@ var index= {
             type: "repostImg",
             date: {
                 full: "24 de Julio de 2022 a las 3:58 pm",
-                min: "24 de Julio a las 3:58 pm"
+                min: "Julio de 2022"
             },
             originalPoster: {
                 username: "L",
@@ -1920,7 +1921,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "2 de Enero de 2022 a las 2:51 pm",
-                                min: "2 de Enero a las 2:51 pm"
+                                min: "Enero de 2022"
                             },
                             title: `⚔️`,
                             description: ``,
@@ -1949,7 +1950,7 @@ var index= {
             type: "repost_multimedia",
             date: {
                 full: "24 de Julio de 2022 a las 3:29 pm",
-                min: "24 de Julio a las 3:29 pm"
+                min: "Julio de 2022"
             },
             originalPoster: {
                 username: "A.K.A._Dizzy",
@@ -2017,7 +2018,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "13 de Enero de 2022 a las 7:57 pm",
-                                min: "13 de Enero a las 7:57 pm"
+                                min: "Enero de 2022"
                             },
                             city: {name: "Nariño", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG/250px-Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG", description: `Nariño es un municipio de Colombia, localizado en la subregión Oriente del departamento de Antioquia. Limita por el norte con los municipios de Sonsón y Argelia, por el este y sur con el departamento de Caldas y por el oeste con el municipio de Sonsón. </br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nari%C3%B1o_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
                             title: `You start truly appreciating life once you realize you're special, not better.`,
@@ -2051,7 +2052,7 @@ var index= {
             type: "links",
             date: {
                 full: "3 de Julio de 2022 a las 0:52 am",
-                min: "3 de Julio a las 0:52 am"
+                min: "Julio de 2022"
             },
             title: `...¡Puedes editar los proyectos!; <strike>hum... ¡intenta arreglar los proyectos con módulos!</strike> Ja, ja, ja. Sé MUUUUUY cuidadoso con los módulos. ¡NO los modifiques!`,
             description: ``,
@@ -2105,7 +2106,7 @@ var index= {
             type: "fork",
             date: {
                 full: "7 de Mayo de 2022 a las 8:6 pm",
-                min: "7 de Abril a las 8:6 pm"
+                min: "Mayo de 2022"
             },
             originalRepoOwner: {
                 username: "L",
@@ -2177,7 +2178,7 @@ var index= {
             type: "links",
             date: {
                 full: "26 de Abril de 2022 a las 9:13 pm",
-                min: "26 de Abril a las 9:13"
+                min: "Abril de 2022"
             },
             title: "Vv11",
             description: ``,
@@ -2195,7 +2196,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "13 de Agosto de 2022 a las 10:8 pm",
-                                min: "13 de Agosto a las 10:8 pm"
+                                min: "Agosto de 2022"
                             },
                             title: `El mejor momento 😍🌅`,
                             description: ``,
@@ -2224,7 +2225,7 @@ var index= {
             type: "links",
             date: {
                 full: "12 de Abril de 2022 a las 5:9 pm",
-                min: "12 de Abril a las 5:9 pm"
+                min: "Abril de 2022"
             },
             title: "lX",
             description: ``,
@@ -2242,7 +2243,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "2 de Enero de 2022 a las 2:51 pm",
-                                min: "2 de Enero a las 2:51 pm"
+                                min: "Enero de 2022"
                             },
                             title: `⚔️`,
                             description: ``,
@@ -2271,7 +2272,7 @@ var index= {
             type: "links",
             date: {
                 full: "7 de Abril de 2022 a las 7:50 pm",
-                min: "7 de Abril a las 7:50 pm"
+                min: "Abril de 2022"
             },
             title: "minesweeper",
             description: ``,
@@ -2289,7 +2290,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "3 de Octubre de 2022 a las 5:16 pm",
-                                min: "3 de Octubre a las 5:16 pm"
+                                min: "Octubre de 2022"
                             },
                             title: `a slutty but studious Targaryen goes to Paris`,
                             description: ``,
@@ -2318,7 +2319,7 @@ var index= {
             type: "links",
             date: {
                 full: "6 de Abril de 2022 a las 3:8 pm",
-                min: "6 de Abril a las 3:8 pm"
+                min: "Abril de 2022"
             },
             title: "myProjext1",
             description: ``,
@@ -2336,7 +2337,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "13 de Agosto de 2022 a las 10:8 pm",
-                                min: "13 de Agosto a las 10:8 pm"
+                                min: "Agosto de 2022"
                             },
                             title: `El mejor momento 😍🌅`,
                             description: ``,
@@ -2365,7 +2366,7 @@ var index= {
             type: "mult_img",
             date: {
                 full: "25 de Marzo de 2022 a las 3:15 pm",
-                min: "25 de Marzo a las 3:15 pm"
+                min: "Marzo de 2022"
             },
             city: {name: "Cali", pic: "https://i.pinimg.com/564x/75/ee/7c/75ee7cb23fd9ed0163fb2e2c28f78c22--cali.jpg", description: `Cali, oficialmente Distrito Especial, Deportivo, Cultural, Turístico, Empresarial y de Servicios de Santiago de Cali,​​​ es un distrito colombiano, capital del departamento de Valle del Cauca,​ es la tercera ciudad más poblada y el tercer centro económico y cultural de Colombia. Está situada en la región Sur del Valle del Cauca, geográficamente la ciudad se ubica en el Valle del Río Cauca formado por la cordillera occidental y la cordillera central de la Región Andina, con una altura promedio de 1000 msnm. Es la única gran ciudad de Colombia que posee un acceso rápido al Océano Pacífico, dista 114 km de Buenaventura, principal puerto del país.​ La ciudad forma parte del Área metropolitana de Cali, junto con los municipios contiguos a esta.​ Fue fundada el 25 de julio de 1536 por Sebastián de Belalcázar, lo que la convierte en una de las ciudades más antiguas de América. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cali'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: `🤍 En una bicicleta 🤍`,
@@ -2382,7 +2383,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "3 de Octubre de 2022 a las 5:16 pm",
-                                min: "3 de Octubre a las 5:16 pm"
+                                min: "Octubre de 2022"
                             },
                             title: `a slutty but studious Targaryen goes to Paris`,
                             description: ``,
@@ -2411,7 +2412,7 @@ var index= {
             type: "mult_img",
             date: {
                 full: "20 de Enero de 2022 a las 5:10 pm",
-                min: "20 de Enero a las 5:10 pm"
+                min: "Enero de 2022"
             },
             city: {name: "Lago de Como", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Bellagio_2.jpg/1024px-Bellagio_2.jpg", description: `El lago de Como o Lario (en italiano: lago di Como o Lario), es un lago situado en la región de Lombardia, en Italia, más específicamente en las provincias de Como y Lecco. Está situado a 199 metros de altitud sobre el nivel del mar y tiene una superficie de 146 km². Con sus 416 metros de profundidad (en la presa de Argegno) es uno de los lagos más profundos de Europa. Es el tercer lago más grande de Italia, después del lago de Garda (1º) y el lago Mayor. Tiene forma de una 'Y' invertida. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Lago_de_Como'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: `Lake Como`,
@@ -2428,7 +2429,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "2 de Enero de 2022 a las 2:51 pm",
-                                min: "2 de Enero a las 2:51 pm"
+                                min: "Enero de 2022"
                             },
                             title: `⚔️`,
                             description: ``,
@@ -2457,7 +2458,7 @@ var index= {
             type: "containments",
             date: {
                 full: "14 de Marzo de 2022 a las 10:43 pm",
-                min: "14 de Marzo a las 10:43 pm"
+                min: "Marzo de 2022"
             },
             title: `We're Live!`,
             description: ``,
@@ -2534,7 +2535,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "2 de Enero de 2022 a las 2:51 pm",
-                                min: "2 de Enero a las 2:51 pm"
+                                min: "Enero de 2022"
                             },
                             title: `⚔️`,
                             description: ``,
@@ -2563,7 +2564,7 @@ var index= {
             type: "img",
             date: {
                 full: "5 de Febrero de 2022 a la 1:23 am",
-                min: "5 de Febrero a la 1:23 am"
+                min: "Febrero de 2022"
             },
             title: `...`,
             description: ``,
@@ -2603,7 +2604,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "3 de Octubre de 2022 a las 5:16 pm",
-                                min: "3 de Octubre a las 5:16 pm"
+                                min: "Octubre de 2022"
                             },
                             title: `a slutty but studious Targaryen goes to Paris`,
                             description: ``,
@@ -2632,7 +2633,7 @@ var index= {
             type: "vid",
             date: {
                 full: "12 de Enero de 2022 a las 11:2 pm",
-                min: "12 de Enero a las 11:2 pm"
+                min: "Enero de 2022"
             },
             city: {name: "Dorado", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Dorado%2C_Puerto_Rico%2C_Central_Square.jpg/250px-Dorado%2C_Puerto_Rico%2C_Central_Square.jpg", description: `Dorado es un municipio de la costa norte de Puerto Rico. Fundado en el 1842 por Jacinto López. También conocido como 'La Ciudad Ejemplar', 'Ciudad Dorada', y 'La Más Limpia de Puerto Rico'. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Dorado_(Puerto_Rico)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: `In July of 2020 we sat under this banyan tree `,
@@ -2649,7 +2650,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "13 de Enero de 2022 a las 7:57 pm",
-                                min: "13 de Enero a las 7:57 pm"
+                                min: "Enero de 2022"
                             },
                             city: {name: "Nariño", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG/250px-Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG", description: `Nariño es un municipio de Colombia, localizado en la subregión Oriente del departamento de Antioquia. Limita por el norte con los municipios de Sonsón y Argelia, por el este y sur con el departamento de Caldas y por el oeste con el municipio de Sonsón. </br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nari%C3%B1o_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
                             title: `You start truly appreciating life once you realize you're special, not better.`,
@@ -2683,7 +2684,7 @@ var index= {
             type: "mult_img",
             date: {
                 full: "3 de Enero de 2022 a las 8:22 pm",
-                min: "3 de Enero a las 8:22 pm"
+                min: "Enero de 2022"
             },
             title: ``,
             description: ``,
@@ -2700,7 +2701,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "13 de Enero de 2022 a las 7:57 pm",
-                                min: "13 de Enero a las 7:57 pm"
+                                min: "Enero de 2022"
                             },
                             city: {name: "Nariño", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG/250px-Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG", description: `Nariño es un municipio de Colombia, localizado en la subregión Oriente del departamento de Antioquia. Limita por el norte con los municipios de Sonsón y Argelia, por el este y sur con el departamento de Caldas y por el oeste con el municipio de Sonsón. </br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nari%C3%B1o_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
                             title: `You start truly appreciating life once you realize you're special, not better.`,
@@ -2824,7 +2825,7 @@ var index= {
                             type: "img",
                             date: {
                                 full: "3 de Octubre de 2022 a las 5:16 pm",
-                                min: "3 de Octubre a las 5:16 pm"
+                                min: "Octubre de 2022"
                             },
                             title: `a slutty but studious Targaryen goes to Paris`,
                             description: ``,

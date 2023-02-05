@@ -7,7 +7,7 @@ var user= {
                 type: "img",
                 date: {
                     full: "2 de Enero de 2022 a las 2:51 pm",
-                    min: "2 de Enero a las 2:51 pm"
+                    min: "Enero de 2022"
                 },
                 title: `⚔️`,
                 description: ``,
@@ -98,7 +98,7 @@ var user= {
                 type: "mult_img",
                 date: {
                     full: "19 de Marzo de 2022 a las 8:32 pm",
-                    min: "19 de Marzo a las 8:32 pm"
+                    min: "Enero de 2022"
                 },
                 city: {name: "Manywhere", pic: "j", description: `Manywhere. <a target= '_blank'style= 'font-size:0.8em; ' href= ''><span style= 'color: #2ecc71; font-size: 1.5em; '>···&nbsp</span>es.wikipedia.org</a>`},
                 title: `🖤`,
@@ -135,7 +135,7 @@ var user= {
                 type: "mult_img",
                 date: {
                     full: "10 de Marzo de 2022 a las 8:25 pm",
-                    min: "10 de Marzo a las 8:25 pm"
+                    min: "Marzo de 2022"
                 },
                 title: `Y la vida continuó,`,
                 description: `aunque extraño sus pelitos en mi ropa. La vida continuó a pesar de aveces disvariar con lagunas mentales en las que por fragmentos mínimos de segundo mi cerebro se aferra a creer que se encuentra esperándome en casa y que al llegar a ella y abrir el cerrojo de mi puerta, estará allí, como siempre, que va a mover su colita de un lado a otro y me observará con los ojos más profundos que jamás vi en la vida. Esa vida, ¡La Vida...!, Tan frágil que solo queda sentirse afortunado de esos instantes de dicha y de fortuna que por un momento te acompañan y al día siguiente solo queda su recuerdo.<br>🌙`,
@@ -146,7 +146,7 @@ var user= {
                 type: "mult_img",
                 date: {
                     full: "28 de Febrero de 2022 a las 2:19 pm",
-                    min: "28 de Febrero a las 2:19 pm"
+                    min: "Febrero de 2022"
                 },
                 title: `🎸`,
                 description: ``,
@@ -157,7 +157,7 @@ var user= {
                 type: "img",
                 date: {
                     full: "2 de Enero de 2022 a las 2:51 pm",
-                    min: "2 de Enero a las 2:51 pm"
+                    min: "Enero de 2022"
                 },
                 title: `⚔️`,
                 description: ``,
@@ -185,7 +185,7 @@ var user= {
                 type: "video",
                 date: {
                     full: "13 de Febrero de 2022 a las 3:27 pm",
-                    min: "13 de Febrero a las 3:27 pm"
+                    min: "Febrero de 2022"
                 },
                 title: `Soy enterrador y vengo de enterrar mi corazón`,
                 description: `El 27 de enero de 2022, mi más importante compañía, mi amiga más incondicional, el ser más noble… mi vida entera y más grande amor y yo, nos despedimos. Hoy me sacude este nuevo comienzo y tambalea mi propia identidad. Quizá sí intente alguna vez pegar los pelos del perro a ver si alguna vez lo vuelvo a armar… Aunque mientras tanto, deba abrir la puerta de nuestro hogar sin su presencia y el movimiento pendular de su cola en signo de agradecimiento y amor infinito.<br>¡En serio!, no quiero que los días pasen y se desprendan sus pelitos de mi ropa, es lo único que tengo, porque en mi memoria no confío, no quiero que los días pasen y empiece a tener flashbacks inconexos intentando recordar una imagen difuminada por mi capacidad mental de fragmentos incompletos e inconclusos cuando más quisiese retenerlo todo como una grabación en la que puedo hacer zoom y reenfocar la mirada en su mirada guía, en su rostro que decía “Todo va a estar bien”. Sus ojitos se apagaron sobre mí, pero me dijo que confiara en mi corazón, aunque hoy se encuentre en completa incertidumbre. Este salto cuántico era necesario para tomar la responsabilidad sobre mí y crear un cambio real desde adentro, tomando como base la enseñanza que me dejaste sobre el amor y lo que puede transformar al mundo. Gracias por ser la pieza más importante para que este ser encontrara su misión con todo lo que me permitiste experimentar desde la bondad. Gracias a tu vida, gracias por salvarme, gracias por darme el privilegio de estar juntas hasta el último instante de ti sobre esta superficie terrestre, gracias por elegirme y entregarme cada uno de tus días. Jamás había conocido la magnitud de una fortaleza como la tuya, porque ni aun pasando por días de dolor dejaste de ser esa perra alegre y juguetona, pero sabia y serena cuando más lo necesitábamos. Tu familia te ama con toda el alma, y yo… te guardo siempre en mí, porque eres y serás mi todo, espero verte de nuevo. Te amo por siempre, nariz.`,
@@ -399,75 +399,11 @@ var user= {
         }
     },
     stories: {
-        "/A.K.A._Dizzy/pos/p413w4Mawl": {
-            type: "repostContainments",
-            date: {
-                full: "24 de Diciembre de 2022 a las 0:0 am",
-                min: "24 de Diciembre a las 0:0 am"
-            },
-            originalPoster: {
-                username: "A.K.A._Dizzy",
-                users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
-                rol: {
-                    rol: "CEO",
-                    level: "100"
-                },
-                tool: `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
-                                <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
-                            </div>
-                            <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
-                            <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
-                            <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
-                            <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-                        </div>`
-            },
-            title: "Christmas Gifts From The Gallego Escobar Family Mobile",
-            description: ``,
-            contents:  `<containment>
-                            <section id="links">
-                                <a title= "/raw/ > ... > Christmas Gifts From The Gallego Escobar Family > Mobile" class="link" target="_blank" href="/A.K.A._Dizzy/raw/p/h3dd2cDcsW2R3/(!)%20Dont%20Open%20Until%20Christmas/(!)/Gifts/Mobile/"><span class="Title">/raw/ > ... > Christmas Gifts From The G... ly > Mobile </span><span class="linktype">Proyecto</span></a>
-                            </section>
-                            <text>
-                                <p style="color: #aaa; text-align: left;">¡Feliz Navidad! 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbspAbre el link de arriba para poder usarlo. 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbspEl rectángulo de arriba a la derecha se llama <i>#dieded</i>, el botón grande de abajo a la derecha se llama <i>#ckl</i>, el rectángulo rojo grande con los textos de los cuales se cuentan las palabras y los caracteres se llama <i>#Sara</i> y los textos son los <i>Suave Efecto Cafetero</i>s, la entrada de texto de abajo de <i>#Sara</i> es la consola, y el botón que tiene a la derecha y dice <b>>></b> se llama <i>.Ex</i>. 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbspPuedes ejecutar comandos que introduzcas en la consola presionando <i>.Ex</i>. 🎄</p>
-                                <br>
-                                <p style="color: #aaa; text-align: left;"><b>Estos son los comandos que puede ejecutar la consola</b> 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbsp<b>a</b>: ejecutas <a target="_blank" href="/A.K.A._Dizzy/blog/aNGEL();">aNGEL();</a> con el contenido de <i>#dieded</i>. 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbsp<b>p</b>: ejecutas <a target="_blank" href="/A.K.A._Dizzy/blog/por_siLaBas();">por_siLaBas();</a> con el contenido de <i>#dieded</i>. 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbsp<b>d</b>: ejecutas <a target="_blank" href="/A.K.A._Dizzy/blog/Dinosaurios">dinosaurios</a> con el contenido de <i>#dieded</i>. 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbspPresiona <i>#ckl</i> para ver el resultado; deberás hundirlo varias veces, ya que <i>#Sara</i> en ciertos milisegundos se tapará con un nuevo <i>Suave Efecto Cafetero</i>. 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbsp<b>de</b>: abres el <a target="_blank" href="/A.K.A._Dizzy/blog/Algunas Propiedades De Mis Escritos#%C2%BFPropiedades?,%20%C2%A1propietarios!">Robot De Dedicatorias</a>. 🎄</p>
-                                <p style="color: #aaa; text-align: left;"><b>Ciertos comandos son peligrosos, debes escribir <i>d</i> (dangerous.) al principio del comando; estos son:</b> 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbsp<b>d sECF ll</b>: pausas los <i>Suave Efecto Cafero</i>s. 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbsp<b>d sECF ></b>: reanudas los <i>Suave Efecto Cafero</i>s. 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbsp<b>d sECF get</b>: obtienes la posición del <i>Suave Efecto Cafetero</i> actual (empiezan en <i>0</i>). 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbsp<b>d sECF set <i>{#}</i></b>: haces que el próximo <i>Suave Efecto Cafetero</i> sea el que escribas en vez de <i>{#}</i> (empiezan en <i>0</i>)&nbsp;&nbsp;<i>E. g.: </i><b>d sECF set 13</b>. 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbspPara usar dinosaurios mobile, úsalo como se usa dinosaurios; aparece rectángulos escribiendo <b>rwr</b> en la consola y luego presiona el botón <i>.Ex</i>; dibuja con el táctil. Cuando quieras aparecer el rectángulo rojo para ejecutar dinosaurios, escribe <b>rwawwr</b> en la consola y presiona <i>.Ex</i>. 🎄</p>
-                                <p style="text-align: center; ">
-                                    La Familia Gallego Escobar <br>
-                                    Everyone's
-                                </p>
-                            </text>
-                        </containment>`,
-            Comentarios: ""
-        },
     	"/A.K.A._Dizzy/pos/r1WjYcRQhw": {
             type: "repost_multimedia",
             date: {
                 full: "24 de Julio de 2022 a las 3:29 pm",
-                min: "24 de Julio a las 3:29 pm"
+                min: "Julio de 2022"
             },
             originalPoster: {
                 username: "A.K.A._Dizzy",
@@ -530,7 +466,7 @@ var user= {
             type: "repostMult_img",
             date: {
                 full: "18 de Marzo de 2022 a las 7:35 pm",
-                min: "18 de Marzo a las 7:35 pm"
+                min: "Marzo de 2022"
             },
             originalPoster: {
                 username: "A.K.A._Dizzy",
@@ -568,7 +504,7 @@ var user= {
             type: "links",
             date: {
                 full: "7 de Abril de 2022 a las 7:50 pm",
-                min: "7 de Abril a las 7:50 pm"
+                min: "Abril de 2022"
             },
             title: "minesweeper",
             description: ``,
@@ -581,7 +517,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "19 de Marzo de 2022 a las 8:32 pm",
-                min: "19 de Marzo a las 8:32 pm"
+                min: "Marzo de 2022"
             },
             city: {name: "Manywhere", pic: "j", description: `Manywhere. <a target= '_blank'style= 'font-size:0.8em; ' href= ''><span style= 'color: #2ecc71; font-size: 1.5em; '>···&nbsp</span>es.wikipedia.org</a>`},
             title: `🖤`,
@@ -618,7 +554,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "10 de Marzo de 2022 a las 8:25 pm",
-                min: "10 de Marzo a las 8:25 pm"
+                min: "Marzo de 2022"
             },
             title: `Y la vida continuó,`,
             description: `aunque extraño sus pelitos en mi ropa. La vida continuó a pesar de aveces disvariar con lagunas mentales en las que por fragmentos mínimos de segundo mi cerebro se aferra a creer que se encuentra esperándome en casa y que al llegar a ella y abrir el cerrojo de mi puerta, estará allí, como siempre, que va a mover su colita de un lado a otro y me observará con los ojos más profundos que jamás vi en la vida. Esa vida, ¡La Vida...!, Tan frágil que solo queda sentirse afortunado de esos instantes de dicha y de fortuna que por un momento te acompañan y al día siguiente solo queda su recuerdo.<br>🌙`,
@@ -629,7 +565,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "28 de Febrero de 2022 a las 2:19 pm",
-                min: "28 de Febrero a las 2:19 pm"
+                min: "Febrero de 2022"
             },
             title: `🎸`,
             description: ``,
@@ -640,7 +576,7 @@ var user= {
             type: "containments",
             date: {
                 full: "14 de Marzo de 2022 a las 10:43 pm",
-                min: "14 de Marzo a las 10:43 pm"
+                min: "Febrero de 2022"
             },
             title: `We're Live!`,
             description: ``,
@@ -712,7 +648,7 @@ var user= {
             type: "vid",
             date: {
                 full: "13 de Febrero de 2022 a las 3:27 pm",
-                min: "13 de Febrero a las 3:27 pm"
+                min: "Febrero de 2022"
             },
             title: `Soy enterrador y vengo de enterrar mi corazón`,
             description: `El 27 de enero de 2022, mi más importante compañía, mi amiga más incondicional, el ser más noble… mi vida entera y más grande amor y yo, nos despedimos. Hoy me sacude este nuevo comienzo y tambalea mi propia identidad. Quizá sí intente alguna vez pegar los pelos del perro a ver si alguna vez lo vuelvo a armar… Aunque mientras tanto, deba abrir la puerta de nuestro hogar sin su presencia y el movimiento pendular de su cola en signo de agradecimiento y amor infinito.<br>¡En serio!, no quiero que los días pasen y se desprendan sus pelitos de mi ropa, es lo único que tengo, porque en mi memoria no confío, no quiero que los días pasen y empiece a tener flashbacks inconexos intentando recordar una imagen difuminada por mi capacidad mental de fragmentos incompletos e inconclusos cuando más quisiese retenerlo todo como una grabación en la que puedo hacer zoom y reenfocar la mirada en su mirada guía, en su rostro que decía “Todo va a estar bien”. Sus ojitos se apagaron sobre mí, pero me dijo que confiara en mi corazón, aunque hoy se encuentre en completa incertidumbre. Este salto cuántico era necesario para tomar la responsabilidad sobre mí y crear un cambio real desde adentro, tomando como base la enseñanza que me dejaste sobre el amor y lo que puede transformar al mundo. Gracias por ser la pieza más importante para que este ser encontrara su misión con todo lo que me permitiste experimentar desde la bondad. Gracias a tu vida, gracias por salvarme, gracias por darme el privilegio de estar juntas hasta el último instante de ti sobre esta superficie terrestre, gracias por elegirme y entregarme cada uno de tus días. Jamás había conocido la magnitud de una fortaleza como la tuya, porque ni aun pasando por días de dolor dejaste de ser esa perra alegre y juguetona, pero sabia y serena cuando más lo necesitábamos. Tu familia te ama con toda el alma, y yo… te guardo siempre en mí, porque eres y serás mi todo, espero verte de nuevo. Te amo por siempre, nariz.`,
@@ -927,7 +863,7 @@ var user= {
             type: "img",
             date: {
                 full: "5 de Febrero de 2022 a la 1:23 am",
-                min: "5 de Febrero a la 1:23 am"
+                min: "Febrero de 2022"
             },
             title: `...`,
             description: ``,
@@ -961,7 +897,7 @@ var user= {
         "/A.K.A._Dizzy/pos/THKgcCyzBy": {
             type: "repostContainments",
             date: {
-                full: "24 de Diciembre de 2021 a las 0:0 am",
+                full: "24 de Diciembre de 2021 a las 0:00 am",
                 min: "Diciembre de 2021"
             },
             originalPoster: {
@@ -1007,7 +943,7 @@ var user= {
                             </text>
                         </containment>`,
             Comentarios: "",
-            Editado: [ 'type= "c"; edHistory= {"Editado el 25 de Diciembre de 2021 a las 8:11 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/fa22c59c827424670fa7d5a42362e9ee069eb5e8/A.K.A._Dizzy/pos/THKgcCyzBy.html", "Editado el 25 de Diciembre de 2021 a las 8:38 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/815df2d46e0cb28c17080f2fe6faa9ad5591908d/A.K.A._Dizzy/pos/THKgcCyzBy.html",  "Editado el 24 de Diciembre de 2021 a las 6:00 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/cc20cfd3645362371e27a6e82afe3ad62584dc00/A.K.A._Dizzy/pos/THKgcCyzBy.html", "Editado el 24 de Diciembre de 2021 a las 5:23 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/7d6960a98076abd762f1d5897b328dcde170fe47/A.K.A._Dizzy/pos/THKgcCyzBy.html", "24 de Diciembre a las 0:0 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/86f2ee25494787a1f456467f6d937728ff9433d0/A.K.A._Dizzy/pos/THKgcCyzBy.html"}', "Editado el 25 de Diciembre de 2021 a las 8:11 pm"]
+            Editado: [ 'type= "c"; edHistory= {"Editado el 25 de Diciembre de 2021 a las 8:11 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/fa22c59c827424670fa7d5a42362e9ee069eb5e8/A.K.A._Dizzy/pos/THKgcCyzBy.html", "Editado el 25 de Diciembre de 2021 a las 8:38 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/815df2d46e0cb28c17080f2fe6faa9ad5591908d/A.K.A._Dizzy/pos/THKgcCyzBy.html",  "Editado el 24 de Diciembre de 2021 a las 6:00 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/cc20cfd3645362371e27a6e82afe3ad62584dc00/A.K.A._Dizzy/pos/THKgcCyzBy.html", "Editado el 24 de Diciembre de 2021 a las 5:23 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/7d6960a98076abd762f1d5897b328dcde170fe47/A.K.A._Dizzy/pos/THKgcCyzBy.html", "24 de Diciembre a las 0:00 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/86f2ee25494787a1f456467f6d937728ff9433d0/A.K.A._Dizzy/pos/THKgcCyzBy.html"}', "Editado el 25 de Diciembre de 2021 a las 8:11 pm"]
         },
         "/A.K.A._Dizzy/pos/YEOxwElo0s": {
             type: "repostLinks",

@@ -7,7 +7,7 @@ var user= {
                 type: "img",
                 date: {
                     full: "3 de Octubre de 2022 a las 5:16 pm",
-                    min: "3 de Octubre a las 5:16 pm"
+                    min: "Octubre de 2022"
                 },
                 title: `a slutty but studious Targaryen goes to Paris`,
                 description: ``,
@@ -100,7 +100,7 @@ var user= {
                 type: "mult_img",
                 date: {
                     full: "3 de Octubre de 2022 a las 5:16 pm",
-                    min: "3 de Octubre a las 5:16 pm"
+                    min: "Octubre de 2022"
                 },
                 title: `a slutty but studious Targaryen goes to Paris`,
                 description: ``,
@@ -111,7 +111,7 @@ var user= {
                 type: "mult_img",
                 date: {
                     full: "1 de Octubre de 2022 a las 8:17 pm",
-                    min: "1 de Octubre a las 8:17 pm"
+                    min: "Octubre de 2022"
                 },
                 title: `deadly nightshade 🌸🙇🏻‍♀️`,
                 description: ``,
@@ -122,7 +122,7 @@ var user= {
                 type: "mult_img",
                 date: {
                     full: "30 de Septiembre de 2022 a las 6:7 am",
-                    min: "30 de Septiembre a las 6:7 am"
+                    min: "Septiembre de 2022"
                 },
                 title: `Britney and Justin if they had been Greenwich Village art school drop outs instead of Disney channel sweethearts`,
                 description: ``,
@@ -133,7 +133,7 @@ var user= {
                 type: "mult_img",
                 date: {
                     full: "16 de Septiembre de 2022 a las 8:40 pm",
-                    min: "16 de Septiembre a las 8:40 pm"
+                    min: "Septiembre de 2022"
                 },
                 title: `The theme was roller disco`,
                 description: ``,
@@ -144,7 +144,7 @@ var user= {
                 type: "mult_img",
                 date: {
                     full: "28 de Marzo de 2022 a las 6:40 pm",
-                    min: "28 de Marzo a las 6:40 pm"
+                    min: "Marzo de 2022"
                 },
                 city: {name: "São Paulo​", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/CENU%2C_S%C3%A3o_Paulo%2C_Brasil_%28cropped%29.jpg/1280px-CENU%2C_S%C3%A3o_Paulo%2C_Brasil_%28cropped%29.jpg", description: `São Paulo​ (en español San Pablo)​ y oficialmente denominada como Município de São Paulo, es la ciudad más poblada de Brasil y capital del Estado de São Paulo y la principal ciudad de la región Metropolitana de São Paulo, en la región sudeste del país. Con una población de 12 176 866 habitantes (en 2018)​ en la ciudad propia y de 21 893 053 habitantes en su área metropolitana (en 2010)​, son la ciudad y la metrópoli más pobladas de América y del hemisferio occidental, ​ además de ser entre las aglomeraciones urbanas más pobladas del mundo.​ También es la ciudad más poblada de la lusofonia (mayor ciudad/metrópoli del mundo hablante del idioma portugués). São Paulo es la ciudad brasileña más influyente en el escenario global, siendo, en 2016, la 11ª ciudad más globalizada del planeta, recibiendo la clasificación de ciudad global alfa, por parte del Globalization and World Cities Study Group & Network (GaWC). Asimismo, es la ciudad lusófona más poblada e importante del mundo en términos tanto demográficos como culturales y económicos. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/São_Paulo'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
                 title: `❤️`,
@@ -156,7 +156,7 @@ var user= {
                 type: "mult_img",
                 date: {
                     full: "28 de Marzo de 2022 a las 6:40 pm",
-                    min: "28 de Marzo a las 6:40 pm"
+                    min: "Marzo de 2022"
                 },
                 title: `Everybody’s grandma had that one sofa…swipe`,
                 description: ``,
@@ -167,7 +167,7 @@ var user= {
                 type: "mult_img",
                 date: {
                     full: "21 de Febrero de 2022 a las 2:21 am",
-                    min: "21 de Febrero a las 2:21 am"
+                    min: "Marzo de 2022"
                 },
                 title: `Was going for business casual Bratz doll 🧡`,
                 description: ``,
@@ -178,7 +178,7 @@ var user= {
                 type: "mult_img",
                 date: {
                     full: "9 de Febrero de 2022 a las 9:19 am",
-                    min: "9 de Febrero a las 9:19 am"
+                    min: "Marzo de 2022"
                 },
                 title: `It’s giving Dracula’s maid`,
                 description: ``,
@@ -189,7 +189,7 @@ var user= {
                 type: "mult_img",
                 date: {
                     full: "27 de Enero de 2022 a las 3:16 pm",
-                    min: "27 de Enero a las 3:16 pm"
+                    min: "Enero de 2022"
                 },
                 title: ``,
                 description: ``,
@@ -205,7 +205,7 @@ var user= {
                 type: "video",
                 date: {
                     full: "12 de Enero de 2022 a las 11:2 pm",
-                    min: "12 de Enero a las 11:2 pm"
+                    min: "Enero de 2022"
                 },
                 title: `In July of 2020 we sat under this banyan tree `,
                 description: `<br>We asked for magic<br><br>We were oblivious to the pain we would face together in such a short, frenetic period of time. Unaware of the work and sacrifices the relationship would require from us but intoxicated off of the love. And the karma.<br><br>Somehow a year and a half later, having walked through Hell together, and having laughed more than I ever imagined possible, he asked me to marry him.<br><br>And just as in every lifetime before this one, and as in every lifetime that will follow it, I said yes.<br><br>…and then we drank each other’s blood<br><br>1.11.22 ✨`,
@@ -215,75 +215,11 @@ var user= {
         }
     },
     stories: {
-        "/A.K.A._Dizzy/pos/p413w4Mawl": {
-            type: "repostContainments",
-            date: {
-                full: "24 de Diciembre de 2022 a las 0:0 am",
-                min: "24 de Diciembre a las 0:0 am"
-            },
-            originalPoster: {
-                username: "A.K.A._Dizzy",
-                users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
-                rol: {
-                    rol: "CEO",
-                    level: "100"
-                },
-                tool: `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
-                                <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
-                            </div>
-                            <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
-                            <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
-                            <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
-                            <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-                        </div>`
-            },
-            title: "Christmas Gifts From The Gallego Escobar Family Mobile",
-            description: ``,
-            contents:  `<containment>
-                            <section id="links">
-                                <a title= "/raw/ > ... > Christmas Gifts From The Gallego Escobar Family > Mobile" class="link" target="_blank" href="/A.K.A._Dizzy/raw/p/h3dd2cDcsW2R3/(!)%20Dont%20Open%20Until%20Christmas/(!)/Gifts/Mobile/"><span class="Title">/raw/ > ... > Christmas Gifts From The G... ly > Mobile </span><span class="linktype">Proyecto</span></a>
-                            </section>
-                            <text>
-                                <p style="color: #aaa; text-align: left;">¡Feliz Navidad! 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbspAbre el link de arriba para poder usarlo. 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbspEl rectángulo de arriba a la derecha se llama <i>#dieded</i>, el botón grande de abajo a la derecha se llama <i>#ckl</i>, el rectángulo rojo grande con los textos de los cuales se cuentan las palabras y los caracteres se llama <i>#Sara</i> y los textos son los <i>Suave Efecto Cafetero</i>s, la entrada de texto de abajo de <i>#Sara</i> es la consola, y el botón que tiene a la derecha y dice <b>>></b> se llama <i>.Ex</i>. 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbspPuedes ejecutar comandos que introduzcas en la consola presionando <i>.Ex</i>. 🎄</p>
-                                <br>
-                                <p style="color: #aaa; text-align: left;"><b>Estos son los comandos que puede ejecutar la consola</b> 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbsp<b>a</b>: ejecutas <a target="_blank" href="/A.K.A._Dizzy/blog/aNGEL();">aNGEL();</a> con el contenido de <i>#dieded</i>. 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbsp<b>p</b>: ejecutas <a target="_blank" href="/A.K.A._Dizzy/blog/por_siLaBas();">por_siLaBas();</a> con el contenido de <i>#dieded</i>. 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbsp<b>d</b>: ejecutas <a target="_blank" href="/A.K.A._Dizzy/blog/Dinosaurios">dinosaurios</a> con el contenido de <i>#dieded</i>. 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbspPresiona <i>#ckl</i> para ver el resultado; deberás hundirlo varias veces, ya que <i>#Sara</i> en ciertos milisegundos se tapará con un nuevo <i>Suave Efecto Cafetero</i>. 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbsp<b>de</b>: abres el <a target="_blank" href="/A.K.A._Dizzy/blog/Algunas Propiedades De Mis Escritos#%C2%BFPropiedades?,%20%C2%A1propietarios!">Robot De Dedicatorias</a>. 🎄</p>
-                                <p style="color: #aaa; text-align: left;"><b>Ciertos comandos son peligrosos, debes escribir <i>d</i> (dangerous.) al principio del comando; estos son:</b> 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbsp<b>d sECF ll</b>: pausas los <i>Suave Efecto Cafero</i>s. 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbsp<b>d sECF ></b>: reanudas los <i>Suave Efecto Cafero</i>s. 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbsp<b>d sECF get</b>: obtienes la posición del <i>Suave Efecto Cafetero</i> actual (empiezan en <i>0</i>). 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbsp<b>d sECF set <i>{#}</i></b>: haces que el próximo <i>Suave Efecto Cafetero</i> sea el que escribas en vez de <i>{#}</i> (empiezan en <i>0</i>)&nbsp;&nbsp;<i>E. g.: </i><b>d sECF set 13</b>. 🎄</p>
-                                <p style="color: #aaa; text-align: left;">&nbsp&nbspPara usar dinosaurios mobile, úsalo como se usa dinosaurios; aparece rectángulos escribiendo <b>rwr</b> en la consola y luego presiona el botón <i>.Ex</i>; dibuja con el táctil. Cuando quieras aparecer el rectángulo rojo para ejecutar dinosaurios, escribe <b>rwawwr</b> en la consola y presiona <i>.Ex</i>. 🎄</p>
-                                <p style="text-align: center; ">
-                                    La Familia Gallego Escobar <br>
-                                    Everyone's
-                                </p>
-                            </text>
-                        </containment>`,
-            Comentarios: ""
-        },
     	"/MeganFox/img/qTaHNrHo4j": {
             type: "mult_img",
             date: {
                 full: "3 de Octubre de 2022 a las 5:16 pm",
-                min: "3 de Octubre a las 5:16 pm"
+                min: "Octubre de 2022"
             },
             title: `a slutty but studious Targaryen goes to Paris`,
             description: ``,
@@ -294,7 +230,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "1 de Octubre de 2022 a las 8:17 pm",
-                min: "1 de Octubre a las 8:17 pm"
+                min: "Octubre de 2022"
             },
             title: `deadly nightshade 🌸🙇🏻‍♀️`,
             description: ``,
@@ -305,7 +241,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "30 de Septiembre de 2022 a las 6:7 am",
-                min: "30 de Septiembre a las 6:7 am"
+                min: "Octubre de 2022"
             },
             title: `Britney and Justin if they had been Greenwich Village art school drop outs instead of Disney channel sweethearts`,
             description: ``,
@@ -316,7 +252,7 @@ var user= {
             type: "mult_carr",
             date: {
                 full: "27 de Septiembre de 2022 a las 9:41 pm",
-                min: "27 de Septiembre a las 9:41 pm"
+                min: "Septiembre de 2022"
             },
             title: `Guys you don’t understand it’s just like…really hard when the only thing anyone ever notices about you is how smart you are`,
             description: ``,
@@ -327,7 +263,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "16 de Septiembre de 2022 a las 8:40 pm",
-                min: "16 de Septiembre a las 8:40 pm"
+                min: "Septiembre de 2022"
             },
             title: `The theme was roller disco`,
             description: ``,
@@ -338,7 +274,7 @@ var user= {
             type: "mult_carr",
             date: {
                 full: "7 de Septiembre de 2022 a las 7:9 pm",
-                min: "7 de Septiembre a las 7:9 pm"
+                min: "Septiembre de 2022"
             },
             city: {name: "Nueva York", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Qwertyliberty123.jpg/800px-Qwertyliberty123.jpg", description: `Nueva York​ (en inglés, New York, (EE. UU.: pronunciado /nuˈjɔɹk/), oficialmente New York City o NYC en siglas) es la ciudad más poblada de los Estados Unidos de América y una de las más pobladas del mundo, con un área urbana de 24 millones de habitantes.​ Desde finales del siglo xix es uno de los centros de la política y la economía mundial, albergando la sede de la Organización de las Naciones Unidas y de numerosas empresas e instituciones financieras de importancia global. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nueva_York'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: ``,
@@ -350,7 +286,7 @@ var user= {
             type: "repostImg",
             date: {
                 full: "24 de Julio de 2022 a las 5:2 pm",
-                min: "24 de Julio a las 5:2 pm"
+                min: "Julio de 2022"
             },
             originalPoster: {
                 username: "L",
@@ -407,7 +343,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "28 de Marzo de 2022 a las 6:40 pm",
-                min: "28 de Marzo a las 6:40 pm"
+                min: "Julio de 2022"
             },
             city: {name: "São Paulo​", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/CENU%2C_S%C3%A3o_Paulo%2C_Brasil_%28cropped%29.jpg/1280px-CENU%2C_S%C3%A3o_Paulo%2C_Brasil_%28cropped%29.jpg", description: `São Paulo​ (en español San Pablo)​ y oficialmente denominada como Município de São Paulo, es la ciudad más poblada de Brasil y capital del Estado de São Paulo y la principal ciudad de la región Metropolitana de São Paulo, en la región sudeste del país. Con una población de 12 176 866 habitantes (en 2018)​ en la ciudad propia y de 21 893 053 habitantes en su área metropolitana (en 2010)​, son la ciudad y la metrópoli más pobladas de América y del hemisferio occidental, ​ además de ser entre las aglomeraciones urbanas más pobladas del mundo.​ También es la ciudad más poblada de la lusofonia (mayor ciudad/metrópoli del mundo hablante del idioma portugués). São Paulo es la ciudad brasileña más influyente en el escenario global, siendo, en 2016, la 11ª ciudad más globalizada del planeta, recibiendo la clasificación de ciudad global alfa, por parte del Globalization and World Cities Study Group & Network (GaWC). Asimismo, es la ciudad lusófona más poblada e importante del mundo en términos tanto demográficos como culturales y económicos. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/São_Paulo'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: `❤️`,
@@ -419,7 +355,7 @@ var user= {
             type: "links",
             date: {
                 full: "6 de Abril de 2022 a las 3:8 pm",
-                min: "6 de Abril a las 3:8 pm"
+                min: "Abril de 2022"
             },
             title: "myProjext1",
             description: ``,
@@ -432,7 +368,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "28 de Marzo de 2022 a las 6:40 pm",
-                min: "28 de Marzo a las 6:40 pm"
+                min: "Marzo de 2022"
             },
             title: `Everybody’s grandma had that one sofa…swipe`,
             description: ``,
@@ -443,7 +379,7 @@ var user= {
             type: "repostMult_img",
             date: {
                 full: "18 de Marzo de 2022 a las 7:35 pm",
-                min: "18 de Marzo a las 7:35 pm"
+                min: "Marzo de 2022"
             },
             originalPoster: {
                 username: "A.K.A._Dizzy",
@@ -481,7 +417,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "5 de Marzo de 2022 a las 8:10 pm",
-                min: "5 de Marzo a las 8:10 pm"
+                min: "Marzo de 2022"
             },
             title: `My underwire is poking out of my dress and I have white nail polish all over my hand from a failed in-car manicure, but don’t look at that. just focus on what’s working 🧁 🧁`,
             description: ``,
@@ -492,7 +428,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "21 de Febrero de 2022 a las 2:21 am",
-                min: "21 de Febrero a las 2:21 am"
+                min: "Marzo de 2022"
             },
             title: `Was going for business casual Bratz doll 🧡`,
             description: ``,
@@ -503,7 +439,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "9 de Febrero de 2022 a las 9:19 am",
-                min: "9 de Febrero a las 9:19 am"
+                min: "Febrero de 2022"
             },
             title: `It’s giving Dracula’s maid`,
             description: ``,
@@ -514,7 +450,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "27 de Enero de 2022 a las 3:16 pm",
-                min: "27 de Enero a las 3:16 pm"
+                min: "Enero de 2022"
             },
             title: ``,
             description: ``,
@@ -525,7 +461,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "20 de Enero de 2022 a las 5:10 pm",
-                min: "20 de Enero a las 5:10 pm"
+                min: "Enero de 2022"
             },
             city: {name: "Lago de Como", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Bellagio_2.jpg/1024px-Bellagio_2.jpg", description: `El lago de Como o Lario (en italiano: lago di Como o Lario), es un lago situado en la región de Lombardia, en Italia, más específicamente en las provincias de Como y Lecco. Está situado a 199 metros de altitud sobre el nivel del mar y tiene una superficie de 146 km². Con sus 416 metros de profundidad (en la presa de Argegno) es uno de los lagos más profundos de Europa. Es el tercer lago más grande de Italia, después del lago de Garda (1º) y el lago Mayor. Tiene forma de una 'Y' invertida. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Lago_de_Como'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: `Lake Como`,
@@ -537,7 +473,7 @@ var user= {
             type: "vid",
             date: {
                 full: "12 de Enero de 2022 a las 11:2 pm",
-                min: "12 de Enero a las 11:2 pm"
+                min: "Enero de 2022"
             },
             city: {name: "Dorado", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Dorado%2C_Puerto_Rico%2C_Central_Square.jpg/250px-Dorado%2C_Puerto_Rico%2C_Central_Square.jpg", description: `Dorado es un municipio de la costa norte de Puerto Rico. Fundado en el 1842 por Jacinto López. También conocido como 'La Ciudad Ejemplar', 'Ciudad Dorada', y 'La Más Limpia de Puerto Rico'. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Dorado_(Puerto_Rico)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: `In July of 2020 we sat under this banyan tree `,
@@ -548,7 +484,7 @@ var user= {
         "/A.K.A._Dizzy/pos/THKgcCyzBy": {
             type: "repostContainments",
             date: {
-                full: "24 de Diciembre de 2021 a las 0:0 am",
+                full: "24 de Diciembre de 2021 a las 0:00 am",
                 min: "Diciembre de 2021"
             },
             originalPoster: {
@@ -594,7 +530,7 @@ var user= {
                             </text>
                         </containment>`,
             Comentarios: "",
-            Editado: [ 'type= "c"; edHistory= {"Editado el 25 de Diciembre de 2021 a las 8:11 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/fa22c59c827424670fa7d5a42362e9ee069eb5e8/A.K.A._Dizzy/pos/THKgcCyzBy.html", "Editado el 25 de Diciembre de 2021 a las 8:38 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/815df2d46e0cb28c17080f2fe6faa9ad5591908d/A.K.A._Dizzy/pos/THKgcCyzBy.html",  "Editado el 24 de Diciembre de 2021 a las 6:00 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/cc20cfd3645362371e27a6e82afe3ad62584dc00/A.K.A._Dizzy/pos/THKgcCyzBy.html", "Editado el 24 de Diciembre de 2021 a las 5:23 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/7d6960a98076abd762f1d5897b328dcde170fe47/A.K.A._Dizzy/pos/THKgcCyzBy.html", "24 de Diciembre a las 0:0 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/86f2ee25494787a1f456467f6d937728ff9433d0/A.K.A._Dizzy/pos/THKgcCyzBy.html"}', "Editado el 25 de Diciembre de 2021 a las 8:11 pm"]
+            Editado: [ 'type= "c"; edHistory= {"Editado el 25 de Diciembre de 2021 a las 8:11 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/fa22c59c827424670fa7d5a42362e9ee069eb5e8/A.K.A._Dizzy/pos/THKgcCyzBy.html", "Editado el 25 de Diciembre de 2021 a las 8:38 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/815df2d46e0cb28c17080f2fe6faa9ad5591908d/A.K.A._Dizzy/pos/THKgcCyzBy.html",  "Editado el 24 de Diciembre de 2021 a las 6:00 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/cc20cfd3645362371e27a6e82afe3ad62584dc00/A.K.A._Dizzy/pos/THKgcCyzBy.html", "Editado el 24 de Diciembre de 2021 a las 5:23 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/7d6960a98076abd762f1d5897b328dcde170fe47/A.K.A._Dizzy/pos/THKgcCyzBy.html", "24 de Diciembre a las 0:00 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/86f2ee25494787a1f456467f6d937728ff9433d0/A.K.A._Dizzy/pos/THKgcCyzBy.html"}', "Editado el 25 de Diciembre de 2021 a las 8:11 pm"]
         },
         "/MeganFox/img/LOwjEhL6Oo": {
             type: "img",

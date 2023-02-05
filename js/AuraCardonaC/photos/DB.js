@@ -7,7 +7,7 @@ var user= {
                 type: "img",
                 date: {
                     full: "13 de Agosto de 2022 a las 10:8 pm",
-                    min: "13 de Agosto a las 10:8 pm"
+                    min: "Agosto de 2022"
                 },
                 title: `El mejor momento 😍🌅`,
                 description: ``,
@@ -37,7 +37,7 @@ var user= {
             type: "img",
             date: {
                 full: "24 de Enero de 2022 a las 7:56 pm",
-                min: "24 de Enero a las 7:56 pm"
+                min: "Enero de 2022"
             },
             city: {name: "Cancún", pic: "https://static.barcelo.com/content/dam/bhg/master/es/main-destination-photo/province/cancun/destino_cancun_01.jpg.bhgimg.optm1100.jpg/1604672937255.jpg", description: `Cancún (en maya: kaan y kuum 'olla o nido de serpientes') es una ciudad planificada mexicana ubicada en el estado de Quintana Roo, siendo cabecera del municipio de Benito Juárez, se ubica en el oriente de México, a más de 1600 km de la Ciudad de México. Es la ciudad más poblada del estado con 888 797 habitantes según últimos censos del Instituto Nacional de Estadística y Geografía en el 2020. Considerada un destino turístico de talla mundial, con certificación de la Organización Mundial del Turismo, el proyecto de su desarrollo inició operaciones en 1974 como Centro Integralmente Planeado, pionero de Fonatur (Fondo Nacional de Fomento al Turismo), antes conocido como Infratur. <a target= '_blank' style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cancún'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: ``,
@@ -74,7 +74,7 @@ var user= {
             type: "img",
             date: {
                 full: "21 de Enero de 2022 a las 12:2 pm",
-                min: "21 de Enero a las 12:2 pm"
+                min: "Enero de 2022"
             },
             title: ``,
             description: ``,
@@ -85,7 +85,7 @@ var user= {
             type: "img",
             date: {
                 full: "11 de Enero de 2022 a las 8:53 pm",
-                min: "11 de Enero a las 8:53 pm"
+                min: "Enero de 2022"
             },
             title: ``,
             description: ``,
@@ -96,7 +96,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "14 de Febrero de 2022 a las 9:50 pm",
-                min: "14 de Febrero a las 9:50 pm"
+                min: "Febrero de 2022"
             },
             city: {name: "Miami", pic: "https://upload.wikimedia.org/wikipedia/commons/0/06/Miami_Afternoon.jpg", description: `Miami es una ciudad-puerto ubicada en el sureste de Florida, Estados Unidos, alrededor del río Miami, entre los Everglades y el océano Atlántico. Se pronuncia /miámi/ en español​ y el gentilicio es miamense; sin embargo, en español de América mayoritariamente se pronuncia /maiámi/ o /mayami/ por influencia del inglés y el gentilicio frecuente es mayamero, aunque estas formas no están admitidas por el Diccionario panhispánico de dudas. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Miami'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: ``,
@@ -108,7 +108,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "14 de Febrero de 2022 a las 7:41 pm",
-                min: "14 de Febrero a las 7:41 pm"
+                min: "Febrero de 2022"
             },
             city: {name: "Miami Beach", pic: "https://upload.wikimedia.org/wikipedia/commons/3/3e/Miamimetroarea.jpg", description: `Miami Beach es una ciudad ubicada en el condado de Miami-Dade en el estado de Florida (Estados Unidos). En el Censo de 2010 tenía una población de 87.779 habitantes y una densidad poblacional de 2.233,68 personas por km² <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Miami_Beach'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: `<a class="target" href="/A.K.A._Dizzy" title="<div class='tool'><input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'><img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'><div class='datos'><ul class='actions'><li class='chatear' title='Chatear'>C</li><li class='agregar' title='Agregar'>A</li><li class='juzgar' title='Juzgar'>J</li></ul><p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p><p class='rol'>CEO <b style='color:#fff;'>+100</b></p></div><div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div><div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div><div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div><div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div></div>">A.K.A._Dizzy</a>, vea su(s) fotico(s), pues`,
@@ -120,7 +120,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "27 de Febrero de 2022 a las 2:50 pm",
-                min: "27 de Febrero a las 2:50 pm"
+                min: "Febrero de 2022"
             },
             city: {name: "Cancún", pic: "https://static.barcelo.com/content/dam/bhg/master/es/main-destination-photo/province/cancun/destino_cancun_01.jpg.bhgimg.optm1100.jpg/1604672937255.jpg", description: `Cancún (en maya: kaan y kuum 'olla o nido de serpientes') es una ciudad planificada mexicana ubicada en el estado de Quintana Roo, siendo cabecera del municipio de Benito Juárez, se ubica en el oriente de México, a más de 1600 km de la Ciudad de México. Es la ciudad más poblada del estado con 888 797 habitantes según últimos censos del Instituto Nacional de Estadística y Geografía en el 2020. Considerada un destino turístico de talla mundial, con certificación de la Organización Mundial del Turismo, el proyecto de su desarrollo inició operaciones en 1974 como Centro Integralmente Planeado, pionero de Fonatur (Fondo Nacional de Fomento al Turismo), antes conocido como Infratur. <a target= '_blank' style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cancún'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: `<a class="target" href="/A.K.A._Dizzy" title="<div class='tool'><input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'><img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'><div class='datos'><ul class='actions'><li class='chatear' title='Chatear'>C</li><li class='agregar' title='Agregar'>A</li><li class='juzgar' title='Juzgar'>J</li></ul><p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p><p class='rol'>CEO <b style='color:#fff;'>+100</b></p></div><div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div><div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div><div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div><div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div></div>">A.K.A._Dizzy</a>, 😍🤤`,
@@ -133,7 +133,7 @@ var user= {
             type: "img",
             date: {
                 full: "1 de Marzo de 2022 a las 2:5 pm",
-                min: "1 de Marzo a las 2:5 pm"
+                min: "Marzo de 2022"
             },
             title: `¡En esta isla se anda así! 😍 No hay vías pavimentadas, no hay tiendas lujosas, es una isla que solo les puedo decir que ¡DEBEN CONOCERLA!`,
             description: ``,
@@ -144,7 +144,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "25 de Marzo de 2022 a las 3:15 pm",
-                min: "25 de Marzo a las 3:15 pm"
+                min: "Marzo de 2022"
             },
             city: {name: "Cali", pic: "https://i.pinimg.com/564x/75/ee/7c/75ee7cb23fd9ed0163fb2e2c28f78c22--cali.jpg", description: `Cali, oficialmente Distrito Especial, Deportivo, Cultural, Turístico, Empresarial y de Servicios de Santiago de Cali,​​​ es un distrito colombiano, capital del departamento de Valle del Cauca,​ es la tercera ciudad más poblada y el tercer centro económico y cultural de Colombia. Está situada en la región Sur del Valle del Cauca, geográficamente la ciudad se ubica en el Valle del Río Cauca formado por la cordillera occidental y la cordillera central de la Región Andina, con una altura promedio de 1000 msnm. Es la única gran ciudad de Colombia que posee un acceso rápido al Océano Pacífico, dista 114 km de Buenaventura, principal puerto del país.​ La ciudad forma parte del Área metropolitana de Cali, junto con los municipios contiguos a esta.​ Fue fundada el 25 de julio de 1536 por Sebastián de Belalcázar, lo que la convierte en una de las ciudades más antiguas de América. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cali'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: `🤍 En una bicicleta 🤍`,
@@ -156,7 +156,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "11 de Abril de 2022 a las 8:18 pm",
-                min: "11 de Abril a las 8:18 pm"
+                min: "Abril de 2022"
             },
             city: {name: "Holbox", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Holbox-32.jpg/1280px-Holbox-32.jpg", description: `Holbox (en maya: hoyo negro, agujero negro) (toponímico maya que se pronuncia: jol bosh) es una isla mexicana localizada en el canal de Yucatán, en el litoral noreste de la península yucateca. Se ubica en el estado de Quintana Roo y pertenece al municipio de Lázaro Cárdenas,. Tiene una extensión de 40 km de largo y 2 de ancho, con unos 34 km de playa hacia el norte. Se encuentra unida intermitentemente a la península por una barra de arena, con varios canales que la unen al mar y a la Laguna Yalahau.​ Su población es de 1198 habitantes según el Conteo de Población y Vivienda del INEGI en 2005. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Holbox'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: ``,
@@ -168,7 +168,7 @@ var user= {
             type: "img",
             date: {
                 full: "15 de Mayo de 2022 a las 9:18 pm",
-                min: "15 de Mayo a las 9:18 pm"
+                min: "Mayo de 2022"
             },
             title: `ECLIPSE LUNAR 🌑 hoy llamado LUNA DE LAS FLORES 🌺 uno de los eclipses más poderosos y transformadores del año!!! mantener nuestra propia energía siempre será importante!! ✨`,
             description: ``,
@@ -179,7 +179,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "26 de Mayo de 2022 a las 7:16 pm",
-                min: "26 de Mayo a las 7:16 pm"
+                min: "Mayo de 2022"
             },
             title: `MIS 3 ÁNGULOS 🖤`,
             description: ``,
@@ -190,7 +190,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "28 de Mayo de 2022 a las 9:28 pm",
-                min: "28 de Mayo a las 9:28 pm"
+                min: "Mayo de 2022"
             },
             title: `SIEMPRE SEGURA🖤`,
             description: ``,
@@ -201,7 +201,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "5 de Junio de 2022 a las 2:34 pm",
-                min: "5 de Junio a las 2:34 pm"
+                min: "Junio de 2022"
             },
             title: `🖤`,
             description: ``,
@@ -212,7 +212,7 @@ var user= {
             type: "img",
             date: {
                 full: "11 de Junio de 2022 a las 3:57 pm",
-                min: "11 de Junio a las 3:57 pm"
+                min: "Junio de 2022"
             },
             title: `❤️F A M I L I A C A R D O N A❤️`,
             description: ``,
@@ -223,7 +223,7 @@ var user= {
             type: "img",
             date: {
                 full: "20 de Junio de 2022 a la 1:17 pm",
-                min: "20 de Junio a la 1:17 pm"
+                min: "Junio de 2022"
             },
             title: `AMOR POR LOS ANIMALES!❤️ RESPETO SIEMPRE PARA ELLOS!!❣️`,
             description: ``,
@@ -234,7 +234,7 @@ var user= {
             type: "img",
             date: {
                 full: "22 de Junio de 2022 a las 5:32 pm",
-                min: "22 de Junio a las 5:32 pm"
+                min: "Junio de 2022"
             },
             title: `!💕`,
             description: ``,
@@ -245,7 +245,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "25 de Junio de 2022 a las 2:11 pm",
-                min: "25 de Junio a las 2:11 pm"
+                min: "Junio de 2022"
             },
             title: `Me siento orgullosa de mí 🖤`,
             description: ``,
@@ -267,7 +267,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "4 de Julio de 2022 a las 6:19 pm",
-                min: "4 de Julio a las 6:19 pm"
+                min: "Julio de 2022"
             },
             title: `😎`,
             description: ``,
@@ -278,7 +278,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "13 de Julio de 2022 a las 8:52 pm",
-                min: "13 de Julio a las 8:52 pm"
+                min: "Julio de 2022"
             },
             title: `Y que los cumplas muy feliz ✨por muchos años más junto a ti con la ayuda de Dios 🙏🏻❤️`,
             description: `Me siento orgullosa del papá y la mamá que tengo! Créanme que son pocas las personas que pueden gozar de un lindo hogar, por eso mi consejo hoy es VALOREN sus familias, honren a sus padres y a sus madres porque gracias a ellos es que hoy somos lo que somos cada uno, la vida es un ciclo primero ellos cuidan de nosotros y luego somos nosotros los que debemos cuidar de ellos! Feliz cumpleaños pa te amo intensamente y jamás me cansaré de decírtelo ❤️`,
@@ -289,7 +289,7 @@ var user= {
             type: "img",
             date: {
                 full: "4 de Agosto de 2022 a las 3:11 pm",
-                min: "4 de Agosto a las 3:11 pm"
+                min: "Agosto de 2022"
             },
             title: ``,
             description: ``,
@@ -300,7 +300,7 @@ var user= {
             type: "img",
             date: {
                 full: "13 de Agosto de 2022 a las 10:8 pm",
-                min: "13 de Agosto a las 10:8 pm"
+                min: "Agosto de 2022"
             },
             title: `El mejor momento 😍🌅`,
             description: ``,
@@ -311,7 +311,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "16 de Agosto de 2022 a las 12:2 pm",
-                min: "16 de Agosto a las 12:2 pm"
+                min: "Agosto de 2022"
             },
             title: ``,
             description: ``,
@@ -322,7 +322,7 @@ var user= {
             type: "img",
             date: {
                 full: "16 de Agosto de 2022 a las 5:28 pm",
-                min: "16 de Agosto a las 5:28 pm"
+                min: "Agosto de 2022"
             },
             title: ``,
             description: ``,
@@ -333,7 +333,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "19 de Agosto de 2022 a las 10:35 pm",
-                min: "19 de Agosto a las 10:35 pm"
+                min: "Agosto de 2022"
             },
             title: `🖤✨`,
             description: ``,
@@ -344,7 +344,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "22 de Septiembre de 2022 a las 7:3 pm",
-                min: "22 de Septiembre a las 7:3 pm"
+                min: "Septiembre de 2022"
             },
             title: `🍸`,
             description: ``,
@@ -355,7 +355,7 @@ var user= {
             type: "img",
             date: {
                 full: "29 de Septiembre de 2022 a las 6:8 pm",
-                min: "29 de Septiembre a las 6:8 pm"
+                min: "Septiembre de 2022"
             },
             title: ``,
             description: ``,
@@ -366,7 +366,7 @@ var user= {
             type: "img",
             date: {
                 full: "31 de Septiembre de 2022 a la 1:4 pm",
-                min: "31 de Septiembre a la 1:4 pm"
+                min: "Septiembre de 2022"
             },
             title: `Disciplina - constancia 💪🏼`,
             description: `Pereza a un lado<br>Excusas a un lado<br>Para todo tenemos tiempo es solo buscar el momento y organizar tu espacio 💪🏼`,
@@ -377,7 +377,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "4 de Octubre de 2022 a las 3:3 pm",
-                min: "4 de Octubre a las 3:3 pm"
+                min: "Octubre de 2022"
             },
             title: `Cómo me gusta vivir mi propia vida ✨`,
             description: ``,
@@ -388,7 +388,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "5 de Octubre de 2022 a las 2:6 pm",
-                min: "5 de Octubre a las 2:6 pm"
+                min: "Octubre de 2022"
             },
             title: `🌈`,
             description: ``,

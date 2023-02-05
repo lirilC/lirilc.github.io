@@ -7,7 +7,7 @@ export function _user(){
                     type: "img",
                     date: {
                         full: "13 de Enero de 2022 a las 7:57 pm",
-                        min: "13 de Enero a las 7:57 pm"
+                        min: "Enero de 2022"
                     },
                     city: {name: "Nariño", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG/250px-Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG", description: `Nariño es un municipio de Colombia, localizado en la subregión Oriente del departamento de Antioquia. Limita por el norte con los municipios de Sonsón y Argelia, por el este y sur con el departamento de Caldas y por el oeste con el municipio de Sonsón. </br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nari%C3%B1o_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
                     title: `You start truly appreciating life once you realize you're special, not better.`,
@@ -130,7 +130,7 @@ export function _user(){
                     type: "mult_img",
                     date: {
                         full: "3 de Enero de 2022 a las 8:22 pm",
-                        min: "3 de Enero a las 8:22 pm"
+                        min: "Enero de 2022"
                     },
                     title: ``,
                     description: ``,
@@ -267,16 +267,17 @@ export function _user(){
                                 <text>
                                     <br>
                                     <br>
-                                    <p style="color: #aaa; text-align: left;">Con muchas más funcionalidades y todos los "Cuídeme a las niñas" y "Take care of the ladies for me" corregidos, un nuevo Algo Más Sobre Mí; igual está en construcción.</p>
+                                    <p style="color: #aaa; text-align: left;">Con muchas más funcionalidades y todos los "Cuídeme a las niñas" y "Take care of the ladies for me" corregidos, un nuevo Algo Más Sobre Mí; igual está en construcción. <br><br>&nbsp;&nbsp;En la última edición corregí los países, los departamentos (estados) y las ciudades, ahora sí está todo bien.</p>
                                 </text>
                             </containment>`,
-                Comentarios: ""
+                Comentarios: "",
+                Editado: [ 'type= "c"; edHistory= {"Editado el 5 de Febrero de 2023 a la 1:7 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/db21ec804c9352254baf282bc0321493f92a7106/pos/kdm0g0dTee.html", "2 de Febrero de 2023 a la 1:17 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/ffc96d089a6bbfb588ac2e358ffd7433224be8f5/pos/kdm0g0dTee.html"}', "Editado el 5 de Febrero de 2023 a la 1:7 pm"]
             },
             "/A.K.A._Dizzy/pos/p413w4Mawl": {
                 type: "links",
                 date: {
                     full: "24 de Diciembre de 2022 a las 0:0 pm",
-                    min: "24 de Diciembre a las 0:0 pm"
+                    min: "Diciembre de 2022"
                 },
                 title: `Christmas Gifts From The Gallego Escobar Family Mobile`,
                 description: ``,
@@ -314,7 +315,7 @@ export function _user(){
                 type: "repostLinks",
                 date: {
                     full: "20 de Diciembre de 2022 a las 7:6 pm",
-                    min: "20 de Diciembre a las 7:6 pm"
+                    min: "Diciembre de 2022"
                 },
                 originalPoster: {
                     username: "whale_Shailene",
@@ -349,7 +350,7 @@ export function _user(){
                 type: "repostLinks",
                 date: {
                     full: "3 de Diciembre de 2022 a la 1:42 pm",
-                    min: "3 de Diciembre a la 1:42 pm"
+                    min: "Diciembre de 2022"
                 },
                 originalPoster: {
                     username: "whale_Shailene",
@@ -384,7 +385,7 @@ export function _user(){
                 type: "mult_carr",
                 date: {
                     full: "17 de Septiembre de 2022 a las 2:52 pm",
-                    min: "17 de Septiembre a las 2:52 pm"
+                    min: "Septiembre de 2022"
                 },
                 title: `¡Mis lunares forman La Constelación De Orión!`,
                 description: `No me sobra UN lunar ni me falta una estrella (excepto, intermitentemente, π³).<br>&nbsp;&nbsp;Está reflejada horizontalmente; es decir, volteada horizontalmente en mi cuerpo, como si se hubiera impregnado en mí La Constelación De Orión.<br>&nbsp;&nbsp;A veces, lunares que representan otras estrellas resultan en medio de otros, pero están asignados.`,
@@ -395,7 +396,7 @@ export function _user(){
                 type: "links",
                 date: {
                     full: "2 de Agosto de 2022 a las 9:31 pm",
-                    min: "2 de Agosto a las 9:31 pm"
+                    min: "Agosto de 2022"
                 },
                 title: "_d♡lpmt",
                 description: ``,
@@ -413,7 +414,7 @@ export function _user(){
                 type: "repostLinks",
                 date: {
                     full: "24 de Julio de 2022 a las 7:8 pm",
-                    min: "24 de Julio a las 7:8 pm"
+                    min: "Julio de 2022"
                 },
                 originalPoster: {
                     username: "user",
@@ -452,7 +453,7 @@ export function _user(){
                 type: "links",
                 date: {
                     full: "3 de Julio de 2022 a las 0:52 am",
-                    min: "3 de Julio a las 0:52 am"
+                    min: "Julio de 2022"
                 },
                 title: `...¡Puedes editar los proyectos!; <strike>hum... ¡intenta arreglar los proyectos con módulos!</strike> Ja, ja, ja. Sé MUUUUUY cuidadoso con los módulos. ¡NO los modifiques!`,
                 description: ``,
@@ -471,7 +472,7 @@ export function _user(){
                 type: "repostLinks",
                 date: {
                     full: "26 de Abril de 2022 a las 9:13 pm",
-                    min: "26 de Abril a las 9:13 pm"
+                    min: "Abril de 2022"
                 },
                 originalPoster: {
                     username: "LamaMadora",
@@ -509,7 +510,7 @@ export function _user(){
                 type: "repostLinks",
                 date: {
                     full: "12 de Abril de 2022 a las 5:9 pm",
-                    min: "12 de Abril a las 5:9 pm"
+                    min: "Abril de 2022"
                 },
                 originalPoster: {
                     username: "AuraCardonaC",
@@ -544,7 +545,7 @@ export function _user(){
                 type: "repostLinks",
                 date: {
                     full: "7 de Abril de 2022 a las 7:50 pm",
-                    min: "7 de Abril a las 7:50 pm"
+                    min: "Abril de 2022"
                 },
                 originalPoster: {
                     username: "L",
@@ -579,7 +580,7 @@ export function _user(){
                 type: "repostLinks",
                 date: {
                     full: "6 de Abril de 2022 a las 3:8 pm",
-                    min: "6 de Abril a las 3:8 pm"
+                    min: "Abril de 2022"
                 },
                 originalPoster: {
                     username: "MeganFox",
@@ -614,7 +615,7 @@ export function _user(){
                 type: "mult_img",
                 date: {
                     full: "17 de Septiembre de 2022 a las 2:52 pm",
-                    min: "17 de Septiembre a las 2:52 pm"
+                    min: "Septiembre de 2022"
                 },
                 title: ``,
                 description: ``,

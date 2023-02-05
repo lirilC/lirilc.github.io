@@ -7,7 +7,7 @@ var user= {
                 type: "img",
                 date: {
                     full: "2 de Enero de 2022 a las 2:51 pm",
-                    min: "2 de Enero a las 2:51 pm"
+                    min: "Enero de 2022"
                 },
                 title: `⚔️`,
                 description: ``,
@@ -49,7 +49,7 @@ var user= {
             type: "img",
             date: {
                 full: "2 de Enero de 2022 a las 2:51 pm",
-                min: "2 de Enero a las 2:51 pm"
+                min: "Enero de 2022"
             },
             title: `⚔️`,
             description: ``,
@@ -60,7 +60,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "28 de Febrero de 2022 a las 2:19 pm",
-                min: "28 de Febrero a las 2:19 pm"
+                min: "Febrero de 2022"
             },
             title: `🎸`,
             description: ``,
@@ -71,7 +71,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "10 de Marzo de 2022 a las 8:25 pm",
-                min: "10 de Marzo a las 8:25 pm"
+                min: "Marzo de 2022"
             },
             title: `Y la vida continuó,`,
             description: `aunque extraño sus pelitos en mi ropa. La vida continuó a pesar de aveces disvariar con lagunas mentales en las que por fragmentos mínimos de segundo mi cerebro se aferra a creer que se encuentra esperándome en casa y que al llegar a ella y abrir el cerrojo de mi puerta, estará allí, como siempre, que va a mover su colita de un lado a otro y me observará con los ojos más profundos que jamás vi en la vida. Esa vida, ¡La Vida...!, Tan frágil que solo queda sentirse afortunado de esos instantes de dicha y de fortuna que por un momento te acompañan y al día siguiente solo queda su recuerdo.<br>🌙`,
@@ -82,7 +82,7 @@ var user= {
             type: "mult_img",
             date: {
                 full: "19 de Marzo de 2022 a las 8:32 pm",
-                min: "19 de Marzo a las 8:32 pm"
+                min: "Marzo de 2022"
             },
             city: {name: "Manywhere", pic: "j", description: `Manywhere. <a target= '_blank'style= 'font-size:0.8em; ' href= ''><span style= 'color: #2ecc71; font-size: 1.5em; '>···&nbsp</span>es.wikipedia.org</a>`},
             title: `🖤`,

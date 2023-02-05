@@ -7,7 +7,7 @@ var user= {
                 type: "img",
                 date: {
                     full: "13 de Agosto de 2022 a las 10:8 pm",
-                    min: "13 de Agosto a las 10:8 pm"
+                    min: "Octubre de 2022"
                 },
                 title: `El mejor momento 😍🌅`,
                 description: ``,
@@ -37,7 +37,7 @@ var user= {
             type: "video",
             date: {
                 full: "12 de Enero de 2022 a las 11:2 pm",
-                min: "12 de Enero a las 11:2 pm"
+                min: "Enero de 2022"
             },
             title: `In July of 2020 we sat under this banyan tree `,
             description: `<br>We asked for magic<br><br>We were oblivious to the pain we would face together in such a short, frenetic period of time. Unaware of the work and sacrifices the relationship would require from us but intoxicated off of the love. And the karma.<br><br>Somehow a year and a half later, having walked through Hell together, and having laughed more than I ever imagined possible, he asked me to marry him.<br><br>And just as in every lifetime before this one, and as in every lifetime that will follow it, I said yes.<br><br>…and then we drank each other’s blood<br><br>1.11.22 ✨`,

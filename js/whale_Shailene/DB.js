@@ -1,7 +1,7 @@
 export function _user(){
 var user= {
-	username: "whale_Shailene",
-	users_name: "Shailene Diann Woodley",
+    username: "whale_Shailene",
+    users_name: "Shailene Diann Woodley",
     profilePic: {
             "/whale_Shailene/img/RKRWeNhDgJ": {
                 type: "img",
@@ -16,8 +16,8 @@ var user= {
             }
         },
     rol:{
-    	rol: "SEO",
-    	level: "98"
+        rol: "SEO",
+        level: "98"
     },
     tool:  `<div class='tool'>
                 <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='98'>
@@ -33,7 +33,7 @@ var user= {
                 </div>
             </div>`,
     cover: {
-    	insignias: ``
+        insignias: ``
     },
     situation: {
         "###": `<div id="sión" style="border: 1px dotted #636363; width: 100%; height: 41px; position: relative; cursor: s-resize;" onmousemove='L= function(e){(e.movementX >= 0 &amp;&amp; e.movementY >= 0)? ((e.movementX / e.movementY) < 0.5)? (function(){e.target.style.cursor= "s-resize"})(): ((e.movementX / e.movementY) > 2)? (function(){e.target.style.cursor= "e-resize"})(): (function(){e.target.style.cursor= "se-resize"})(): (e.movementX < 0 &amp;&amp; e.movementY >= 0)? ((e.movementX / e.movementY) > -0.5)? (function(){e.target.style.cursor= "s-resize"})(): ((e.movementX / e.movementY) < -2)? (function(){e.target.style.cursor= "w-resize"})(): (function(){e.target.style.cursor= "sw-resize"})(): (e.movementX >= 0 &amp;&amp; e.movementY < 0)? ((e.movementX / e.movementY) > -0.5)? (function(){e.target.style.cursor= "n-resize"})(): ((e.movementX / e.movementY) < -2)? (function(){e.target.style.cursor= "e-resize"})(): (function(){e.target.style.cursor= "ne-resize"})(): (e.movementX < 0 &amp;&amp; e.movementY < 0)? ((e.movementX / e.movementY) < 0.5)? (function(){e.target.style.cursor= "n-resize"})(): ((e.movementX / e.movementY) > 2)? (function(){e.target.style.cursor= "w-resize"})(): (function(){e.target.style.cursor= "nw-resize"})(): 1}; L(event); '></div>`
@@ -47,7 +47,7 @@ var user= {
                 type: "img",
                 date: {
                     full: "19 de Noviembre de 2022 a las 7:4 pm",
-                    min: "19 de Noviembre a las 7:4 pm"
+                    min: "Noviembre de 2022"
                 },
                 title: ``,
                 description: ``,
@@ -66,7 +66,7 @@ var user= {
             type: "repostContainments",
             date: {
                 full: "24 de Diciembre de 2022 a las 0:0 am",
-                min: "24 de Diciembre a las 0:0 am"
+                min: "Diciembre de 2022"
             },
             originalPoster: {
                 username: "A.K.A._Dizzy",
@@ -130,7 +130,7 @@ var user= {
             type: "links",
             date: {
                 full: "20 de Diciembre de 2022 a las 7:1 pm",
-                min: "20 de Diciembre a las 7:1 pm"
+                min: "Diciembre de 2022"
             },
             title: "--The Whole Board--",
             description: ``,
@@ -143,7 +143,7 @@ var user= {
             type: "repostImg",
             date: {
                 full: "3 de Diciembre de 2022 a las 2:2 pm",
-                min: "3 de Diciembre a las 2:2 pm"
+                min: "Diciembre de 2022"
             },
             originalPoster: {
                 username: "L",
@@ -200,7 +200,7 @@ var user= {
             type: "links",
             date: {
                 full: "3 de Diciembre de 2022 a la 1:6 pm",
-                min: "3 de Diciembre a la 1:6 pm"
+                min: "Diciembre de 2022"
             },
             title: "Hello_World",
             description: ``,
@@ -213,7 +213,7 @@ var user= {
                 type: "containments",
                 date: {
                     full: "2 de Diciembre de 2022 a las 6:22 pm",
-                    min: "2 de Diciembre a las 6:22 pm"
+                    min: "Diciembre de 2022"
                 },
                 title: `Important information`,
                 description: ``,
@@ -234,7 +234,7 @@ var user= {
                 type: "vid",
                 date: {
                     full: "2 de Diciembre de 2022 a las 6:9 pm",
-                    min: "2 de Diciembre a las 6:9 pm"
+                    min: "Diciembre de 2022"
                 },
                 title: ``,
                 description: ``,
@@ -245,7 +245,7 @@ var user= {
             type: "external_vid",
             date: {
                 full: "21 de Noviembre de 2022 a las 10:51 pm",
-                min: "21 de Noviembre a las 10:51 pm"
+                min: "Noviembre de 2022"
             },
             poster: `/resources/images/whale_Shailene/tDKwGSQRHh_poster.png`,
             title: `The Emperor's New Groove`,
@@ -257,7 +257,7 @@ var user= {
             type: "external_vid",
             date: {
                 full: "21 de Noviembre de 2022 a las 10:5 pm",
-                min: "21 de Noviembre a las 10:5 pm"
+                min: "Noviembre de 2022"
             },
             poster: `/resources/images/whale_Shailene/vB6zk582DE_poster.png`,
             title: `Phineas And Ferb - Summer Belongs To You!`,
@@ -269,7 +269,7 @@ var user= {
             type: "external_mult_carr",
             date: {
                 full: "21 de Noviembre de 2022 a las 8:45 pm",
-                min: "21 de Noviembre a las 8:56 pm"
+                min: "Noviembre de 2022"
             },
             title: `Winnie the Pooh: Boo to You Too!`,
             description: `Thanks to Disney ♡<br><a target= "_blank" href= "https://creativecommons.org/licenses/by-nd/4.0/">Attribution-NoDerivatives 4.0 International&nbsp;&nbsp;&nbsp;<span class= "cc-cc-icon"></span>&nbsp;&nbsp;<span class= "cc-attribution-icon"></span>&nbsp;&nbsp;<span class= "cc-nd-icon"></span></a>`,
@@ -280,7 +280,7 @@ var user= {
             type: "external_vid",
             date: {
                 full: "19 de Noviembre de 2022 a las 8:46 pm",
-                min: "19 de Noviembre a las 8:46 pm"
+                min: "Noviembre de 2022"
             },
             poster: `/resources/images/whale_Shailene/EQwKbqHv7P_poster.png`,
             title: `A Bug's Life`,
@@ -292,7 +292,7 @@ var user= {
             type: "external_mult_carr",
             date: {
                 full: "23 de Noviembre de 2022 a las 7:1 pm",
-                min: "23 de Noviembre a las 7:1 pm"
+                min: "Noviembre de 2022"
             },
             title: `The Adventures of Sherlock Holmes (1954)`,
             description: `Thanks to 20th Century Fox ♡<br><a target= "_blank" href= "https://creativecommons.org/publicdomain/mark/1.0/">Public Domain Mark 1.0&nbsp;&nbsp;&nbsp;<span class= "cc-cc-icon"></span>&nbsp;&nbsp;<span class= "cc-no_copyright-icon"></span></a>`,

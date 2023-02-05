@@ -40,7 +40,7 @@ var user= {
             type: "img",
             date: {
                 full: "2 de Enero de 2022 a la 1:5 am",
-                min: "2 de Enero a la 1:5 am"
+                min: "Enero de 2022"
             },
             title: ``,
             description: ``,

@@ -25,7 +25,7 @@ user= {
     		type: "links",
     		date:{
     			full: "10 de Julio de 2022 a las 9:5 pm",
-    			min: "10 de Julio a las 9:5 pm"
+    			min: "Julio de 2022"
     		},
     		title: `_dvlpmt`,
             description: ``,

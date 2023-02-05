@@ -7,7 +7,7 @@ var user= {
                 type: "img",
                 date: {
                     full: "20 de Septiembre de 2022 a las 4:20 pm",
-                    min: "20 de Septiembre a las 4:20 pm"
+                    min: "Septiembre de 2022"
                 },
                 title: ``,
                 description: ``,
@@ -37,7 +37,7 @@ var user= {
             type: "img",
             date: {
                 full: "20 de Septiembre de 2022 a las 4:20 pm",
-                min: "20 de Septiembre a las 4:20 pm"
+                min: "Septiembre de 2022"
             },
             title: ``,
             description: ``,
