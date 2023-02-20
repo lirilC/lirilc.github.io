@@ -971,7 +971,7 @@ content: "\e904"
     background-color: #eee;
     text-decoration: none;
 }
-i, q, b, sup  
+i, q, b, sup, s
 { 
   color: inherit; 
   font-weight: lighter} 
@@ -1840,4 +1840,11 @@ background-color: #ddd}
     padding: 3px 6px;
     width: 200px;
     max-height: calc(100vh - 30px);
+}
+.vjs-text-track{
+    background-color: #e5daec17 !important;
+}
+.vjs-tt-cue {
+    color: #f9fbf8;
+    text-shadow: -1px 0 1px #847f7f, 0 1px 1px #847f7f, 1px 0 1px #847f7f, 0 -1px 1px #847f7f;
 }

@@ -7582,12 +7582,15 @@ b
     background-color: #e5daec17 !important;
 }
 .vjs-tt-cue {
-    color: #dbdada;
-    text-shadow: 1px 1px #ded8e3;
+    color: #f9fbf8;
+    text-shadow: -1px 0 1px #847f7f, 0 1px 1px #847f7f, 1px 0 1px #847f7f, 0 -1px 1px #847f7f;
 }
 .vjs-default-skin .vjs-menu-button .vjs-menu .vjs-menu-content
 {
     -webkit-box-shadow: none !important;
     -moz-box-shadow: none !important;
     box-shadow: none !important;
+}
+.video-js-block .video-js .vjs-text-track
+{
 }

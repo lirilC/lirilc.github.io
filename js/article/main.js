@@ -108,7 +108,7 @@ accentuaTe= function(f, aL, m){
             var f= f.toLowerCase()
             var bW= ""
             for(var fi= f.length - 1; fi+1;fi--){
-                if((aL=="e"?"&+,.0123456789abcdefghijklmnopqrstuvwxyz ":"&+,.0123456789abcdefghijklmnñopqrstuvwxyz ").indexOf(f[f.length-1-fi])+1 && !(Chocolate.indexOf(f[f.length-fi])+1 || Anti_joint.indexOf(f[f.length-2-fi])+1) || (f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")){
+                if((aL=="e"?"&+,.abcdefghijklmnopqrstuvwxyz ":"&+,.abcdefghijklmnñopqrstuvwxyz ").indexOf(f[f.length-1-fi])+1 && !(Chocolate.indexOf(f[f.length-fi])+1 || Anti_joint.indexOf(f[f.length-2-fi])+1) || (f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")){
                     bW=`${bW}${(f[f.length-1-fi]=="–"?"":f[f.length-1-fi])+((f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")?"   ":"  ")}`
                 }else{
                     //alert(f[f.length-1-fi])
@@ -135,7 +135,7 @@ accentuaTe= function(f, aL, m){
             var f= f.toLowerCase()
             var bW= ""
             for(var fi= f.length - 1; fi+1;fi--){
-                if((aL=="e"?"&+,.0123456789abcdefghijklmnopqrstuvwxyz ":"&+,.0123456789abcdefghijklmnñopqrstuvwxyz ").indexOf(f[f.length-1-fi])+1 && !(Anti_joint.indexOf(f[f.length-fi])+1 || Chocolate.indexOf(f[f.length-2-fi])+1) || (f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")){
+                if((aL=="e"?"&+,.abcdefghijklmnopqrstuvwxyz ":"&+,.abcdefghijklmnñopqrstuvwxyz ").indexOf(f[f.length-1-fi])+1 && !(Anti_joint.indexOf(f[f.length-fi])+1 || Chocolate.indexOf(f[f.length-2-fi])+1) || (f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")){
                     bW=`${bW}${(f[f.length-1-fi]=="–"?"":f[f.length-1-fi])+((f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")?"   ":"  ")}`
                 }else{
                     //alert(f[f.length-1-fi])
@@ -735,7 +735,7 @@ Alphabets= {
                 ["ṧ", 3], 
                 ["̈s̈", 2], 
                 ["ṡ", 1], 
-                ["ş", 1], 
+                ["ş", 3], 
                 ["ṣ", 1], 
                 ["ṩ", 2], 
                 ["ș", 1], 
@@ -1283,7 +1283,7 @@ Alphabets= {
                 ["ṧ", 3], 
                 ["̈s̈", 2], 
                 ["ṡ", 1], 
-                ["ş", 1], 
+                ["ş", 3], 
                 ["ṣ", 1], 
                 ["ṩ", 2], 
                 ["ș", 1], 
@@ -1653,7 +1653,7 @@ obTain= function(m, p, h, grd){
             p= p.trim()
             break;
     }
-    if(grd.indexOf("p0") + 1){
+    if(grd.indexOf("p0") + 1 && p.length){
         p= `<i>${p}</i>`
     }
     return p.replaceAll("   ", "$_").replaceAll("  ", "   ").replaceAll("$_", "   ").replaceAll("'", "")
@@ -1665,7 +1665,7 @@ fill_daTa= function(type){
         case "dir":
             dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
             var hTml= alternating.find(".dir_es").html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(dInf.nombre, "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".dir_es").html(hTml)
 
             var hTml= alternating.find(".dir_es").prev().html()
@@ -1673,7 +1673,7 @@ fill_daTa= function(type){
             alternating.find(".dir_es").prev().html(hTml)
 
             var hTml= alternating.find(".dir_en").html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(dInf.nombre, "and")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "and")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".dir_en").html(hTml)
 
             var hTml= alternating.find(".dir_en").prev().html()
@@ -1683,7 +1683,7 @@ fill_daTa= function(type){
         case "cre":
             dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
             var hTml= alternating.find(".cre_es").html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(dInf.nombre, "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".cre_es").html(hTml)
 
             var hTml= alternating.find(".cre_es").prev().html()
@@ -1691,7 +1691,7 @@ fill_daTa= function(type){
             alternating.find(".cre_es").prev().html(hTml)
 
             var hTml= alternating.find(".cre_en").html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(dInf.nombre, "and")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "and")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".cre_en").html(hTml)
 
             var hTml= alternating.find(".cre_en").prev().html()
@@ -1701,7 +1701,7 @@ fill_daTa= function(type){
         case "pin":
             dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
             var hTml= alternating.find(".pin_es").html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(dInf.nombre, "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".pin_es").html(hTml)
 
             var hTml= alternating.find(".pin_es").prev().html()
@@ -1709,7 +1709,7 @@ fill_daTa= function(type){
             alternating.find(".pin_es").prev().html(hTml)
 
             var hTml= alternating.find(".pin_en").html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(dInf.nombre, "and")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "and")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".pin_en").html(hTml)
 
             var hTml= alternating.find(".pin_en").prev().html()
@@ -1737,7 +1737,7 @@ fill_daTa= function(type){
         case "esc":
             dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
             var hTml= alternating.find(".esc_es").html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(dInf.nombre, "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".esc_es").html(hTml)
 
             var hTml= alternating.find(".esc_es").prev().html()
@@ -1745,7 +1745,7 @@ fill_daTa= function(type){
             alternating.find(".esc_es").prev().html(hTml)
 
             var hTml= alternating.find(".esc_en").html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(dInf.nombre, "and")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "and")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".esc_en").html(hTml)
 
             var hTml= alternating.find(".esc_en").prev().html()
@@ -1755,7 +1755,7 @@ fill_daTa= function(type){
         case "art":
             dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
             var hTml= alternating.find(".art_es").html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(dInf.nombre, "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".art_es").html(hTml)
 
             var hTml= alternating.find(".art_es").prev().html()
@@ -1763,7 +1763,7 @@ fill_daTa= function(type){
             alternating.find(".art_es").prev().html(hTml)
 
             var hTml= alternating.find(".art_en").html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(dInf.nombre, "and")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "and")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".art_en").html(hTml)
 
             var hTml= alternating.find(".art_en").prev().html()
@@ -1773,15 +1773,15 @@ fill_daTa= function(type){
         case "sib":
             dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
             var hTml= alternating.find(".sib_es").html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple_Sr(dInf.nombre, "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple_Sr(sortgnp(dInf.nombre), "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".sib_es").html(hTml)
 
             var hTml= alternating.find(".sib_es").next().next().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}Para ${mulTiple_r(dInf.nombre, "y", "el hijo de Satanás Belcebú")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}Para ${mulTiple_r(sortgnp(dInf.nombre), "y", "el hijo de Satanás Belcebú")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".sib_es").next().next().html(hTml)
 
             var hTml= alternating.find(".sib_en").html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple_Sr(dInf.nombre, "and")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple_Sr(sortgnp(dInf.nombre), "and")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".sib_en").html(hTml)
 
             var hTml= alternating.find(".sib_en").next().next().html()
@@ -1791,7 +1791,7 @@ fill_daTa= function(type){
         case "arS":
             dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
             var hTml= alternating.find(".arS_es").html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${capitalize(mulTiple(dInf.nombre, "y"))} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${capitalize(mulTiple(sortgnp(dInf.nombre), "y"))} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".arS_es").html(hTml)
 
             var hTml= alternating.find(".arS_es").prev().prev().prev().html()
@@ -1821,11 +1821,11 @@ fill_daTa= function(type){
             alternating.find(".bnS_es").html(hTml)
 
             var hTml= alternating.find(".bnS_es").prev().prev().prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}Para ${mulTiple_r(dInf.nombre, "y", "el hijo de Satanás Belcebú")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}Para ${mulTiple_r(sortgnp(dInf.nombre), "y", "el hijo de Satanás Belcebú")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".bnS_es").prev().prev().prev().html(hTml)
 
             var hTml= alternating.find(".bnS_es").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De ${mulTiple(dInf.nombre, "y")}, y ${dInf.es.hTRTb}... ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De ${mulTiple(sortgnp(dInf.nombre), "y")}, y ${dInf.es.hTRTb}... ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".bnS_es").prev().html(hTml)
 
             var hTml= alternating.find(".bnS_en").html()
@@ -1833,11 +1833,11 @@ fill_daTa= function(type){
             alternating.find(".bnS_en").html(hTml)
 
             var hTml= alternating.find(".bnS_en").prev().prev().prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}For ${mulTiple_r(dInf.nombre, "and", "the son of The Devil")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}For ${mulTiple_r(sortgnp(dInf.nombre), "and", "the son of The Devil")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".bnS_en").prev().prev().prev().html(hTml)
 
             var hTml= alternating.find(".bnS_en").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From ${mulTiple(dInf.nombre, "and")}, and the... ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From ${mulTiple(sortgnp(dInf.nombre), "and")}, and the... ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".bnS_en").prev().html(hTml)
             break
         case "piS":
@@ -1898,11 +1898,11 @@ fill_daTa= function(type){
             dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
             
             var hTml= alternating.find(".crS_es").prev().prev().prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}Para ${mulTiple_crr(dInf.nombre, "y", "el amor de la vida de la Madre Naturaleza, La Que Hace Que Crezcan Los Árboles")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}Para ${mulTiple_crr(sortgnp(dInf.nombre), "y", "el amor de la vida de la Madre Naturaleza, La Que Hace Que Crezcan Los Árboles")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".crS_es").prev().prev().prev().html(hTml)
 
             var hTml= alternating.find(".crS_es").html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${capitalize(mulTiple(dInf.nombre, "y"))} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${capitalize(mulTiple(sortgnp(dInf.nombre), "y"))} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".crS_es").html(hTml)
 
             var hTml= alternating.find(".crS_es").prev().html()
@@ -1910,11 +1910,11 @@ fill_daTa= function(type){
             alternating.find(".crS_es").prev().html(hTml)
 
             var hTml= alternating.find(".crS_en").prev().prev().prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}For ${mulTiple_crr(dInf.nombre, "and", "the love of the life of Mother Nature, She Who Makes Trees Grow")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}For ${mulTiple_crr(sortgnp(dInf.nombre), "and", "the love of the life of Mother Nature, She Who Makes Trees Grow")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".crS_en").prev().prev().prev().html(hTml)
 
             var hTml= alternating.find(".crS_en").html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${capitalize(mulTiple(dInf.nombre, "and"))} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${capitalize(mulTiple(sortgnp(dInf.nombre), "and"))} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".crS_en").html(hTml)
 
             var hTml= alternating.find(".crS_en").prev().html()
@@ -1929,7 +1929,7 @@ fill_daTa= function(type){
             alternating.find(".cr_pS_es").prev().prev().prev().html(hTml)
 
             var hTml= alternating.find(".cr_pS_es").html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${capitalize(mulTiple(dInf.nombre, "y"))} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${capitalize(mulTiple(sortgnp(dInf.nombre), "y"))} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".cr_pS_es").html(hTml)
 
             var hTml= alternating.find(".cr_pS_es").prev().html()
@@ -1945,7 +1945,7 @@ fill_daTa= function(type){
             alternating.find(".cr_pS_en").html(hTml)
 
             var hTml= alternating.find(".cr_pS_en").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From ${mulTiple(dInf.par, "and")}, and the ${dInf.en.gentilicio} ${dInf.en.hTRT} of the series ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].name.nT.en} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From ${mulTiple(sortgnp(dInf.par), "and")}, and the ${dInf.en.gentilicio} ${dInf.en.hTRT} of the series ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].name.nT.en} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".cr_pS_en").prev().html(hTml)
             break
         case "di_pS":
@@ -1956,11 +1956,11 @@ fill_daTa= function(type){
             alternating.find(".di_pS_es").prev().prev().prev().html(hTml)
 
             var hTml= alternating.find(".di_pS_es").html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(dInf.nombre, "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".di_pS_es").html(hTml)
 
             var hTml= alternating.find(".di_pS_es").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De ${mulTiple(dInf.par, "y")}, y ${dInf.es.hTRT} ${dInf.es.gentilicio} de la película ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De ${mulTiple(sortgnp(dInf.par), "y")}, y ${dInf.es.hTRT} ${dInf.es.gentilicio} de la película ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".di_pS_es").prev().html(hTml)
 
             var hTml= alternating.find(".di_pS_en").prev().prev().prev().html()
@@ -1968,22 +1968,22 @@ fill_daTa= function(type){
             alternating.find(".di_pS_en").prev().prev().prev().html(hTml)
 
             var hTml= alternating.find(".di_pS_en").html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(dInf.nombre, "and")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "and")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".di_pS_en").html(hTml)
 
             var hTml= alternating.find(".di_pS_en").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From ${mulTiple(dInf.par, "and")}, and the ${dInf.en.gentilicio} ${dInf.en.hTRT} of the movie ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].name.nT.en} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From ${mulTiple(sortgnp(dInf.par), "and")}, and the ${dInf.en.gentilicio} ${dInf.en.hTRT} of the movie ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].name.nT.en} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".di_pS_en").prev().html(hTml)
             break
         case "diS":
             dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
             
             var hTml= alternating.find(".diS_es").prev().prev().prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}Para ${mulTiple_crr(dInf.nombre, "y", "el amor de la vida de la Madre Naturaleza, La Que Hace Que Crezcan Los Árboles")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}Para ${mulTiple_crr(sortgnp(dInf.nombre), "y", "el amor de la vida de la Madre Naturaleza, La Que Hace Que Crezcan Los Árboles")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".diS_es").prev().prev().prev().html(hTml)
 
             var hTml= alternating.find(".diS_es").html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${capitalize(mulTiple(dInf.nombre, "y"))} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${capitalize(mulTiple(sortgnp(dInf.nombre), "y"))} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".diS_es").html(hTml)
 
             var hTml= alternating.find(".diS_es").prev().html()
@@ -1991,11 +1991,11 @@ fill_daTa= function(type){
             alternating.find(".diS_es").prev().html(hTml)
 
             var hTml= alternating.find(".diS_en").prev().prev().prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}For ${mulTiple_crr(dInf.nombre, "and", "the love of the life of Mother Nature, She Who Makes Trees Grow")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}For ${mulTiple_crr(sortgnp(dInf.nombre), "and", "the love of the life of Mother Nature, She Who Makes Trees Grow")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".diS_en").prev().prev().prev().html(hTml)
 
             var hTml= alternating.find(".diS_en").html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${capitalize(mulTiple(dInf.nombre, "and"))} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${capitalize(mulTiple(sortgnp(dInf.nombre), "and"))} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".diS_en").html(hTml)
 
             var hTml= alternating.find(".diS_en").prev().html()
@@ -3129,13 +3129,14 @@ alternate= function(Smpqw){
         switch(Smpqw){
             case "superInformation":
                 $(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
+                
                 var tiTle= $(alternating).find("h2").text()
                 var pp= tiTle.slice(0, tiTle.indexOf(" ("))
                 var hh= tiTle.slice(tiTle.indexOf(" (") + 2, tiTle.indexOf(") "))
                 var ww= $(this).attr("w").split(" ")
                 var btW= []
                 for(aa in ww){
-                    var greed= `${ww[aa].slice(4, ww[aa].length)}`
+                    var greed= `${ww[aa].slice(4, ww[aa].length)}${alternatives[Object.keys(alternatives).slice(2)[$(alternating).attr("a")]].auC?'auC':''}`
                     acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
                     !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("   ", "&nbsp;&nbsp;")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
                 }
@@ -3187,12 +3188,14 @@ alternate= function(Smpqw){
                     $(this).html($(this).html().replaceAll("→", "_x_$").replaceAll("←", "→").replaceAll("_x_$", "←"))
                     $(this).html($(this).html().replaceAll("al revés", "_x_$").replaceAll("derecho", "al revés").replaceAll("_x_$", "derecho"))
                     $(this).html($(this).html().replaceAll("última", "_x_$").replaceAll("primera", "última").replaceAll("_x_$", "primera"))
+                    $(this).html($(this).html().replaceAll("delante de", "__x_$").replaceAll("detrás de", "delante de").replaceAll("__x_$", "detrás de"))
                 }
             }else if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){
                 if(alternatives[Object.keys(alternatives).slice(2)[0]].auC){
                     $(this).html($(this).html().replaceAll("→", "_x_$").replaceAll("←", "→").replaceAll("_x_$", "←"))
                     $(this).html($(this).html().replaceAll("al revés", "_x_$").replaceAll("derecho", "al revés").replaceAll("_x_$", "derecho"))
                     $(this).html($(this).html().replaceAll("última", "_x_$").replaceAll("primera", "última").replaceAll("_x_$", "primera"))
+                    $(this).html($(this).html().replaceAll("delante de", "__x_$").replaceAll("detrás de", "delante de").replaceAll("__x_$", "detrás de"))
                 }
             }
         }else if($(this).is($(alternating.find("p").filter(function(){return "undefined"!=typeof $(this).attr("w")?true:false})[0]))){
@@ -3203,12 +3206,14 @@ alternate= function(Smpqw){
                     $(this).html($(this).html().replaceAll("→", "_x_$").replaceAll("←", "→").replaceAll("_x_$", "←"))
                     $(this).html($(this).html().replaceAll("al revés", "_x_$").replaceAll("derecho", "al revés").replaceAll("_x_$", "derecho"))
                     $(this).html($(this).html().replaceAll("última", "_x_$").replaceAll("primera", "última").replaceAll("_x_$", "primera"))
+                    $(this).html($(this).html().replaceAll("delante de", "__x_$").replaceAll("detrás de", "delante de").replaceAll("__x_$", "detrás de"))
                 }
             }else if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){
                 if(alternatives[Object.keys(alternatives).slice(2)[pRev(alternatives.__a, Object.keys(alternatives).slice(2).length - 1)]].auC){
                     $(this).html($(this).html().replaceAll("→", "_x_$").replaceAll("←", "→").replaceAll("_x_$", "←"))
                     $(this).html($(this).html().replaceAll("al revés", "_x_$").replaceAll("derecho", "al revés").replaceAll("_x_$", "derecho"))
                     $(this).html($(this).html().replaceAll("última", "_x_$").replaceAll("primera", "última").replaceAll("_x_$", "primera"))
+                    $(this).html($(this).html().replaceAll("delante de", "__x_$").replaceAll("detrás de", "delante de").replaceAll("__x_$", "detrás de"))
                 }
             }
         }else if(loaded[alternatives.id]!=`super`){
@@ -3217,12 +3222,14 @@ alternate= function(Smpqw){
                     $(this).html($(this).html().replaceAll("→", "_x_$").replaceAll("←", "→").replaceAll("_x_$", "←"))
                     $(this).html($(this).html().replaceAll("al revés", "_x_$").replaceAll("derecho", "al revés").replaceAll("_x_$", "derecho"))
                     $(this).html($(this).html().replaceAll("última", "_x_$").replaceAll("primera", "última").replaceAll("_x_$", "primera"))
+                    $(this).html($(this).html().replaceAll("delante de", "__x_$").replaceAll("detrás de", "delante de").replaceAll("__x_$", "detrás de"))
                 }
             }else if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){
                 if(alternatives[Object.keys(alternatives).slice(2)[pRev(alternatives.__a, Object.keys(alternatives).slice(2).length - 1)]].auC){
                     $(this).html($(this).html().replaceAll("→", "_x_$").replaceAll("←", "→").replaceAll("_x_$", "←"))
                     $(this).html($(this).html().replaceAll("al revés", "_x_$").replaceAll("derecho", "al revés").replaceAll("_x_$", "derecho"))
                     $(this).html($(this).html().replaceAll("última", "_x_$").replaceAll("primera", "última").replaceAll("_x_$", "primera"))
+                    $(this).html($(this).html().replaceAll("delante de", "__x_$").replaceAll("detrás de", "delante de").replaceAll("__x_$", "detrás de"))
                 }
             }
         }else{
@@ -3231,12 +3238,14 @@ alternate= function(Smpqw){
                     $(this).html($(this).html().replaceAll("→", "_x_$").replaceAll("←", "→").replaceAll("_x_$", "←"))
                     $(this).html($(this).html().replaceAll("al revés", "_x_$").replaceAll("derecho", "al revés").replaceAll("_x_$", "derecho"))
                     $(this).html($(this).html().replaceAll("última", "_x_$").replaceAll("primera", "última").replaceAll("_x_$", "primera"))
+                    $(this).html($(this).html().replaceAll("delante de", "__x_$").replaceAll("detrás de", "delante de").replaceAll("__x_$", "detrás de"))
                 }
             }else if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){
                 if(alternatives[Object.keys(alternatives).slice(2)[0]].auC){
                     $(this).html($(this).html().replaceAll("→", "_x_$").replaceAll("←", "→").replaceAll("_x_$", "←"))
                     $(this).html($(this).html().replaceAll("al revés", "_x_$").replaceAll("derecho", "al revés").replaceAll("_x_$", "derecho"))
                     $(this).html($(this).html().replaceAll("última", "_x_$").replaceAll("primera", "última").replaceAll("_x_$", "primera"))
+                    $(this).html($(this).html().replaceAll("delante de", "__x_$").replaceAll("detrás de", "delante de").replaceAll("__x_$", "detrás de"))
                 }
             }
         }
@@ -3285,6 +3294,8 @@ alternate= function(Smpqw){
                 });
         }
     });
+    window.location.hash= `${alternatives[Object.keys(alternatives)[2]].name.name} (${alternatives[Object.keys(alternatives)[2]].name.hyphenation})`/*:1*/
+    $("#copyURL").text(`${decodeURI(window.location.origin)}${decodeURI(window.location.pathname)}#${alternatives[Object.keys(alternatives)[2]].name.name} (${alternatives[Object.keys(alternatives)[2]].name.hyphenation})`)
 }
 document.onkeyup= function(o){
 if(!o.shiftKey || !o.ctrlKey)ctrlMShift= false
