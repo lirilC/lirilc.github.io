@@ -3647,14 +3647,22 @@ _T(document).on("keydown", function (evt){
 	    } 
 	} 
 
-	(!($(document.activeElement).is("textarea") || $(document.activeElement).is("input")) && (!!ar || (_R(".current", und, 'e').is(".mult_img") || _R(".current", und, 'e').is(".mult_carr"))))? (function(){ 
+	(!($(document.activeElement).is("textarea") || $(document.activeElement).is("input")) && ((!!Antheater && Antheater.is(".mult_img")) || ((!!ar || (_R(".current", und, 'e').is(".mult_img") || _R(".current", und, 'e').is(".mult_carr"))))))? (function(){ 
 	    //th= $( th.context ).closest(".story").length? $( th.context ).closest(".story"): $( th.context ).closest(".foto").length? $( th.context ).closest(".foto"): $( th.context ).closest('#profilePic').length? $( th.context ).closest('#profilePic'): th.context;  
 	    switch(evt.keyCode){
 	        case 37: 
-	            _R(".current", und, 'e').find(".nav_arrow.left .arrow").trigger("click")
+				if(!!Antheater){
+					_R("#theater", und, 'e').find(".nav_arrow.left .arrow").trigger("click") 
+	        	}else{
+	            	_R(".current", und, 'e').find(".nav_arrow.left .arrow").trigger("click")
+	        	}
 	            break; 
 	        case 39: 
-	            _R(".current", und, 'e').find(".nav_arrow.right .arrow").trigger("click")
+	        	if(!!Antheater){
+					_R("#theater", und, 'e').find(".nav_arrow.right .arrow").trigger("click") 
+	        	}else{
+	            	_R(".current", und, 'e').find(".nav_arrow.right .arrow").trigger("click")
+	        	}
 	            break; 
 	    }
 	})(): 672; 
