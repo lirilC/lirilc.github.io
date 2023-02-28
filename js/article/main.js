@@ -1437,7 +1437,6 @@ Alphabets= {
     }
 }; 
 
-
 obTain= function(m, p, h, grd){
     p= p.trim()
     h= h.trim()
@@ -1847,7 +1846,7 @@ fill_daTa= function(type){
             alternating.find(".piS_es").prev().prev().prev().html(hTml)
 
             var hTml= alternating.find(".piS_es").html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${dInf.nombre.split("@")[0]} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}<span class= "name" lang= "${dInf.nombre.split("@")[0].split('‼').length-1?dInf.nombre.split("@")[0].split('‼')[1]:'en'}">${dInf.nombre.split("@")[0].split('‼')[0]}</span> ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".piS_es").html(hTml)
 
             var hTml= alternating.find(".piS_es").prev().html()
@@ -1860,7 +1859,7 @@ fill_daTa= function(type){
 
             dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
             var hTml= alternating.find(".piS_en").html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${dInf.nombre.split("@")[0]} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}<span class= "name" lang= "${dInf.nombre.split("@")[0].split('‼').length-1?dInf.nombre.split("@")[0].split('‼')[1]:'en'}">${dInf.nombre.split("@")[0].split('‼')[0]}</span> ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".piS_en").html(hTml)
 
             var hTml= alternating.find(".piS_en").prev().html()
@@ -2275,7 +2274,10 @@ localStorage.setItem("safety_purge", purger.index.in)
 console.log("superPurged All files and file_trees were also deleted!")
 }
    
-document.addEventListener("keydown", function(i){(i.keyCode == 13 && !!window.getSelection().focusNode && $(window.getSelection().focusNode.parentElement).is(".revelar"))? $(window.getSelection().focusNode.parentElement).click(): 1; }); 
+document.addEventListener("keydown", function(i){(i.keyCode == 13 && !!window.getSelection().focusNode && $(window.getSelection().focusNode.parentElement).is(".revelar"))? $(window.getSelection().focusNode.parentElement).click(): 1; 
+//
+
+}); 
                                    
 $(window).load(function(){ 
     /*setTimeout(
@@ -2549,7 +2551,7 @@ $(".nombre").on("click", function(){
     }
 })
 
-$('.poema p span, span.tiTle').tooltip({
+$('.poema p span, #article #text span.tiTle, #article #text span.Titled').tooltip({
     track: true,
     show: {
         effect: "none",
@@ -2576,6 +2578,151 @@ $('.poema p span, span.tiTle').tooltip({
             });
     }
 });
+$(".poema .name").on("click", function(){
+  play_Tts($(this).text(), $(this).attr("lang"))
+})
+
+$(".pseudoBuTton").on("click", function(){
+//
+play_Tts(saved_selecTed_text, $(".accessibiliTyDialog select option:selected").attr("value"))
+})
+$( function($) {
+    $.widget( "custom.combobox", {
+      _create: function() {
+        this.wrapper = $( "<span>" )
+          .addClass( "custom-combobox" )
+          .insertAfter( this.element );
+ 
+        this.element.hide();
+        this._createAutocomplete();
+        this._createShowAllButton();
+      },
+ 
+      _createAutocomplete: function() {
+        var selected = this.element.children( ":selected" ),
+          value = selected.val() ? selected.text() : "";
+
+        this.input = $( "<input>" )
+          .appendTo( this.wrapper )
+          .val( value )
+          .attr( "title", "" )
+          .addClass( "custom-combobox-input ui-widget ui-widget-content ui-state-default ui-corner-left" )
+          .autocomplete({
+            delay: 0,
+            unselectable: false,
+            minLength: 0,
+            source: this._source.bind( this ),
+            select: function(event, ui) {/**/}
+          })
+          .tooltip({
+            classes: {
+              "ui-tooltip": "ui-state-highlight"
+            }
+          });
+ 
+        this._on( this.input, {
+          autocompleteselect: function( event, ui ) {
+            ui.item.option.selected = true;
+            this._trigger( "select", event, {
+              item: ui.item.option
+            });
+          },
+ 
+          autocompletechange: "_removeIfInvalid"
+        });
+      },
+ 
+      _createShowAllButton: function() {
+        var input = this.input,
+          wasOpen = false;
+ 
+        $( "<a>" )
+          .attr( "tabIndex", -1 )
+          .attr( "title", "Mostrar todas las opciones" )
+          .tooltip()
+          .appendTo( this.wrapper )
+          .button({
+            icons: {
+              primary: "ui-icon-triangle-1-s"
+            },
+            text: false
+          })
+          .removeClass( "ui-corner-all" )
+          .addClass( "custom-combobox-toggle ui-corner-right" )
+          .on( "mousedown", function() {
+            wasOpen = input.autocomplete( "widget" ).is( ":visible" );
+          })
+          .on( "click", function() {
+            input.trigger( "focus" );
+ 
+            // Close if already visible
+            if ( wasOpen ) {
+              return;
+            }
+ 
+            // Pass empty string as value to search for, displaying all results
+            input.autocomplete( "search", "" );
+          });
+      },
+ 
+      _source: function( request, response ) {
+        var matcher = new RegExp( $.ui.autocomplete.escapeRegex(request.term), "i" );
+        response( this.element.children( "option" ).map(function() {
+          var text = $( this ).text();
+          if ( this.value && ( !request.term || matcher.test(text) ) )
+            return {
+              label: text,
+              value: text,
+              option: this
+            };
+        }) );
+      },
+ 
+      _removeIfInvalid: function( event, ui ) {
+        // Selected an item, nothing to do
+        if ( ui.item ) {
+          return;
+        }
+ 
+        // Search for a match (case-insensitive)
+        var value = this.input.val(),
+          valueLowerCase = value.toLowerCase(),
+          valid = false;
+        this.element.children( "option" ).each(function() {
+          if ( $( this ).text().toLowerCase() === valueLowerCase ) {
+            this.selected = valid = true;
+            return false;
+          }
+        });
+ 
+        // Found a match, nothing to do
+        if ( valid ) {
+          return;
+        }
+ 
+        // Remove invalid value
+        this.input
+          .val( "" )
+          .attr( "title", value + " no tiene coincidencias" )
+          .tooltip( "open" );
+        this.element.val( "" );
+        this._delay(function() {
+          this.input.tooltip( "close" ).attr( "title", "" );
+        }, 2500 );
+        this.input.autocomplete( "instance" ).term = "";
+      },
+ 
+      _destroy: function() {
+        this.wrapper.remove();
+        this.element.show();
+      }
+    });
+ 
+    $( "#combobox" ).combobox();
+  } );
+document.addEventListener("mousedown", function(x){
+    $(x.target).is(".ui-menu .ui-menu-item-wrapper")? $(".custom-combobox-input")[0].dispatchEvent(new KeyboardEvent('keydown',{keyCode: 13})):12;
+})
 $(".Editado").on("contextmenu", function(er){er.preventDefault()})
 $(".Editado").on("mouseup", function(e){
 console.log(e)
@@ -2759,9 +2906,9 @@ mulTiple= function(a, sep){
                     }
                     var nexxt= bb[parseInt(ik) + 1]
                     var prrev= bb[parseInt(ik) - 1]
-                    c= `${c}${(("undefined"!=typeof nexxt && "undefined"!=typeof prrev && bb[ik].split("@")[1] == prrev.split("@")[1] && ((bb[ik].split("@")[1] != nexxt.split("@")[1]) || (!(nexxt.split("@").length-1)))) || (parseInt(ik)==bb.length-1 && !!(bb.length-1)))?` ${sep} `: ', '}${!par?'':'tu'}${!!par?` ${par}, `:``}${bb[ik].split("@")[0]}`
+                    c= `${c}${(("undefined"!=typeof nexxt && "undefined"!=typeof prrev && bb[ik].split("@")[1] == prrev.split("@")[1] && ((bb[ik].split("@")[1] != nexxt.split("@")[1]) || (!(nexxt.split("@").length-1)))) || (parseInt(ik)==bb.length-1 && !!(bb.length-1)))?` ${sep} `: ', '}${!par?'':'tu'}${!!par?` ${par}, `:``}<span class= "name" lang= "${bb[ik].split("@")[0].split('‼').length-1?bb[ik].split("@")[0].split('‼')[1]:'en'}">${bb[ik].split("@")[0].split('‼')[0]}</span>`
                 }else{
-                    c= `${c}${(parseInt(ik) == bb.length - 1 && !!(bb.length-1))? ` ${sep} `: ", "}${bb[ik].split("@")[0]}`
+                    c= `${c}${(parseInt(ik) == bb.length - 1 && !!(bb.length-1))? ` ${sep} `: ", "}<span class= "name" lang= "${bb[ik].split("@")[0].split('‼').length-1?bb[ik].split("@")[0].split('‼')[1]:'en'}">${bb[ik].split("@")[0].split('‼')[0]}</span>`
                 }
             }
         }else{
@@ -2775,9 +2922,9 @@ mulTiple= function(a, sep){
                     }
                     var nexxt= bb[parseInt(ik) + 1]
                     var prrev= bb[parseInt(ik) - 1]
-                    c= `${c}${(("undefined"!=typeof nexxt && "undefined"!=typeof prrev && bb[ik].split("@")[1] == prrev.split("@")[1] && ((bb[ik].split("@")[1] != nexxt.split("@")[1]) || (!(nexxt.split("@").length-1)))) || (parseInt(ik)==bb.length-1 && !!(bb.length-1)))?` ${sep} `: ', '}${!par?'':'tu'}${!!par?` ${par},`:``} ${hTR_t} ${bb[ik].split("@")[0]}`
+                    c= `${c}${(("undefined"!=typeof nexxt && "undefined"!=typeof prrev && bb[ik].split("@")[1] == prrev.split("@")[1] && ((bb[ik].split("@")[1] != nexxt.split("@")[1]) || (!(nexxt.split("@").length-1)))) || (parseInt(ik)==bb.length-1 && !!(bb.length-1)))?` ${sep} `: ', '}${!par?'':'tu'}${!!par?` ${par},`:``} ${hTR_t} <span class= "name" lang= "${bb[ik].split("@")[0].split('‼').length-1?bb[ik].split("@")[0].split('‼')[1]:'en'}">${bb[ik].split("@")[0].split('‼')[0]}</span>`
                 }else{
-                    c= `${c}${parseInt(ik) == bb.length - 1? ` ${sep} `: ", "}${bb[ik].split("@")[0]}`
+                    c= `${c}${parseInt(ik) == bb.length - 1? ` ${sep} `: ", "}<span class= "name" lang= "${bb[ik].split("@")[0].split('‼').length-1?bb[ik].split("@")[0].split('‼')[1]:'en'}">${bb[ik].split("@")[0].split('‼')[0]}</span>`
                 }
             }
         }
@@ -2796,9 +2943,9 @@ mulTiple= function(a, sep){
                     }
                     var nexxt= bb[parseInt(ik) + 1]
                     var prrev= bb[parseInt(ik) - 1]
-                    c= `${c}${(("undefined"!=typeof nexxt && "undefined"!=typeof prrev && bb[ik].split("@")[1] == prrev.split("@")[1] && ((bb[ik].split("@")[1] != nexxt.split("@")[1]) || (!(nexxt.split("@").length-1)))) || (parseInt(ik)==bb.length-1 && !!(bb.length-1)))?` ${sep} `: ', '}${!par?'':'your'}${!!par?` ${par}, `:``}${bb[ik].split("@")[0]}`
+                    c= `${c}${(("undefined"!=typeof nexxt && "undefined"!=typeof prrev && bb[ik].split("@")[1] == prrev.split("@")[1] && ((bb[ik].split("@")[1] != nexxt.split("@")[1]) || (!(nexxt.split("@").length-1)))) || (parseInt(ik)==bb.length-1 && !!(bb.length-1)))?` ${sep} `: ', '}${!par?'':'your'}${!!par?` ${par}, `:``}<span class= "name" lang= "${bb[ik].split("@")[0].split('‼').length-1?bb[ik].split("@")[0].split('‼')[1]:'en'}">${bb[ik].split("@")[0].split('‼')[0]}</span>`
                 }else{
-                    c= `${c}${(parseInt(ik) == bb.length - 1 && !!(bb.length-1))? ` ${sep} `: ", "}${bb[ik].split("@")[0]}`
+                    c= `${c}${(parseInt(ik) == bb.length - 1 && !!(bb.length-1))? ` ${sep} `: ", "}<span class= "name" lang= "${bb[ik].split("@")[0].split('‼').length-1?bb[ik].split("@")[0].split('‼')[1]:'en'}">${bb[ik].split("@")[0].split('‼')[0]}</span>`
                 }
             }
         }else{
@@ -2812,9 +2959,9 @@ mulTiple= function(a, sep){
                     }
                     var nexxt= bb[parseInt(ik) + 1]
                     var prrev= bb[parseInt(ik) - 1]
-                    c= `${c}${(("undefined"!=typeof nexxt && "undefined"!=typeof prrev && bb[ik].split("@")[1] == prrev.split("@")[1] && ((bb[ik].split("@")[1] != nexxt.split("@")[1]) || (!(nexxt.split("@").length-1)))) || (parseInt(ik)==bb.length-1 && !!(bb.length-1)))?` ${sep} `: ', '}${!par?'':'your'}${!!par?` ${par},`:``} ${hTR_t} ${bb[ik].split("@")[0]}`
+                    c= `${c}${(("undefined"!=typeof nexxt && "undefined"!=typeof prrev && bb[ik].split("@")[1] == prrev.split("@")[1] && ((bb[ik].split("@")[1] != nexxt.split("@")[1]) || (!(nexxt.split("@").length-1)))) || (parseInt(ik)==bb.length-1 && !!(bb.length-1)))?` ${sep} `: ', '}${!par?'':'your'}${!!par?` ${par},`:``} ${hTR_t} <span class= "name" lang= "${bb[ik].split("@")[0].split('‼').length-1?bb[ik].split("@")[0].split('‼')[1]:'en'}">${bb[ik].split("@")[0].split('‼')[0]}</span>`
                 }else{
-                    c= `${c}${parseInt(ik) == bb.length - 1? ` ${sep} `: ", "}${bb[ik].split("@")[0]}`
+                    c= `${c}${parseInt(ik) == bb.length - 1? ` ${sep} `: ", "}<span class= "name" lang= "${bb[ik].split("@")[0].split('‼').length-1?bb[ik].split("@")[0].split('‼')[1]:'en'}">${bb[ik].split("@")[0].split('‼')[0]}</span>`
                 }
             }
         }
@@ -2842,7 +2989,7 @@ if(sep=="y"){
         if("undefined"!=typeof r_ && (bb[ik].split("@")[1][1]!='a' && ("undefined"==typeof prrev || ("undefined"!=typeof prrev && prrev.split("@")[1][1]=='a')))){
             c= `${c}; ${r_};`
         }
-        c= `${c}${((("undefined"!=typeof nexxt) && "undefined"!=typeof prrev && bb[ik].split("@")[1] == prrev.split("@")[1] && ((bb[ik].split("@")[1] != nexxt.split("@")[1]) || (!(nexxt.split("@").length-1)))) || (parseInt(ik)==bb.length-1 && !!(bb.length-1)))?` ${sep} `: ', '}${!par?'':'tu'}${!!par?` ${par} `:``}${bb[ik].split("@")[0]}`
+        c= `${c}${((("undefined"!=typeof nexxt) && "undefined"!=typeof prrev && bb[ik].split("@")[1] == prrev.split("@")[1] && ((bb[ik].split("@")[1] != nexxt.split("@")[1]) || (!(nexxt.split("@").length-1)))) || (parseInt(ik)==bb.length-1 && !!(bb.length-1)))?` ${sep} `: ', '}${!par?'':'tu'}${!!par?` ${par} `:``}<span class= "name" lang= "${bb[ik].split("@")[0].split('‼').length-1?bb[ik].split("@")[0].split('‼')[1]:'en'}">${bb[ik].split("@")[0].split('‼')[0]}</span>`
         if("undefined"!=typeof r_ && (bb[ik].split("@")[1][1]=='a' && parseInt(ik) == bb.length - 1)){
             c= `${c}; ${r_}`
         }
@@ -2865,7 +3012,7 @@ if(sep=="y"){
         if("undefined"!=typeof r_ && (bb[ik].split("@")[1][1]!='a' && ("undefined"==typeof prrev || ("undefined"!=typeof prrev && prrev.split("@")[1][1]=='a')))){
             c= `${c}; ${r_};`
         }
-        c= `${c}${((("undefined"!=typeof nexxt) && "undefined"!=typeof prrev && bb[ik].split("@")[1] == prrev.split("@")[1] && ((bb[ik].split("@")[1] != nexxt.split("@")[1]) || (!(nexxt.split("@").length-1)))) || (parseInt(ik)==bb.length-1 && !!(bb.length-1)))?` ${sep} `: ', '}${!par?'':'tu'}${!!par?` ${par} `:``}${bb[ik].split("@")[0]}`
+        c= `${c}${((("undefined"!=typeof nexxt) && "undefined"!=typeof prrev && bb[ik].split("@")[1] == prrev.split("@")[1] && ((bb[ik].split("@")[1] != nexxt.split("@")[1]) || (!(nexxt.split("@").length-1)))) || (parseInt(ik)==bb.length-1 && !!(bb.length-1)))?` ${sep} `: ', '}${!par?'':'tu'}${!!par?` ${par} `:``}<span class= "name" lang= "${bb[ik].split("@")[0].split('‼').length-1?bb[ik].split("@")[0].split('‼')[1]:'en'}">${bb[ik].split("@")[0].split('‼')[0]}</span>`
         if("undefined"!=typeof r_ && (bb[ik].split("@")[1][1]=='a' && parseInt(ik) == bb.length - 1)){
             c= `${c}; ${r_}`
         }
@@ -2928,7 +3075,7 @@ if(sep=="y"){
             if(bb[ik].split("@")[1][1]=="o" && prrev.split("@")[1][1]== "a"){
                 c= `${c}; el tuyo y el de`
             }
-            c= `${c}${("undefined"!=typeof nexxt && "undefined"!=typeof prrev && bb[ik].split("@")[1] == prrev.split("@")[1] && ((bb[ik].split("@")[1] != nexxt.split("@")[1]) || (!(nexxt.split("@").length-1))))?` ${sep} `: ', '}${!par?'':'tu'}${!!par?` ${par} `:``}${bb[ik].split("@")[0]}`
+            c= `${c}${("undefined"!=typeof nexxt && "undefined"!=typeof prrev && bb[ik].split("@")[1] == prrev.split("@")[1] && ((bb[ik].split("@")[1] != nexxt.split("@")[1]) || (!(nexxt.split("@").length-1))))?` ${sep} `: ', '}${!par?'':'tu'}${!!par?` ${par} `:``}<span class= "name" lang= "${bb[ik].split("@")[0].split('‼').length-1?bb[ik].split("@")[0].split('‼')[1]:'en'}">${bb[ik].split("@")[0].split('‼')[0]}</span>`
             if(bb[ik].split("@")[1][1]=="a" && parseInt(ik)== bb.length-1){
                 c= `${c}; y el tuyo`
             }
@@ -2945,7 +3092,7 @@ if(sep=="y"){
             }
             var nexxt= bb[parseInt(ik) + 1]
             var prrev= bb[parseInt(ik) - 1]
-            c= `${c}${("undefined"!=typeof nexxt && "undefined"!=typeof prrev && bb[ik].split("@")[1] == prrev.split("@")[1] && ((bb[ik].split("@")[1] != nexxt.split("@")[1]) || (!(nexxt.split("@").length-1))))?` ${sep} `: ', '}${!par?'':'tu'}${!!par?` ${par} `:``}${bb[ik].split("@")[0]}`
+            c= `${c}${("undefined"!=typeof nexxt && "undefined"!=typeof prrev && bb[ik].split("@")[1] == prrev.split("@")[1] && ((bb[ik].split("@")[1] != nexxt.split("@")[1]) || (!(nexxt.split("@").length-1))))?` ${sep} `: ', '}${!par?'':'tu'}${!!par?` ${par} `:``}<span class= "name" lang= "${bb[ik].split("@")[0].split('‼').length-1?bb[ik].split("@")[0].split('‼')[1]:'en'}">${bb[ik].split("@")[0].split('‼')[0]}</span>`
         }
     }
     return c.trim().replaceAll("tus hermanas","el hermanito de").replaceAll("tu hermana","el hermanito de").replaceAll("tus hermanitas","el hermano de").replaceAll("tu hermanita","el hermano de").replaceAll("tus hermanos","el hermanito de").replaceAll("tu hermano","el hermanito de").replaceAll("tus hermanitos","el hermano de").replaceAll("tu hermanito","el hermano de").replaceAll(";,", ";").replaceAll("el hermano de", " ").replaceAll("el hermanito de", " ").replaceAll("de,", "de").replaceAll("   ", " ").split("").reverse().join("").replace(" ,", " y ").split("").reverse().join("")
@@ -2969,7 +3116,7 @@ a= a.split("| ").filter(function(R){if(R.split("@").length-1){return true}else{r
                 c= `${c}'s father; yours`
                 ak= 3
             }
-            c= `${c}${("undefined"!=typeof nexxt && "undefined"!=typeof prrev && bb[ik].split("@")[1] == prrev.split("@")[1] && ((bb[ik].split("@")[1] != nexxt.split("@")[1]) || (!(nexxt.split("@").length-1))))?` ${sep} `: ', '}${!par?'':'tu'}${!!par?` ${par} `:``}${bb[ik].split("@")[0]}`
+            c= `${c}${("undefined"!=typeof nexxt && "undefined"!=typeof prrev && bb[ik].split("@")[1] == prrev.split("@")[1] && ((bb[ik].split("@")[1] != nexxt.split("@")[1]) || (!(nexxt.split("@").length-1))))?` ${sep} `: ', '}${!par?'':'tu'}${!!par?` ${par} `:``}<span class= "name" lang= "${bb[ik].split("@")[0].split('‼').length-1?bb[ik].split("@")[0].split('‼')[1]:'en'}">${bb[ik].split("@")[0].split('‼')[0]}</span>`
             if(bb[ik].split("@")[1][1]=="a" && parseInt(ik)== bb.length-1){
                 c= `${c}'s father; and yours`
                 ak= 1
@@ -2988,7 +3135,7 @@ a= a.split("| ").filter(function(R){if(R.split("@").length-1){return true}else{r
             }
             var nexxt= bb[parseInt(ik) + 1]
             var prrev= bb[parseInt(ik) - 1]
-            c= `${c}${("undefined"!=typeof nexxt && "undefined"!=typeof prrev && bb[ik].split("@")[1] == prrev.split("@")[1] && ((bb[ik].split("@")[1] != nexxt.split("@")[1]) || (!(nexxt.split("@").length-1))))?` ${sep} `: ', '}${!par?'':'tu'}${!!par?` ${par} `:``}${bb[ik].split("@")[0]}`
+            c= `${c}${("undefined"!=typeof nexxt && "undefined"!=typeof prrev && bb[ik].split("@")[1] == prrev.split("@")[1] && ((bb[ik].split("@")[1] != nexxt.split("@")[1]) || (!(nexxt.split("@").length-1))))?` ${sep} `: ', '}${!par?'':'tu'}${!!par?` ${par} `:``}<span class= "name" lang= "${bb[ik].split("@")[0].split('‼').length-1?bb[ik].split("@")[0].split('‼')[1]:'en'}">${bb[ik].split("@")[0].split('‼')[0]}</span>`
         }
     }
     c= `${c.trim().replaceAll("tus hermanas","el hermanito de").replaceAll("tu hermana","el hermanito de").replaceAll("tus hermanitas","el hermano de").replaceAll("tu hermanita","el hermano de").replaceAll("tus hermanos","el hermanito de").replaceAll("tu hermano","el hermanito de").replaceAll("tus hermanitos","el hermano de").replaceAll("tu hermanito","el hermano de").replaceAll(";,", ";").replaceAll("el hermano de", " ").replaceAll("el hermanito de", " ").replaceAll("de,", "de").replaceAll("   ", " ").split("").reverse().join("").replace(" ,", " y ").split("").reverse().join("")}${ak==2?"'s father":ak==3?"'s":""}`
@@ -3023,7 +3170,7 @@ if(sep== "y"){
             if("undefined"!=typeof r_ && (bb[ik].split("@")[1][1]!='a' && ("undefined"==typeof prrev || ("undefined"!=typeof prrev && prrev.split("@")[1][1]=='a')))){
                 c= `${c}; ${r_};`
             }
-            c= `${c}${((("undefined"!=typeof nexxt) && "undefined"!=typeof prrev && bb[ik].split("@")[1] == prrev.split("@")[1] && ((bb[ik].split("@")[1] != nexxt.split("@")[1]) || (!(nexxt.split("@").length-1)))) || (parseInt(ik)==bb.length-1 && !!(bb.length-1)))?` ${sep} `: ', '}${!par?'':'tu'}${!!par?` ${par} `:``}${bb[ik].split("@")[0]}`
+            c= `${c}${((("undefined"!=typeof nexxt) && "undefined"!=typeof prrev && bb[ik].split("@")[1] == prrev.split("@")[1] && ((bb[ik].split("@")[1] != nexxt.split("@")[1]) || (!(nexxt.split("@").length-1)))) || (parseInt(ik)==bb.length-1 && !!(bb.length-1)))?` ${sep} `: ', '}${!par?'':'tu'}${!!par?` ${par} `:``}<span class= "name" lang= "${bb[ik].split("@")[0].split('‼').length-1?bb[ik].split("@")[0].split('‼')[1]:'en'}">${bb[ik].split("@")[0].split('‼')[0]}</span>`
             if("undefined"!=typeof r_ && (bb[ik].split("@")[1][1]=='a' && parseInt(ik) == bb.length - 1)){
                 c= `${c}; ${r_}`
             }
@@ -3056,7 +3203,7 @@ if(sep== "y"){
             if("undefined"!=typeof r_ && (bb[ik].split("@")[1][1]!='a' && ("undefined"==typeof prrev || ("undefined"!=typeof prrev && prrev.split("@")[1][1]=='a')))){
                 c= `${c}; ${r_};`
             }
-            c= `${c}${((("undefined"!=typeof nexxt) && "undefined"!=typeof prrev && bb[ik].split("@")[1] == prrev.split("@")[1] && ((bb[ik].split("@")[1] != nexxt.split("@")[1]) || (!(nexxt.split("@").length-1)))) || (parseInt(ik)==bb.length-1 && !!(bb.length-1)))?` ${sep} `: ', '}${!par?'':'tu'}${!!par?` ${par} `:``}${bb[ik].split("@")[0]}`
+            c= `${c}${((("undefined"!=typeof nexxt) && "undefined"!=typeof prrev && bb[ik].split("@")[1] == prrev.split("@")[1] && ((bb[ik].split("@")[1] != nexxt.split("@")[1]) || (!(nexxt.split("@").length-1)))) || (parseInt(ik)==bb.length-1 && !!(bb.length-1)))?` ${sep} `: ', '}${!par?'':'tu'}${!!par?` ${par} `:``}<span class= "name" lang= "${bb[ik].split("@")[0].split('‼').length-1?bb[ik].split("@")[0].split('‼')[1]:'en'}">${bb[ik].split("@")[0].split('‼')[0]}</span>`
             if("undefined"!=typeof r_ && (bb[ik].split("@")[1][1]=='a' && parseInt(ik) == bb.length - 1)){
                 c= `${c}; ${r_}`
             }
@@ -3267,6 +3414,9 @@ alternate= function(Smpqw){
         $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
     })
     fill_daTa(Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1])
+    alternating.find(".name").on("click", function(){
+      play_Tts($(this).text(), $(this).attr("lang"))
+    })
     alternating.find('p span').tooltip({
         track: true,
         show: {
@@ -3302,6 +3452,20 @@ if(!o.shiftKey || !o.ctrlKey)ctrlMShift= false
 if(!o.ctrlKey)ctrl_k= false
 if("undefined"!=typeof useLinks && o.ctrlKey && o.altKey && o.keyCode==83){o.preventDefault();$(".nombre").toggleClass("activeforURIinfo");$(".nombre").hasClass("activeforURIinfo")?history.pushState("", document.title, window.location.pathname
                                                        + window.location.search):134;}
+if(o.keyCode == 65 && o.ctrlKey && o.altKey){
+//
+saved_selecTed_text= selecTedText()
+if($(".accessibiliTyDialog").is(".visible")){
+    $(".accessibiliTyDialog").removeClass("visible")
+    saved_selecTed_text= ""
+}else{
+    if(!!saved_selecTed_text){
+        $(".accessibiliTyDialog").addClass("visible")
+    }else{
+        alert("Selecciona algo de texto primero.")
+    }
+}
+}
 }
 window.onblur= function(){
     ctrlMShift= false
@@ -4031,4 +4195,13 @@ function tooltipComentarios(){
             }); 
         } 
     }); 
+}
+
+var play_Tts= function(text, lang){
+   $("#tts-audio")[0].src= `https://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&client=tw-ob&q=${text}`
+   $("#tts-audio")[0].play()
+};
+
+var selecTedText= function(){
+    return (window.getSelection?window.getSelection():document.getSelection?document.getSelection():document.selection?document.selection.createRange():"falló obtener la selección").toString()
 }
