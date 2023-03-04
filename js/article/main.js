@@ -3546,36 +3546,6 @@ alternate= function(Smpqw){
                     btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&nbsp;&nbsp;").replaceAll("&nbsp;&nbsp;<span> ", "&nbsp;&nbsp;<span>")
                     $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`)
                 })
-                alternating.find('p span').tooltip({
-                    track: true,
-                    show: {
-                        effect: "none",
-                        delay: 0
-                    },
-                    open: function(event, ui) {
-                        if (typeof(event.originalEvent) === 'undefined') {
-                            return false;
-                        }
-                        ý= $(this); 
-                       
-                        var $id = $(ui.tooltip).attr('id');
-
-                        $('div.ui-tooltip').not('#' + $id).remove();
-                    },
-                    close: function(event, ui) {
-                        ui.tooltip.hover(function() {
-                                $(this).stop(true).fadeTo(400, 1);
-                            },
-                            function() {
-                                $(this).fadeOut('400', function() {
-                                    $(this).remove();
-                                });
-                            });
-                    }
-                }); 
-
-                break;
-            case "notSuperInformation":
                 $(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
                     var tiTle= $(alternating).find("h2").text()
                     var pp= tiTle.slice(0, tiTle.indexOf(" ("))
@@ -3583,12 +3553,12 @@ alternate= function(Smpqw){
                     var ww= $(this).attr("w").split(" ")
                     var btW= []
                     for(aa in ww){
-                        var greed= `${ww[aa].slice(4, ww[aa].length)}${alternatives[Object.keys(alternatives).slice(2)[$(alternating).attr("a")]].auC?'auC':''}`
+                        var greed= `${ww[aa].slice(4, ww[aa].length)}${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC?'auC':''}`
                         acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
                         !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("   ", "&nbsp;&nbsp;")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
                     }
                     btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&nbsp;&nbsp;").replaceAll("&nbsp;&nbsp;<span> ", "&nbsp;&nbsp;<span>")
-                    $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`)
+                    $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
                 })
                 alternating.find('p span').tooltip({
                     track: true,
@@ -3617,7 +3587,63 @@ alternate= function(Smpqw){
                             });
                     }
                 }); 
-                //$(alternating).html(function(){return (`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))})
+                break;
+            case "notSuperInformation":
+                $(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
+                    var tiTle= $(alternating).find("h2").text()
+                    var pp= tiTle.slice(0, tiTle.indexOf(" ("))
+                    var hh= tiTle.slice(tiTle.indexOf(" (") + 2, tiTle.indexOf(") "))
+                    var ww= $(this).attr("w").split(" ")
+                    var btW= []
+                    for(aa in ww){
+                        var greed= `${ww[aa].slice(4, ww[aa].length)}${alternatives[Object.keys(alternatives).slice(2)[$(alternating).attr("a")]].auC?'auC':''}`
+                        acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
+                        !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("   ", "&nbsp;&nbsp;")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
+                    }
+                    btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&nbsp;&nbsp;").replaceAll("&nbsp;&nbsp;<span> ", "&nbsp;&nbsp;<span>")
+                    $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`)
+                })
+                $(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
+                    var tiTle= $(alternating).find("h2").text()
+                    var pp= tiTle.slice(0, tiTle.indexOf(" ("))
+                    var hh= tiTle.slice(tiTle.indexOf(" (") + 2, tiTle.indexOf(") "))
+                    var ww= $(this).attr("w").split(" ")
+                    var btW= []
+                    for(aa in ww){
+                        var greed= `${ww[aa].slice(4, ww[aa].length)}${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC?'auC':''}`
+                        acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
+                        !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("   ", "&nbsp;&nbsp;")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
+                    }
+                    btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&nbsp;&nbsp;").replaceAll("&nbsp;&nbsp;<span> ", "&nbsp;&nbsp;<span>")
+                    $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
+                })
+                alternating.find('p span').tooltip({
+                    track: true,
+                    show: {
+                        effect: "none",
+                        delay: 0
+                    },
+                    open: function(event, ui) {
+                        if (typeof(event.originalEvent) === 'undefined') {
+                            return false;
+                        }
+                        ý= $(this); 
+                       
+                        var $id = $(ui.tooltip).attr('id');
+
+                        $('div.ui-tooltip').not('#' + $id).remove();
+                    },
+                    close: function(event, ui) {
+                        ui.tooltip.hover(function() {
+                                $(this).stop(true).fadeTo(400, 1);
+                            },
+                            function() {
+                                $(this).fadeOut('400', function() {
+                                    $(this).remove();
+                                });
+                            });
+                    }
+                });
                 break;
         }
         return;
@@ -4118,39 +4144,39 @@ function closeModal() {
 
     $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 1 !important; }; "; 
 }
-		$('header .knob').trigger(
-        		'configure',
-        		{   
-        		    "fgColor":"#fff"
-        		}
-    		);
+        $('header .knob').trigger(
+                'configure',
+                {   
+                    "fgColor":"#fff"
+                }
+            );
     
     $(".star").on("click",function(){
-		 $(this).toggleClass("true")
-	});
+         $(this).toggleClass("true")
+    });
     $(".bookmark").on("click",function(){
-		 $(this).toggleClass("true")
-	});
+         $(this).toggleClass("true")
+    });
     
      $(".options.first .bookmark").on("click",function(){
         $('.options.ending .bookmark').toggleClass("true")
           
-	});
+    });
     $(".options.ending .bookmark").on("click",function(){
         $('.options.first .bookmark').toggleClass("true")
           
-	});
+    });
     
      $(".options.first .star").on("click",function(){
         $('.options.ending .star').toggleClass("true")
           
-	});
+    });
     $(".options.ending .star").on("click",function(){
         $('.options.first .star').toggleClass("true")
           
-	});
+    });
     
-	$("#dots").on("click", function () {
+    $("#dots").on("click", function () {
         $("#Store").toggleClass("open");
         $("#index-trigger").children().toggleClass("openedStore");
         $("#right-menu #dots").children().toggleClass("openedStore");
@@ -4199,11 +4225,11 @@ function closeModal() {
     });
     $("#close").on("click",function(){
         closeModal() 
-	});
+    });
     
     $("#wrapper").on("click",function(){
          closeModal() 
-	});
+    });
     document.onkeydown = function(evt) {
         evt = evt || window.event;
         if (evt.keyCode == 27) {
@@ -4223,7 +4249,7 @@ $(document).on("keypress", function(e){
         
     }
 })
-	$("#profileTrigger").on("click", function (e) {
+    $("#profileTrigger").on("click", function (e) {
         $(".wrapper").toggleClass("visible")
         $("#right-menu .index-arrow").toggleClass("open");
         $("#profileSettings").toggleClass("open");
@@ -4272,8 +4298,8 @@ e.stopPropagation()
 
 
     });
-	
-	
+    
+    
 });
 
 $( window ).on("resize", function(){
@@ -4500,7 +4526,7 @@ function tooltipComentarios(){
 }
 
 var play_Tts= function(text, lang){
-   $("#tts-audio")[0].src= `https://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&client=tw-ob&q=${text}`
+   $("#tts-audio")[0].src= `https://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&client=tw-ob&q=${encodeURIComponent(text)}`
    $("#tts-audio")[0].play()
 };
 
