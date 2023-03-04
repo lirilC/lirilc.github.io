@@ -1658,17 +1658,130 @@ obTain= function(m, p, h, grd){
     return p.replaceAll("   ", "$_").replaceAll("  ", "   ").replaceAll("$_", "   ").replaceAll("'", "")
 }
 
-fill_daTa= function(type){
+fill_Table= function(A){
+    $("#superInformation_as table tbody").html(``)
+    for(var AA in A){
+        if(`undefined`===typeof A[AA]._cusTom){
+            $("#superInformation_as table tbody").append(`<tr><th>${A[AA].T}</th><th><input class= "${A[AA]._id}"></th><th help= "${A[AA]._inf}"">?</th></tr>`)
+        }else{
+            $("#superInformation_as table tbody").append(`<tr><th>${A[AA].T}</th><th>${A[AA]._cusTom}</th><th help= "${A[AA]._inf}"">?</th></tr>`)
+            $("#superInformation_as table tbody tr:last-child th:nth-child(2) input:first-child").addClass(A[AA]._id)
+        }
+    }
+    $("#superInformation_as table tbody tr th:nth-child(3)").on("mouseenter", function(){
+        $("#superInformation_as #help_secTion").addClass("visible") 
+        $("#superInformation_as #help_secTion").html($(this).attr("help")) 
+        aE= $(document.activeElement)
+        aE.blur()
+        console.log(document.activeElement)
+        setTimeout(function(){$("#superInformation_as #help_secTion").focus()}, 231)
+    })
+    $("#superInformation_as table tbody tr th:nth-child(3)").on("mouseleave click", function(){
+        $("#superInformation_as #help_secTion").removeClass("visible") 
+        aE.focus()
+    })
+}
+
+fill_daTa= function(type, superInf){
+    if(type === `wd_filling_superInformation` && !$(".accessibiliTyDialog").is(".visible")){
+        $(".accessibiliTyDialog").addClass("visible")
+        $(".accessibiliTyDialog").addClass("fill_daTa")
+        $(".accessibiliTyDialog > aside").removeClass("visible")
+        $("#superInformation_as").addClass("visible")
+        switch(alternatives["id"]){
+            case "FGlqw2x":
+                 fill_Table([{T: "Nombre de herman@(s) con parentesco", _id: "sib_name", _inf: 
+                   `nombre‼lenguajeDelNombre@parentesco
+                    <h4><b>parentesco</b>, puede ser:</h4>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>na</th><th>Hermana</th></tr>
+                            <tr><th>ta</th><th>Hermanita</th></tr>
+                            <tr><th>no</th><th>Hermano</th></tr>
+                            <tr><th>to</th><th>Hermanito</th></tr>
+                        </tbody>
+                    </table>
+                    <h4><b>lenguajeDelNombre</b>, puede ser:</h4>
+                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF <sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[1]</a></sup> de un lenguaje</span>
+                    <h4>Puedes especificar <b>varios</b> nombres separándolos con una raya vertical y un espacio, así:</h4>
+                    nombre‼lDN@p| nombre‼lDN@p
+                    `}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
+                break;
+            case "alcN329":case "Ondoi2n":
+                 fill_Table([{T: "Nombre del artista", _id: "art_name"}, {T: "Gentilicio del artista", _id: "art_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse al artista", _id: "art_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}])
+                break;
+            case "m32c2b4":
+                 fill_Table([{T: "Nombre de herman@ con parentesco", _id: "sib_name"}, {T: "Gentilicio del artista", _id: "art_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse al artista", _id: "art_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
+                break;
+            case "alLNd2d":
+                 fill_Table([{T: "Nombre del grupo musical", _id: "ban_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse al grupo musical", _id: "ban_hTrt", _cusTom: `<input placeholder= "en español"></input><input disabled= "true" placeholder= "en inglés"></input>`}, {T: "Nombre de herman@(s) con parentesco", _id: "sib_name"}, {T: "Gentilicio de hermano(s)", _id: "sib_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse a hermano(s)", _id: "sib_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
+                break;
+            case "2oJdin2":case "nJBw2f3":
+                 fill_Table([{T: "Nombre de la película", _id: "mov_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Nombre de director(es)", _id: "dir_name"}, {T: "Gentilicio de director(es)", _id: "dir_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse a director(es)", _id: "dir_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}])
+                break;
+            case "Biujbc2":
+                 fill_Table([{T: "Nombre de la película", _id: "mov_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Nombre de director(es) con o sin parentescos", _id: "dir_name"}, {T: "Gentilicio de director(es)", _id: "dir_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse a director(es)", _id: "dir_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
+                break;
+            case "jnIFn3d":case "Hi2Cj29":
+                 fill_Table([{T: "Nombre de la serie", _id: "ser_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Nombre de creador(es)", _id: "cre_name"}, {T: "Gentilicio de creador(es)", _id: "cre_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse a creador(es)", _id: "cre_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}])
+                break;
+            case "LNjndn1":
+                 fill_Table([{T: "Nombre de la serie", _id: "ser_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Nombre de creador(es) con o sin parentescos", _id: "cre_name"}, {T: "Gentilicio de creador(es)", _id: "cre_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse a creador(es)", _id: "cre_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
+                break;
+            case "LKKCoi2":case "Ll3nod1":
+                 fill_Table([{T: "Nombre del escritor", _id: "wri_name"}, {T: "Gentilicio del escritor", _id: "wri_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse al escritor", _id: "wri_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}])
+                break;
+            case "Llndj3c":
+                 fill_Table([{T: "Nombre del escritor con parentesco", _id: "wri_name"}, {T: "Gentilicio del escritor", _id: "wri_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse al escritor", _id: "wri_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
+                break;
+            case "NiCju2d":case "cH2dDnC":
+                 fill_Table([{T: "Nombre del artista", _id: "art_name"}, {T: "Gentilicio del artista", _id: "art_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse al artista", _id: "art_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}])
+                break;
+            case "Lmdi2md":
+                 fill_Table([{T: "Nombre del artista con parentesco", _id: "art_name"}, {T: "Gentilicio del artista", _id: "art_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse al artista", _id: "art_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
+                break;
+            case "amcaoMd":case "kLwicn2":
+                 fill_Table([{T: "Nombre de la(s) desarrolladora(s) de videojuegos", _id: "dev_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Gentilicio de la(s) desarrolladora(s) de videojuegos", _id: "dev_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse a la(s) desarrolladora(s) de videojuegos", _id: "dev_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}])
+                break;
+            default:
+                 fill_Table([{T: "superInformation irrelevante", _id: "sib_name", _cusTom: `Autodestrucción (3)`}])
+                 var counTdown= 3
+                 console.log(counTdown)
+                 const selfDest= setInterval(function(){
+                    if(counTdown > 0){
+                        counTdown--
+                        $("#superInformation_as table tbody th:nth-child(2)").text(`Autodestrucción (${counTdown})`)
+                    }if(!!!counTdown){
+                        $(".accessibiliTyDialog").removeClass("visible")
+                        clearInterval(selfDest)
+                    }
+                 }, 1000)
+                break;
+            return
+        }
+    }else if(type === `md_filling_superInformation`){
+        $(".accessibiliTyDialog").removeClass("visible")
+        eInf= informaTion
+        dInf= informaTion[Object.keys(informaTion)[0]]
+        type= superInf
+    }else{
+        eInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]]    
+        dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
+    }
+
     //alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]]
     switch(type){
         case "dir":
-            dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
+            dInf= eInf[Object.keys(eInf)[1]]
+
             var hTml= alternating.find(".dir_es").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".dir_es").html(hTml)
 
             var hTml= alternating.find(".dir_es").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${dInf.es.hTRT} ${dInf.es.gentilicio} de la película ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${dInf.es.hTRT} ${dInf.es.gentilicio} de la película ${eInf.name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".dir_es").prev().html(hTml)
 
             var hTml= alternating.find(".dir_en").html()
@@ -1676,17 +1789,18 @@ fill_daTa= function(type){
             alternating.find(".dir_en").html(hTml)
 
             var hTml= alternating.find(".dir_en").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From the ${dInf.en.gentilicio} ${dInf.en.hTRT} of the movie ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].name.nT.en} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From the ${dInf.en.gentilicio} ${dInf.en.hTRT} of the movie ${eInf.name.nT.en} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".dir_en").prev().html(hTml)
             break
         case "cre":
-            dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
+            dInf= eInf[Object.keys(eInf)[1]]
+
             var hTml= alternating.find(".cre_es").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".cre_es").html(hTml)
 
             var hTml= alternating.find(".cre_es").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${dInf.es.hTRT} ${dInf.es.gentilicio} de la serie ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${dInf.es.hTRT} ${dInf.es.gentilicio} de la serie ${eInf.name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".cre_es").prev().html(hTml)
 
             var hTml= alternating.find(".cre_en").html()
@@ -1694,11 +1808,10 @@ fill_daTa= function(type){
             alternating.find(".cre_en").html(hTml)
 
             var hTml= alternating.find(".cre_en").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From the ${dInf.en.gentilicio} ${dInf.en.hTRT} of the series ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].name.nT.en} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From the ${dInf.en.gentilicio} ${dInf.en.hTRT} of the series ${eInf.name.nT.en} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".cre_en").prev().html(hTml)
             break
         case "pin":
-            dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
             var hTml= alternating.find(".pin_es").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".pin_es").html(hTml)
@@ -1716,7 +1829,6 @@ fill_daTa= function(type){
             alternating.find(".pin_en").prev().html(hTml)
             break
         case "dev":
-            dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
             var hTml= alternating.find(".dev_es").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${dInf.es.nombre.split("| ").length>1?dInf.es.nombre.split("| ").join(" , ").split("").reverse().join("").replace(",", "y").split("").reverse().join("").replaceAll(" , ", ", ") :dInf.es.nombre} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".dev_es").html(hTml)
@@ -1734,7 +1846,6 @@ fill_daTa= function(type){
             alternating.find(".dev_en").prev().html(hTml)
             break
         case "esc":
-            dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
             var hTml= alternating.find(".esc_es").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".esc_es").html(hTml)
@@ -1752,7 +1863,6 @@ fill_daTa= function(type){
             alternating.find(".esc_en").prev().html(hTml)
             break
         case "art":
-            dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
             var hTml= alternating.find(".art_es").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".art_es").html(hTml)
@@ -1770,7 +1880,6 @@ fill_daTa= function(type){
             alternating.find(".art_en").prev().html(hTml)
             break
         case "sib":
-            dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
             var hTml= alternating.find(".sib_es").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple_Sr(sortgnp(dInf.nombre), "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".sib_es").html(hTml)
@@ -1784,11 +1893,10 @@ fill_daTa= function(type){
             alternating.find(".sib_en").html(hTml)
 
             var hTml= alternating.find(".sib_en").next().next().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}For ${mulTiple_r(dInf.nombre, "and", "the son of The Devil")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}For ${mulTiple_r(sortgnp(dInf.nombre), "and", "the son of The Devil")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".sib_en").next().next().html(hTml)
             break
         case "arS":
-            dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
             var hTml= alternating.find(".arS_es").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${capitalize(mulTiple(sortgnp(dInf.nombre), "y"))} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".arS_es").html(hTml)
@@ -1814,7 +1922,6 @@ fill_daTa= function(type){
             alternating.find(".arS_en").prev().html(hTml)
             break
         case "bnS":
-            dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
             var hTml= alternating.find(".bnS_es").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}... ${dInf.es.bnd} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".bnS_es").html(hTml)
@@ -1840,7 +1947,6 @@ fill_daTa= function(type){
             alternating.find(".bnS_en").prev().html(hTml)
             break
         case "piS":
-            dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
             var hTml= alternating.find(".piS_es").prev().prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${dInf.nombre.split("@")[1][1]=="a"? `Para mi ${dInf.nombre.split("@")[1][0]=="t"?"hermano":"hermanito"}; el amor de la vida de la Madre Naturaleza, La Que Hace Que Crezcan Los Árboles`:`Para el amor de la vida de la Madre Naturaleza, La Que Hace Que Crezcan Los Árboles; mi ${dInf.nombre.split("@")[1][0]=="t"?"hermano":"hermanito"}`} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".piS_es").prev().prev().prev().html(hTml)
@@ -1857,7 +1963,6 @@ fill_daTa= function(type){
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${dInf.nombre.split("@")[1][1]=="a"? `For my ${dInf.nombre.split("@")[1][0]=="t"?"brother":"little brother"}; the love of the life of Mother Nature, She Who Makes Trees Grow`: `For the love of the life of Mother Nature, She Who Makes Trees Grow; my ${dInf.nombre.split("@")[1][0]=="t"?"brother":"little brother"}`} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".piS_en").prev().prev().prev().html(hTml)
 
-            dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
             var hTml= alternating.find(".piS_en").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}<span class= "name" lang= "${dInf.nombre.split("@")[0].split('‼').length-1?dInf.nombre.split("@")[0].split('‼')[1]:'en'}">${dInf.nombre.split("@")[0].split('‼')[0]}</span> ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".piS_en").html(hTml)
@@ -1867,7 +1972,6 @@ fill_daTa= function(type){
             alternating.find(".piS_en").prev().html(hTml)
             break
         case "esS":
-            dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
             var hTml= alternating.find(".esS_es").prev().prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${dInf.nombre.split("@")[1][1]=="a"?`Para mi ${dInf.nombre.split("@")[1][0]=="t"?"hermano":"hermanito"}; el amor de la vida de la Madre Naturaleza, La Que Hace Que Crezcan Los Árboles`:`Para el amor de la vida de la Madre Naturaleza, La Que Hace Que Crezcan Los Árboles; mi ${dInf.nombre.split("@")[1][0]=="t"?"hermano":"hermanito"}`} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".esS_es").prev().prev().prev().html(hTml)
@@ -1884,7 +1988,6 @@ fill_daTa= function(type){
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${dInf.nombre.split("@")[1][1]=="a"?`For my ${dInf.nombre.split("@")[1][0]=="t"?"brother":"little brother"}; the love of the life of Mother Nature, She Who Makes Trees Grow`:`For the love of the life of Mother Nature, She Who Makes Trees Grow; my ${dInf.nombre.split("@")[1][0]=="t"?"brother":"little brother"}`} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".esS_en").prev().prev().prev().html(hTml)
 
-            dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
             var hTml= alternating.find(".esS_en").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${dInf.nombre.split("@")[0]} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".esS_en").html(hTml)
@@ -1894,7 +1997,7 @@ fill_daTa= function(type){
             alternating.find(".esS_en").prev().html(hTml)
             break
         case "crS":
-            dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
+            dInf= eInf[Object.keys(eInf)[1]]
             
             var hTml= alternating.find(".crS_es").prev().prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}Para ${mulTiple_crr(sortgnp(dInf.nombre), "y", "el amor de la vida de la Madre Naturaleza, La Que Hace Que Crezcan Los Árboles")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
@@ -1905,7 +2008,7 @@ fill_daTa= function(type){
             alternating.find(".crS_es").html(hTml)
 
             var hTml= alternating.find(".crS_es").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${dInf.es.hTRT} ${dInf.es.gentilicio} de la serie ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${dInf.es.hTRT} ${dInf.es.gentilicio} de la serie ${eInf.name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".crS_es").prev().html(hTml)
 
             var hTml= alternating.find(".crS_en").prev().prev().prev().html()
@@ -1917,11 +2020,10 @@ fill_daTa= function(type){
             alternating.find(".crS_en").html(hTml)
 
             var hTml= alternating.find(".crS_en").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From the ${dInf.en.gentilicio} ${dInf.en.hTRT} of the series ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].name.nT.en} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From the ${dInf.en.gentilicio} ${dInf.en.hTRT} of the series ${eInf.name.nT.en} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".crS_en").prev().html(hTml)
             break
         case "cr_pS":
-            dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
             
             var hTml= alternating.find(".cr_pS_es").prev().prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}Para ${mulTiple_r(sortgnp([dInf.par, dInf.nombre].join("| ")), "y", "el amor de la vida de la Madre Naturaleza, La Que Hace Que Crezcan Los Árboles")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
@@ -1932,7 +2034,7 @@ fill_daTa= function(type){
             alternating.find(".cr_pS_es").html(hTml)
 
             var hTml= alternating.find(".cr_pS_es").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De ${mulTiple(dInf.par, "y")}, y ${dInf.es.hTRT} ${dInf.es.gentilicio} de la serie ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De ${mulTiple(dInf.par, "y")}, y ${dInf.es.hTRT} ${dInf.es.gentilicio} de la serie ${eInf.name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".cr_pS_es").prev().html(hTml)
 
             var hTml= alternating.find(".cr_pS_en").prev().prev().prev().html()
@@ -1944,11 +2046,10 @@ fill_daTa= function(type){
             alternating.find(".cr_pS_en").html(hTml)
 
             var hTml= alternating.find(".cr_pS_en").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From ${mulTiple(sortgnp(dInf.par), "and")}, and the ${dInf.en.gentilicio} ${dInf.en.hTRT} of the series ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].name.nT.en} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From ${mulTiple(sortgnp(dInf.par), "and")}, and the ${dInf.en.gentilicio} ${dInf.en.hTRT} of the series ${eInf.name.nT.en} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".cr_pS_en").prev().html(hTml)
             break
         case "di_pS":
-            dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
             
             var hTml= alternating.find(".di_pS_es").prev().prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}Para ${mulTiple_r(sortgnp([dInf.par, dInf.nombre].join("| ")), "y", "el amor de la vida de la Madre Naturaleza, La Que Hace Que Crezcan Los Árboles")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
@@ -1959,7 +2060,7 @@ fill_daTa= function(type){
             alternating.find(".di_pS_es").html(hTml)
 
             var hTml= alternating.find(".di_pS_es").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De ${mulTiple(sortgnp(dInf.par), "y")}, y ${dInf.es.hTRT} ${dInf.es.gentilicio} de la película ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De ${mulTiple(sortgnp(dInf.par), "y")}, y ${dInf.es.hTRT} ${dInf.es.gentilicio} de la película ${eInf.name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".di_pS_es").prev().html(hTml)
 
             var hTml= alternating.find(".di_pS_en").prev().prev().prev().html()
@@ -1971,12 +2072,12 @@ fill_daTa= function(type){
             alternating.find(".di_pS_en").html(hTml)
 
             var hTml= alternating.find(".di_pS_en").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From ${mulTiple(sortgnp(dInf.par), "and")}, and the ${dInf.en.gentilicio} ${dInf.en.hTRT} of the movie ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].name.nT.en} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From ${mulTiple(sortgnp(dInf.par), "and")}, and the ${dInf.en.gentilicio} ${dInf.en.hTRT} of the movie ${eInf.name.nT.en} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".di_pS_en").prev().html(hTml)
             break
         case "diS":
-            dInf= alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]][Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1]];
-            
+            dInf= eInf[Object.keys(eInf)[1]]
+
             var hTml= alternating.find(".diS_es").prev().prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}Para ${mulTiple_crr(sortgnp(dInf.nombre), "y", "el amor de la vida de la Madre Naturaleza, La Que Hace Que Crezcan Los Árboles")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".diS_es").prev().prev().prev().html(hTml)
@@ -1986,7 +2087,7 @@ fill_daTa= function(type){
             alternating.find(".diS_es").html(hTml)
 
             var hTml= alternating.find(".diS_es").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${dInf.es.hTRT} ${dInf.es.gentilicio} de la película ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${dInf.es.hTRT} ${dInf.es.gentilicio} de la película ${eInf.name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".diS_es").prev().html(hTml)
 
             var hTml= alternating.find(".diS_en").prev().prev().prev().html()
@@ -1998,21 +2099,21 @@ fill_daTa= function(type){
             alternating.find(".diS_en").html(hTml)
 
             var hTml= alternating.find(".diS_en").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From the ${dInf.en.gentilicio} ${dInf.en.hTRT} of the movie ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].name.nT.en} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From the ${dInf.en.gentilicio} ${dInf.en.hTRT} of the movie ${eInf.name.nT.en} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".diS_en").prev().html(hTml)
             break
         case "com":
-            if(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){
-                alternating.find(".com_in").html(`Leyendo <i>por palabras</i>, en ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].lang}, en este caso, y al revés, el lema de <i>${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].com}</i> en ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].lang}, <i>${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].name.name}</i>, es perfectamente hasta el principio el nombre de la empresa <i>${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].com}</i>, y tiene un "Take care of the ladies for me", así:`)
+            if(eInf.auC){
+                alternating.find(".com_in").html(`Leyendo <i>por palabras</i>, en ${eInf.lang}, en este caso, y al revés, el lema de <i>${eInf.com}</i> en ${eInf.lang}, <i>${eInf.name.name}</i>, es perfectamente hasta el principio el nombre de la empresa <i>${eInf.com}</i>, y tiene un "Take care of the ladies for me", así:`)
             }else{
-                alternating.find(".com_in").html(`Leyendo <i>por palabras</i>, en ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].lang}, en este caso, y derecho, el lema de <i>${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].com}</i> en ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].lang}, <i>${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].name.name}</i>, es perfectamente hasta el final el nombre de la empresa <i>${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].com}</i>, y tiene un "Take care of the ladies for me", así:`)
+                alternating.find(".com_in").html(`Leyendo <i>por palabras</i>, en ${eInf.lang}, en este caso, y derecho, el lema de <i>${eInf.com}</i> en ${eInf.lang}, <i>${eInf.name.name}</i>, es perfectamente hasta el final el nombre de la empresa <i>${eInf.com}</i>, y tiene un "Take care of the ladies for me", así:`)
             }
             break
         case "pro":
-            if(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){
-                alternating.find(".pro_in").html(`Leyendo <i>por palabras</i>, en ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].lang}, en este caso, y derecho, el lema de <i>${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].pro}</i> en ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].lang}, <i>${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].name.name}</i>, es perfectamente hasta el final el nombre de <i>${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].pro}</i>, y tiene un "Cuídeme a las niñas", así:`)
+            if(eInf.auC){
+                alternating.find(".pro_in").html(`Leyendo <i>por palabras</i>, en ${eInf.lang}, en este caso, y derecho, el lema de <i>${eInf.pro}</i> en ${eInf.lang}, <i>${eInf.name.name}</i>, es perfectamente hasta el final el nombre de <i>${eInf.pro}</i>, y tiene un "Cuídeme a las niñas", así:`)
             }else{
-                alternating.find(".pro_in").html(`Leyendo <i>por palabras</i>, en ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].lang}, en este caso, y al revés, el lema de <i>${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].pro}</i> en ${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].lang}, <i>${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].name.name}</i>, es perfectamente hasta el principio el nombre de <i>${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].pro}</i>, y tiene un "Cuídeme a las niñas", así:`)
+                alternating.find(".pro_in").html(`Leyendo <i>por palabras</i>, en ${eInf.lang}, en este caso, y al revés, el lema de <i>${eInf.pro}</i> en ${eInf.lang}, <i>${eInf.name.name}</i>, es perfectamente hasta el principio el nombre de <i>${eInf.pro}</i>, y tiene un "Cuídeme a las niñas", así:`)
             }
             break
     }
@@ -2585,6 +2686,116 @@ $(".poema .name").on("click", function(){
 $(".pseudoBuTton").on("click", function(){
 //
 play_Tts(saved_selecTed_text, $(".accessibiliTyDialog select option:selected").attr("value"))
+})
+$(".pseudoSendBuTton").on("click", function(){
+switch(alternatives["id"]){
+    case "FGlqw2x":
+         informaTion= {'sib': {nombre: $("#superInformation_as table .sib_name").val()}, auC: $("#superInformation_as table .auC")[0].checked}
+         fill_daTa(`md_filling_superInformation`, `sib`)
+        break;
+    case "alcN329":case "Ondoi2n":
+         informaTion= {'art': {nombre: $("#superInformation_as table .art_name").val(), 'es':{gentilicio: $("#superInformation_as table .art_gent").val(), hTRT: $("#superInformation_as table .art_hTrt").val()}, 'en':{gentilicio: $("#superInformation_as table .art_gent").next().val(), hTRT: $("#superInformation_as table .art_hTrt").next().val()}}}
+         fill_daTa(`md_filling_superInformation`, `art`)
+        break;
+    case "m32c2b4":
+         informaTion=  {'arS': {nombre: $("#superInformation_as table .sib_name").val(), 'es':{gentilicio: $("#superInformation_as table .art_gent").val(), hTRT: $("#superInformation_as table .art_hTrt").val()}, 'en':{gentilicio: $("#superInformation_as table .art_gent").next().val(), hTRT: $("#superInformation_as table .art_hTrt").next().val()}}, auC: $("#superInformation_as table .auC")[0].checked}
+         fill_daTa(`md_filling_superInformation`, `arS`)
+        break;
+    case "alLNd2d":
+         informaTion= {'bnS': {nombre: `${$("#superInformation_as table .sib_name").val()}@${$("#superInformation_as table .sib_hTrt").val()} ${$("#superInformation_as table .sib_gent").val()}=${$("#superInformation_as table .sib_gent").next().val()} ${$("#superInformation_as table .sib_hTrt").next().val()}`, 'es':{hTRTb: $("#superInformation_as table .ban_hTrt").val(), bnd: $("#superInformation_as table .ban_name").val()}, 'en':{hTRTb: $("#superInformation_as table .ban_hTrt").next().val(), bnd: $("#superInformation_as table .ban_name").next().val()}}, auC: $("#superInformation_as table .auC")[0].checked}
+         fill_daTa(`md_filling_superInformation`, `bnS`)
+        break;
+    case "2oJdin2":case "nJBw2f3":
+         informaTion= {'name': {nT: {es: $("#superInformation_as table .mov_name").val(), en: $("#superInformation_as table .mov_name").next().val()}}, 'dir': {nombre: $("#superInformation_as table .dir_name").val(),'es':{gentilicio: $("#superInformation_as table .dir_gent").val(), hTRT: $("#superInformation_as table .dir_hTrt").val()}, 'en':{gentilicio: $("#superInformation_as table .dir_gent").next().val(), hTRT: $("#superInformation_as table .dir_hTrt").next().val()}}}
+         fill_daTa(`md_filling_superInformation`, `dir`)
+        break;
+    case "Biujbc2":
+         informaTion= {'name': {nT: {es: $("#superInformation_as table .mov_name").val(), en: $("#superInformation_as table .mov_name").next().val()}}, 'dir': {nombre: $("#superInformation_as table .dir_name").val(),'es':{gentilicio: $("#superInformation_as table .dir_gent").val(), hTRT: $("#superInformation_as table .dir_hTrt").val()}, 'en':{gentilicio: $("#superInformation_as table .dir_gent").next().val(), hTRT: $("#superInformation_as table .dir_hTrt").next().val()}}, auC: $("#superInformation_as table .auC")[0].checked}
+         fill_daTa(`md_filling_superInformation`, `diS`)
+        break;
+    case "jnIFn3d":case "Hi2Cj29":
+         informaTion= {'name': {nT: {es: $("#superInformation_as table .ser_name").val(), en: $("#superInformation_as table .ser_name").next().val()}}, 'cre': {nombre: $("#superInformation_as table .cre_name").val(),'es':{gentilicio: $("#superInformation_as table .cre_gent").val(), hTRT: $("#superInformation_as table .cre_hTrt").val()}, 'en':{gentilicio: $("#superInformation_as table .cre_gent").next().val(), hTRT: $("#superInformation_as table .cre_hTrt").next().val()}}}
+         fill_daTa(`md_filling_superInformation`, `cre`)
+        break;
+    case "LNjndn1":
+         informaTion= {'name': {nT: {es: $("#superInformation_as table .ser_name").val(), en: $("#superInformation_as table .ser_name").next().val()}}, 'cre': {nombre: $("#superInformation_as table .cre_name").val(),'es':{gentilicio: $("#superInformation_as table .cre_gent").val(), hTRT: $("#superInformation_as table .cre_hTrt").val()}, 'en':{gentilicio: $("#superInformation_as table .cre_gent").next().val(), hTRT: $("#superInformation_as table .cre_hTrt").next().val()}}, auC: $("#superInformation_as table .auC")[0].checked}
+         fill_daTa(`md_filling_superInformation`, `crS`)
+        break;
+    case "LKKCoi2":case "Ll3nod1":
+         informaTion= {'esc': {nombre: $("#superInformation_as table .wri_name").val(),'es':{gentilicio: $("#superInformation_as table .wri_gent").val(), hTRT: $("#superInformation_as table .wri_hTrt").val()}, 'en':{gentilicio: $("#superInformation_as table .wri_gent").next().val(), hTRT: $("#superInformation_as table .wri_hTrt").next().val()}}}
+         fill_daTa(`md_filling_superInformation`, `esc`)
+        break;
+    case "Llndj3c":
+         informaTion= {'esc': {nombre: $("#superInformation_as table .wri_name").val(),'es':{gentilicio: $("#superInformation_as table .wri_gent").val(), hTRT: $("#superInformation_as table .wri_hTrt").val()}, 'en':{gentilicio: $("#superInformation_as table .wri_gent").next().val(), hTRT: $("#superInformation_as table .wri_hTrt").next().val()}}, auC: $("#superInformation_as table .auC")[0].checked}
+         fill_daTa(`md_filling_superInformation`, `esS`)
+        break;
+    case "NiCju2d":case "cH2dDnC":
+         informaTion= {'pin': {nombre: $("#superInformation_as table .art_name").val(),'es':{gentilicio: $("#superInformation_as table .art_gent").val(), hTRT: $("#superInformation_as table .art_hTrt").val()}, 'en':{gentilicio: $("#superInformation_as table .art_gent").next().val(), hTRT: $("#superInformation_as table .art_hTrt").next().val()}}}
+         fill_daTa(`md_filling_superInformation`, `pin`)
+        break;
+    case "Lmdi2md":
+         informaTion= {'pin': {nombre: $("#superInformation_as table .art_name").val(),'es':{gentilicio: $("#superInformation_as table .art_gent").val(), hTRT: $("#superInformation_as table .art_hTrt").val()}, 'en':{gentilicio: $("#superInformation_as table .art_gent").next().val(), hTRT: $("#superInformation_as table .art_hTrt").next().val()}}, auC: $("#superInformation_as table .auC")[0].checked}
+         fill_daTa(`md_filling_superInformation`, `piS`)
+        break;
+    case "amcaoMd":case "kLwicn2":
+         informaTion= {'dev': {'es':{nombre: $("#superInformation_as table .dev_name").val(), gentilicio: $("#superInformation_as table .dev_gent").val(), hTRT: $("#superInformation_as table .dev_hTrt").val()}, 'en':{nombre: $("#superInformation_as table .dev_name").next().val(), gentilicio: $("#superInformation_as table .dev_gent").next().val(), hTRT: $("#superInformation_as table .dev_hTrt").next().val()}}}
+         fill_daTa(`md_filling_superInformation`, `dev`)
+        break;
+    default:
+         fill_Table([{T: "superInformation irrelevante", _id: "sib_name", _cusTom: `Autodestrucción (3)`}])
+         var counTdown= 3
+         console.log(counTdown)
+         const selfDest= setInterval(function(){
+            if(counTdown > 0){
+                counTdown--
+                $("#superInformation_as table tbody th:last-child").text(`Autodestrucción (${counTdown})`)
+            }if(!!!counTdown){
+                $(".accessibiliTyDialog").removeClass("visible")
+                clearInterval(selfDest)
+            }
+         }, 1000)
+        break;
+    }
+})
+numb= ''
+$(document).on("keydown", function(R){
+    if($(".accessibiliTyDialog").is(".visible") && $("#superInformation_as").is(".visible") && $("#help_secTion").is(".visible")){  
+    switch(R.keyCode){
+        case 49:
+            numb= `${numb}1`
+            break;
+        case 50:
+            numb= `${numb}2`
+            break;
+        case 51:
+            numb= `${numb}3`
+            break;
+        case 52:
+            numb= `${numb}4`
+            break;
+        case 53:
+            numb= `${numb}5`
+            break;
+        case 54:
+            numb= `${numb}6`
+            break;
+        case 55:
+            numb= `${numb}7`
+            break;
+        case 56:
+            numb= `${numb}8`
+            break;
+        case 57:
+            numb= `${numb}9`
+            break;
+    }
+    if([49,50,51,52,53,54,55,56,57].indexOf(R.keyCode+1)){
+        $("#help_secTion sup").filter(function(){if($(this).text().indexOf(`[${numb}`) == 0){return true}else{return false}}).find("a").html(function(){return ('[<span>' + numb + '</span>' + $(this).text().slice(1, -1).slice(numb.length) + ']')})
+        $("#help_secTion sup").filter(function(){if($(this).text().indexOf(`[${numb}`) == 0){return false}else{return true}}).find("a").html(function(){return $(this).text()})
+        clearTimeout(a)
+        a= setTimeout(function(){if($(".accessibiliTyDialog").is(".visible") && $("#superInformation_as").is(".visible") && $("#help_secTion").is(".visible")){$("#help_secTion sup").filter(function(){if($(this).text().indexOf(`[${numb}]`) == 0){return true}else{return false}}).find("a").length?$("#help_secTion sup").filter(function(){if($(this).text().indexOf(`[${numb}]`) == 0){return true}else{return false}}).find("a")[0].click():0;$("#help_secTion sup a").html(function(){return $(this).text()})};numb= '';}, 2900)
+    }
+    }
 })
 $( function($) {
     $.widget( "custom.combobox", {
@@ -3275,6 +3486,9 @@ alternate= function(Smpqw){
     if("undefined"!=typeof Smpqw){
         switch(Smpqw){
             case "superInformation":
+            /*/*
+                fill_daTa(`wd_filling_superInformation`)
+
                 $(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
                 
                 var tiTle= $(alternating).find("h2").text()
@@ -3316,10 +3530,94 @@ alternate= function(Smpqw){
                             });
                         });
                 }
-            });             
+            });          
+            */
+            $(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
+                    var tiTle= $(alternating).find("h2").text()
+                    var pp= tiTle.slice(0, tiTle.indexOf(" ("))
+                    var hh= tiTle.slice(tiTle.indexOf(" (") + 2, tiTle.indexOf(") "))
+                    var ww= $(this).attr("w").split(" ")
+                    var btW= []
+                    for(aa in ww){
+                        var greed= `${ww[aa].slice(4, ww[aa].length)}${alternatives[Object.keys(alternatives).slice(2)[$(alternating).attr("a")]].auC?'auC':''}`
+                        acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
+                        !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("   ", "&nbsp;&nbsp;")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
+                    }
+                    btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&nbsp;&nbsp;").replaceAll("&nbsp;&nbsp;<span> ", "&nbsp;&nbsp;<span>")
+                    $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`)
+                })
+                alternating.find('p span').tooltip({
+                    track: true,
+                    show: {
+                        effect: "none",
+                        delay: 0
+                    },
+                    open: function(event, ui) {
+                        if (typeof(event.originalEvent) === 'undefined') {
+                            return false;
+                        }
+                        ý= $(this); 
+                       
+                        var $id = $(ui.tooltip).attr('id');
+
+                        $('div.ui-tooltip').not('#' + $id).remove();
+                    },
+                    close: function(event, ui) {
+                        ui.tooltip.hover(function() {
+                                $(this).stop(true).fadeTo(400, 1);
+                            },
+                            function() {
+                                $(this).fadeOut('400', function() {
+                                    $(this).remove();
+                                });
+                            });
+                    }
+                }); 
+
                 break;
             case "notSuperInformation":
+                $(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
+                    var tiTle= $(alternating).find("h2").text()
+                    var pp= tiTle.slice(0, tiTle.indexOf(" ("))
+                    var hh= tiTle.slice(tiTle.indexOf(" (") + 2, tiTle.indexOf(") "))
+                    var ww= $(this).attr("w").split(" ")
+                    var btW= []
+                    for(aa in ww){
+                        var greed= `${ww[aa].slice(4, ww[aa].length)}${alternatives[Object.keys(alternatives).slice(2)[$(alternating).attr("a")]].auC?'auC':''}`
+                        acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
+                        !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("   ", "&nbsp;&nbsp;")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
+                    }
+                    btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&nbsp;&nbsp;").replaceAll("&nbsp;&nbsp;<span> ", "&nbsp;&nbsp;<span>")
+                    $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`)
+                })
+                alternating.find('p span').tooltip({
+                    track: true,
+                    show: {
+                        effect: "none",
+                        delay: 0
+                    },
+                    open: function(event, ui) {
+                        if (typeof(event.originalEvent) === 'undefined') {
+                            return false;
+                        }
+                        ý= $(this); 
+                       
+                        var $id = $(ui.tooltip).attr('id');
 
+                        $('div.ui-tooltip').not('#' + $id).remove();
+                    },
+                    close: function(event, ui) {
+                        ui.tooltip.hover(function() {
+                                $(this).stop(true).fadeTo(400, 1);
+                            },
+                            function() {
+                                $(this).fadeOut('400', function() {
+                                    $(this).remove();
+                                });
+                            });
+                    }
+                }); 
+                //$(alternating).html(function(){return (`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))})
                 break;
         }
         return;
@@ -3457,10 +3755,14 @@ if(o.keyCode == 65 && o.ctrlKey && o.altKey){
 saved_selecTed_text= selecTedText()
 if($(".accessibiliTyDialog").is(".visible")){
     $(".accessibiliTyDialog").removeClass("visible")
+    $(".accessibiliTyDialog > aside").removeClass("visible")
     saved_selecTed_text= ""
 }else{
     if(!!saved_selecTed_text){
+        $(".accessibiliTyDialog").removeClass("fill_daTa")
         $(".accessibiliTyDialog").addClass("visible")
+        $(".accessibiliTyDialog > aside").removeClass("visible")
+        $(".accessibiliTyDialog > aside#text_To_speech").addClass("visible")
     }else{
         alert("Selecciona algo de texto primero.")
     }
@@ -3470,7 +3772,7 @@ if($(".accessibiliTyDialog").is(".visible")){
 window.onblur= function(){
     ctrlMShift= false
     ctrl_k= false
-    alternating= $(".nombre").filter(function(){if($(this).attr("contenteditable")=="true"){return true}}).parent(); alternate(`superInformation`);
+    /*alternating= $(".nombre").filter(function(){if($(this).attr("contenteditable")=="true"){return true}}).parent();*/ $(".nombre").filter(function(){if($(this).attr("contenteditable")=="true"){return true}}).length?alternate(`superInformation`):192465;
     $(".nombre").attr("contenteditable", "false")
 }
 document.addEventListener("keydown", function(e){if(e.shiftKey){ctrl_k= false}else if(e.ctrlKey){ctrl_k= true}if(e.shiftKey && e.ctrlKey){ctrlMShift= true}if(e.shiftKey && e.ctrlKey && e.altKey){e.preventDefault();$("#theater").css("display") == "block"?closeModal():1;$("#buscar input").val("");$("#buscar input").trigger("input");$("#buscar input").focus()}})

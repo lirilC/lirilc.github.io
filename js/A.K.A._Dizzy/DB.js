@@ -267,11 +267,11 @@ export function _user(){
                                 <text>
                                     <br>
                                     <br>
-                                    <p style="color: #aaa; text-align: left;">Con muchas más funcionalidades y todos los "Cuídeme a las niñas" y "Take care of the ladies for me" corregidos, un nuevo Algo Más Sobre Mí; igual está en construcción. <br><br>&nbsp;&nbsp;En la última edición corregí los países, los departamentos (estados) y las ciudades, ahora sí está todo bien.</p>
+                                    <p style="color: #aaa; text-align: left;">Con muchas más funcionalidades y todos los "Cuídeme a las niñas" y "Take care of the ladies for me" corregidos, un nuevo Algo Más Sobre Mí; igual está en construcción. <br><br>&nbsp;&nbsp;En la última edición corregí los países, los departamentos (estados) y las ciudades, ahora sí está todo bien.<br><br>&nbsp;&nbsp;Ahora sí que corregí lo mismo que creí haber corregido en la edición anterior.</p>
                                 </text>
                             </containment>`,
                 Comentarios: "",
-                Editado: [ 'type= "c"; edHistory= {"Editado el 5 de Febrero de 2023 a la 1:7 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/db21ec804c9352254baf282bc0321493f92a7106/pos/kdm0g0dTee.html", "2 de Febrero de 2023 a la 1:17 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/ffc96d089a6bbfb588ac2e358ffd7433224be8f5/pos/kdm0g0dTee.html"}', "Editado el 5 de Febrero de 2023 a la 1:7 pm"]
+                Editado: [ 'type= "c"; edHistory= {"Editado el 3 de Marzo de 2023 a las 9:40 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/db21ec804c9352254baf282bc0321493f92a7106/pos/kdm0g0dTee.html", "Editado el 5 de Febrero de 2023 a la 1:7 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/db21ec804c9352254baf282bc0321493f92a7106/pos/kdm0g0dTee.html", "2 de Febrero de 2023 a la 1:17 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/ffc96d089a6bbfb588ac2e358ffd7433224be8f5/pos/kdm0g0dTee.html"}', "Editado el 3 de Marzo de 2023 a las 9:40 pm"]
             },
             "/A.K.A._Dizzy/pos/p413w4Mawl": {
                 type: "links",
