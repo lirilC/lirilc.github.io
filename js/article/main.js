@@ -1692,7 +1692,9 @@ fill_daTa= function(type, superInf){
             case "FGlqw2x":
                  fill_Table([{T: "Nombre de herman@(s) con parentesco", _id: "sib_name", _inf: 
                    `nombre‼lenguajeDelNombre@parentesco
-                    <h4><b>parentesco</b>, puede ser:</h4>
+                    <h4>@<b>parentesco</b> (Obligatorio)</h4>
+                    <i>, puede ser:</i>
+                    <br>
                     <table>
                         <thead>
                         </thead>
@@ -1703,44 +1705,236 @@ fill_daTa= function(type, superInf){
                             <tr><th>to</th><th>Hermanito</th></tr>
                         </tbody>
                     </table>
-                    <h4><b>lenguajeDelNombre</b>, puede ser:</h4>
+                    <h4>‼<b>lenguajeDelNombre</b> (Opcional)</h4>
+                    <i>, puede ser:</i>
+                    <br>
                     <span class='pseudo_undeRlineInfo'>Nada o el código IETF <sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[1]</a></sup> de un lenguaje</span>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>‼</i> en el teclado?</th><th>Alt + 19</th></tr>
+                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th><sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[2]</a></sup></th></tr>
+                        </tbody>
+                    </table>
                     <h4>Puedes especificar <b>varios</b> nombres separándolos con una raya vertical y un espacio, así:</h4>
                     nombre‼lDN@p| nombre‼lDN@p
-                    `}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
+                    `}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`, _inf: 
+                   `<i>Si el nombre del artista o la banda incluye e una creación, una parte de una o algo que derive de una, como términos de las áreas que las estudian o se sabe que alguna palabra en éste o ésta hace referencia a una, no por nombres propios reales ni números, o por nada que esté, estando, en un nombre propio real; deberías chequear esta caja.</i>`}])
                 break;
             case "alcN329":case "Ondoi2n":
                  fill_Table([{T: "Nombre del artista", _id: "art_name"}, {T: "Gentilicio del artista", _id: "art_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse al artista", _id: "art_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}])
                 break;
             case "m32c2b4":
-                 fill_Table([{T: "Nombre de herman@ con parentesco", _id: "sib_name"}, {T: "Gentilicio del artista", _id: "art_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse al artista", _id: "art_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
+                 fill_Table([{T: "Nombre de herman@ con parentesco", _id: "sib_name", _inf: 
+                   `nombre‼lenguajeDelNombre@parentesco
+                    <h4>@<b>parentesco</b> (Obligatorio)</h4>
+                    <i>, puede ser:</i>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>na</th><th>Hermana</th></tr>
+                            <tr><th>ta</th><th>Hermanita</th></tr>
+                            <tr><th>no</th><th>Hermano</th></tr>
+                            <tr><th>to</th><th>Hermanito</th></tr>
+                        </tbody>
+                    </table>
+                    <h4>‼<b>lenguajeDelNombre</b> (Opcional)</h4>
+                    <i>, puede ser:</i>
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF <sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[1]</a></sup> de un lenguaje</span>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>‼</i> en el teclado?</th><th>Alt + 19</th></tr>
+                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th><sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[2]</a></sup></th></tr>
+                        </tbody>
+                    </table>
+                    <h4>Puedes especificar <b>varios</b> nombres separándolos con una raya vertical y un espacio, así:</h4>
+                    nombre‼lDN@p| nombre‼lDN@p
+                    `}, {T: "Gentilicio del artista", _id: "art_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse al artista", _id: "art_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
                 break;
             case "alLNd2d":
-                 fill_Table([{T: "Nombre del grupo musical", _id: "ban_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse al grupo musical", _id: "ban_hTrt", _cusTom: `<input placeholder= "en español"></input><input disabled= "true" placeholder= "en inglés"></input>`}, {T: "Nombre de herman@(s) con parentesco", _id: "sib_name"}, {T: "Gentilicio de hermano(s)", _id: "sib_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse a hermano(s)", _id: "sib_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
+                 fill_Table([{T: "Nombre del grupo musical", _id: "ban_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse al grupo musical", _id: "ban_hTrt", _cusTom: `<input placeholder= "en español"></input><input disabled= "true" placeholder= "en inglés"></input>`}, {T: "Nombre de herman@(s) con parentesco", _id: "sib_name", _inf: 
+                   `nombre‼lenguajeDelNombre@parentesco
+                    <h4>@<b>parentesco</b> (Obligatorio)</h4>
+                    <i>, puede ser:</i>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>na</th><th>Hermana</th></tr>
+                            <tr><th>ta</th><th>Hermanita</th></tr>
+                            <tr><th>no</th><th>Hermano</th></tr>
+                            <tr><th>to</th><th>Hermanito</th></tr>
+                        </tbody>
+                    </table>
+                    <h4>‼<b>lenguajeDelNombre</b> (Opcional)</h4>
+                    <i>, puede ser:</i>
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF <sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[1]</a></sup> de un lenguaje</span>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>‼</i> en el teclado?</th><th>Alt + 19</th></tr>
+                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th><sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[2]</a></sup></th></tr>
+                        </tbody>
+                    </table>
+                    <h4>Puedes especificar <b>varios</b> nombres separándolos con una raya vertical y un espacio, así:</h4>
+                    nombre‼lDN@p| nombre‼lDN@p
+                    `}, {T: "Gentilicio de hermano(s)", _id: "sib_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse a hermano(s)", _id: "sib_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
                 break;
             case "2oJdin2":case "nJBw2f3":
                  fill_Table([{T: "Nombre de la película", _id: "mov_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Nombre de director(es)", _id: "dir_name"}, {T: "Gentilicio de director(es)", _id: "dir_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse a director(es)", _id: "dir_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}])
                 break;
             case "Biujbc2":
-                 fill_Table([{T: "Nombre de la película", _id: "mov_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Nombre de director(es) con o sin parentescos", _id: "dir_name"}, {T: "Gentilicio de director(es)", _id: "dir_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse a director(es)", _id: "dir_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
+                 fill_Table([{T: "Nombre de la película", _id: "mov_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Nombre de director(es) con o sin parentescos", _inf: 
+                   `nombre‼lenguajeDelNombre@parentesco
+                    <h4>@<b>parentesco</b> (Obligatorio)</h4>
+                    <i>, puede ser:</i>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>na</th><th>Hermana</th></tr>
+                            <tr><th>ta</th><th>Hermanita</th></tr>
+                            <tr><th>no</th><th>Hermano</th></tr>
+                            <tr><th>to</th><th>Hermanito</th></tr>
+                        </tbody>
+                    </table>
+                    <h4>‼<b>lenguajeDelNombre</b> (Opcional)</h4>
+                    <i>, puede ser:</i>
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF <sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[1]</a></sup> de un lenguaje</span>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>‼</i> en el teclado?</th><th>Alt + 19</th></tr>
+                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th><sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[2]</a></sup></th></tr>
+                        </tbody>
+                    </table>
+                    <h4>Puedes especificar <b>varios</b> nombres separándolos con una raya vertical y un espacio, así:</h4>
+                    nombre‼lDN@p| nombre‼lDN@p
+                    //**`, _id: "dir_name"}, {T: "Gentilicio de director(es)", _id: "dir_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse a director(es)", _id: "dir_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
                 break;
             case "jnIFn3d":case "Hi2Cj29":
                  fill_Table([{T: "Nombre de la serie", _id: "ser_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Nombre de creador(es)", _id: "cre_name"}, {T: "Gentilicio de creador(es)", _id: "cre_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse a creador(es)", _id: "cre_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}])
                 break;
             case "LNjndn1":
-                 fill_Table([{T: "Nombre de la serie", _id: "ser_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Nombre de creador(es) con o sin parentescos", _id: "cre_name"}, {T: "Gentilicio de creador(es)", _id: "cre_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse a creador(es)", _id: "cre_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
+                 fill_Table([{T: "Nombre de la serie", _id: "ser_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Nombre de creador(es) con o sin parentescos", _id: "cre_name", _inf: 
+                   `nombre‼lenguajeDelNombre@parentesco
+                    <h4>@<b>parentesco</b> (Obligatorio)</h4>
+                    <i>, puede ser:</i>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>na</th><th>Hermana</th></tr>
+                            <tr><th>ta</th><th>Hermanita</th></tr>
+                            <tr><th>no</th><th>Hermano</th></tr>
+                            <tr><th>to</th><th>Hermanito</th></tr>
+                        </tbody>
+                    </table>
+                    <h4>‼<b>lenguajeDelNombre</b> (Opcional)</h4>
+                    <i>, puede ser:</i>
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF <sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[1]</a></sup> de un lenguaje</span>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>‼</i> en el teclado?</th><th>Alt + 19</th></tr>
+                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th><sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[2]</a></sup></th></tr>
+                        </tbody>
+                    </table>
+                    <h4>Puedes especificar <b>varios</b> nombres separándolos con una raya vertical y un espacio, así:</h4>
+                    nombre‼lDN@p| nombre‼lDN@p
+                    //**`}, {T: "Gentilicio de creador(es)", _id: "cre_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse a creador(es)", _id: "cre_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
                 break;
             case "LKKCoi2":case "Ll3nod1":
                  fill_Table([{T: "Nombre del escritor", _id: "wri_name"}, {T: "Gentilicio del escritor", _id: "wri_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse al escritor", _id: "wri_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}])
                 break;
             case "Llndj3c":
-                 fill_Table([{T: "Nombre del escritor con parentesco", _id: "wri_name"}, {T: "Gentilicio del escritor", _id: "wri_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse al escritor", _id: "wri_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
+                 fill_Table([{T: "Nombre del escritor con parentesco", _id: "wri_name", _inf: 
+                   `nombre‼lenguajeDelNombre@parentesco
+                    <h4>@<b>parentesco</b> (Obligatorio)</h4>
+                    <i>, puede ser:</i>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>na</th><th>Hermana</th></tr>
+                            <tr><th>ta</th><th>Hermanita</th></tr>
+                            <tr><th>no</th><th>Hermano</th></tr>
+                            <tr><th>to</th><th>Hermanito</th></tr>
+                        </tbody>
+                    </table>
+                    <h4>‼<b>lenguajeDelNombre</b> (Opcional)</h4>
+                    <i>, puede ser:</i>
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF <sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[1]</a></sup> de un lenguaje</span>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>‼</i> en el teclado?</th><th>Alt + 19</th></tr>
+                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th><sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[2]</a></sup></th></tr>
+                        </tbody>
+                    </table>
+                    <h4>Puedes especificar <b>varios</b> nombres separándolos con una raya vertical y un espacio, así:</h4>
+                    nombre‼lDN@p| nombre‼lDN@p
+                    `}, {T: "Gentilicio del escritor", _id: "wri_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse al escritor", _id: "wri_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
                 break;
             case "NiCju2d":case "cH2dDnC":
                  fill_Table([{T: "Nombre del artista", _id: "art_name"}, {T: "Gentilicio del artista", _id: "art_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse al artista", _id: "art_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}])
                 break;
             case "Lmdi2md":
-                 fill_Table([{T: "Nombre del artista con parentesco", _id: "art_name"}, {T: "Gentilicio del artista", _id: "art_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse al artista", _id: "art_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
+                 fill_Table([{T: "Nombre del artista con parentesco", _id: "art_name", _inf: 
+                   `nombre‼lenguajeDelNombre@parentesco
+                    <h4>@<b>parentesco</b> (Obligatorio)</h4>
+                    <i>, puede ser:</i>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>na</th><th>Hermana</th></tr>
+                            <tr><th>ta</th><th>Hermanita</th></tr>
+                            <tr><th>no</th><th>Hermano</th></tr>
+                            <tr><th>to</th><th>Hermanito</th></tr>
+                        </tbody>
+                    </table>
+                    <h4>‼<b>lenguajeDelNombre</b> (Opcional)</h4>
+                    <i>, puede ser:</i>
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF <sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[1]</a></sup> de un lenguaje</span>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>‼</i> en el teclado?</th><th>Alt + 19</th></tr>
+                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th><sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[2]</a></sup></th></tr>
+                        </tbody>
+                    </table>
+                    <h4>Puedes especificar <b>varios</b> nombres separándolos con una raya vertical y un espacio, así:</h4>
+                    nombre‼lDN@p| nombre‼lDN@p
+                    `}, {T: "Gentilicio del artista", _id: "art_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse al artista", _id: "art_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
                 break;
             case "amcaoMd":case "kLwicn2":
                  fill_Table([{T: "Nombre de la(s) desarrolladora(s) de videojuegos", _id: "dev_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Gentilicio de la(s) desarrolladora(s) de videojuegos", _id: "dev_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse a la(s) desarrolladora(s) de videojuegos", _id: "dev_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}])
@@ -2647,8 +2841,8 @@ if("undefined"!=typeof $("h2").filter(function(){if($(this).text() == decodeURI(
 $(".nombre").on("click", function(){
     if("undefined"!=typeof useLinks){
         /*$(this).is(".activeforURIinfo")?*/window.location.hash= `${alternatives[Object.keys(alternatives)[2]].name.name} (${alternatives[Object.keys(alternatives)[2]].name.hyphenation})`/*:1*/
-        $("#copyURL").text(`${decodeURI(window.location.origin)}${decodeURI(window.location.pathname)}#${alternatives[Object.keys(alternatives)[2]].name.name} (${alternatives[Object.keys(alternatives)[2]].name.hyphenation})`)
-        $(this).is(".activeforURIinfo")?$("#copyURL").CopyToClipboard():1
+        $("#to_copy_to_clipboaRd").text(`${decodeURI(window.location.origin)}${decodeURI(window.location.pathname)}#${alternatives[Object.keys(alternatives)[2]].name.name} (${alternatives[Object.keys(alternatives)[2]].name.hyphenation})`)
+        $(this).is(".activeforURIinfo")?$("#to_copy_to_clipboaRd").CopyToClipboard():1
     }
 })
 
@@ -2687,6 +2881,14 @@ $(".pseudoBuTton").on("click", function(){
 //
 play_Tts(saved_selecTed_text, $(".accessibiliTyDialog select option:selected").attr("value"))
 })
+$(".pseudoBuTton1").on("click", function(){
+//
+play_Tts($("#full_TextTextToSpeech textarea").val(), $($(".accessibiliTyDialog select option:selected")[1]).attr("value"))
+})
+
+to_copy_to_clipboaRd= $("#to_copy_to_clipboaRd")
+dEP= "‼"
+
 $(".pseudoSendBuTton").on("click", function(){
 switch(alternatives["id"]){
     case "FGlqw2x":
@@ -2756,6 +2958,36 @@ switch(alternatives["id"]){
          }, 1000)
         break;
     }
+    alternating.find('p span').tooltip({
+        track: true,
+        show: {
+            effect: "none",
+            delay: 0
+        },
+        open: function(event, ui) {
+            if (typeof(event.originalEvent) === 'undefined') {
+                return false;
+            }
+            ý= $(this); 
+           
+            var $id = $(ui.tooltip).attr('id');
+
+            $('div.ui-tooltip').not('#' + $id).remove();
+        },
+        close: function(event, ui) {
+            ui.tooltip.hover(function() {
+                    $(this).stop(true).fadeTo(400, 1);
+                },
+                function() {
+                    $(this).fadeOut('400', function() {
+                        $(this).remove();
+                    });
+                });
+        }
+    });       
+    alternating.find(".name").on("click", function(){
+        play_Tts($(this).text(), $(this).attr("lang"))
+    })   
 })
 numb= ''
 $(document).on("keydown", function(R){
@@ -2930,9 +3162,11 @@ $( function($) {
     });
  
     $( "#combobox" ).combobox();
+    $( "#combobox1" ).combobox();
   } );
 document.addEventListener("mousedown", function(x){
-    $(x.target).is(".ui-menu .ui-menu-item-wrapper")? $(".custom-combobox-input")[0].dispatchEvent(new KeyboardEvent('keydown',{keyCode: 13})):12;
+    $(x.target).is(".ui-menu#ui-id-1 .ui-menu-item-wrapper ")? $(".custom-combobox-input")[0].dispatchEvent(new KeyboardEvent('keydown',{keyCode: 13})):12;
+    $(x.target).is(".ui-menu#ui-id-2 .ui-menu-item-wrapper ")? $(".custom-combobox-input")[1].dispatchEvent(new KeyboardEvent('keydown',{keyCode: 13})):12;
 })
 $(".Editado").on("contextmenu", function(er){er.preventDefault()})
 $(".Editado").on("mouseup", function(e){
@@ -3486,53 +3720,9 @@ alternate= function(Smpqw){
     if("undefined"!=typeof Smpqw){
         switch(Smpqw){
             case "superInformation":
-            /*/*
-                fill_daTa(`wd_filling_superInformation`)
+                /*fill_daTa(`wd_filling_superInformation`)
 
                 $(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
-                
-                var tiTle= $(alternating).find("h2").text()
-                var pp= tiTle.slice(0, tiTle.indexOf(" ("))
-                var hh= tiTle.slice(tiTle.indexOf(" (") + 2, tiTle.indexOf(") "))
-                var ww= $(this).attr("w").split(" ")
-                var btW= []
-                for(aa in ww){
-                    var greed= `${ww[aa].slice(4, ww[aa].length)}${alternatives[Object.keys(alternatives).slice(2)[$(alternating).attr("a")]].auC?'auC':''}`
-                    acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
-                    !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("   ", "&nbsp;&nbsp;")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
-                }
-                btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&nbsp;&nbsp;").replaceAll("&nbsp;&nbsp;<span> ", "&nbsp;&nbsp;<span>")
-                $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`)
-            })
-            alternating.find('p span').tooltip({
-                track: true,
-                show: {
-                    effect: "none",
-                    delay: 0
-                },
-                open: function(event, ui) {
-                    if (typeof(event.originalEvent) === 'undefined') {
-                        return false;
-                    }
-                    ý= $(this); 
-                   
-                    var $id = $(ui.tooltip).attr('id');
-
-                    $('div.ui-tooltip').not('#' + $id).remove();
-                },
-                close: function(event, ui) {
-                    ui.tooltip.hover(function() {
-                            $(this).stop(true).fadeTo(400, 1);
-                        },
-                        function() {
-                            $(this).fadeOut('400', function() {
-                                $(this).remove();
-                            });
-                        });
-                }
-            });          
-            */
-            $(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
                     var tiTle= $(alternating).find("h2").text()
                     var pp= tiTle.slice(0, tiTle.indexOf(" ("))
                     var hh= tiTle.slice(tiTle.indexOf(" (") + 2, tiTle.indexOf(") "))
@@ -3545,7 +3735,7 @@ alternate= function(Smpqw){
                     }
                     btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&nbsp;&nbsp;").replaceAll("&nbsp;&nbsp;<span> ", "&nbsp;&nbsp;<span>")
                     $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`)
-                })
+                })*/
                 $(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
                     var tiTle= $(alternating).find("h2").text()
                     var pp= tiTle.slice(0, tiTle.indexOf(" ("))
@@ -3586,23 +3776,9 @@ alternate= function(Smpqw){
                                 });
                             });
                     }
-                }); 
+                });
                 break;
             case "notSuperInformation":
-                $(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
-                    var tiTle= $(alternating).find("h2").text()
-                    var pp= tiTle.slice(0, tiTle.indexOf(" ("))
-                    var hh= tiTle.slice(tiTle.indexOf(" (") + 2, tiTle.indexOf(") "))
-                    var ww= $(this).attr("w").split(" ")
-                    var btW= []
-                    for(aa in ww){
-                        var greed= `${ww[aa].slice(4, ww[aa].length)}${alternatives[Object.keys(alternatives).slice(2)[$(alternating).attr("a")]].auC?'auC':''}`
-                        acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
-                        !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("   ", "&nbsp;&nbsp;")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
-                    }
-                    btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&nbsp;&nbsp;").replaceAll("&nbsp;&nbsp;<span> ", "&nbsp;&nbsp;<span>")
-                    $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`)
-                })
                 $(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
                     var tiTle= $(alternating).find("h2").text()
                     var pp= tiTle.slice(0, tiTle.indexOf(" ("))
@@ -3769,13 +3945,27 @@ alternate= function(Smpqw){
         }
     });
     window.location.hash= `${alternatives[Object.keys(alternatives)[2]].name.name} (${alternatives[Object.keys(alternatives)[2]].name.hyphenation})`/*:1*/
-    $("#copyURL").text(`${decodeURI(window.location.origin)}${decodeURI(window.location.pathname)}#${alternatives[Object.keys(alternatives)[2]].name.name} (${alternatives[Object.keys(alternatives)[2]].name.hyphenation})`)
+    $("#to_copy_to_clipboaRd").text(`${decodeURI(window.location.origin)}${decodeURI(window.location.pathname)}#${alternatives[Object.keys(alternatives)[2]].name.name} (${alternatives[Object.keys(alternatives)[2]].name.hyphenation})`)
 }
 document.onkeyup= function(o){
 if(!o.shiftKey || !o.ctrlKey)ctrlMShift= false
 if(!o.ctrlKey)ctrl_k= false
 if("undefined"!=typeof useLinks && o.ctrlKey && o.altKey && o.keyCode==83){o.preventDefault();$(".nombre").toggleClass("activeforURIinfo");$(".nombre").hasClass("activeforURIinfo")?history.pushState("", document.title, window.location.pathname
                                                        + window.location.search):134;}
+if(o.keyCode == 87 && o.ctrlKey && o.altKey){
+//
+if($(".accessibiliTyDialog").is(".visible")){
+    $(".accessibiliTyDialog").removeClass("visible")
+    $(".accessibiliTyDialog > aside").removeClass("visible")
+}else{
+    $(".accessibiliTyDialog").removeClass("fill_daTa")
+    $(".accessibiliTyDialog").addClass("full_Text")
+    $(".accessibiliTyDialog").addClass("visible")
+    $(".accessibiliTyDialog > aside").removeClass("visible")
+    $(".accessibiliTyDialog > aside#full_TextTextToSpeech").addClass("visible")
+}
+}
+
 if(o.keyCode == 65 && o.ctrlKey && o.altKey){
 //
 saved_selecTed_text= selecTedText()
@@ -3786,6 +3976,7 @@ if($(".accessibiliTyDialog").is(".visible")){
 }else{
     if(!!saved_selecTed_text){
         $(".accessibiliTyDialog").removeClass("fill_daTa")
+        $(".accessibiliTyDialog").removeClass("full_Text")
         $(".accessibiliTyDialog").addClass("visible")
         $(".accessibiliTyDialog > aside").removeClass("visible")
         $(".accessibiliTyDialog > aside#text_To_speech").addClass("visible")
