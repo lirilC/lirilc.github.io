@@ -1,7 +1,6 @@
 .pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#27ae60;position:fixed;z-index:200;top:46px;right:100%;width:100%;height:4px}
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
+@import url('https://fonts.cdnfonts.com/css/open-sans');
 @font-face
 
 {
@@ -1888,12 +1887,13 @@ background-color: #ddd}
     color: blanchedalmond;
 }
 .accessibiliTyDialog > aside label{
-  color: #9ab92e54;
+    color: #ffee9454;
+    text-shadow: 1px 1px #2b2b2f;
 }
 .accessibiliTyDialog > aside select, .ui-menu .ui-menu-item-wrapper{
     color: #535b53 !important;
 }
-.pseudoBuTton {
+.pseudoBuTton , .pseudoBuTton1 {
   background: #6a85db;
   width: 31px;
   height: 21px;
@@ -1907,17 +1907,17 @@ background-color: #ddd}
   right: 0;
   box-sizing: border-box;
 }
-.pseudoBuTton:before {
+.pseudoBuTton:before,  .pseudoBuTton1:before {
   content: "\e603";
-  top: -4px;
+  top: -5.242px;
   position: absolute;
   left: 3px;
 }
-.pseudoBuTton:hover {
+.pseudoBuTton:hover, .pseudoBuTton1:hover {
   outline: 1px inset #979778;
   outline-style: outset;
 }
-.pseudoBuTton:active {
+.pseudoBuTton:active,  .pseudoBuTton1:active {
   outline: 1px inset #979778;
   color: #829d21;
 }
@@ -1999,7 +1999,7 @@ ul.ui-menu {
   text-shadow: 1px 1px #a69247;
   width: 50%;
 }
-.accessibiliTyDialog.visible.fill_daTa {
+.accessibiliTyDialog.visible.fill_daTa, .accessibiliTyDialog.visible.full_Text {
   width: 534px;
   height: 100vh;
   top: 0;
@@ -2074,4 +2074,26 @@ ul.ui-menu {
 }
 #help_secTion sup a span {
   color: #d75727;
+}
+#superInformation_as i:not(table i) {
+  color: #6f6060;
+  margin-bottom: 20px;
+  display: block;
+}
+#superInformation_as h4 {
+  margin-bottom: 3px;
+}
+#full_TextTextToSpeech textarea{
+    margin: auto;
+    width: 30em;
+    box-sizing: border-box;
+    color: #ffccf2;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+    resize: none;
+    overflow-y: scroll;
+    background: #888787;
 }
