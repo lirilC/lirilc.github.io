@@ -57,7 +57,7 @@ accentuaTe= function(f, aL, m){
             var bW= ""
             for(var fi= f.length - 1; fi+1;fi--){
                 if(((aL=="e"?"&+,.0123456789abcdefghijklmnopqrstuvwxyz ":"&+,.0123456789abcdefghijklmnñopqrstuvwxyz ").indexOf(f[f.length-1-fi])+1 && !((Chocolate.indexOf(f[f.length-fi])+1) || (Anti_joint.indexOf(f[f.length-2-fi])+1))) || (f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")){
-                    bW=`${bW}${(f[f.length-1-fi]=="–"?"":f[f.length-1-fi])+((f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")?"   ":"  ")}`
+                    bW=`${bW}${(f[f.length-1-fi]=="–"?"":f[f.length-1-fi])+((f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")?"    ":"  ")}`
                 }else{
                     if(aL== "s"){
                         Alphabets["español"] 
@@ -83,7 +83,7 @@ accentuaTe= function(f, aL, m){
             var bW= ""
             for(var fi= f.length - 1; fi+1;fi--){
                 if(((aL=="e"?"&+,.0123456789abcdefghijklmnopqrstuvwxyz ":"&+,.0123456789abcdefghijklmnñopqrstuvwxyz ").indexOf(f[f.length-1-fi])+1 && !((Anti_joint.indexOf(f[f.length-fi])+1) || (Chocolate.indexOf(f[f.length-2-fi])+1))) || (f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")){
-                    bW=`${bW}${(f[f.length-1-fi]=="–"?"":f[f.length-1-fi])+((f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")?"   ":"  ")}`
+                    bW=`${bW}${(f[f.length-1-fi]=="–"?"":f[f.length-1-fi])+((f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")?"    ":"  ")}`
                 }else{
                     if(aL== "s"){
                         Alphabets["español"] 
@@ -108,10 +108,9 @@ accentuaTe= function(f, aL, m){
             var f= f.toLowerCase()
             var bW= ""
             for(var fi= f.length - 1; fi+1;fi--){
-                if((aL=="e"?"&+,.abcdefghijklmnopqrstuvwxyz ":"&+,.abcdefghijklmnñopqrstuvwxyz ").indexOf(f[f.length-1-fi])+1 && !(Chocolate.indexOf(f[f.length-fi])+1 || Anti_joint.indexOf(f[f.length-2-fi])+1) || (f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")){
+                if(((aL=="e"?"&+,.abcdefghijklmnopqrstuvwxyz ":"&+,.abcdefghijklmnñopqrstuvwxyz ").indexOf(f[f.length-1-fi])+1 && !((Chocolate.indexOf(f[f.length+1-fi])+1) || (Anti_joint.indexOf(f[f.length-3-fi])+1))) || (f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")){
                     bW=`${bW}${(f[f.length-1-fi]=="–"?"":f[f.length-1-fi])+((f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")?"   ":"  ")}`
                 }else{
-                    //alert(f[f.length-1-fi])
                     if(aL== "s"){
                         Alphabets["español"] 
                         for(var i in Alphabets["español"]){
@@ -135,7 +134,7 @@ accentuaTe= function(f, aL, m){
             var f= f.toLowerCase()
             var bW= ""
             for(var fi= f.length - 1; fi+1;fi--){
-                if((aL=="e"?"&+,.abcdefghijklmnopqrstuvwxyz ":"&+,.abcdefghijklmnñopqrstuvwxyz ").indexOf(f[f.length-1-fi])+1 && !(Anti_joint.indexOf(f[f.length-fi])+1 || Chocolate.indexOf(f[f.length-2-fi])+1) || (f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")){
+                if(((aL=="e"?"&+,.abcdefghijklmnopqrstuvwxyz ":"&+,.abcdefghijklmnñopqrstuvwxyz ").indexOf(f[f.length-1-fi])+1 && !((Anti_joint.indexOf(f[f.length+1-fi])+1) || (Chocolate.indexOf(f[f.length-3-fi])+1))) || (f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")){
                     bW=`${bW}${(f[f.length-1-fi]=="–"?"":f[f.length-1-fi])+((f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")?"   ":"  ")}`
                 }else{
                     //alert(f[f.length-1-fi])
@@ -333,6 +332,14 @@ Tms= function(t, qy){var rW="";for(t;t;t--){
     rW= `${rW}${qy}`
 }
 return rW
+}
+
+de= function(d){
+    if(d[0]=='e'){
+        return d.slice(1)
+    }else{
+        return ` ${d}`
+    }
 }
 
 
@@ -1692,6 +1699,8 @@ fill_daTa= function(type, superInf){
             case "FGlqw2x":
                  fill_Table([{T: "Nombre de herman@(s) con parentesco", _id: "sib_name", _inf: 
                    `nombre‼lenguajeDelNombre@parentesco
+                    <h4><b>nombre</b></h4>
+                    <span class='pseudo_undeRlineInfo'>El nombre completo de nacimiento del artista que aparezca en la página de <a>wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://www.wikipedia.org/'>[1]</a></sup>&nbsp;de éste.</span>
                     <h4>@<b>parentesco</b> (Obligatorio)</h4>
                     <i>, puede ser:</i>
                     <br>
@@ -1705,30 +1714,94 @@ fill_daTa= function(type, superInf){
                             <tr><th>to</th><th>Hermanito</th></tr>
                         </tbody>
                     </table>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>@</i> en el teclado?</th><th>Alt + 64</th></tr>
+                            <tr><th>Copiar <i>@</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(aT);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[2]</a></sup></th></tr>
+                        </tbody>
+                    </table>
                     <h4>‼<b>lenguajeDelNombre</b> (Opcional)</h4>
                     <i>, puede ser:</i>
                     <br>
-                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF <sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[1]</a></sup> de un lenguaje</span>
+                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF&hairsp;<sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[3]</a></sup>&nbsp;de un lenguaje</span>
                     <br>
                     <table>
                         <thead>
                         </thead>
                         <tbody>
                             <tr><th>¿Cómo escribir <i>‼</i> en el teclado?</th><th>Alt + 19</th></tr>
-                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th><sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[2]</a></sup></th></tr>
+                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[4]</a></sup></th></tr>
                         </tbody>
                     </table>
                     <h4>Puedes especificar <b>varios</b> nombres separándolos con una raya vertical y un espacio, así:</h4>
+                    <br>
                     nombre‼lDN@p| nombre‼lDN@p
+                    <br>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>|</i> en el teclado?</th><th>Alt + 124</th></tr>
+                            <tr><th>Copiar <i>|</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(verTl);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[5]</a></sup></th></tr>
+                        </tbody>
+                    </table>
                     `}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`, _inf: 
-                   `<i>Si el nombre del artista o la banda incluye e una creación, una parte de una o algo que derive de una, como términos de las áreas que las estudian o se sabe que alguna palabra en éste o ésta hace referencia a una, no por nombres propios reales ni números, o por nada que esté, estando, en un nombre propio real; deberías chequear esta caja.</i>`}])
+                   `<i>Si el nombre del artista o la banda incluye una creación, una parte de una o algo que derive de una, como términos de las áreas que las estudian o se sabe que alguna palabra en éste o ésta hace referencia a una, no por nombres propios reales ni números, o por nada que esté, estando, en un nombre propio real; deberías chequear esta caja.</i>`}])
                 break;
             case "alcN329":case "Ondoi2n":
-                 fill_Table([{T: "Nombre del artista", _id: "art_name"}, {T: "Gentilicio del artista", _id: "art_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse al artista", _id: "art_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}])
+                 fill_Table([{T: "Nombre del artista", _id: "art_name", _inf: 
+                   `nombre‼lenguajeDelNombre
+                    <h4><b>nombre</b></h4>
+                    <span class='pseudo_undeRlineInfo'>El nombre completo de nacimiento del artista o el nombre oficial de la banda que aparezca en la página de <a>wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://www.wikipedia.org/'>[1]</a></sup>&nbsp;de éste o ésta.</span>
+                    <h4>‼<b>lenguajeDelNombre</b> (Opcional)</h4>
+                    <i>, puede ser:</i>
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF&hairsp;<sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[2]</a></sup>&nbsp;de un lenguaje</span>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>‼</i> en el teclado?</th><th>Alt + 19</th></tr>
+                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[3]</a></sup></th></tr>
+                        </tbody>
+                    </table>
+                    `}, {T: "Gentilicio del artista", _id: "art_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    liriliano
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El gentilicio de nacimiento del artista u el oficial de la banda que aparezca en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de éste o ésta.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    Lirilian
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El gentilicio de nacimiento del artista u el oficial de la banda que aparezca en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de éste o ésta.</span>
+                    `}, {T: "Cómo referirse al artista", _id: "art_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    el cantautor
+                    <br>
+                    la banda de rock
+                    <span class='pseudo_undeRlineInfo'>Completa cómo referirse al artista o la banda según la información que aparezca en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de éste o ésta en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>____ lirilian@</span>.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    singer and songwriter
+                    <br>
+                    rock band
+                    <span class='pseudo_undeRlineInfo'>Completa cómo referirse al artista o la banda según la información que aparezca en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de éste o ésta en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>the Lirilian ____</span>.</span>
+                    <br>
+                    `}])
                 break;
             case "m32c2b4":
                  fill_Table([{T: "Nombre de herman@ con parentesco", _id: "sib_name", _inf: 
                    `nombre‼lenguajeDelNombre@parentesco
+                    <h4><b>nombre</b></h4>
+                    <span class='pseudo_undeRlineInfo'>El nombre completo de nacimiento del artista que aparezca en la página de <a>wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://www.wikipedia.org/'>[1]</a></sup>&nbsp;de éste.</span>
                     <h4>@<b>parentesco</b> (Obligatorio)</h4>
                     <i>, puede ser:</i>
                     <br>
@@ -1742,26 +1815,93 @@ fill_daTa= function(type, superInf){
                             <tr><th>to</th><th>Hermanito</th></tr>
                         </tbody>
                     </table>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>@</i> en el teclado?</th><th>Alt + 64</th></tr>
+                            <tr><th>Copiar <i>@</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(aT);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[2]</a></sup></th></tr>
+                        </tbody>
+                    </table>
                     <h4>‼<b>lenguajeDelNombre</b> (Opcional)</h4>
                     <i>, puede ser:</i>
                     <br>
-                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF <sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[1]</a></sup> de un lenguaje</span>
+                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF&hairsp;<sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[3]</a></sup>&nbsp;de un lenguaje</span>
                     <br>
                     <table>
                         <thead>
                         </thead>
                         <tbody>
                             <tr><th>¿Cómo escribir <i>‼</i> en el teclado?</th><th>Alt + 19</th></tr>
-                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th><sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[2]</a></sup></th></tr>
+                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[4]</a></sup></th></tr>
                         </tbody>
                     </table>
                     <h4>Puedes especificar <b>varios</b> nombres separándolos con una raya vertical y un espacio, así:</h4>
+                    <br>
                     nombre‼lDN@p| nombre‼lDN@p
-                    `}, {T: "Gentilicio del artista", _id: "art_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse al artista", _id: "art_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
+                    <br>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>|</i> en el teclado?</th><th>Alt + 124</th></tr>
+                            <tr><th>Copiar <i>|</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(verTl);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[5]</a></sup></th></tr>
+                        </tbody>
+                    </table>
+                    `}, {T: "Gentilicio del artista", _id: "art_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    liriliano
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El gentilicio de nacimiento del artista que aparezca en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de éste.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    Lirilian
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El gentilicio de nacimiento del artista que aparezca en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de éste.</span>
+                    `}, {T: "Cómo referirse al artista", _id: "art_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    el cantautor
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Completa cómo referirse al artista según la información que aparezca en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de éste en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>tu herm..., ____ lirilian@</span>.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    singer and songwriter
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Completa cómo referirse al artista según la información que aparezca en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de éste en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>your ...er, the Lirilian ____</span>.</span>
+                    `}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`, _inf: 
+                   `<i>Si el nombre artístico de mi herman@ incluye una creación, una parte de una o algo que derive de una, como términos de las áreas que las estudian o se sabe que alguna palabra en éste hace referencia a una, no por nombres propios reales ni números, o por nada que esté, estando, en un nombre propio real; deberías chequear esta caja.</i>`}])
                 break;
             case "alLNd2d":
-                 fill_Table([{T: "Nombre del grupo musical", _id: "ban_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse al grupo musical", _id: "ban_hTrt", _cusTom: `<input placeholder= "en español"></input><input disabled= "true" placeholder= "en inglés"></input>`}, {T: "Nombre de herman@(s) con parentesco", _id: "sib_name", _inf: 
+                 fill_Table([{T: "Nombre del grupo musical", _id: "ban_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    rock Led Zeppelin
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Completa el género y nombre de la agrupación musical según la información que aparezca en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>La banda de ____</span>.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    rock band Led Zeppelin
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Escribe el género, tipo y nombre de la agrupación musical según la información que aparezca en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de ésta.</span>
+                    `}, {T: "Cómo referirse al grupo musical", _id: "ban_hTrt", _cusTom: `<input placeholder= "en español"></input><input disabled= "true" placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    la banda de
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Completa el tipo de la agrupación musical según la información que aparezca en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>____ rock L-d Z-p-e-i-</span>.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>No escribas nada, <i style= 'display: inline'>(desactivado)</i>.</span>
+                    `}, {T: "Nombre de herman@(s) con parentesco", _id: "sib_name", _inf: 
                    `nombre‼lenguajeDelNombre@parentesco
+                    <h4><b>nombre</b></h4>
+                    <span class='pseudo_undeRlineInfo'>El nombre completo de nacimiento del artista que aparezca en la página de <a>wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://www.wikipedia.org/'>[1]</a></sup>&nbsp;de éste.</span>
                     <h4>@<b>parentesco</b> (Obligatorio)</h4>
                     <i>, puede ser:</i>
                     <br>
@@ -1775,29 +1915,172 @@ fill_daTa= function(type, superInf){
                             <tr><th>to</th><th>Hermanito</th></tr>
                         </tbody>
                     </table>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>@</i> en el teclado?</th><th>Alt + 64</th></tr>
+                            <tr><th>Copiar <i>@</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(aT);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[2]</a></sup></th></tr>
+                        </tbody>
+                    </table>
                     <h4>‼<b>lenguajeDelNombre</b> (Opcional)</h4>
                     <i>, puede ser:</i>
                     <br>
-                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF <sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[1]</a></sup> de un lenguaje</span>
+                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF&hairsp;<sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[3]</a></sup>&nbsp;de un lenguaje</span>
                     <br>
                     <table>
                         <thead>
                         </thead>
                         <tbody>
                             <tr><th>¿Cómo escribir <i>‼</i> en el teclado?</th><th>Alt + 19</th></tr>
-                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th><sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[2]</a></sup></th></tr>
+                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[4]</a></sup></th></tr>
                         </tbody>
                     </table>
                     <h4>Puedes especificar <b>varios</b> nombres separándolos con una raya vertical y un espacio, así:</h4>
+                    <br>
                     nombre‼lDN@p| nombre‼lDN@p
-                    `}, {T: "Gentilicio de hermano(s)", _id: "sib_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse a hermano(s)", _id: "sib_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
+                    <br>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>|</i> en el teclado?</th><th>Alt + 124</th></tr>
+                            <tr><th>Copiar <i>|</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(verTl);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[5]</a></sup></th></tr>
+                        </tbody>
+                    </table>
+                    `}, {T: "Gentilicio de hermano(s)", _id: "sib_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    liriliano
+                    <br>
+                    lirilianos
+                    <br>
+                    liriliano y liriliense
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El o los gentilicio(s) de nacimiento de( )l(os) artista(s), que aparezca(n) en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de éste o éstos; si son varios, en el orden en que van a quedar los artistas a quienes les corresponden.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    Lirilian
+                    <br>
+                    Lirilian and Liriliense
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El o los gentilicio(s) de nacimiento de( )l(os) artista(s), que aparezca(n) en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de éste o éstos; si son varios, en el orden en que van a quedar los artistas a quienes les corresponden.</span>
+                    `}, {T: "Cómo referirse a hermano(s)", _id: "sib_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    el cantautor
+                    <br>
+                    el cantautor y el guitarrista
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Completa cómo referirse a( )l(os) artista(s) herman@s míos que participan en la agrupación según la información que aparezca en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de éste o éstos en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>tu herm..., ____ lirilian@</span>; si son varios, en el orden en que van a quedar los artistas a quienes les corresponden.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    singer and songwriter
+                    <br>
+                    singer and songwriter and guitarrist
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Completa cómo referirse a( )l(os) artista(s) herman@s míos que participan en la agrupación según la información que aparezca en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de éste o éstos en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>your ...er, the Lirilian ____</span>; si son varios, en el orden en que van a quedar los artistas a quienes les corresponden.</span>
+                    `}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`, _inf: 
+                   `<i>Si el nombre de la agrupación musical incluye una creación, una parte de una o algo que derive de una, como términos de las áreas que las estudian o se sabe que alguna palabra en éste hace referencia a una, no por nombres propios reales ni números, o por nada que esté, estando, en un nombre propio real; deberías chequear esta caja.</i>`}])
                 break;
             case "2oJdin2":case "nJBw2f3":
-                 fill_Table([{T: "Nombre de la película", _id: "mov_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Nombre de director(es)", _id: "dir_name"}, {T: "Gentilicio de director(es)", _id: "dir_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse a director(es)", _id: "dir_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}])
+                 fill_Table([{T: "Nombre de la película", _id: "mov_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    Sistema
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El nombre oficial de la película que aparezca en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    System
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El nombre oficial de la película que aparezca en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de ésta.</span>
+                    `}, {T: "Nombre de director(es)", _id: "dir_name", _inf: 
+                   `nombre‼lenguajeDelNombre
+                    <h4><b>nombre</b></h4>
+                    <span class='pseudo_undeRlineInfo'>El nombre completo de nacimiento de()l(a) director(a) de la película que aparezca en la página de <a>wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://www.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste.</span>
+                    <h4>‼<b>lenguajeDelNombre</b> (Opcional)</h4>
+                    <i>, puede ser:</i>
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF&hairsp;<sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[2]</a></sup>&nbsp;de un lenguaje</span>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>‼</i> en el teclado?</th><th>Alt + 19</th></tr>
+                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[3]</a></sup></th></tr>
+                        </tbody>
+                    </table>
+                    <h4>Puedes especificar <b>varios</b> nombres separándolos con una raya vertical y un espacio, así:</h4>
+                    <br>
+                    nombre‼lDN| nombre‼lDN
+                    <br>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>|</i> en el teclado?</th><th>Alt + 124</th></tr>
+                            <tr><th>Copiar <i>|</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(verTl);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[4]</a></sup></th></tr>
+                        </tbody>
+                    </table>
+                    `}, {T: "Gentilicio de director(es)", _id: "dir_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    liriliano
+                    <br>
+                    lirilianos
+                    <br>
+                    liriliano y liriliense
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El o los gentilicio(s) de nacimiento de( )l(os) director(es), que aparezca(n) en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de éste o éstos; si son varios, en el orden en que van a quedar los directores a quienes les corresponden.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    Lirilian
+                    <br>
+                    Lirilian and Liriliense
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El o los gentilicio(s) de nacimiento de( )l(os) director(es), que aparezca(n) en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de éste o éstos; si son varios, en el orden en que van a quedar los directores a quienes les corresponden.</span>
+                    `}, {T: "Cómo referirse a director(es)", _id: "dir_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    el director
+                    <br>
+                    los directores
+                    <br>
+                    el director y el director y paleontólogo
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Completa cómo referirse a( )l(os) directores(es) de la película según la información que aparezca en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de éste o éstos en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>____ lirilian@</span>; si son varios, en el orden en que van a quedar los directores a quienes les corresponden.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    director
+                    <br>
+                    directors
+                    <br>
+                    director and director and paleontologist
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Completa cómo referirse a( )l(os) directores(s) de la película según la información que aparezca en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de éste o éstos en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>the Lirilian ____</span>; si son varios, en el orden en que van a quedar los directores a quienes les corresponden.</span>
+                    `}])
                 break;
             case "Biujbc2":
-                 fill_Table([{T: "Nombre de la película", _id: "mov_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Nombre de director(es) con o sin parentescos", _inf: 
+                 fill_Table([{T: "Nombre de la película", _id: "mov_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    Sistema
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El nombre oficial de la película que aparezca en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    System
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El nombre oficial de la película que aparezca en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de ésta.</span>
+                    `}, {T: "Nombre de director(es) con o sin parentescos", _inf: 
                    `nombre‼lenguajeDelNombre@parentesco
+                    <h4><b>nombre</b></h4>
+                    <span class='pseudo_undeRlineInfo'>El nombre completo de nacimiento de()l(a) director(a) de la película que aparezca en la página de <a>wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://www.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste.</span>
                     <h4>@<b>parentesco</b> (Obligatorio)</h4>
                     <i>, puede ser:</i>
                     <br>
@@ -1811,29 +2094,172 @@ fill_daTa= function(type, superInf){
                             <tr><th>to</th><th>Hermanito</th></tr>
                         </tbody>
                     </table>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>@</i> en el teclado?</th><th>Alt + 64</th></tr>
+                            <tr><th>Copiar <i>@</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(aT);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[2]</a></sup></th></tr>
+                        </tbody>
+                    </table>
                     <h4>‼<b>lenguajeDelNombre</b> (Opcional)</h4>
                     <i>, puede ser:</i>
                     <br>
-                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF <sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[1]</a></sup> de un lenguaje</span>
+                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF&hairsp;<sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[3]</a></sup>&nbsp;de un lenguaje</span>
                     <br>
                     <table>
                         <thead>
                         </thead>
                         <tbody>
                             <tr><th>¿Cómo escribir <i>‼</i> en el teclado?</th><th>Alt + 19</th></tr>
-                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th><sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[2]</a></sup></th></tr>
+                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[4]</a></sup></th></tr>
                         </tbody>
                     </table>
                     <h4>Puedes especificar <b>varios</b> nombres separándolos con una raya vertical y un espacio, así:</h4>
+                    <br>
                     nombre‼lDN@p| nombre‼lDN@p
-                    //**`, _id: "dir_name"}, {T: "Gentilicio de director(es)", _id: "dir_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse a director(es)", _id: "dir_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
+                    <br>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>|</i> en el teclado?</th><th>Alt + 124</th></tr>
+                            <tr><th>Copiar <i>|</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(verTl);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[5]</a></sup></th></tr>
+                        </tbody>
+                    </table>
+                    `, _id: "dir_name"}, {T: "Gentilicio de director(es)", _id: "dir_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    liriliano
+                    <br>
+                    lirilianos
+                    <br>
+                    liriliano y liriliense
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El o los gentilicio(s) de nacimiento de( )l(os) director(es), que aparezca(n) en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de éste o éstos; si son varios, en el orden en que van a quedar los directores a quienes les corresponden.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    Lirilian
+                    <br>
+                    Lirilian and Liriliense
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El o los gentilicio(s) de nacimiento de( )l(os) director(es), que aparezca(n) en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de éste o éstos; si son varios, en el orden en que van a quedar los directores a quienes les corresponden.</span>
+                    `}, {T: "Cómo referirse a director(es)", _id: "dir_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    el director
+                    <br>
+                    los directores
+                    <br>
+                    el director y el director y paleontólogo
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Completa cómo referirse a( )l(os) directores(es) de la película según la información que aparezca en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de éste o éstos en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>____ lirilian@</span>; si son varios, en el orden en que van a quedar los directores a quienes les corresponden.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    director
+                    <br>
+                    directors
+                    <br>
+                    director and director and paleontologist
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Completa cómo referirse a( )l(os) directores(s) de la película según la información que aparezca en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de éste o éstos en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>the Lirilian ____</span>; si son varios, en el orden en que van a quedar los directores a quienes les corresponden.</span>
+                    `}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`, _inf: 
+                   `<i>Si el nombre de la película incluye una creación, una parte de una o algo que derive de una, como términos de las áreas que las estudian o se sabe que alguna palabra en éste hace referencia a una, no por nombres propios reales ni números, o por nada que esté, estando, en un nombre propio real; deberías chequear esta caja.</i>`}])
                 break;
             case "jnIFn3d":case "Hi2Cj29":
-                 fill_Table([{T: "Nombre de la serie", _id: "ser_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Nombre de creador(es)", _id: "cre_name"}, {T: "Gentilicio de creador(es)", _id: "cre_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse a creador(es)", _id: "cre_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}])
+                 fill_Table([{T: "Nombre de la serie", _id: "ser_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    Sistema
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El nombre oficial de la serie que aparezca en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    System
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El nombre oficial de la serie que aparezca en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de ésta.</span>
+                    `}, {T: "Nombre de creador(es)", _id: "cre_name", _inf: 
+                   `nombre‼lenguajeDelNombre
+                    <h4><b>nombre</b></h4>
+                    <span class='pseudo_undeRlineInfo'>El nombre completo de nacimiento de()l(a) creador(a) de la serie que aparezca en la página de <a>wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://www.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste.</span>
+                    <h4>‼<b>lenguajeDelNombre</b> (Opcional)</h4>
+                    <i>, puede ser:</i>
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF&hairsp;<sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[2]</a></sup>&nbsp;de un lenguaje</span>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>‼</i> en el teclado?</th><th>Alt + 19</th></tr>
+                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[3]</a></sup></th></tr>
+                        </tbody>
+                    </table>
+                    <h4>Puedes especificar <b>varios</b> nombres separándolos con una raya vertical y un espacio, así:</h4>
+                    <br>
+                    nombre‼lDN| nombre‼lDN
+                    <br>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>|</i> en el teclado?</th><th>Alt + 124</th></tr>
+                            <tr><th>Copiar <i>|</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(verTl);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[4]</a></sup></th></tr>
+                        </tbody>
+                    </table>
+                    `}, {T: "Gentilicio de creador(es)", _id: "cre_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    liriliano
+                    <br>
+                    lirilianos
+                    <br>
+                    liriliano y liriliense
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El o los gentilicio(s) de nacimiento de( )l(os) creador(es) de la serie, que aparezca(n) en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de éste o éstos; si son varios, en el orden en que van a quedar los creadores de la serie a quienes les corresponden.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    Lirilian
+                    <br>
+                    Lirilian and Liriliense
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El o los gentilicio(s) de nacimiento de( )l(os) creador(es) de la serie, que aparezca(n) en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de éste o éstos; si son varios, en el orden en que van a quedar los creadores de la serie a quienes les corresponden.</span>
+                    `}, {T: "Cómo referirse a creador(es)", _id: "cre_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    el creador
+                    <br>
+                    los creadores
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Completa cómo referirse a( )l(os) creador(es) de la serie según la información que aparezca en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de éste o éstos en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>____ lirilian@</span>; si son varios, en el orden en que van a quedar los creadores de la serie a quienes les corresponden.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    creator
+                    <br>
+                    creators
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Completa cómo referirse a( )l(os) creador(s) de la serie según la información que aparezca en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de éste o éstos en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>the Lirilian ____</span>; si son varios, en el orden en que van a quedar los creadores de la serie a quienes les corresponden.</span>
+                    `}])
                 break;
             case "LNjndn1":
-                 fill_Table([{T: "Nombre de la serie", _id: "ser_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Nombre de creador(es) con o sin parentescos", _id: "cre_name", _inf: 
+                 fill_Table([{T: "Nombre de la serie", _id: "ser_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    Sistema
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El nombre oficial de la serie que aparezca en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    System
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El nombre oficial de la serie que aparezca en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de ésta.</span>
+                    `}, {T: "Nombre de creador(es) con o sin parentescos", _id: "cre_name", _inf: 
                    `nombre‼lenguajeDelNombre@parentesco
+                    <h4><b>nombre</b></h4>
+                    <span class='pseudo_undeRlineInfo'>El nombre completo de nacimiento de()l(a) creador(a) de la serie que aparezca en la página de <a>wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://www.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste.</span>
                     <h4>@<b>parentesco</b> (Obligatorio)</h4>
                     <i>, puede ser:</i>
                     <br>
@@ -1847,29 +2273,144 @@ fill_daTa= function(type, superInf){
                             <tr><th>to</th><th>Hermanito</th></tr>
                         </tbody>
                     </table>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>@</i> en el teclado?</th><th>Alt + 64</th></tr>
+                            <tr><th>Copiar <i>@</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(aT);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[2]</a></sup></th></tr>
+                        </tbody>
+                    </table>
                     <h4>‼<b>lenguajeDelNombre</b> (Opcional)</h4>
                     <i>, puede ser:</i>
                     <br>
-                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF <sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[1]</a></sup> de un lenguaje</span>
+                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF&hairsp;<sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[3]</a></sup>&nbsp;de un lenguaje</span>
                     <br>
                     <table>
                         <thead>
                         </thead>
                         <tbody>
                             <tr><th>¿Cómo escribir <i>‼</i> en el teclado?</th><th>Alt + 19</th></tr>
-                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th><sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[2]</a></sup></th></tr>
+                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[4]</a></sup></th></tr>
                         </tbody>
                     </table>
                     <h4>Puedes especificar <b>varios</b> nombres separándolos con una raya vertical y un espacio, así:</h4>
+                    <br>
                     nombre‼lDN@p| nombre‼lDN@p
-                    //**`}, {T: "Gentilicio de creador(es)", _id: "cre_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse a creador(es)", _id: "cre_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
+                    <br>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>|</i> en el teclado?</th><th>Alt + 124</th></tr>
+                            <tr><th>Copiar <i>|</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(verTl);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[5]</a></sup></th></tr>
+                        </tbody>
+                    </table>
+                    `}, {T: "Gentilicio de creador(es)", _id: "cre_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    liriliano
+                    <br>
+                    lirilianos
+                    <br>
+                    liriliano y liriliense
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El o los gentilicio(s) de nacimiento de( )l(os) creador(es) de la serie, que aparezca(n) en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de éste o éstos; si son varios, en el orden en que van a quedar los creadores de la serie a quienes les corresponden.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    Lirilian
+                    <br>
+                    Lirilian and Liriliense
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El o los gentilicio(s) de nacimiento de( )l(os) creador(es) de la serie, que aparezca(n) en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de éste o éstos; si son varios, en el orden en que van a quedar los creadores de la serie a quienes les corresponden.</span>
+                    `}, {T: "Cómo referirse a creador(es)", _id: "cre_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    el creador
+                    <br>
+                    los creadores
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Completa cómo referirse a( )l(os) creador(es) de la serie según la información que aparezca en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de éste o éstos en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>____ lirilian@</span>; si son varios, en el orden en que van a quedar los creadores de la serie a quienes les corresponden.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    creator
+                    <br>
+                    creators
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Completa cómo referirse a( )l(os) creador(s) de la serie según la información que aparezca en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de éste o éstos en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>the Lirilian ____</span>; si son varios, en el orden en que van a quedar los creadores de la serie a quienes les corresponden.</span>
+                    `}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`, _inf: 
+                   `<i>Si el nombre de la serie incluye una creación, una parte de una o algo que derive de una, como términos de las áreas que las estudian o se sabe que alguna palabra en éste hace referencia a una, no por nombres propios reales ni números, o por nada que esté, estando, en un nombre propio real; deberías chequear esta caja.</i>`}])
                 break;
             case "LKKCoi2":case "Ll3nod1":
-                 fill_Table([{T: "Nombre del escritor", _id: "wri_name"}, {T: "Gentilicio del escritor", _id: "wri_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse al escritor", _id: "wri_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}])
+                 fill_Table([{T: "Nombre del escritor", _id: "wri_name", _inf: 
+                   `nombre‼lenguajeDelNombre
+                    <h4><b>nombre</b></h4>
+                    <span class='pseudo_undeRlineInfo'>El nombre completo de nacimiento de()l(a) escritor(a) del libro que aparezca en la página de <a>wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://www.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste.</span>
+                    <h4>‼<b>lenguajeDelNombre</b> (Opcional)</h4>
+                    <i>, puede ser:</i>
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF&hairsp;<sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[2]</a></sup>&nbsp;de un lenguaje</span>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>‼</i> en el teclado?</th><th>Alt + 19</th></tr>
+                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[3]</a></sup></th></tr>
+                        </tbody>
+                    </table>
+                    <h4>Puedes especificar <b>varios</b> nombres separándolos con una raya vertical y un espacio, así:</h4>
+                    <br>
+                    nombre‼lDN| nombre‼lDN
+                    <br>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>|</i> en el teclado?</th><th>Alt + 124</th></tr>
+                            <tr><th>Copiar <i>|</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(verTl);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[4]</a></sup></th></tr>
+                        </tbody>
+                    </table>
+                    `}, {T: "Gentilicio del escritor", _id: "wri_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    liriliano
+                    <br>
+                    lirilianos
+                    <br>
+                    liriliano y liriliense
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El gentilicio de nacimiento de( )l(a) escritor(a) del libro, que aparezca en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    Lirilian
+                    <br>
+                    Lirilian and Liriliense
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El gentilicio de nacimiento de( )l(a) escritor(a) del libro, que aparezca en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de ésta o éste.</span>
+                    `}, {T: "Cómo referirse al escritor", _id: "wri_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    la escritora
+                    <br>
+                    el escritor
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Completa cómo referirse a( )l(a) escritor(a) del libro según la información que aparezca en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>____ lirilian@</span>.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    writer
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Completa cómo referirse a( )l(a) escritor(a) del libro según la información que aparezca en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de ésta o éste en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>the Lirilian ____</span>.</span>
+                    `}])
                 break;
             case "Llndj3c":
                  fill_Table([{T: "Nombre del escritor con parentesco", _id: "wri_name", _inf: 
                    `nombre‼lenguajeDelNombre@parentesco
+                    <h4><b>nombre</b></h4>
+                    <span class='pseudo_undeRlineInfo'>El nombre completo de nacimiento de( )l(a) escritor(a) del libro que aparezca en la página de <a>wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://www.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste.</span>
                     <h4>@<b>parentesco</b> (Obligatorio)</h4>
                     <i>, puede ser:</i>
                     <br>
@@ -1883,29 +2424,131 @@ fill_daTa= function(type, superInf){
                             <tr><th>to</th><th>Hermanito</th></tr>
                         </tbody>
                     </table>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>@</i> en el teclado?</th><th>Alt + 64</th></tr>
+                            <tr><th>Copiar <i>@</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(aT);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[2]</a></sup></th></tr>
+                        </tbody>
+                    </table>
                     <h4>‼<b>lenguajeDelNombre</b> (Opcional)</h4>
                     <i>, puede ser:</i>
                     <br>
-                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF <sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[1]</a></sup> de un lenguaje</span>
+                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF&hairsp;<sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[3]</a></sup>&nbsp;de un lenguaje</span>
                     <br>
                     <table>
                         <thead>
                         </thead>
                         <tbody>
                             <tr><th>¿Cómo escribir <i>‼</i> en el teclado?</th><th>Alt + 19</th></tr>
-                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th><sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[2]</a></sup></th></tr>
+                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[4]</a></sup></th></tr>
+                        </tbody>
+                    </table>
+                    `}, {T: "Gentilicio del escritor", _id: "wri_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    liriliano
+                    <br>
+                    lirilianos
+                    <br>
+                    liriliano y liriliense
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El gentilicio de nacimiento de( )l(a) escritor(a) del libro, que aparezca en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    Lirilian
+                    <br>
+                    Lirilian and Liriliense
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El gentilicio de nacimiento de( )l(a) escritor(a) del libro, que aparezca en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de ésta o éste.</span>
+                    `}, {T: "Cómo referirse al escritor", _id: "wri_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    la escritora
+                    <br>
+                    el escritor
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Completa cómo referirse a( )l(a) escritor(a) del libro según la información que aparezca en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>____ lirilian@</span>.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    writer
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Completa cómo referirse a( )l(a) escritor(a) del libro según la información que aparezca en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de ésta o éste en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>the Lirilian ____</span>.</span>
+                    `}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`, _inf: 
+                   `<i>Si el nombre del libro incluye una creación, una parte de una o algo que derive de una, como términos de las áreas que las estudian o se sabe que alguna palabra en éste hace referencia a una, no por nombres propios reales ni números, o por nada que esté, estando, en un nombre propio real; deberías chequear esta caja.</i>`}])
+                break;
+            case "NiCju2d":case "cH2dDnC":
+                 fill_Table([{T: "Nombre del artista", _id: "art_name", _inf: 
+                   `nombre‼lenguajeDelNombre
+                    <h4><b>nombre</b></h4>
+                    <span class='pseudo_undeRlineInfo'>El nombre completo de nacimiento de()l(a) artista que aparezca en la página de <a>wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://www.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste.</span>
+                    <h4>‼<b>lenguajeDelNombre</b> (Opcional)</h4>
+                    <i>, puede ser:</i>
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF&hairsp;<sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[2]</a></sup>&nbsp;de un lenguaje</span>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>‼</i> en el teclado?</th><th>Alt + 19</th></tr>
+                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[3]</a></sup></th></tr>
                         </tbody>
                     </table>
                     <h4>Puedes especificar <b>varios</b> nombres separándolos con una raya vertical y un espacio, así:</h4>
-                    nombre‼lDN@p| nombre‼lDN@p
-                    `}, {T: "Gentilicio del escritor", _id: "wri_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse al escritor", _id: "wri_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
-                break;
-            case "NiCju2d":case "cH2dDnC":
-                 fill_Table([{T: "Nombre del artista", _id: "art_name"}, {T: "Gentilicio del artista", _id: "art_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse al artista", _id: "art_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}])
+                    <br>
+                    nombre‼lDN| nombre‼lDN
+                    <br>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>|</i> en el teclado?</th><th>Alt + 124</th></tr>
+                            <tr><th>Copiar <i>|</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(verTl);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[4]</a></sup></th></tr>
+                        </tbody>
+                    </table>
+                    `}, {T: "Gentilicio del artista", _id: "art_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    liriliano
+                    <br>
+                    lirilianos
+                    <br>
+                    liriliano y liriliense
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El gentilicio de nacimiento de( )l(a) artista, que aparezca en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    Lirilian
+                    <br>
+                    Lirilian and Liriliense
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El gentilicio de nacimiento de( )l(a) artista, que aparezca en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de ésta o éste.</span>
+                    `}, {T: "Cómo referirse al artista", _id: "art_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    la pintora y escultora
+                    <br>
+                    el pintor
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Completa cómo referirse a( )l(a) artista según la información que aparezca en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>____ lirilian@</span>.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    painter and sculptor
+                    <br>
+                    painter
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Completa cómo referirse a( )l(a) artista según la información que aparezca en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de ésta o éste en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>the Lirilian ____</span>.</span>
+                    `}])
                 break;
             case "Lmdi2md":
                  fill_Table([{T: "Nombre del artista con parentesco", _id: "art_name", _inf: 
                    `nombre‼lenguajeDelNombre@parentesco
+                    <h4><b>nombre</b></h4>
+                    <span class='pseudo_undeRlineInfo'>El nombre completo de nacimiento de( )l(a) artista que aparezca en la página de <a>wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://www.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste.</span>
                     <h4>@<b>parentesco</b> (Obligatorio)</h4>
                     <i>, puede ser:</i>
                     <br>
@@ -1919,28 +2562,127 @@ fill_daTa= function(type, superInf){
                             <tr><th>to</th><th>Hermanito</th></tr>
                         </tbody>
                     </table>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>@</i> en el teclado?</th><th>Alt + 64</th></tr>
+                            <tr><th>Copiar <i>@</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(aT);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[2]</a></sup></th></tr>
+                        </tbody>
+                    </table>
                     <h4>‼<b>lenguajeDelNombre</b> (Opcional)</h4>
                     <i>, puede ser:</i>
                     <br>
-                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF <sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[1]</a></sup> de un lenguaje</span>
+                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF&hairsp;<sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[3]</a></sup>&nbsp;de un lenguaje</span>
                     <br>
                     <table>
                         <thead>
                         </thead>
                         <tbody>
                             <tr><th>¿Cómo escribir <i>‼</i> en el teclado?</th><th>Alt + 19</th></tr>
-                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th><sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[2]</a></sup></th></tr>
+                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[4]</a></sup></th></tr>
+                        </tbody>
+                    </table>
+                    `}, {T: "Gentilicio del artista", _id: "art_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    liriliano
+                    <br>
+                    lirilianos
+                    <br>
+                    liriliano y liriliense
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El gentilicio de nacimiento de( )l(a) artista, que aparezca en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    Lirilian
+                    <br>
+                    Lirilian and Liriliense
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El gentilicio de nacimiento de( )l(a) artista, que aparezca en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de ésta o éste.</span>
+                    `}, {T: "Cómo referirse al artista", _id: "art_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    la pintora y escultora
+                    <br>
+                    el pintor
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Completa cómo referirse a( )l(a) artista según la información que aparezca en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>____ lirilian@</span>.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    painter and sculptor
+                    <br>
+                    painter
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Completa cómo referirse a( )l(a) artista según la información que aparezca en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de ésta o éste en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>the Lirilian ____</span>.</span>
+                    `}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`, _inf: 
+                   `<i>Si el nombre de la obra de arte, el nombre de la colección o el nombre artístico de( )l(a) artista incluye una creación, una parte de una o algo que derive de una, como términos de las áreas que las estudian o se sabe que alguna palabra en uno de éstos hace referencia a una, no por nombres propios reales ni números, o por nada que esté, estando, en un nombre propio real; deberías chequear esta caja.</i>`}])
+                break;
+            case "amcaoMd":case "kLwicn2":
+                 fill_Table([{T: "Nombre de la(s) desarrolladora(s) de videojuegos", _id: "dev_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `nombre‼lenguajeDelNombre
+                    <h4><b>nombre</b></h4>
+                    <span class='pseudo_undeRlineInfo'>El nombre oficial de la desarrolladora de videojuegos que aparezca en la página de <a>wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://www.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta.</span>
+                    <h4>‼<b>lenguajeDelNombre</b> (Opcional)</h4>
+                    <i>, puede ser:</i>
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Nada o el código IETF&hairsp;<sup><a target= '_blank' href='/A.K.A._Dizzy/raw/p/Mx2DX0Ds1hc2D/index.html'>[2]</a></sup>&nbsp;de un lenguaje</span>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>‼</i> en el teclado?</th><th>Alt + 19</th></tr>
+                            <tr><th>Copiar <i>‼</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(dEP);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[3]</a></sup></th></tr>
                         </tbody>
                     </table>
                     <h4>Puedes especificar <b>varios</b> nombres separándolos con una raya vertical y un espacio, así:</h4>
-                    nombre‼lDN@p| nombre‼lDN@p
-                    `}, {T: "Gentilicio del artista", _id: "art_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse al artista", _id: "art_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "¿Está al contrario la dedicatoria?", _id: "auC", _cusTom: `<input type= "checkbox"></input>`}])
-                break;
-            case "amcaoMd":case "kLwicn2":
-                 fill_Table([{T: "Nombre de la(s) desarrolladora(s) de videojuegos", _id: "dev_name", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Gentilicio de la(s) desarrolladora(s) de videojuegos", _id: "dev_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}, {T: "Cómo referirse a la(s) desarrolladora(s) de videojuegos", _id: "dev_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`}])
+                    <br>
+                    nombre‼lDN| nombre‼lDN
+                    <br>
+                    <br>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr><th>¿Cómo escribir <i>|</i> en el teclado?</th><th>Alt + 124</th></tr>
+                            <tr><th>Copiar <i>|</i> al portapapeles</th><th>&hairsp;<sup><a onclick= '(function(a){a.preventDefault();to_copy_to_clipboaRd.text(verTl);to_copy_to_clipboaRd.CopyToClipboard()})(event)'>[4]</a></sup></th></tr>
+                        </tbody>
+                    </table>
+                    `}, {T: "Gentilicio de la(s) desarrolladora(s) de videojuegos", _id: "dev_gent", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    liriliano
+                    <br>
+                    lirilianos
+                    <br>
+                    liriliano y liriliense
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El o los gentilicio(s) de la(s) desarrolladora(s) de videojuegos que aparezca(n) en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éstas; si son varias, en el orden en que van a quedar las desarrolladoras de videojuegos a las cuales les corresponden.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    Lirilian
+                    <br>
+                    Lirilian and Liriliense
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>El o los gentilicio(s) de la(s) desarrolladora(s) de videojuegos que aparezca(n) en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de ésta o éstas; si son varias, en el orden en que van a quedar las desarrolladoras de videojuegos a las cuales les corresponden.</span>
+                    `}, {T: "Cómo referirse a la(s) desarrolladora(s) de videojuegos", _id: "dev_hTrt", _cusTom: `<input placeholder= "en español"></input><input placeholder= "en inglés"></input>`, _inf: 
+                   `<i>E.g.:</i>
+                    <i>En Español:</i>
+                    la desarrolladora de videojuegos
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Completa cómo referirse a la(s) desarrolladora(s) de videojuegos según la información que aparezca en la página de <a style= 'text-decoration: underline;'>es.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://es.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éstas en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>____ lirilian@</span>; si son varias, en el orden en que van a quedar las desarrolladoras de videojuegos a las cuales les corresponden.</span>
+                    <br>
+                    <i>En Inglés:</i>
+                    video game developer
+                    <br>
+                    <span class='pseudo_undeRlineInfo'>Completa cómo referirse a la(s) desarrolladora(s) de videojuegos según la información que aparezca en la página de <a style= 'text-decoration: underline;'>en.wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://en.wikipedia.org/'>[2]</a></sup>&nbsp;de ésta o éstas en esta frase a modo de ejemplo, por ejemplo: <span style= 'color: #d28364'>the Lirilian ____</span>; si son varias, en el orden en que van a quedar las desarrolladoras de videojuegos a las cuales les corresponden.</span>
+                    `}])
                 break;
             default:
-                 fill_Table([{T: "superInformation irrelevante", _id: "sib_name", _cusTom: `Autodestrucción (3)`}])
+                 fill_Table([{T: "superInformation irrelevante", _id: "sib_name", _cusTom: `Autodestrucción (3)`, _inf: 
+                   `<i>De nuevo, teniendo presionadas las teclas Control + Shift, da click a los títulos si no tienes que suministrar información extra luego de cambiarlos.</i>`}])
                  var counTdown= 3
                  console.log(counTdown)
                  const selfDest= setInterval(function(){
@@ -1949,14 +2691,174 @@ fill_daTa= function(type, superInf){
                         $("#superInformation_as table tbody th:nth-child(2)").text(`Autodestrucción (${counTdown})`)
                     }if(!!!counTdown){
                         $(".accessibiliTyDialog").removeClass("visible")
+                        $(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
+                            var tiTle= $(alternating).find("h2").text()
+                            var pp= tiTle.slice(0, tiTle.indexOf(" ("))
+                            var hh= tiTle.slice(tiTle.indexOf(" (") + 2, tiTle.indexOf(") "))
+                            var ww= $(this).attr("w").split(" ")
+                            var btW= []
+                            for(aa in ww){
+                                var greed= `${ww[aa].slice(4, ww[aa].length)}${(function(){if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){return (alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC != alternatives[Object.keys(alternatives).slice(2)[0]].auC)?'auC':''}else{return ''}})()?'auC':''}`
+                                acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
+                                !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
+                            }
+                            btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s")
+                            $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
+                        })
+                        alternating.find('p span').tooltip({
+                            track: true,
+                            show: {
+                                effect: "none",
+                                delay: 0
+                            },
+                            open: function(event, ui) {
+                                if (typeof(event.originalEvent) === 'undefined') {
+                                    return false;
+                                }
+                                ý= $(this); 
+                               
+                                var $id = $(ui.tooltip).attr('id');
+
+                                $('div.ui-tooltip').not('#' + $id).remove();
+                            },
+                            close: function(event, ui) {
+                                ui.tooltip.hover(function() {
+                                        $(this).stop(true).fadeTo(400, 1);
+                                    },
+                                    function() {
+                                        $(this).fadeOut('400', function() {
+                                            $(this).remove();
+                                        });
+                                    });
+                            }
+                        });       
+                        alternating.find(".name").on("click", function(){
+                            play_Tts($(this).text(), $(this).attr("lang"))
+                        })   
                         clearInterval(selfDest)
                     }
                  }, 1000)
                 break;
-            return
         }
+        return
     }else if(type === `md_filling_superInformation`){
         $(".accessibiliTyDialog").removeClass("visible")
+        $(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
+            var tiTle= $(alternating).find("h2").text()
+            var pp= tiTle.slice(0, tiTle.indexOf(" ("))
+            var hh= tiTle.slice(tiTle.indexOf(" (") + 2, tiTle.indexOf(") "))
+            var ww= $(this).attr("w").split(" ")
+            var btW= []
+            for(aa in ww){
+                var greed= `${ww[aa].slice(4, ww[aa].length)}${(function(){if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){return (alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC != alternatives[Object.keys(alternatives).slice(2)[0]].auC)?'auC':''}else{return ''}})()?'auC':''}`
+                acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
+                !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
+            }
+            btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s")
+            $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
+        })
+        alternating.find('p span').tooltip({
+            track: true,
+            show: {
+                effect: "none",
+                delay: 0
+            },
+            open: function(event, ui) {
+                if (typeof(event.originalEvent) === 'undefined') {
+                    return false;
+                }
+                ý= $(this); 
+               
+                var $id = $(ui.tooltip).attr('id');
+
+                $('div.ui-tooltip').not('#' + $id).remove();
+            },
+            close: function(event, ui) {
+                ui.tooltip.hover(function() {
+                        $(this).stop(true).fadeTo(400, 1);
+                    },
+                    function() {
+                        $(this).fadeOut('400', function() {
+                            $(this).remove();
+                        });
+                    });
+            }
+        });       
+        alternating.find(".name").on("click", function(){
+            play_Tts($(this).text(), $(this).attr("lang"))
+        })   
+        if("undefined" !=typeof informaTion.auC){
+            $(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
+                if("undefined" ==typeof loaded[alternatives.id]){
+                    if(informaTion.auC){
+                        if(!alternatives[Object.keys(alternatives).slice(2)[0]].auC){
+                            $(this).html($(this).html().replaceAll("→", "_x_$").replaceAll("←", "→").replaceAll("_x_$", "←"))
+                            $(this).html($(this).html().replaceAll("al revés", "_x_$").replaceAll("derecho", "al revés").replaceAll("_x_$", "derecho"))
+                            $(this).html($(this).html().replaceAll("última", "_x_$").replaceAll("primera", "última").replaceAll("_x_$", "primera"))
+                            $(this).html($(this).html().replaceAll("delante de", "__x_$").replaceAll("detrás de", "delante de").replaceAll("__x_$", "detrás de"))
+                        }
+                    }else{
+                        if(alternatives[Object.keys(alternatives).slice(2)[0]].auC){
+                            $(this).html($(this).html().replaceAll("→", "_x_$").replaceAll("←", "→").replaceAll("_x_$", "←"))
+                            $(this).html($(this).html().replaceAll("al revés", "_x_$").replaceAll("derecho", "al revés").replaceAll("_x_$", "derecho"))
+                            $(this).html($(this).html().replaceAll("última", "_x_$").replaceAll("primera", "última").replaceAll("_x_$", "primera"))
+                            $(this).html($(this).html().replaceAll("delante de", "__x_$").replaceAll("detrás de", "delante de").replaceAll("__x_$", "detrás de"))
+                        }
+                    }
+                }else if([`duper`, `super`].indexOf(loaded[alternatives.id]) +1){
+                    if(informaTion.auC){
+                        if(!alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){
+                            $(this).html($(this).html().replaceAll("→", "_x_$").replaceAll("←", "→").replaceAll("_x_$", "←"))
+                            $(this).html($(this).html().replaceAll("al revés", "_x_$").replaceAll("derecho", "al revés").replaceAll("_x_$", "derecho"))
+                            $(this).html($(this).html().replaceAll("última", "_x_$").replaceAll("primera", "última").replaceAll("_x_$", "primera"))
+                            $(this).html($(this).html().replaceAll("delante de", "__x_$").replaceAll("detrás de", "delante de").replaceAll("__x_$", "detrás de"))
+                        }
+                    }else{
+                        if(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){
+                            $(this).html($(this).html().replaceAll("→", "_x_$").replaceAll("←", "→").replaceAll("_x_$", "←"))
+                            $(this).html($(this).html().replaceAll("al revés", "_x_$").replaceAll("derecho", "al revés").replaceAll("_x_$", "derecho"))
+                            $(this).html($(this).html().replaceAll("última", "_x_$").replaceAll("primera", "última").replaceAll("_x_$", "primera"))
+                            $(this).html($(this).html().replaceAll("delante de", "__x_$").replaceAll("detrás de", "delante de").replaceAll("__x_$", "detrás de"))
+                        }
+                    }  
+                }else if(loaded[alternatives.id].indexOf(`Rooper`) +1){
+                    if(informaTion.auC){
+                        if(loaded[alternatives.id].split("er")[1] == "false"){
+                            $(this).html($(this).html().replaceAll("→", "_x_$").replaceAll("←", "→").replaceAll("_x_$", "←"))
+                            $(this).html($(this).html().replaceAll("al revés", "_x_$").replaceAll("derecho", "al revés").replaceAll("_x_$", "derecho"))
+                            $(this).html($(this).html().replaceAll("última", "_x_$").replaceAll("primera", "última").replaceAll("_x_$", "primera"))
+                            $(this).html($(this).html().replaceAll("delante de", "__x_$").replaceAll("detrás de", "delante de").replaceAll("__x_$", "detrás de"))
+                        }
+                    }else{
+                        if(loaded[alternatives.id].split("er")[1] == "true"){
+                            $(this).html($(this).html().replaceAll("→", "_x_$").replaceAll("←", "→").replaceAll("_x_$", "←"))
+                            $(this).html($(this).html().replaceAll("al revés", "_x_$").replaceAll("derecho", "al revés").replaceAll("_x_$", "derecho"))
+                            $(this).html($(this).html().replaceAll("última", "_x_$").replaceAll("primera", "última").replaceAll("_x_$", "primera"))
+                            $(this).html($(this).html().replaceAll("delante de", "__x_$").replaceAll("detrás de", "delante de").replaceAll("__x_$", "detrás de"))
+                        }
+                    }
+                }
+                var tiTle= $(alternating).find("h2").text()
+                var pp= tiTle.slice(0, tiTle.indexOf(" ("))
+                var hh= tiTle.slice(tiTle.indexOf(" (") + 2, tiTle.indexOf(") "))
+                var ww= $(this).attr("w").split(" ")
+                var btW= []
+                for(aa in ww){
+                    var greed= `${ww[aa].slice(4, ww[aa].length)}${(function(){if("undefined"!=typeof informaTion.auC){return ((informaTion.auC && !alternatives[Object.keys(alternatives).slice(2)[0]].auC) || (!informaTion.auC && alternatives[Object.keys(alternatives).slice(2)[0]].auC))?'auC':''}else{return ''}})()}`
+                    acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
+                    !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
+                }
+                btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s")
+                $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
+            })
+            if("undefined" ==typeof loaded[alternatives.id]){
+                loaded[alternatives.id]= `Rooperster${informaTion.auC}`
+            }else if([`duper`, `super`].indexOf(loaded[alternatives.id]) +1){
+                loaded[alternatives.id]= `Rooper${informaTion.auC}`
+            }else if(loaded[alternatives.id].indexOf(`Rooper`) +1){
+                loaded[alternatives.id]= `Rooper${informaTion.auC}`
+            }
+        }
         eInf= informaTion
         dInf= informaTion[Object.keys(informaTion)[0]]
         type= superInf
@@ -1975,7 +2877,7 @@ fill_daTa= function(type, superInf){
             alternating.find(".dir_es").html(hTml)
 
             var hTml= alternating.find(".dir_es").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${dInf.es.hTRT} ${dInf.es.gentilicio} de la película ${eInf.name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${de(dInf.es.hTRT)} ${dInf.es.gentilicio} de la película ${eInf.name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".dir_es").prev().html(hTml)
 
             var hTml= alternating.find(".dir_en").html()
@@ -1994,7 +2896,7 @@ fill_daTa= function(type, superInf){
             alternating.find(".cre_es").html(hTml)
 
             var hTml= alternating.find(".cre_es").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${dInf.es.hTRT} ${dInf.es.gentilicio} de la serie ${eInf.name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${de(dInf.es.hTRT)} ${dInf.es.gentilicio} de la serie ${eInf.name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".cre_es").prev().html(hTml)
 
             var hTml= alternating.find(".cre_en").html()
@@ -2011,7 +2913,7 @@ fill_daTa= function(type, superInf){
             alternating.find(".pin_es").html(hTml)
 
             var hTml= alternating.find(".pin_es").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${dInf.es.hTRT} ${dInf.es.gentilicio} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${de(dInf.es.hTRT)} ${dInf.es.gentilicio} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".pin_es").prev().html(hTml)
 
             var hTml= alternating.find(".pin_en").html()
@@ -2028,7 +2930,7 @@ fill_daTa= function(type, superInf){
             alternating.find(".dev_es").html(hTml)
 
             var hTml= alternating.find(".dev_es").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${dInf.es.hTRT} ${dInf.es.gentilicio} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${de(dInf.es.hTRT)} ${dInf.es.gentilicio} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".dev_es").prev().html(hTml)
 
             var hTml= alternating.find(".dev_en").html()
@@ -2045,7 +2947,7 @@ fill_daTa= function(type, superInf){
             alternating.find(".esc_es").html(hTml)
 
             var hTml= alternating.find(".esc_es").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${dInf.es.hTRT} ${dInf.es.gentilicio} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${de(dInf.es.hTRT)} ${dInf.es.gentilicio} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".esc_es").prev().html(hTml)
 
             var hTml= alternating.find(".esc_en").html()
@@ -2062,7 +2964,7 @@ fill_daTa= function(type, superInf){
             alternating.find(".art_es").html(hTml)
 
             var hTml= alternating.find(".art_es").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${dInf.es.hTRT} ${dInf.es.gentilicio} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${de(dInf.es.hTRT)} ${dInf.es.gentilicio} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".art_es").prev().html(hTml)
 
             var hTml= alternating.find(".art_en").html()
@@ -2100,7 +3002,7 @@ fill_daTa= function(type, superInf){
             alternating.find(".arS_es").prev().prev().prev().html(hTml)
 
             var hTml= alternating.find(".arS_es").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${dInf.es.hTRT} ${dInf.es.gentilicio} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${de(dInf.es.hTRT)} ${dInf.es.gentilicio} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".arS_es").prev().html(hTml)
 
             var hTml= alternating.find(".arS_en").html()
@@ -2202,7 +3104,7 @@ fill_daTa= function(type, superInf){
             alternating.find(".crS_es").html(hTml)
 
             var hTml= alternating.find(".crS_es").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${dInf.es.hTRT} ${dInf.es.gentilicio} de la serie ${eInf.name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${de(dInf.es.hTRT)} ${dInf.es.gentilicio} de la serie ${eInf.name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".crS_es").prev().html(hTml)
 
             var hTml= alternating.find(".crS_en").prev().prev().prev().html()
@@ -2281,7 +3183,7 @@ fill_daTa= function(type, superInf){
             alternating.find(".diS_es").html(hTml)
 
             var hTml= alternating.find(".diS_es").prev().html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${dInf.es.hTRT} ${dInf.es.gentilicio} de la película ${eInf.name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${de(dInf.es.hTRT)} ${dInf.es.gentilicio} de la película ${eInf.name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".diS_es").prev().html(hTml)
 
             var hTml= alternating.find(".diS_en").prev().prev().prev().html()
@@ -2541,7 +3443,7 @@ badGuy= function(){
 
 purger= {}; 
             
-purger.index= 22;
+purger.index= 23;
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return
@@ -2888,6 +3790,8 @@ play_Tts($("#full_TextTextToSpeech textarea").val(), $($(".accessibiliTyDialog s
 
 to_copy_to_clipboaRd= $("#to_copy_to_clipboaRd")
 dEP= "‼"
+aT= "@"
+verTl= "|"
 
 $(".pseudoSendBuTton").on("click", function(){
 switch(alternatives["id"]){
@@ -3020,12 +3924,16 @@ $(document).on("keydown", function(R){
         case 57:
             numb= `${numb}9`
             break;
+        case 113:
+            if($(".accessibiliTyDialog").is(".visible") && $("#superInformation_as").is(".visible") && $("#help_secTion").is(".visible")){$("#help_secTion sup").filter(function(){if($(this).text().indexOf(`[${numb}]`) == 0){return true}else{return false}}).find("a").length?(function(){aTJ_8= $("#help_secTion sup").filter(function(){if($(this).text().indexOf(`[${numb}]`) == 0){return true}else{return false}}).find("a"); aTJ_8.css({"outline": "2px solid #93cbff"});setTimeout(function(){aTJ_8.css({"outline": ""})}, 1253);$("#help_secTion sup").filter(function(){if($(this).text().indexOf(`[${numb}]`) == 0){return true}else{return false}}).find("a")[0].click()})():0;$("#help_secTion sup a").html(function(){return $(this).text()})};numb= '';
+            break;
+
     }
-    if([49,50,51,52,53,54,55,56,57].indexOf(R.keyCode+1)){
+    if([49,50,51,52,53,54,55,56,57].indexOf(R.keyCode)+1){
         $("#help_secTion sup").filter(function(){if($(this).text().indexOf(`[${numb}`) == 0){return true}else{return false}}).find("a").html(function(){return ('[<span>' + numb + '</span>' + $(this).text().slice(1, -1).slice(numb.length) + ']')})
         $("#help_secTion sup").filter(function(){if($(this).text().indexOf(`[${numb}`) == 0){return false}else{return true}}).find("a").html(function(){return $(this).text()})
-        clearTimeout(a)
-        a= setTimeout(function(){if($(".accessibiliTyDialog").is(".visible") && $("#superInformation_as").is(".visible") && $("#help_secTion").is(".visible")){$("#help_secTion sup").filter(function(){if($(this).text().indexOf(`[${numb}]`) == 0){return true}else{return false}}).find("a").length?$("#help_secTion sup").filter(function(){if($(this).text().indexOf(`[${numb}]`) == 0){return true}else{return false}}).find("a")[0].click():0;$("#help_secTion sup a").html(function(){return $(this).text()})};numb= '';}, 2900)
+        if("undefined" !=typeof(a))clearTimeout(a)
+        a= setTimeout(function(){if($(".accessibiliTyDialog").is(".visible") && $("#superInformation_as").is(".visible") && $("#help_secTion").is(".visible")){$("#help_secTion sup").filter(function(){if($(this).text().indexOf(`[${numb}]`) == 0){return true}else{return false}}).find("a").length?(function(){aTJ_8= $("#help_secTion sup").filter(function(){if($(this).text().indexOf(`[${numb}]`) == 0){return true}else{return false}}).find("a"); aTJ_8.css({"outline": "2px solid #93cbff"});setTimeout(function(){aTJ_8.css({"outline": ""})}, 1253);$("#help_secTion sup").filter(function(){if($(this).text().indexOf(`[${numb}]`) == 0){return true}else{return false}}).find("a")[0].click()})():0;$("#help_secTion sup a").html(function(){return $(this).text()})};numb= '';}, 2900)
     }
     }
 })
@@ -3720,8 +4628,7 @@ alternate= function(Smpqw){
     if("undefined"!=typeof Smpqw){
         switch(Smpqw){
             case "superInformation":
-                /*fill_daTa(`wd_filling_superInformation`)
-
+                //fill_daTa(`wd_filling_superInformation`)
                 $(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
                     var tiTle= $(alternating).find("h2").text()
                     var pp= tiTle.slice(0, tiTle.indexOf(" ("))
@@ -3729,25 +4636,11 @@ alternate= function(Smpqw){
                     var ww= $(this).attr("w").split(" ")
                     var btW= []
                     for(aa in ww){
-                        var greed= `${ww[aa].slice(4, ww[aa].length)}${alternatives[Object.keys(alternatives).slice(2)[$(alternating).attr("a")]].auC?'auC':''}`
+                        var greed= `${ww[aa].slice(4, ww[aa].length)}${(function(){if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){return (alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC != alternatives[Object.keys(alternatives).slice(2)[0]].auC)?'auC':''}else{return ''}})()?'auC':''}`
                         acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
-                        !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("   ", "&nbsp;&nbsp;")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
+                        !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
                     }
-                    btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&nbsp;&nbsp;").replaceAll("&nbsp;&nbsp;<span> ", "&nbsp;&nbsp;<span>")
-                    $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`)
-                })*/
-                $(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
-                    var tiTle= $(alternating).find("h2").text()
-                    var pp= tiTle.slice(0, tiTle.indexOf(" ("))
-                    var hh= tiTle.slice(tiTle.indexOf(" (") + 2, tiTle.indexOf(") "))
-                    var ww= $(this).attr("w").split(" ")
-                    var btW= []
-                    for(aa in ww){
-                        var greed= `${ww[aa].slice(4, ww[aa].length)}${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC?'auC':''}`
-                        acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
-                        !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("   ", "&nbsp;&nbsp;")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
-                    }
-                    btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&nbsp;&nbsp;").replaceAll("&nbsp;&nbsp;<span> ", "&nbsp;&nbsp;<span>")
+                    btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s")
                     $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
                 })
                 alternating.find('p span').tooltip({
@@ -3786,11 +4679,11 @@ alternate= function(Smpqw){
                     var ww= $(this).attr("w").split(" ")
                     var btW= []
                     for(aa in ww){
-                        var greed= `${ww[aa].slice(4, ww[aa].length)}${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC?'auC':''}`
+                        var greed= `${ww[aa].slice(4, ww[aa].length)}${(function(){if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){return (alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC != alternatives[Object.keys(alternatives).slice(2)[0]].auC)?'auC':''}else{return ''}})()?'auC':''}`
                         acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
-                        !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("   ", "&nbsp;&nbsp;")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
+                        !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
                     }
-                    btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&nbsp;&nbsp;").replaceAll("&nbsp;&nbsp;<span> ", "&nbsp;&nbsp;<span>")
+                    btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s")
                     $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
                 })
                 alternating.find('p span').tooltip({
@@ -3826,28 +4719,26 @@ alternate= function(Smpqw){
     }
     
     $(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
-        if(localStorage.getItem(alternatives.id) != null && "undefined" ==typeof loaded[alternatives.id]){
-            alternatives.__a= localStorage.getItem(alternatives.id)
-            /*     alert(alternatives.id)                       */
-            loaded[alternatives.id]= `super`
+        if((localStorage.getItem(alternatives.id) != null && "undefined" ==typeof loaded[alternatives.id])|| ("undefined" !=typeof loaded[alternatives.id] && loaded[alternatives.id].split("er")[1] == "st")){
+            if($(this).is($(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).first()))alternatives.__a= localStorage.getItem(alternatives.id)
+            "undefined" !=typeof loaded[alternatives.id]?console.log(loaded[alternatives.id].split("er")[2]): 1
             if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC && alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){
-                if(!alternatives[Object.keys(alternatives).slice(2)[0]].auC){
+                if(("undefined" ==typeof loaded[alternatives.id] && !alternatives[Object.keys(alternatives).slice(2)[0]].auC) || ("undefined" !=typeof loaded[alternatives.id] && loaded[alternatives.id].split("er")[2] == "false")){
                     $(this).html($(this).html().replaceAll("→", "_x_$").replaceAll("←", "→").replaceAll("_x_$", "←"))
                     $(this).html($(this).html().replaceAll("al revés", "_x_$").replaceAll("derecho", "al revés").replaceAll("_x_$", "derecho"))
                     $(this).html($(this).html().replaceAll("última", "_x_$").replaceAll("primera", "última").replaceAll("_x_$", "primera"))
                     $(this).html($(this).html().replaceAll("delante de", "__x_$").replaceAll("detrás de", "delante de").replaceAll("__x_$", "detrás de"))
                 }
             }else if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){
-                if(alternatives[Object.keys(alternatives).slice(2)[0]].auC){
+                if(("undefined" ==typeof loaded[alternatives.id] && alternatives[Object.keys(alternatives).slice(2)[0]].auC) || ("undefined" !=typeof loaded[alternatives.id] && loaded[alternatives.id].split("er")[2] == "true")){
                     $(this).html($(this).html().replaceAll("→", "_x_$").replaceAll("←", "→").replaceAll("_x_$", "←"))
                     $(this).html($(this).html().replaceAll("al revés", "_x_$").replaceAll("derecho", "al revés").replaceAll("_x_$", "derecho"))
                     $(this).html($(this).html().replaceAll("última", "_x_$").replaceAll("primera", "última").replaceAll("_x_$", "primera"))
                     $(this).html($(this).html().replaceAll("delante de", "__x_$").replaceAll("detrás de", "delante de").replaceAll("__x_$", "detrás de"))
                 }
             }
-        }else if($(this).is($(alternating.find("p").filter(function(){return "undefined"!=typeof $(this).attr("w")?true:false})[0]))){
-            loaded[alternatives.id]= `duper`
-            alternatives.__a= nexT(alternatives.__a, Object.keys(alternatives).slice(2).length - 1)
+        }else if($(this).is($(alternating.find("p").filter(function(){return "undefined"!=typeof $(this).attr("w")?true:false})[0])) && ("undefined" !=typeof loaded[alternatives.id] && loaded[alternatives.id].indexOf(`Rooper`))){
+            if($(this).is($(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).first()))alternatives.__a= nexT(alternatives.__a, Object.keys(alternatives).slice(2).length - 1)
             if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC && alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){
                 if(!alternatives[Object.keys(alternatives).slice(2)[pRev(alternatives.__a, Object.keys(alternatives).slice(2).length - 1)]].auC){
                     $(this).html($(this).html().replaceAll("→", "_x_$").replaceAll("←", "→").replaceAll("_x_$", "←"))
@@ -3863,7 +4754,24 @@ alternate= function(Smpqw){
                     $(this).html($(this).html().replaceAll("delante de", "__x_$").replaceAll("detrás de", "delante de").replaceAll("__x_$", "detrás de"))
                 }
             }
-        }else if(loaded[alternatives.id]!=`super`){
+        }else if("undefined" !=typeof loaded[alternatives.id] && !loaded[alternatives.id].indexOf(`Rooper`)){
+            if($(this).is($(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).first()))alternatives.__a= nexT(alternatives.__a, Object.keys(alternatives).slice(2).length - 1)
+            if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC && alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){
+                if(loaded[alternatives.id].split("er")[1]== "false"){
+                    $(this).html($(this).html().replaceAll("→", "_x_$").replaceAll("←", "→").replaceAll("_x_$", "←"))
+                    $(this).html($(this).html().replaceAll("al revés", "_x_$").replaceAll("derecho", "al revés").replaceAll("_x_$", "derecho"))
+                    $(this).html($(this).html().replaceAll("última", "_x_$").replaceAll("primera", "última").replaceAll("_x_$", "primera"))
+                    $(this).html($(this).html().replaceAll("delante de", "__x_$").replaceAll("detrás de", "delante de").replaceAll("__x_$", "detrás de"))
+                }
+            }else if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){
+                if(loaded[alternatives.id].split("er")[1]== "true"){
+                    $(this).html($(this).html().replaceAll("→", "_x_$").replaceAll("←", "→").replaceAll("_x_$", "←"))
+                    $(this).html($(this).html().replaceAll("al revés", "_x_$").replaceAll("derecho", "al revés").replaceAll("_x_$", "derecho"))
+                    $(this).html($(this).html().replaceAll("última", "_x_$").replaceAll("primera", "última").replaceAll("_x_$", "primera"))
+                    $(this).html($(this).html().replaceAll("delante de", "__x_$").replaceAll("detrás de", "delante de").replaceAll("__x_$", "detrás de"))
+                }
+            }
+        }else if("undefined" !=typeof loaded[alternatives.id] && loaded[alternatives.id]!=`super`){
             if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC && alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){
                 if(!alternatives[Object.keys(alternatives).slice(2)[pRev(alternatives.__a, Object.keys(alternatives).slice(2).length - 1)]].auC){
                     $(this).html($(this).html().replaceAll("→", "_x_$").replaceAll("←", "→").replaceAll("_x_$", "←"))
@@ -3906,13 +4814,20 @@ alternate= function(Smpqw){
         var ww= $(this).attr("w").split(" ")
         var btW= []
         for(aa in ww){
-            var greed= `${ww[aa].slice(4, ww[aa].length)}${alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC?'auC':''}`
+            var greed= `${ww[aa].slice(4, ww[aa].length)}${(function(){if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){return (alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC != alternatives[Object.keys(alternatives).slice(2)[0]].auC)?'auC':''}else{return ''}})()?'auC':''}`
             acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
-            !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("   ", "&nbsp;&nbsp;")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
+            !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
         }
-        btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&nbsp;&nbsp;").replaceAll("&nbsp;&nbsp;<span> ", "&nbsp;&nbsp;<span>")
+        btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s")
         $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
     })
+    if((localStorage.getItem(alternatives.id) != null && "undefined" ==typeof loaded[alternatives.id])|| ("undefined" !=typeof loaded[alternatives.id] && loaded[alternatives.id].split("er")[1] == "st")){
+        loaded[alternatives.id]= `super`
+    }else if(loaded[alternatives.id].indexOf(`Rooper`)){
+        loaded[alternatives.id]= `duper`
+    }else if(!loaded[alternatives.id].indexOf(`Rooper`)){
+        loaded[alternatives.id]= `duper`
+    }
     fill_daTa(Object.keys(alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]])[1])
     alternating.find(".name").on("click", function(){
       play_Tts($(this).text(), $(this).attr("lang"))
@@ -4105,12 +5020,12 @@ $(".revelar").on("click", function(){
                     $(this).parent().find("pre").css({"padding": "1em"}); 
                     $($(this).parent().children()).each(function(){$(this).is(".code")? $(this).find(".code-scroll").css({"visibility": "visible"}): 1}); 
                         $(this)[0].tx= $(this).text(); 
-                        $(this).parent().next().css({"height": "", "overflow": "", "border": "1px solid #ccc", "border-top": "none"}); 
+                        $(this).parent().next().css({"height": "", "overflow": "", "border": "1px solid #ccc", "padding": "", "border-top": "none"}); 
                         $(this).parent().css({"border-bottom": "none"}); 
                         $(this).text("Ocultar de nuevo."); 
                         $(this).addClass("activado"); 
                     }else{ 
-                        $(this).parent().next().css({"height": "0", "overflow": "hidden", "border": "none"}); 
+                        $(this).parent().next().css({"height": "0", "overflow": "hidden", "padding": "0", "border": "none"}); 
                     $(this).parent().find("pre").css({"height": "0"}); 
                     $(this).parent().find("pre").css({"padding": "0"}); 
                     $($(this).parent().children()).each(function(){$(this).is(".code")? $(this).find(".code-scroll").css({"visibility": "hidden"}): 1}); 
@@ -4335,39 +5250,39 @@ function closeModal() {
 
     $(".zer")[0].innerHTML= ".ui-tooltip{z-index: 1 !important; }; "; 
 }
-        $('header .knob').trigger(
-                'configure',
-                {   
-                    "fgColor":"#fff"
-                }
-            );
+		$('header .knob').trigger(
+        		'configure',
+        		{   
+        		    "fgColor":"#fff"
+        		}
+    		);
     
     $(".star").on("click",function(){
-         $(this).toggleClass("true")
-    });
+		 $(this).toggleClass("true")
+	});
     $(".bookmark").on("click",function(){
-         $(this).toggleClass("true")
-    });
+		 $(this).toggleClass("true")
+	});
     
      $(".options.first .bookmark").on("click",function(){
         $('.options.ending .bookmark').toggleClass("true")
           
-    });
+	});
     $(".options.ending .bookmark").on("click",function(){
         $('.options.first .bookmark').toggleClass("true")
           
-    });
+	});
     
      $(".options.first .star").on("click",function(){
         $('.options.ending .star').toggleClass("true")
           
-    });
+	});
     $(".options.ending .star").on("click",function(){
         $('.options.first .star').toggleClass("true")
           
-    });
+	});
     
-    $("#dots").on("click", function () {
+	$("#dots").on("click", function () {
         $("#Store").toggleClass("open");
         $("#index-trigger").children().toggleClass("openedStore");
         $("#right-menu #dots").children().toggleClass("openedStore");
@@ -4416,11 +5331,11 @@ function closeModal() {
     });
     $("#close").on("click",function(){
         closeModal() 
-    });
+	});
     
     $("#wrapper").on("click",function(){
          closeModal() 
-    });
+	});
     document.onkeydown = function(evt) {
         evt = evt || window.event;
         if (evt.keyCode == 27) {
@@ -4440,7 +5355,7 @@ $(document).on("keypress", function(e){
         
     }
 })
-    $("#profileTrigger").on("click", function (e) {
+	$("#profileTrigger").on("click", function (e) {
         $(".wrapper").toggleClass("visible")
         $("#right-menu .index-arrow").toggleClass("open");
         $("#profileSettings").toggleClass("open");
@@ -4489,8 +5404,8 @@ e.stopPropagation()
 
 
     });
-    
-    
+	
+	
 });
 
 $( window ).on("resize", function(){

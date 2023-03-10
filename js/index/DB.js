@@ -59,7 +59,7 @@ var index= {
                             </text>
                         </containment>`,
             Comentarios: "",
-            Editado: [ 'type= "c"; edHistory= {"Editado el 4 de Marzo de 2023 a las 3:9 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/f67c2778ee5297ed1fb33ab807e75a88d6de06c4/pos/kdm0g0dTee.html", "Editado el 3 de Marzo de 2023 a las 9:40 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/db21ec804c9352254baf282bc0321493f92a7106/pos/kdm0g0dTee.html", "Editado el 5 de Febrero de 2023 a la 1:7 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/db21ec804c9352254baf282bc0321493f92a7106/pos/kdm0g0dTee.html", "2 de Febrero de 2023 a la 1:17 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/ffc96d089a6bbfb588ac2e358ffd7433224be8f5/pos/kdm0g0dTee.html"}', "Editado el 4 de Marzo de 2023 a las 3:9 pm"]
+            Editado: [ 'type= "c"; edHistory= {"Editado el 3 de Marzo de 2023 a las 9:40 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/c598ac10596bdb10d07ee8e4a528520e289032f6/pos/kdm0g0dTee.html", "Editado el 5 de Febrero de 2023 a la 1:7 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/db21ec804c9352254baf282bc0321493f92a7106/pos/kdm0g0dTee.html", "2 de Febrero de 2023 a la 1:17 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/ffc96d089a6bbfb588ac2e358ffd7433224be8f5/pos/kdm0g0dTee.html"}', "Editado el 3 de Marzo de 2023 a las 9:40 pm"]
         },
         "/A.K.A._Dizzy/pos/p413w4Mawl", {
             user: {

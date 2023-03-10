@@ -1,6 +1,5 @@
 .pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#27ae60;position:fixed;z-index:200;top:46px;right:100%;width:100%;height:4px}
 
-@import url('https://fonts.cdnfonts.com/css/open-sans');
 @font-face
 
 {
@@ -14,6 +13,9 @@
 * {
     color: #2ecc71;
     font-family: "Open Sans", sans-serif;
+}
+*:focus{
+    outline: 1px solid #93cbff/*#93c98f"*/;
 }
 a{
     text-decoration: none;
@@ -874,10 +876,12 @@ content: "\e904"
 {
     color: #7A7A7A;
     hyphens: auto;    
+    white-space: pre-wrap;
 } 
 #article #text .poema span, #article #text span.tiTle
 {
     color: #7A7A7A;
+    white-space: pre-wrap;
 } 
 #article #text .poema span:not(.name):hover, #article #text span.tiTle:hover
 {
@@ -1835,11 +1839,12 @@ background-color: #ddd}
   cursor: pointer;
 }
 .auCT {
-    color: #b9a3a3;
+    color: #d0abab;
     /*text-shadow: 1px 1px #a1a6aa;*/
     padding: 3px 6px;
     width: 200px;
     max-height: calc(100vh - 30px);
+    font-family: "Open Sans Light"
 }
 .vjs-text-track{
     background-color: #e5daec17 !important;
@@ -1991,6 +1996,10 @@ ul.ui-menu {
 }
 #superInformation_as{
     position: relative;
+}
+#superInformation_as a:not(sup a){
+    text-decoration: underline;
+    color: #757916;
 }
 #superInformation_as th:not(#help_secTion th) {
   color: #373;
