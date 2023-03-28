@@ -4665,10 +4665,10 @@ expand= function(c){
 alternate= function(Smpqw){
     if("undefined"!=typeof Smpqw){
         switch(Smpqw){
-            case "superInformation":
+            case "superIxfxrmation":
                 fill_daTa(`wd_filling_superInformation`)                
                 break;
-            case "notSuperInformation":
+            case "notSuperInformation":case "superInformation":
                 $(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
                     var tiTle= $(alternating).find("h2").text()
                     var pp= tiTle.slice(0, tiTle.indexOf(" ("))
