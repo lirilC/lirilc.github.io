@@ -379,7 +379,7 @@ var index= {
                         </section>`,
             Comentarios: ``
         },
-    	"/AuraCardonaC/img/eQZeHjWK8V", {
+        "/AuraCardonaC/img/eQZeHjWK8V", {
             user: {
                 username: "AuraCardonaC",
                 users_name: "Aura María Cardona Demasiado",

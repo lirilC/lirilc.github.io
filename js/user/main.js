@@ -2114,7 +2114,7 @@ document.onkeydown= function (evt){
             videojs($(".theater video")[0]).paused()? videojs($(".theater video")[0]).play(): videojs($(".theater video")[0]).pause(); 
         } 
     } 
-$(".nav_arrow.left .arrow").not("#picContainer .arrow").on("click", function(){
+/*$(".nav_arrow.left .arrow").not("#picContainer .arrow").on("click", function(){
         th= $("#theater").css("display") == "none"? $(".current"): th; 
         if($("#theater .nav_arrow.left").is(".disabled"))
             {return}; 
@@ -2126,7 +2126,7 @@ $(".nav_arrow.left .arrow").not("#picContainer .arrow").on("click", function(){
         if($("#theater .nav_arrow.right").is(".disabled"))
             {return}; 
         
-    }); 
+    }); */
     ((!!ar || ($("#theater").css("display") == "none" && ($(".current").is(".mult_img") || $(".current").is(".mult_carr")))))? (function(){ 
         //th= $( th.context ).closest(".story").length? $( th.context ).closest(".story"): $( th.context ).closest(".foto").length? $( th.context ).closest(".foto"): $( th.context ).closest('#profilePic').length? $( th.context ).closest('#profilePic'): th.context;  
         switch(evt.keyCode){

@@ -4246,11 +4246,11 @@ background-color: #ddd}
         padding-left: 367px;
         width: 330px;
     }
+    #biography #content #main #summary aside#updates, #biography #content #main #summary aside#sections{
+        padding-left: calc(100% - 330px - 220px);
+    }
     #biography #content{
         width: calc(100% - 205px);
-    }
-    #biography #content #main #summary aside#updates{
-        padding-left: calc(100% - 330px - 220px);
     }
     .story{
         margin: 10px auto 0 auto;

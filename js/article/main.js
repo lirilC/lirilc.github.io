@@ -108,7 +108,7 @@ accentuaTe= function(f, aL, m){
             var f= f.toLowerCase()
             var bW= ""
             for(var fi= f.length - 1; fi+1;fi--){
-                if(((aL=="e"?"&+,.abcdefghijklmnopqrstuvwxyz ":"&+,.abcdefghijklmnñopqrstuvwxyz ").indexOf(f[f.length-1-fi])+1 && !((Chocolate.indexOf(f[f.length+1-fi])+1) || (Anti_joint.indexOf(f[f.length-3-fi])+1))) || (f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")){
+                if(((aL=="e"?"&+,.abcdefghijklmnopqrstuvwxyz ":"&+,.abcdefghijklmnñopqrstuvwxyz ").indexOf(f[f.length-1-fi])+1 && !((Chocolate.indexOf(f[f.length+1-fi])+1) || (Anti_joint.indexOf(f[f.length-3-fi])+1) || (Chocolate.indexOf(f[f.length-fi])+1) || (Anti_joint.indexOf(f[f.length-2-fi])+1))) || (f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")){
                     bW=`${bW}${(f[f.length-1-fi]=="–"?"":f[f.length-1-fi])+((f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")?"   ":"  ")}`
                 }else{
                     if(aL== "s"){
@@ -134,7 +134,7 @@ accentuaTe= function(f, aL, m){
             var f= f.toLowerCase()
             var bW= ""
             for(var fi= f.length - 1; fi+1;fi--){
-                if(((aL=="e"?"&+,.abcdefghijklmnopqrstuvwxyz ":"&+,.abcdefghijklmnñopqrstuvwxyz ").indexOf(f[f.length-1-fi])+1 && !((Anti_joint.indexOf(f[f.length+1-fi])+1) || (Chocolate.indexOf(f[f.length-3-fi])+1))) || (f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")){
+                if(((aL=="e"?"&+,.abcdefghijklmnopqrstuvwxyz ":"&+,.abcdefghijklmnñopqrstuvwxyz ").indexOf(f[f.length-1-fi])+1 && !((Anti_joint.indexOf(f[f.length+1-fi])+1) || (Chocolate.indexOf(f[f.length-3-fi])+1) || (Anti_joint.indexOf(f[f.length-fi])+1) || (Chocolate.indexOf(f[f.length-2-fi])+1))) || (f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")){
                     bW=`${bW}${(f[f.length-1-fi]=="–"?"":f[f.length-1-fi])+((f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")?"   ":"  ")}`
                 }else{
                     //alert(f[f.length-1-fi])
@@ -1523,6 +1523,26 @@ obTain= function(m, p, h, grd){
                         }
                         p= ii.join("   ")
                         break
+                    case "apas":
+                        p1= accentuaTe((function(i){bW= "";bgW= "";for(var z= 0; z<=i.length;z++){if(i[i.length - 1-z]!=" "&&z!=i.length){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pa");
+                        p2= accentuaTe((function(i){bW= "";bgW= "";for(var z= 0; z<=i.length;z++){if(i[i.length - 1-z]!=" "&&z!=i.length){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(h), m[3], "sa").slice(0, -1); delete h;
+                        ii= []
+                        for(var f= 0; f <= p1.trim().split("   ").length-1; f++){
+                            ii[ii.length]= `<span title= "${expand(`p${m[3]}`)}">${p1.trim().split("   ")[f]}</span>`
+                            ii[ii.length]= `<span title= "${expand(`s${m[3]}`)}">${p2.trim().split("   ")[f]}</span>`
+                        }
+                        p= ii.join("   ")
+                        break
+                    case "asap":
+                        p1= accentuaTe((function(i){bW= "";bgW= "";for(var z= 0; z<=i.length;z++){if(i[i.length - 1-z]!=" "&&z!=i.length){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(h), m[3], "sa").slice(0, -1); delete h;
+                        p2= accentuaTe((function(i){bW= "";bgW= "";for(var z= 0; z<=i.length;z++){if(i[i.length - 1-z]!=" "&&z!=i.length){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pa");
+                        ii= []
+                        for(var f= 0; f <= p1.trim().split("   ").length-1; f++){
+                            ii[ii.length]= `<span title= "${expand(`s${m[3]}`)}">${p1.trim().split("   ")[f]}</span>`
+                            ii[ii.length]= `<span title= "${expand(`p${m[3]}`)}">${p2.trim().split("   ")[f]}</span>`
+                        }
+                        p= ii.join("   ")
+                        break
                 }
                 break;
             case "it":
@@ -1678,14 +1698,19 @@ fill_Table= function(A){
     $("#superInformation_as table tbody tr th:nth-child(3)").on("mouseenter", function(){
         $("#superInformation_as #help_secTion").addClass("visible") 
         $("#superInformation_as #help_secTion").html($(this).attr("help")) 
-        aE= $(document.activeElement)
-        aE.blur()
+        if($(document.activeElement).is("#superInformation_as input"))aE= $(document.activeElement)
+        if("undefined" !=typeof aE && $("#superInformation_as").find(aE).length)aE.blur()
         console.log(document.activeElement)
         setTimeout(function(){$("#superInformation_as #help_secTion").focus()}, 231)
     })
     $("#superInformation_as table tbody tr th:nth-child(3)").on("mouseleave click", function(){
         $("#superInformation_as #help_secTion").removeClass("visible") 
-        aE.focus()
+        if("undefined" !=typeof aE && $("#superInformation_as").find(aE).length)aE.focus()
+    })
+    $("#superInformation_as input").on("focus", function(r){
+        $(".nokbwarning").removeClass("visible")
+        r.stopPropagation()
+        aE= $(this)
     })
 }
 
@@ -2000,7 +2025,7 @@ fill_daTa= function(type, superInf){
                     `}, {T: "Nombre de director(es)", _id: "dir_name", _inf: 
                    `nombre‼lenguajeDelNombre
                     <h4><b>nombre</b></h4>
-                    <span class='pseudo_undeRlineInfo'>El nombre completo de nacimiento de()l(a) director(a) de la película que aparezca en la página de <a>wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://www.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste.</span>
+                    <span class='pseudo_undeRlineInfo'>El nombre completo de nacimiento de( )l(a) director(a) de la película que aparezca en la página de <a>wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://www.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste.</span>
                     <h4>‼<b>lenguajeDelNombre</b> (Opcional)</h4>
                     <i>, puede ser:</i>
                     <br>
@@ -2080,8 +2105,8 @@ fill_daTa= function(type, superInf){
                     `}, {T: "Nombre de director(es) con o sin parentescos", _inf: 
                    `nombre‼lenguajeDelNombre@parentesco
                     <h4><b>nombre</b></h4>
-                    <span class='pseudo_undeRlineInfo'>El nombre completo de nacimiento de()l(a) director(a) de la película que aparezca en la página de <a>wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://www.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste.</span>
-                    <h4>@<b>parentesco</b> (Obligatorio)</h4>
+                    <span class='pseudo_undeRlineInfo'>El nombre completo de nacimiento de( )l(a) director(a) de la película que aparezca en la página de <a>wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://www.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste.</span>
+                    <h4>@<b>parentesco</b> (Mínimo un nombre con parentezco)</h4>
                     <i>, puede ser:</i>
                     <br>
                     <table>
@@ -2183,7 +2208,7 @@ fill_daTa= function(type, superInf){
                     `}, {T: "Nombre de creador(es)", _id: "cre_name", _inf: 
                    `nombre‼lenguajeDelNombre
                     <h4><b>nombre</b></h4>
-                    <span class='pseudo_undeRlineInfo'>El nombre completo de nacimiento de()l(a) creador(a) de la serie que aparezca en la página de <a>wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://www.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste.</span>
+                    <span class='pseudo_undeRlineInfo'>El nombre completo de nacimiento de( )l(a) creador(a) de la serie que aparezca en la página de <a>wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://www.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste.</span>
                     <h4>‼<b>lenguajeDelNombre</b> (Opcional)</h4>
                     <i>, puede ser:</i>
                     <br>
@@ -2259,8 +2284,8 @@ fill_daTa= function(type, superInf){
                     `}, {T: "Nombre de creador(es) con o sin parentescos", _id: "cre_name", _inf: 
                    `nombre‼lenguajeDelNombre@parentesco
                     <h4><b>nombre</b></h4>
-                    <span class='pseudo_undeRlineInfo'>El nombre completo de nacimiento de()l(a) creador(a) de la serie que aparezca en la página de <a>wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://www.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste.</span>
-                    <h4>@<b>parentesco</b> (Obligatorio)</h4>
+                    <span class='pseudo_undeRlineInfo'>El nombre completo de nacimiento de( )l(a) creador(a) de la serie que aparezca en la página de <a>wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://www.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste.</span>
+                    <h4>@<b>parentesco</b> (Mínimo un nombre con parentezco)</h4>
                     <i>, puede ser:</i>
                     <br>
                     <table>
@@ -2347,7 +2372,7 @@ fill_daTa= function(type, superInf){
                  fill_Table([{T: "Nombre del escritor", _id: "wri_name", _inf: 
                    `nombre‼lenguajeDelNombre
                     <h4><b>nombre</b></h4>
-                    <span class='pseudo_undeRlineInfo'>El nombre completo de nacimiento de()l(a) escritor(a) del libro que aparezca en la página de <a>wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://www.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste.</span>
+                    <span class='pseudo_undeRlineInfo'>El nombre completo de nacimiento de( )l(a) escritor(a) del libro que aparezca en la página de <a>wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://www.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste.</span>
                     <h4>‼<b>lenguajeDelNombre</b> (Opcional)</h4>
                     <i>, puede ser:</i>
                     <br>
@@ -2483,7 +2508,7 @@ fill_daTa= function(type, superInf){
                  fill_Table([{T: "Nombre del artista", _id: "art_name", _inf: 
                    `nombre‼lenguajeDelNombre
                     <h4><b>nombre</b></h4>
-                    <span class='pseudo_undeRlineInfo'>El nombre completo de nacimiento de()l(a) artista que aparezca en la página de <a>wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://www.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste.</span>
+                    <span class='pseudo_undeRlineInfo'>El nombre completo de nacimiento de( )l(a) artista que aparezca en la página de <a>wikipedia.org</a>&hairsp;<sup><a target= '_blank' href='https://www.wikipedia.org/'>[1]</a></sup>&nbsp;de ésta o éste.</span>
                     <h4>‼<b>lenguajeDelNombre</b> (Opcional)</h4>
                     <i>, puede ser:</i>
                     <br>
@@ -2700,9 +2725,9 @@ fill_daTa= function(type, superInf){
                             for(aa in ww){
                                 var greed= `${ww[aa].slice(4, ww[aa].length)}${(function(){if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){return (alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC != alternatives[Object.keys(alternatives).slice(2)[0]].auC)?'auC':''}else{return ''}})()?'auC':''}`
                                 acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
-                                !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
+                                !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("span ", "$pan").replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;").replaceAll("$pan", "span ")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
                             }
-                            btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s")
+                            btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s").replaceAll("title=&nbsp;", "title= ")
                             $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
                         })
                         alternating.find('p span').tooltip({
@@ -2752,9 +2777,9 @@ fill_daTa= function(type, superInf){
             for(aa in ww){
                 var greed= `${ww[aa].slice(4, ww[aa].length)}${(function(){if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){return (alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC != alternatives[Object.keys(alternatives).slice(2)[0]].auC)?'auC':''}else{return ''}})()?'auC':''}`
                 acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
-                !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
+                !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("span ", "$pan").replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;").replaceAll("$pan", "span ")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
             }
-            btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s")
+            btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s").replaceAll("title=&nbsp;", "title= ")
             $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
         })
         alternating.find('p span').tooltip({
@@ -2846,9 +2871,9 @@ fill_daTa= function(type, superInf){
                 for(aa in ww){
                     var greed= `${ww[aa].slice(4, ww[aa].length)}${(function(){if("undefined"!=typeof informaTion.auC){return ((informaTion.auC && !alternatives[Object.keys(alternatives).slice(2)[0]].auC) || (!informaTion.auC && alternatives[Object.keys(alternatives).slice(2)[0]].auC))?'auC':''}else{return ''}})()}`
                     acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
-                    !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
+                    !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("span ", "$pan").replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;").replaceAll("$pan", "span ")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
                 }
-                btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s")
+                btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s").replaceAll("title=&nbsp;", "title= ")
                 $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
             })
             if("undefined" ==typeof loaded[alternatives.id]){
@@ -3787,6 +3812,19 @@ $(".pseudoBuTton1").on("click", function(){
 //
 play_Tts($("#full_TextTextToSpeech textarea").val(), $($(".accessibiliTyDialog select option:selected")[1]).attr("value"))
 })
+$(".nokbwarning").on("click", function(e){
+    $(this).removeClass("visible")
+    //e.preventDefault()
+    //e.stopPropagation()
+    if("undefined" !=typeof aE && $("#superInformation_as").find(aE).length)aE.focus()
+})
+$(window).on("focus", function(e){
+    if("undefined" !=typeof aE && $("#superInformation_as").find(aE).length){
+        setTimeout(function(){!$(document.activeElement).is("#superInformation_as input")?(function(){if("undefined" !=typeof aE && $("#superInformation_as").find(aE).length){aE.focus()}else{$(".nokbwarning").removeClass("visible")}})():1341;}, 217)
+    }else{
+        $(".nokbwarning").removeClass("visible")
+    }
+})
 
 to_copy_to_clipboaRd= $("#to_copy_to_clipboaRd")
 dEP= "‼"
@@ -4628,48 +4666,7 @@ alternate= function(Smpqw){
     if("undefined"!=typeof Smpqw){
         switch(Smpqw){
             case "superInformation":
-                //fill_daTa(`wd_filling_superInformation`)
-                $(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
-                    var tiTle= $(alternating).find("h2").text()
-                    var pp= tiTle.slice(0, tiTle.indexOf(" ("))
-                    var hh= tiTle.slice(tiTle.indexOf(" (") + 2, tiTle.indexOf(") "))
-                    var ww= $(this).attr("w").split(" ")
-                    var btW= []
-                    for(aa in ww){
-                        var greed= `${ww[aa].slice(4, ww[aa].length)}${(function(){if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){return (alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC != alternatives[Object.keys(alternatives).slice(2)[0]].auC)?'auC':''}else{return ''}})()?'auC':''}`
-                        acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
-                        !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
-                    }
-                    btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s")
-                    $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
-                })
-                alternating.find('p span').tooltip({
-                    track: true,
-                    show: {
-                        effect: "none",
-                        delay: 0
-                    },
-                    open: function(event, ui) {
-                        if (typeof(event.originalEvent) === 'undefined') {
-                            return false;
-                        }
-                        ý= $(this); 
-                       
-                        var $id = $(ui.tooltip).attr('id');
-
-                        $('div.ui-tooltip').not('#' + $id).remove();
-                    },
-                    close: function(event, ui) {
-                        ui.tooltip.hover(function() {
-                                $(this).stop(true).fadeTo(400, 1);
-                            },
-                            function() {
-                                $(this).fadeOut('400', function() {
-                                    $(this).remove();
-                                });
-                            });
-                    }
-                });
+                fill_daTa(`wd_filling_superInformation`)                
                 break;
             case "notSuperInformation":
                 $(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
@@ -4681,9 +4678,10 @@ alternate= function(Smpqw){
                     for(aa in ww){
                         var greed= `${ww[aa].slice(4, ww[aa].length)}${(function(){if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){return (alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC != alternatives[Object.keys(alternatives).slice(2)[0]].auC)?'auC':''}else{return ''}})()?'auC':''}`
                         acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
-                        !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
+                        !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("span ", "$pan").replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;").replaceAll("$pan", "span ")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
                     }
-                    btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s")
+                    btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s").replaceAll("title=&nbsp;", "title= ")
+                    console.log(btW)
                     $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
                 })
                 alternating.find('p span').tooltip({
@@ -4816,9 +4814,9 @@ alternate= function(Smpqw){
         for(aa in ww){
             var greed= `${ww[aa].slice(4, ww[aa].length)}${(function(){if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){return (alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC != alternatives[Object.keys(alternatives).slice(2)[0]].auC)?'auC':''}else{return ''}})()?'auC':''}`
             acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
-            !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
+            !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("span ", "$pan").replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;").replaceAll("$pan", "span ")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
         }
-        btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s")
+        btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s").replaceAll("title=&nbsp;", "title= ")
         $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
     })
     if((localStorage.getItem(alternatives.id) != null && "undefined" ==typeof loaded[alternatives.id])|| ("undefined" !=typeof loaded[alternatives.id] && loaded[alternatives.id].split("er")[1] == "st")){
@@ -4906,6 +4904,7 @@ window.onblur= function(){
     ctrl_k= false
     /*alternating= $(".nombre").filter(function(){if($(this).attr("contenteditable")=="true"){return true}}).parent();*/ $(".nombre").filter(function(){if($(this).attr("contenteditable")=="true"){return true}}).length?alternate(`superInformation`):192465;
     $(".nombre").attr("contenteditable", "false")
+    $(".nokbwarning").addClass("visible")
 }
 document.addEventListener("keydown", function(e){if(e.shiftKey){ctrl_k= false}else if(e.ctrlKey){ctrl_k= true}if(e.shiftKey && e.ctrlKey){ctrlMShift= true}if(e.shiftKey && e.ctrlKey && e.altKey){e.preventDefault();$("#theater").css("display") == "block"?closeModal():1;$("#buscar input").val("");$("#buscar input").trigger("input");$("#buscar input").focus()}})
     $('#article .comentarios .Comentarios .comentario').on("mousemove", function(event){elx= $($(this).children()[0]); circleWidth = elx.outerWidth( true ),circleHeight  = elx.outerHeight( true ),circleLeft    = elx.offset().left,circleTop     = elx.offset().top,circlePos     = {x     : circleLeft + circleWidth / 2,y     : circleTop + circleHeight / 2,radius: circleWidth / 2};distance    = Math.sqrt( Math.pow( event.pageX - circlePos.x, 2 ) + Math.pow( event.pageY - circlePos.y, 2 ) );if(distance <= circlePos.radius){$($(this).children()[0]).css({"pointer-events": "all"});$($(this).children()[0]).css({"pointer-events": "all"});}else{$($(this).children()[0]).css({"pointer-events": "none"});$($(this).children()[0]).css({"pointer-events": "none"});}}); 
