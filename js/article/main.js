@@ -1714,6 +1714,35 @@ fill_Table= function(A){
     })
 }
 
+fill_Table= function(A){
+    $("#superInformation_as table tbody").html(``)
+    for(var AA in A){
+        if(`undefined`===typeof A[AA]._cusTom){
+            $("#superInformation_as table tbody").append(`<tr><th>${A[AA].T}</th><th><input class= "${A[AA]._id}"></th><th help= "${A[AA]._inf}"">?</th></tr>`)
+        }else{
+            $("#superInformation_as table tbody").append(`<tr><th>${A[AA].T}</th><th>${A[AA]._cusTom}</th><th help= "${A[AA]._inf}"">?</th></tr>`)
+            $("#superInformation_as table tbody tr:last-child th:nth-child(2) input:first-child").addClass(A[AA]._id)
+        }
+    }
+    $("#superInformation_as table tbody tr th:nth-child(3)").on("mouseenter", function(){
+        $("#superInformation_as #help_secTion").addClass("visible") 
+        $("#superInformation_as #help_secTion").html($(this).attr("help")) 
+        if($(document.activeElement).is("#superInformation_as input"))aE= $(document.activeElement)
+        if("undefined" !=typeof aE && $("#superInformation_as").find(aE).length)aE.blur()
+        console.log(document.activeElement)
+        setTimeout(function(){$("#superInformation_as #help_secTion").focus()}, 231)
+    })
+    $("#superInformation_as table tbody tr th:nth-child(3)").on("mouseleave click", function(){
+        $("#superInformation_as #help_secTion").removeClass("visible") 
+        if("undefined" !=typeof aE && $("#superInformation_as").find(aE).length)aE.focus()
+    })
+    $("#superInformation_as input").on("focus", function(r){
+        $(".nokbwarning").removeClass("visible")
+        r.stopPropagation()
+        aE= $(this)
+    })
+}
+
 fill_daTa= function(type, superInf){
     if(type === `wd_filling_superInformation` && !$(".accessibiliTyDialog").is(".visible")){
         $(".accessibiliTyDialog").addClass("visible")
@@ -3813,9 +3842,9 @@ $(".pseudoBuTton1").on("click", function(){
 play_Tts($("#full_TextTextToSpeech textarea").val(), $($(".accessibiliTyDialog select option:selected")[1]).attr("value"))
 })
 $(".nokbwarning").on("click", function(e){
-    $(this).removeClass("visible")
-    //e.preventDefault()
-    //e.stopPropagation()
+    setTimeout(function(){$(this).removeClass("visible")}, 210)
+            //e.preventDefault()
+    e.stopPropagation()
     if("undefined" !=typeof aE && $("#superInformation_as").find(aE).length)aE.focus()
 })
 $(window).on("focus", function(e){
@@ -4665,10 +4694,10 @@ expand= function(c){
 alternate= function(Smpqw){
     if("undefined"!=typeof Smpqw){
         switch(Smpqw){
-            case "superIxfxrmation":
+            case "superInformation":
                 fill_daTa(`wd_filling_superInformation`)                
                 break;
-            case "notSuperInformation":case "superInformation":
+            case "notSuperInformation":
                 $(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
                     var tiTle= $(alternating).find("h2").text()
                     var pp= tiTle.slice(0, tiTle.indexOf(" ("))

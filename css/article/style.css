@@ -911,7 +911,7 @@ content: "\e904"
 }
 
 .token.tag-id{
-	color: #f92672 !important;
+    color: #f92672 !important;
 }
 .code-scroll{
     overflow-x: scroll;
@@ -1689,8 +1689,8 @@ time{
     object-fit: cover; 
     object-position: left; 
     height: 100%; 
-	padding-bottom: 6px; 
-	box-sizing: border-box; 
+    padding-bottom: 6px; 
+    box-sizing: border-box; 
 } 
 #article figure > div {
     width: 23.4px;
@@ -1997,11 +1997,11 @@ ul.ui-menu {
 #superInformation_as{
     position: relative;
 }
-#superInformation_as a:not(sup a){
+#superInformation_as :not(sup) > a{
     text-decoration: underline;
     color: #757916;
 }
-#superInformation_as th:not(#help_secTion th) {
+#superInformation_as > table th {
   color: #373;
   font-weight: lighter;
   font-style: italic;
@@ -2024,7 +2024,7 @@ ul.ui-menu {
   text-shadow: revert;
   width: 87%;
 }
-#superInformation_as tr:not(#help_secTion tr) {
+#superInformation_as > table tr{
   margin-bottom: 2px;
   border-collapse: separate;
   border-spacing: 12px;
@@ -2035,14 +2035,18 @@ ul.ui-menu {
 #superInformation_as input:focus {
   color: #f4bc71;
 }
-#superInformation_as th:last-child:not(#help_secTion th) {
+#superInformation_as > table th:last-child {
   color: #9b9b9b;
   font-style: normal;
-  text-transform: full-width;
+  /*text-transform: full-width;*/
   text-shadow: none;
   cursor: pointer;
-  font-family: monospace;
   font-weight: normal;
+  font-size: 14px;
+  font-family: "Open Sans";
+  padding-right: 4px;
+  box-sizing: border-box;
+  text-align: left;
 }
 #help_secTion {
   position: absolute;
@@ -2084,7 +2088,7 @@ ul.ui-menu {
 #help_secTion sup a span {
   color: #d75727;
 }
-#superInformation_as i:not(table i) {
+#superInformation_as :not(th) > i {
   color: #6f6060;
   margin-bottom: 20px;
   display: block;
@@ -2105,4 +2109,27 @@ ul.ui-menu {
     resize: none;
     overflow-y: scroll;
     background: #888787;
+}
+
+.nokbwarning.visible {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+.nokbwarning {
+  background: #fff9;
+  padding: 30px 12px;
+  color: #393131fa;
+  font-style: normal;
+  display: none;
+  z-index: 12;
+  cursor: pointer;
+}
+#superInformation_as.chocolate > table th {
+    font-weight: lighter;
+    font-style: oblique;
+    color: #f4d7cd;
+    text-shadow: 1px 1px #b5d75975;
 }
