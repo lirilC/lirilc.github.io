@@ -580,11 +580,13 @@ var user= {
             },
             title: `We're Live!`,
             description: ``,
-            contents:  `<text>
-                            <p style="color: #aaa; text-align: left; "> Comenten Y Respondan Mucho Y En Todos Los Posts, Fotos, Videos Y Artículos, En Especial Los Que Ya Tienen Comentarios. Los Comentarios Oficiales Se Mezclarán Con Los Suyos.</p>
-                            <p style="color: #aaa; text-align: left; ">&nbsp&nbsp&nbsp&nbspEn <a target="_blank" href="/user">user</a> Pueden Cambiar Sus Datos, No Tienen Que Recargar Las Páginas En Donde Están Comentando.</p>
-                            <p style="color: #aaa; text-align: left; ">&nbsp&nbsp&nbsp&nbspDando Click Con El Botón Derecho Del Mouse Al Link A La Estática, Que Está A La Derecha Del Todo Abajo Puedes Abrir Los Posts En El Theater</p>
-                        </text>`,
+            contents:  `<div id="otherContainments" class= "visible">
+                            <text>
+                                <p style="color: #aaa; text-align: left; "> Comenten Y Respondan Mucho Y En Todos Los Posts, Fotos, Videos Y Artículos, En Especial Los Que Ya Tienen Comentarios. Los Comentarios Oficiales Se Mezclarán Con Los Suyos.</p>
+                                <p style="color: #aaa; text-align: left; ">&nbsp&nbsp&nbsp&nbspEn <a target="_blank" href="/user">user</a> Pueden Cambiar Sus Datos, No Tienen Que Recargar Las Páginas En Donde Están Comentando.</p>
+                                <p style="color: #aaa; text-align: left; ">&nbsp&nbsp&nbsp&nbspDando Click Con El Botón Derecho Del Mouse Al Link A La Estática, Que Está A La Derecha Del Todo Abajo Puedes Abrir Los Posts En El Theater</p>
+                            </text>
+                        </div>`,
             Comentarios:   `<div class="comentario">
                                 <input class='knob button' data-width='28' data-height='28' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.18' readonly value='100'>
                                 <img title="         

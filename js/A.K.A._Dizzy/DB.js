@@ -457,13 +457,15 @@ export function _user(){
                 },
                 title: `...¡Puedes editar los proyectos!; <strike>hum... ¡intenta arreglar los proyectos con módulos!</strike> Ja, ja, ja. Sé MUUUUUY cuidadoso con los módulos. ¡NO los modifiques!`,
                 description: ``,
-                contents:  `<div>
-                                <section id="links">
-                                    <a class="link" target="_blank" href="/A.K.A._Dizzy/p/k9u8hH78jJi27"><span class="Title">Robot De Dedicatorias</span><span class="linktype">Proyecto</span></a>
-                                </section>
-                                <text>
-                                    <p style="color: #aaa; text-align: left;">Actualización: Puedes ver los archivos con las ediciones que les hayas hecho en el Raw&nbsp&nbspdándole click derecho al botón del Raw&nbsp</p>
-                                </text>
+                contents:  `<div id="otherContainments" class= "visible">
+                                <div>
+                                    <section id="links">
+                                        <a class="link" target="_blank" href="/A.K.A._Dizzy/p/k9u8hH78jJi27"><span class="Title">Robot De Dedicatorias</span><span class="linktype">Proyecto</span></a>
+                                    </section>
+                                    <text>
+                                        <p style="color: #aaa; text-align: left;">Actualización: Puedes ver los archivos con las ediciones que les hayas hecho en el Raw&nbsp&nbspdándole click derecho al botón del Raw&nbsp</p>
+                                    </text>
+                                </div>
                             </div>`,
                 Comentarios: "",
                 Editado: [ 'type= "oC"; edHistory= {"Editado el 10 de Julio de 2022 a las 8:55 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/8f7354d4e2cc556b82e0e14f47787119ef00b259/A.K.A._Dizzy/pos/hptI4FO7Tv.html", "3 de Julio de 2022 a las 0:52 am": "https://raw.githubusercontent.com/lirilCo/lirilco.github.io/11d7faa7fda75e0e72ad7f32b8bed9d0d4909b91/A.K.A._Dizzy/pos/hptI4FO7Tv.html"}', "Editado el 10 de Julio de 2022 a las 8:55 pm"]
