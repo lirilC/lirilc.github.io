@@ -303,7 +303,9 @@ k300= function(C, p, y, ty){
 document.addEventListener("keydown",function(evt){ 
     aaa= $("#theater"); 
 
+        alert("mult_carr");
     if($(aaa).is(".mult_carr")){(function(){ 
+
             //th= $( th.context ).closest(".story").length? $( th.context ).closest(".story"): $( th.context ).closest(".foto").length? $( th.context ).closest(".foto"): $( th.context ).closest('#profilePic').length? $( th.context ).closest('#profilePic'): th.context;  
             switch(evt.keyCode){
                 case 37: 
@@ -322,6 +324,7 @@ document.addEventListener("keydown",function(evt){
                     break; 
         }
     })()}else if(!!aaa.find(".carr").length){ 
+
 	   switch(evt.keyCode){
             case 37: 
                 !$(aaa.find(".carr")).is(":animated")? $(aaa.find(".carr")).animate({scrollLeft: aaa.find(".carr")[0].scrollLeft - $(aaa.find(".carr")).width()}, 400, function(){
