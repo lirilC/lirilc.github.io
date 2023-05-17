@@ -644,7 +644,7 @@ function controls(a, xa){
     			$(".widget").addClass("select")
 		    	$(".select").addClass("on");
 		    	$(".resize").removeClass("on");
-				if(typeof magnet == "undefined"){magnet=$(".magnet").is(".on")?true:false; if($(".magnet").is(".on"))controls(null, "magnet"); delete magnet;}
+				if(typeof magnet == "undefined"){magnet=$(".magnet").is(".on")?true:false; if($(".magnet").is(".on"))controls(null, "magnet");}
 		    	select = true
 				break;
 			case "resize":
