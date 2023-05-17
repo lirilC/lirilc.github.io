@@ -50,6 +50,7 @@ pasteCountLeftRef = 0;
 select = false;
 copiedLeft = 0;
 widg= ""; 
+magnet= undefined;
 getSpace= function(){
   vW= $("video")[0].videoWidth
   vH= $("video")[0].videoHeight
@@ -171,13 +172,14 @@ if($("#customizationBars").hasClass("open")){
 	widg= '<div class="widget draggable"  style="height:' + $(this).find($( ".widgets .widget" ))[0].style.height + '; width:' + $(this).find($( ".widgets .widget" ))[0].style.width + '"><div class="ui-resizable-handle ui-resizable-nw" id="nwgrip"></div><div class="ui-resizable-handle ui-resizable-ne" id="negrip"></div><div class="ui-resizable-handle ui-resizable-sw" id="swgrip"></div><div class="ui-resizable-handle ui-resizable-se" id="segrip"></div><div class="ui-resizable-handle ui-resizable-n" id="ngrip"></div><div class="ui-resizable-handle ui-resizable-s" id="sgrip"></div><div class="ui-resizable-handle ui-resizable-e" id="egrip"></div><div class="ui-resizable-handle ui-resizable-w" id="wgrip"></div><div class="content" ><div class="coverDiv" style="position: absolute; top: 0;left: 0;width: 100%;height:100%; display: block;z-index: 5;"></div>' + $(this).find($( ".widgets .widget" ))[0].getAttribute("cont") + '</div></div>'; 
 	$( ".widgetero" )[0].insertAdjacentHTML("beforeend", widg); 
 var dropped = false;
+""
 $('.widgetero .widget').last().draggable({
 	stack:".widgetero .widget",
 	cursor: "move", 
 	snap: ".vidVidCustomizationMode, .widgetero, .widgetero .widget", 
 	snapMode: "both", 
 	revertDuration: 100,
-	snapTolerance: 10,
+	snapTolerance: 30,
 	grid: ($("#gridWidth").val() == "0" && $("#gridHeight").val() == "0") || !gridSnapping? false: [parseInt($("#gridWidth").val()), parseInt($("#gridHeight").val())],
 containment: "window",
 cursorAt: { left: $('.widgetero .widget').last().width() / 2 },
@@ -200,9 +202,36 @@ cursorAt: { left: $('.widgetero .widget').last().width() / 2 },
 })
 $('.widgetero .widget').last().css({
 	left: e.pageX - $('.widgetero .widget').last().width()/2,
-	top: e.pageY -($('.widgetero .widget').last().height()/2)-46}).trigger(e)
+	top: e.pageY -($('.widgetero .widget').last().height()/2)}).trigger(e)
 }
 });
+$(document).on("mousemove", function(o){
+mouseX= o.pageX
+mouseY= o.pageY
+if($(".select").is(".on") && $("#customizationBars").hasClass("open")){
+	$(".horizontalredlight").css({"left": `${(mouseX - parseInt($(".widgetero").css("margin-left")) - (parseInt($(".horizontalredlight").css("width"))/2))}px`, "top": `${((mouseY - 46) - 0.5 - (parseInt($(".widgetero").css("margin-top")) - 46))}px`})
+	$(".verticalredlight").css({"left": `${mouseX - parseInt($(".widgetero").css("margin-left")) - 0.5}px`, "top": `${((mouseY - 46 - (parseInt($(".widgetero").css("margin-top")) - 46) - (parseInt($(".verticalredlight").css("height")))/2))}px`})
+	$(".horizontalredlight").css({"display": "block"})
+	$(".verticalredlight").css({"display": "block"})
+}else{
+	$(".horizontalredlight").css({"display": "none"})
+	$(".verticalredlight").css({"display": "none"})
+}
+})
+$(document).on("keydown", function(r){switch(r.keyCode){
+  case 81:
+			controls(null, "resize")
+		break;
+	case 86:
+			!r.ctrlKey? controls(null, "select"): controls(null, "paste")
+		break;
+	case 67:
+			r.ctrlKey? controls(null, "copy"): false
+		break;
+	case 77:
+			controls(null, "magnet")
+		break;
+}})
 $(document).mouseup(function(e) {
 	if($("#customizationBars").hasClass("open")){
 		$('.widgetero .widget').draggable({ 
@@ -226,28 +255,81 @@ $(document).mouseup(function(e) {
     		accept: '.widget',
     		  
     		drop: function(event, ui)
-    		{        
-    			$(ui.draggable).width((($(ui.draggable).width() - ($(ui.draggable).is(".select")?11:0)) / ($(".widgetero").width()) * 100 )+ "%")
-    			$(ui.draggable).height((($(ui.draggable).height() - ($(ui.draggable).is(".select")?5:0)) / ($(".widgetero").height()) * 100 )+ "%")
+    		{   
+
+    			if(!$(ui.draggable).is(".select")){
+    			$(ui.draggable).width((($(ui.draggable).width()) / ($(".widgetero").width()) * 100 )+ "%")
+    			$(ui.draggable).height((($(ui.draggable).height()) / ($(".widgetero").height()) * 100 )+ "%")
     			$(ui.draggable).css({"left": (parseInt($(ui.draggable).css("left").replaceAll("px", "")) / ($(".widgetero").width()) * 100 ) + "%"})
     			$(ui.draggable).css({"top": ((parseInt($(ui.draggable).css("top").replaceAll("px", ""))) / ($(".widgetero").height()) * 100 ) + "%"})
+    			}
+    			if($(ui.draggable).is(".select")){
+    			neaRestTop= -10000
+    			neaRestLeft= -10000
+    			neaRestBottom= 10000
+    			neaRestRight= 10000
+    			intersects= {};
+    			intersects.vertically= [];
+    			intersects.horizontally= [];
+    			$(".widget.dropped").not(".selectedWidget").each(function(){
+    				if(parseInt($(this).css("left")) < parseInt($(".verticalredlight").css("left")) && parseInt($(this).css("left")) + parseInt($(this).css("width")) > parseInt($(".verticalredlight").css("left"))){
+    					intersects.vertically[intersects.vertically.length]= $(this)
+    				}
+    				if(parseInt($(this).css("top")) < parseInt($(".horizontalredlight").css("top")) && parseInt($(this).css("top")) + parseInt($(this).css("height")) > parseInt($(".horizontalredlight").css("top"))){
+    					intersects.horizontally[intersects.horizontally.length]= $(this)
+    				}
+				})
+    			intersects.vertically.forEach(function(intersected){
+    				if((parseInt($(intersected).css("top")) + parseInt($(intersected).css("height"))) > neaRestTop && (mouseY - 46 - parseInt($(".widgetero").css("margin-top")) + 46) > (parseInt($(intersected).css("top")) + parseInt($(intersected).css("height")))){
+    					neaRestTop= (parseInt($(intersected).css("top")) + parseInt($(intersected).css("height")))
+    				}
+    				if(parseInt($(intersected).css("top")) < neaRestBottom && (mouseY - 46 - parseInt($(".widgetero").css("margin-top")) + 46) < parseInt($(intersected).css("top"))){
+    					neaRestBottom= parseInt($(intersected).css("top"))
+    				}
+					console.log(`${$(intersected).index()} top:${parseInt($(intersected).css("top"))} bottom:${(parseInt($(intersected).css("top")) + parseInt($(intersected).css("height")))}`)
+    			})
+
+    			intersects.horizontally.forEach(function(intersected){
+    				if((parseInt($(intersected).css("left")) + parseInt($(intersected).css("width"))) > neaRestLeft && (mouseX - parseInt($(".widgetero").css("margin-left"))) > (parseInt($(intersected).css("left")) + parseInt($(intersected).css("width")))){
+    					neaRestLeft= (parseInt($(intersected).css("left")) + parseInt($(intersected).css("width")))
+    				}
+    				if(parseInt($(intersected).css("left")) < neaRestRight && (mouseX - parseInt($(".widgetero").css("margin-left"))) < parseInt($(intersected).css("left"))){
+    					neaRestRight= parseInt($(intersected).css("left"))
+    				}
+    			})
+    			$(".widget.selectedWidget").css({"height": `${(neaRestBottom == 10000? (mouseY - 46> (parseInt($(".widgetero").css("margin-top")) - 46 + $(".widgetero").height()))?$(".widgetero").height() + parseInt($(".widgetero").css("margin-top")) - 46:$(".widgetero").height(): neaRestBottom) - (neaRestTop == -10000? (mouseY - 46 < parseInt($(".widgetero").css("margin-top")) - 46)?-parseInt($(".widgetero").css("margin-top")) + 46: 0: neaRestTop)}px`})
+				$(".widget.selectedWidget").css({"width": `${(neaRestRight == 10000? (mouseX > parseInt($(".widgetero").css("margin-left")) + $(".widgetero").width())?$(".widgetero").width() + parseInt($(".widgetero").css("margin-left")):$(".widgetero").width(): neaRestRight) - (neaRestLeft == -10000?mouseX < parseInt($(".widgetero").css("margin-left"))?-parseInt($(".widgetero").css("margin-left")): 0: neaRestLeft)}px`})
+				$(".widget.selectedWidget").css({"top": `${neaRestTop == -10000? (mouseY - 46 < parseInt($(".widgetero").css("margin-top")) - 46)?-parseInt($(".widgetero").css("margin-top")) + 46:0: neaRestTop}px`})
+				$(".widget.selectedWidget").css({"left": `${neaRestLeft == -10000?mouseX < parseInt($(".widgetero").css("margin-left"))?-parseInt($(".widgetero").css("margin-left")): 0: neaRestLeft}px`})
+    			$(ui.draggable).width((($(ui.draggable).width()) / ($(".widgetero").width()) * 100 )+ "%")
+    			$(ui.draggable).height((($(ui.draggable).height()) / ($(".widgetero").height()) * 100 )+ "%")
+    			$(ui.draggable).css({"left": ((parseInt($(ui.draggable).css("left").replaceAll("px", ""))) / ($(".widgetero").width()) * 100 ) + "%"})
+    			$(ui.draggable).css({"top": ((parseInt($(ui.draggable).css("top").replaceAll("px", ""))) / ($(".widgetero").height()) * 100 ) + "%"})
+    			console.log(`Mouse, X:${mouseX} Y:${mouseY - 46} neaRestTop:${neaRestTop} neaRestBottom:${neaRestBottom} neaRestLeft:${neaRestLeft} neaRestRight: ${neaRestRight} intersectsVertically:`)
+    			console.log(intersects)
+    			}
 
     			ui.draggable.data('dropped', true);
 				dropped = true; 
 				$('.widgetero .widget').last().addClass("dropped")
+				if($(".resize").is(".on")){
+					controls(null, "resize")
+				}else{
+					controls(null, "select")
+				}
 				
 		}})
-		$('.trash').droppable({
+		$('.delete').droppable({
     		accept: '.widget',
-    		   tolerance: "fit",
+    		   tolerance: "pointer",
     		drop: function(event, ui)
     		{        
-    			ui.draggable.remove();
+    			$(".selectedWidget").remove();
 
 		}})
 
 		$(".widgetero .widget").resizable({
-
+distance: 0,
  handles: {
         'nw': '#nwgrip',
         'ne': '#negrip',
@@ -258,9 +340,9 @@ $(document).mouseup(function(e) {
         's': '#sgrip',
         'w': '#wgrip'
     },
-	snap: ".vidVidCustomizationMode, .widgetero, .widgetero .widget", 
+	snap: ".widgetero, .vidVidCustomizationMode, .widget", 
   snapMode: "both", 
-snapTolerance: 10,
+snapTolerance: 12,
 grid: ($("#gridWidth").val() == "0" && $("#gridHeight").val() == "0") || !gridSnapping? false: [parseInt($("#gridWidth").val()), parseInt($("#gridHeight").val())],
 
 stop: function(event, ui)
@@ -327,6 +409,8 @@ stop: function(event, ui)
 		if(!firstPlay)return;
 		if($("#Store").hasClass("open") && $("#customizationBars").hasClass("open")){
 			$("#customizationBars").removeClass("open")
+			$(".horizontalredlight").css({"display": "none"})
+			$(".verticalredlight").css({"display": "none"})
 			$("header").removeClass("open")
 			$(".widgetero").removeClass("open")
 		}
@@ -335,6 +419,8 @@ stop: function(event, ui)
 		}
 		$("#right-menu #customize").toggleClass("open");
 		$("#customizationBars").toggleClass("open");
+		$(".horizontalredlight").css({"display": "none"})
+		$(".verticalredlight").css({"display": "none"})
 		$("header").toggleClass("open")
 		$(".widgetero").toggleClass("open")
 
@@ -548,7 +634,113 @@ $('html').keyup(function(e){
     	$(".selectedWidget").remove()
     }
 }) 
-function controls(a){
+function controls(a, xa){
+	if(typeof xa != "undefined"){
+		switch(xa){
+			case "delete":
+    			$(".selectedWidget").remove()
+				break;
+			case "select":
+    			$(".widget").addClass("select")
+		    	$(".select").addClass("on");
+		    	$(".resize").removeClass("on");
+		    	if(magnet == undefined){magnet=$(".magnet").is(".on")?true:false; if($(".magnet").is(".on"))controls(null, "magnet")}
+		    	select = true
+				break;
+			case "resize":
+    			$(".widget").removeClass("select");
+		    	$(".resize").addClass("on");
+		    	$(".select").removeClass("on");
+		    	magnet?controls(null, "magnet"): 1
+    	    	select = false
+				break;
+			case "cut":
+				pasteCount = 0
+				pasteCopiedTop= parseInt($(".selectedWidget").css("top"), 10)
+		    	pasteCopiedLeft= parseInt($(".selectedWidget").css("left"), 10)
+		    	copiedWidget = $(".selectedWidget").html()
+		    	copiedTop= parseInt($(".selectedWidget").css("top"), 10)
+		    	pasteCountTopRef = 0;
+		    	pasteCountLeftRef=0;
+		    	copiedLeft = parseInt($(".selectedWidget").css("left"), 10)    
+		    	copiedWidth =  parseInt($(".selectedWidget").css("width"), 10)
+		    	copiedHeight =  parseInt($(".selectedWidget").css("height"), 10)
+		    	$(".selectedWidget").remove()
+				break;
+			case "copy":
+    			pasteCount = 0
+				pasteCopiedTop= parseInt($(".selectedWidget").css("top"), 10)
+		    	pasteCopiedLeft= parseInt($(".selectedWidget").css("left"), 10)
+		    	copiedWidget = $(".selectedWidget").html()
+		    	copiedTop= parseInt($(".selectedWidget").css("top"), 10)
+		    	pasteCountTopRef = 0;
+		    	pasteCountLeftRef=0;
+		    	copiedLeft = parseInt($(".selectedWidget").css("left"), 10)    
+		    	copiedWidth =  parseInt($(".selectedWidget").css("width"), 10)
+		    	copiedHeight =  parseInt($(".selectedWidget").css("height"), 10)
+				break;
+			case "paste":
+    			if(copiedWidget != undefined){
+					pasteCopiedTop = parseInt($('.widgetero .widget').last().css("top"), 10)
+					pasteCopiedLeft = parseInt($('.widgetero .widget').last().css("left"), 10)
+					if(pasteCopiedTop<10){
+						pasteCountTopRef  -=1;
+					} else{
+						pasteCountTopRef+=1;
+					}
+					if(pasteCopiedLeft <10){
+						pasteCountLeftRef -=1;
+					} else{
+						pasteCountLeftRef+=1;
+					}
+					
+	            		$(".selectedWidget").removeClass("selectedWidget")
+	            		if((copiedTop - pasteCountTopRef*10)<0){
+	            			    $(".widgetero").append('<div style="width:'+ copiedWidth +'px; height:'+ copiedHeight +'px; top: '+ 0 +'px;left: '+ (copiedLeft - pasteCountLeftRef*10) +'px; z-index:1000" class="widget selectedWidget dropped">'+copiedWidget+'</div>')
+					}else{
+	    				$(".widgetero").append('<div style="width:'+ copiedWidth +'px; height:'+ copiedHeight +'px; top: '+ (copiedTop - pasteCountTopRef*10) +'px;left: '+ (copiedLeft - pasteCountLeftRef*10) +'px; z-index:1000" class="widget selectedWidget dropped">'+copiedWidget+'</div>')
+					}
+	            }
+	            if($(".resize").is(".on")){
+	            	$(".widget.dropped").each(function(){
+	            		$(this).width((($(this).width()) / ($(".widgetero").width()) * 100 )+ "%")
+    					$(this).height((($(this).height()) / ($(".widgetero").height()) * 100 )+ "%")
+    					$(this).css({"left": (parseInt($(this).css("left").replaceAll("px", "")) / ($(".widgetero").width()) * 100 ) + "%"})
+    					$(this).css({"top": ((parseInt($(this).css("top").replaceAll("px", ""))) / ($(".widgetero").height()) * 100 ) + "%"})
+	            	})
+    			}
+    			if($(".select").is(".on")){
+    			$(".widget.on").width(function(){return (($(this).width()) / ($(".widgetero").width()) * 100 )+ "%"})
+    			$(".widget.on").height(function(){return (($(this).height()) / ($(".widgetero").height()) * 100 )+ "%"})
+    			$(".widget.on").css({"left": ((parseInt($(this).css("left").replaceAll("px", ""))) / ($(".widgetero").width()) * 100 ) + "%"})
+    			$(".widget.on").css({"top": ((parseInt($(this).css("top").replaceAll("px", ""))) / ($(".widgetero").height()) * 100 ) + "%"})
+    			console.log(`Mouse, X:${mouseX} Y:${mouseY - 46} neaRestTop:${neaRestTop} neaRestBottom:${neaRestBottom} neaRestLeft:${neaRestLeft} neaRestRight: ${neaRestRight} intersectsVertically:`)
+    			console.log(intersects)
+    			}
+				break;
+			case "magnet":
+    			$(".magnet").toggleClass("on");
+		    	if(snapping){
+		    		snapping = false;
+		    	}else{
+		    		snapping = true;
+		    	}
+				break;
+			case "grid":
+    			$(".grid").toggleClass("on");
+		    	if(gridSnapping){
+		    		gridSnapping = false;
+		    		$(".widgetero .widget").draggable("option", "grid", false)
+					$(".widgetero .widget").resizable("option", "grid", false)
+		    	}else{
+		    		gridSnapping = true;
+		    		$(".widgetero .widget").draggable("option", "grid", $("#gridWidth").val() == "0" && $("#gridHeight").val() == "0"? false: [parseInt($("#gridWidth").val()), parseInt($("#gridHeight").val())])
+					$(".widgetero .widget").resizable("option", "grid", $("#gridWidth").val() == "0" && $("#gridHeight").val() == "0"? false: [parseInt($("#gridWidth").val()), parseInt($("#gridHeight").val())])
+		    	}
+		    	break;
+		}
+		return;
+	}
 	if ($(a.target).parents().andSelf().is(".delete")){
     	$(".selectedWidget").remove()
 	}
@@ -556,18 +748,28 @@ function controls(a){
     	$(".widget").addClass("select")
     	$(".select").addClass("on");
     	$(".resize").removeClass("on");
+		if(magnet == undefined){magnet=$(".magnet").is(".on")?true:false; if($(".magnet").is(".on"))controls(null, "magnet")}
     	select = true
 	}
 	if ($(a.target).parents().andSelf().is(".resize")){
     	$(".widget").removeClass("select");
     	$(".resize").addClass("on");
     	$(".select").removeClass("on");
-    	    	select = false
+		magnet == true?controls(null, "magnet"): 1
+		magnet= undefined
+		select = false
 	}
 	if ($(a.target).parents().andSelf().is(".cut")){
+    	pasteCount = 0
+		pasteCopiedTop= parseInt($(".selectedWidget").css("top"), 10)
+    	pasteCopiedLeft= parseInt($(".selectedWidget").css("left"), 10)
     	copiedWidget = $(".selectedWidget").html()
-    	copiedTop = parseInt($(".selectedWidget").css("top"), 10)
-    	copiedLeft = parseInt($(".selectedWidget").css("left"), 10)
+    	copiedTop= parseInt($(".selectedWidget").css("top"), 10)
+    	pasteCountTopRef = 0;
+    	pasteCountLeftRef=0;
+    	copiedLeft = parseInt($(".selectedWidget").css("left"), 10)    
+    	copiedWidth =  parseInt($(".selectedWidget").css("width"), 10)
+    	copiedHeight =  parseInt($(".selectedWidget").css("height"), 10)
     	$(".selectedWidget").remove()
 	}
 	if ($(a.target).parents().andSelf().is(".copy")){
@@ -632,7 +834,7 @@ function controls(a){
     var ctrlKey = 17
     $(document).keydown(function(e)
     {
-        if (e.keyCode == ctrlKey) {ctrlDown = true;}
+        /*if (e.keyCode == ctrlKey) {ctrlDown = true;}
             if (ctrlDown &&  e.keyCode == 67){
             	pasteCount = 0;
 		pasteCopiedTop= parseInt($(".selectedWidget").css("top"), 10);
@@ -675,7 +877,7 @@ function controls(a){
     				$(".widgetero").append('<div style="width:'+ copiedWidth +'px; height:'+ copiedHeight +'px; top: '+ (copiedTop - pasteCountTopRef*10) +'px;left: '+ (copiedLeft - pasteCountLeftRef*10) +'px; z-index:1000" class="widget selectedWidget dropped">'+copiedWidget+'</div>')
 				}
             }
-    }
+    }*/
 }
     );
 

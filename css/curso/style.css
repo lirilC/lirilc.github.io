@@ -668,7 +668,7 @@ iframe
 } 
 .selectedWidget.select
 {
-    border: 1px solid #6D8FE0;
+    outline: 1px solid #6D8FE0;
 
 }
 .ui-resizable-handle
@@ -905,4 +905,25 @@ display: block;
 .vjs-tt-cue {
     color: #f9fbf8;
     text-shadow: -1px 0 1px #847f7f, 0 1px 1px #847f7f, 1px 0 1px #847f7f, 0 -1px 1px #847f7f;
+}
+.horizontalredlight {
+    width: 2232%;
+    height: 1px;
+    background: red;
+    position: absolute;
+    z-index: 20000000000;
+    outline: 1px solid antiquewhite;
+    pointer-events: none;
+}
+.verticalredlight {
+    height: 2232%;
+    width: 1px;
+    background: red;
+    position: absolute;
+    z-index: 20000000000;
+    outline: 1px solid antiquewhite;
+    pointer-events: none;
+}
+.widget.select.selectedWidget {
+    opacity: 0.5;
 }
