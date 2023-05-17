@@ -644,15 +644,15 @@ function controls(a, xa){
     			$(".widget").addClass("select")
 		    	$(".select").addClass("on");
 		    	$(".resize").removeClass("on");
-		    	if(magnet == undefined){magnet=$(".magnet").is(".on")?true:false; if($(".magnet").is(".on"))controls(null, "magnet")}
+				if(typeof magnet == "undefined"){magnet=$(".magnet").is(".on")?true:false; if($(".magnet").is(".on"))controls(null, "magnet"); delete magnet;}
 		    	select = true
 				break;
 			case "resize":
-    			$(".widget").removeClass("select");
+				$(".widget").removeClass("select");
 		    	$(".resize").addClass("on");
 		    	$(".select").removeClass("on");
-		    	magnet?controls(null, "magnet"): 1
-    	    	select = false
+				typeof magnet != "undefined" && magnet === true?controls(null, "magnet"): 1;
+				delete magnet;
 				break;
 			case "cut":
 				pasteCount = 0
@@ -748,15 +748,15 @@ function controls(a, xa){
     	$(".widget").addClass("select")
     	$(".select").addClass("on");
     	$(".resize").removeClass("on");
-		if(magnet == undefined){magnet=$(".magnet").is(".on")?true:false; if($(".magnet").is(".on"))controls(null, "magnet")}
+		if(typeof magnet == "undefined"){magnet=$(".magnet").is(".on")?true:false; if($(".magnet").is(".on"))controls(null, "magnet");}
     	select = true
 	}
 	if ($(a.target).parents().andSelf().is(".resize")){
     	$(".widget").removeClass("select");
     	$(".resize").addClass("on");
     	$(".select").removeClass("on");
-		magnet == true?controls(null, "magnet"): 1
-		magnet= undefined
+		typeof magnet != "undefined" && magnet === true?controls(null, "magnet"): 1;
+		delete magnet;
 		select = false
 	}
 	if ($(a.target).parents().andSelf().is(".cut")){
