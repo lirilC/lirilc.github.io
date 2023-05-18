@@ -303,7 +303,6 @@ k300= function(C, p, y, ty){
 document.addEventListener("keydown",function(evt){ 
     aaa= $("#theater"); 
 
-        alert("mult_carr");
     if($(aaa).is(".mult_carr")){(function(){ 
 
             //th= $( th.context ).closest(".story").length? $( th.context ).closest(".story"): $( th.context ).closest(".foto").length? $( th.context ).closest(".foto"): $( th.context ).closest('#profilePic').length? $( th.context ).closest('#profilePic'): th.context;  
