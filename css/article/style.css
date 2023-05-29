@@ -1674,6 +1674,10 @@ time{
 #article figure.vertical{ 
     width: 224px;
     margin: 27px auto 0 auto !important; 
+}
+#article figure.borderless{ 
+    margin-bottom: 0 !important;
+    margin-top: 5px !important;
 } 
 #article figure img{ 
     width: 100%; 
@@ -2132,4 +2136,68 @@ ul.ui-menu {
     font-style: oblique;
     color: #f4d7cd;
     text-shadow: 1px 1px #b5d75975;
+}
+.edit {
+    position: absolute;
+    width: 120px;
+    outline: 1px solid #d8dc8d !important;
+    left: -65px;
+    color: #6e6f6e;
+    font-family: "Open Sans Light";
+    font-style: oblique;
+    display: none;
+}
+.edit button.primary {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  background: #f8f8f8;
+  border: 1px solid #ccc5c5;
+  width: 29px;
+  padding: 0;
+  cursor: pointer;
+  font-style: normal;
+}
+.edit button.redo {
+  position: absolute;
+  right: 29px;
+  top: 0;
+  height: 100%;
+  background: #f8f8f8;
+  border: 1px solid #ccc5c5;
+  width: 29px;
+  padding: 0;
+  cursor: pointer;
+  font-style: normal;
+  display: none;
+}
+.edit input {
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 31px;
+}
+.edit button:active {
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+}
+.edit button.primary::before {
+    content: "\e965";
+    font-family: "icomoon";
+    color: #992c2c;
+}
+.edit.shifted button.primary::before {
+    content: "\e9d7";
+    font-family: "icomoon";
+    color: #992c2c;
+}
+.edit button.redo::before {
+    content: "\e966";
+    font-family: "icomoon";
+    color: #992c2c;
+}
+.poema:hover .edit {
+  display: block;
+}
+.edit.shifted button.redo {
+  display: block;
 }

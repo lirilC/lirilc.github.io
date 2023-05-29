@@ -2962,17 +2962,17 @@ fill_daTa= function(type, superInf){
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".dir_es").html(hTml)
 
-            var hTml= alternating.find(".dir_es").prev().html()
+            var hTml= alternating.find(".dir_es").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${de(dInf.es.hTRT)} ${dInf.es.gentilicio} de la película ${eInf.name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".dir_es").prev().html(hTml)
+            alternating.find(".dir_es").prev().prev().html(hTml)
 
             var hTml= alternating.find(".dir_en").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "and")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".dir_en").html(hTml)
 
-            var hTml= alternating.find(".dir_en").prev().html()
+            var hTml= alternating.find(".dir_en").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From the ${dInf.en.gentilicio} ${dInf.en.hTRT} of the movie ${eInf.name.nT.en} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".dir_en").prev().html(hTml)
+            alternating.find(".dir_en").prev().prev().html(hTml)
             break
         case "cre":
             dInf= eInf[Object.keys(eInf)[1]]
@@ -2981,308 +2981,308 @@ fill_daTa= function(type, superInf){
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".cre_es").html(hTml)
 
-            var hTml= alternating.find(".cre_es").prev().html()
+            var hTml= alternating.find(".cre_es").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${de(dInf.es.hTRT)} ${dInf.es.gentilicio} de la serie ${eInf.name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".cre_es").prev().html(hTml)
+            alternating.find(".cre_es").prev().prev().html(hTml)
 
             var hTml= alternating.find(".cre_en").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "and")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".cre_en").html(hTml)
 
-            var hTml= alternating.find(".cre_en").prev().html()
+            var hTml= alternating.find(".cre_en").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From the ${dInf.en.gentilicio} ${dInf.en.hTRT} of the series ${eInf.name.nT.en} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".cre_en").prev().html(hTml)
+            alternating.find(".cre_en").prev().prev().html(hTml)
             break
         case "pin":
             var hTml= alternating.find(".pin_es").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".pin_es").html(hTml)
 
-            var hTml= alternating.find(".pin_es").prev().html()
+            var hTml= alternating.find(".pin_es").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${de(dInf.es.hTRT)} ${dInf.es.gentilicio} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".pin_es").prev().html(hTml)
+            alternating.find(".pin_es").prev().prev().html(hTml)
 
             var hTml= alternating.find(".pin_en").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "and")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".pin_en").html(hTml)
 
-            var hTml= alternating.find(".pin_en").prev().html()
+            var hTml= alternating.find(".pin_en").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From the ${dInf.en.gentilicio} ${dInf.en.hTRT} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".pin_en").prev().html(hTml)
+            alternating.find(".pin_en").prev().prev().html(hTml)
             break
         case "dev":
             var hTml= alternating.find(".dev_es").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${dInf.es.nombre.split("| ").length>1?dInf.es.nombre.split("| ").join(" , ").split("").reverse().join("").replace(",", "y").split("").reverse().join("").replaceAll(" , ", ", ") :dInf.es.nombre} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".dev_es").html(hTml)
 
-            var hTml= alternating.find(".dev_es").prev().html()
+            var hTml= alternating.find(".dev_es").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${de(dInf.es.hTRT)} ${dInf.es.gentilicio} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".dev_es").prev().html(hTml)
+            alternating.find(".dev_es").prev().prev().html(hTml)
 
             var hTml= alternating.find(".dev_en").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${dInf.en.nombre.split("| ").length>1?dInf.en.nombre.split("| ").join(" , ").split("").reverse().join("").replace(",", "dna").split("").reverse().join("").replaceAll(" , ", ", ") :dInf.en.nombre} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".dev_en").html(hTml)
 
-            var hTml= alternating.find(".dev_en").prev().html()
+            var hTml= alternating.find(".dev_en").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From the ${dInf.en.gentilicio} ${dInf.en.hTRT} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".dev_en").prev().html(hTml)
+            alternating.find(".dev_en").prev().prev().html(hTml)
             break
         case "esc":
             var hTml= alternating.find(".esc_es").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".esc_es").html(hTml)
 
-            var hTml= alternating.find(".esc_es").prev().html()
+            var hTml= alternating.find(".esc_es").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${de(dInf.es.hTRT)} ${dInf.es.gentilicio} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".esc_es").prev().html(hTml)
+            alternating.find(".esc_es").prev().prev().html(hTml)
 
             var hTml= alternating.find(".esc_en").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "and")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".esc_en").html(hTml)
 
-            var hTml= alternating.find(".esc_en").prev().html()
+            var hTml= alternating.find(".esc_en").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From the ${dInf.en.gentilicio} ${dInf.en.hTRT} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".esc_en").prev().html(hTml)
+            alternating.find(".esc_en").prev().prev().html(hTml)
             break
         case "art":
             var hTml= alternating.find(".art_es").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".art_es").html(hTml)
 
-            var hTml= alternating.find(".art_es").prev().html()
+            var hTml= alternating.find(".art_es").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${de(dInf.es.hTRT)} ${dInf.es.gentilicio} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".art_es").prev().html(hTml)
+            alternating.find(".art_es").prev().prev().html(hTml)
 
             var hTml= alternating.find(".art_en").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "and")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".art_en").html(hTml)
 
-            var hTml= alternating.find(".art_en").prev().html()
+            var hTml= alternating.find(".art_en").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From the ${dInf.en.gentilicio} ${dInf.en.hTRT} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".art_en").prev().html(hTml)
+            alternating.find(".art_en").prev().prev().html(hTml)
             break
         case "sib":
             var hTml= alternating.find(".sib_es").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple_Sr(sortgnp(dInf.nombre), "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".sib_es").html(hTml)
 
-            var hTml= alternating.find(".sib_es").next().next().html()
+            var hTml= alternating.find(".sib_es").next().next().next().next().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}Para ${mulTiple_r(sortgnp(dInf.nombre), "y", "el hijo de Satanás Belcebú")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".sib_es").next().next().html(hTml)
+            alternating.find(".sib_es").next().next().next().next().html(hTml)
 
             var hTml= alternating.find(".sib_en").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple_Sr(sortgnp(dInf.nombre), "and")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".sib_en").html(hTml)
 
-            var hTml= alternating.find(".sib_en").next().next().html()
+            var hTml= alternating.find(".sib_en").next().next().next().next().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}For ${mulTiple_r(sortgnp(dInf.nombre), "and", "the son of The Devil")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".sib_en").next().next().html(hTml)
+            alternating.find(".sib_en").next().next().next().next().html(hTml)
             break
         case "arS":
             var hTml= alternating.find(".arS_es").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${capitalize(mulTiple(sortgnp(dInf.nombre), "y"))} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".arS_es").html(hTml)
 
-            var hTml= alternating.find(".arS_es").prev().prev().prev().html()
+            var hTml= alternating.find(".arS_es").prev().prev().prev().prev().prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${dInf.nombre.split("@")[1][1]=="a"? `Para mi ${dInf.nombre.split("@")[1][0]=="t"?"hermano":"hermanito"}; el hijo de Satanás Belcebú`:`Para el hijo de Satanás Belcebú; mi ${dInf.nombre.split("@")[1][0]=="t"?"hermano":"hermanito"}`} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".arS_es").prev().prev().prev().html(hTml)
+            alternating.find(".arS_es").prev().prev().prev().prev().prev().prev().html(hTml)
 
-            var hTml= alternating.find(".arS_es").prev().html()
+            var hTml= alternating.find(".arS_es").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${de(dInf.es.hTRT)} ${dInf.es.gentilicio} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".arS_es").prev().html(hTml)
+            alternating.find(".arS_es").prev().prev().html(hTml)
 
             var hTml= alternating.find(".arS_en").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${capitalize(mulTiple(dInf.nombre, "and"))} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".arS_en").html(hTml)
 
-            var hTml= alternating.find(".arS_en").prev().prev().prev().html()
+            var hTml= alternating.find(".arS_en").prev().prev().prev().prev().prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${dInf.nombre.split("@")[1][1]=="a"? `For my ${dInf.nombre.split("@")[1][0]=="t"?"brother":"little brother"}; the son of The Devil`: `For the son of The Devil; my ${dInf.nombre.split("@")[1][0]=="t"?"brother":"little brother"}`} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".arS_en").prev().prev().prev().html(hTml)
+            alternating.find(".arS_en").prev().prev().prev().prev().prev().prev().html(hTml)
 
-            var hTml= alternating.find(".arS_en").prev().html()
+            var hTml= alternating.find(".arS_en").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From the ${dInf.en.gentilicio} ${dInf.en.hTRT} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".arS_en").prev().html(hTml)
+            alternating.find(".arS_en").prev().prev().html(hTml)
             break
         case "bnS":
             var hTml= alternating.find(".bnS_es").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}... ${dInf.es.bnd} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".bnS_es").html(hTml)
 
-            var hTml= alternating.find(".bnS_es").prev().prev().prev().html()
+            var hTml= alternating.find(".bnS_es").prev().prev().prev().prev().prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}Para ${mulTiple_r(sortgnp(dInf.nombre), "y", "el hijo de Satanás Belcebú")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".bnS_es").prev().prev().prev().html(hTml)
+            alternating.find(".bnS_es").prev().prev().prev().prev().prev().prev().html(hTml)
 
-            var hTml= alternating.find(".bnS_es").prev().html()
+            var hTml= alternating.find(".bnS_es").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De ${mulTiple(sortgnp(dInf.nombre), "y")}, y ${dInf.es.hTRTb}... ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".bnS_es").prev().html(hTml)
+            alternating.find(".bnS_es").prev().prev().html(hTml)
 
             var hTml= alternating.find(".bnS_en").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}... ${dInf.en.bnd} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".bnS_en").html(hTml)
 
-            var hTml= alternating.find(".bnS_en").prev().prev().prev().html()
+            var hTml= alternating.find(".bnS_en").prev().prev().prev().prev().prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}For ${mulTiple_r(sortgnp(dInf.nombre), "and", "the son of The Devil")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".bnS_en").prev().prev().prev().html(hTml)
+            alternating.find(".bnS_en").prev().prev().prev().prev().prev().prev().html(hTml)
 
-            var hTml= alternating.find(".bnS_en").prev().html()
+            var hTml= alternating.find(".bnS_en").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From ${mulTiple(sortgnp(dInf.nombre), "and")}, and the... ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".bnS_en").prev().html(hTml)
+            alternating.find(".bnS_en").prev().prev().html(hTml)
             break
         case "piS":
-            var hTml= alternating.find(".piS_es").prev().prev().prev().html()
+            var hTml= alternating.find(".piS_es").prev().prev().prev().prev().prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${dInf.nombre.split("@")[1][1]=="a"? `Para mi ${dInf.nombre.split("@")[1][0]=="t"?"hermano":"hermanito"}; el amor de la vida de la Madre Naturaleza, La Que Hace Que Crezcan Los Árboles`:`Para el amor de la vida de la Madre Naturaleza, La Que Hace Que Crezcan Los Árboles; mi ${dInf.nombre.split("@")[1][0]=="t"?"hermano":"hermanito"}`} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".piS_es").prev().prev().prev().html(hTml)
+            alternating.find(".piS_es").prev().prev().prev().prev().prev().prev().html(hTml)
 
             var hTml= alternating.find(".piS_es").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}<span class= "name" lang= "${dInf.nombre.split("@")[0].split('‼').length-1?dInf.nombre.split("@")[0].split('‼')[1]:'en'}">${dInf.nombre.split("@")[0].split('‼')[0]}</span> ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".piS_es").html(hTml)
 
-            var hTml= alternating.find(".piS_es").prev().html()
+            var hTml= alternating.find(".piS_es").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De tu ${(function(){switch(dInf.nombre.split("@")[1]){case "na":return "hermana";break;case "ta":return "hermanita";break;case "no":return "hermano";break;case "to":return "hermanito";break;}})()}, ${dInf.es.hTRT} ${dInf.es.gentilicio} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".piS_es").prev().html(hTml)
+            alternating.find(".piS_es").prev().prev().html(hTml)
 
-            var hTml= alternating.find(".piS_en").prev().prev().prev().html()
+            var hTml= alternating.find(".piS_en").prev().prev().prev().prev().prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${dInf.nombre.split("@")[1][1]=="a"? `For my ${dInf.nombre.split("@")[1][0]=="t"?"brother":"little brother"}; the love of the life of Mother Nature, She Who Makes Trees Grow`: `For the love of the life of Mother Nature, She Who Makes Trees Grow; my ${dInf.nombre.split("@")[1][0]=="t"?"brother":"little brother"}`} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".piS_en").prev().prev().prev().html(hTml)
+            alternating.find(".piS_en").prev().prev().prev().prev().prev().prev().html(hTml)
 
             var hTml= alternating.find(".piS_en").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}<span class= "name" lang= "${dInf.nombre.split("@")[0].split('‼').length-1?dInf.nombre.split("@")[0].split('‼')[1]:'en'}">${dInf.nombre.split("@")[0].split('‼')[0]}</span> ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".piS_en").html(hTml)
 
-            var hTml= alternating.find(".piS_en").prev().html()
+            var hTml= alternating.find(".piS_en").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From your ${(function(){switch(dInf.nombre.split("@")[1]){case "na":return "sister";break;case "ta":return "little sister";break;case "no":return "brother";break;case "to":return "little brother";break;}})()}, the ${dInf.en.gentilicio} ${dInf.en.hTRT} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".piS_en").prev().html(hTml)
+            alternating.find(".piS_en").prev().prev().html(hTml)
             break
         case "esS":
-            var hTml= alternating.find(".esS_es").prev().prev().prev().html()
+            var hTml= alternating.find(".esS_es").prev().prev().prev().prev().prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${dInf.nombre.split("@")[1][1]=="a"?`Para mi ${dInf.nombre.split("@")[1][0]=="t"?"hermano":"hermanito"}; el amor de la vida de la Madre Naturaleza, La Que Hace Que Crezcan Los Árboles`:`Para el amor de la vida de la Madre Naturaleza, La Que Hace Que Crezcan Los Árboles; mi ${dInf.nombre.split("@")[1][0]=="t"?"hermano":"hermanito"}`} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".esS_es").prev().prev().prev().html(hTml)
+            alternating.find(".esS_es").prev().prev().prev().prev().prev().prev().html(hTml)
 
             var hTml= alternating.find(".esS_es").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${dInf.nombre.split("@")[0]} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".esS_es").html(hTml)
 
-            var hTml= alternating.find(".esS_es").prev().html()
+            var hTml= alternating.find(".esS_es").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De tu ${(function(){switch(dInf.nombre.split("@")[1]){case "na":return "hermana";break;case "ta":return "hermanita";break;case "no":return "hermano";break;case "to":return "hermanito";break;}})()}, ${dInf.es.hTRT} ${dInf.es.gentilicio} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".esS_es").prev().html(hTml)
+            alternating.find(".esS_es").prev().prev().html(hTml)
 
-            var hTml= alternating.find(".esS_en").prev().prev().prev().html()
+            var hTml= alternating.find(".esS_en").prev().prev().prev().prev().prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${dInf.nombre.split("@")[1][1]=="a"?`For my ${dInf.nombre.split("@")[1][0]=="t"?"brother":"little brother"}; the love of the life of Mother Nature, She Who Makes Trees Grow`:`For the love of the life of Mother Nature, She Who Makes Trees Grow; my ${dInf.nombre.split("@")[1][0]=="t"?"brother":"little brother"}`} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".esS_en").prev().prev().prev().html(hTml)
+            alternating.find(".esS_en").prev().prev().prev().prev().prev().prev().html(hTml)
 
             var hTml= alternating.find(".esS_en").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${dInf.nombre.split("@")[0]} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".esS_en").html(hTml)
 
-            var hTml= alternating.find(".esS_en").prev().html()
+            var hTml= alternating.find(".esS_en").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From your ${(function(){switch(dInf.nombre.split("@")[1]){case "na":return "sister";break;case "ta":return "little sister";break;case "no":return "brother";break;case "to":return "little brother";break;}})()}, the ${dInf.en.gentilicio} ${dInf.en.hTRT} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".esS_en").prev().html(hTml)
+            alternating.find(".esS_en").prev().prev().html(hTml)
             break
         case "crS":
             dInf= eInf[Object.keys(eInf)[1]]
             
-            var hTml= alternating.find(".crS_es").prev().prev().prev().html()
+            var hTml= alternating.find(".crS_es").prev().prev().prev().prev().prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}Para ${mulTiple_crr(sortgnp(dInf.nombre), "y", "el amor de la vida de la Madre Naturaleza, La Que Hace Que Crezcan Los Árboles")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".crS_es").prev().prev().prev().html(hTml)
+            alternating.find(".crS_es").prev().prev().prev().prev().prev().prev().html(hTml)
 
             var hTml= alternating.find(".crS_es").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${capitalize(mulTiple(sortgnp(dInf.nombre), "y"))} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".crS_es").html(hTml)
 
-            var hTml= alternating.find(".crS_es").prev().html()
+            var hTml= alternating.find(".crS_es").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${de(dInf.es.hTRT)} ${dInf.es.gentilicio} de la serie ${eInf.name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".crS_es").prev().html(hTml)
+            alternating.find(".crS_es").prev().prev().html(hTml)
 
-            var hTml= alternating.find(".crS_en").prev().prev().prev().html()
+            var hTml= alternating.find(".crS_en").prev().prev().prev().prev().prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}For ${mulTiple_crr(sortgnp(dInf.nombre), "and", "the love of the life of Mother Nature, She Who Makes Trees Grow")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".crS_en").prev().prev().prev().html(hTml)
+            alternating.find(".crS_en").prev().prev().prev().prev().prev().prev().html(hTml)
 
             var hTml= alternating.find(".crS_en").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${capitalize(mulTiple(sortgnp(dInf.nombre), "and"))} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".crS_en").html(hTml)
 
-            var hTml= alternating.find(".crS_en").prev().html()
+            var hTml= alternating.find(".crS_en").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From the ${dInf.en.gentilicio} ${dInf.en.hTRT} of the series ${eInf.name.nT.en} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".crS_en").prev().html(hTml)
+            alternating.find(".crS_en").prev().prev().html(hTml)
             break
         case "cr_pS":
             
-            var hTml= alternating.find(".cr_pS_es").prev().prev().prev().html()
+            var hTml= alternating.find(".cr_pS_es").prev().prev().prev().prev().prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}Para ${mulTiple_r(sortgnp([dInf.par, dInf.nombre].join("| ")), "y", "el amor de la vida de la Madre Naturaleza, La Que Hace Que Crezcan Los Árboles")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".cr_pS_es").prev().prev().prev().html(hTml)
+            alternating.find(".cr_pS_es").prev().prev().prev().prev().prev().prev().html(hTml)
 
             var hTml= alternating.find(".cr_pS_es").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${capitalize(mulTiple(sortgnp(dInf.nombre), "y"))} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".cr_pS_es").html(hTml)
 
-            var hTml= alternating.find(".cr_pS_es").prev().html()
+            var hTml= alternating.find(".cr_pS_es").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De ${mulTiple(dInf.par, "y")}, y ${dInf.es.hTRT} ${dInf.es.gentilicio} de la serie ${eInf.name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".cr_pS_es").prev().html(hTml)
+            alternating.find(".cr_pS_es").prev().prev().html(hTml)
 
-            var hTml= alternating.find(".cr_pS_en").prev().prev().prev().html()
+            var hTml= alternating.find(".cr_pS_en").prev().prev().prev().prev().prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}For ${mulTiple_r(sortgnp([dInf.par, dInf.nombre].join("| ")), "and", "the love of the life of Mother Nature, She Who Makes Trees Grow")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".cr_pS_en").prev().prev().prev().html(hTml)
+            alternating.find(".cr_pS_en").prev().prev().prev().prev().prev().prev().html(hTml)
 
             var hTml= alternating.find(".cr_pS_en").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${capitalize(mulTiple(dInf.nombre, "and"))} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".cr_pS_en").html(hTml)
 
-            var hTml= alternating.find(".cr_pS_en").prev().html()
+            var hTml= alternating.find(".cr_pS_en").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From ${mulTiple(sortgnp(dInf.par), "and")}, and the ${dInf.en.gentilicio} ${dInf.en.hTRT} of the series ${eInf.name.nT.en} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".cr_pS_en").prev().html(hTml)
+            alternating.find(".cr_pS_en").prev().prev().html(hTml)
             break
         case "di_pS":
             
-            var hTml= alternating.find(".di_pS_es").prev().prev().prev().html()
+            var hTml= alternating.find(".di_pS_es").prev().prev().prev().prev().prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}Para ${mulTiple_r(sortgnp([dInf.par, dInf.nombre].join("| ")), "y", "el amor de la vida de la Madre Naturaleza, La Que Hace Que Crezcan Los Árboles")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".di_pS_es").prev().prev().prev().html(hTml)
+            alternating.find(".di_pS_es").prev().prev().prev().prev().prev().prev().html(hTml)
 
             var hTml= alternating.find(".di_pS_es").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "y")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".di_pS_es").html(hTml)
 
-            var hTml= alternating.find(".di_pS_es").prev().html()
+            var hTml= alternating.find(".di_pS_es").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De ${mulTiple(sortgnp(dInf.par), "y")}, y ${dInf.es.hTRT} ${dInf.es.gentilicio} de la película ${eInf.name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".di_pS_es").prev().html(hTml)
+            alternating.find(".di_pS_es").prev().prev().html(hTml)
 
-            var hTml= alternating.find(".di_pS_en").prev().prev().prev().html()
+            var hTml= alternating.find(".di_pS_en").prev().prev().prev().prev().prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}For ${mulTiple_r(sortgnp([dInf.par, dInf.nombre].join("| ")), "and", "the love of the life of Mother Nature, She Who Makes Trees Grow")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".di_pS_en").prev().prev().prev().html(hTml)
+            alternating.find(".di_pS_en").prev().prev().prev().prev().prev().prev().html(hTml)
 
             var hTml= alternating.find(".di_pS_en").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${mulTiple(sortgnp(dInf.nombre), "and")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".di_pS_en").html(hTml)
 
-            var hTml= alternating.find(".di_pS_en").prev().html()
+            var hTml= alternating.find(".di_pS_en").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From ${mulTiple(sortgnp(dInf.par), "and")}, and the ${dInf.en.gentilicio} ${dInf.en.hTRT} of the movie ${eInf.name.nT.en} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".di_pS_en").prev().html(hTml)
+            alternating.find(".di_pS_en").prev().prev().html(hTml)
             break
         case "diS":
             dInf= eInf[Object.keys(eInf)[1]]
 
-            var hTml= alternating.find(".diS_es").prev().prev().prev().html()
+            var hTml= alternating.find(".diS_es").prev().prev().prev().prev().prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}Para ${mulTiple_crr(sortgnp(dInf.nombre), "y", "el amor de la vida de la Madre Naturaleza, La Que Hace Que Crezcan Los Árboles")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".diS_es").prev().prev().prev().html(hTml)
+            alternating.find(".diS_es").prev().prev().prev().prev().prev().prev().html(hTml)
 
             var hTml= alternating.find(".diS_es").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${capitalize(mulTiple(sortgnp(dInf.nombre), "y"))} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".diS_es").html(hTml)
 
-            var hTml= alternating.find(".diS_es").prev().html()
+            var hTml= alternating.find(".diS_es").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}De${de(dInf.es.hTRT)} ${dInf.es.gentilicio} de la película ${eInf.name.nT.es} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".diS_es").prev().html(hTml)
+            alternating.find(".diS_es").prev().prev().html(hTml)
 
-            var hTml= alternating.find(".diS_en").prev().prev().prev().html()
+            var hTml= alternating.find(".diS_en").prev().prev().prev().prev().prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}For ${mulTiple_crr(sortgnp(dInf.nombre), "and", "the love of the life of Mother Nature, She Who Makes Trees Grow")} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".diS_en").prev().prev().prev().html(hTml)
+            alternating.find(".diS_en").prev().prev().prev().prev().prev().prev().html(hTml)
 
             var hTml= alternating.find(".diS_en").html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${capitalize(mulTiple(sortgnp(dInf.nombre), "and"))} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".diS_en").html(hTml)
 
-            var hTml= alternating.find(".diS_en").prev().html()
+            var hTml= alternating.find(".diS_en").prev().prev().html()
             hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}From the ${dInf.en.gentilicio} ${dInf.en.hTRT} of the movie ${eInf.name.nT.en} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
-            alternating.find(".diS_en").prev().html(hTml)
+            alternating.find(".diS_en").prev().prev().html(hTml)
             break
         case "com":
             if(eInf.auC){
@@ -3887,6 +3887,17 @@ $(window).on("focus", function(e){
     }
 })
 
+$(".video .Enlarge").on("click", function(){
+    var vid = $(this).parent().find("video")[0];
+    vid.play();
+    if (vid.requestFullscreen) {
+      vid.requestFullscreen();
+    } else if (vid.mozRequestFullScreen) {
+      vid.mozRequestFullScreen();
+    } else if (vid.webkitRequestFullscreen) {
+      vid.webkitRequestFullscreen();
+    }
+});
 to_copy_to_clipboaRd= $("#to_copy_to_clipboaRd")
 dEP= "‼"
 aT= "@"
@@ -4922,6 +4933,9 @@ alternate= function(Smpqw){
     $("#to_copy_to_clipboaRd").text(`${decodeURI(window.location.origin)}${decodeURI(window.location.pathname)}#${alternatives[Object.keys(alternatives)[2]].name.name} (${alternatives[Object.keys(alternatives)[2]].name.hyphenation})`)
 }
 document.onkeyup= function(o){
+if(!o.shiftKey){
+    $(".edit").removeClass("shifted")
+}
 if(!o.shiftKey || !o.ctrlKey)ctrlMShift= false
 if(!o.ctrlKey)ctrl_k= false
 if("undefined"!=typeof useLinks && o.ctrlKey && o.altKey && o.keyCode==83){o.preventDefault();$(".nombre").toggleClass("activeforURIinfo");$(".nombre").hasClass("activeforURIinfo")?history.pushState("", document.title, window.location.pathname
@@ -4963,11 +4977,13 @@ if($(".accessibiliTyDialog").is(".visible")){
 window.onblur= function(){
     ctrlMShift= false
     ctrl_k= false
+    shift_k= false
+    $(".edit").removeClass("shifted")
     /*alternating= $(".nombre").filter(function(){if($(this).attr("contenteditable")=="true"){return true}}).parent();*/ $(".nombre").filter(function(){if($(this).attr("contenteditable")=="true"){return true}}).length?alternate(`superInformation`):192465;
     $(".nombre").attr("contenteditable", "false")
     $(".nokbwarning").addClass("visible")
 }
-document.addEventListener("keydown", function(e){if(e.shiftKey){ctrl_k= false}else if(e.ctrlKey){ctrl_k= true}if(e.shiftKey && e.ctrlKey){ctrlMShift= true}if(e.shiftKey && e.ctrlKey && e.altKey){e.preventDefault();$("#theater").css("display") == "block"?closeModal():1;$("#buscar input").val("");$("#buscar input").trigger("input");$("#buscar input").focus()}})
+document.addEventListener("keydown", function(e){if(e.shiftKey){shift_k= true; $(".edit").addClass("shifted")}if(e.ctrlKey){ctrl_k= true}if(e.shiftKey && e.ctrlKey){ctrlMShift= true}if(e.shiftKey && e.ctrlKey && e.altKey){e.preventDefault();$("#theater").css("display") == "block"?closeModal():1;$("#buscar input").val("");$("#buscar input").trigger("input");$("#buscar input").focus()}})
     $('#article .comentarios .Comentarios .comentario').on("mousemove", function(event){elx= $($(this).children()[0]); circleWidth = elx.outerWidth( true ),circleHeight  = elx.outerHeight( true ),circleLeft    = elx.offset().left,circleTop     = elx.offset().top,circlePos     = {x     : circleLeft + circleWidth / 2,y     : circleTop + circleHeight / 2,radius: circleWidth / 2};distance    = Math.sqrt( Math.pow( event.pageX - circlePos.x, 2 ) + Math.pow( event.pageY - circlePos.y, 2 ) );if(distance <= circlePos.radius){$($(this).children()[0]).css({"pointer-events": "all"});$($(this).children()[0]).css({"pointer-events": "all"});}else{$($(this).children()[0]).css({"pointer-events": "none"});$($(this).children()[0]).css({"pointer-events": "none"});}}); 
 
     $("#article .Respuestas").html(function(){return '<span class="Responder"></span>' + "Respuestas (" + $(this).parent().children().filter(".comentario.hidden").length + ")"}); 

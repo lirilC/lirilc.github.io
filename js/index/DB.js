@@ -1,6 +1,66 @@
 export function _index(){
 var index= {
     stories: [
+    "/A.K.A._Dizzy/pos/K82nd9clLd": {
+            user: {
+                username: "A.K.A._Dizzy",
+                users_name: "Luis Eduardo Gallego García",
+                profilePic: {
+                        "/A.K.A._Dizzy/img/1AzV0qwVwn": {
+                            type: "img",
+                            date: {
+                                full: "13 de Enero de 2022 a las 7:57 pm",
+                                min: "Enero de 2022"
+                            },
+                            city: {name: "Nariño", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG/250px-Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG", description: `Nariño es un municipio de Colombia, localizado en la subregión Oriente del departamento de Antioquia. Limita por el norte con los municipios de Sonsón y Argelia, por el este y sur con el departamento de Caldas y por el oeste con el municipio de Sonsón. </br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nari%C3%B1o_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+                            title: `You start truly appreciating life once you realize you're special, not better.`,
+                            description: ``,
+                            contents:  {image: "1AzV0qwVwn_tn.gif"},
+                            Comentarios: ""
+                        }
+                    },
+                rol:{
+                    rol: "CEO",
+                    level: "100"
+                },
+                tool:  `<div class='tool'>
+                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <div class='datos'>
+                                <ul class='actions'>
+                                    <li class='chatear' title='Chatear'>C</li>
+                                    <li class='agregar' title='Agregar'>A</li>
+                                    <li class='juzgar' title='Juzgar'>J</li>
+                                </ul>                  
+                                <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
+                                <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
+                            </div>
+                            <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
+                            <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
+                            <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
+                            <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
+                        </div>`
+            },
+            type: "links",
+            date: {
+                full: "28 de Mayo de 2023 a las 8:14 pm",
+                min: "28 de Mayo a las 8:14 pm"
+            },
+            title: `Regalos Para Mí (actualizado y en construcción)`,
+            description: ``,
+            contents:  `<containment>
+                            <section id="links">
+                                <a class="link" target="_blank" href="/A.K.A._Dizzy/blog/Regalos Para Mí"><span class="Title">Regalos Para Mí</span><span class="linktype">Blog</span></a>
+                                <a class="link" target="_blank" href="/A.K.A._Dizzy/blog/Algo Más Sobre Mí"><span class="Title">Algo Más Sobre Mí</span><span class="linktype">Blog</span></a>
+                            </section>
+                            <text>
+                                <br>
+                                <br>
+                                <p style="color: #aaa; text-align: left;">Como estoy tan demorado para corregir Algo Más Sobre Mí y Regalos Para Mí, les agregué algunas herramientas para que puedan hacerlo ustedes también, ¡es bastante entretenido y gratificante! Más información al principio de Regalos Para Mí. <br>&nbsp;&nbsp;DM me when you find the right ones!</p>
+                            </text>
+                        </containment>`,
+            Comentarios: ""
+        },
     "/A.K.A._Dizzy/pos/kdm0g0dTee", {
             user: {
                 username: "A.K.A._Dizzy",
@@ -55,11 +115,11 @@ var index= {
                             <text>
                                 <br>
                                 <br>
-                                <p style="color: #aaa; text-align: left;">Con muchas más funcionalidades y todos los "Cuídeme a las niñas" y "Take care of the ladies for me" corregidos, un nuevo Algo Más Sobre Mí; igual está en construcción. <br><br>&nbsp;&nbsp;En la última edición corregí los países, los departamentos (estados) y las ciudades, ahora sí está todo bien.<br><br>&nbsp;&nbsp;Ahora sí que corregí lo mismo que creí haber corregido en la edición anterior.<br><br>&nbsp;&nbsp;<s style="color:inherit">Creo que</s> ahora sí están bien todos los países y las ciudades.<br><br><br>&nbsp;&nbsp;¡Acabé de corregir todos los "Cuídeme a las niñas" y "Take care of the ladies for me"!, pero aún no he revisado las bases de datos; seguramente algunas empresas o productos no están en la lista en la que deberían estar.<br><br>&nbsp;&nbsp;<b>[…]</b>🙈<br><br>&nbsp;&nbsp;¡Editadooo! 🌴🤯🌟🌟🌟🌟😝🤑 Creo que ahora sí que arreglé los "Take care of the ladies for me" y los "Cuídeme a las niñas" de los países, los departamentos (estados) y las ciudades (en serio 😂) [Los países, los departamentos (estados) y las ciudades].<br><br>&nbsp;&nbsp;¡Mini-edición! 🌟 corregí algo (mi nombre) de los "Take care of the ladies for me" de las empresas grandes [Las empresas grandes].</p>
+                                <p style="color: #aaa; text-align: left;">Con muchas más funcionalidades y todos los "Cuídeme a las niñas" y "Take care of the ladies for me" corregidos, un nuevo Algo Más Sobre Mí; igual está en construcción. <br><br>&nbsp;&nbsp;En la última edición corregí los países, los departamentos (estados) y las ciudades, ahora sí está todo bien.<br><br>&nbsp;&nbsp;Ahora sí que corregí lo mismo que creí haber corregido en la edición anterior.<br><br>&nbsp;&nbsp;<s style="color:inherit">Creo que</s> ahora sí están bien todos los países y las ciudades.<br><br><br>&nbsp;&nbsp;¡Acabé de corregir todos los "Cuídeme a las niñas" y "Take care of the ladies for me"!, pero aún no he revisado las bases de datos; seguramente algunas empresas o productos no están en la lista en la que deberían estar.<br><br>&nbsp;&nbsp;<b>[…]</b>🙈<br><br>&nbsp;&nbsp;¡Editadooo! 🤔🤔🤔🤑🤑😜🤑🤑🤑😝😝 [Los países, los departamentos (estados) y las ciudades].<br><br>&nbsp;&nbsp;¡Editado! 😊🤑🤔😜😜✅ Creo que ya arreglé todos los "Take care of the ladies for me" de las compañías; además organicé las bases de datos de éstas. No he editado nada más [Las empresas grandes].<br><br>&nbsp;&nbsp;¡Editadooo! 🤔✅✅🤔💰💰🤑😝 Creo que ya arreglé también los "Take care of the ladies for me" y los "Cuídeme a las niñas" de los países, los departamentos (estados) y las ciudades [Los países, los departamentos (estados) y las ciudades].</p>
                             </text>
                         </containment>`,
             Comentarios: "",
-            Editado: [ 'type= "c"; edHistory= {"Editado el 15 de Mayo de 2023 a la 1:55 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/c6ba0b7b59bd19e373ba2889107d3718b8c958f9/pos/kdm0g0dTee.html", "Editado el 9 de Mayo de 2023 a las 9:7 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/480ecf868ac9b5dfe990cc0466a5ba2efa0e6638/pos/kdm0g0dTee.html", "Editado el 7 de Mayo de 2023 a las 9:20 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/00609f7ad315316f573325a7d8cc9e70c9e0cb27/pos/kdm0g0dTee.html", "Editado el 28 de Abril de 2023 a las 12:2 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/aa674bdcac4401bb76c346caee6a51067961f7fa/pos/kdm0g0dTee.html", "Editado el 27 de Abril de 2023 a las 7:40 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/d06622a9d21a48031570fa5ab08c72ebac11a6b9/pos/kdm0g0dTee.html", "Editado el 21 de Abril de 2023 a las 12:50 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/cb849bc9aba297de325f72aa2000c46c7493dcd6/pos/kdm0g0dTee.html", "Editado el 20 de Abril de 2023 a las 12:15 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/00de1bee94093cd044d94c42034e7948bdcc52ed/pos/kdm0g0dTee.html", "Editado el 19 de Abril de 2023 a las 9:57 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/7cd723ed4f5d503fe00d7cc1797b536fa94f202a/pos/kdm0g0dTee.html", "Editado el 17 de Abril de 2023 a las 8:12 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/16bff48bb8a86cb56287d60424f81b34b41ab02e/pos/kdm0g0dTee.html", "Editado el 11 de Abril de 2023 a las 4:34 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/3387a7c14d44dc2c80b795c1fecc65b0d8cffe46/pos/kdm0g0dTee.html", "Editado el 10 de Marzo de 2023 a las 4:24 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/2e21386ea5c531c7e2bcf30ba28f38ffe469cdbc/pos/kdm0g0dTee.html", "Editado el 4 de Marzo de 2023 a las 3:9 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/f67c2778ee5297ed1fb33ab807e75a88d6de06c4/pos/kdm0g0dTee.html", "Editado el 3 de Marzo de 2023 a las 9:40 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/c598ac10596bdb10d07ee8e4a528520e289032f6/pos/kdm0g0dTee.html", "Editado el 5 de Febrero de 2023 a la 1:7 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/db21ec804c9352254baf282bc0321493f92a7106/pos/kdm0g0dTee.html", "2 de Febrero de 2023 a la 1:17 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/ffc96d089a6bbfb588ac2e358ffd7433224be8f5/pos/kdm0g0dTee.html"}', "Editado el 15 de Mayo de 2023 a la 1:55 pm"]
+            Editado: [ 'type= "c"; edHistory= {"Editado el 9 de Mayo de 2023 a las 9:7 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/852992300ae3e10b2a55d1abc509897807abd3f9/pos/kdm0g0dTee.html", "Editado el 7 de Mayo de 2023 a las 9:20 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/623ce5b07a57b8acdaa831d8aa115c6f66bfef4f/pos/kdm0g0dTee.html", "Editado el 28 de Abril de 2023 a las 12:2 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/aa674bdcac4401bb76c346caee6a51067961f7fa/pos/kdm0g0dTee.html", "Editado el 27 de Abril de 2023 a las 7:40 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/d06622a9d21a48031570fa5ab08c72ebac11a6b9/pos/kdm0g0dTee.html", "Editado el 21 de Abril de 2023 a las 12:50 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/cb849bc9aba297de325f72aa2000c46c7493dcd6/pos/kdm0g0dTee.html", "Editado el 20 de Abril de 2023 a las 12:15 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/00de1bee94093cd044d94c42034e7948bdcc52ed/pos/kdm0g0dTee.html", "Editado el 19 de Abril de 2023 a las 9:57 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/7cd723ed4f5d503fe00d7cc1797b536fa94f202a/pos/kdm0g0dTee.html", "Editado el 17 de Abril de 2023 a las 8:12 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/16bff48bb8a86cb56287d60424f81b34b41ab02e/pos/kdm0g0dTee.html", "Editado el 11 de Abril de 2023 a las 4:34 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/3387a7c14d44dc2c80b795c1fecc65b0d8cffe46/pos/kdm0g0dTee.html", "Editado el 10 de Marzo de 2023 a las 4:24 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/2e21386ea5c531c7e2bcf30ba28f38ffe469cdbc/pos/kdm0g0dTee.html", "Editado el 4 de Marzo de 2023 a las 3:9 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/f67c2778ee5297ed1fb33ab807e75a88d6de06c4/pos/kdm0g0dTee.html", "Editado el 3 de Marzo de 2023 a las 9:40 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/c598ac10596bdb10d07ee8e4a528520e289032f6/pos/kdm0g0dTee.html", "Editado el 5 de Febrero de 2023 a la 1:7 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/db21ec804c9352254baf282bc0321493f92a7106/pos/kdm0g0dTee.html", "2 de Febrero de 2023 a la 1:17 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/ffc96d089a6bbfb588ac2e358ffd7433224be8f5/pos/kdm0g0dTee.html"}', "Editado el 9 de Mayo de 2023 a las 9:7 pm"]
         },
         "/A.K.A._Dizzy/pos/p413w4Mawl", {
             user: {
