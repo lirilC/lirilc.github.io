@@ -3305,7 +3305,8 @@ var $this
 var hashes= {}; 
 var nonBuilt; 
 var ctrlMShift= false; 
-var ctrl_k= false; 
+var ctrl_k= false;
+var shift_k= false; 
 function rvsdatefinder(e){
 var indc= -1
 for(ind in edHistory){
@@ -4215,6 +4216,7 @@ if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHisto
 })
 $(".nombre").on("click", function(){
     if(ctrlMShift){
+        console.log('this');
         if($(this).attr("contenteditable") == "true"){
             $(this).attr("contenteditable", "false") 
             alternating= $(this).parent(); alternate(`notSuperInformation`);
@@ -4938,6 +4940,7 @@ if(!o.shiftKey){
 }
 if(!o.shiftKey || !o.ctrlKey)ctrlMShift= false
 if(!o.ctrlKey)ctrl_k= false
+if(!o.shiftKey)shift_k= false
 if("undefined"!=typeof useLinks && o.ctrlKey && o.altKey && o.keyCode==83){o.preventDefault();$(".nombre").toggleClass("activeforURIinfo");$(".nombre").hasClass("activeforURIinfo")?history.pushState("", document.title, window.location.pathname
                                                        + window.location.search):134;}
 if(o.keyCode == 87 && o.ctrlKey && o.altKey){
