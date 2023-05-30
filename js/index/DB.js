@@ -1,7 +1,7 @@
 export function _index(){
 var index= {
     stories: [
-    "/A.K.A._Dizzy/pos/K82nd9clLd": {
+    "/A.K.A._Dizzy/pos/K82nd9clLd", {
             user: {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
