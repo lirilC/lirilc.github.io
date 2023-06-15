@@ -167,7 +167,7 @@ accentuaTe= function(f, aL, m){
                     cc= 1
                     s= ""
                     for(var fi= di - (!(f.length-1-di)? 0:1); (fi+1 && f[f.length-1-fi]!=" " && f[f.length-1-fi]!="-");fi--){
-                        if((aL=="e"?"&+,.0123456789abcdefghijklmnopqrstuvwxyz -'":"&+,.0123456789abcdefghijklmnñopqrstuvwxyz -'").indexOf(f[f.length-1-fi])+1 && !(Anti_joint.indexOf(f[f.length-fi])+1 || Chocolate.indexOf(f[f.length-2-fi])+1)){
+                        if((aL=="e"?"&+.0123456789abcdefghijklmnopqrstuvwxyz -'":"&+.0123456789abcdefghijklmnñopqrstuvwxyz -'").indexOf(f[f.length-1-fi])+1 && !(Anti_joint.indexOf(f[f.length-fi])+1 || Chocolate.indexOf(f[f.length-2-fi])+1)){
                             cc;
                             s= `${s}${f[f.length-1-fi]}`
                         }else{
@@ -189,7 +189,7 @@ accentuaTe= function(f, aL, m){
                         }
                     }
                     //alert(cc+(s.indexOf("'")+1?1:0))
-                    bW= `${bW}${Tms(cc+(s.indexOf("'")+1?1:0), `${s}${f[f.length-1-fi]=="-"?" ":"  " }`)}  `.replaceAll("'", "")
+                    bW= `${bW}${f[f.length-4-fi]==","?", ":"" }${f[f.length-4-fi]=="."?". ":"" }${f[f.length-4-fi]==";"?"; ":"" }${Tms(cc+(s.indexOf("'")+1?1:0), `${s}${f[f.length-1-fi]=="-"?" ":"  " }`)}  `.replaceAll("'", "")
                 }
             }
             Anti_joint= ["¡", "¿", "'"]; 
@@ -3285,14 +3285,14 @@ fill_daTa= function(type, superInf){
             alternating.find(".diS_en").prev().prev().html(hTml)
             break
         case "com":
-            if(eInf.auC){
-                alternating.find(".com_in").html(`Leyendo <i>por palabras</i>, en ${eInf.lang}, en este caso, y al revés, el lema de <i>${eInf.com}</i> en ${eInf.lang}, <i>${eInf.name.name}</i>, es perfectamente hasta el principio el nombre de la empresa <i>${eInf.com}</i>, y tiene un "Take care of the ladies for me", así:`)
-            }else{
+            if(!eInf.auC){
                 alternating.find(".com_in").html(`Leyendo <i>por palabras</i>, en ${eInf.lang}, en este caso, y derecho, el lema de <i>${eInf.com}</i> en ${eInf.lang}, <i>${eInf.name.name}</i>, es perfectamente hasta el final el nombre de la empresa <i>${eInf.com}</i>, y tiene un "Take care of the ladies for me", así:`)
+            }else{
+                alternating.find(".com_in").html(`Leyendo <i>por palabras</i>, en ${eInf.lang}, en este caso, y al revés, el lema de <i>${eInf.com}</i> en ${eInf.lang}, <i>${eInf.name.name}</i>, es perfectamente hasta el principio el nombre de la empresa <i>${eInf.com}</i>, y tiene un "Take care of the ladies for me", así:`)
             }
             break
         case "pro":
-            if(eInf.auC){
+            if(!eInf.auC){
                 alternating.find(".pro_in").html(`Leyendo <i>por palabras</i>, en ${eInf.lang}, en este caso, y derecho, el lema de <i>${eInf.pro}</i> en ${eInf.lang}, <i>${eInf.name.name}</i>, es perfectamente hasta el final el nombre de <i>${eInf.pro}</i>, y tiene un "Cuídeme a las niñas", así:`)
             }else{
                 alternating.find(".pro_in").html(`Leyendo <i>por palabras</i>, en ${eInf.lang}, en este caso, y al revés, el lema de <i>${eInf.pro}</i> en ${eInf.lang}, <i>${eInf.name.name}</i>, es perfectamente hasta el principio el nombre de <i>${eInf.pro}</i>, y tiene un "Cuídeme a las niñas", así:`)
@@ -3407,9 +3407,15 @@ var edition= function(e){
                     $("#setter")[0].innerHTML = "img{cursor:e-resize !important}"
                 },
                 stop: function() {
-                    $("#setter")[0].innerHTML = ""
+                    $("#setter")[0].innerHTML = "";
+                    $(".ui-resizable").width(function(){return `${$(this).width() * 100 / $(this).parent().width()}%`})
+
                 }
             });
+
+            jQuery('#text > p > b').filter(function(){return jQuery(this).text() == '⚠'? true: false}).each(function(){
+                observer.observe(jQuery(this)[0]); 
+            })
             break;
     }
 }
@@ -3824,6 +3830,63 @@ K0= function(){
 }
 $(document).on("ready",function(){ 
     purger.purge(); 
+
+
+function selectText(nodeId) {
+    const node = jQuery(nodeId)[0];
+
+    if (document.body.createTextRange) {
+        const range = document.body.createTextRange();
+        range.moveToElementText(node);
+        range.select();
+    } else if (window.getSelection) {
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(node);
+        selection.removeAllRanges();
+        selection.addRange(range);
+    } else {
+    }
+}
+
+function clearSelection()
+{
+ if (window.getSelection) {window.getSelection().removeAllRanges();}
+ else if (document.selection) {document.selection.empty();}
+}
+
+options = {
+  root: document,
+  rootMargin: "0px",
+  threshold: 1.0,
+};
+
+callback = (entries, observer) => {
+  entries.forEach((entry) => {
+        if(entry.intersectionRatio == 1 && typeof entry.target.blink_interval == "undefined"){
+            entry.target.blinks= 0;
+            entry.target.blink_interval= setInterval(function(){
+                if(entry.target.blinks <= 4){
+                    if(entry.target.blinks/2 == parseInt(entry.target.blinks/2)){
+                        selectText(entry.target)
+                    }else{
+                        clearSelection()
+                    }
+                    entry.target.blinks++
+                }else{
+                    clearInterval(entry.target.blink_interval)
+                    clearSelection()
+                    delete entry.target.blink_interval
+                }
+            }, 353)
+        }
+  });
+};
+observer = new IntersectionObserver(callback, options);
+
+jQuery('#text > p > b').filter(function(){return jQuery(this).text() == '⚠'? true: false}).each(function(){
+    observer.observe(jQuery(this)[0]); 
+})
 
 if("undefined"!=typeof $("h2").filter(function(){if($(this).text() == decodeURI(window.location.hash).slice(1)){return true}else{return false}})[0])$("h2").filter(function(){if($(this).text() == decodeURI(window.location.hash).slice(1)){return true}else{return false}})[0].scrollIntoView({block:"center"})
 
@@ -5718,3 +5781,29 @@ var play_Tts= function(text, lang){
 var selecTedText= function(){
     return (window.getSelection?window.getSelection():document.getSelection?document.getSelection():document.selection?document.selection.createRange():"falló obtener la selección").toString()
 }
+
+
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/

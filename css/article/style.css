@@ -1144,7 +1144,7 @@ sub, sux, xx
 }
 .ui-resizable-handle.ui-resizable-e { 
     position: absolute; 
-    right: 0; 
+    right: -6px; 
     background: white; 
     width: 6px; 
     height: 100%; 
