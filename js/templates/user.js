@@ -46,6 +46,207 @@ export function app (){
                           <div>
                           </div>
                       </aside>
+                      <div class="accessibiliTyDialog hot_keys chocolate full_Text"><aside class="hotKeys chocolate visible">
+                        <h3>Lista de atajos del teclado para el feed</h3>
+                        <table>
+                          <thead>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th>
+                                Siguiente publicación
+                              </th>
+                              <th>
+                                j
+                              </th>
+                            </tr>
+                            <tr>
+                              <th>
+                                Publicación anterior
+                              </th>
+                              <th>
+                                k
+                              </th>
+                            </tr>
+                            <tr>
+                              <th>
+                                Estelar publicación
+                              </th>
+                              <th>
+                                l
+                              </th>
+                            </tr>
+                            <tr>
+                              <th>
+                                Guardar publicación en tus marcadores
+                              </th>
+                              <th>
+                                b
+                              </th>
+                            </tr>
+                            <tr>
+                              <th>
+                                Abrir publicación en el <i>Theater</i>
+                              </th>
+                              <th>
+                                f
+                              </th>
+                            </tr>
+                            <tr>
+                              <th>
+                                Cerrar el <i>Theater</i>
+                              </th>
+                              <th>
+                                Esc
+                              </th>
+                            </tr>
+                            <tr>
+                              <th>
+                                Cerrar este diálogo
+                              </th>
+                              <th>
+                                Esc
+                              </th>
+                            </tr>
+                            <tr>
+                              <th>
+                                Empezar una búsqueda en liril
+                              </th>
+                              <th>
+                                Control + Shift + Alt
+                              </th>
+                            </tr>
+                            <tr>
+                              <th>
+                                Resultado de búsqueda siguiente (de una búsqueda de liril)
+                              </th> 
+                              <th>
+                                ↑
+                              </th>
+                            </tr>
+                            <tr>
+                              <th>
+                                Resultado de búsqueda anterior (de una búsqueda de liril)
+                              </th> 
+                              <th>
+                                ↓
+                              </th>
+                            </tr>
+                            <tr>
+                              <th>
+                                Siguiente elemento (de un carrusel)
+                              </th>
+                              <th>
+                                →
+                              </th>
+                            </tr>
+                            <tr>
+                              <th>
+                                Elemento anterior (de un carrusel)
+                              </th>
+                              <th>
+                                ←
+                              </th>
+                            </tr>
+                            <tr>
+                              <th>
+                                Subir el volumen (de un vídeo)
+                              </th> 
+                              <th>
+                                ↑
+                              </th>
+                            </tr>
+                            <tr>
+                              <th>
+                                Bajar el volumen (de un vídeo)
+                              </th> 
+                              <th>
+                                ↓
+                              </th>
+                            </tr>
+                            <tr>
+                              <th>
+                                Si quieres adelantar o atrasar un vídeo en un carrusel
+                              </th> 
+                              <th>
+                                Control + Shift
+                              </th>
+                            </tr>
+                            <tr>
+                              <th>
+                                Para dejar de hacer lo anterior
+                              </th> 
+                              <th>
+                                Control + Shift
+                              </th>
+                            </tr>
+                            <tr>
+                              <th>
+                                Adelantar (un vídeo)
+                              </th> 
+                              <th>
+                                →
+                              </th>
+                            </tr>
+                            <tr>
+                              <th>
+                                Atrasar (un vídeo)
+                              </th> 
+                              <th>
+                                ←
+                              </th>
+                            </tr>
+                            <tr>
+                              <th>
+                                Adelantar más (un vídeo)
+                              </th> 
+                              <th>
+                                Control + →
+                              </th>
+                            </tr>
+                            <tr>
+                              <th>
+                                Atrasar más (un vídeo)
+                              </th> 
+                              <th>
+                                Control + ←
+                              </th>
+                            </tr>
+                            <tr>
+                              <th>
+                                Adelantar menos (un vídeo)
+                              </th> 
+                              <th>
+                                Shift + →
+                              </th>
+                            </tr>
+                            <tr>
+                              <th>
+                                Atrasar menos (un vídeo)
+                              </th> 
+                              <th>
+                                Shift + ←
+                              </th>
+                            </tr>
+                            <tr>
+                              <th>
+                                Explorar (un vídeo)
+                              </th> 
+                              <th>
+                                0 - 9
+                              </th>
+                            </tr>
+                            <tr>
+                              <th>
+                                Silenciar (un vídeo)
+                              </th> 
+                              <th>
+                                m
+                              </th>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </aside></div>
                       <section id="wrapper" class="theater"></section>
                       <style class="zer">
                       </style>

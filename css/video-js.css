@@ -342,6 +342,9 @@ bottom: 0;
   display: block !important
 
 }
+.seekable .vjs-progress-holder {
+  border: 1px solid #f2c14c !important;
+}
 .vjs-default-skin .vjs-progress-holder.opened {
   display: none !important
 }
