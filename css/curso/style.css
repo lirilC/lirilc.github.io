@@ -927,3 +927,44 @@ display: block;
 .widget.select.selectedWidget {
     opacity: 0.5;
 }
+
+.marker-n {
+  position: absolute;
+  top: calc(50% - 37px);
+  width: 7px;
+  height: 3px;
+  left: -3px;
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
+.marker-s {
+  position: absolute;
+  top: calc(50% + 37px);
+  width: 7px;
+  height: 3px;
+  left: -3px;
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
+.marker-e {
+  position: absolute;
+  left: calc(50% - 37px);
+  width: 3px;
+  height: 7px;
+  top: -3px;
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
+.marker-w {
+  position: absolute;
+  left: calc(50% + 37px);
+  width: 3px;
+  height: 7px;
+  top: -3px;
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
+.widgetero > div > .saved {
+    border-color: #eeca75;
+    background: #eeca75;
+}

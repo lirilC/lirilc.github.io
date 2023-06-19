@@ -217,6 +217,119 @@ if($(".select").is(".on") && $("#customizationBars").hasClass("open")){
 	$(".horizontalredlight").css({"display": "none"})
 	$(".verticalredlight").css({"display": "none"})
 }
+
+n_marker= {
+x: parseInt($(".verticalredlight").css("left")),
+y: parseInt($(".verticalredlight").css("top")) + parseInt($(".verticalredlight").css("height")) / 2 - 37
+}
+s_marker= {
+x: parseInt($(".verticalredlight").css("left")),
+y: parseInt($(".verticalredlight").css("top")) + parseInt($(".verticalredlight").css("height")) / 2 + 37
+}
+e_marker= {
+x: parseInt($(".horizontalredlight").css("left")) + parseInt($(".horizontalredlight").css("width")) / 2 - 37,
+y: parseInt($(".horizontalredlight").css("top")) 
+}
+w_marker= {
+x: parseInt($(".horizontalredlight").css("left")) + parseInt($(".horizontalredlight").css("width")) / 2 + 37,
+y: parseInt($(".horizontalredlight").css("top"))
+}
+var closest_y_n= {dist: Infinity, elem: null}
+var closest_y_s= {dist: Infinity, elem: null}
+var closest_x_e= {dist: Infinity, elem: null}
+var closest_x_w= {dist: Infinity, elem: null}
+$(".widgetero .widget").filter(function(){
+this.border={
+top: parseInt($(this).css("top")), 
+bottom: parseInt($(this).css("top")) + parseInt($(this).css("height")), 
+left: parseInt($(this).css("left")), 
+right: parseInt($(this).css("left")) + parseInt($(this).css("width"))
+}
+if(n_marker.x >= this.border.left && n_marker.x <= this.border.right){
+	if(Math.abs(closest_y_n.dist) > Math.abs(n_marker.y - this.border.top)){
+		closest_y_n= {
+			dist: (n_marker.y + 1 - this.border.top),
+			elem: $(this)
+		}
+	}
+	if(Math.abs(closest_y_n.dist) > Math.abs(n_marker.y - this.border.bottom)){
+		closest_y_n= {
+			dist: (n_marker.y - this.border.bottom + 2),
+			elem: $(this)
+		}
+	}
+}
+if(s_marker.x >= this.border.left && s_marker.x <= this.border.right){
+	if(Math.abs(closest_y_s.dist) > Math.abs(s_marker.y - this.border.top)){
+		closest_y_s= {
+			dist: (s_marker.y + 1 - this.border.top),
+			elem: $(this)
+		}
+	}
+	if(Math.abs(closest_y_s.dist) > Math.abs(s_marker.y - this.border.bottom)){
+		closest_y_s= {
+			dist: (s_marker.y - this.border.bottom + 2),
+			elem: $(this)
+		}
+	}
+}
+if(e_marker.y >= this.border.top && e_marker.y <= this.border.bottom){
+	if(Math.abs(closest_x_e.dist) > Math.abs(e_marker.x - this.border.left)){
+		closest_x_e= {
+			dist: (e_marker.x + 1 - this.border.left),
+			elem: $(this)
+		}
+	}
+	if(Math.abs(closest_x_e.dist) > Math.abs(e_marker.x - this.border.right)){
+		closest_x_e= {
+			dist: (e_marker.x - this.border.right + 2),
+			elem: $(this)
+		}
+	}
+}
+if(w_marker.y >= this.border.top && w_marker.y <= this.border.bottom){
+	if(Math.abs(closest_x_w.dist) > Math.abs(w_marker.x - this.border.left)){
+		closest_x_w= {
+			dist: (w_marker.x + 1 - this.border.left),
+			elem: $(this)
+		}
+	}
+	if(Math.abs(closest_x_w.dist) > Math.abs(w_marker.x - this.border.right)){
+		closest_x_w= {
+			dist: (w_marker.x - this.border.right + 2),
+			elem: $(this)
+		}
+	}
+}
+})
+if(closest_y_n.dist !== Infinity){
+	if(Math.abs(closest_y_n.dist)<=5 && $(".magnet").is(".on")){
+		$(".verticalredlight .marker-n").css({"top": `calc(50% - 37px - ${closest_y_n.dist}px)`})
+	}else{
+		$(".verticalredlight .marker-n").css({"top": ``})
+	}
+}
+if(closest_y_s.dist !== Infinity){
+	if(Math.abs(closest_y_s.dist)<=5 && $(".magnet").is(".on")){
+		$(".verticalredlight .marker-s").css({"top": `calc(50% + 37px - ${closest_y_s.dist}px)`})
+	}else{
+		$(".verticalredlight .marker-s").css({"top": ``})
+	}
+}
+if(closest_x_e.dist !== Infinity){
+	if(Math.abs(closest_x_e.dist)<=5 && $(".magnet").is(".on")){
+		$(".horizontalredlight .marker-e").css({"left": `calc(50% - 37px - ${closest_x_e.dist}px)`})
+	}else{
+		$(".horizontalredlight .marker-e").css({"left": ``})
+	}
+}
+if(closest_x_w.dist !== Infinity){
+	if(Math.abs(closest_x_w.dist)<=5 && $(".magnet").is(".on")){
+		$(".horizontalredlight .marker-w").css({"left": `calc(50% + 37px - ${closest_x_w.dist}px)`})
+	}else{
+		$(".horizontalredlight .marker-w").css({"left": ``})
+	}
+}
 })
 $(document).on("keydown", function(r){switch(r.keyCode){
   case 81:
@@ -883,7 +996,9 @@ function controls(a, xa){
 
 purger= {}; 
             
-purger.index= 25;
+purger.index= 24
+.index= 25
+.index= 25;
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return
