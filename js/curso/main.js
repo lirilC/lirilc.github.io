@@ -200,6 +200,9 @@ cursorAt: { left: $('.widgetero .widget').last().width() / 2 },
 		}      
     }
 })
+if($(".button.select").is(".on")){
+	$('.widgetero .widget').last().addClass("select")
+}
 $('.widgetero .widget').last().css({
 	left: e.pageX - $('.widgetero .widget').last().width()/2,
 	top: e.pageY -($('.widgetero .widget').last().height()/2)}).trigger(e)
@@ -331,6 +334,107 @@ if(closest_x_w.dist !== Infinity){
 	}
 }
 })
+/////////////////////////////////////
+saved= {}
+help_= 0
+$(document).on("keydown", function(l){
+if(l.keyCode== 27){
+	if($(".hot_keys").is(".visible")){
+		$(".hot_keys").removeClass("visible")
+	}else{
+		if(help_== 1){
+			$(".hot_keys").addClass("visible")
+			help_= 0
+		}
+		if(!help_){
+			help_++
+			setTimeout(function(){
+				help_= 0
+			}, 1000)
+		}
+	}
+}
+	if(!mouseDown || !$(".button.select").is(".on"))return;
+	switch(l.keyCode){
+		case 50:
+			if(typeof saved.s == "undefined" || (typeof saved.s != "undefined" && (parseInt( $(".marker-n").parent().css("top")) + parseInt( $(".marker-n").parent().css("height")) / 2 - 37 ) < saved.s)){
+				if($(".marker-n").is(".saved")){
+					$(".marker-n").removeClass("saved");
+					delete saved.n
+					$($(".greylight.x")[0]).css({"top": ``, "display": "", "left": ``})
+				}else{
+					$(".marker-n").addClass("saved");
+					saved.n= parseInt( $(".marker-n").parent().css("top")) + parseInt( $(".marker-n").parent().css("height")) / 2 - 37 + 1
+					$($(".greylight.x")[0]).css({"top": `${saved.n}px`, "display": "block"})
+				}
+			}else{
+				$(".marker-n").addClass("save_failed")
+			}
+			break;
+		case 51:
+			if(typeof saved.e == "undefined" || (typeof saved.e != "undefined" && (parseInt( $(".marker-w").parent().css("left")) + parseInt( $(".marker-w").parent().css("width")) / 2 + 37) > saved.e)){
+				if($(".marker-w").is(".saved")){
+					$(".marker-w").removeClass("saved");
+					delete saved.w
+					$($(".greylight.y")[0]).css({"top": ``, "display": "", "left": ``})
+				}else{
+					$(".marker-w").addClass("saved");
+					saved.w= parseInt( $(".marker-w").parent().css("left")) + parseInt( $(".marker-w").parent().css("width")) / 2 + 37 + 1
+					$($(".greylight.y")[0]).css({"left": `${saved.w}px`, "display": "block"})
+				}
+			}else{
+				$(".marker-w").addClass("save_failed")
+			}
+			break;
+		case 52:
+			if(typeof saved.n == "undefined" || (typeof saved.n != "undefined" && (parseInt( $(".marker-s").parent().css("top")) + parseInt( $(".marker-s").parent().css("height")) / 2 + 37) > saved.n)){
+				if($(".marker-s").is(".saved")){
+					$(".marker-s").removeClass("saved");
+					delete saved.s
+					$($(".greylight.x")[1]).css({"top": ``, "display": "", "left": ``})
+
+				}else{
+					$(".marker-s").addClass("saved");
+					saved.s= parseInt( $(".marker-s").parent().css("top")) + parseInt( $(".marker-s").parent().css("height")) / 2 + 37 + 1
+					$($(".greylight.x")[1]).css({"top": `${saved.s}px`, "display": "block"})
+				}
+			}else{
+				$(".marker-s").addClass("save_failed")
+			}
+			break;
+		case 49:
+			if(typeof saved.w == "undefined" || (typeof saved.w != "undefined" && (parseInt( $(".marker-e").parent().css("left")) + parseInt( $(".marker-e").parent().css("width")) / 2 - 37) < saved.w)){
+				if($(".marker-e").is(".saved")){
+					$(".marker-e").removeClass("saved");
+					delete saved.e
+					$($(".greylight.y")[1]).css({"top": ``, "display": "", "left": ``})
+				}else{
+					$(".marker-e").addClass("saved");
+					saved.e= parseInt( $(".marker-e").parent().css("left")) + parseInt( $(".marker-e").parent().css("width")) / 2 - 37 + 1
+					$($(".greylight.y")[1]).css({"left": `${saved.e}px`, "display": "block"})
+				}
+			}else{
+				$(".marker-e").addClass("save_failed")
+				setTimeout(function(){$(".marker-e").removeClass("save_failed")}, 1500)
+			}
+			break;
+	}
+})
+mouseDown= false
+$(document).on("mousedown", function(){
+mouseDown= true
+})
+$(document).on("mouseup", function(){
+mouseDown= false
+$(".greylight").css({"top": ``, "display": "", "left": ``})
+$(".saved").removeClass("saved")
+})
+$(window).on("blur", function(){
+mouseDown= false
+$(".greylight").css({"top": ``, "display": "", "left": ``})
+$(".saved").removeClass("saved")
+})
+/////////////////////////////////////
 $(document).on("keydown", function(r){switch(r.keyCode){
   case 81:
 			controls(null, "resize")
@@ -410,7 +514,19 @@ $(document).mouseup(function(e) {
     					neaRestRight= parseInt($(intersected).css("left"))
     				}
     			})
+    			neaRestBottom= typeof saved.s != "undefined"?saved.s:neaRestBottom
+    			neaRestTop= typeof saved.n != "undefined"?saved.n:neaRestTop
+    			neaRestLeft= typeof saved.e != "undefined"?saved.e:neaRestLeft
+    			neaRestRight= typeof saved.w != "undefined"?saved.w:neaRestRight
+
+				delete saved.s
+				delete saved.n
+				delete saved.e
+				delete saved.w
+
+    	
     			$(".widget.selectedWidget").css({"height": `${(neaRestBottom == 10000? (mouseY - 46> (parseInt($(".widgetero").css("margin-top")) - 46 + $(".widgetero").height()))?$(".widgetero").height() + parseInt($(".widgetero").css("margin-top")) - 46:$(".widgetero").height(): neaRestBottom) - (neaRestTop == -10000? (mouseY - 46 < parseInt($(".widgetero").css("margin-top")) - 46)?-parseInt($(".widgetero").css("margin-top")) + 46: 0: neaRestTop)}px`})
+	
 				$(".widget.selectedWidget").css({"width": `${(neaRestRight == 10000? (mouseX > parseInt($(".widgetero").css("margin-left")) + $(".widgetero").width())?$(".widgetero").width() + parseInt($(".widgetero").css("margin-left")):$(".widgetero").width(): neaRestRight) - (neaRestLeft == -10000?mouseX < parseInt($(".widgetero").css("margin-left"))?-parseInt($(".widgetero").css("margin-left")): 0: neaRestLeft)}px`})
 				$(".widget.selectedWidget").css({"top": `${neaRestTop == -10000? (mouseY - 46 < parseInt($(".widgetero").css("margin-top")) - 46)?-parseInt($(".widgetero").css("margin-top")) + 46:0: neaRestTop}px`})
 				$(".widget.selectedWidget").css({"left": `${neaRestLeft == -10000?mouseX < parseInt($(".widgetero").css("margin-left"))?-parseInt($(".widgetero").css("margin-left")): 0: neaRestLeft}px`})
