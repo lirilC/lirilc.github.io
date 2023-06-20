@@ -357,14 +357,14 @@ if(l.keyCode== 27){
 	if(!mouseDown || !$(".button.select").is(".on"))return;
 	switch(l.keyCode){
 		case 50:
-			if(typeof saved.s == "undefined" || (typeof saved.s != "undefined" && (parseInt( $(".marker-n").parent().css("top")) + parseInt( $(".marker-n").parent().css("height")) / 2 - 37 ) < saved.s)){
+			if(typeof saved.s == "undefined" || (typeof saved.s != "undefined" && (parseInt( $(".marker-n").parent().css("top")) + parseInt( $(".marker-n").parent().css("height")) / 2 + (parseInt($(".marker-n").css("top"))- parseInt($(".verticalredlight").css("height")) / 2) ) < saved.s)){
 				if($(".marker-n").is(".saved")){
 					$(".marker-n").removeClass("saved");
 					delete saved.n
 					$($(".greylight.x")[0]).css({"top": ``, "display": "", "left": ``})
 				}else{
 					$(".marker-n").addClass("saved");
-					saved.n= parseInt( $(".marker-n").parent().css("top")) + parseInt( $(".marker-n").parent().css("height")) / 2 - 37 + 1
+					saved.n= parseInt( $(".marker-n").parent().css("top")) + parseInt( $(".marker-n").parent().css("height")) / 2 + (parseInt($(".marker-n").css("top"))- parseInt($(".verticalredlight").css("height")) / 2) + 1
 					$($(".greylight.x")[0]).css({"top": `${saved.n}px`, "display": "block"})
 				}
 			}else{
@@ -372,14 +372,14 @@ if(l.keyCode== 27){
 			}
 			break;
 		case 51:
-			if(typeof saved.e == "undefined" || (typeof saved.e != "undefined" && (parseInt( $(".marker-w").parent().css("left")) + parseInt( $(".marker-w").parent().css("width")) / 2 + 37) > saved.e)){
+			if(typeof saved.e == "undefined" || (typeof saved.e != "undefined" && (parseInt( $(".marker-w").parent().css("left")) + parseInt( $(".marker-w").parent().css("width")) / 2 + (parseInt($(".marker-w").css("left"))- parseInt($(".horizontalredlight").css("width")) / 2)) > saved.e)){
 				if($(".marker-w").is(".saved")){
 					$(".marker-w").removeClass("saved");
 					delete saved.w
 					$($(".greylight.y")[0]).css({"top": ``, "display": "", "left": ``})
 				}else{
 					$(".marker-w").addClass("saved");
-					saved.w= parseInt( $(".marker-w").parent().css("left")) + parseInt( $(".marker-w").parent().css("width")) / 2 + 37 + 1
+					saved.w= parseInt( $(".marker-w").parent().css("left")) + parseInt( $(".marker-w").parent().css("width")) / 2 + (parseInt($(".marker-w").css("left"))- parseInt($(".horizontalredlight").css("width")) / 2) + 1
 					$($(".greylight.y")[0]).css({"left": `${saved.w}px`, "display": "block"})
 				}
 			}else{
@@ -387,7 +387,7 @@ if(l.keyCode== 27){
 			}
 			break;
 		case 52:
-			if(typeof saved.n == "undefined" || (typeof saved.n != "undefined" && (parseInt( $(".marker-s").parent().css("top")) + parseInt( $(".marker-s").parent().css("height")) / 2 + 37) > saved.n)){
+			if(typeof saved.n == "undefined" || (typeof saved.n != "undefined" && (parseInt( $(".marker-s").parent().css("top")) + parseInt( $(".marker-s").parent().css("height")) / 2 + (parseInt($(".marker-s").css("top"))- parseInt($(".verticalredlight").css("height")) / 2)) > saved.n)){
 				if($(".marker-s").is(".saved")){
 					$(".marker-s").removeClass("saved");
 					delete saved.s
@@ -395,7 +395,7 @@ if(l.keyCode== 27){
 
 				}else{
 					$(".marker-s").addClass("saved");
-					saved.s= parseInt( $(".marker-s").parent().css("top")) + parseInt( $(".marker-s").parent().css("height")) / 2 + 37 + 1
+					saved.s= parseInt( $(".marker-s").parent().css("top")) + parseInt( $(".marker-s").parent().css("height")) / 2 + (parseInt($(".marker-s").css("top"))- parseInt($(".verticalredlight").css("height")) / 2) + 1
 					$($(".greylight.x")[1]).css({"top": `${saved.s}px`, "display": "block"})
 				}
 			}else{
@@ -403,14 +403,14 @@ if(l.keyCode== 27){
 			}
 			break;
 		case 49:
-			if(typeof saved.w == "undefined" || (typeof saved.w != "undefined" && (parseInt( $(".marker-e").parent().css("left")) + parseInt( $(".marker-e").parent().css("width")) / 2 - 37) < saved.w)){
+			if(typeof saved.w == "undefined" || (typeof saved.w != "undefined" && (parseInt( $(".marker-e").parent().css("left")) + parseInt( $(".marker-e").parent().css("width")) / 2 + (parseInt($(".marker-e").css("left"))- parseInt($(".horizontalredlight").css("width")) / 2)) < saved.w)){
 				if($(".marker-e").is(".saved")){
 					$(".marker-e").removeClass("saved");
 					delete saved.e
 					$($(".greylight.y")[1]).css({"top": ``, "display": "", "left": ``})
 				}else{
 					$(".marker-e").addClass("saved");
-					saved.e= parseInt( $(".marker-e").parent().css("left")) + parseInt( $(".marker-e").parent().css("width")) / 2 - 37 + 1
+					saved.e= parseInt( $(".marker-e").parent().css("left")) + parseInt( $(".marker-e").parent().css("width")) / 2 + (parseInt($(".marker-e").css("left"))- parseInt($(".horizontalredlight").css("width")) / 2) + 1
 					$($(".greylight.y")[1]).css({"left": `${saved.e}px`, "display": "block"})
 				}
 			}else{
