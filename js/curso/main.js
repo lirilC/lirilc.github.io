@@ -182,7 +182,7 @@ $('.widgetero .widget').last().draggable({
 	snapTolerance: 30,
 	grid: ($("#gridWidth").val() == "0" && $("#gridHeight").val() == "0") || !gridSnapping? false: [parseInt($("#gridWidth").val()), parseInt($("#gridHeight").val())],
 containment: "window",
-cursorAt: { left: $('.widgetero .widget').last().width() / 2 },
+cursorAt: { left: $('.widgetero .widget').last().width() / 2, top: $('.widgetero .widget').last().height() / 2},
 	revert: false,
     start: function(event, ui) {
     	if(!$('.widgetero .widget').last().hasClass("dropped")){ 
@@ -257,7 +257,7 @@ if(n_marker.x >= this.border.left && n_marker.x <= this.border.right){
 	}
 	if(Math.abs(closest_y_n.dist) > Math.abs(n_marker.y - this.border.bottom)){
 		closest_y_n= {
-			dist: (n_marker.y - this.border.bottom + 2),
+			dist: (n_marker.y - this.border.bottom + 1),
 			elem: $(this)
 		}
 	}
@@ -271,7 +271,7 @@ if(s_marker.x >= this.border.left && s_marker.x <= this.border.right){
 	}
 	if(Math.abs(closest_y_s.dist) > Math.abs(s_marker.y - this.border.bottom)){
 		closest_y_s= {
-			dist: (s_marker.y - this.border.bottom + 2),
+			dist: (s_marker.y - this.border.bottom + 1),
 			elem: $(this)
 		}
 	}
@@ -285,7 +285,7 @@ if(e_marker.y >= this.border.top && e_marker.y <= this.border.bottom){
 	}
 	if(Math.abs(closest_x_e.dist) > Math.abs(e_marker.x - this.border.right)){
 		closest_x_e= {
-			dist: (e_marker.x - this.border.right + 2),
+			dist: (e_marker.x - this.border.right + 1),
 			elem: $(this)
 		}
 	}
@@ -299,7 +299,7 @@ if(w_marker.y >= this.border.top && w_marker.y <= this.border.bottom){
 	}
 	if(Math.abs(closest_x_w.dist) > Math.abs(w_marker.x - this.border.right)){
 		closest_x_w= {
-			dist: (w_marker.x - this.border.right + 2),
+			dist: (w_marker.x - this.border.right + 1),
 			elem: $(this)
 		}
 	}
