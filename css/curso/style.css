@@ -96,7 +96,7 @@ header nav ul li#right-menu {
     position: absolute;
     right: 0;
     top: 0;
-    z-index: 2;
+    z-index: 3;
 }
 header nav ul li#right-menu #profileSettings.open {
     background-color: #fff;
@@ -343,7 +343,7 @@ width: 100%}
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
  #customizationBars{
     display: none;
@@ -1178,7 +1178,7 @@ th:first-child {
   background: white;
   height: calc(100vh - 46px - 15px);
   top: 46px;
-  z-index: 3;
+  z-index: 2;
   display: none;
 }
 #completion_info.visible {
