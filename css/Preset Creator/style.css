@@ -1281,8 +1281,8 @@ normal #fff*/
     height: 50%;
     box-sizing: border-box;
     position: absolute;
-    bottom: 0;
-    border-right: solid 2px #27ae60;
+    bottom: 20px;
+    height: 80px;
 }
 #actions .tabs
 {
@@ -1532,7 +1532,7 @@ iframe
 } 
 .selectedWidget.select
 {
-    border: 1px solid #6D8FE0;
+    outline: 1px solid #6D8FE0;
 
 }
 .ui-resizable-handle
@@ -1762,4 +1762,59 @@ background-color: #ddd}
 .vjs-tt-cue {
     color: #f9fbf8;
     text-shadow: -1px 0 1px #847f7f, 0 1px 1px #847f7f, 1px 0 1px #847f7f, 0 -1px 1px #847f7f;
+}
+
+.preset_drawings_svg {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.widgetero input {
+  border: 1px solid #bbb;
+  border-bottom-width: 3px;
+  color: #31554c;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  box-sizing: border-box;
+}
+.widgetero button {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #d89d32;
+}
+.widgetero button::after {
+    font-family: "icomoon";
+    content: "\ea10";
+    color: #d69c31;
+    text-align: center;
+}
+svg{
+    position: absolute;
+}
+.second_ {
+    z-index: 5;
+}
+.multiple_option {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background: #803357;
+  text-align: center;
+  color: #282d22;
+}
+.multiple_option ul {
+  padding: 0;
+}
+.multiple_option ul li {
+  background: white;
+  margin-bottom: 3px;
+  padding: 3px 5px;
+  color: #282d22;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.multiple_option ul li:hover {
+  background: #dfdede;
+  outline: 1px solid #9dbaf2;
 }

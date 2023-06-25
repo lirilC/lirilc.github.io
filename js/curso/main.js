@@ -38,6 +38,11 @@ var copiedWidget;
 var snapping = true;
 var gridSnapping = false;
 var firstPlay = false;
+let noTify= function(text_symbol){
+	var Title= $("title").text();
+    $("title").text(` ${typeof text_symbol != "undefined"? text_symbol: '⊙'} ${$("title").text()}`)
+    setTimeout(function(){$("title").text(Title)}, 2100)
+}
 pasted = true;
 type = "none";
 copiedTop = 0;
@@ -72,11 +77,22 @@ $(".widgetero").css({
 "width": "",
 "margin-top": 46,
 "margin-left": ""})
+$(".presetter").css({
+"height": "",
+"width": "",
+"margin-top": 46,
+"margin-left": ""})
 if(getSpace().top){
 $(".widgetero").css({
 "height": ($("body").height() - 46) / 2 - getSpace().top * 2,
+"margin-top": getSpace().top + 46})
+$(".presetter").css({
+"height": ($("body").height() - 46) / 2 - getSpace().top * 2,
 "margin-top": getSpace().top + 46})}else{
 $(".widgetero").css({
+"width": $("body").width() / 2 - getSpace().left * 2,
+"margin-left": getSpace().left})
+$(".presetter").css({
 "width": $("body").width() / 2 - getSpace().left * 2,
 "margin-left": getSpace().left})
 }}else{
@@ -85,11 +101,22 @@ $(".widgetero").css({
 "width": "",
 "margin-top": 46,
 "margin-left": ""})
+$(".presetter").css({
+"height": "",
+"width": "",
+"margin-top": 46,
+"margin-left": ""})
 if(getSpace().top){
 $(".widgetero").css({
 "height": $("body").height() - 61 - getSpace().top * 2,
+"margin-top": getSpace().top + 46})
+$(".presetter").css({
+"height": $("body").height() - 61 - getSpace().top * 2,
 "margin-top": getSpace().top + 46})}else{
 $(".widgetero").css({
+"width": $("body").width() - getSpace().left * 2,
+"margin-left": getSpace().left})
+$(".presetter").css({
 "width": $("body").width() - getSpace().left * 2,
 "margin-left": getSpace().left})
 }}	
@@ -101,7 +128,51 @@ sizeWidgetero()
 }
 $(document).on("ready",function(){
 	purger.purge(); 
-				
+
+caSe= function(i){ 
+    for(eForensics in i){ 
+        if(parseInt(eForensics) != i.length - 1 && ($('video')[$('video').length - 1].currentTime >= i[eForensics][0] && $('video')[$('video').length - 1].currentTime < i[parseInt(eForensics) + 1][0]) || (parseInt(eForensics) == i.length - 1 && $('video')[$('video').length - 1].currentTime >= i[eForensics][0])){
+        	$('.presetter')[0].innerHTML != i[eForensics][1]? $('.presetter')[0].innerHTML= i[eForensics][1]: 1
+        }
+    } 
+} 
+
+observer= new MutationObserver(function(mutationRecords){ ill= mutationRecords; for(eForensics in ill[0].addedNodes){(ill[0].addedNodes[eForensics].outerHTML && ill[0].addedNodes[eForensics].outerHTML.indexOf("Pausar") != -1)? $("video")[$("video").length - 1].pause(): 1; }; }); 
+console.log('$("video")[$("video").length - 1].style.opacity= 0.045534; '); 
+
+__checks=[];
+_check= function(E, w){
+    $("video")[$("video").length - 1].play()
+    switch(E){
+        case 1:
+            __checks[1-1] =($(`.input${E}`).val() == "11"? 1: 0)
+            break;
+        case 2:
+            __checks[2-1] =($(`.input${E}`).val() == "3"? 1: 0)
+            break;
+        case 3:
+            __checks[3-1] =($(`.input${E}`).val() == "1"? 1: 0)
+            break;
+        case 4:
+            __checks[4-1] =($(`.input${E}`).val() == "6"? 1: 0)
+            break;
+        case 5:
+            __checks[5-1] =($(`.input${E}`).val() == "4"? 1: 0)
+            break;
+        case 6:
+            __checks[6-1] =(w == "0"? 1: 0)
+            break;
+        case 7:
+            __checks[7-1] =($(`.input${E}`).val().toLowerCase() == "casa"? 1: 0)
+            break;
+    }
+}
+_c= function(a, b){
+	if(typeof __checks[a] == "undefined" || typeof __checks[a] != "undefined" && __checks[a] == 0){
+		$("#completion_info .corrections p").html(`${$("#completion_info .corrections p").html()} ${b}<br>`)
+	}
+}
+
 for(e in Object.keys(localStorage)){
 	if(Object.keys(localStorage)[e].indexOf("/A.K.A._Dizzy/raw/p/i9d2g2cftdCds") === 0 && Object.keys(localStorage)[e].indexOf(".html") == Object.keys(localStorage)[e].length - 5){
 		console.log(Object.keys(localStorage)[e])
@@ -115,8 +186,41 @@ $(".widgets").append(`<li>
 }	
 
 $("video")[0].addEventListener('loadeddata', (e) => {
-    !firstPlay? (function(){sizeWidgetero(); firstPlay= true})(): 1;
+    if(!firstPlay){(function(){sizeWidgetero(); firstPlay= true})(); observer.observe(document.getElementsByClassName('presetter')[0], {childList: true}); setInterval(function(){caSe(preset1); }, 1000/60); };
 });
+$("video")[0].addEventListener('ended', (e) => {
+	_ans=0
+	_tot=0
+	for(e in __checks){
+	_ans++
+	if(typeof __checks[e] != "undefined"){
+		_tot+=__checks[e]
+	}else{
+		_tot
+	}
+	}
+
+	_c(0, "Once se escribe '11'.")
+	_c(1, "Dos más uno es igual a '3'.")
+	_c(2, "Tres menos dos es igual a '1'.")
+	_c(3, "Tres multiplicado por dos es igual a '6'.")
+	_c(4, "Dos multiplicado por dos es igual a '4'.")
+	_c(5, "NO es correcto 'Verbo + Sustantivo'.")
+	_c(6, "Se escribe 'Casa'.")
+
+	$("#completion_info .summary table tr:first-child th:nth-child(2)").text(`${_tot}/${7}`)
+    $("#completion_info").addClass("visible")
+
+});
+
+$("body").on("mousemove", function(e){
+if($(e.target).is(".presetter svg")){
+	$(".presetter").css({"pointer-events": "none"})
+}else{
+	$(".presetter").css({"pointer-events": "all"})
+}
+})
+
 	$("html").click(function() {
 		$(".wrapper").removeClass("visible")
 		$(".back-arrow").removeClass("open");
@@ -642,6 +746,7 @@ stop: function(event, ui)
 			$(".verticalredlight").css({"display": "none"})
 			$("header").removeClass("open")
 			$(".widgetero").removeClass("open")
+			$(".presetter").removeClass("open")
 		}
 		if($("#customizationBars").hasClass("open")){
 			$(".widgetero").height(0)
@@ -652,6 +757,7 @@ stop: function(event, ui)
 		$(".verticalredlight").css({"display": "none"})
 		$("header").toggleClass("open")
 		$(".widgetero").toggleClass("open")
+		$(".presetter").toggleClass("open")
 
 
 		if(!player.paused()){
@@ -679,6 +785,7 @@ stop: function(event, ui)
 			$("#customizationBars").addClass("open")
 			$("header").addClass("open")
 			$(".widgetero").addClass("open")
+			$(".presetter").addClass("open")
 
 		}		
 		

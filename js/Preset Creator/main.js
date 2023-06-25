@@ -108,13 +108,114 @@ function integerer(i){
 return parseInt(i.slice(0, -1))}
 window.onresize= function(e){
 sizeWidgetero()
+setTimeout(function(){sizeWidgetero()}, 230)
 }
+_x= false
+_n= false
 $(document).on("ready",function(){ 
 	purger.purge(); 
 					
+///
+$(document).on("keydown", function(r){
+    if(r.keyCode == 88)_x= true;
+    if(r.keyCode == 78){_n= true; currentPath = null};
+
+})
+$(document).on("keyup", function(r){
+    if(r.keyCode == 88)_x= false;
+    if(r.keyCode == 78)_n= false;
+    if(r.keyCode== 37 && r.ctrlKey)prevFrame();
+    if(r.keyCode== 39 && r.ctrlKey)nextFrame()
+})
+$(window).on("blur", function(r){
+    _x= false;
+    _n= false;
+})
+
+const CENTERED = false;
+const COLOR = '#FFF';
+const THICKNESS = 5;
+
+let width, height, currentPath, lastDraw;
+setSize = (w, h) => {
+    width = $(svg).width(), height = $(svg).height();
+    svg.setAttribute('width', "100%");
+    svg.setAttribute('height', "100%");
+    svg.setAttribute('viewBox', `${CENTERED ? width * -0.5 : 0} ${CENTERED ? height * -0.5 : 0} ${width} ${height}`);
+};
+set_drawing_board= function(){
+    svg = document.querySelectorAll('.widgetero svg')[document.querySelectorAll('.widgetero svg').length - 1];
+    setSize();
+    currentPath= null
+    svg.addEventListener('mousedown', () => {
+        if(!_x){return}
+        currentPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        currentPath.setAttribute('stroke', COLOR);
+        currentPath.setAttribute('stroke-width', THICKNESS);
+        currentPath.setAttribute('fill', 'none');
+        svg.appendChild(currentPath);
+    });
+    svg.addEventListener('mousemove', ({ clientX, clientY }) => {
+        if(!currentPath || !_x) return;
+        let d = currentPath.getAttribute('d');
+        const x = CENTERED ? clientX - getSpace().left - width * 0.5 : clientX - getSpace().left;
+        const y = CENTERED ? clientY - getSpace().top - 46 - height * 0.5 : clientY - getSpace().top - 46;
+        currentPath.setAttribute('d', d ? d + ` L${x},${y}` : `M${x},${y}`);
+    });
+}
+set_drawing_board()
+
+
+
+
+///
+
+
+currenT= 0
+prevFrame= function(){
+        currenT-=(currenT - 1 >= 0)?1:0
+        console.log(currenT, preset1[currenT][0])
+        $("video")[$("video").length - 1].currentTime= preset1[currenT][0]
+        caSe(preset1)
+}
+nextFrame= function(){
+        currenT+=(currenT + 1 <= preset1.length - 1)?1:0
+        console.log(currenT, preset1[currenT][0])
+        $("video")[$("video").length - 1].currentTime= preset1[currenT][0]
+        caSe(preset1)
+}
+
+__checks=[];
+_check= function(E, w){
+    $("video")[$("video").length - 1].play()
+    switch(E){
+        case 1:
+            __checks[1-1] =($(`.input${E}`).val() == "11"? 1: 0)
+            break;
+        case 2:
+            __checks[2-1] =($(`.input${E}`).val() == "3"? 1: 0)
+            break;
+        case 3:
+            __checks[3-1] =($(`.input${E}`).val() == "1"? 1: 0)
+            break;
+        case 4:
+            __checks[4-1] =($(`.input${E}`).val() == "6"? 1: 0)
+            break;
+        case 5:
+            __checks[5-1] =($(`.input${E}`).val() == "4"? 1: 0)
+            break;
+        case 6:
+            __checks[6-1] =(w == "0"? 1: 0)
+            break;
+        case 7:
+            __checks[7-1] =($(`.input${E}`).val().toLowerCase() == "casa"? 1: 0)
+            break;
+
+    }
+}
 
 $("video")[0].addEventListener('loadeddata', (e) => {
-    !firstPlay? (function(){sizeWidgetero(); firstPlay= true})(): 1;
+    !firstPlay? (function(){sizeWidgetero(); firstPlay= true; if(typeof setSize != "undefined"){setSize()};})(): 1;
 });
 
 	$("#frame").on("click", function(){ 
@@ -468,7 +569,7 @@ stop: function(event, ui)
     		);
 		}
         
-	}, 10);
+	}, 1000/60);
 	$("#profileTrigger").on("click",function(r){
 		
 		$(".back-arrow").toggleClass("open");
@@ -751,9 +852,7 @@ dsrcrs= ["#fff"];
 //} 
     
 //onClipEvent(enterframe){ 
-setInterval(function(){ 
-    update(); 
-}, 0.00); 
+
           
 document.addEventListener("keydown", function(i){                                                                                                               
     
@@ -786,8 +885,10 @@ document.addEventListener("keyup", function(i){
         
 
 //} 
-    
+
+_voi= true
 caSe= function(i){ 
+    if(_voi)return;
     for(eForensics in i){ 
         if(parseInt(eForensics) != i.length - 1 && ($('video')[$('video').length - 1].currentTime >= i[eForensics][0] && $('video')[$('video').length - 1].currentTime < i[parseInt(eForensics) + 1][0]) || (parseInt(eForensics) == i.length - 1 && $('video')[$('video').length - 1].currentTime >= i[eForensics][0])){
         	$('.widgetero')[0].innerHTML != i[eForensics][1]? $('.widgetero')[0].innerHTML= i[eForensics][1]: 1
@@ -797,6 +898,7 @@ caSe= function(i){
 
 var observer= new MutationObserver(function(mutationRecords){ ill= mutationRecords; for(eForensics in ill[0].addedNodes){(ill[0].addedNodes[eForensics].outerHTML && ill[0].addedNodes[eForensics].outerHTML.indexOf("Pausar") != -1)? $("video")[$("video").length - 1].pause(): 1; }; }); 
 console.log('$("video")[$("video").length - 1].style.opacity= 0.045534; '); 
+
 
 /* 
 caSe= function(){ 
@@ -810,7 +912,9 @@ setInterval(function(){caSe(); }, 1);
 
 purger= {}; 
             
-purger.index= 25;
+purger.index= 24
+.index= 25
+.index= 25;
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return
