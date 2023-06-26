@@ -2682,6 +2682,7 @@ var openPhotoModal= function(a) {
     !!$(".XWW").length? $(".XWW")[0].innerHTML= "#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; ": $("head").append("<style class='XWW'>#theater .comentarios::before{top: " + parseInt($("#theater .comentarios").css("padding-top").slice(0, -2)) + "px !important; }; </style>"); 
 }
 var closeModal= function(){
+if(typeof $(".current video")[0] != "undefined"){
 if((typeof Controlled != "undefined"? Controlled: false) && !ctrl){
 	$(".current video")[0].currentTime= $("#theater video")[0].currentTime
 }else if((typeof Controlled != "undefined"? !Controlled: true) && ctrl){
@@ -2691,6 +2692,7 @@ selectedSu= $("#theater").find(".vjs-subtitles-button .vjs-menu-item.vjs-selecte
 $(".current").find(".vjs-subtitles-button .vjs-menu-item").each(function(){
 if($(this).text() == selectedSu)$(this).click()
 })
+}
 	if(RooT.maTch.user.exec(actualLocation) !== null){
 	    $(".Comentario .media > div").prop('outerHTML', function(){return $(this).find("audio").prop("outerHTML")}); 
     
