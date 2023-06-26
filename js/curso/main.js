@@ -201,7 +201,7 @@ $("video")[0].addEventListener('ended', (e) => {
 	}
 
 	_c(0, "Once se escribe '11'.")
-	_c(1, "Dos más uno es igual a '3'.")
+	_c(1, "Uno más dos es igual a '3'.")
 	_c(2, "Tres menos dos es igual a '1'.")
 	_c(3, "Tres multiplicado por dos es igual a '6'.")
 	_c(4, "Dos multiplicado por dos es igual a '4'.")
