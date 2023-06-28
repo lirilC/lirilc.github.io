@@ -2198,6 +2198,13 @@ border-radius: 50%;
 position: absolute;
 left: 18px;
 top: 18px}
+.searchResults .result .screenshot img{
+height: 96px;
+}
+.searchResults .result .screenshot{
+display: inline-block;
+padding-right: 23px
+}
 .searchResults .result .username{
 display: inline-block;
 height: 111px;
@@ -2205,6 +2212,22 @@ position: absolute;
 line-height: 111px;
 padding-left: 23px;
 border-left: 1px solid #ccc}
+.searchResults .result .appName{
+display: inline-block;
+height: 111px;
+position: absolute;
+line-height: 111px;
+padding-left: 23px;
+border-left: 1px solid #ccc;
+top: 8px;}
+.searchResults .result .cursoName{
+display: inline-block;
+height: 111px;
+position: absolute;
+line-height: 111px;
+padding-left: 23px;
+border-left: 1px solid #ccc;
+top: 8px;}
 .searchResults .result .username .rol{
 display: inline-block;
 padding: 9px 9px;

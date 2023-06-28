@@ -506,7 +506,9 @@ k300= function(C, p, y, ty){
   
 purger= {}; 
             
-purger.index= 25;
+purger.index= 24
+.index= 25
+.index= 25;
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return

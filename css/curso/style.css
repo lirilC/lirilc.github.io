@@ -96,7 +96,7 @@ header nav ul li#right-menu {
     position: absolute;
     right: 0;
     top: 0;
-    z-index: 3;
+    z-index: 2;
 }
 header nav ul li#right-menu #profileSettings.open {
     background-color: #fff;
@@ -343,7 +343,7 @@ width: 100%}
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 1;
 }
  #customizationBars{
     display: none;
@@ -848,6 +848,13 @@ border-radius: 50%;
 position: absolute;
 left: 18px;
 top: 18px}
+.searchResults .result .screenshot img{
+height: 96px;
+}
+.searchResults .result .screenshot{
+display: inline-block;
+padding-right: 23px
+}
 .searchResults .result .username{
 display: inline-block;
 height: 111px;
@@ -855,6 +862,22 @@ position: absolute;
 line-height: 111px;
 padding-left: 23px;
 border-left: 1px solid #ccc}
+.searchResults .result .appName{
+display: inline-block;
+height: 111px;
+position: absolute;
+line-height: 111px;
+padding-left: 23px;
+border-left: 1px solid #ccc;
+top: 8px;}
+.searchResults .result .cursoName{
+display: inline-block;
+height: 111px;
+position: absolute;
+line-height: 111px;
+padding-left: 23px;
+border-left: 1px solid #ccc;
+top: 8px;}
 .searchResults .result .username .rol{
 display: inline-block;
 padding: 9px 9px;
@@ -1178,7 +1201,7 @@ th:first-child {
   background: white;
   height: calc(100vh - 46px - 15px);
   top: 46px;
-  z-index: 2;
+  z-index: 3;
   display: none;
 }
 #completion_info.visible {

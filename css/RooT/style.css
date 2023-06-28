@@ -1911,6 +1911,14 @@ line-height: 111px;
 padding-left: 23px;
 border-left: 1px solid #ccc;
 top: 8px;}
+.searchResults .result .cursoName{
+display: inline-block;
+height: 111px;
+position: absolute;
+line-height: 111px;
+padding-left: 23px;
+border-left: 1px solid #ccc;
+top: 8px;}
 .searchResults .result .username .rol{
 display: inline-block;
 padding: 9px 9px;
