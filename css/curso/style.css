@@ -96,7 +96,7 @@ header nav ul li#right-menu {
     position: absolute;
     right: 0;
     top: 0;
-    z-index: 2;
+    z-index: 3;
 }
 header nav ul li#right-menu #profileSettings.open {
     background-color: #fff;
