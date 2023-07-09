@@ -5338,23 +5338,23 @@ ee= function(){
   
 purger= {}; 
             
-purger.index= 24
-.index= 25
-.index= 25;
+purger.index= 26;
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return
     fT= localStorage.getItem("file_tree")
+    wFT= localStorage.getItem("w_file_tree")
     if( ( localStorage.getItem( "safety_purge" ) === null || ( localStorage.getItem( "safety_purge" ) !== null && parseInt( localStorage.getItem( "safety_purge" ) ) != purger.index ) ) || ( typeof a != "undefined" && a == "bypass" ) ){ 
-        for( var ii in localStorage ){ 
+        for( ii in localStorage ){ 
             if( typeof localStorage[ii] != "function" && ii != "length" && ["safety_purge", "tooltip", "knob", "filesWidth", "user", "selected"].indexOf( ii ) == -1 ){ 
-                ( function( a ){ var av= a; for( var v= 1; v <= 2; v++ )av= av.slice( av.indexOf("/") + 1 ); return av } )( ii ).indexOf( "raw" ) === 0? console.log( ii ): localStorage.removeItem( ii ); 
+                (( function( a ){ var av= a; for( var v= 1; v <= 2; v++ )av= av.slice( av.indexOf("/") + 1 ); return av } )( ii ).indexOf( "raw" ) === 0 || ( function( a ){ var av= a; for( var v= 1; v <= 2; v++ )av= av.slice( av.indexOf("/") + 1 ); return av } )( ii ).indexOf( "$_" ) !== -1)? console.log( ii ): localStorage.removeItem( ii ); 
             } 
         } 
           
         localStorage.setItem("safety_purge", purger.index); 
                                 
         localStorage.setItem("file_tree", fT)
+        localStorage.setItem("w_file_tree", wFT)
         console.log("Purged!"); 
     }; 
 }; 
