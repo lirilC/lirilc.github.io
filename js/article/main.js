@@ -3830,7 +3830,9 @@ K0= function(){
 }
 $(document).on("ready",function(){ 
     purger.purge(); 
-
+$(document).on("mousemove", function(l){
+    $(l.target).is(".quoTe")?$(".quoTe").text() == `"ricas, ricas hasta la chimba"`?1:$(".quoTe").text(`"ricas, ricas hasta la chimba"`):$(".quoTe").text() == `ricas, ricas hasta la chimba`?2:$(".quoTe").text(`ricas, ricas hasta la chimba`)
+})
 
 function selectText(nodeId) {
     const node = jQuery(nodeId)[0];
@@ -5073,6 +5075,7 @@ window.onblur= function(){
     /*alternating= $(".nombre").filter(function(){if($(this).attr("contenteditable")=="true"){return true}}).parent();*/ $(".nombre").filter(function(){if($(this).attr("contenteditable")=="true"){return true}}).length?alternate(`superInformation`):192465;
     $(".nombre").attr("contenteditable", "false")
     $(".nokbwarning").addClass("visible")
+    $(".quoTe").text(`ricas, ricas hasta la chimba`)
 }
 document.addEventListener("keydown", function(e){if(e.shiftKey){shift_k= true; $(".edit").addClass("shifted")}if(e.ctrlKey){ctrl_k= true}if(e.shiftKey && e.ctrlKey){ctrlMShift= true}if(e.shiftKey && e.ctrlKey && e.altKey){e.preventDefault();$("#theater").css("display") == "block"?closeModal():1;$("#buscar input").val("");$("#buscar input").trigger("input");$("#buscar input").focus()}})
     $('#article .comentarios .Comentarios .comentario').on("mousemove", function(event){elx= $($(this).children()[0]); circleWidth = elx.outerWidth( true ),circleHeight  = elx.outerHeight( true ),circleLeft    = elx.offset().left,circleTop     = elx.offset().top,circlePos     = {x     : circleLeft + circleWidth / 2,y     : circleTop + circleHeight / 2,radius: circleWidth / 2};distance    = Math.sqrt( Math.pow( event.pageX - circlePos.x, 2 ) + Math.pow( event.pageY - circlePos.y, 2 ) );if(distance <= circlePos.radius){$($(this).children()[0]).css({"pointer-events": "all"});$($(this).children()[0]).css({"pointer-events": "all"});}else{$($(this).children()[0]).css({"pointer-events": "none"});$($(this).children()[0]).css({"pointer-events": "none"});}}); 
