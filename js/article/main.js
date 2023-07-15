@@ -4831,7 +4831,51 @@ alternate= function(Smpqw){
     if("undefined"!=typeof Smpqw){
         switch(Smpqw){
             case "superInformation":
-                fill_daTa(`wd_filling_superInformation`)                
+                if(typeof blog_special!= "undefined" && blog_special == "amsm"){
+                    $(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
+                        var tiTle= $(alternating).find("h2").text()
+                        var pp= tiTle.slice(0, tiTle.indexOf(" ("))
+                        var hh= tiTle.slice(tiTle.indexOf(" (") + 2, tiTle.indexOf(") "))
+                        var ww= $(this).attr("w").split(" ")
+                        var btW= []
+                        for(aa in ww){
+                            var greed= `${ww[aa].slice(4, ww[aa].length)}${(function(){if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){return (alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC != alternatives[Object.keys(alternatives).slice(2)[0]].auC)?'auC':''}else{return ''}})()?'auC':''}`
+                            acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
+                            !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("span ", "$pan").replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;").replaceAll("$pan", "span ")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
+                        }
+                        btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s").replaceAll("title=&nbsp;", "title= ")
+                        $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
+                    })
+                    alternating.find('p span').tooltip({
+                        track: true,
+                        show: {
+                            effect: "none",
+                            delay: 0
+                        },
+                        open: function(event, ui) {
+                            if (typeof(event.originalEvent) === 'undefined') {
+                                return false;
+                            }
+                            ý= $(this); 
+                           
+                            var $id = $(ui.tooltip).attr('id');
+
+                            $('div.ui-tooltip').not('#' + $id).remove();
+                        },
+                        close: function(event, ui) {
+                            ui.tooltip.hover(function() {
+                                    $(this).stop(true).fadeTo(400, 1);
+                                },
+                                function() {
+                                    $(this).fadeOut('400', function() {
+                                        $(this).remove();
+                                    });
+                                });
+                        }
+                    });
+                }else{
+                    fill_daTa(`wd_filling_superInformation`)                
+                }
                 break;
             case "notSuperInformation":
                 $(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
