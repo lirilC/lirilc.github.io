@@ -3,15 +3,15 @@ var user= {
 	username: "MeganFox",
 	users_name: "Megan Denise Fox",
     profilePic: {
-            "/MeganFox/img/qTaHNrHo4j": {
+            "/MeganFox/img/nc79cNubi8": {
                 type: "img",
                 date: {
-                    full: "3 de Octubre de 2022 a las 5:16 pm",
-                    min: "Octubre de 2022"
+                    full: "17 de Julio de 2022 a las 0:10 pm",
+                    min: "17 de Julio a las 0:10 pm"
                 },
-                title: `a slutty but studious Targaryen goes to Paris`,
+                title: `the trees call me by my name`,
                 description: ``,
-                contents:  {image: "qTaHNrHo4j_tn.jpg"},
+                contents:  {image: "nc79cNubi8_tn.jpg"},
                 Comentarios: ""
             }
         },
@@ -21,7 +21,7 @@ var user= {
     },
     tool:  `<div class='tool'>
                 <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                <img src='/resources/images/MeganFox/qTaHNrHo4j_tn.jpg'>
+                <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
                 <div class='datos'>
                     <ul class='actions'>
                         <li class='chatear' title='Chatear'>C</li>
@@ -94,8 +94,52 @@ var user= {
         ["Sobrina de", {name: "#Jesús De Nazareth"}]
     ],
     fotos: {
-        quantity: 92,
+        quantity: 126,
         fotos: {
+            "/MeganFox/img/nc79cNubi8": {
+                type: "mult_img",
+                date: {
+                    full: "17 de Julio de 2022 a las 0:10 pm",
+                    min: "17 de Julio a las 0:10 pm"
+                },
+                title: `the trees call me by my name`,
+                description: ``,
+                contents:  {carrContents: ["nc79cNubi8_tn.jpg", "Cp41qux869_tn.jpg", "kPJbt5EU8z_tn.jpg", "rEdAzoSAAG_tn.jpg", "Lqi1uQjHwy_tn.jpg"]},
+                Comentarios: ""
+            },
+            "/MeganFox/img/SzrEX6md0n": {
+                type: "mult_img",
+                date: {
+                    full: "9 de Diciembre de 2022 a las 1:10 pm",
+                    min: "Diciembre de 2022"
+                },
+                title: ``,
+                description: `Were everyone’s avatars equally as sexual? Like, why are most of mine naked?? 🥺`,
+                contents:  {carrContents: ["SzrEX6md0n_tn.jpg", "WRZlM0N5aw_tn.jpg", "SabfuqVLbr_tn.jpg", "iDKLGoo3T2_tn.jpg", "2fz5OjFobD_tn.jpg", "OGmkAXmOSH_tn.jpg", "p5WiUvSP2f_tn.jpg", "mMOh36UzG9_tn.jpg"]},
+                Comentarios: ""
+            },
+            "/MeganFox/img/u5skYVxux7": {
+                type: "mult_img",
+                date: {
+                    full: "18 de Noviembre de 2022 a las 3:15 pm",
+                    min: "Noviembre de 2022"
+                },
+                title: `2 events 1 night`,
+                description: `When is it time to just stay in bed and eat gingerbread watching half blood prince ??? 😫🥺`,
+                contents:  {carrContents: ["u5skYVxux7_tn.jpg", "WGu5Pcqzdz_tn.jpg", "y6b2HCuDiy_tn.jpg", "933mSwoC9F_tn.jpg", "yN8nossI2Q_tn.jpg", "J3xurEyFiy_tn.jpg", "buWo5tApo0_tn.jpg", "NAtK47MPq5_tn.jpg"]},
+                Comentarios: ""
+            },
+            "/MeganFox/img/oGUg7NaroZ": {
+                type: "mult_img",
+                date: {
+                    full: "19 de Octubre de 2022 a las 6:34 pm",
+                    min: "Octubre de 2022"
+                },
+                title: `Pick me energy 🖤🌙`,
+                description: ``,
+                contents:  {carrContents: ["oGUg7NaroZ_tn.jpg", "uY0u12UAJC_tn.jpg", "AalwERZZXT_tn.jpg", "gJ9qhOYm8i_tn.jpg", "KgGpsswv2d_tn.jpg"]},
+                Comentarios: ""
+            },
             "/MeganFox/img/qTaHNrHo4j": {
                 type: "mult_img",
                 date: {
@@ -151,56 +195,34 @@ var user= {
                 description: `there goes my heart<br>manifest outside of my body<br>draped in the towering silhouette of a most unusually handsome boy<br><br>magical and haunted<br>kinetic and tortured<br>ethereal and dangerous<br>cosmic<br>lawless<br>eternal<br>creative genius<br><br>the journey will likely be perilous<br>but there is no destination without him`,
                 contents:  {carrContents: ["dkyw2UqrLV_tn.jpg", "7kmk1Jnij8_tn.jpg", "rLcyvTDfeN_tn.jpg", "7oyGmsZ9Cc_tn.jpg"]},
                 Comentarios: ""
-            },
-            "/MeganFox/img/tB66nEJhGF": {
-                type: "mult_img",
-                date: {
-                    full: "28 de Marzo de 2022 a las 6:40 pm",
-                    min: "Marzo de 2022"
-                },
-                title: `Everybody’s grandma had that one sofa…swipe`,
-                description: ``,
-                contents:  {carrContents: ["tB66nEJhGF_tn.jpg", "OUeB7PLl7y_tn.jpg"]},
-                Comentarios: ""
-            },
-            "/MeganFox/img/2oev82l1uZ": {
-                type: "mult_img",
-                date: {
-                    full: "21 de Febrero de 2022 a las 2:21 am",
-                    min: "Marzo de 2022"
-                },
-                title: `Was going for business casual Bratz doll 🧡`,
-                description: ``,
-                contents:  {carrContents: ["2oev82l1uZ_tn.jpg", "WqgztJx8L6_tn.jpg"]},
-                Comentarios: ""
-            },
-            "/MeganFox/img/XhZC8VR6Rf": {
-                type: "mult_img",
-                date: {
-                    full: "9 de Febrero de 2022 a las 9:19 am",
-                    min: "Marzo de 2022"
-                },
-                title: `It’s giving Dracula’s maid`,
-                description: ``,
-                contents:  {carrContents: ["XhZC8VR6Rf_tn.jpg", "AAMBWI03Pf_tn.jpg"]},
-                Comentarios: ""
-            },
-            "/MeganFox/img/hM4ubeaHO7": {
-                type: "mult_img",
-                date: {
-                    full: "27 de Enero de 2022 a las 3:16 pm",
-                    min: "Enero de 2022"
-                },
-                title: ``,
-                description: ``,
-                contents:  {carrContents: ["hM4ubeaHO7_tn.jpg", "FC2Xu9BNQs_tn.jpg", "Yl7SWdmYMc_tn.jpg"]},
-                Comentarios: ""
             }
         }
     },
     videos: {
-        quantity: 3,
+        quantity: 7,
         videos: {
+            "/MeganFox/vid/qcCQ0xyu8N": {
+                type: "vid",
+                date: {
+                    full: "8 de Junio de 2023 a las 8:20 am",
+                    min: "8 de Junio a las 8:20 am"
+                },
+                title: ``,
+                description: `play DiabloIV and try not to die ☠️ but if you do, rest in peace with one of these roasts- i mean eulogies from me #diabloiv #diablodeaths #diablopartner`,
+                contents:  {video: "qcCQ0xyu8N"},
+                Comentarios: ""
+            },
+            "/MeganFox/vid/CfWWfdm024": {
+                type: "vid",
+                date: {
+                    full: "7 de Junio de 2023 a las 7:1 pm",
+                    min: "7 de Junio a las 7:1 pm"
+                },
+                title: `#Expend4bles 9/22`,
+                description: ``,
+                contents:  {video: "CfWWfdm024"},
+                Comentarios: ""
+            },
             "/MeganFox/vid/fDFmX5MXBa": {
                 type: "video",
                 date: {
@@ -215,6 +237,94 @@ var user= {
         }
     },
     stories: {
+        "/MeganFox/img/nc79cNubi8": {
+            type: "mult_img",
+            date: {
+                full: "17 de Julio de 2022 a las 0:10 pm",
+                min: "17 de Julio a las 0:10 pm"
+            },
+            title: `the trees call me by my name`,
+            description: ``,
+            contents:  {carrContents: ["nc79cNubi8.jpg", "Cp41qux869.jpg", "kPJbt5EU8z.jpg", "rEdAzoSAAG.jpg", "Lqi1uQjHwy.jpg"]},
+            Comentarios: ""
+        },
+        "/MeganFox/img/chyfUpPNM1": {
+            type: "mult_carr",
+            date: {
+                full: "15 de Julio de 2023 a las 3:13 pm",
+                min: "15 de Julio a las 3:13 pm"
+            },
+            title: `the forest is my oldest friend`,
+            description: ``,
+            contents:  {carrContents: [["im", "chyfUpPNM1.jpg"], ["im", "e1SqcAFjcu.jpg"], ["im", "2prCuXDS2W.jpg"], ["vi", "9Wr547RR24"]]},
+            Comentarios: ""
+        },
+        "/MeganFox/vid/qcCQ0xyu8N": {
+            type: "vid",
+            date: {
+                full: "8 de Junio de 2023 a las 8:20 am",
+                min: "8 de Junio a las 8:20 am"
+            },
+            title: ``,
+            description: `play DiabloIV and try not to die ☠️ but if you do, rest in peace with one of these roasts- i mean eulogies from me #diabloiv #diablodeaths #diablopartner`,
+            contents:  {video: "qcCQ0xyu8N"},
+            Comentarios: ""
+        },
+        "/MeganFox/vid/CfWWfdm024": {
+            type: "vid",
+            date: {
+                full: "7 de Junio de 2023 a las 7:1 pm",
+                min: "7 de Junio a las 7:1 pm"
+            },
+            title: `#Expend4bles 9/22`,
+            description: ``,
+            contents:  {video: "CfWWfdm024"},
+            Comentarios: ""
+        },
+        "/MeganFox/img/Kh0K3EhRyP": {
+            type: "mult_carr",
+            date: {
+                full: "20 de Mayo de 2023 a las 2:16 pm",
+                min: "20 de Mayo a las 2:16 pm"
+            },
+            title: `✨ queen of wands ✨`,
+            description: ``,
+            contents:  {carrContents: [["im", "Kh0K3EhRyP.jpg"], ["im", "rIm97Nj6Qn.jpg"], ["im", "eOTCW8rRbu.jpg"], ["im", "9sh2w78zMk.jpg"], ["im", "p5H2aJ2snG.jpg"], ["vi", "CIdWBG33yI"]]},
+            Comentarios: ""
+        },
+        "/MeganFox/img/SzrEX6md0n": {
+            type: "mult_img",
+            date: {
+                full: "9 de Diciembre de 2022 a las 1:10 pm",
+                min: "Diciembre de 2022"
+            },
+            title: ``,
+            description: `Were everyone’s avatars equally as sexual? Like, why are most of mine naked?? 🥺`,
+            contents:  {carrContents: ["SzrEX6md0n.jpg", "WRZlM0N5aw.jpg", "SabfuqVLbr.jpg", "iDKLGoo3T2.jpg", "2fz5OjFobD.jpg", "OGmkAXmOSH.jpg", "p5WiUvSP2f.jpg", "mMOh36UzG9.jpg"]},
+            Comentarios: ""
+        },
+        "/MeganFox/img/u5skYVxux7": {
+            type: "mult_img",
+            date: {
+                full: "18 de Noviembre de 2022 a las 3:15 pm",
+                min: "Noviembre de 2022"
+            },
+            title: `2 events 1 night`,
+            description: `When is it time to just stay in bed and eat gingerbread watching half blood prince ??? 😫🥺`,
+            contents:  {carrContents: ["u5skYVxux7.jpg", "WGu5Pcqzdz.jpg", "y6b2HCuDiy.jpg", "933mSwoC9F.jpg", "yN8nossI2Q.jpg", "J3xurEyFiy.jpg", "buWo5tApo0.jpg", "NAtK47MPq5.jpg"]},
+            Comentarios: ""
+        },
+        "/MeganFox/img/oGUg7NaroZ": {
+            type: "mult_img",
+            date: {
+                full: "19 de Octubre de 2022 a las 6:34 pm",
+                min: "Octubre de 2022"
+            },
+            title: `Pick me energy 🖤🌙`,
+            description: ``,
+            contents:  {carrContents: ["oGUg7NaroZ.jpg", "uY0u12UAJC.jpg", "AalwERZZXT.jpg", "gJ9qhOYm8i.jpg", "KgGpsswv2d.jpg"]},
+            Comentarios: ""
+        },
     	"/MeganFox/img/qTaHNrHo4j": {
             type: "mult_img",
             date: {

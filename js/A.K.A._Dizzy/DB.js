@@ -64,7 +64,7 @@ export function _user(){
             ["Hijo de", {name: "#Satanás Belcebú"}],
             ["Hermanito de", {username: "MeganFox", name: "Megan Denise Fox", tool: `<div class='tool'>
                                                                                                 <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                                                                                                <img src='/resources/images/MeganFox/qTaHNrHo4j_tn.jpg'>
+                                                                                                <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
                                                                                                 <div class='datos'>
                                                                                                     <ul class='actions'>
                                                                                                         <li class='chatear' title='Chatear'>C</li>
@@ -608,14 +608,14 @@ export function _user(){
                 originalPoster: {
                     username: "MeganFox",
                     users_name: "Megan Denise Fox",
-                    profilePic: "/resources/images/MeganFox/qTaHNrHo4j_tn.jpg",
+                    profilePic: "/resources/images/MeganFox/nc79cNubi8_tn.jpg",
                     rol: {
                         rol: "G",
                         level: "100"
                     },
                     tool:  `<div class='tool'>
                                 <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                                <img src='/resources/images/MeganFox/qTaHNrHo4j_tn.jpg'>
+                                <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
                                 <div class='datos'>
                                     <ul class='actions'>
                                         <li class='chatear' title='Chatear'>C</li>
