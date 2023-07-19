@@ -94,12 +94,23 @@ var user= {
         ["Sobrina de", {name: "#Jesús De Nazareth"}]
     ],
     fotos: {
-        quantity: 126,
+        quantity: 130,
         fotos: {
+            "/MeganFox/img/92Myy9CUyU": {
+                type: "mult_img",
+                date: {
+                    full: "18 de Julio de 2023 a las 3:8 pm",
+                    min: "18 de Julio a las 3:8 pm"
+                },
+                title: `a fourth house taurus sun`,
+                description: ``,
+                contents:  {carrContents: ["92Myy9CUyU_tn.jpg", "0RuEzyxiRe_tn.jpg", "XTxcUJchhC_tn.jpg", "sQwXSDY9mX_tn.jpg"]},
+                Comentarios: ""
+            },
             "/MeganFox/img/nc79cNubi8": {
                 type: "mult_img",
                 date: {
-                    full: "17 de Julio de 2022 a las 0:10 pm",
+                    full: "17 de Julio de 2023 a las 0:10 pm",
                     min: "17 de Julio a las 0:10 pm"
                 },
                 title: `the trees call me by my name`,
@@ -183,18 +194,6 @@ var user= {
                 description: ``,
                 contents:  {carrContents: ["MFU1p9jw6f_tn.jpg", "MHs7hmqvpc_tn.jpg", "rOi6fVPRGN_tn.jpg"]},
                 Comentarios: ""
-            },
-            "/MeganFox/img/dkyw2UqrLV": {
-                type: "mult_img",
-                date: {
-                    full: "28 de Marzo de 2022 a las 6:40 pm",
-                    min: "Marzo de 2022"
-                },
-                city: {name: "São Paulo​", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/CENU%2C_S%C3%A3o_Paulo%2C_Brasil_%28cropped%29.jpg/1280px-CENU%2C_S%C3%A3o_Paulo%2C_Brasil_%28cropped%29.jpg", description: `São Paulo​ (en español San Pablo)​ y oficialmente denominada como Município de São Paulo, es la ciudad más poblada de Brasil y capital del Estado de São Paulo y la principal ciudad de la región Metropolitana de São Paulo, en la región sudeste del país. Con una población de 12 176 866 habitantes (en 2018)​ en la ciudad propia y de 21 893 053 habitantes en su área metropolitana (en 2010)​, son la ciudad y la metrópoli más pobladas de América y del hemisferio occidental, ​ además de ser entre las aglomeraciones urbanas más pobladas del mundo.​ También es la ciudad más poblada de la lusofonia (mayor ciudad/metrópoli del mundo hablante del idioma portugués). São Paulo es la ciudad brasileña más influyente en el escenario global, siendo, en 2016, la 11ª ciudad más globalizada del planeta, recibiendo la clasificación de ciudad global alfa, por parte del Globalization and World Cities Study Group & Network (GaWC). Asimismo, es la ciudad lusófona más poblada e importante del mundo en términos tanto demográficos como culturales y económicos. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/São_Paulo'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-                title: `❤️`,
-                description: `there goes my heart<br>manifest outside of my body<br>draped in the towering silhouette of a most unusually handsome boy<br><br>magical and haunted<br>kinetic and tortured<br>ethereal and dangerous<br>cosmic<br>lawless<br>eternal<br>creative genius<br><br>the journey will likely be perilous<br>but there is no destination without him`,
-                contents:  {carrContents: ["dkyw2UqrLV_tn.jpg", "7kmk1Jnij8_tn.jpg", "rLcyvTDfeN_tn.jpg", "7oyGmsZ9Cc_tn.jpg"]},
-                Comentarios: ""
             }
         }
     },
@@ -237,10 +236,21 @@ var user= {
         }
     },
     stories: {
+        "/MeganFox/img/92Myy9CUyU": {
+            type: "mult_img",
+            date: {
+                full: "18 de Julio de 2023 a las 3:8 pm",
+                min: "18 de Julio a las 3:8 pm"
+            },
+            title: `a fourth house taurus sun`,
+            description: ``,
+            contents:  {carrContents: ["92Myy9CUyU.jpg", "0RuEzyxiRe.jpg", "XTxcUJchhC.jpg", "sQwXSDY9mX.jpg"]},
+            Comentarios: ""
+        },
         "/MeganFox/img/nc79cNubi8": {
             type: "mult_img",
             date: {
-                full: "17 de Julio de 2022 a las 0:10 pm",
+                full: "17 de Julio de 2023 a las 0:10 pm",
                 min: "17 de Julio a las 0:10 pm"
             },
             title: `the trees call me by my name`,

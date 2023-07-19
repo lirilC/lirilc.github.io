@@ -621,7 +621,7 @@ var user= {
         "/MeganFox/img/nc79cNubi8": {
             type: "mult_img",
             date: {
-                full: "17 de Julio de 2022 a las 0:10 pm",
+                full: "17 de Julio de 2023 a las 0:10 pm",
                 min: "17 de Julio a las 0:10 pm"
             },
             title: `the trees call me by my name`,
@@ -629,6 +629,17 @@ var user= {
             contents:  {carrContents: ["nc79cNubi8_tn.jpg", "Cp41qux869_tn.jpg", "kPJbt5EU8z_tn.jpg", "rEdAzoSAAG_tn.jpg", "Lqi1uQjHwy_tn.jpg"]},
             Comentarios: ""
         },
+        "/MeganFox/img/92Myy9CUyU": {
+            type: "mult_img",
+            date: {
+                full: "18 de Julio de 2023 a las 3:8 pm",
+                min: "18 de Julio a las 3:8 pm"
+            },
+            title: `a fourth house taurus sun`,
+            description: ``,
+            contents:  {carrContents: ["92Myy9CUyU_tn.jpg", "0RuEzyxiRe_tn.jpg", "XTxcUJchhC_tn.jpg", "sQwXSDY9mX_tn.jpg"]},
+            Comentarios: ""
+        }
     }
 }
 return user
