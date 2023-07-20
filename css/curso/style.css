@@ -96,7 +96,7 @@ header nav ul li#right-menu {
     position: absolute;
     right: 0;
     top: 0;
-    z-index: 6;
+    z-index: 2;
 }
 header nav ul li#right-menu #profileSettings.open {
     background-color: #fff;
@@ -197,7 +197,7 @@ header nav li>a {
 #back
 {
     width: 1em;
-        z-index: 7;
+        z-index: 5;
     position: relative;
 }
 #back .back-arrow.openedStore {
@@ -219,7 +219,7 @@ header nav ul li#index {
     padding: 0;
     position: relative;
     width: 130px;
-    z-index: 7
+    z-index: 4
 }
 header nav ul li#index #index-menu{
     display: none;
@@ -343,7 +343,7 @@ width: 100%}
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 5;
+    z-index: 1;
 }
  #customizationBars{
     display: none;
@@ -1201,7 +1201,7 @@ th:first-child {
   background: white;
   height: calc(100vh - 46px - 15px);
   top: 46px;
-  z-index: 5;
+  z-index: 3;
   display: none;
 }
 #completion_info.visible {
@@ -1278,6 +1278,12 @@ th:first-child {
 }  
 .dropped {
     position: absolute;
+}
+.presetter {
+  pointer-events: none;
+}
+.presetter div {
+  pointer-events: auto;
 }
 .presetter input {
   border: 1px solid #bbb;

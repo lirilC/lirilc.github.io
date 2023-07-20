@@ -213,13 +213,6 @@ $("video")[0].addEventListener('ended', (e) => {
 
 });
 
-$("body").on("mousemove", function(e){
-if($(e.target).is(".presetter svg")){
-	$(".presetter").css({"pointer-events": "none"})
-}else{
-	$(".presetter").css({"pointer-events": "all"})
-}
-})
 
 	$("html").click(function() {
 		$(".wrapper").removeClass("visible")
@@ -283,7 +276,7 @@ $('.widgetero .widget').last().draggable({
 	snap: ".vidVidCustomizationMode, .widgetero, .widgetero .widget", 
 	snapMode: "both", 
 	revertDuration: 100,
-	snapTolerance: 30,
+	snapTolerance: 10,
 	grid: ($("#gridWidth").val() == "0" && $("#gridHeight").val() == "0") || !gridSnapping? false: [parseInt($("#gridWidth").val()), parseInt($("#gridHeight").val())],
 containment: "window",
 cursorAt: { left: $('.widgetero .widget').last().width() / 2, top: $('.widgetero .widget').last().height() / 2},
@@ -327,25 +320,25 @@ if($(".select").is(".on") && $("#customizationBars").hasClass("open")){
 
 n_marker= {
 x: parseInt($(".verticalredlight").css("left")),
-y: parseInt($(".verticalredlight").css("top")) + parseInt($(".verticalredlight").css("height")) / 2 - 37
+y: parseInt($(".verticalredlight").css("top")) + parseInt($(".verticalredlight").css("height")) / 2 - 36
 }
 s_marker= {
 x: parseInt($(".verticalredlight").css("left")),
-y: parseInt($(".verticalredlight").css("top")) + parseInt($(".verticalredlight").css("height")) / 2 + 37
+y: parseInt($(".verticalredlight").css("top")) + parseInt($(".verticalredlight").css("height")) / 2 + 36
 }
 e_marker= {
-x: parseInt($(".horizontalredlight").css("left")) + parseInt($(".horizontalredlight").css("width")) / 2 - 37,
+x: parseInt($(".horizontalredlight").css("left")) + parseInt($(".horizontalredlight").css("width")) / 2 - 36,
 y: parseInt($(".horizontalredlight").css("top")) 
 }
 w_marker= {
-x: parseInt($(".horizontalredlight").css("left")) + parseInt($(".horizontalredlight").css("width")) / 2 + 37,
+x: parseInt($(".horizontalredlight").css("left")) + parseInt($(".horizontalredlight").css("width")) / 2 + 36,
 y: parseInt($(".horizontalredlight").css("top"))
 }
 var closest_y_n= {dist: Infinity, elem: null}
 var closest_y_s= {dist: Infinity, elem: null}
 var closest_x_e= {dist: Infinity, elem: null}
 var closest_x_w= {dist: Infinity, elem: null}
-$(".widgetero .widget").filter(function(){
+$(".widgetero .widget").each(function(){
 this.border={
 top: parseInt($(this).css("top")), 
 bottom: parseInt($(this).css("top")) + parseInt($(this).css("height")), 
@@ -411,28 +404,28 @@ if(w_marker.y >= this.border.top && w_marker.y <= this.border.bottom){
 })
 if(closest_y_n.dist !== Infinity){
 	if(Math.abs(closest_y_n.dist)<=5 && $(".magnet").is(".on")){
-		$(".verticalredlight .marker-n").css({"top": `calc(50% - 37px - ${closest_y_n.dist}px)`})
+		$(".verticalredlight .marker-n").css({"top": `calc(50% - 36px - ${closest_y_n.dist}px)`})
 	}else{
 		$(".verticalredlight .marker-n").css({"top": ``})
 	}
 }
 if(closest_y_s.dist !== Infinity){
 	if(Math.abs(closest_y_s.dist)<=5 && $(".magnet").is(".on")){
-		$(".verticalredlight .marker-s").css({"top": `calc(50% + 37px - ${closest_y_s.dist}px)`})
+		$(".verticalredlight .marker-s").css({"top": `calc(50% + 36px - ${closest_y_s.dist}px)`})
 	}else{
 		$(".verticalredlight .marker-s").css({"top": ``})
 	}
 }
 if(closest_x_e.dist !== Infinity){
 	if(Math.abs(closest_x_e.dist)<=5 && $(".magnet").is(".on")){
-		$(".horizontalredlight .marker-e").css({"left": `calc(50% - 37px - ${closest_x_e.dist}px)`})
+		$(".horizontalredlight .marker-e").css({"left": `calc(50% - 36px - ${closest_x_e.dist}px)`})
 	}else{
 		$(".horizontalredlight .marker-e").css({"left": ``})
 	}
 }
 if(closest_x_w.dist !== Infinity){
 	if(Math.abs(closest_x_w.dist)<=5 && $(".magnet").is(".on")){
-		$(".horizontalredlight .marker-w").css({"left": `calc(50% + 37px - ${closest_x_w.dist}px)`})
+		$(".horizontalredlight .marker-w").css({"left": `calc(50% + 36px - ${closest_x_w.dist}px)`})
 	}else{
 		$(".horizontalredlight .marker-w").css({"left": ``})
 	}
@@ -581,8 +574,8 @@ $(document).mouseup(function(e) {
     			if(!$(ui.draggable).is(".select")){
     			$(ui.draggable).width((($(ui.draggable).width()) / ($(".widgetero").width()) * 100 )+ "%")
     			$(ui.draggable).height((($(ui.draggable).height()) / ($(".widgetero").height()) * 100 )+ "%")
-    			$(ui.draggable).css({"left": (parseInt($(ui.draggable).css("left").replaceAll("px", "")) / ($(".widgetero").width()) * 100 ) + "%"})
-    			$(ui.draggable).css({"top": ((parseInt($(ui.draggable).css("top").replaceAll("px", ""))) / ($(".widgetero").height()) * 100 ) + "%"})
+    			$(ui.draggable).css({"left": (parseInt($(ui.draggable).css("left")) / ($(".widgetero").width()) * 100 ) + "%"})
+    			$(ui.draggable).css({"top": ((parseInt($(ui.draggable).css("top"))) / ($(".widgetero").height()) * 100 ) + "%"})
     			}
     			if($(ui.draggable).is(".select")){
     			neaRestTop= -10000
@@ -601,21 +594,21 @@ $(document).mouseup(function(e) {
     				}
 				})
     			intersects.vertically.forEach(function(intersected){
-    				if((parseInt($(intersected).css("top")) + parseInt($(intersected).css("height"))) > neaRestTop && (mouseY - 46 - parseInt($(".widgetero").css("margin-top")) + 46) > (parseInt($(intersected).css("top")) + parseInt($(intersected).css("height")))){
-    					neaRestTop= (parseInt($(intersected).css("top")) + parseInt($(intersected).css("height")))
+    				if((parseInt($(intersected).css("top")) + parseInt($(intersected).css("height")) + 1) > neaRestTop && (mouseY - 46 - parseInt($(".widgetero").css("margin-top")) + 46) > (parseInt($(intersected).css("top")) + parseInt($(intersected).css("height")) + 1)){
+    					neaRestTop= (parseInt($(intersected).css("top")) + parseInt($(intersected).css("height")) + 1)
     				}
-    				if(parseInt($(intersected).css("top")) < neaRestBottom && (mouseY - 46 - parseInt($(".widgetero").css("margin-top")) + 46) < parseInt($(intersected).css("top"))){
-    					neaRestBottom= parseInt($(intersected).css("top"))
+    				if((parseInt($(intersected).css("top")) + 1) < neaRestBottom && (mouseY - 46 - parseInt($(".widgetero").css("margin-top")) + 46) < (parseInt($(intersected).css("top")) + 1)){
+    					neaRestBottom= (parseInt($(intersected).css("top")) + 1)
     				}
-					console.log(`${$(intersected).index()} top:${parseInt($(intersected).css("top"))} bottom:${(parseInt($(intersected).css("top")) + parseInt($(intersected).css("height")))}`)
+					//console.log(`${$(intersected).index()} top:${parseInt($(intersected).css("top"))} bottom:${(parseInt($(intersected).css("top")) + parseInt($(intersected).css("height")))}`)
     			})
 
     			intersects.horizontally.forEach(function(intersected){
-    				if((parseInt($(intersected).css("left")) + parseInt($(intersected).css("width"))) > neaRestLeft && (mouseX - parseInt($(".widgetero").css("margin-left"))) > (parseInt($(intersected).css("left")) + parseInt($(intersected).css("width")))){
-    					neaRestLeft= (parseInt($(intersected).css("left")) + parseInt($(intersected).css("width")))
+    				if((parseInt($(intersected).css("left")) + parseInt($(intersected).css("width")) + 1) > neaRestLeft && (mouseX - parseInt($(".widgetero").css("margin-left"))) > (parseInt($(intersected).css("left")) + parseInt($(intersected).css("width")) + 1)){
+    					neaRestLeft= (parseInt($(intersected).css("left")) + parseInt($(intersected).css("width")) + 1)
     				}
-    				if(parseInt($(intersected).css("left")) < neaRestRight && (mouseX - parseInt($(".widgetero").css("margin-left"))) < parseInt($(intersected).css("left"))){
-    					neaRestRight= parseInt($(intersected).css("left"))
+    				if((parseInt($(intersected).css("left")) + 1) < neaRestRight && (mouseX - parseInt($(".widgetero").css("margin-left"))) < (parseInt($(intersected).css("left")) + 1)){
+    					neaRestRight= (parseInt($(intersected).css("left")) + 1)
     				}
     			})
     			neaRestBottom= typeof saved.s != "undefined"?saved.s:neaRestBottom
@@ -636,8 +629,8 @@ $(document).mouseup(function(e) {
 				$(".widget.selectedWidget").css({"left": `${neaRestLeft == -10000?mouseX < parseInt($(".widgetero").css("margin-left"))?-parseInt($(".widgetero").css("margin-left")): 0: neaRestLeft}px`})
     			$(ui.draggable).width((($(ui.draggable).width()) / ($(".widgetero").width()) * 100 )+ "%")
     			$(ui.draggable).height((($(ui.draggable).height()) / ($(".widgetero").height()) * 100 )+ "%")
-    			$(ui.draggable).css({"left": ((parseInt($(ui.draggable).css("left").replaceAll("px", ""))) / ($(".widgetero").width()) * 100 ) + "%"})
-    			$(ui.draggable).css({"top": ((parseInt($(ui.draggable).css("top").replaceAll("px", ""))) / ($(".widgetero").height()) * 100 ) + "%"})
+    			$(ui.draggable).css({"left": ((parseInt($(ui.draggable).css("left"))) / ($(".widgetero").width()) * 100 ) + "%"})
+    			$(ui.draggable).css({"top": ((parseInt($(ui.draggable).css("top"))) / ($(".widgetero").height()) * 100 ) + "%"})
     			console.log(`Mouse, X:${mouseX} Y:${mouseY - 46} neaRestTop:${neaRestTop} neaRestBottom:${neaRestBottom} neaRestLeft:${neaRestLeft} neaRestRight: ${neaRestRight} intersectsVertically:`)
     			console.log(intersects)
     			}
@@ -682,8 +675,8 @@ stop: function(event, ui)
     		{        
     			$(ui.element).width((($(ui.element).width()) / ($(".widgetero").width()) * 100 )+ "%")
     			$(ui.element).height((($(ui.element).height()) / ($(".widgetero").height()) * 100 )+ "%")
-    			$(ui.element).css({"left": (parseInt($(ui.element).css("left").replaceAll("px", "")) / ($(".widgetero").width()) * 100 ) + "%"})
-    			$(ui.element).css({"top": (parseInt($(ui.element).css("top").replaceAll("px", "")) / ($(".widgetero").height()) * 100 ) + "%"})
+    			$(ui.element).css({"left": (parseInt($(ui.element).css("left")) / ($(".widgetero").width()) * 100 ) + "%"})
+    			$(ui.element).css({"top": (parseInt($(ui.element).css("top")) / ($(".widgetero").height()) * 100 ) + "%"})
 		}
 })
 		if(snapping){
@@ -1041,15 +1034,15 @@ function controls(a, xa){
 	            	$(".widget.dropped").each(function(){
 	            		$(this).width((($(this).width()) / ($(".widgetero").width()) * 100 )+ "%")
     					$(this).height((($(this).height()) / ($(".widgetero").height()) * 100 )+ "%")
-    					$(this).css({"left": (parseInt($(this).css("left").replaceAll("px", "")) / ($(".widgetero").width()) * 100 ) + "%"})
-    					$(this).css({"top": ((parseInt($(this).css("top").replaceAll("px", ""))) / ($(".widgetero").height()) * 100 ) + "%"})
+    					$(this).css({"left": (parseInt($(this).css("left")) / ($(".widgetero").width()) * 100 ) + "%"})
+    					$(this).css({"top": ((parseInt($(this).css("top"))) / ($(".widgetero").height()) * 100 ) + "%"})
 	            	})
     			}
     			if($(".select").is(".on")){
     			$(".widget.on").width(function(){return (($(this).width()) / ($(".widgetero").width()) * 100 )+ "%"})
     			$(".widget.on").height(function(){return (($(this).height()) / ($(".widgetero").height()) * 100 )+ "%"})
-    			$(".widget.on").css({"left": ((parseInt($(this).css("left").replaceAll("px", ""))) / ($(".widgetero").width()) * 100 ) + "%"})
-    			$(".widget.on").css({"top": ((parseInt($(this).css("top").replaceAll("px", ""))) / ($(".widgetero").height()) * 100 ) + "%"})
+    			$(".widget.on").css({"left": ((parseInt($(this).css("left"))) / ($(".widgetero").width()) * 100 ) + "%"})
+    			$(".widget.on").css({"top": ((parseInt($(this).css("top"))) / ($(".widgetero").height()) * 100 ) + "%"})
     			console.log(`Mouse, X:${mouseX} Y:${mouseY - 46} neaRestTop:${neaRestTop} neaRestBottom:${neaRestBottom} neaRestLeft:${neaRestLeft} neaRestRight: ${neaRestRight} intersectsVertically:`)
     			console.log(intersects)
     			}
