@@ -1,7 +1,7 @@
 export function _index(){
 var index= {
     stories: [
-    "/MeganFox/img/Yu7ps34i6t": {
+    "/MeganFox/img/Yu7ps34i6t", {
             user: {
                 username: "MeganFox",
                 users_name: "Megan Denise Fox",
@@ -46,7 +46,7 @@ var index= {
             contents:  {carrContents: ["Yu7ps34i6t.jpg", "VGuJdWUYgT.jpg", "snxgFaIz9z.jpg"]},
             Comentarios: ""
         },
-    "/MeganFox/img/92Myy9CUyU": {
+    "/MeganFox/img/92Myy9CUyU", {
             user: {
                 username: "MeganFox",
                 users_name: "Megan Denise Fox",
