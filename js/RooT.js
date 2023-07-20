@@ -23,7 +23,7 @@ var one= function(a, b, c, d){
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
-		                                    <p class="username"><a class="target" href="/${user.username}" title= "${user.tool}">${user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                    <p class="username"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
 		                                <p class="title">${c[e].title}</p>
@@ -47,7 +47,7 @@ var one= function(a, b, c, d){
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
-		                                    <p class="username"><a class="target" href="/${user.username}" title= "${user.tool}">${user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                    <p class="username"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
 		                                <p class="title">${c[e].title}</p>
@@ -71,7 +71,7 @@ var one= function(a, b, c, d){
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
-		                                    <p class="username"><a class="target" href="/${user.username}" title= "${user.tool}">${user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                    <p class="username"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
 		                                <p class="title">${c[e].title}</p>
@@ -95,7 +95,7 @@ var one= function(a, b, c, d){
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
-		                                    <p class="username"><a class="target" href="/${user.username}" title= "${user.tool}">${user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                    <p class="username"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
 		                                <p class="title">${c[e].title}</p>
@@ -119,7 +119,7 @@ var one= function(a, b, c, d){
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
-		                                    <p class="username"><a class="target" href="/${user.username}" title= "${user.tool}">${user.users_name}</a> ${c[e].information}<br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                    <p class="username"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a> ${c[e].information}<br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
 		                                <p class="title">${c[e].title}</p>
@@ -142,7 +142,7 @@ var one= function(a, b, c, d){
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
-		                                    <p class="username"><a class="target" href="/${user.username}" title= "${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
+		                                    <p class="username"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
 																																								                       <img class='thumbnail' src= '${c[e].city.pic}'></img>
@@ -177,7 +177,7 @@ var one= function(a, b, c, d){
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
-		                                    <p class="username"><a class="target" href="/${user.username}" title= "${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
+		                                    <p class="username"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
 																																								                       <img class='thumbnail' src= '${c[e].city.pic}'></img>
@@ -224,7 +224,7 @@ var one= function(a, b, c, d){
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
-		                                    <p class="username"><a class="target" href="/${user.username}" title= "${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
+		                                    <p class="username"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
 																																								                       <img class='thumbnail' src= '${c[e].city.pic}'></img>
@@ -279,7 +279,7 @@ var one= function(a, b, c, d){
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
-		                                    <p class="username"><a class="target" href="/${user.username}" title= "${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
+		                                    <p class="username"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
 																																								                       <img class='thumbnail' src= '${c[e].city.pic}'></img>
@@ -322,7 +322,7 @@ var one= function(a, b, c, d){
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
-		                                    <p class="username"><a class="target" href="/${user.username}" title= "${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
+		                                    <p class="username"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
 																																								                       <img class='thumbnail' src= '${c[e].city.pic}'></img>
@@ -365,7 +365,7 @@ var one= function(a, b, c, d){
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
-		                                    <p class="username"><a class="target" href="/${user.username}" title= "${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
+		                                    <p class="username"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
 																																								                       <img class='thumbnail' src= '${c[e].city.pic}'></img>
@@ -411,7 +411,7 @@ var one= function(a, b, c, d){
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
 		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
-		                                    <p class="username repost"><a class="target" href="/${user.username}" title= "${user.tool}">${user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <p class="username repost"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -440,7 +440,7 @@ var one= function(a, b, c, d){
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
 		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
-		                                    <p class="username repost"><a class="target" href="/${user.username}" title= "${user.tool}">${user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <p class="username repost"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -469,7 +469,7 @@ var one= function(a, b, c, d){
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
 		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
-		                                    <p class="username repost"><a class="target" href="/${user.username}" title= "${user.tool}">${user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <p class="username repost"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -499,7 +499,7 @@ var one= function(a, b, c, d){
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
 		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
-		                                    <p class="username repost"><a class="target" href="/${user.username}" title= "${user.tool}">${user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <p class="username repost"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -537,7 +537,7 @@ var one= function(a, b, c, d){
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
 		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
-		                                    <p class="username repost"><a class="target" href="/${user.username}" title= "${user.tool}">${user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <p class="username repost"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -579,7 +579,7 @@ var one= function(a, b, c, d){
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
 		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
-		                                    <p class="username repost"><a class="target" href="/${user.username}" title= "${user.tool}">${user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <p class="username repost"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -608,7 +608,7 @@ var one= function(a, b, c, d){
 		                                    <div class="forkedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalRepoOwner.rol.level}'>
 		                                    <img class="fork" src="${c[e].originalRepoOwner.profilePic}" alt="">
-		                                    <p class="username fork"><a class="target" href="/${user.username}" title= "${user.tool}">${user.users_name}</a> Forkeó de <a class="target" href="/${c[e].originalRepoOwner.username}" title="${c[e].originalRepoOwner.tool}">${c[e].originalRepoOwner.users_name}</a><br>
+		                                    <p class="username fork"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a> Forkeó de <a class="target" href="/${c[e].originalRepoOwner.username}" title="${c[e].originalRepoOwner.tool}">${c[e].originalRepoOwner.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -932,7 +932,7 @@ var one= function(a, b, c, d){
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
 		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
-		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -961,7 +961,7 @@ var one= function(a, b, c, d){
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
 		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
-		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -990,7 +990,7 @@ var one= function(a, b, c, d){
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
 		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
-		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -1020,7 +1020,7 @@ var one= function(a, b, c, d){
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
 		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
-		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -1058,7 +1058,7 @@ var one= function(a, b, c, d){
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
 		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
-		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -1100,7 +1100,7 @@ var one= function(a, b, c, d){
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
 		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
-		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -1163,7 +1163,7 @@ var one= function(a, b, c, d){
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
-		                                    <p class="username"><a class="target" href="/${user.username}" title="${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
+		                                    <p class="username"><a class="target" href="/${user.username}/" title="${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
 																																								                       <img class='thumbnail' src= '${c[e].city.pic}'></img>
@@ -1206,7 +1206,7 @@ var one= function(a, b, c, d){
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
-		                                    <p class="username"><a class="target" href="/${user.username}" title="${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
+		                                    <p class="username"><a class="target" href="/${user.username}/" title="${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
 																																								                       <img class='thumbnail' src= '${c[e].city.pic}'></img>
@@ -1243,7 +1243,7 @@ var one= function(a, b, c, d){
                                 <div class="info">
                                     <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.level}'>
                                     <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
-                                    <p class="username"><a class="target" href="/${user.username}" title="">${user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+                                    <p class="username"><a class="target" href="/${user.username}/" title="">${user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
                                 </div>
                                 <p class="title">${c[e].title}</p>
                                 <p class="moreI">
@@ -1286,7 +1286,7 @@ var one= function(a, b, c, d){
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
-		                                    <p class="username"><a class="target" href="/${user.username}" title="${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
+		                                    <p class="username"><a class="target" href="/${user.username}/" title="${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
 																																								                       <img class='thumbnail' src= '${c[e].city.pic}'></img>
@@ -1329,7 +1329,7 @@ var one= function(a, b, c, d){
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
-		                                    <p class="username"><a class="target" href="/${user.username}" title="${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
+		                                    <p class="username"><a class="target" href="/${user.username}/" title="${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
 																																								                       <img class='thumbnail' src= '${c[e].city.pic}'></img>
@@ -1494,14 +1494,14 @@ var one= function(a, b, c, d){
 	                    break;
 	                case "im":
 						reTurn+=   `<section class="picture">
-	                                    <img class="pic" src="/resources/images/${user.username}/${c[e][1]}" alt="" class="big">
+	                                    <img class="pic" src= "/resources/images/${user.username}/${c[e][1]}" alt="" class="big">
 	                                </section>
 
 	                                `
 	                    break;
 	                default:
 						reTurn+=   `<section class="picture">
-	                                    <img class="pic" src="/resources/images/${user.username}/${c[e]}" alt="" class="big">
+	                                    <img class="pic" src= "/resources/images/${user.username}/${c[e]}" alt="" class="big">
 	                                </section>
 
 	                                `
@@ -1723,7 +1723,7 @@ return videos}
 /**/
 var purger= {}; 
             
-purger.index= 27; 
+purger.index= 28; 
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return
@@ -1752,10 +1752,16 @@ console.log("superPurged All files and file_trees were also deleted!")
 }
 
 var tipo= function( liurl ){ 
-    if(liurl.indexOf( "/images/" ) != -1)return "/img/"; 
+    if(liurl.indexOf( "/images/" ) != -1 || liurl.indexOf( "/loading.gif" ) != -1)return "/img/"; 
     if(liurl.indexOf( "/videos/" ) != -1)return "/vid/"; 
     return "/vid/"; 
 } 
+
+var trimUsername= function( liurl ){ 
+	liurl= liurl.slice(liurl.indexOf("/") + 1)
+	return liurl.slice(liurl.indexOf("/"))
+} 
+
 function newChat(a, b){
         $(".chats").prepend(`<div class='chat open ${b.toString()}'><div class='chatTitle button'><p class='user'>${a.find("p").text()}</p><span class='close'></span></div><div class='chatBox'><div class='messages'></div><div class='newMessage'><textarea rows='1'/><div class='emoticon'></div></div></div>`);
         $(".chats .chat:first-child .newMessage textarea").focus();
@@ -1904,6 +1910,12 @@ var openModal= function(a){
 	    $("#theater").find(".comentarios").css({"padding-top": ($("#theater").find(".info").height() + 35) + "px"}); 
 
 	    if(a.closest('.photo').is(".mult_img")){ 
+	    	_R(Antheater.find(".carr")).on("scroll", function(){ 
+                rf= $(this)
+                Math.round($(this)[0].scrollLeft / $(this).width()) == $(this).children().length - 1? (function(){rf.parent().find(".nav_arrow.right").addClass("disabled"); $("#theater").find(".nav_arrow.right").addClass("disabled")})(): (function(){rf.parent().find(".nav_arrow.right").removeClass("disabled"); $("#theater").find(".nav_arrow.right").removeClass("disabled")})(); 
+                $(this)[0].scrollLeft == 0? (function(){rf.parent().find(".nav_arrow.left").addClass("disabled"); $("#theater").find(".nav_arrow.left").addClass("disabled");})(): (function(){rf.parent().find(".nav_arrow.left").removeClass("disabled"); $("#theater").find(".nav_arrow.left").removeClass("disabled")})(); 
+            }) 
+            _R(Antheater.find(".carr")).e()
 	        ar= $(a.closest('.photo')); 
 	        source= un_tn(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].src); 
 	        $("#theater").find("#bigPic")[0].src= un_tn(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].src); 
@@ -2086,7 +2098,7 @@ player= videojs($(".current video").attr("id")).player()
 selectedSu= $(".current").find(".vjs-subtitles-button .vjs-menu-item.vjs-selected").text()
 su= []
 for(var n= 0; n < player.textTrackDisplay.c.Ea.length; n++){
-console.log(player.textTrackDisplay.c.Ea[n])
+//console.log(player.textTrackDisplay.c.Ea[n])
 selectedSu == player.textTrackDisplay.c.Ea[n].Ed? su.push({src: player.textTrackDisplay.c.Ea[n].Lc, kind: "subtitles", srclang: player.textTrackDisplay.c.Ea[n].Ua, label: player.textTrackDisplay.c.Ea[n].Ed, default: true}): su.push({src: player.textTrackDisplay.c.Ea[n].Lc, kind: "subtitles", srclang: player.textTrackDisplay.c.Ea[n].Ua, label: player.textTrackDisplay.c.Ea[n].Ed})
 }
 $("#theater #theater_video").replaceWith(`<video id="theater_video" controls class="video-js d88fer vjs-default-skin" preload="none" width="100%" height="264" data-setup='{"poster":""}' data-setup="{}">
@@ -2235,12 +2247,10 @@ if(Antheater.is(".mult_img") || Antheater.is(".mult_carr")){
 	        $("#theater").append('<div class="nav_arrow left' + (a.closest('.story').find(".nav_arrow.left").is(".disabled")? ' disabled': '') + '"><div class= "arrow"></div></div><div class="nav_arrow right' + (a.closest('.story').find(".nav_arrow.right").is(".disabled")? ' disabled': '') + '"><div class= "arrow"></div></div>'); 
 	        $("#theater .nav_arrow.left .arrow").on("click", function(e){
 	            Antheater.find(".nav_arrow.left .arrow").trigger("click")
-	            console.log("asd")
 
 	        }); 
 	        $("#theater .nav_arrow.right .arrow").on("click", function(e){
 	            Antheater.find(".nav_arrow.right .arrow").trigger("click")
-	            console.log("asd")
 
 	        }); 
 	        $("#theater .nav_arrow").on("click", function(i){$(i.target).is(".nav_arrow")? closeModal(): 1; }); 
@@ -3192,7 +3202,7 @@ badGuy= function(){
 	    $(".foto").each(function(){ 
 	        src= $(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src); 
 
-	        cold= JSON.parse(localStorage.getItem("/" + username + "/img" + src.slice(src.lastIndexOf("/"), src.lastIndexOf(".")))); 
+	        cold= JSON.parse(localStorage.getItem("/" + user.username + "/img" + src.slice(src.lastIndexOf("/"), src.lastIndexOf(".")))); 
 	        var t= $(this)[0]; 
 	        !!cold? (function(){ 
 	            cold.B? $(t).find(".options .bookmark").addClass("true"): $(t).find(".options .bookmark").removeClass("true"); 
@@ -3352,12 +3362,12 @@ tooltipComentarios= function(){
         } 
     }); 
 }
-k200= function(f, ww1, a, u, ty){ 
-if(f.target.responseURL.slice(98, -5) == "")return
+k200= function(f, ww1, a, u, ty, uRl){ 
+if(uRl == "")return
 switch(ty){
 	case "foto": 
         $(".foto").each(function(){ 
-            if(("/" + user.username + "/img" + ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).slice(($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("/"), ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("."))) == f.target.responseURL.slice(98, -5)){
+            if(("/" + user.username + "/img" + ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).slice(($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("/"), ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("."))) == uRl){
                 a= $(this); 
                 (function(){ 
                     a.find("img").on("click", function(){openFotosModal($(this));}); 
@@ -3367,7 +3377,7 @@ switch(ty){
     break; 
     case "video": 
         $(".vid").each(function(){ 
-            if(`/${user.username}/vid/${$(this).find("video")[0].src.slice($(this).find("video")[0].src.lastIndexOf("/") + 1, -4)}` == C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))){ 
+            if(`/${user.username}/vid/${$(this).find("video")[0].src.slice($(this).find("video")[0].src.lastIndexOf("/") + 1, -4)}` == `/${user.username}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`){ 
                 a= $(this); 
                 (function(){ 
                     a.prev().on("click", function(){openVidModal($(this).next().find(".Enlarge"))}); 
@@ -3377,7 +3387,7 @@ switch(ty){
     break; 
     case "story": 
         $(".story").each(function(){ 
-            if(($(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + $(this).find(".carr").find("img")[0].src.slice($(this).find(".carr").find("img")[0].src.lastIndexOf("/"), $(this).find(".carr").find("img")[0].src.lastIndexOf(".")): $(this).find(".options a").attr("href")) == f.target.responseURL.slice(98, -5)){
+            if(($(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + $(this).find(".carr").find("img")[0].src.slice($(this).find(".carr").find("img")[0].src.lastIndexOf("/"), $(this).find(".carr").find("img")[0].src.lastIndexOf(".")): $(this).find(".options a").attr("href")) == uRl){
                 a= $(this); 
                 (function(){ 
                     a.on( "click", function(r){ 
@@ -3391,7 +3401,7 @@ switch(ty){
     break; 
     case "photo": 
         $(".photo").each(function(){ 
-            if(("/" + user.username + "/img" + ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).slice(($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("/"), ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("."))) == f.target.responseURL.slice(98, -5)){
+            if(("/" + user.username + "/img" + ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).slice(($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("/"), ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("."))) == uRl){
                 a= $(this); 
                 (function(){ 
                     a.find("img").on("click", function(){openPhotoModal($(this))}); 
@@ -3402,7 +3412,7 @@ switch(ty){
     case "profilePic": 
         $("#profilePic").each(function(){ 
             if(("/" + user.username + "/img" + ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)).slice(($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)).lastIndexOf("/"), ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)).lastIndexOf(".")))
- == f.target.responseURL.slice(98, -5)){
+ == uRl){
                 a= $(this);
                 (function(){ 
                     $("#profilePic").on("click", function(){openProfilePicModal($(this));}); 
@@ -3413,7 +3423,7 @@ switch(ty){
 }; 
 
     aS= a; 
-    if(JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).hash != hashes[f.target.responseURL.slice(98, -5)]){
+    if(JSON.parse(localStorage.getItem(uRl)).hash != hashes[uRl]){
             $("badguy").remove();
             $("body").prepend("<badguy></badguy>");
             $("badguy").html(f.target.response.slice(f.target.response.lastIndexOf("biography") + 12, f.target.response.indexOf("sidebar") - 11).slice(0, f.target.response.slice(f.target.response.lastIndexOf("biography") + 12, f.target.response.indexOf("sidebar") - 11).lastIndexOf("</aside>")));
@@ -3427,9 +3437,9 @@ switch(ty){
         newComments[newComments.length]= getNewComments(aS.find(".Comentarios"), $("badguy .Comentarios")); 
         getCommentsAndAnswers($("badguy .Comentarios"), aS);
         
-        JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).B? aS.find(".options .bookmark").addClass("true"): aS.find(".options .bookmark").removeClass("true");
-        JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).S? aS.find(".options .star").addClass("true"): aS.find(".options .star").removeClass("true");
-        !!JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).C? (function(){aS.find(".Comentarios")[0].innerHTML= JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).C})(): 1;
+        JSON.parse(localStorage.getItem(uRl)).B? aS.find(".options .bookmark").addClass("true"): aS.find(".options .bookmark").removeClass("true");
+        JSON.parse(localStorage.getItem(uRl)).S? aS.find(".options .star").addClass("true"): aS.find(".options .star").removeClass("true");
+        !!JSON.parse(localStorage.getItem(uRl)).C? (function(){aS.find(".Comentarios")[0].innerHTML= JSON.parse(localStorage.getItem(uRl)).C})(): 1;
         $("badguy").remove(); 
         for(w in newComments){ 
             if(newComments[w].length == 1){
@@ -3457,32 +3467,36 @@ switch(ty){
                 } 
             } 
         } 
-        localStorage.setItem(f.target.responseURL.slice(98, -5), JSON.stringify({B: JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).B, S: JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).S, C: bGComments(aS), hash: u[0].sha})); 
+        localStorage.setItem(uRl, JSON.stringify({B: JSON.parse(localStorage.getItem(uRl)).B, S: JSON.parse(localStorage.getItem(uRl)).S, C: bGComments(aS), hash: u[0].sha})); 
     }else{
-        JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).B? aS.find(".options .bookmark").addClass("true"): aS.find(".options .bookmark").removeClass("true");
-        JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).S? aS.find(".options .star").addClass("true"): aS.find(".options .star").removeClass("true");
-        !!JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).C? (function(){aS.find(".Comentarios")[0].innerHTML= JSON.parse(localStorage.getItem(f.target.responseURL.slice(98, -5))).C})(): 1;
+        JSON.parse(localStorage.getItem(uRl)).B? aS.find(".options .bookmark").addClass("true"): aS.find(".options .bookmark").removeClass("true");
+        JSON.parse(localStorage.getItem(uRl)).S? aS.find(".options .star").addClass("true"): aS.find(".options .star").removeClass("true");
+        !!JSON.parse(localStorage.getItem(uRl)).C? (function(){aS.find(".Comentarios")[0].innerHTML= JSON.parse(localStorage.getItem(uRl)).C})(): 1;
     }
+    console.log("k200")
 }
-k300= function(C, p, y, ty){ 
+k300= function(C, p, y, ty, rep){ 
     typeof JSON.parse(C.target.response)[0] == "undefined"? console.log(C): 1; 
-    hashes[C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))]= (function(){built= true; for(eForensics in JSON.parse(C.target.response)){ 
+        art= C;
+    hashes[`/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`]= (function(){built= true; for(eForensics in JSON.parse(C.target.response)){ 
             if(nonBuilt.indexOf(JSON.parse(C.target.response)[eForensics].sha) != -1){ 
                 built= parseInt(eForensics) + 1; 
             } 
         };
+
         return built !== true? JSON.parse(C.target.response)[built].sha: JSON.parse(C.target.response)[0].sha 
 	})(); 
-    if(!!JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))) && JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).hash != JSON.parse(C.target.response)[0].sha){
+	
+    if(!!JSON.parse(localStorage.getItem(`/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`)) && JSON.parse(localStorage.getItem(`/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`)).hash != JSON.parse(C.target.response)[0].sha){
         var oReq= new XMLHttpRequest(); 
-        oReq.addEventListener("load", function(e){k200(e, p, y, JSON.parse(C.target.response), ty)}); 
-        oReq.open("GET", "https://raw.githubusercontent.com/LirilC/Lirilc.github.io/" + JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).hash + C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")) + ".html"); 
+        oReq.addEventListener("load", function(e){k200(e, p, y, JSON.parse(C.target.response), ty, (`/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`))}); 
+        oReq.open("GET", `https://raw.githubusercontent.com/LirilC/${rep}/${JSON.parse(localStorage.getItem(`/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`)).hash + C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}.html`); 
         oReq.send(); 
     }else{
         switch(ty){
         	case "foto": 
                 $(".foto").each(function(){ 
-                    if(("/" + user.username+ "/img" + ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).slice(($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("/"), ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("."))) == C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))){
+                    if(("/" + rep+ "/img" + ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).slice(($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("/"), ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("."))) == `/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`){
                         a= $(this);
                         (function(){ 
                             a.find("img").on("click", function(){openFotosModal($(this));}); 
@@ -3492,7 +3506,7 @@ k300= function(C, p, y, ty){
             break; 
             case "video": 
                 $(".vid").each(function(){ 
-                    if(`/${user.username}/vid/${$(this).find("video")[0].src.slice($(this).find("video")[0].src.lastIndexOf("/") + 1, -4)}` == C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))){
+                    if(`/${rep}/vid/${$(this).find("video")[0].src.slice($(this).find("video")[0].src.lastIndexOf("/") + 1, -4)}` == `/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`){
                         a= $(this); 
                         (function(){ 
                             a.prev().on("click", function(){openVidModal($(this).next().find(".Enlarge"))}); 
@@ -3501,7 +3515,7 @@ k300= function(C, p, y, ty){
                 });
             break; 
             case "story": 
-            	a= $(".story").filter(function(){if(($(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + $(this).find(".carr").find("img")[0].src.slice($(this).find(".carr").find("img")[0].src.lastIndexOf("/"), $(this).find(".carr").find("img")[0].src.lastIndexOf(".")): $(this).find(".options a").attr("href")) == C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))){return true}else{return false}})
+            	a= $(".story").filter(function(){if(($(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + $(this).find(".carr").find("img")[0].src.slice($(this).find(".carr").find("img")[0].src.lastIndexOf("/"), $(this).find(".carr").find("img")[0].src.lastIndexOf(".")): $(this).find(".options a").attr("href")) == `/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`){return true}else{return false}})
                 a.on( "click", function(r){ 
                     $( r.target ).is( ".pic" )? openModal( $( r.target ) ): 1; 
                     $( r.target ).is( ".video .Enlarge" )? openVideoModal( $( r.target ), ctrl?ctrl:undefined ): 1; 
@@ -3510,7 +3524,7 @@ k300= function(C, p, y, ty){
             break; 
             case "photo": 
                 $(".photo").each(function(){ 
-                    if(("/" + user.username + "/img" + ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).slice(($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("/"), ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("."))) == C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))){ 
+                    if(("/" + rep + "/img" + ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).slice(($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("/"), ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("."))) == `/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`){ 
                         a= $(this); 
                         (function(){ 
                             a.find("img").on("click", function(){openPhotoModal($(this))}); 
@@ -3520,8 +3534,8 @@ k300= function(C, p, y, ty){
             break; 
 			case "profilePic": 
                 $("#profilePic").each(function(){ 
-                    if(("/" + user.username+ "/img" + ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)).slice(($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)).lastIndexOf("/"), ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)).lastIndexOf(".")))
- == C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))){
+                    if(("/" + rep+ "/img" + ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)).slice(($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)).lastIndexOf("/"), ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)).lastIndexOf(".")))
+ == `/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`){
                         a= $(this);
                         (function(){ 
                             $("#profilePic").on("click", function(){openProfilePicModal($(this));}); 
@@ -3530,10 +3544,9 @@ k300= function(C, p, y, ty){
                 }); 
             break; 
         }; 
-        console.log(a, " b");
-        localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))) !== null && JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).B? a.find(".options .bookmark").addClass("true"): a.find(".options .bookmark").removeClass("true"); 
-        localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))) !== null && JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).S? a.find(".options .star").addClass("true"): a.find(".options .star").removeClass("true"); 
-        localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))) !== null && !!JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).C? (function(){a.find(".Comentarios")[0].innerHTML= JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).C})(): 1; 
+        localStorage.getItem(`/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`) !== null && JSON.parse(localStorage.getItem(`/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`)).B? a.find(".options .bookmark").addClass("true"): a.find(".options .bookmark").removeClass("true"); 
+        localStorage.getItem(`/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`) !== null && JSON.parse(localStorage.getItem(`/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`)).S? a.find(".options .star").addClass("true"): a.find(".options .star").removeClass("true"); 
+        localStorage.getItem(`/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`) !== null && !!JSON.parse(localStorage.getItem(`/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`)).C? (function(){a.find(".Comentarios")[0].innerHTML= JSON.parse(localStorage.getItem(`/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`)).C})(): 1; 
 
     }
 } 
@@ -3551,13 +3564,13 @@ K100= function(builds){
         })(); 
     	$(".foto").each(function(){ 
 	        src= $(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src); 
-	        w1=  "/" + username + "/img" + src.slice(src.lastIndexOf("/"), src.lastIndexOf(".")); 
+	        w1=  "/" + user.username + "/img" + src.slice(src.lastIndexOf("/"), src.lastIndexOf(".")); 
 	        cold= JSON.parse(localStorage.getItem(w1)); 
 	        t= $(this); 
 	        (!hashes[w1] || (!!cold && (cold.hash)))? (function(){ 
 	            var oReq= new XMLHttpRequest(); 
-	            oReq.addEventListener("load", function(e){k300(e, w1, t, "foto")}); 
-	            oReq.open("GET", "https://api.github.com/repos/LirilC/lirilc.github.io/commits?path=" +  w1 + ".html"); 
+	            oReq.addEventListener("load", function(e){k300(e, w1, t, "foto", user.username)}); 
+	            oReq.open("GET", `https://api.github.com/repos/LirilC/${user.username}/commits?path=${trimUsername(w1)}.html`); 
 	            oReq.setRequestHeader('Authorization', "token " + token); 
 	            oReq.send(); 
 	            !(!!cold && (cold.hash))? t.find("img").on("click", function(){openFotosModal($(this));}): 1; 
@@ -3570,8 +3583,8 @@ K100= function(builds){
 	        t= $(this); 
 	        (!hashes[w1] || (!!cold && (cold.hash)))? (function(){ 
 	            var oReq= new XMLHttpRequest(); 
-	            oReq.addEventListener("load", function(e){k300(e, w1, t, "video")}); 
-	            oReq.open("GET", "https://api.github.com/repos/LirilC/lirilc.github.io/commits?path=" +  w1 + ".html"); 
+	            oReq.addEventListener("load", function(e){k300(e, w1, t, "video", user.username)}); 
+	            oReq.open("GET", `https://api.github.com/repos/LirilC/${user.username}/commits?path=${trimUsername(w1)}.html`); 
 	            oReq.setRequestHeader('Authorization', "token " + token); 
 	            oReq.send(); 
 	            !(!!cold && (cold.hash))? t.prev().on("click", function(){openVidModal($(this).next().find(".Enlarge"))}): 1; 
@@ -3582,10 +3595,17 @@ K100= function(builds){
 	        w1=  $(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + $(this).find(".carr").find("img")[0].src.slice($(this).find(".carr").find("img")[0].src.lastIndexOf("/"), $(this).find(".carr").find("img")[0].src.lastIndexOf(".")): $(this).find(".options a").attr("href");                                                   
 	        cold= JSON.parse(localStorage.getItem(w1)); 
 	        t= $(this); 
-	        (typeof hashes[w1] == "undefined" || (!!cold && (cold.hash)))? (function(){ 
+	        if(t.is(".repost")){
+	        	var userRe= t.find(".info .repost").not(".username").last().attr("src");
+	        	userRe= userRe.slice(userRe.indexOf("images/") + 7, userRe.lastIndexOf("/"));
+	    	}else if(RooT.maTch.root.exec(actualLocation) !== null){
+	    		var op= w1.slice(0, w1.lastIndexOf("/"))
+				op= op.slice(1, op.lastIndexOf("/"))
+	    	}
+	        ((typeof hashes[w1] == "undefined" || (!!cold && (cold.hash))) && ["user", ""].indexOf(typeof userRe != "undefined"?userRe:typeof op != "undefined"?op:user.username) == -1)? (function(){ 
 	            var oReq= new XMLHttpRequest(); 
-	            oReq.addEventListener("load", function(e){k300(e, w1, t, "story")}); 
-	            oReq.open("GET", "https://api.github.com/repos/LirilC/lirilc.github.io/commits?path=" +  w1 + ".html"); 
+	            oReq.addEventListener("load", function(e){k300(e, w1, t, "story", (typeof userRe != "undefined"?userRe:typeof op != "undefined"?op:user.username))}); 
+	            oReq.open("GET", `https://api.github.com/repos/LirilC/${typeof userRe != "undefined"?userRe:typeof op != "undefined"?op:user.username}/commits?path=${trimUsername(w1)}.html`); 
 	            oReq.setRequestHeader('Authorization', "token " + token); 
 	            oReq.send(); 
 	            a= t; 
@@ -3607,8 +3627,8 @@ K100= function(builds){
 	        t= $(this); 
 	        (!hashes[w1] || (!!cold && (cold.hash)))? (function(){ 
 	            var oReq= new XMLHttpRequest(); 
-	            oReq.addEventListener("load", function(e){k300(e, w1, t, "photo")}); 
-	            oReq.open("GET", "https://api.github.com/repos/LirilC/lirilc.github.io/commits?path=" +  w1 + ".html"); 
+	            oReq.addEventListener("load", function(e){k300(e, w1, t, "photo", user.username)}); 
+	            oReq.open("GET", `https://api.github.com/repos/LirilC/${user.username}/commits?path=${trimUsername(w1)}.html`); 
 	            oReq.setRequestHeader('Authorization', "token " + token); 
 	            oReq.send(); 
 	            !(!!cold && (cold.hash))? t.find("img").on("click", function(){openModal($(this))}): 1; 
@@ -3617,13 +3637,13 @@ K100= function(builds){
 	    }); 
 	    $("#profilePic").each(function(){ 
 	        src= ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)); 
-	        w1= "/" + username + "/img" + src.slice(src.lastIndexOf("/"), src.lastIndexOf(".")); 
+	        w1= "/" + user.username + "/img" + src.slice(src.lastIndexOf("/"), src.lastIndexOf(".")); 
 	        cold= JSON.parse(localStorage.getItem(w1)); 
 	        t= $(this); 
 	        (!hashes[w1] || (!!cold && (cold.hash)))? (function(){ 
 	            var oReq= new XMLHttpRequest(); 
-	            oReq.addEventListener("load", function(e){k300(e, w1, t, "profilePic")}); 
-	            oReq.open("GET", "https://api.github.com/repos/LirilC/lirilc.github.io/commits?path=" +  w1 + ".html"); 
+	            oReq.addEventListener("load", function(e){k300(e, w1, t, "profilePic", user.username)}); 
+	            oReq.open("GET", `https://api.github.com/repos/LirilC/${user.username}/commits?path=${trimUsername(w1)}.html`); 
 	            oReq.setRequestHeader('Authorization', "token " + token); 
 	            oReq.send(); 
 	            !(!!cold && (cold.hash))? $("#profilePic").on("click", function(){openProfilePicModal($(this));}): 1; 
@@ -3902,7 +3922,7 @@ if(evt.keyCode== 27){
 					}
 				}else{
 					currentCarrItem= $($(".current").find(".carr").children()[($(".current").find(".carr")[0].scrollLeft / $($(".current").find(".carr")).width())]).find("video")[0]
-					if(currentCarrItem.played.length && $(currentCarrItem).parent().parent().is(".seekable")){
+					if(typeof currentCarrItem!= "undefined" && currentCarrItem.played.length && $(currentCarrItem).parent().parent().is(".seekable")){
 						currentCarrItem.currentTime+= seek
 					}
 				}
@@ -4714,9 +4734,9 @@ _R("#videos", 0).on("click", function(ev){
 	})
 })
 /*RooT RooTed users' links*/
-_R('a[href="/L"]').on("click", function(e){
+_R('a[href="/L/"]').on("click", function(e){
 	e.preventDefault()
-	history.pushState({page: 1}, "", `/L`)
+	history.pushState({page: 1}, "", `/L/`)
   RooT.imporT("/js/L/DB.js", Then, function(d){
     $(".ui-tooltip").remove()
     window.user= d._user()
@@ -4727,9 +4747,9 @@ _R('a[href="/L"]').on("click", function(e){
     })
   })
 })
-_R('a[href="/A.K.A._Dizzy"]').on("click", function(e){
+_R('a[href="/A.K.A._Dizzy/"]').on("click", function(e){
 	e.preventDefault()
-	history.pushState({page: 1}, "", `/A.K.A._Dizzy`)
+	history.pushState({page: 1}, "", `/A.K.A._Dizzy/`)
   RooT.imporT("/js/A.K.A._Dizzy/DB.js", Then, function(d){
     $(".ui-tooltip").remove()
     window.user= d._user()
@@ -4740,9 +4760,9 @@ _R('a[href="/A.K.A._Dizzy"]').on("click", function(e){
     })
   })
 })
-_R('a[href="/PpP"]').on("click", function(e){
+_R('a[href="/PpP/"]').on("click", function(e){
 	e.preventDefault()
-	history.pushState({page: 1}, "", `/PpP`)
+	history.pushState({page: 1}, "", `/PpP/`)
   RooT.imporT("/js/PpP/DB.js", Then, function(d){
     $(".ui-tooltip").remove()
     window.user= d._user()
@@ -4753,9 +4773,9 @@ _R('a[href="/PpP"]').on("click", function(e){
     })
   })
 })
-_R('a[href="/Eld"]').on("click", function(e){
+_R('a[href="/Eld/"]').on("click", function(e){
 	e.preventDefault()
-	history.pushState({page: 1}, "", `/Eld`)
+	history.pushState({page: 1}, "", `/Eld/`)
   RooT.imporT("/js/Eld/DB.js", Then, function(d){
     $(".ui-tooltip").remove()
     window.user= d._user()
@@ -4766,9 +4786,9 @@ _R('a[href="/Eld"]').on("click", function(e){
     })
   })
 })
-_R('a[href="/AuraCardonaC"]').on("click", function(e){
+_R('a[href="/AuraCardonaC/"]').on("click", function(e){
 	e.preventDefault()
-	history.pushState({page: 1}, "", `/AuraCardonaC`)
+	history.pushState({page: 1}, "", `/AuraCardonaC/`)
   RooT.imporT("/js/AuraCardonaC/DB.js", Then, function(d){
     $(".ui-tooltip").remove()
     window.user= d._user()
@@ -4779,9 +4799,9 @@ _R('a[href="/AuraCardonaC"]').on("click", function(e){
     })
   })
 })
-_R('a[href="/MeganFox"]').on("click", function(e){
+_R('a[href="/MeganFox/"]').on("click", function(e){
 	e.preventDefault()
-	history.pushState({page: 1}, "", `/MeganFox`)
+	history.pushState({page: 1}, "", `/MeganFox/`)
   RooT.imporT("/js/MeganFox/DB.js", Then, function(d){
     $(".ui-tooltip").remove()
     window.user= d._user()
@@ -4792,9 +4812,9 @@ _R('a[href="/MeganFox"]').on("click", function(e){
     })
   })
 })
-_R('a[href="/G-Suschrist"]').on("click", function(e){
+_R('a[href="/G-Suschrist/"]').on("click", function(e){
 	e.preventDefault()
-	history.pushState({page: 1}, "", `/G-Suschrist`)
+	history.pushState({page: 1}, "", `/G-Suschrist/`)
   RooT.imporT("/js/G-Suschrist/DB.js", Then, function(d){
     $(".ui-tooltip").remove()
     window.user= d._user()
@@ -4805,9 +4825,9 @@ _R('a[href="/G-Suschrist"]').on("click", function(e){
     })
   })
 })
-_R('a[href="/LamaMadora"]').on("click", function(e){
+_R('a[href="/LamaMadora/"]').on("click", function(e){
 	e.preventDefault()
-	history.pushState({page: 1}, "", `/LamaMadora`)
+	history.pushState({page: 1}, "", `/LamaMadora/`)
   RooT.imporT("/js/LamaMadora/DB.js", Then, function(d){
     $(".ui-tooltip").remove()
     window.user= d._user()
@@ -4818,9 +4838,9 @@ _R('a[href="/LamaMadora"]').on("click", function(e){
     })
   })
 })
-_R('a[href="/whale_Shailene"]').on("click", function(e){
+_R('a[href="/whale_Shailene/"]').on("click", function(e){
 	e.preventDefault()
-	history.pushState({page: 1}, "", `/whale_Shailene`)
+	history.pushState({page: 1}, "", `/whale_Shailene/`)
   RooT.imporT("/js/whale_Shailene/DB.js", Then, function(d){
     $(".ui-tooltip").remove()
     window.user= d._user()
@@ -5271,9 +5291,9 @@ oReq.send();
 	  })
 	})
 	/*RooT RooTed users' links*/
-	_R('a[href="/L"]').on("click", function(e){
+	_R('a[href="/L/"]').on("click", function(e){
 		e.preventDefault()
-		history.pushState({page: 1}, "", `/L`)
+		history.pushState({page: 1}, "", `/L/`)
 	  RooT.imporT("/js/L/DB.js", Then, function(d){
     $(".ui-tooltip").remove()
 	    window.user= d._user()
@@ -5284,9 +5304,9 @@ oReq.send();
 	    })
 	  })
 	})
-	_R('a[href="/A.K.A._Dizzy"]').on("click", function(e){
+	_R('a[href="/A.K.A._Dizzy/"]').on("click", function(e){
 		e.preventDefault()
-		history.pushState({page: 1}, "", `/A.K.A._Dizzy`)
+		history.pushState({page: 1}, "", `/A.K.A._Dizzy/`)
 	  RooT.imporT("/js/A.K.A._Dizzy/DB.js", Then, function(d){
     $(".ui-tooltip").remove()
 	    window.user= d._user()
@@ -5297,9 +5317,9 @@ oReq.send();
 	    })
 	  })
 	})
-	_R('a[href="/PpP"]').on("click", function(e){
+	_R('a[href="/PpP/"]').on("click", function(e){
 		e.preventDefault()
-		history.pushState({page: 1}, "", `/PpP`)
+		history.pushState({page: 1}, "", `/PpP/`)
 	  RooT.imporT("/js/PpP/DB.js", Then, function(d){
     $(".ui-tooltip").remove()
 	    window.user= d._user()
@@ -5310,9 +5330,9 @@ oReq.send();
 	    })
 	  })
 	})
-	_R('a[href="/Eld"]').on("click", function(e){
+	_R('a[href="/Eld/"]').on("click", function(e){
 		e.preventDefault()
-		history.pushState({page: 1}, "", `/Eld`)
+		history.pushState({page: 1}, "", `/Eld/`)
 	  RooT.imporT("/js/Eld/DB.js", Then, function(d){
     $(".ui-tooltip").remove()
 	    window.user= d._user()
@@ -5323,9 +5343,9 @@ oReq.send();
 	    })
 	  })
 	})
-	_R('a[href="/AuraCardonaC"]').on("click", function(e){
+	_R('a[href="/AuraCardonaC/"]').on("click", function(e){
 		e.preventDefault()
-		history.pushState({page: 1}, "", `/AuraCardonaC`)
+		history.pushState({page: 1}, "", `/AuraCardonaC/`)
 	  RooT.imporT("/js/AuraCardonaC/DB.js", Then, function(d){
     $(".ui-tooltip").remove()
 	    window.user= d._user()
@@ -5336,9 +5356,9 @@ oReq.send();
 	    })
 	  })
 	})
-	_R('a[href="/MeganFox"]').on("click", function(e){
+	_R('a[href="/MeganFox/"]').on("click", function(e){
 		e.preventDefault()
-		history.pushState({page: 1}, "", `/MeganFox`)
+		history.pushState({page: 1}, "", `/MeganFox/`)
 	  RooT.imporT("/js/MeganFox/DB.js", Then, function(d){
     $(".ui-tooltip").remove()
 	    window.user= d._user()
@@ -5349,9 +5369,9 @@ oReq.send();
 	    })
 	  })
 	})
-	_R('a[href="/G-Suschrist"]').on("click", function(e){
+	_R('a[href="/G-Suschrist/"]').on("click", function(e){
 		e.preventDefault()
-		history.pushState({page: 1}, "", `/G-Suschrist`)
+		history.pushState({page: 1}, "", `/G-Suschrist/`)
 	  RooT.imporT("/js/G-Suschrist/DB.js", Then, function(d){
     $(".ui-tooltip").remove()
 	    window.user= d._user()
@@ -5362,9 +5382,9 @@ oReq.send();
 	    })
 	  })
 	})
-	_R('a[href="/LamaMadora"]').on("click", function(e){
+	_R('a[href="/LamaMadora/"]').on("click", function(e){
 		e.preventDefault()
-		history.pushState({page: 1}, "", `/LamaMadora`)
+		history.pushState({page: 1}, "", `/LamaMadora/`)
 	  RooT.imporT("/js/LamaMadora/DB.js", Then, function(d){
     $(".ui-tooltip").remove()
 	    window.user= d._user()
@@ -5375,9 +5395,9 @@ oReq.send();
 	    })
 	  })
 	})
-	_R('a[href="/whale_Shailene"]').on("click", function(e){
+	_R('a[href="/whale_Shailene/"]').on("click", function(e){
 		e.preventDefault()
-		history.pushState({page: 1}, "", `/whale_Shailene`)
+		history.pushState({page: 1}, "", `/whale_Shailene/`)
 	  RooT.imporT("/js/whale_Shailene/DB.js", Then, function(d){
     $(".ui-tooltip").remove()
 	    window.user= d._user()
@@ -5550,7 +5570,6 @@ for(ind in edHistory){
             d.find("media").remove()
             d.find(".Comentarios").before($("badguy").find("#otherContainments")[0].outerHTML)
             d.find("text").html()
-            console.log(d)
             for(var er= 0; er <= d.find(".media audio").length - 1; er++){
                 audiojs.create(d.find(".media audio")[er])
             }

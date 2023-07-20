@@ -1,6 +1,96 @@
 export function _index(){
 var index= {
     stories: [
+    "/MeganFox/img/Yu7ps34i6t": {
+            user: {
+                username: "MeganFox",
+                users_name: "Megan Denise Fox",
+                profilePic: {
+                        "/MeganFox/img/nc79cNubi8": {
+                            type: "img",
+                            date: {
+                                full: "17 de Julio de 2022 a las 0:10 pm",
+                                min: "17 de Julio a las 0:10 pm"
+                            },
+                            title: `the trees call me by my name`,
+                            description: ``,
+                            contents:  {image: "nc79cNubi8_tn.jpg"},
+                            Comentarios: ""
+                        }
+                    },
+                rol:{
+                    rol: "G",
+                    level: "100"
+                },
+                tool:  `<div class='tool'>
+                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                            <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
+                            <div class='datos'>
+                                <ul class='actions'>
+                                    <li class='chatear' title='Chatear'>C</li>
+                                    <li class='agregar' title='Agregar'>A</li>
+                                    <li class='juzgar' title='Juzgar'>J</li>
+                                </ul>                  
+                                <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+                            </div>
+                        </div>`
+            },
+            type: "mult_img",
+            date: {
+                full: "19 de Julio de 2023 a las 6:34 pm",
+                min: "19 de Julio a las 6:34 pm"
+            },
+            title: `lilith rising 🌑`,
+            description: ``,
+            contents:  {carrContents: ["Yu7ps34i6t.jpg", "VGuJdWUYgT.jpg", "snxgFaIz9z.jpg"]},
+            Comentarios: ""
+        },
+    "/MeganFox/img/92Myy9CUyU": {
+            user: {
+                username: "MeganFox",
+                users_name: "Megan Denise Fox",
+                profilePic: {
+                        "/MeganFox/img/nc79cNubi8": {
+                            type: "img",
+                            date: {
+                                full: "17 de Julio de 2022 a las 0:10 pm",
+                                min: "17 de Julio a las 0:10 pm"
+                            },
+                            title: `the trees call me by my name`,
+                            description: ``,
+                            contents:  {image: "nc79cNubi8_tn.jpg"},
+                            Comentarios: ""
+                        }
+                    },
+                rol:{
+                    rol: "G",
+                    level: "100"
+                },
+                tool:  `<div class='tool'>
+                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                            <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
+                            <div class='datos'>
+                                <ul class='actions'>
+                                    <li class='chatear' title='Chatear'>C</li>
+                                    <li class='agregar' title='Agregar'>A</li>
+                                    <li class='juzgar' title='Juzgar'>J</li>
+                                </ul>                  
+                                <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+                            </div>
+                        </div>`
+            },
+            type: "mult_img",
+            date: {
+                full: "18 de Julio de 2023 a las 3:8 pm",
+                min: "18 de Julio a las 3:8 pm"
+            },
+            title: `a fourth house taurus sun`,
+            description: ``,
+            contents:  {carrContents: ["92Myy9CUyU.jpg", "0RuEzyxiRe.jpg", "XTxcUJchhC.jpg", "sQwXSDY9mX.jpg"]},
+            Comentarios: ""
+        },
     "/MeganFox/img/nc79cNubi8", {
             user: {
                 username: "MeganFox",

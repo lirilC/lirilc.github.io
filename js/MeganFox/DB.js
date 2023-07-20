@@ -94,8 +94,19 @@ var user= {
         ["Sobrina de", {name: "#Jesús De Nazareth"}]
     ],
     fotos: {
-        quantity: 130,
+        quantity: 133,
         fotos: {
+            "/MeganFox/img/Yu7ps34i6t": {
+                type: "mult_img",
+                date: {
+                    full: "19 de Julio de 2023 a las 6:34 pm",
+                    min: "19 de Julio a las 6:34 pm"
+                },
+                title: `lilith rising 🌑`,
+                description: ``,
+                contents:  {carrContents: ["Yu7ps34i6t_tn.jpg", "VGuJdWUYgT_tn.jpg", "snxgFaIz9z_tn.jpg"]},
+                Comentarios: ""
+            },
             "/MeganFox/img/92Myy9CUyU": {
                 type: "mult_img",
                 date: {
@@ -183,17 +194,6 @@ var user= {
                 description: ``,
                 contents:  {carrContents: ["gQv7jG4RCp_tn.jpg", "EVSE3yWkli_tn.jpg"]},
                 Comentarios: ""
-            },
-            "/MeganFox/img/MFU1p9jw6f": {
-                type: "mult_img",
-                date: {
-                    full: "16 de Septiembre de 2022 a las 8:40 pm",
-                    min: "Septiembre de 2022"
-                },
-                title: `The theme was roller disco`,
-                description: ``,
-                contents:  {carrContents: ["MFU1p9jw6f_tn.jpg", "MHs7hmqvpc_tn.jpg", "rOi6fVPRGN_tn.jpg"]},
-                Comentarios: ""
             }
         }
     },
@@ -236,6 +236,17 @@ var user= {
         }
     },
     stories: {
+        "/MeganFox/img/Yu7ps34i6t": {
+            type: "mult_img",
+            date: {
+                full: "19 de Julio de 2023 a las 6:34 pm",
+                min: "19 de Julio a las 6:34 pm"
+            },
+            title: `lilith rising 🌑`,
+            description: ``,
+            contents:  {carrContents: ["Yu7ps34i6t.jpg", "VGuJdWUYgT.jpg", "snxgFaIz9z.jpg"]},
+            Comentarios: ""
+        },
         "/MeganFox/img/92Myy9CUyU": {
             type: "mult_img",
             date: {

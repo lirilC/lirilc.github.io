@@ -3,15 +3,15 @@ var user= {
 	username: "MeganFox",
     users_name: "Megan Denise Fox",
     profilePic: {
-            "/MeganFox/img/H5TxBHq4ff": {
+            "/MeganFox/img/nc79cNubi8": {
                 type: "img",
                 date: {
-                    full: "13 de Agosto de 2022 a las 10:8 pm",
-                    min: "Enero de 2022"
+                    full: "17 de Julio de 2022 a las 0:10 pm",
+                    min: "17 de Julio a las 0:10 pm"
                 },
-                title: `El mejor momento 😍🌅`,
+                title: `the trees call me by my name`,
                 description: ``,
-                contents:  {image: "H5TxBHq4ff_tn.jpg"},
+                contents:  {image: "nc79cNubi8_tn.jpg"},
                 Comentarios: ""
             }
         },
@@ -21,7 +21,7 @@ var user= {
     },
     tool:  `<div class='tool'>
                 <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                <img src='/resources/images/MeganFox/qTaHNrHo4j_tn.jpg'>
+                <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
                 <div class='datos'>
                     <ul class='actions'>
                         <li class='chatear' title='Chatear'>C</li>
@@ -640,6 +640,17 @@ var user= {
             contents:  {carrContents: ["92Myy9CUyU_tn.jpg", "0RuEzyxiRe_tn.jpg", "XTxcUJchhC_tn.jpg", "sQwXSDY9mX_tn.jpg"]},
             Comentarios: ""
         }
+        "/MeganFox/img/Yu7ps34i6t": {
+            type: "mult_img",
+            date: {
+                full: "19 de Julio de 2023 a las 6:34 pm",
+                min: "19 de Julio a las 6:34 pm"
+            },
+            title: `lilith rising 🌑`,
+            description: ``,
+            contents:  {carrContents: ["Yu7ps34i6t_tn.jpg", "VGuJdWUYgT_tn.jpg", "snxgFaIz9z_tn.jpg"]},
+            Comentarios: ""
+        },
     }
 }
 return user
