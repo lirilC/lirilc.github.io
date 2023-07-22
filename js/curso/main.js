@@ -131,7 +131,7 @@ $(document).on("ready",function(){
 
 caSe= function(i){ 
     for(eForensics in i){ 
-        if(parseInt(eForensics) != i.length - 1 && ($('video')[$('video').length - 1].currentTime >= i[eForensics][0] && $('video')[$('video').length - 1].currentTime < i[parseInt(eForensics) + 1][0]) || (parseInt(eForensics) == i.length - 1 && $('video')[$('video').length - 1].currentTime >= i[eForensics][0])){
+        if(parseFloat(eForensics) != i.length - 1 && ($('video')[$('video').length - 1].currentTime >= i[eForensics][0] && $('video')[$('video').length - 1].currentTime < i[parseFloat(eForensics) + 1][0]) || (parseFloat(eForensics) == i.length - 1 && $('video')[$('video').length - 1].currentTime >= i[eForensics][0])){
         	$('.presetter')[0].innerHTML != i[eForensics][1]? $('.presetter')[0].innerHTML= i[eForensics][1]: 1
         }
     } 
@@ -277,7 +277,7 @@ $('.widgetero .widget').last().draggable({
 	snapMode: "both", 
 	revertDuration: 100,
 	snapTolerance: 10,
-	grid: ($("#gridWidth").val() == "0" && $("#gridHeight").val() == "0") || !gridSnapping? false: [parseInt($("#gridWidth").val()), parseInt($("#gridHeight").val())],
+	grid: ($("#gridWidth").val() == "0" && $("#gridHeight").val() == "0") || !gridSnapping? false: [parseFloat($("#gridWidth").val()), parseFloat($("#gridHeight").val())],
 containment: "window",
 cursorAt: { left: $('.widgetero .widget').last().width() / 2, top: $('.widgetero .widget').last().height() / 2},
 	revert: false,
@@ -309,8 +309,8 @@ $(document).on("mousemove", function(o){
 mouseX= o.pageX
 mouseY= o.pageY
 if($(".select").is(".on") && $("#customizationBars").hasClass("open")){
-	$(".horizontalredlight").css({"left": `${(mouseX - parseInt($(".widgetero").css("margin-left")) - (parseInt($(".horizontalredlight").css("width"))/2))}px`, "top": `${((mouseY - 46) - 0.5 - (parseInt($(".widgetero").css("margin-top")) - 46))}px`})
-	$(".verticalredlight").css({"left": `${mouseX - parseInt($(".widgetero").css("margin-left")) - 0.5}px`, "top": `${((mouseY - 46 - (parseInt($(".widgetero").css("margin-top")) - 46) - (parseInt($(".verticalredlight").css("height")))/2))}px`})
+	$(".horizontalredlight").css({"left": `${(mouseX - parseFloat($(".widgetero").css("margin-left")) - (parseFloat($(".horizontalredlight").css("width"))/2))}px`, "top": `${((mouseY - 46) - 0.5 - (parseFloat($(".widgetero").css("margin-top")) - 46))}px`})
+	$(".verticalredlight").css({"left": `${mouseX - parseFloat($(".widgetero").css("margin-left")) - 0.5}px`, "top": `${((mouseY - 46 - (parseFloat($(".widgetero").css("margin-top")) - 46) - (parseFloat($(".verticalredlight").css("height")))/2))}px`})
 	$(".horizontalredlight").css({"display": "block"})
 	$(".verticalredlight").css({"display": "block"})
 }else{
@@ -319,20 +319,20 @@ if($(".select").is(".on") && $("#customizationBars").hasClass("open")){
 }
 
 n_marker= {
-x: parseInt($(".verticalredlight").css("left")),
-y: parseInt($(".verticalredlight").css("top")) + parseInt($(".verticalredlight").css("height")) / 2 - 36
+x: parseFloat($(".verticalredlight").css("left")),
+y: parseFloat($(".verticalredlight").css("top")) + parseFloat($(".verticalredlight").css("height")) / 2 - 36
 }
 s_marker= {
-x: parseInt($(".verticalredlight").css("left")),
-y: parseInt($(".verticalredlight").css("top")) + parseInt($(".verticalredlight").css("height")) / 2 + 36
+x: parseFloat($(".verticalredlight").css("left")),
+y: parseFloat($(".verticalredlight").css("top")) + parseFloat($(".verticalredlight").css("height")) / 2 + 36
 }
 e_marker= {
-x: parseInt($(".horizontalredlight").css("left")) + parseInt($(".horizontalredlight").css("width")) / 2 - 36,
-y: parseInt($(".horizontalredlight").css("top")) 
+x: parseFloat($(".horizontalredlight").css("left")) + parseFloat($(".horizontalredlight").css("width")) / 2 - 36,
+y: parseFloat($(".horizontalredlight").css("top")) 
 }
 w_marker= {
-x: parseInt($(".horizontalredlight").css("left")) + parseInt($(".horizontalredlight").css("width")) / 2 + 36,
-y: parseInt($(".horizontalredlight").css("top"))
+x: parseFloat($(".horizontalredlight").css("left")) + parseFloat($(".horizontalredlight").css("width")) / 2 + 36,
+y: parseFloat($(".horizontalredlight").css("top"))
 }
 var closest_y_n= {dist: Infinity, elem: null}
 var closest_y_s= {dist: Infinity, elem: null}
@@ -340,10 +340,10 @@ var closest_x_e= {dist: Infinity, elem: null}
 var closest_x_w= {dist: Infinity, elem: null}
 $(".widgetero .widget").each(function(){
 this.border={
-top: parseInt($(this).css("top")), 
-bottom: parseInt($(this).css("top")) + parseInt($(this).css("height")), 
-left: parseInt($(this).css("left")), 
-right: parseInt($(this).css("left")) + parseInt($(this).css("width"))
+top: parseFloat($(this).css("top")), 
+bottom: parseFloat($(this).css("top")) + parseFloat($(this).css("height")), 
+left: parseFloat($(this).css("left")), 
+right: parseFloat($(this).css("left")) + parseFloat($(this).css("width"))
 }
 if(n_marker.x >= this.border.left && n_marker.x <= this.border.right){
 	if(Math.abs(closest_y_n.dist) > Math.abs(n_marker.y - this.border.top)){
@@ -454,14 +454,14 @@ if(l.keyCode== 27){
 	if(!mouseDown || !$(".button.select").is(".on"))return;
 	switch(l.keyCode){
 		case 50:
-			if(typeof saved.s == "undefined" || (typeof saved.s != "undefined" && (parseInt( $(".marker-n").parent().css("top")) + parseInt( $(".marker-n").parent().css("height")) / 2 + (parseInt($(".marker-n").css("top"))- parseInt($(".verticalredlight").css("height")) / 2) ) < saved.s)){
+			if(typeof saved.s == "undefined" || (typeof saved.s != "undefined" && (parseFloat( $(".marker-n").parent().css("top")) + parseFloat( $(".marker-n").parent().css("height")) / 2 + (parseFloat($(".marker-n").css("top"))- parseFloat($(".verticalredlight").css("height")) / 2) ) < saved.s)){
 				if($(".marker-n").is(".saved")){
 					$(".marker-n").removeClass("saved");
 					delete saved.n
 					$($(".greylight.x")[0]).css({"top": ``, "display": "", "left": ``})
 				}else{
 					$(".marker-n").addClass("saved");
-					saved.n= parseInt( $(".marker-n").parent().css("top")) + parseInt( $(".marker-n").parent().css("height")) / 2 + (parseInt($(".marker-n").css("top"))- parseInt($(".verticalredlight").css("height")) / 2) + 1
+					saved.n= parseFloat( $(".marker-n").parent().css("top")) + parseFloat( $(".marker-n").parent().css("height")) / 2 + (parseFloat($(".marker-n").css("top"))- parseFloat($(".verticalredlight").css("height")) / 2) + 1
 					$($(".greylight.x")[0]).css({"top": `${saved.n}px`, "display": "block"})
 				}
 			}else{
@@ -469,14 +469,14 @@ if(l.keyCode== 27){
 			}
 			break;
 		case 51:
-			if(typeof saved.e == "undefined" || (typeof saved.e != "undefined" && (parseInt( $(".marker-w").parent().css("left")) + parseInt( $(".marker-w").parent().css("width")) / 2 + (parseInt($(".marker-w").css("left"))- parseInt($(".horizontalredlight").css("width")) / 2)) > saved.e)){
+			if(typeof saved.e == "undefined" || (typeof saved.e != "undefined" && (parseFloat( $(".marker-w").parent().css("left")) + parseFloat( $(".marker-w").parent().css("width")) / 2 + (parseFloat($(".marker-w").css("left"))- parseFloat($(".horizontalredlight").css("width")) / 2)) > saved.e)){
 				if($(".marker-w").is(".saved")){
 					$(".marker-w").removeClass("saved");
 					delete saved.w
 					$($(".greylight.y")[0]).css({"top": ``, "display": "", "left": ``})
 				}else{
 					$(".marker-w").addClass("saved");
-					saved.w= parseInt( $(".marker-w").parent().css("left")) + parseInt( $(".marker-w").parent().css("width")) / 2 + (parseInt($(".marker-w").css("left"))- parseInt($(".horizontalredlight").css("width")) / 2) + 1
+					saved.w= parseFloat( $(".marker-w").parent().css("left")) + parseFloat( $(".marker-w").parent().css("width")) / 2 + (parseFloat($(".marker-w").css("left"))- parseFloat($(".horizontalredlight").css("width")) / 2) + 1
 					$($(".greylight.y")[0]).css({"left": `${saved.w}px`, "display": "block"})
 				}
 			}else{
@@ -484,7 +484,7 @@ if(l.keyCode== 27){
 			}
 			break;
 		case 52:
-			if(typeof saved.n == "undefined" || (typeof saved.n != "undefined" && (parseInt( $(".marker-s").parent().css("top")) + parseInt( $(".marker-s").parent().css("height")) / 2 + (parseInt($(".marker-s").css("top"))- parseInt($(".verticalredlight").css("height")) / 2)) > saved.n)){
+			if(typeof saved.n == "undefined" || (typeof saved.n != "undefined" && (parseFloat( $(".marker-s").parent().css("top")) + parseFloat( $(".marker-s").parent().css("height")) / 2 + (parseFloat($(".marker-s").css("top"))- parseFloat($(".verticalredlight").css("height")) / 2)) > saved.n)){
 				if($(".marker-s").is(".saved")){
 					$(".marker-s").removeClass("saved");
 					delete saved.s
@@ -492,7 +492,7 @@ if(l.keyCode== 27){
 
 				}else{
 					$(".marker-s").addClass("saved");
-					saved.s= parseInt( $(".marker-s").parent().css("top")) + parseInt( $(".marker-s").parent().css("height")) / 2 + (parseInt($(".marker-s").css("top"))- parseInt($(".verticalredlight").css("height")) / 2) + 1
+					saved.s= parseFloat( $(".marker-s").parent().css("top")) + parseFloat( $(".marker-s").parent().css("height")) / 2 + (parseFloat($(".marker-s").css("top"))- parseFloat($(".verticalredlight").css("height")) / 2) + 1
 					$($(".greylight.x")[1]).css({"top": `${saved.s}px`, "display": "block"})
 				}
 			}else{
@@ -500,14 +500,14 @@ if(l.keyCode== 27){
 			}
 			break;
 		case 49:
-			if(typeof saved.w == "undefined" || (typeof saved.w != "undefined" && (parseInt( $(".marker-e").parent().css("left")) + parseInt( $(".marker-e").parent().css("width")) / 2 + (parseInt($(".marker-e").css("left"))- parseInt($(".horizontalredlight").css("width")) / 2)) < saved.w)){
+			if(typeof saved.w == "undefined" || (typeof saved.w != "undefined" && (parseFloat( $(".marker-e").parent().css("left")) + parseFloat( $(".marker-e").parent().css("width")) / 2 + (parseFloat($(".marker-e").css("left"))- parseFloat($(".horizontalredlight").css("width")) / 2)) < saved.w)){
 				if($(".marker-e").is(".saved")){
 					$(".marker-e").removeClass("saved");
 					delete saved.e
 					$($(".greylight.y")[1]).css({"top": ``, "display": "", "left": ``})
 				}else{
 					$(".marker-e").addClass("saved");
-					saved.e= parseInt( $(".marker-e").parent().css("left")) + parseInt( $(".marker-e").parent().css("width")) / 2 + (parseInt($(".marker-e").css("left"))- parseInt($(".horizontalredlight").css("width")) / 2) + 1
+					saved.e= parseFloat( $(".marker-e").parent().css("left")) + parseFloat( $(".marker-e").parent().css("width")) / 2 + (parseFloat($(".marker-e").css("left"))- parseFloat($(".horizontalredlight").css("width")) / 2) + 1
 					$($(".greylight.y")[1]).css({"left": `${saved.e}px`, "display": "block"})
 				}
 			}else{
@@ -558,7 +558,7 @@ $(document).mouseup(function(e) {
 		revert: 'invalid', 
 		revertDuration: 86,
 		cursorAt: false,
-		grid: ($("#gridWidth").val() == "0" && $("#gridHeight").val() == "0") || !gridSnapping? false: [parseInt($("#gridWidth").val()), parseInt($("#gridHeight").val())],
+		grid: ($("#gridWidth").val() == "0" && $("#gridHeight").val() == "0") || !gridSnapping? false: [parseFloat($("#gridWidth").val()), parseFloat($("#gridHeight").val())],
 		snapTolerance: 10});
 		if(snapping){
     		$('.widgetero .widget').draggable("option", "snap", ".vidVidCustomizationMode, .widgetero, .widgetero .widget" );
@@ -574,8 +574,8 @@ $(document).mouseup(function(e) {
     			if(!$(ui.draggable).is(".select")){
     			$(ui.draggable).width((($(ui.draggable).width()) / ($(".widgetero").width()) * 100 )+ "%")
     			$(ui.draggable).height((($(ui.draggable).height()) / ($(".widgetero").height()) * 100 )+ "%")
-    			$(ui.draggable).css({"left": (parseInt($(ui.draggable).css("left")) / ($(".widgetero").width()) * 100 ) + "%"})
-    			$(ui.draggable).css({"top": ((parseInt($(ui.draggable).css("top"))) / ($(".widgetero").height()) * 100 ) + "%"})
+    			$(ui.draggable).css({"left": ($(ui.draggable).position().left / ($(".widgetero").width()) * 100 ) + "%"})
+    			$(ui.draggable).css({"top": (($(ui.draggable).position().top) / ($(".widgetero").height()) * 100 ) + "%"})
     			}
     			if($(ui.draggable).is(".select")){
     			neaRestTop= -10000
@@ -586,29 +586,29 @@ $(document).mouseup(function(e) {
     			intersects.vertically= [];
     			intersects.horizontally= [];
     			$(".widget.dropped").not(".selectedWidget").each(function(){
-    				if(parseInt($(this).css("left")) < parseInt($(".verticalredlight").css("left")) && parseInt($(this).css("left")) + parseInt($(this).css("width")) > parseInt($(".verticalredlight").css("left"))){
+    				if(parseFloat($(this).css("left")) < parseFloat($(".verticalredlight").css("left")) && parseFloat($(this).css("left")) + parseFloat($(this).css("width")) > parseFloat($(".verticalredlight").css("left"))){
     					intersects.vertically[intersects.vertically.length]= $(this)
     				}
-    				if(parseInt($(this).css("top")) < parseInt($(".horizontalredlight").css("top")) && parseInt($(this).css("top")) + parseInt($(this).css("height")) > parseInt($(".horizontalredlight").css("top"))){
+    				if(parseFloat($(this).css("top")) < parseFloat($(".horizontalredlight").css("top")) && parseFloat($(this).css("top")) + parseFloat($(this).css("height")) > parseFloat($(".horizontalredlight").css("top"))){
     					intersects.horizontally[intersects.horizontally.length]= $(this)
     				}
 				})
     			intersects.vertically.forEach(function(intersected){
-    				if((parseInt($(intersected).css("top")) + parseInt($(intersected).css("height")) + 1) > neaRestTop && (mouseY - 46 - parseInt($(".widgetero").css("margin-top")) + 46) > (parseInt($(intersected).css("top")) + parseInt($(intersected).css("height")) + 1)){
-    					neaRestTop= (parseInt($(intersected).css("top")) + parseInt($(intersected).css("height")) + 1)
+    				if((parseFloat($(intersected).css("top")) + parseFloat($(intersected).css("height")) + 1) > neaRestTop && (mouseY - 46 - parseFloat($(".widgetero").css("margin-top")) + 46) > (parseFloat($(intersected).css("top")) + parseFloat($(intersected).css("height")) + 1)){
+    					neaRestTop= (parseFloat($(intersected).css("top")) + parseFloat($(intersected).css("height")) + 1)
     				}
-    				if((parseInt($(intersected).css("top")) + 1) < neaRestBottom && (mouseY - 46 - parseInt($(".widgetero").css("margin-top")) + 46) < (parseInt($(intersected).css("top")) + 1)){
-    					neaRestBottom= (parseInt($(intersected).css("top")) + 1)
+    				if((parseFloat($(intersected).css("top")) + 1) < neaRestBottom && (mouseY - 46 - parseFloat($(".widgetero").css("margin-top")) + 46) < (parseFloat($(intersected).css("top")) + 1)){
+    					neaRestBottom= (parseFloat($(intersected).css("top")) + 1)
     				}
-					//console.log(`${$(intersected).index()} top:${parseInt($(intersected).css("top"))} bottom:${(parseInt($(intersected).css("top")) + parseInt($(intersected).css("height")))}`)
+					//console.log(`${$(intersected).index()} top:${parseFloat($(intersected).css("top"))} bottom:${(parseFloat($(intersected).css("top")) + parseFloat($(intersected).css("height")))}`)
     			})
 
     			intersects.horizontally.forEach(function(intersected){
-    				if((parseInt($(intersected).css("left")) + parseInt($(intersected).css("width")) + 1) > neaRestLeft && (mouseX - parseInt($(".widgetero").css("margin-left"))) > (parseInt($(intersected).css("left")) + parseInt($(intersected).css("width")) + 1)){
-    					neaRestLeft= (parseInt($(intersected).css("left")) + parseInt($(intersected).css("width")) + 1)
+    				if((parseFloat($(intersected).css("left")) + parseFloat($(intersected).css("width")) + 1) > neaRestLeft && (mouseX - parseFloat($(".widgetero").css("margin-left"))) > (parseFloat($(intersected).css("left")) + parseFloat($(intersected).css("width")) + 1)){
+    					neaRestLeft= (parseFloat($(intersected).css("left")) + parseFloat($(intersected).css("width")) + 1)
     				}
-    				if((parseInt($(intersected).css("left")) + 1) < neaRestRight && (mouseX - parseInt($(".widgetero").css("margin-left"))) < (parseInt($(intersected).css("left")) + 1)){
-    					neaRestRight= (parseInt($(intersected).css("left")) + 1)
+    				if((parseFloat($(intersected).css("left")) + 1) < neaRestRight && (mouseX - parseFloat($(".widgetero").css("margin-left"))) < (parseFloat($(intersected).css("left")) + 1)){
+    					neaRestRight= (parseFloat($(intersected).css("left")) + 1)
     				}
     			})
     			neaRestBottom= typeof saved.s != "undefined"?saved.s:neaRestBottom
@@ -622,15 +622,15 @@ $(document).mouseup(function(e) {
 				delete saved.w
 
     	
-    			$(".widget.selectedWidget").css({"height": `${(neaRestBottom == 10000? (mouseY - 46> (parseInt($(".widgetero").css("margin-top")) - 46 + $(".widgetero").height()))?$(".widgetero").height() + parseInt($(".widgetero").css("margin-top")) - 46:$(".widgetero").height(): neaRestBottom) - (neaRestTop == -10000? (mouseY - 46 < parseInt($(".widgetero").css("margin-top")) - 46)?-parseInt($(".widgetero").css("margin-top")) + 46: 0: neaRestTop)}px`})
+    			$(".widget.selectedWidget").css({"height": `${(neaRestBottom == 10000? (mouseY - 46> (parseFloat($(".widgetero").css("margin-top")) - 46 + $(".widgetero").height()))?$(".widgetero").height() + parseFloat($(".widgetero").css("margin-top")) - 46:$(".widgetero").height(): neaRestBottom) - (neaRestTop == -10000? (mouseY - 46 < parseFloat($(".widgetero").css("margin-top")) - 46)?-parseFloat($(".widgetero").css("margin-top")) + 46: 0: neaRestTop)}px`})
 	
-				$(".widget.selectedWidget").css({"width": `${(neaRestRight == 10000? (mouseX > parseInt($(".widgetero").css("margin-left")) + $(".widgetero").width())?$(".widgetero").width() + parseInt($(".widgetero").css("margin-left")):$(".widgetero").width(): neaRestRight) - (neaRestLeft == -10000?mouseX < parseInt($(".widgetero").css("margin-left"))?-parseInt($(".widgetero").css("margin-left")): 0: neaRestLeft)}px`})
-				$(".widget.selectedWidget").css({"top": `${neaRestTop == -10000? (mouseY - 46 < parseInt($(".widgetero").css("margin-top")) - 46)?-parseInt($(".widgetero").css("margin-top")) + 46:0: neaRestTop}px`})
-				$(".widget.selectedWidget").css({"left": `${neaRestLeft == -10000?mouseX < parseInt($(".widgetero").css("margin-left"))?-parseInt($(".widgetero").css("margin-left")): 0: neaRestLeft}px`})
+				$(".widget.selectedWidget").css({"width": `${(neaRestRight == 10000? (mouseX > parseFloat($(".widgetero").css("margin-left")) + $(".widgetero").width())?$(".widgetero").width() + parseFloat($(".widgetero").css("margin-left")):$(".widgetero").width(): neaRestRight) - (neaRestLeft == -10000?mouseX < parseFloat($(".widgetero").css("margin-left"))?-parseFloat($(".widgetero").css("margin-left")): 0: neaRestLeft)}px`})
+				$(".widget.selectedWidget").css({"top": `${neaRestTop == -10000? (mouseY - 46 < parseFloat($(".widgetero").css("margin-top")) - 46)?-parseFloat($(".widgetero").css("margin-top")) + 46:0: neaRestTop}px`})
+				$(".widget.selectedWidget").css({"left": `${neaRestLeft == -10000?mouseX < parseFloat($(".widgetero").css("margin-left"))?-parseFloat($(".widgetero").css("margin-left")): 0: neaRestLeft}px`})
     			$(ui.draggable).width((($(ui.draggable).width()) / ($(".widgetero").width()) * 100 )+ "%")
     			$(ui.draggable).height((($(ui.draggable).height()) / ($(".widgetero").height()) * 100 )+ "%")
-    			$(ui.draggable).css({"left": ((parseInt($(ui.draggable).css("left"))) / ($(".widgetero").width()) * 100 ) + "%"})
-    			$(ui.draggable).css({"top": ((parseInt($(ui.draggable).css("top"))) / ($(".widgetero").height()) * 100 ) + "%"})
+    			$(ui.draggable).css({"left": (($(ui.draggable).position().left) / ($(".widgetero").width()) * 100 ) + "%"})
+    			$(ui.draggable).css({"top": (($(ui.draggable).position().top) / ($(".widgetero").height()) * 100 ) + "%"})
     			console.log(`Mouse, X:${mouseX} Y:${mouseY - 46} neaRestTop:${neaRestTop} neaRestBottom:${neaRestBottom} neaRestLeft:${neaRestLeft} neaRestRight: ${neaRestRight} intersectsVertically:`)
     			console.log(intersects)
     			}
@@ -669,14 +669,14 @@ distance: 0,
 	snap: ".widgetero, .vidVidCustomizationMode, .widget", 
   snapMode: "both", 
 snapTolerance: 12,
-grid: ($("#gridWidth").val() == "0" && $("#gridHeight").val() == "0") || !gridSnapping? false: [parseInt($("#gridWidth").val()), parseInt($("#gridHeight").val())],
+grid: ($("#gridWidth").val() == "0" && $("#gridHeight").val() == "0") || !gridSnapping? false: [parseFloat($("#gridWidth").val()), parseFloat($("#gridHeight").val())],
 
 stop: function(event, ui)
     		{        
     			$(ui.element).width((($(ui.element).width()) / ($(".widgetero").width()) * 100 )+ "%")
     			$(ui.element).height((($(ui.element).height()) / ($(".widgetero").height()) * 100 )+ "%")
-    			$(ui.element).css({"left": (parseInt($(ui.element).css("left")) / ($(".widgetero").width()) * 100 ) + "%"})
-    			$(ui.element).css({"top": (parseInt($(ui.element).css("top")) / ($(".widgetero").height()) * 100 ) + "%"})
+    			$(ui.element).css({"left": ($(ui.element).position().left / ($(".widgetero").width()) * 100 ) + "%"})
+    			$(ui.element).css({"top": ($(ui.element).position().top / ($(".widgetero").height()) * 100 ) + "%"})
 		}
 })
 		if(snapping){
@@ -843,7 +843,7 @@ stop: function(event, ui)
     		);
 		}
         
-	}, 10);
+	});
 	$("#profileTrigger").on("click",function(r){
 		
 		$(".back-arrow").toggleClass("open");
@@ -935,7 +935,7 @@ $("#index-trigger").children().addClass("openedStore");
 	function getActual (){
 		  $(".selectedWidget").removeClass("selectedWidget");
 $('.widgetero .widget').each(function(){
-    var z = parseInt($(this).css('z-index'), 10);
+    var z = parseFloat($(this).css('z-index'));
     if ( z>maxz) {
     	maxz = z;
     	best= $(this)
@@ -985,33 +985,33 @@ function controls(a, xa){
 				break;
 			case "cut":
 				pasteCount = 0
-				pasteCopiedTop= parseInt($(".selectedWidget").css("top"), 10)
-		    	pasteCopiedLeft= parseInt($(".selectedWidget").css("left"), 10)
+				pasteCopiedTop= parseFloat($(".selectedWidget").css("top"))
+		    	pasteCopiedLeft= parseFloat($(".selectedWidget").css("left"))
 		    	copiedWidget = $(".selectedWidget").html()
-		    	copiedTop= parseInt($(".selectedWidget").css("top"), 10)
+		    	copiedTop= parseFloat($(".selectedWidget").css("top"))
 		    	pasteCountTopRef = 0;
 		    	pasteCountLeftRef=0;
-		    	copiedLeft = parseInt($(".selectedWidget").css("left"), 10)    
-		    	copiedWidth =  parseInt($(".selectedWidget").css("width"), 10)
-		    	copiedHeight =  parseInt($(".selectedWidget").css("height"), 10)
+		    	copiedLeft = parseFloat($(".selectedWidget").css("left"))    
+		    	copiedWidth =  parseFloat($(".selectedWidget").css("width"))
+		    	copiedHeight =  parseFloat($(".selectedWidget").css("height"))
 		    	$(".selectedWidget").remove()
 				break;
 			case "copy":
     			pasteCount = 0
-				pasteCopiedTop= parseInt($(".selectedWidget").css("top"), 10)
-		    	pasteCopiedLeft= parseInt($(".selectedWidget").css("left"), 10)
+				pasteCopiedTop= parseFloat($(".selectedWidget").css("top"))
+		    	pasteCopiedLeft= parseFloat($(".selectedWidget").css("left"))
 		    	copiedWidget = $(".selectedWidget").html()
-		    	copiedTop= parseInt($(".selectedWidget").css("top"), 10)
+		    	copiedTop= parseFloat($(".selectedWidget").css("top"))
 		    	pasteCountTopRef = 0;
 		    	pasteCountLeftRef=0;
-		    	copiedLeft = parseInt($(".selectedWidget").css("left"), 10)    
-		    	copiedWidth =  parseInt($(".selectedWidget").css("width"), 10)
-		    	copiedHeight =  parseInt($(".selectedWidget").css("height"), 10)
+		    	copiedLeft = parseFloat($(".selectedWidget").css("left"))    
+		    	copiedWidth =  parseFloat($(".selectedWidget").css("width"))
+		    	copiedHeight =  parseFloat($(".selectedWidget").css("height"))
 				break;
 			case "paste":
     			if(copiedWidget != undefined){
-					pasteCopiedTop = parseInt($('.widgetero .widget').last().css("top"), 10)
-					pasteCopiedLeft = parseInt($('.widgetero .widget').last().css("left"), 10)
+					pasteCopiedTop = parseFloat($('.widgetero .widget').last().css("top"))
+					pasteCopiedLeft = parseFloat($('.widgetero .widget').last().css("left"))
 					if(pasteCopiedTop<10){
 						pasteCountTopRef  -=1;
 					} else{
@@ -1034,15 +1034,15 @@ function controls(a, xa){
 	            	$(".widget.dropped").each(function(){
 	            		$(this).width((($(this).width()) / ($(".widgetero").width()) * 100 )+ "%")
     					$(this).height((($(this).height()) / ($(".widgetero").height()) * 100 )+ "%")
-    					$(this).css({"left": (parseInt($(this).css("left")) / ($(".widgetero").width()) * 100 ) + "%"})
-    					$(this).css({"top": ((parseInt($(this).css("top"))) / ($(".widgetero").height()) * 100 ) + "%"})
+    					$(this).css({"left": ($(this).position().left / ($(".widgetero").width()) * 100 ) + "%"})
+    					$(this).css({"top": (($(this).position().top) / ($(".widgetero").height()) * 100 ) + "%"})
 	            	})
     			}
     			if($(".select").is(".on")){
     			$(".widget.on").width(function(){return (($(this).width()) / ($(".widgetero").width()) * 100 )+ "%"})
     			$(".widget.on").height(function(){return (($(this).height()) / ($(".widgetero").height()) * 100 )+ "%"})
-    			$(".widget.on").css({"left": ((parseInt($(this).css("left"))) / ($(".widgetero").width()) * 100 ) + "%"})
-    			$(".widget.on").css({"top": ((parseInt($(this).css("top"))) / ($(".widgetero").height()) * 100 ) + "%"})
+    			$(".widget.on").css({"left": (($(this).position().left) / ($(".widgetero").width()) * 100 ) + "%"})
+    			$(".widget.on").css({"top": (($(this).position().top) / ($(".widgetero").height()) * 100 ) + "%"})
     			console.log(`Mouse, X:${mouseX} Y:${mouseY - 46} neaRestTop:${neaRestTop} neaRestBottom:${neaRestBottom} neaRestLeft:${neaRestLeft} neaRestRight: ${neaRestRight} intersectsVertically:`)
     			console.log(intersects)
     			}
@@ -1063,8 +1063,8 @@ function controls(a, xa){
 					$(".widgetero .widget").resizable("option", "grid", false)
 		    	}else{
 		    		gridSnapping = true;
-		    		$(".widgetero .widget").draggable("option", "grid", $("#gridWidth").val() == "0" && $("#gridHeight").val() == "0"? false: [parseInt($("#gridWidth").val()), parseInt($("#gridHeight").val())])
-					$(".widgetero .widget").resizable("option", "grid", $("#gridWidth").val() == "0" && $("#gridHeight").val() == "0"? false: [parseInt($("#gridWidth").val()), parseInt($("#gridHeight").val())])
+		    		$(".widgetero .widget").draggable("option", "grid", $("#gridWidth").val() == "0" && $("#gridHeight").val() == "0"? false: [parseFloat($("#gridWidth").val()), parseFloat($("#gridHeight").val())])
+					$(".widgetero .widget").resizable("option", "grid", $("#gridWidth").val() == "0" && $("#gridHeight").val() == "0"? false: [parseFloat($("#gridWidth").val()), parseFloat($("#gridHeight").val())])
 		    	}
 		    	break;
 		}
@@ -1090,34 +1090,34 @@ function controls(a, xa){
 	}
 	if ($(a.target).parents().andSelf().is(".cut")){
     	pasteCount = 0
-		pasteCopiedTop= parseInt($(".selectedWidget").css("top"), 10)
-    	pasteCopiedLeft= parseInt($(".selectedWidget").css("left"), 10)
+		pasteCopiedTop= parseFloat($(".selectedWidget").css("top"))
+    	pasteCopiedLeft= parseFloat($(".selectedWidget").css("left"))
     	copiedWidget = $(".selectedWidget").html()
-    	copiedTop= parseInt($(".selectedWidget").css("top"), 10)
+    	copiedTop= parseFloat($(".selectedWidget").css("top"))
     	pasteCountTopRef = 0;
     	pasteCountLeftRef=0;
-    	copiedLeft = parseInt($(".selectedWidget").css("left"), 10)    
-    	copiedWidth =  parseInt($(".selectedWidget").css("width"), 10)
-    	copiedHeight =  parseInt($(".selectedWidget").css("height"), 10)
+    	copiedLeft = parseFloat($(".selectedWidget").css("left"))    
+    	copiedWidth =  parseFloat($(".selectedWidget").css("width"))
+    	copiedHeight =  parseFloat($(".selectedWidget").css("height"))
     	$(".selectedWidget").remove()
 	}
 	if ($(a.target).parents().andSelf().is(".copy")){
 		pasteCount = 0
-		pasteCopiedTop= parseInt($(".selectedWidget").css("top"), 10)
-    	pasteCopiedLeft= parseInt($(".selectedWidget").css("left"), 10)
+		pasteCopiedTop= parseFloat($(".selectedWidget").css("top"))
+    	pasteCopiedLeft= parseFloat($(".selectedWidget").css("left"))
     	copiedWidget = $(".selectedWidget").html()
-    	copiedTop= parseInt($(".selectedWidget").css("top"), 10)
+    	copiedTop= parseFloat($(".selectedWidget").css("top"))
     	pasteCountTopRef = 0;
     	pasteCountLeftRef=0;
-    	copiedLeft = parseInt($(".selectedWidget").css("left"), 10)    
-    	copiedWidth =  parseInt($(".selectedWidget").css("width"), 10)
-    	copiedHeight =  parseInt($(".selectedWidget").css("height"), 10)
+    	copiedLeft = parseFloat($(".selectedWidget").css("left"))    
+    	copiedWidth =  parseFloat($(".selectedWidget").css("width"))
+    	copiedHeight =  parseFloat($(".selectedWidget").css("height"))
     	
 	}
 	if ($(a.target).parents().andSelf().is(".paste")){
 		if(copiedWidget != undefined){
-				pasteCopiedTop = parseInt($('.widgetero .widget').last().css("top"), 10)
-				pasteCopiedLeft = parseInt($('.widgetero .widget').last().css("left"), 10)
+				pasteCopiedTop = parseFloat($('.widgetero .widget').last().css("top"))
+				pasteCopiedLeft = parseFloat($('.widgetero .widget').last().css("left"))
 				if(pasteCopiedTop<10){
 					pasteCountTopRef  -=1;
 				} else{
@@ -1153,8 +1153,8 @@ function controls(a, xa){
 			$(".widgetero .widget").resizable("option", "grid", false)
     	}else{
     		gridSnapping = true;
-    		$(".widgetero .widget").draggable("option", "grid", $("#gridWidth").val() == "0" && $("#gridHeight").val() == "0"? false: [parseInt($("#gridWidth").val()), parseInt($("#gridHeight").val())])
-			$(".widgetero .widget").resizable("option", "grid", $("#gridWidth").val() == "0" && $("#gridHeight").val() == "0"? false: [parseInt($("#gridWidth").val()), parseInt($("#gridHeight").val())])
+    		$(".widgetero .widget").draggable("option", "grid", $("#gridWidth").val() == "0" && $("#gridHeight").val() == "0"? false: [parseFloat($("#gridWidth").val()), parseFloat($("#gridHeight").val())])
+			$(".widgetero .widget").resizable("option", "grid", $("#gridWidth").val() == "0" && $("#gridHeight").val() == "0"? false: [parseFloat($("#gridWidth").val()), parseFloat($("#gridHeight").val())])
     	}
 	}
 }
@@ -1166,28 +1166,28 @@ function controls(a, xa){
         /*if (e.keyCode == ctrlKey) {ctrlDown = true;}
             if (ctrlDown &&  e.keyCode == 67){
             	pasteCount = 0;
-		pasteCopiedTop= parseInt($(".selectedWidget").css("top"), 10);
-    	pasteCopiedLeft= parseInt($(".selectedWidget").css("left"), 10);
+		pasteCopiedTop= parseFloat($(".selectedWidget").css("top"));
+    	pasteCopiedLeft= parseFloat($(".selectedWidget").css("left"));
     	copiedWidget = $(".selectedWidget").html();
-    	copiedTop= parseInt($(".selectedWidget").css("top"), 10);
+    	copiedTop= parseFloat($(".selectedWidget").css("top"));
     	pasteCountTopRef = 0;
     	pasteCountLeftRef=0;
-    	copiedLeft = parseInt($(".selectedWidget").css("left"), 10);    
-    	copiedWidth =  parseInt($(".selectedWidget").css("width"), 10);
-    	copiedHeight =  parseInt($(".selectedWidget").css("height"), 10);
+    	copiedLeft = parseFloat($(".selectedWidget").css("left"));    
+    	copiedWidth =  parseFloat($(".selectedWidget").css("width"));
+    	copiedHeight =  parseFloat($(".selectedWidget").css("height"));
             }
             if (ctrlDown &&  e.keyCode == 88){
             		copiedWidget = $(".selectedWidget").html()
-    				copiedTop = parseInt($(".selectedWidget").css("top"), 10)
-    				copiedLeft = parseInt($(".selectedWidget").css("left"), 10)
+    				copiedTop = parseFloat($(".selectedWidget").css("top"))
+    				copiedLeft = parseFloat($(".selectedWidget").css("left"))
     				$(".selectedWidget").remove()
             }
     }).keyup(function(e)
     {
             if (ctrlDown &&  e.keyCode == 86){
             	if(copiedWidget != undefined){
-				pasteCopiedTop = parseInt($('.widgetero .widget').last().css("top"), 10)
-				pasteCopiedLeft = parseInt($('.widgetero .widget').last().css("left"), 10)
+				pasteCopiedTop = parseFloat($('.widgetero .widget').last().css("top"))
+				pasteCopiedLeft = parseFloat($('.widgetero .widget').last().css("left"))
 				if(pasteCopiedTop<10){
 					pasteCountTopRef  -=1;
 				} else{
@@ -1218,7 +1218,7 @@ purger.purge= function( a ){
     if(typeof purger.index.in !== "undefined")return
     fT= localStorage.getItem("file_tree")
     wFT= localStorage.getItem("w_file_tree")
-    if( ( localStorage.getItem( "safety_purge" ) === null || ( localStorage.getItem( "safety_purge" ) !== null && parseInt( localStorage.getItem( "safety_purge" ) ) != purger.index ) ) || ( typeof a != "undefined" && a == "bypass" ) ){ 
+    if( ( localStorage.getItem( "safety_purge" ) === null || ( localStorage.getItem( "safety_purge" ) !== null && parseFloat( localStorage.getItem( "safety_purge" ) ) != purger.index ) ) || ( typeof a != "undefined" && a == "bypass" ) ){ 
         for( ii in localStorage ){ 
             if( typeof localStorage[ii] != "function" && ii != "length" && ["safety_purge", "tooltip", "knob", "filesWidth", "user", "selected"].indexOf( ii ) == -1 ){ 
                 (( function( a ){ var av= a; for( var v= 1; v <= 2; v++ )av= av.slice( av.indexOf("/") + 1 ); return av } )( ii ).indexOf( "raw" ) === 0 || ( function( a ){ var av= a; for( var v= 1; v <= 2; v++ )av= av.slice( av.indexOf("/") + 1 ); return av } )( ii ).indexOf( "$_" ) !== -1)? console.log( ii ): localStorage.removeItem( ii ); 
@@ -1234,7 +1234,7 @@ purger.purge= function( a ){
 }; 
 
 purger.super_purge= function( a ){
-if(!((typeof purger.index.in !== "undefined" && purger.index.in !== parseInt(localStorage.getItem("safety_purge"))) || (typeof a != "undefined" && a === "bypass")))return
+if(!((typeof purger.index.in !== "undefined" && purger.index.in !== parseFloat(localStorage.getItem("safety_purge"))) || (typeof a != "undefined" && a === "bypass")))return
 localStorage.clear()
 localStorage.setItem("safety_purge", purger.index.in)
 console.log("superPurged All files and file_trees were also deleted!")
