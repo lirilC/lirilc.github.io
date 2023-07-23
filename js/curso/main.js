@@ -64,7 +64,7 @@ getSpace= function(){
 	
 	if(vW / vH < vOW / vOH){
 		rat= vH / vOH
-		return {left: ((vOW - (vW/rat)) / 2) + ($("#customizationBars").is(".open")?4: 0),top: 0,bottom:0, right: ((vOW - (vW/rat)) / 2) - ($("#customizationBars").is(".open")?4: 0)}
+		return {left: ((vOW - (vW/rat)) / 2),top: 0,bottom:0, right: ((vOW - (vW/rat)) / 2)}
 	}else if(vW / vH > vOW / vOH){
 		rat= vW / vOW
 		return {left: 0,top: ((vOH - (vH/rat)) / 2),bottom:((vOH - (vH/rat)) / 2), right: 0}
@@ -125,6 +125,61 @@ function integerer(i){
 return parseInt(i.slice(0, -1))}
 window.onresize= function(e){
 sizeWidgetero()
+}
+function getUniqueId(){ 
+    pSBl= "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
+    pSBlNaN= "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
+           
+    lnk= ""; 
+           
+    for(e= 17; e >= 0; e--){ 
+	if(e==17){
+    lnk= lnk + pSBlNaN[parseInt(Math.random() * pSBlNaN.length)]; 
+	}else{
+    lnk= lnk + pSBl[parseInt(Math.random() * pSBl.length)]; 
+	}
+    } 
+    
+    return lnk; 
+} 
+window.injectCSS = (function(doc){
+    // wrapper for all injected styles and temp el to create them
+    var wrap = doc.createElement('div');
+    var temp = doc.createElement('div');
+    // rules like "a {color: red}" etc.
+    return function (cssRules) {
+        // append wrapper to the body on the first call
+        if (!wrap.id) {
+            wrap.id = 'injected-css';
+            wrap.style.display = 'none';
+            doc.body.appendChild(wrap);
+        }
+        // <br> for IE: http://goo.gl/vLY4x7
+        temp.innerHTML = '<br><style>'+ cssRules +'</style>';
+        wrap.appendChild( temp.children[1] );
+    };
+})(document);
+function sizeRelatively(_z){
+	if(typeof _z != "undefined"){
+		$(".widgetero .widget").each(function(){
+		  $(_z).width(`${$(_z).width() / $(".widgetero").width() * 100}%`)
+		  $(_z).height(`${$(_z).height() / $(".widgetero").height() * 100}%`)
+		  $(_z).css({"left": `${$(_z).position().left / $(".widgetero").width() * 100}%`})
+		  $(_z).css({"top": `${$(_z).position().top / $(".widgetero").height() * 100}%`})
+		  $("#injected-css style").filter(function(){
+			  return !($(this).text().indexOf(_z.attr("id")) + 1)?false: true
+		  }).remove()
+		  injectCSS(`#${$(_z).attr("id")}{ left: ${$(_z).position().left / $(".widgetero").width() * 100}% !important;}`)
+		  injectCSS(`#${$(_z).attr("id")}{ top: ${$(_z).position().top / $(".widgetero").height() * 100}% !important;}`)
+		})
+		return;	
+	}
+	$(".widgetero .widget").each(function(){
+	  $(this).width(`${$(this).width() / $(".widgetero").width() * 100}%`)
+	  $(this).height(`${$(this).height() / $(".widgetero").height() * 100}%`)
+	  $(this).css({"left": `${$(this).position().left / $(".widgetero").width() * 100}%`})
+	  $(this).css({"top": `${$(this).position().top / $(".widgetero").height() * 100}%`})
+	})
 }
 $(document).on("ready",function(){
 	purger.purge(); 
@@ -622,11 +677,11 @@ $(document).mouseup(function(e) {
 				delete saved.w
 
     	
-    			$(".widget.selectedWidget").css({"height": `${(neaRestBottom == 10000? (mouseY - 46> (parseFloat($(".widgetero").css("margin-top")) - 46 + $(".widgetero").height()))?$(".widgetero").height() + parseFloat($(".widgetero").css("margin-top")) - 46:$(".widgetero").height(): neaRestBottom) - (neaRestTop == -10000? (mouseY - 46 < parseFloat($(".widgetero").css("margin-top")) - 46)?-parseFloat($(".widgetero").css("margin-top")) + 46: 0: neaRestTop)}px`})
+    			$(".widget.selectedWidget").css({"height": `${(neaRestBottom == 10000? (mouseY - 46> (parseFloat($(".widgetero").css("margin-top")) - 46 + $(".widgetero").height()))?$(".widgetero").height() + parseFloat($(".widgetero").css("margin-top")) - 46:$(".widgetero").height(): neaRestBottom) - 1 - (neaRestTop == -10000? (mouseY - 46 < parseFloat($(".widgetero").css("margin-top")) - 46)?-parseFloat($(".widgetero").css("margin-top")) + 46: 0: (neaRestTop - 1))}px`})
 	
-				$(".widget.selectedWidget").css({"width": `${(neaRestRight == 10000? (mouseX > parseFloat($(".widgetero").css("margin-left")) + $(".widgetero").width())?$(".widgetero").width() + parseFloat($(".widgetero").css("margin-left")):$(".widgetero").width(): neaRestRight) - (neaRestLeft == -10000?mouseX < parseFloat($(".widgetero").css("margin-left"))?-parseFloat($(".widgetero").css("margin-left")): 0: neaRestLeft)}px`})
-				$(".widget.selectedWidget").css({"top": `${neaRestTop == -10000? (mouseY - 46 < parseFloat($(".widgetero").css("margin-top")) - 46)?-parseFloat($(".widgetero").css("margin-top")) + 46:0: neaRestTop}px`})
-				$(".widget.selectedWidget").css({"left": `${neaRestLeft == -10000?mouseX < parseFloat($(".widgetero").css("margin-left"))?-parseFloat($(".widgetero").css("margin-left")): 0: neaRestLeft}px`})
+				$(".widget.selectedWidget").css({"width": `${(neaRestRight == 10000? (mouseX > parseFloat($(".widgetero").css("margin-left")) + $(".widgetero").width())?$(".widgetero").width() + parseFloat($(".widgetero").css("margin-left")):$(".widgetero").width(): (neaRestRight - 1)) - (neaRestLeft == -10000?mouseX < parseFloat($(".widgetero").css("margin-left"))?-parseFloat($(".widgetero").css("margin-left")): 0: (neaRestLeft - 1))}px`})
+				$(".widget.selectedWidget").css({"top": `${neaRestTop == -10000? (mouseY - 46 < parseFloat($(".widgetero").css("margin-top")) - 46)?-parseFloat($(".widgetero").css("margin-top")) + 46:0: (neaRestTop - 1)}px`})
+				$(".widget.selectedWidget").css({"left": `${neaRestLeft == -10000?mouseX < parseFloat($(".widgetero").css("margin-left"))?-parseFloat($(".widgetero").css("margin-left")): 0: (neaRestLeft - 1)}px`})
     			$(ui.draggable).width((($(ui.draggable).width()) / ($(".widgetero").width()) * 100 )+ "%")
     			$(ui.draggable).height((($(ui.draggable).height()) / ($(".widgetero").height()) * 100 )+ "%")
     			$(ui.draggable).css({"left": (($(ui.draggable).position().left) / ($(".widgetero").width()) * 100 ) + "%"})
@@ -666,9 +721,9 @@ distance: 0,
         's': '#sgrip',
         'w': '#wgrip'
     },
-	snap: ".widgetero, .vidVidCustomizationMode, .widget", 
+	snap: ".widgetero,.vidVidCustomizationMode,.widget", 
   snapMode: "both", 
-snapTolerance: 12,
+snapTolerance: 10,
 grid: ($("#gridWidth").val() == "0" && $("#gridHeight").val() == "0") || !gridSnapping? false: [parseFloat($("#gridWidth").val()), parseFloat($("#gridHeight").val())],
 
 stop: function(event, ui)
