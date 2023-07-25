@@ -639,7 +639,7 @@ var user= {
             description: ``,
             contents:  {carrContents: ["92Myy9CUyU_tn.jpg", "0RuEzyxiRe_tn.jpg", "XTxcUJchhC_tn.jpg", "sQwXSDY9mX_tn.jpg"]},
             Comentarios: ""
-        }
+        },
         "/MeganFox/img/Yu7ps34i6t": {
             type: "mult_img",
             date: {
@@ -650,7 +650,7 @@ var user= {
             description: ``,
             contents:  {carrContents: ["Yu7ps34i6t_tn.jpg", "VGuJdWUYgT_tn.jpg", "snxgFaIz9z_tn.jpg"]},
             Comentarios: ""
-        },
+        }
     }
 }
 return user

@@ -45,7 +45,7 @@ export function app () {
                             <div id="root">
                                 <div class="contnr">
                                     <div>
-                                        <a href="/${user.username}">${user.users_name}</a>
+                                        <a href="/${user.username}/">${user.users_name}</a>
                                     </div>
                                     <span>
                                         <span>Fotos</span>
@@ -237,7 +237,7 @@ export function app () {
                 root: function(){return `<div id="root">
                                               <div class="contnr">
                                                   <div>
-                                                      <a href="/${user.username}">${user.users_name}</a>
+                                                      <a href="/${user.username}/">${user.users_name}</a>
                                                   </div>
                                                   <span>
                                                       <span>Fotos</span>
