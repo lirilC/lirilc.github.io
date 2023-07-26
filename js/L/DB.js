@@ -1,7 +1,7 @@
 export function _user(){
 var user= {
-	username: "L",
-	users_name: "Laura Escobar Bonnett",
+    username: "L",
+    users_name: "Laura Escobar Bonnett",
     profilePic: {
             "/L/img/OGnpwD3jys": {
                 type: "img",
@@ -16,8 +16,8 @@ var user= {
             }
         },
     rol:{
-    	rol: "Princesa",
-    	level: "100"
+        rol: "Princesa",
+        level: "100"
     },
     tool:  `<div class='tool'>
                 <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
@@ -33,7 +33,7 @@ var user= {
                 </div>
             </div>`,
     cover: {
-    	insignias: `<div title="¡Estoy Tan Enamorada!" class="line" style="top: 10%;"></div>
+        insignias: `<div title="¡Estoy Tan Enamorada!" class="line" style="top: 10%;"></div>
                     <div title="¡Estoy Tan Enamorada!" class="line" style="top: 58%;"></div>
                     <div title="¡Estoy Tan Enamorada!" class="line" style="top: 86%;"></div>
                     <div title="¡Estoy Tan Enamorada!" class="line" style="top: 64%;"></div>
@@ -173,7 +173,7 @@ var user= {
                 city: {name: "Medellín", pic: "https://cdn.forbes.co/2020/09/Medell%C3%ADn-foto-ProColombia-1536x1024.jpg", description: `Medellín es un distrito colombiano, capital del departamento de Antioquia. Es la ciudad más poblada del departamento y la segunda más poblada del país después de Bogotá.​ Está ubicada en la parte más ancha de la región natural conocida como Valle de Aburrá, en la cordillera central de los Andes. Está extendida por ambas orillas del río Medellín, que la atraviesa de sur a norte, y es el municipio principal del Área metropolitana del Valle de Aburrá.​ <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Medell%C3%ADn'><span style= 'color: #2ecc71; font-size: 1.5em; '>···&nbsp</span>es.wikipedia.org</a>`},
                 title: `A veces sonríes,`,
                 description: `y el mundo se abre con tu boca,<br>como cuando bostezas<br>y tiras por la borda<br>cualquier amago de abandonarte,<br>porque la paz está ahí,<br>entre tus dientes,<br>cuando me muerdes el corazón<br>y te lo tragas,<br>y yo respiro.<br><br>Me miras<br>noventa y nueve veces al día<br>como si yo fuera lo único que se interpusiera<br>entre la realidad y tus ojos,<br>me conviertes en tu filtro<br>y dices que a través de mí<br>el mundo se ve más bonito,<br>y son cien las veces que yo te miro de vuelta<br>preguntándome<br>qué diablos será eso que te convierte en cielo<br>y despeja mis tormentas,<br>que te hace sujetarme<br>cuando decido precipitarme<br>o dejarme la garganta<br>en mil silencios,<br>qué esconde mi boca<br>para que mientras me besas<br>solo pienses en el siguiente beso,<br>qué verás<br>en mi pelo alborotado al despertar<br>para que quieras acariciármelo así,<br>como si estuviera herido<br>y tú supieras exactamente<br>qué hacer<br>para salvarlo.<br><br>Laura Escobar Bonnett<br>Luis Eduardo Gallego García's`,
-                contents:  {carrContents: ["VKFUYTMNAx_tn.jpg", "mNVF7YRiMd_tn.jpg", "kVhzfhX7rp_tn.jpg", "FRbTkS3ejR_tn.jpg", "YI0ATY4M9X_tn.jpg", "rAHVyghSj2_tn.jpg", "8MY9wNGELf_tn.jpg"]},
+                contents:  {carrContents: ["VKFUYTMNAx_tn.jpg", "mNVF7YRiMd_tn.jpg", "kVhzfhX7rp_tn.jpg", "FRbTkS3ejR_tn.jpg", "YI0ATY4M9X_tn.jpg"]},
                 Comentarios:   ``
             }
         }
@@ -399,7 +399,7 @@ var user= {
         }
     },
     stories: {
-    	"/A.K.A._Dizzy/pos/r1WjYcRQhw": {
+        "/A.K.A._Dizzy/pos/r1WjYcRQhw": {
             type: "repost_multimedia",
             date: {
                 full: "24 de Julio de 2022 a las 3:29 pm",
@@ -462,7 +462,7 @@ var user= {
             Comentarios: "",
             Editado: [ 'type= "oC"; edHistory= {"Editado el 31 de Agosto de 2022 a las 3:38 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/217e1b57c5435fc2bbd612547fcecac4eb679f7c/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 10 de Febrero de 2022 a las 10:10 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/bddd6cbfa15e6e2bb27bde6bef42f86914f21b3e/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 25 de Octubre de 2021 a la 1:4 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/503dbef970047386769e56c222383c0db0f29ead/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 15 de Junio de 2021 a las 2:5 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/4c2ca79928a725ae354503865d01d703ef674098/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "10 de Marzo de 2021 a las 8:38 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/f4905f92a5eea07f0259cdd31cfea213d30a925b/A.K.A._Dizzy/pos/r1WjYcRQhw.html"}', "Editado el 31 de Agosto de 2022 a las 3:38 pm"]
         },
-    	"/A.K.A._Dizzy/img/m88IB35sDo": {
+        "/A.K.A._Dizzy/img/m88IB35sDo": {
             type: "repostMult_img",
             date: {
                 full: "18 de Marzo de 2022 a las 7:35 pm",
@@ -1156,7 +1156,7 @@ var user= {
             city: {name: "Medellín", pic: "https://cdn.forbes.co/2020/09/Medell%C3%ADn-foto-ProColombia-1536x1024.jpg", description: `Medellín es un distrito colombiano, capital del departamento de Antioquia. Es la ciudad más poblada del departamento y la segunda más poblada del país después de Bogotá.​ Está ubicada en la parte más ancha de la región natural conocida como Valle de Aburrá, en la cordillera central de los Andes. Está extendida por ambas orillas del río Medellín, que la atraviesa de sur a norte, y es el municipio principal del Área metropolitana del Valle de Aburrá.​ <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Medell%C3%ADn'><span style= 'color: #2ecc71; font-size: 1.5em; '>···&nbsp</span>es.wikipedia.org</a>`},
             title: `A veces sonríes,`,
             description: `y el mundo se abre con tu boca,<br>como cuando bostezas<br>y tiras por la borda<br>cualquier amago de abandonarte,<br>porque la paz está ahí,<br>entre tus dientes,<br>cuando me muerdes el corazón<br>y te lo tragas,<br>y yo respiro.<br><br>Me miras<br>noventa y nueve veces al día<br>como si yo fuera lo único que se interpusiera<br>entre la realidad y tus ojos,<br>me conviertes en tu filtro<br>y dices que a través de mí<br>el mundo se ve más bonito,<br>y son cien las veces que yo te miro de vuelta<br>preguntándome<br>qué diablos será eso que te convierte en cielo<br>y despeja mis tormentas,<br>que te hace sujetarme<br>cuando decido precipitarme<br>o dejarme la garganta<br>en mil silencios,<br>qué esconde mi boca<br>para que mientras me besas<br>solo pienses en el siguiente beso,<br>qué verás<br>en mi pelo alborotado al despertar<br>para que quieras acariciármelo así,<br>como si estuviera herido<br>y tú supieras exactamente<br>qué hacer<br>para salvarlo.<br><br>Laura Escobar Bonnett<br>Luis Eduardo Gallego García's`,
-            contents:  {carrContents: ["VKFUYTMNAx.jpg", "mNVF7YRiMd.jpg", "kVhzfhX7rp.jpg", "FRbTkS3ejR.jpg", "YI0ATY4M9X.jpg", "rAHVyghSj2.jpg", "8MY9wNGELf.jpg"]},
+            contents:  {carrContents: ["VKFUYTMNAx.jpg", "mNVF7YRiMd.jpg", "kVhzfhX7rp.jpg", "FRbTkS3ejR.jpg", "YI0ATY4M9X.jpg"]},
             Comentarios:   ``
         },
         "/A.K.A._Dizzy/img/MYW75Pro3m": {
