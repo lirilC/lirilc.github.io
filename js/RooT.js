@@ -46,7 +46,7 @@ var one= function(a, b, c, d){
 						reTurn+=   `<section class="story containments">
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
-		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
 		                                    <p class="username"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -70,7 +70,7 @@ var one= function(a, b, c, d){
 						reTurn+=   `<section class="story embed">
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
-		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
 		                                    <p class="username"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -94,7 +94,7 @@ var one= function(a, b, c, d){
 						reTurn+=   `<section class="story multimedia">
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
-		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
 		                                    <p class="username"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -118,7 +118,7 @@ var one= function(a, b, c, d){
 						reTurn+=   `<section class="story informative img">
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
-		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
 		                                    <p class="username"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a> ${c[e].information}<br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -141,7 +141,7 @@ var one= function(a, b, c, d){
 						reTurn+=   `<section class="story img">
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
-		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
 		                                    <p class="username"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
@@ -157,7 +157,7 @@ var one= function(a, b, c, d){
 		                                <p class="title">${c[e].title}</p>
 		                                <p class="moreI">${c[e].description}</p>
 		                                <section id="picture">
-		                                    <img class="pic" src="/resources/images/${user.username}/${c[e].contents.image}" alt="" class="big">
+		                                    <img class="pic" src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${c[e].contents.image}" alt="" class="big">
 		                                </section>
 		                                <div class="Comentarios">${c[e].Comentarios}</div>
 		                                <div class="options button">
@@ -176,7 +176,7 @@ var one= function(a, b, c, d){
 						reTurn+=   `<section class="story video">
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
-		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
 		                                    <p class="username"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
@@ -223,7 +223,7 @@ var one= function(a, b, c, d){
 						reTurn+=   `<section class="story video external">
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
-		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
 		                                    <p class="username"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
@@ -278,7 +278,7 @@ var one= function(a, b, c, d){
 						reTurn+=   `<section class="story mult_carr external">
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
-		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
 		                                    <p class="username"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
@@ -321,7 +321,7 @@ var one= function(a, b, c, d){
 						reTurn+=   `<section class="story mult_img">
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
-		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
 		                                    <p class="username"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
@@ -364,7 +364,7 @@ var one= function(a, b, c, d){
 						reTurn+=   `<section class="story mult_carr">
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
-		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
 		                                    <p class="username"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
@@ -406,11 +406,11 @@ var one= function(a, b, c, d){
 					case "repostLinks":
 						reTurn+=   `<section class="story repost links">
 		                                <div class="info">
-		                                    <img class="repost" src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
-		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="${c[e].originalPoster.profilePic}" alt="">
 		                                    <p class="username repost"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
@@ -435,11 +435,11 @@ var one= function(a, b, c, d){
 					case "repostContainments":
 						reTurn+=   `<section class="story repost containments">
 		                                <div class="info">
-		                                    <img class="repost" src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
-		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="${c[e].originalPoster.profilePic}" alt="">
 		                                    <p class="username repost"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
@@ -464,11 +464,11 @@ var one= function(a, b, c, d){
 					case "repostImg":
 						reTurn+=   `<section class="story repost img">
 		                                <div class="info">
-		                                    <img class="repost" src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
-		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="${c[e].originalPoster.profilePic}" alt="">
 		                                    <p class="username repost"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
@@ -476,7 +476,7 @@ var one= function(a, b, c, d){
 		                                <p class="title">${c[e].title}</p>
 		                                <p class="moreI">${c[e].description}</p>
 		                                <section id="picture">
-		                                    <img class="pic" src="/resources/images/${c[e].originalPoster.username}/${c[e].contents.image}" alt="" class="big">
+		                                    <img class="pic" src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].originalPoster.username}/${c[e].contents.image}" alt="" class="big">
 		                                </section>
 		                                <div class="Comentarios">${c[e].Comentarios}</div>
 		                                <div class="options button">
@@ -494,11 +494,11 @@ var one= function(a, b, c, d){
 		            case "repostMult_img":
 						reTurn+=   `<section class="story repost mult_img">
 		                                <div class="info">
-		                                    <img class="repost" src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
-		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="${c[e].originalPoster.profilePic}" alt="">
 		                                    <p class="username repost"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
@@ -532,11 +532,11 @@ var one= function(a, b, c, d){
 					case "repostVideo":
 						reTurn+=   `<section class="story repost video">
 		                                <div class="info">
-		                                    <img class="repost" src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
-		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="${c[e].originalPoster.profilePic}" alt="">
 		                                    <p class="username repost"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
@@ -574,11 +574,11 @@ var one= function(a, b, c, d){
 		            case "repost_multimedia":
 						reTurn+=   `<section class="story repost containments">
 		                                <div class="info">
-		                                    <img class="repost" src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
-		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="${c[e].originalPoster.profilePic}" alt="">
 		                                    <p class="username repost"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
@@ -603,11 +603,11 @@ var one= function(a, b, c, d){
 					case "fork":
 						reTurn+=   `<section class="story fork links">
 		                                <div class="info">
-		                                    <img class="fork" src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <img class="fork" src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
 		                                    <div class="forkedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalRepoOwner.rol.level}'>
-		                                    <img class="fork" src="${c[e].originalRepoOwner.profilePic}" alt="">
+		                                    <img class="fork" src="/resources/assets/loading.gif" s_rc="${c[e].originalRepoOwner.profilePic}" alt="">
 		                                    <p class="username fork"><a class="target" href="/${user.username}/" title= "${user.tool}">${user.users_name}</a> Forkeó de <a class="target" href="/${c[e].originalRepoOwner.username}" title="${c[e].originalRepoOwner.tool}">${c[e].originalRepoOwner.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
@@ -641,7 +641,7 @@ var one= function(a, b, c, d){
 						reTurn+=   `<section class="story links">
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
-		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
 		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -665,7 +665,7 @@ var one= function(a, b, c, d){
 						reTurn+=   `<section class="story containments">
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
-		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
 		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -689,7 +689,7 @@ var one= function(a, b, c, d){
 						reTurn+=   `<section class="story embed">
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
-		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
 		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -713,7 +713,7 @@ var one= function(a, b, c, d){
 						reTurn+=   `<section class="story multimedia">
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
-		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
 		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -737,7 +737,7 @@ var one= function(a, b, c, d){
 						reTurn+=   `<section class="story informative img">
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
-		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
 		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> ${c[e].information}<br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -760,7 +760,7 @@ var one= function(a, b, c, d){
 						reTurn+=   `<section class="story img">
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
-		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
 		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
@@ -776,7 +776,7 @@ var one= function(a, b, c, d){
 		                                <p class="title">${c[e].title}</p>
 		                                <p class="moreI">${c[e].description}</p>
 		                                <section id="picture">
-		                                    <img class="pic" src="/resources/images/${c[e].user.username}/${c[e].contents.image}" alt="" class="big">
+		                                    <img class="pic" src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].contents.image}" alt="" class="big">
 		                                </section>
 		                                <div class="Comentarios">${c[e].Comentarios}</div>
 		                                <div class="options button">
@@ -795,7 +795,7 @@ var one= function(a, b, c, d){
 						reTurn+=   `<section class="story video">
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
-		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
 		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
@@ -842,7 +842,7 @@ var one= function(a, b, c, d){
 						reTurn+=   `<section class="story mult_img">
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
-		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
 		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
@@ -885,7 +885,7 @@ var one= function(a, b, c, d){
 						reTurn+=   `<section class="story mult_carr">
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
-		                                    <img src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
 		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
@@ -927,11 +927,11 @@ var one= function(a, b, c, d){
 					case "repostLinks":
 						reTurn+=   `<section class="story repost links">
 		                                <div class="info">
-		                                    <img class="repost" src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
-		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="${c[e].originalPoster.profilePic}" alt="">
 		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
@@ -956,11 +956,11 @@ var one= function(a, b, c, d){
 					case "repostContainments":
 						reTurn+=   `<section class="story repost containments">
 		                                <div class="info">
-		                                    <img class="repost" src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
-		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="${c[e].originalPoster.profilePic}" alt="">
 		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
@@ -985,11 +985,11 @@ var one= function(a, b, c, d){
 					case "repostImg":
 						reTurn+=   `<section class="story repost img">
 		                                <div class="info">
-		                                    <img class="repost" src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
-		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="${c[e].originalPoster.profilePic}" alt="">
 		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
@@ -997,7 +997,7 @@ var one= function(a, b, c, d){
 		                                <p class="title">${c[e].title}</p>
 		                                <p class="moreI">${c[e].description}</p>
 		                                <section id="picture">
-		                                    <img class="pic" src="/resources/images/${c[e].originalPoster.username}/${c[e].contents.image}" alt="" class="big">
+		                                    <img class="pic" src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].originalPoster.username}/${c[e].contents.image}" alt="" class="big">
 		                                </section>
 		                                <div class="Comentarios">${c[e].Comentarios}</div>
 		                                <div class="options button">
@@ -1015,11 +1015,11 @@ var one= function(a, b, c, d){
 		            case "repostMult_img":
 						reTurn+=   `<section class="story repost mult_img">
 		                                <div class="info">
-		                                    <img class="repost" src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
-		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="${c[e].originalPoster.profilePic}" alt="">
 		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
@@ -1053,11 +1053,11 @@ var one= function(a, b, c, d){
 					case "repostVideo":
 						reTurn+=   `<section class="story repost video">
 		                                <div class="info">
-		                                    <img class="repost" src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
-		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="${c[e].originalPoster.profilePic}" alt="">
 		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
@@ -1095,11 +1095,11 @@ var one= function(a, b, c, d){
 		            case "repost_multimedia":
 						reTurn+=   `<section class="story repost containments">
 		                                <div class="info">
-		                                    <img class="repost" src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
-		                                    <img class="repost" src="${c[e].originalPoster.profilePic}" alt="">
+		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="${c[e].originalPoster.profilePic}" alt="">
 		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
@@ -1124,11 +1124,11 @@ var one= function(a, b, c, d){
 					case "fork":
 						reTurn+=   `<section class="story fork links">
 		                                <div class="info">
-		                                    <img class="fork" src="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
+		                                    <img class="fork" src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
 		                                    <div class="forkedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalRepoOwner.rol.level}'>
-		                                    <img class="fork" src="${c[e].originalRepoOwner.profilePic}" alt="">
+		                                    <img class="fork" src="/resources/assets/loading.gif" s_rc="${c[e].originalRepoOwner.profilePic}" alt="">
 		                                    <p class="username fork"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Forkeó de <a class="target" href="/${c[e].originalRepoOwner.username}" title="${c[e].originalRepoOwner.tool}">${c[e].originalRepoOwner.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
@@ -1205,7 +1205,7 @@ var one= function(a, b, c, d){
                                 		<img class="pic" src="/resources/images/${user.username}/${c[e].contents.image}" alt="" class="big">
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
-		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
 		                                    <p class="username"><a class="target" href="/${user.username}/" title="${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
@@ -1238,7 +1238,7 @@ var one= function(a, b, c, d){
 		case "video":
 			var reTurn= ""
 			for(var e in c){
-				reTurn+=   `<img src= "/resources/images/${user.username}/${c[e].contents.video}_poster.png" class="poster">
+				reTurn+=   `<img src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${c[e].contents.video}_poster.png" class="poster">
 							<section class="vid">
                                 <div class="info">
                                     <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.level}'>
@@ -1328,7 +1328,7 @@ var one= function(a, b, c, d){
                                 		<img class="pic" src="/resources/images/${user.username}/${c[e].contents.image}" alt="" class="big">
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${user.rol.level}'>
-		                                    <img src="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
+		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${user.profilePic[Object.keys(user.profilePic)[0]].contents.image}" alt="">
 		                                    <p class="username"><a class="target" href="/${user.username}/" title="${user.tool}">${user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
@@ -1382,13 +1382,13 @@ var one= function(a, b, c, d){
 	                    break;
 	                case "im":
 						reTurn+=   `<section class="picture">
-	                                    <img class="pic" src="/resources/images/${user.username}/${c[e][1]}" alt="" class="big">
+	                                    <img class="pic" src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${c[e][1]}" alt="" class="big">
 	                                </section>
 	                                `
 	                    break;
 	                default:
 						reTurn+=   `<section class="picture">
-	                                    <img class="pic" src="/resources/images/${user.username}/${c[e]}" alt="" class="big">
+	                                    <img class="pic" src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${c[e]}" alt="" class="big">
 	                                </section>
 	                                `
 	                    break;
@@ -1419,13 +1419,13 @@ var one= function(a, b, c, d){
 	                    break;
 	                case "im":
 						reTurn+=   `<section class="picture">
-	                                    <img class="pic" src="${c[e][1]}" alt="" class="big">
+	                                    <img class="pic" src="/resources/assets/loading.gif" s_rc="${c[e][1]}" alt="" class="big">
 	                                </section>
 	                                `
 	                    break;
 	                default:
 						reTurn+=   `<section class="picture">
-	                                    <img class="pic" src="${c[e]}" alt="" class="big">
+	                                    <img class="pic" src="/resources/assets/loading.gif" s_rc="${c[e]}" alt="" class="big">
 	                                </section>
 	                                `
 	                    break;
@@ -1456,13 +1456,13 @@ var one= function(a, b, c, d){
 	                    break;
 	                case "im":
 						reTurn+=   `<section class="picture">
-	                                    <img class="pic" src="/resources/images/${user.username}/${un_tn(c[e][1])}" alt="" class="big">
+	                                    <img class="pic" src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${un_tn(c[e][1])}" alt="" class="big">
 	                                </section>
 	                                `
 	                    break;
 	                default:
 						reTurn+=   `<section class="picture">
-	                                    <img class="pic" src="/resources/images/${user.username}/${un_tn(c[e])}" alt="" class="big">
+	                                    <img class="pic" src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${un_tn(c[e])}" alt="" class="big">
 	                                </section>
 	                                `
 	                    break;
@@ -1494,14 +1494,14 @@ var one= function(a, b, c, d){
 	                    break;
 	                case "im":
 						reTurn+=   `<section class="picture">
-	                                    <img class="pic" src= "/resources/images/${user.username}/${c[e][1]}" alt="" class="big">
+	                                    <img class="pic" src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${c[e][1]}" alt="" class="big">
 	                                </section>
 
 	                                `
 	                    break;
 	                default:
 						reTurn+=   `<section class="picture">
-	                                    <img class="pic" src= "/resources/images/${user.username}/${c[e]}" alt="" class="big">
+	                                    <img class="pic" src="/resources/assets/loading.gif" s_rc="/resources/images/${user.username}/${c[e]}" alt="" class="big">
 	                                </section>
 
 	                                `
@@ -1533,13 +1533,13 @@ var one= function(a, b, c, d){
 	                    break;
 	                case "im":
 						reTurn+=   `<section class="picture">
-	                                    <img class="pic" src="/resources/images/${d.originalPoster.username}/${c[e][1]}" alt="" class="big">
+	                                    <img class="pic" src="/resources/assets/loading.gif" s_rc="/resources/images/${d.originalPoster.username}/${c[e][1]}" alt="" class="big">
 	                                </section>
 	                                `
 	                    break;
 	                default:
 						reTurn+=   `<section class="picture">
-	                                    <img class="pic" src="/resources/images/${d.originalPoster.username}/${c[e]}" alt="" class="big">
+	                                    <img class="pic" src="/resources/assets/loading.gif" s_rc="/resources/images/${d.originalPoster.username}/${c[e]}" alt="" class="big">
 	                                </section>
 	                                `
 	                    break;
@@ -1570,13 +1570,13 @@ var one= function(a, b, c, d){
 	                    break;
 	                case "im":
 						reTurn+=   `<section class="picture">
-	                                    <img class="pic" src="/resources/images/${d.user.username}/${c[e][1]}" alt="" class="big">
+	                                    <img class="pic" src="/resources/assets/loading.gif" s_rc="/resources/images/${d.user.username}/${c[e][1]}" alt="" class="big">
 	                                </section>
 	                                `
 	                    break;
 	                default:
 						reTurn+=   `<section class="picture">
-	                                    <img class="pic" src="/resources/images/${d.user.username}/${c[e]}" alt="" class="big">
+	                                    <img class="pic" src="/resources/assets/loading.gif" s_rc="/resources/images/${d.user.username}/${c[e]}" alt="" class="big">
 	                                </section>
 	                                `
 	                    break;
@@ -1723,7 +1723,7 @@ return videos}
 /**/
 var purger= {}; 
             
-purger.index= 30; 
+purger.index= 29; 
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return
@@ -1847,7 +1847,7 @@ var openModal= function(a){
 	    $this = Antheater; 
 	    ar= Antheater
 	    th= Antheater
-	    source= Antheater.is("mult_carr")?un_tn(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].src):un_tn(ar.find(".pic")[0].src); 
+	    source= Antheater.is("mult_carr")?un_tn((ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("src")== "/resources/assets/loading.gif"? $(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("s_rc"):$(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("src")):un_tn(ar.find(".pic").attr("src")=="/resources/assets/loading.gif"? ar.find(".pic").attr("s_rc"):ar.find(".pic").attr("src")); 
 	    history.pushState({page: 1}, "", "/" + user.username + "/img/" + source.slice(source.lastIndexOf("/") + 1, -4)); 
 	    var info = a.closest('.photo').find(".info").html(); 
 	    $('.theater .comments .info').html(info); 
@@ -1917,25 +1917,25 @@ var openModal= function(a){
             }) 
             _R(Antheater.find(".carr")).e()
 	        ar= $(a.closest('.photo')); 
-	        source= un_tn(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].src); 
-	        $("#theater").find("#bigPic")[0].src= un_tn(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].src); 
+	        source= un_tn(($(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("src")== "/resources/assets/loading.gif"?$(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("s_rc"): $(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("src"))); 
+	        $("#theater").find("#bigPic")[0].src= un_tn(($(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("src")== "/resources/assets/loading.gif"?$(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("s_rc"): $(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("src"))); 
 	        $("#theater").append('<div class="nav_arrow left' + (ar.find(".nav_arrow.left").is(".disabled")? ' disabled': '') + '"><div class= "arrow"></div></div><div class="nav_arrow right' + (ar.find(".nav_arrow.right").is(".disabled")? ' disabled': '') + '"><div class= "arrow"></div></div>'); 
 	        $("#theater .nav_arrow.left .arrow").on("click", function(){
 	            !ar.find(".carr").is(":animated")? ar.find(".carr")[0].scrollLeft= ar.find(".carr")[0].scrollLeft - ar.find(".carr").width(): 672; 
-	            $("#theater").find("#bigPic")[0].src= un_tn(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].src); 
-	            source= un_tn($("#theater").find("#bigPic")[0].src); 
+	            $("#theater").find("#bigPic")[0].src= un_tn(($(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("src")== "/resources/assets/loading.gif"?$(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("s_rc"): $(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("src"))); 
+	            source= un_tn($("#theater").find("#bigPic").attr("src")== "/resources/assets/loading.gif"? $("#theater").find("#bigPic").attr("s_rc"):$("#theater").find("#bigPic").attr("src")); 
 	            history.pushState({page: 1}, "", "/" + user.username + "/img/" + source.slice(source.lastIndexOf("/") + 1, -4)); 
 	        }); 
 	        $("#theater .nav_arrow.right .arrow").on("click", function(){
 	            !ar.find(".carr").is(":animated")? ar.find(".carr")[0].scrollLeft= ar.find(".carr")[0].scrollLeft + ar.find(".carr").width(): 672; 
-	            $("#theater").find("#bigPic")[0].src= un_tn(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].src); 
-	            source= un_tn($("#theater").find("#bigPic")[0].src); 
+	            $("#theater").find("#bigPic")[0].src= un_tn(($(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("src")== "/resources/assets/loading.gif"?$(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("s_rc"): $(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("src"))); 
+	            source= un_tn($("#theater").find("#bigPic").attr("src")== "/resources/assets/loading.gif"? $("#theater").find("#bigPic").attr("s_rc"):$("#theater").find("#bigPic").attr("src")); 
 	            history.pushState({page: 1}, "", "/" + user.username + "/img/" + source.slice(source.lastIndexOf("/") + 1, -4)); 
 	        }); 
 	        $(".nav_arrow").on("click", function(i){$(i.target).is(".nav_arrow")? closeModal(): 1; }); 
 	        history.pushState({page: 1}, "", "/" + user.username + "/img/" + source.slice(source.lastIndexOf("/") + 1, -4)); 
 	    }else{ 
-	        var source = un_tn($(a.closest(".photo").children()[0]).attr('src')); 
+	        var source = un_tn(($(a.closest(".photo").children()[0]).attr('src')== "/resources/assets/loading.gif"? $(a.closest(".photo").children()[0]).attr('s_rc'): $(a.closest(".photo").children()[0]).attr('src'))); 
 	        $('.theater #bigPic').attr('src', source); 
 	        history.pushState({page: 1}, "", "/" + user.username + "/img/" + source.slice(source.lastIndexOf("/") + 1, -4)); 
 	    } 
@@ -1964,10 +1964,10 @@ var openModal= function(a){
 
     $this= a.closest('.story')/**/
 
-    var source= a.attr('src');
+    var source = a.attr("src")== "/resources/assets/loading.gif"?a.attr('s_rc'):a.attr('src');
     $('.theater #bigPic').attr('src', source);
                            
-    history.pushState({page: 1}, "", "/" + (Antheater.is(".repost")? $(Antheater.find(".target")[1])[0].href.slice($(Antheater.find(".target")[1])[0].href.lastIndexOf("/") + 1): Antheater.find(".username a").attr("href").slice(1, Antheater.find(".username a").attr("href").length)) + "/img/" + source.slice(source.lastIndexOf("/") + 1, -4)); 
+    history.pushState({page: 1}, "", "/" + (Antheater.is(".repost")? $(Antheater.find(".target")[1]).attr("href").slice(1): Antheater.find(".username a").attr("href").slice(1, Antheater.find(".username a").attr("href").length)) + "img/" + source.slice(source.lastIndexOf("/") + 1, -4)); 
 
     var info= Antheater.find(".info").html(); 
     $('.theater .comments .info').html(info); 
@@ -2045,7 +2045,7 @@ var openModal= function(a){
         $('.theater .comments .options .star').removeClass("true");
     }
 
-    var pic= Antheater.find(".info img").attr('src');
+    var pic= (Antheater.find(".info img").attr('src') == "/resources/assets/loading.gif"?Antheater.find(".info img").attr('s_rc'):Antheater.find(".info img").attr('src'));
     $('.theater .comments .info #pic').attr('src', pic);
 
     var ref= Antheater.find(".options ul a").attr('href');
@@ -2152,9 +2152,9 @@ $(videojs("theater_video").L.parentElement).siblings().filter(".Playuse").addCla
     if(Antheater.is(".repost")){ 
         history.pushState({page: 1}, "", Antheater.find(".options li.read").parent().attr("href")); 
     }else if(Antheater.is(".external")){ 
-        history.pushState({page: 1}, "", "/" + Antheater.find(".username a").attr("href").slice(1, $(".current").find(".username a").attr("href").length) + "/vid/" + a.closest('.video').find("video").attr("random_character_identifier")); 
+        history.pushState({page: 1}, "", "/" + Antheater.find(".username a").attr("href").slice(1, $(".current").find(".username a").attr("href").length) + "vid/" + a.closest('.video').find("video").attr("random_character_identifier")); 
     }else{
-        history.pushState({page: 1}, "", "/" + Antheater.find(".username a").attr("href").slice(1, $(".current").find(".username a").attr("href").length) + "/vid/" + source.slice(source.lastIndexOf("/") + 1, -4)); 
+        history.pushState({page: 1}, "", "/" + Antheater.find(".username a").attr("href").slice(1, $(".current").find(".username a").attr("href").length) + "vid/" + source.slice(source.lastIndexOf("/") + 1, -4)); 
     }
 
     var info= a.closest('.story').find(".info").html(); 
@@ -2278,7 +2278,7 @@ var openOtherModal= function(a){
     $this= a.closest('.story')
     var source= a.closest('.story').find("video").attr('src');
 
-    history.pushState({page: 1}, "", "/" + (a.closest('.story').is(".repost")? $(a.closest('.story').find(".target")[1])[0].href.slice($(a.closest('.story').find(".target")[1])[0].href.lastIndexOf("/") + 1): a.closest('.story').find(".username a").attr("href").slice(1, $(".current").find(".username a").attr("href").length)) + "/pos" + a.parent().find("a.read").attr("href").slice(a.parent().find("a.read").attr("href").lastIndexOf("/"))); 
+    history.pushState({page: 1}, "", "/" + (a.closest('.story').is(".repost")? $(a.closest('.story').find(".target")[1]).attr("href").slice(1): a.closest('.story').find(".username a").attr("href").slice(1, $(".current").find(".username a").attr("href").length)) + "pos" + a.parent().find("a.read").attr("href").slice(a.parent().find("a.read").attr("href").lastIndexOf("/"))); 
 
     var info= a.closest('.story').find(".info").html(); 
     $('.theater .comments .info').html(info); 
@@ -2543,7 +2543,7 @@ var openFotosModal= function(a){
     if(a.closest('.foto').is(".mult_img")){ 
         ar= $(a.closest('.foto')); 
         source= un_tn( ar.find(".carr > section")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].getElementsByTagName( "img" )[0].src ); 
-        $("#theater").find("#bigPic")[0].src= un_tn( ar.find(".carr > section")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].getElementsByTagName( "img" )[0].src ); 
+        $("#theater").find("#bigPic")[0].src= un_tn( $(ar.find(".carr > section")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].getElementsByTagName( "img" )[0]).attr("src")=="/resources/assets/loading.gif"?$(ar.find(".carr > section")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].getElementsByTagName( "img" )[0]).attr("s_rc"):$(ar.find(".carr > section")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].getElementsByTagName( "img" )[0]).attr("src") ); 
         if(!$("#theater").find(".nav_arrow").length){
 	        $("#theater").append('<div class="nav_arrow left' + (ar.find(".nav_arrow.left").is(".disabled")? ' disabled': '') + '"><div class= "arrow"></div></div><div class="nav_arrow right' + (ar.find(".nav_arrow.right").is(".disabled")? ' disabled': '') + '"><div class= "arrow"></div></div>'); 
 	        $("#theater .nav_arrow.left .arrow").on("click", function(){
@@ -2552,13 +2552,13 @@ var openFotosModal= function(a){
 	            if($("#theater .nav_arrow.left").is(".disabled"))
 	                    {return}; 
 	                if($("#theater").css("display") == "none" && !!th.find(".carr").length){ 
-	                    !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", "/" + user.username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
+	                    !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? ($(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")=="/resources/assets/loading.gif"?$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("s_rc"):$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", "/" + user.username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
 	                }else if(!!th.find(".carr").length){ 
 	                    th.find(".carr")[0].scrollLeft= th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width(); 
-	                    lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", "/" + user.username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
+	                    lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? ($(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")=="/resources/assets/loading.gif"?$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("s_rc"):$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", "/" + user.username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
 	                    lk= un_tn( lk ); 
 	                    $("#theater video")[0].src= ""; 
-	                    th.is(".mult_carr")? $( (function(){return $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find(".Enlarge")})() ).trigger( "click" ): $("#theater").find("#bigPic")[0].src= (th.is(".story")? $(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src: un_tn($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src)); 
+	                    th.is(".mult_carr")? $( (function(){return $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find(".Enlarge")})() ).trigger( "click" ): $("#theater").find("#bigPic")[0].src= (th.is(".story")? ($($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")=="/resources/assets/loading.gif"?$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("s_rc"):$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")): un_tn(($($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")=="/resources/assets/loading.gif"?$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("s_rc"):$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")))); 
 	                    source= un_tn($("#theater").find("#bigPic")[0].src)
 	                    history.pushState({page: 1}, "", "/" + user.username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
 	                }
@@ -2569,13 +2569,13 @@ var openFotosModal= function(a){
 	                if($("#theater .nav_arrow.right").is(".disabled"))
 	                    {return}; 
 	                if($("#theater").css("display") == "none" && !!th.find(".carr").length){ 
-	                    !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", "/" + user.username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
+	                    !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? ($(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")=="/resources/assets/loading.gif"?$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("s_rc"):$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", "/" + user.username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
 	                }else if(!!th.find(".carr").length){ 
 	                    th.find(".carr")[0].scrollLeft= th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width(); 
-	                    lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", "/" + user.username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
+	                    lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? ($(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")=="/resources/assets/loading.gif"?$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("s_rc"):$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", "/" + user.username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
 	                    lk= un_tn( lk ); 
 	                    $("#theater video")[0].src= ""; 
-	                    th.is(".mult_carr")? $( (function(){return $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find(".Enlarge")})() ).trigger( "click" ): $("#theater").find("#bigPic")[0].src= (th.is(".story")? $(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src: un_tn($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src)); 
+	                    th.is(".mult_carr")? $( (function(){return $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find(".Enlarge")})() ).trigger( "click" ): $("#theater").find("#bigPic")[0].src= (th.is(".story")? ($($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")=="/resources/assets/loading.gif"?$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("s_rc"):$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")): un_tn(($($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")=="/resources/assets/loading.gif"?$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("s_rc"):$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")))); 
 	                    source= un_tn($("#theater").find("#bigPic")[0].src)
 	                    history.pushState({page: 1}, "", "/" + user.username + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
 	                }
@@ -2719,7 +2719,7 @@ var openPhotoModal= function(a) {
     } else {
         $('.theater .comments .options .star').removeClass("true");
     }
-    var pic = a.closest(".photo").find(".info img").attr('src');
+    var pic = (a.closest(".photo").find(".info img").attr('src')== "/resources/assets/loading.gif"?a.closest(".photo").find(".info img").attr('s_rc'):a.closest(".photo").find(".info img").attr('src'));
     $('.theater .comments .info #pic').attr('src', pic);
 
     var ref = a.closest(".photo").find(".options ul a").attr('href');
@@ -2766,19 +2766,19 @@ var openPhotoModal= function(a) {
 
     if(a.closest('.photo').is(".mult_img")){ 
         ar= $(a.closest('.photo')); 
-        source= un_tn(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].src); 
-        $("#theater").find("#bigPic")[0].src= un_tn(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].src); 
+        source= un_tn($(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("src")=="/resources/assets/loading.gif"?$(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("s_rc"):$(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("src")); 
+        $("#theater").find("#bigPic")[0].src= source; 
         if(!$("#theater").find(".nav_arrow").length){
 	        $("#theater").append('<div class="nav_arrow left' + (ar.find(".nav_arrow.left").is(".disabled")? ' disabled': '') + '"><div class= "arrow"></div></div><div class="nav_arrow right' + (ar.find(".nav_arrow.right").is(".disabled")? ' disabled': '') + '"><div class= "arrow"></div></div>'); 
 	        $("#theater .nav_arrow.left .arrow").on("click", function(){
 	            !ar.find(".carr").is(":animated")? ar.find(".carr")[0].scrollLeft= ar.find(".carr")[0].scrollLeft - ar.find(".carr").width(): 672; 
-	            $("#theater").find("#bigPic")[0].src= un_tn(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].src); 
+	            $("#theater").find("#bigPic")[0].src= un_tn($(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("src")=="/resources/assets/loading.gif"?$(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("s_rc"):$(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("src")); 
 	            source= un_tn($("#theater").find("#bigPic")[0].src); 
 	            history.pushState({page: 1}, "", "/" + user.username + "/img/" + source.slice(source.lastIndexOf("/") + 1, -4)); 
 	        }); 
 	        $("#theater .nav_arrow.right .arrow").on("click", function(){
 	            !ar.find(".carr").is(":animated")? ar.find(".carr")[0].scrollLeft= ar.find(".carr")[0].scrollLeft + ar.find(".carr").width(): 672; 
-	            $("#theater").find("#bigPic")[0].src= un_tn(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].src); 
+	            $("#theater").find("#bigPic")[0].src= un_tn($(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("src")=="/resources/assets/loading.gif"?$(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("s_rc"):$(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("src")); 
 	            source= un_tn($("#theater").find("#bigPic")[0].src); 
 	            history.pushState({page: 1}, "", "/" + user.username + "/img/" + source.slice(source.lastIndexOf("/") + 1, -4)); 
 	        }); 
@@ -2786,7 +2786,7 @@ var openPhotoModal= function(a) {
 	    }
         history.pushState({page: 1}, "", "/" + user.username + "/img/" + source.slice(source.lastIndexOf("/") + 1, -4)); 
     }else{ 
-        var source = un_tn($(a.closest(".photo").children()[0]).attr('src')); 
+        var source = un_tn($(a.closest(".photo").children()[0]).attr('src')== "/resources/assets/loading.gif"?$(a.closest(".photo").children()[0]).attr('s_rc'):$(a.closest(".photo").children()[0]).attr('src')); 
         $('.theater #bigPic').attr('src', source); 
         history.pushState({page: 1}, "", "/" + user.username + "/img/" + source.slice(source.lastIndexOf("/") + 1, -4)); 
     } 
@@ -2856,7 +2856,7 @@ if($(this).text() == selectedSu)$(this).click()
 	    
 	    Antheater= false; 
 
-	    history.pushState({page: 1}, "", "/" + username); 
+	    history.pushState({page: 1}, "", `/${user.username}/`); 
 	}else if(RooT.maTch.photos.exec(actualLocation) !== null){
 	    if( typeof th == "undefined" ){ th= $( th.context ).closest(".story").length? $( th.context ).closest(".story"): $( th.context ).closest(".foto").length? $( th.context ).closest(".foto"): $( th.context ).closest('#profilePic').length? $( th.context ).closest('#profilePic'): th.context }else{ th= Antheater }; 
 	    $(".Comentario .media > div").prop('outerHTML', function(){return $(this).find("audio").prop("outerHTML")}); 
@@ -3168,11 +3168,11 @@ bGComments= function(arg){
 }
 badGuy= function(){ 
 	if(RooT.maTch.root.exec(actualLocation) !== null){
-		Antheater= typeof th != "undefined" && !th.is(".story")? th: $(".current")
-	    iTS= $(Antheater).is(".mult_carr")? $(Antheater.find(".carr section")[0]).is(".picture")? `${$(Antheater).find(".options a").attr("href").slice(0, $(Antheater).find(".options a").attr("href").lastIndexOf("/") - 4)}/img/${$($(Antheater).find(".carr section")[0]).find("img").attr("src").slice(-14, -4)}`: `${$(Antheater).find(".options a").attr("href").slice(0, $(Antheater).find(".options a").attr("href").lastIndexOf("/") - 4)}/vid/${$($(Antheater).find(".carr section")[0]).find("video").attr("src").slice(-14, -4)}`: (!Antheater.is(".current")? !!Antheater.find(".carr").length? window.location.pathname.slice(0, window.location.pathname.lastIndexOf("/")) + $(Antheater).find(".carr").find("img")[0].src.slice($(Antheater).find(".carr").find("img")[0].src.lastIndexOf("/"), $(Antheater).find(".carr").find("img")[0].src.lastIndexOf(".")): window.location.pathname: $(".current").is(".mult_img")? $(".current").find(".options a").attr("href").slice(0, $(".current").find(".options a").attr("href").lastIndexOf("/")) + $(".current").find(".carr").find("img")[0].src.slice($(".current").find(".carr").find("img")[0].src.lastIndexOf("/"), $(".current").find(".carr").find("img")[0].src.lastIndexOf(".")): $(".current").find(".options a").attr("href")); 
+		Antheater= typeof th != "undefined" && !th.is(".story")? th: $(".current")	    
+	    iTS= $(Antheater).is(".mult_carr")? $(Antheater.find(".carr section")[0]).is(".picture")? `${$(Antheater).find(".options a").attr("href").slice(0, $(Antheater).find(".options a").attr("href").lastIndexOf("/") - 4)}/img/${($($(Antheater).find(".carr section")[0]).find("img").attr("src") == "/resources/assets/loading.gif"? $($(Antheater).find(".carr section")[0]).find("img").attr("s_rc"): $($(Antheater).find(".carr section")[0]).find("img").attr("src")).slice(-14, -4)}`: `${$(Antheater).find(".options a").attr("href").slice(0, $(Antheater).find(".options a").attr("href").lastIndexOf("/") - 4)}/vid/${$($(Antheater).find(".carr section")[0]).find("video").attr("src").slice(-14, -4)}`: (!Antheater.is(".current")? !!Antheater.find(".carr").length? window.location.pathname.slice(0, window.location.pathname.lastIndexOf("/")) + ($(Antheater).find(".carr").find("img").attr("src") == "/resources/assets/loading.gif"? $($(Antheater).find(".carr").find("img")[0]).attr("s_rc"): $(Antheater).find(".carr").find("img").attr("src")).slice(($(Antheater).find(".carr").find("img").attr("src") == "/resources/assets/loading.gif"? $($(Antheater).find(".carr").find("img")[0]).attr("s_rc"): $(Antheater).find(".carr").find("img").attr("src")).lastIndexOf("/"), ($(Antheater).find(".carr").find("img").attr("src") == "/resources/assets/loading.gif"? $($(Antheater).find(".carr").find("img")[0]).attr("s_rc"): $(Antheater).find(".carr").find("img").attr("src")).lastIndexOf(".")): window.location.pathname: $(".current").is(".mult_img")? $(".current").find(".options a").attr("href").slice(0, $(".current").find(".options a").attr("href").lastIndexOf("/")) + ($(".current").find(".carr").find("img").attr("src") == "/resources/assets/loading.gif"? $($(".current").find(".carr").find("img")[0]).attr("s_rc"): $(".current").find(".carr").find("img").attr("src")).slice(($(".current").find(".carr").find("img").attr("src") == "/resources/assets/loading.gif"? $($(".current").find(".carr").find("img")[0]).attr("s_rc"): $(".current").find(".carr").find("img").attr("src")).lastIndexOf("/"), ($(".current").find(".carr").find("img").attr("src") == "/resources/assets/loading.gif"? $($(".current").find(".carr").find("img")[0]).attr("s_rc"): $(".current").find(".carr").find("img").attr("src")).lastIndexOf(".")): $(".current").find(".options a").attr("href")); 
 	    localStorage.setItem(iTS, JSON.stringify({B: ($("#theater").css("display") == "block"? $("#theater .options .bookmark").hasClass("true"): $(".current").find(".options .bookmark").hasClass("true"))? true: false, S: ($("#theater").css("display") == "block"? $("#theater .options .star").hasClass("true"): $(".current").find(".options .star").hasClass("true"))? true: false, C: bGComments(), hash: ((localStorage.getItem(iTS) != null && (typeof JSON.parse(localStorage.getItem(iTS)).hash != "undefined"))? JSON.parse(localStorage.getItem(iTS)).hash: hashes[iTS])})); 
 	    $(".story").each(function(){ 
-	        cold= JSON.parse(localStorage.getItem($(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + $(this).find(".carr").find("img")[0].src.slice($(this).find(".carr").find("img")[0].src.lastIndexOf("/"), $(this).find(".carr").find("img")[0].src.lastIndexOf(".")): $(this).find(".options a").attr("href"))); 
+	        cold= JSON.parse(localStorage.getItem($(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + ($(this).find(".carr").find("img").attr("src") == "/resources/assets/loading.gif"? $($(this).find(".carr").find("img")[0]).attr("s_rc"): $(this).find(".carr").find("img").attr("src")).slice(($(this).find(".carr").find("img").attr("src") == "/resources/assets/loading.gif"? $($(this).find(".carr").find("img")[0]).attr("s_rc"): $(this).find(".carr").find("img").attr("src")).lastIndexOf("/"), ($(this).find(".carr").find("img").attr("src") == "/resources/assets/loading.gif"? $($(this).find(".carr").find("img")[0]).attr("s_rc"): $(this).find(".carr").find("img").attr("src")).lastIndexOf(".")): $(this).find(".options a").attr("href"))); 
 	                            
 	        var t= $(this)[0]; 
 	                            
@@ -3184,12 +3184,12 @@ badGuy= function(){
 	    }); 
 	}else if(RooT.maTch.user.exec(actualLocation) !== null){
 		Antheater= typeof th != "undefined" && !th.is(".story")? th: $(".current")
-	    iTS= $(Antheater).is(".mult_carr")? $(Antheater.find(".carr section")[0]).is(".picture")? `${$(Antheater).find(".options a").attr("href").slice(0, $(Antheater).find(".options a").attr("href").lastIndexOf("/") - 4)}/img/${$($(Antheater).find(".carr section")[0]).find("img").attr("src").slice(-14, -4)}`: `${$(Antheater).find(".options a").attr("href").slice(0, $(Antheater).find(".options a").attr("href").lastIndexOf("/") - 4)}/vid/${$($(Antheater).find(".carr section")[0]).find("video").attr("src").slice(-14, -4)}`: (!Antheater.is(".current")? !!Antheater.find(".carr").length? window.location.pathname.slice(0, window.location.pathname.lastIndexOf("/")) + $(Antheater).find(".carr").find("img")[0].src.slice($(Antheater).find(".carr").find("img")[0].src.lastIndexOf("/"), $(Antheater).find(".carr").find("img")[0].src.lastIndexOf(".")): window.location.pathname: $(".current").is(".mult_img")? $(".current").find(".options a").attr("href").slice(0, $(".current").find(".options a").attr("href").lastIndexOf("/")) + $(".current").find(".carr").find("img")[0].src.slice($(".current").find(".carr").find("img")[0].src.lastIndexOf("/"), $(".current").find(".carr").find("img")[0].src.lastIndexOf(".")): $(".current").find(".options a").attr("href")); 
+	    iTS= $(Antheater).is(".mult_carr")? $(Antheater.find(".carr section")[0]).is(".picture")? `${$(Antheater).find(".options a").attr("href").slice(0, $(Antheater).find(".options a").attr("href").lastIndexOf("/") - 4)}/img/${($($(Antheater).find(".carr section")[0]).find("img").attr("src") == "/resources/assets/loading.gif"? $($(Antheater).find(".carr section")[0]).find("img").attr("s_rc"): $($(Antheater).find(".carr section")[0]).find("img").attr("src")).slice(-14, -4)}`: `${$(Antheater).find(".options a").attr("href").slice(0, $(Antheater).find(".options a").attr("href").lastIndexOf("/") - 4)}/vid/${$($(Antheater).find(".carr section")[0]).find("video").attr("src").slice(-14, -4)}`: (!Antheater.is(".current")? !!Antheater.find(".carr").length? window.location.pathname.slice(0, window.location.pathname.lastIndexOf("/")) + ($(Antheater).find(".carr").find("img").attr("src") == "/resources/assets/loading.gif"? $(Antheater).find(".carr").find("img").attr("s_rc"): $(Antheater).find(".carr").find("img").attr("src")).slice(($(Antheater).find(".carr").find("img").attr("src") == "/resources/assets/loading.gif"? $(Antheater).find(".carr").find("img").attr("s_rc"): $(Antheater).find(".carr").find("img").attr("src")).lastIndexOf("/"), ($(Antheater).find(".carr").find("img").attr("src") == "/resources/assets/loading.gif"? $(Antheater).find(".carr").find("img").attr("s_rc"): $(Antheater).find(".carr").find("img").attr("src")).src.lastIndexOf(".")): window.location.pathname: $(".current").is(".mult_img")? $(".current").find(".options a").attr("href").slice(0, $(".current").find(".options a").attr("href").lastIndexOf("/")) + ($(".current").find(".carr").find("img").attr("src") == "/resources/assets/loading.gif"? $(".current").find(".carr").find("img").attr("s_rc"): $(".current").find(".carr").find("img").attr("src")).slice(($(".current").find(".carr").find("img").attr("src") == "/resources/assets/loading.gif"? $(".current").find(".carr").find("img").attr("s_rc"): $(".current").find(".carr").find("img").attr("src")).lastIndexOf("/"), ($(".current").find(".carr").find("img").attr("src") == "/resources/assets/loading.gif"? $(".current").find(".carr").find("img").attr("s_rc"): $(".current").find(".carr").find("img").attr("src")).lastIndexOf(".")): $(".current").find(".options a").attr("href")); 
 	    if(iTS.indexOf("_tn") != -1)iTS= un_tn(iTS)
 	    	console.log(iTS)
 	    localStorage.setItem(iTS, JSON.stringify({B: ($("#theater").css("display") == "block"? $("#theater .options .bookmark").hasClass("true"): $(".current").find(".options .bookmark").hasClass("true"))? true: false, S: ($("#theater").css("display") == "block"? $("#theater .options .star").hasClass("true"): $(".current").find(".options .star").hasClass("true"))? true: false, C: bGComments(), hash: ((localStorage.getItem(iTS) != null && (typeof JSON.parse(localStorage.getItem(iTS)).hash != "undefined"))? JSON.parse(localStorage.getItem(iTS)).hash: hashes[iTS])})); 
 	    $(".story").each(function(){ 
-	        cold= JSON.parse(localStorage.getItem($(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + $(this).find(".carr").find("img")[0].src.slice($(this).find(".carr").find("img")[0].src.lastIndexOf("/"), $(this).find(".carr").find("img")[0].src.lastIndexOf(".")): $(this).find(".options a").attr("href"))); 
+	        cold= JSON.parse(localStorage.getItem($(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + ($(this).find(".carr").find("img").attr("src") == "/resources/assets/loading.gif"? $(this).find(".carr").find("img").attr("s_rc"): $(this).find(".carr").find("img").attr("src")).slice(($(this).find(".carr").find("img").attr("src") == "/resources/assets/loading.gif"? $(this).find(".carr").find("img").attr("s_rc"): $(this).find(".carr").find("img").attr("src")).lastIndexOf("/"), ($(this).find(".carr").find("img").attr("src") == "/resources/assets/loading.gif"? $(this).find(".carr").find("img").attr("s_rc"): $(this).find(".carr").find("img").attr("src")).lastIndexOf(".")): $(this).find(".options a").attr("href"))); 
 	                            
 	        var t= $(this)[0]; 
 	                            
@@ -3200,7 +3200,7 @@ badGuy= function(){
 	        })(): 1; 
 	    }); 
 	    $(".foto").each(function(){ 
-	        src= $(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src); 
+	        src= $(this).is(".mult_img")? un_tn(($(this).find(".carr img").attr("src") == "/resources/assets/loading.gif"? $(this).find(".carr img").attr("s_rc"): $(this).find(".carr img").attr("src"))): un_tn(($(this).find(".pic").attr("src") == "/resources/assets/loading.gif"? $(this).find(".pic").attr("s_rc"): $(this).find(".pic").attr("src"))); 
 
 	        cold= JSON.parse(localStorage.getItem("/" + user.username + "/img" + src.slice(src.lastIndexOf("/"), src.lastIndexOf(".")))); 
 	        var t= $(this)[0]; 
@@ -3222,7 +3222,7 @@ badGuy= function(){
 	        })(): 1; 
 	    }); 
 	    if($("#profilePic").length){ 
-	        src= $("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src); 
+	        src= $("#profilePic").is(".mult_img")? un_tn(($("#profilePic").find(".carr img").attr("src") == "/resources/assets/loading.gif"? $("#profilePic").find(".carr img").attr("s_rc"): $("#profilePic").find(".carr img").attr("src"))): un_tn(($("#profilePic > img").attr("src") == "/resources/assets/loading.gif"? $("#profilePic > img").attr("s_rc"): $("#profilePic > img").attr("src"))); 
 
 	        "/" + username + "/img" + src.slice(src.lastIndexOf("/"), src.lastIndexOf("."))
 
@@ -3237,7 +3237,7 @@ badGuy= function(){
 	        })(): 1; 
 	    }
 	}else if(RooT.maTch.photos.exec(actualLocation) !== null){
-		iTS= ($this.is(".mult_img")? un_tn(window.location.pathname.slice(0, window.location.pathname.lastIndexOf("/")) + $(ar).find(".carr").find("img")[0].src.slice($(ar).find(".carr").find("img")[0].src.lastIndexOf("/"), $(ar).find(".carr").find("img")[0].src.lastIndexOf("."))): window.location.pathname); 
+		iTS= ($this.is(".mult_img")? un_tn(window.location.pathname.slice(0, window.location.pathname.lastIndexOf("/")) + ($(ar).find(".carr").find("img").attr("src") == "/resources/assets/loading.gif"? $(ar).find(".carr").find("img").attr("s_rc"): $(ar).find(".carr").find("img").attr("src")).slice(($(ar).find(".carr").find("img").attr("src") == "/resources/assets/loading.gif"? $(ar).find(".carr").find("img").attr("s_rc"): $(ar).find(".carr").find("img").attr("src")).lastIndexOf("/"), ($(ar).find(".carr").find("img").attr("src") == "/resources/assets/loading.gif"? $(ar).find(".carr").find("img").attr("s_rc"): $(ar).find(".carr").find("img").attr("src")).lastIndexOf("."))): window.location.pathname); 
 	    localStorage.setItem(iTS, JSON.stringify({B: ($("#theater .options .bookmark").hasClass("true")? true: false), S: ($("#theater .options .star").hasClass("true")? true: false), C: bGComments(), hash: ((localStorage.getItem(iTS) != null && (typeof JSON.parse(localStorage.getItem(iTS)).hash != "undefined"))? JSON.parse(localStorage.getItem(iTS)).hash: hashes[iTS])})); 
 	}else if(RooT.maTch.blog.exec(actualLocation) !== null){
 	    iTS=  window.location.pathname.replaceAll(".html", ""); 
@@ -3367,7 +3367,7 @@ if(uRl == "")return
 switch(ty){
 	case "foto": 
         $(".foto").each(function(){ 
-            if(("/" + user.username + "/img" + ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).slice(($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("/"), ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("."))) == uRl){
+            if(("/" + user.username + "/img" + ($(this).is(".mult_img")? un_tn($(this).find(".carr img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr img").attr("s_rc"):$(this).find(".carr img").attr("src")): un_tn($(this).find(".pic").attr("src")=="/resources/assets/loading.gif"?$(this).find(".pic").attr("s_rc"):$(this).find(".pic").attr("src"))).slice(($(this).is(".mult_img")? un_tn($(this).find(".carr img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr img").attr("s_rc"):$(this).find(".carr img").attr("src")): un_tn($(this).find(".pic").attr("src")=="/resources/assets/loading.gif"?$(this).find(".pic").attr("s_rc"):$(this).find(".pic").attr("src"))).lastIndexOf("/"), ($(this).is(".mult_img")? un_tn($(this).find(".carr img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr img").attr("s_rc"):$(this).find(".carr img").attr("src")): un_tn($(this).find(".pic").attr("src")=="/resources/assets/loading.gif"?$(this).find(".pic").attr("s_rc"):$(this).find(".pic").attr("src"))).lastIndexOf("."))) == uRl){
                 a= $(this); 
                 (function(){ 
                     a.find("img").on("click", function(){openFotosModal($(this));}); 
@@ -3387,7 +3387,7 @@ switch(ty){
     break; 
     case "story": 
         $(".story").each(function(){ 
-            if(($(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + $(this).find(".carr").find("img")[0].src.slice($(this).find(".carr").find("img")[0].src.lastIndexOf("/"), $(this).find(".carr").find("img")[0].src.lastIndexOf(".")): $(this).find(".options a").attr("href")) == uRl){
+            if(($(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + ($(this).find(".carr").find("img")[0].attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img")[0].attr("s_rc"):$(this).find(".carr").find("img")[0].attr("src")).slice(($(this).find(".carr").find("img")[0].attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img")[0].attr("s_rc"):$(this).find(".carr").find("img")[0].attr("src")).lastIndexOf("/"), ($(this).find(".carr").find("img")[0].attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img")[0].attr("s_rc"):$(this).find(".carr").find("img")[0].attr("src")).lastIndexOf(".")): $(this).find(".options a").attr("href")) == uRl){
                 a= $(this); 
                 (function(){ 
                     a.on( "click", function(r){ 
@@ -3401,7 +3401,7 @@ switch(ty){
     break; 
     case "photo": 
         $(".photo").each(function(){ 
-            if(("/" + user.username + "/img" + ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).slice(($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("/"), ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("."))) == uRl){
+            if(("/" + user.username + "/img" + ($(this).is(".mult_img")? un_tn($(this).find(".carr img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr img").attr("s_rc"):$(this).find(".carr img").attr("src")): un_tn($(this).find(".pic").attr("src")=="/resources/assets/loading.gif"?$(this).find(".pic").attr("s_rc"):$(this).find(".pic").attr("src"))).slice(($(this).is(".mult_img")? un_tn($(this).find(".carr img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr img").attr("s_rc"):$(this).find(".carr img").attr("src")): un_tn($(this).find(".pic").attr("src")=="/resources/assets/loading.gif"?$(this).find(".pic").attr("s_rc"):$(this).find(".pic").attr("src"))).lastIndexOf("/"), ($(this).is(".mult_img")? un_tn($(this).find(".carr img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr img").attr("s_rc"):$(this).find(".carr img").attr("src")): un_tn($(this).find(".pic").attr("src")=="/resources/assets/loading.gif"?$(this).find(".pic").attr("s_rc"):$(this).find(".pic").attr("src"))).lastIndexOf("."))) == uRl){
                 a= $(this); 
                 (function(){ 
                     a.find("img").on("click", function(){openPhotoModal($(this))}); 
@@ -3411,7 +3411,7 @@ switch(ty){
     break; 
     case "profilePic": 
         $("#profilePic").each(function(){ 
-            if(("/" + user.username + "/img" + ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)).slice(($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)).lastIndexOf("/"), ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)).lastIndexOf(".")))
+            if(("/" + user.username + "/img" + ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img").attr("src")=="/resources/assets/loading.gif"?$("#profilePic").find(".carr img").attr("s_rc"):$("#profilePic").find(".carr img").attr("src")): un_tn($("#profilePic > img").attr("src")=="/resources/assets/loading.gif"?$("#profilePic > img").attr("s_rc"):$("#profilePic > img").attr("src"))).slice(($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img").attr("src")=="/resources/assets/loading.gif"?$("#profilePic").find(".carr img").attr("s_rc"):$("#profilePic").find(".carr img").attr("src")): un_tn($("#profilePic > img").attr("src")=="/resources/assets/loading.gif"?$("#profilePic > img").attr("s_rc"):$("#profilePic > img").attr("src"))).lastIndexOf("/"), ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img").attr("src")=="/resources/assets/loading.gif"?$("#profilePic").find(".carr img").attr("s_rc"):$("#profilePic").find(".carr img").attr("src")): un_tn($("#profilePic > img").attr("src")=="/resources/assets/loading.gif"?$("#profilePic > img").attr("s_rc"):$("#profilePic > img").attr("src"))).lastIndexOf(".")))
  == uRl){
                 a= $(this);
                 (function(){ 
@@ -3496,7 +3496,7 @@ k300= function(C, p, y, ty, rep){
         switch(ty){
         	case "foto": 
                 $(".foto").each(function(){ 
-                    if(("/" + rep+ "/img" + ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).slice(($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("/"), ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("."))) == `/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`){
+                    if(("/" + rep+ "/img" + ($(this).is(".mult_img")? un_tn(($(this).find(".carr img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr img").attr("s_rc"):$(this).find(".carr img").attr("src"))): un_tn($(this).find(".pic").attr("src")=="/resources/assets/loading.gif"?$(this).find(".pic").attr("s_rc"):$(this).find(".pic").attr("src"))).slice(($(this).is(".mult_img")? un_tn(($(this).find(".carr img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr img").attr("s_rc"):$(this).find(".carr img").attr("src"))): un_tn($(this).find(".pic").attr("src")=="/resources/assets/loading.gif"?$(this).find(".pic").attr("s_rc"):$(this).find(".pic").attr("src"))).lastIndexOf("/"), ($(this).is(".mult_img")? un_tn(($(this).find(".carr img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr img").attr("s_rc"):$(this).find(".carr img").attr("src"))): un_tn($(this).find(".pic").attr("src")=="/resources/assets/loading.gif"?$(this).find(".pic").attr("s_rc"):$(this).find(".pic").attr("src"))).lastIndexOf("."))) == `/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`){
                         a= $(this);
                         (function(){ 
                             a.find("img").on("click", function(){openFotosModal($(this));}); 
@@ -3515,7 +3515,7 @@ k300= function(C, p, y, ty, rep){
                 });
             break; 
             case "story": 
-            	a= $(".story").filter(function(){if(($(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + $(this).find(".carr").find("img")[0].src.slice($(this).find(".carr").find("img")[0].src.lastIndexOf("/"), $(this).find(".carr").find("img")[0].src.lastIndexOf(".")): $(this).find(".options a").attr("href")) == `/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`){return true}else{return false}})
+            	a= $(".story").filter(function(){if(($(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + ($(this).find(".carr").find("img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img").attr("s_rc"):$(this).find(".carr").find("img").attr("src")).slice(($(this).find(".carr").find("img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img").attr("s_rc"):$(this).find(".carr").find("img").attr("src")).lastIndexOf("/"), ($(this).find(".carr").find("img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img").attr("s_rc"):$(this).find(".carr").find("img").attr("src")).lastIndexOf(".")): $(this).find(".options a").attr("href")) == `/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`){return true}else{return false}})
                 a.on( "click", function(r){ 
                     $( r.target ).is( ".pic" )? openModal( $( r.target ) ): 1; 
                     $( r.target ).is( ".video .Enlarge" )? openVideoModal( $( r.target ), ctrl?ctrl:undefined ): 1; 
@@ -3524,7 +3524,7 @@ k300= function(C, p, y, ty, rep){
             break; 
             case "photo": 
                 $(".photo").each(function(){ 
-                    if(("/" + rep + "/img" + ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).slice(($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("/"), ($(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src)).lastIndexOf("."))) == `/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`){ 
+                    if(("/" + rep + "/img" + ($(this).is(".mult_img")? un_tn($(this).find(".carr img").attr("src")?$(this).find(".carr img").attr("s_rc"): $(this).find(".carr img").attr("src")): un_tn($(this).find(".pic").attr("src")?$(this).find(".pic").attr("s_rc"):$(this).find(".pic").attr("src"))).slice(($(this).is(".mult_img")? un_tn($(this).find(".carr img").attr("src")?$(this).find(".carr img").attr("s_rc"): $(this).find(".carr img").attr("src")): un_tn($(this).find(".pic").attr("src")?$(this).find(".pic").attr("s_rc"):$(this).find(".pic").attr("src"))).lastIndexOf("/"), ($(this).is(".mult_img")? un_tn($(this).find(".carr img").attr("src")?$(this).find(".carr img").attr("s_rc"): $(this).find(".carr img").attr("src")): un_tn($(this).find(".pic").attr("src")?$(this).find(".pic").attr("s_rc"):$(this).find(".pic").attr("src"))).lastIndexOf("."))) == `/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`){ 
                         a= $(this); 
                         (function(){ 
                             a.find("img").on("click", function(){openPhotoModal($(this))}); 
@@ -3534,7 +3534,7 @@ k300= function(C, p, y, ty, rep){
             break; 
 			case "profilePic": 
                 $("#profilePic").each(function(){ 
-                    if(("/" + rep+ "/img" + ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)).slice(($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)).lastIndexOf("/"), ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)).lastIndexOf(".")))
+                    if(("/" + rep+ "/img" + ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img").attr("src")== "/resources/assets/loading.gif"?$("#profilePic").find(".carr img").attr("s_rc"):$("#profilePic").find(".carr img").attr("src")): un_tn($("#profilePic > img").attr("src")=="/resources/assets/loading.gif"?$("#profilePic > img").attr("s_rc"):$("#profilePic > img").attr("src"))).slice(($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img").attr("src")== "/resources/assets/loading.gif"?$("#profilePic").find(".carr img").attr("s_rc"):$("#profilePic").find(".carr img").attr("src")): un_tn($("#profilePic > img").attr("src")=="/resources/assets/loading.gif"?$("#profilePic > img").attr("s_rc"):$("#profilePic > img").attr("src"))).lastIndexOf("/"), ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img").attr("src")== "/resources/assets/loading.gif"?$("#profilePic").find(".carr img").attr("s_rc"):$("#profilePic").find(".carr img").attr("src")): un_tn($("#profilePic > img").attr("src")=="/resources/assets/loading.gif"?$("#profilePic > img").attr("s_rc"):$("#profilePic > img").attr("src"))).lastIndexOf(".")))
  == `/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`){
                         a= $(this);
                         (function(){ 
@@ -3563,7 +3563,7 @@ K100= function(builds){
             } 
         })(); 
     	$(".foto").each(function(){ 
-	        src= $(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src); 
+	        src= $(this).is(".mult_img")? un_tn($(this).find(".carr img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr img").attr("s_rc"):$(this).find(".carr img").attr("src")): un_tn($(this).find(".pic").attr("src")=="/resources/assets/loading.gif"?$(this).find(".pic").attr("s_rc"):$(this).find(".pic").attr("src")); 
 	        w1=  "/" + user.username + "/img" + src.slice(src.lastIndexOf("/"), src.lastIndexOf(".")); 
 	        cold= JSON.parse(localStorage.getItem(w1)); 
 	        t= $(this); 
@@ -3592,11 +3592,11 @@ K100= function(builds){
 	        })(); 
 	    }); 
 	    $(".story").each(function(){ 
-	        w1=  $(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + $(this).find(".carr").find("img")[0].src.slice($(this).find(".carr").find("img")[0].src.lastIndexOf("/"), $(this).find(".carr").find("img")[0].src.lastIndexOf(".")): $(this).find(".options a").attr("href");                                                   
+	        w1=  $(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + ($(this).find(".carr").find("img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img").attr("s_rc"):$(this).find(".carr").find("img").attr("src")).slice(($(this).find(".carr").find("img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img").attr("s_rc"):$(this).find(".carr").find("img").attr("src")).lastIndexOf("/"), ($(this).find(".carr").find("img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img").attr("s_rc"):$(this).find(".carr").find("img").attr("src")).lastIndexOf(".")): $(this).find(".options a").attr("href");                                                   
 	        cold= JSON.parse(localStorage.getItem(w1)); 
 	        t= $(this); 
 	        if(t.is(".repost")){
-	        	var userRe= t.find(".info .repost").not(".username").last().attr("src");
+	        	var userRe= t.find(".info .repost").not(".username").last().attr("src")== "/resources/assets/loading.gif"?t.find(".info .repost").not(".username").last().attr("s_rc"):t.find(".info .repost").not(".username").last().attr("src");
 	        	userRe= userRe.slice(userRe.indexOf("images/") + 7, userRe.lastIndexOf("/"));
 	    	}else if(RooT.maTch.root.exec(actualLocation) !== null){
 	    		var op= w1.slice(0, w1.lastIndexOf("/"))
@@ -3621,7 +3621,7 @@ K100= function(builds){
 	        })(); 
 	    }); 
 	    $(".photo").each(function(){ 
-	        src= $(this).is(".mult_img")? un_tn($(this).find(".carr img")[0].src): un_tn($(this).find(".pic")[0].src); 
+	        src= $(this).is(".mult_img")? un_tn($(this).find(".carr img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr img").attr("s_rc"):$(this).find(".carr img").attr("src")): un_tn($(this).find(".pic").attr("src")=="/resources/assets/loading.gif"?$(this).find(".pic").attr("s_rc"):$(this).find(".pic").attr("src")); 
 	        w1=  "/" + user.username + "/img" + src.slice(src.lastIndexOf("/"), src.lastIndexOf(".")); 
 	        cold= JSON.parse(localStorage.getItem(w1)); 
 	        t= $(this); 
@@ -3636,7 +3636,7 @@ K100= function(builds){
 	        })(); 
 	    }); 
 	    $("#profilePic").each(function(){ 
-	        src= ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img")[0].src): un_tn($("#profilePic > img")[0].src)); 
+	        src= ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img").attr("src")=="/resources/assets/loading.gif"?$("#profilePic").find(".carr img").attr("s_rc"):$("#profilePic").find(".carr img").attr("src")): un_tn($("#profilePic > img").attr("src")=="/resources/assets/loading.gif"?$("#profilePic > img").attr("s_rc"):$("#profilePic > img").attr("src"))); 
 	        w1= "/" + user.username + "/img" + src.slice(src.lastIndexOf("/"), src.lastIndexOf(".")); 
 	        cold= JSON.parse(localStorage.getItem(w1)); 
 	        t= $(this); 
@@ -4055,6 +4055,117 @@ document.addEventListener("mousemove", function(event){
 })
 /*Bind first pageDOMContentLoaded*/
 RooT.ready= function(e){
+	/*Leela is liril's vAssistant, she searches even on the subtitles of the videos*/
+possibleResults=[[["Megan Denise Fox", "MeganFox"], {users_name: "Megan Denise Fox", username: "MeganFox", profilePic: "/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg", rol: ["G", "+100"], type: "Usuario"}], [["Laura Escobar Bonnett", "L"], {users_name: "Laura Escobar Bonnett", username: "L", profilePic: "/resources/images/L/OGnpwD3jys_tn.jpg", rol: ["Princesa", "+100"], type: "Usuario"}], [["Shailene Diann Woodley", "whale_Shailene"], {users_name: "Shailene Diann Woodley", username: "whale_Shailene", profilePic: "/resources/images/whale_Shailene/RKRWeNhDgJ_tn.jpg", rol: ["SEO", "+98"], type: "Usuario"}], [["Luis Eduardo Gallego García", "A.K.A._Dizzy"], {users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], type: "Usuario"}], [["Dios Jesucristo", "G-Suschrist"], {users_name: "Dios Jesucristo", username: "G-Suschrist", profilePic: "/resources/images/G-Suschrist/Rvu7YjVcXr_tn.jpg", rol: ["G", "+100"], type: "Usuario"}], [["Aura María Cardona Demasiado", "AuraCardonaC"], {users_name: "Aura María Cardona Demasiado", username: "AuraCardonaC", profilePic: "/resources/images/AuraCardonaC/44Cpl8Gig5_tn.jpg", rol: ["Profe de fitness", "+94"], type: "Usuario"}], [["Juan José Martínez Vidal", "LamaMadora"], {users_name: "Juan José Martínez Vidal", username: "LamaMadora", profilePic: "/resources/images/LamaMadora/sdlQg1CoQ3_tn.jpg", rol: ["Dubber", "+88"], type: "Usuario"}], , [["Walter White", "user"], {users_name: "Walter White", username: "user", profilePic: "/resources/images/white.jpg", rol: ["Moderador", "+60"], type: "Usuario"}], [["A0"], {name: "A0", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/A0", type: "Blog"}], [["Algo Más Sobre Mí"], {name: "Algo Más Sobre Mí", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Algo Más Sobre Mí", type: "Blog"}], [["Algunas Propiedades De Mis Escritos"], {name: "Algunas Propiedades De Mis Escritos", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Algunas Propiedades De Mis Escritos", type: "Blog"}], [["Algunos Poemas Que He Escrito"], {name: "Algunos Poemas Que He Escrito", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Algunos Poemas Que He Escrito", type: "Blog"}], [["aNGEL();"], {name: "aNGEL();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/aNGEL();", type: "Blog"}], [["Constructor And Business Partners (Dedicatorias)"], {name: "Constructor And Business Partners (Dedicatorias)", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Constructor And Business Partners (Dedicatorias)", type: "Blog"}], [["Constructor And Business Partners"], {name: "Constructor And Business Partners", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Constructor And Business Partners", type: "Blog"}], [["Dinosaurios"], {name: "Dinosaurios", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Dinosaurios", type: "Blog"}], [["El Pueblo Blanco"], {name: "El Pueblo Blanco", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/El Pueblo Blanco", type: "Blog"}], [["El Salomé Castrillón"], {name: "El Salomé Castrillón", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/El Salomé Castrillón", type: "Blog"}], [["Equilibrio"], {name: "Equilibrio", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Equilibrio", type: "Blog"}], [["FRANCIA Y ElDelprincipio"], {name: "FRANCIA Y ElDelprincipio", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/FRANCIA Y ElDelprincipio", type: "Blog"}], [["La Larga Historia"], {name: "La Larga Historia", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/La Larga Historia", type: "Blog"}], [["La Perrita Del Poste"], {name: "La Perrita Del Poste", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/La Perrita Del Poste", type: "Blog"}], [["La Sagrada Biblia"], {name: "La Sagrada Biblia", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/La Sagrada Biblia", type: "Blog"}], [["Las Flores Malditas (Introducción)"], {name: "Las Flores Malditas (Introducción)", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Las Flores Malditas (Introducción)", type: "Blog"}], [["por_siLaBas();"], {name: "por_siLaBas();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/por_siLaBas();", type: "Blog"}], [["Regalos Para Mí"], {name: "Regalos Para Mí", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Regalos Para Mí", type: "Blog"}], [["Sus Rizos Color Caramelo"], {name: "Sus Rizos Color Caramelo", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Sus Rizos Color Caramelo", type: "Blog"}], [["Una Breve Historia De La Creación"], {name: "Una Breve Historia De La Creación", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Una Breve Historia De La Creación", type: "Blog"}], [["xWo3"], {name: "xWo3", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/xWo3", type: "Blog"}], [["dinosaurios"], {name: "dinosaurios", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/82DcC9s2sS0cZ", type: "Proyecto"}], [["por_siLaBas();"], {name: "por_siLaBas();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/f9d2cCa2Cxc31", type: "Proyecto"}], [["Christmas Gifts From The Gallego Escobar Family"], {name: "Christmas Gifts From The Gallego Escobar Family", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/h3dd2cDcsW2R3", type: "Proyecto"}], [["aNGEL();"], {name: "aNGEL();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/k92dJd29D920d", type: "Proyecto"}], [["Robot De Dedicatorias"], {name: "Robot De Dedicatorias", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/k9u8hH78jJi27", type: "Proyecto"}], [["Robot de dedicatorias"], {name: "Robot de dedicatorias", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/s98f39c0d9090", type: "Proyecto"}], [["Widgets"], {name: "Widgets", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/i9d2g2cftdCds", type: "Proyecto"}], [["ElDelprincipio"], {name: "ElDelprincipio", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/tY829dD0290df", type: "Proyecto"}], [["myProjext1"], {name: "myProjext1", users_name: "Megan Denise Fox", username: "MeganFox", profilePic: "/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg", rol: ["G", "+100"], href: "/MeganFox/p/iD8299D88d3D2", type: "Proyecto"}], [["minesweeper"], {name: "minesweeper", users_name: "Laura Escobar Bonnett", username: "L", profilePic: "/resources/images/L/OGnpwD3jys_tn.jpg", rol: ["Princesa", "+100"], href: "/L/p/2kNoind8JsjD9", type: "Proyecto"}], [["lX"], {name: "lX", users_name: "Aura María Cardona Demasiado", username: "AuraCardonaC", profilePic: "/resources/images/AuraCardonaC/44Cpl8Gig5_tn.jpg", rol: ["Profe de fitness", "+94"], href: "/AuraCardonaC/p/di29D8jj8dj2d", type: "Proyecto"}], [["--The Whole Board--", "The Whole Board"], {name: "--The Whole Board--", users_name: "Shailene Diann Woodley", username: "whale_Shailene", profilePic: "/resources/images/whale_Shailene/RKRWeNhDgJ_tn.jpg", rol: ["SEO", "+98"], href: "/whale_Shailene/p/K28fcCjs9J20v", type: "Proyecto"}], [["snka"], {name: "snka", users_name: "Dios Jesucristo", username: "G-Suschrist", profilePic: "/resources/images/G-Suschrist/Rvu7YjVcXr_tn.jpg", rol: ["G", "+100"], href: "/G-Suschrist/p/Jkik39djfX8iX", type: "Proyecto"}], [["Vv11"], {name: "Vv11", users_name: "Juan José Martínez Vidal", username: "LamaMadora", profilePic: "/resources/images/LamaMadora/sdlQg1CoQ3_tn.jpg", rol: ["Dubber", "+88"], href: "/LamaMadora/p/u889Dj8Q22dSC", type: "Proyecto"}], [["_dvlpmt"], {name: "_dvlpmt", users_name: "Walter White", username: "user", profilePic: "/resources/images/white.jpg", rol: ["Moderador", "+60"], href: "/user/p/8d299s2gvkL9", type: "Proyecto"}], [["La Perrita Del Poste", "PpP"], {users_name: "La Perrita Del Poste", username: "PpP", profilePic: "/resources/images/PpP/bZj2vYrklo_tn.jpg", rol: ["G", "+100"], type: "Usuario"}], [["ElDelprincipio", "Eld"], {users_name: "ElDelprincipio", username: "Eld", profilePic: "/resources/images/Eld/oow4doJxKO_tn.jpg", rol: ["G", "+100"], type: "Usuario"}], [["Para Que Rayes", "Photopea", "app"], {app_name: "Para Que Rayes", href: "/app/ParaQueRayes", screenshot_photo: "/resources/screenshots/ParaQueRayes_screenshot.jpg", type: "app"}], [["Matemáticas", "Curso", "Curso de Matemáticas"], {curso_name: "Curso de Matemáticas", href: "/curso-mat", screenshot_photo: "/resources/screenshots/matemáticas_screenshot.png", type: "curso"}], [["Filosofía", "Curso", "Curso de Filosofía"], {curso_name: "Curso de Filosofía", href: "/curso-fil", screenshot_photo: "/resources/screenshots/filosofía_screenshot.png", type: "curso"}]]
+
+_R(".buscar").on("input", function(){  if($(this).val() !== ""){$(".searchResults").removeClass("hidden")}else{ $(".searchResults").addClass("hidden"); return}
+results= []
+for(var e in possibleResults){
+for(var u in possibleResults[e][0]){
+if(possibleResults[e][0][u].toLowerCase().indexOf($(this).val().toLowerCase()) == 0){
+if(results.indexOf(possibleResults[e][1]) == -1)results[results.length]= possibleResults[e][1]
+}
+}
+}
+
+_R(".searchResults > div").html("")
+for(var f in results){
+if(results[f].type == "Usuario"){
+_R(".searchResults > div").append(
+`<section class="result">
+<a href= "/` + results[f].username + `/"></a>
+<div class="profilePic">
+<img src="` + results[f].profilePic + `" alt="">
+<input class="knob button" data-width="106" data-height="106" data-fgColor="#2ecc71" data-bgColor="rgba(0,0,0,0)" data-displayInput=false data-thickness=".06" readonly value="` + results[f].rol[1].slice(1) + `"></div>
+<div class="username">` + results[f].users_name + `<p class="rol">` + results[f].rol[0] + ` <b>` + results[f].rol[1] + `</b></p></div>               
+<span class="resulttype">Usuario</span>
+</section>`
+)
+}
+}
+for(var f in results){
+if(results[f].type == "Blog"){
+_R(".searchResults > div").append(
+`<section class="result">
+<a href= "` + results[f].href + `"></a>
+<div class="profilePic">
+<img src="` + results[f].profilePic + `" alt="">
+<input class="knob button" data-width="106" data-height="106" data-fgColor="#2ecc71" data-bgColor="rgba(0,0,0,0)" data-displayInput=false data-thickness=".06" readonly value="` + results[f].rol[1].slice(1) + `"></div>
+<div class="username">` + results[f].users_name + `<a class= "name">&nbsp; | ` + results[f].name + `</a></div>               
+<span class="resulttype">Blog</span>
+</section>`
+)
+}
+}
+for(var f in results){
+if(results[f].type == "app"){
+_R(".searchResults > div").append(
+`<section class="result">
+<a href= "` + results[f].href + `"></a>
+<div class="screenshot">
+<img src="` + results[f].screenshot_photo + `" alt=""></div>
+<div class="appName">` + `<a class= "name">`  + results[f].app_name +  `</a></div>               
+<span class="resulttype">App</span>
+</section>`
+)
+}
+}
+for(var f in results){
+if(results[f].type == "curso"){
+_R(".searchResults > div").append(
+`<section class="result">
+<a href= "` + results[f].href + `"></a>
+<div class="screenshot">
+<img src="` + results[f].screenshot_photo + `" alt=""></div>
+<div class="cursoName">` + `<a class= "name">`  + results[f].curso_name +  `</a></div>               
+<span class="resulttype">Curso</span>
+</section>`
+)
+}
+}
+for(var f in results){
+if(results[f].type == "Proyecto"){
+_R(".searchResults > div").append(
+`<section class="result">
+<a href= "` + results[f].href + `"></a>
+<div class="profilePic">
+<img src="` + results[f].profilePic + `" alt="">
+<input class="knob button" data-width="106" data-height="106" data-fgColor="#2ecc71" data-bgColor="rgba(0,0,0,0)" data-displayInput=false data-thickness=".06" readonly value="` + results[f].rol[1].slice(1) + `"></div>
+<div class="username">` + results[f].users_name + `<a class= "name">&nbsp; | ` + results[f].name + `</a></div>               
+<span class="resulttype">Proyecto</span>
+</section>`
+)
+}
+}
+		$(".buscar").on("focus", function(){$(".nombre").attr("contenteditable", "false")})
+
+		$(".knob").knob()
+		})
+		$(document).on("keydown", function(r){
+
+		switch(r.keyCode){
+		  	case 40:
+		        if(_R(".result").length && !_R(".result#resaltado").length){
+		            _R(".result", 0).attr("id", "resaltado")
+		            _R(".result", 0).children()[0].focus()
+		            setTimeout(function(){_R(".searchResults > div").scrollTop(0)}, 20)
+		        }else if(_R(".result").length && _R(".result#resaltado").index() != _R(".result").length - 1){
+		            let rsltd= _R(".result#resaltado", 0)
+		            rsltd.next().children()[0].focus()
+		            rsltd.attr("id", "")
+		            rsltd.next().attr("id", "resaltado")
+		        }
+		    break;
+		  	case 38:
+		        if(_R(".result").length && $(".result#resaltado").length && $(".result#resaltado").index() != 0){
+		            let rsltd= _R(".result#resaltado", 0)
+		            rsltd.prev().children()[0].focus()
+		            rsltd.attr("id", "")
+		            rsltd.prev().attr("id", "resaltado")
+		        }
+		    break;
+		}
+		})
 	/*Purge if safety_purge is different than purger.index*/
 	purger.purge()
 	/*Initialize some variables*/
@@ -4106,10 +4217,41 @@ RooT.maTch.imgStatic= new RegExp('^(\/.*?\/)img(\/.*?)$')//A slash anything but 
 RooT.maTch.vidStatic= new RegExp('^(\/.*?\/)vid(\/.*?)$')//A slash anything but a slash a slash and the word vid after, a slash and anything; e.g: /uaocno/vid/onvesb
 
 if(RooT.maTch.user.exec(window.location.pathname) !== null){
+	/*IntersectionObserver for lazy images loading*/
+	closesTParent= function(k){
+		return _R(k, und, 'e').closest(".carr").length?_R(k, und, 'e').closest(".carr").find("img"):_R(k, und, 'e')
+	}
+	document.querySelectorAll('img[s_rc]:not([s_rc=""])').forEach((i) => {
+	    if (i) {
+	        observer = new IntersectionObserver((entries) => {
+	            observerCallback(entries, observer, i)
+	        },
+	        {threshold: 0.05});    
+	        observer.observe(i);
+	    }
+	})
+
+	observerCallback = (entries, observer, header) => {
+	    entries.forEach((entry, i) => {
+			if (entry.intersectionRatio > 0) {
+	             _R(entry.target, und, 'e').addClass("intersecting")
+	         }
+	         else {
+	             _R(entry.target, und, 'e').removeClass("intersecting")
+	         }
+			 if (entry.intersectionRatio > 0) {
+	             _R(entry.target, und, 'e').attr("src", function(){return $(this).attr("s_rc")})
+	         }
+	         else if( _R(entry.target, und, 'e').attr("src") != "/resources/assets/loading.gif") {
+	             _R(entry.target, und, 'e').attr("s_rc", function(){return $(this).attr("src")})
+	             _R(entry.target, und, 'e').attr("src", "/resources/assets/loading.gif")
+	         }
+	    });
+	};
 	/*Define actual location*/
 	actualLocation= window.location.pathname
 	/*Define username*/
-	username= window.location.pathname.slice(1)
+	username= window.location.pathname[window.location.pathname.length - 1]=='/'?window.location.pathname.slice(1, -1):window.location.pathname.slice(1)
 	/*Size, populate, and event sidebar*/
 	_R("#resizeTop", 0).css({"height": "calc(50% - 7px)"})
 	_R("#resizeTop", 0).e()
@@ -4376,27 +4518,32 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
 	}) 
 	_R(".carr").e()
 
-    _R(".nav_arrow.left .arrow").not("#picContainer .arrow").on("click", function(){
+    $(".carr").on("scroll", function(){ 
+	    rf= $(this)
+	    Math.round($(this)[0].scrollLeft / $(this).width()) == $(this).children().length - 1? (function(){rf.parent().find(".nav_arrow.right").addClass("disabled"); $("#theater").find(".nav_arrow.right").addClass("disabled")})(): (function(){rf.parent().find(".nav_arrow.right").removeClass("disabled"); $("#theater").find(".nav_arrow.right").removeClass("disabled")})(); 
+	    $(this)[0].scrollLeft == 0? (function(){rf.parent().find(".nav_arrow.left").addClass("disabled"); $("#theater").find(".nav_arrow.left").addClass("disabled");})(): (function(){rf.parent().find(".nav_arrow.left").removeClass("disabled"); $("#theater").find(".nav_arrow.left").removeClass("disabled")})(); 
+	}) 
+	    _R(".nav_arrow.left .arrow").not("#picContainer .arrow").on("click", function(){
         th= $("#theater").css("display") == "none"? $(".current"): th; 
         if($("#theater .nav_arrow.left").is(".disabled"))
             {return}; 
         if(th.find(".nav_arrow.left").is(".disabled") && $("#theater").css("display") == "none")
             {return}
         if($("#theater").css("display") == "none" && !!th.find(".carr").length){ 
-            lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
+ 	        lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? $(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")=="/resources/assets/loading.gif"?$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("s_rc"):$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src"): (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
             if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
             !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width()}, 400, function(){
-            	lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
+            	lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? ($(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")== "/resources/assets/loading.gif"?$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("s_rc"):$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")): (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
             	if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); 
             	th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + (!th.is(".external")?(lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))): lk)); }): 672; 
         }else if(!!th.find(".carr").length){ 
             $(".theater video").attr("src", "")
             th.find(".carr")[0].scrollLeft= th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width(); 
-            lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
+ 	        lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? $(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")=="/resources/assets/loading.gif"?$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("s_rc"):$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src"): (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
             if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();            
             th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + (!th.is(".external")?(lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))): lk));
             source= un_tn($("#theater").find("#bigPic")[0].src)
-            th.is(".mult_carr")? $( (function(){return $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find(".Enlarge")})() ).trigger( "click" ): $("#theater").find("#bigPic")[0].src= (th.is(".story")? $(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src: un_tn($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src)); 
+            th.is(".mult_carr")? $( (function(){return $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find(".Enlarge")})() ).trigger( "click" ): $("#theater").find("#bigPic")[0].src= (th.is(".story")? ($($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")=="/resources/assets/loading.gif" ?$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("s_rc"):$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")): un_tn(($($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")=="/resources/assets/loading.gif"?$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("s_rc"):$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")))); 
             history.pushState({page: 1}, "", $(th).find(".options a").attr("href")); 
         }
     }); 
@@ -4411,17 +4558,17 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
             lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
             if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
             !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width()}, 400, function(){
-            	lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
+ 	           	lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? $(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")=="/resources/assets/loading.gif"?$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("s_rc"):$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src"): (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
             	if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); 
             	th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + (!th.is(".external")?(lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))): lk)); }): 672; 
         }else if(!!th.find(".carr").length){ 
             $(".theater video").attr("src", "")
             th.find(".carr")[0].scrollLeft= th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width(); 
-            lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
+ 	        lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? $(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")=="/resources/assets/loading.gif"?$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("s_rc"):$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src"): (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
             if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();            
             th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + (!th.is(".external")?(lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))): lk));
             source= un_tn($("#theater").find("#bigPic")[0].src)
-            th.is(".mult_carr")? $( (function(){return $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find(".Enlarge")})() ).trigger( "click" ): $("#theater").find("#bigPic")[0].src= (th.is(".story")? $(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src: un_tn($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src)); 
+            th.is(".mult_carr")? $( (function(){return $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find(".Enlarge")})() ).trigger( "click" ): $("#theater").find("#bigPic")[0].src= (th.is(".story")? ($($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")=="/resources/assets/loading.gif" ?$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("s_rc"):$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")): un_tn(($($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")=="/resources/assets/loading.gif"?$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("s_rc"):$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")))); 
             history.pushState({page: 1}, "", $(th).find(".options a").attr("href")); 
         }
     }); 
@@ -4460,106 +4607,6 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
         $(i.target).addClass("playing")
     })
     _R(".Playuse").e()
-/*Leela is liril's vAssistant, she searches even on the subtitles of the videos*/
-possibleResults=[[["Megan Denise Fox", "MeganFox"], {users_name: "Megan Denise Fox", username: "MeganFox", profilePic: "/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg", rol: ["G", "+100"], type: "Usuario"}], [["Laura Escobar Bonnett", "L"], {users_name: "Laura Escobar Bonnett", username: "L", profilePic: "/resources/images/L/OGnpwD3jys_tn.jpg", rol: ["Princesa", "+100"], type: "Usuario"}], [["Shailene Diann Woodley", "whale_Shailene"], {users_name: "Shailene Diann Woodley", username: "whale_Shailene", profilePic: "/resources/images/whale_Shailene/RKRWeNhDgJ_tn.jpg", rol: ["SEO", "+98"], type: "Usuario"}], [["Luis Eduardo Gallego García", "A.K.A._Dizzy"], {users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], type: "Usuario"}], [["Dios Jesucristo", "G-Suschrist"], {users_name: "Dios Jesucristo", username: "G-Suschrist", profilePic: "/resources/images/G-Suschrist/Rvu7YjVcXr_tn.jpg", rol: ["G", "+100"], type: "Usuario"}], [["Aura María Cardona Demasiado", "AuraCardonaC"], {users_name: "Aura María Cardona Demasiado", username: "AuraCardonaC", profilePic: "/resources/images/AuraCardonaC/44Cpl8Gig5_tn.jpg", rol: ["Profe de fitness", "+94"], type: "Usuario"}], [["Juan José Martínez Vidal", "LamaMadora"], {users_name: "Juan José Martínez Vidal", username: "LamaMadora", profilePic: "/resources/images/LamaMadora/sdlQg1CoQ3_tn.jpg", rol: ["Dubber", "+88"], type: "Usuario"}], , [["Walter White", "user"], {users_name: "Walter White", username: "user", profilePic: "/resources/images/white.jpg", rol: ["Moderador", "+60"], type: "Usuario"}], [["A0"], {name: "A0", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/A0", type: "Blog"}], [["Algo Más Sobre Mí"], {name: "Algo Más Sobre Mí", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Algo Más Sobre Mí", type: "Blog"}], [["Algunas Propiedades De Mis Escritos"], {name: "Algunas Propiedades De Mis Escritos", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Algunas Propiedades De Mis Escritos", type: "Blog"}], [["Algunos Poemas Que He Escrito"], {name: "Algunos Poemas Que He Escrito", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Algunos Poemas Que He Escrito", type: "Blog"}], [["aNGEL();"], {name: "aNGEL();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/aNGEL();", type: "Blog"}], [["Constructor And Business Partners (Dedicatorias)"], {name: "Constructor And Business Partners (Dedicatorias)", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Constructor And Business Partners (Dedicatorias)", type: "Blog"}], [["Constructor And Business Partners"], {name: "Constructor And Business Partners", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Constructor And Business Partners", type: "Blog"}], [["Dinosaurios"], {name: "Dinosaurios", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Dinosaurios", type: "Blog"}], [["El Pueblo Blanco"], {name: "El Pueblo Blanco", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/El Pueblo Blanco", type: "Blog"}], [["El Salomé Castrillón"], {name: "El Salomé Castrillón", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/El Salomé Castrillón", type: "Blog"}], [["Equilibrio"], {name: "Equilibrio", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Equilibrio", type: "Blog"}], [["FRANCIA Y ElDelprincipio"], {name: "FRANCIA Y ElDelprincipio", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/FRANCIA Y ElDelprincipio", type: "Blog"}], [["La Larga Historia"], {name: "La Larga Historia", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/La Larga Historia", type: "Blog"}], [["La Perrita Del Poste"], {name: "La Perrita Del Poste", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/La Perrita Del Poste", type: "Blog"}], [["La Sagrada Biblia"], {name: "La Sagrada Biblia", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/La Sagrada Biblia", type: "Blog"}], [["Las Flores Malditas (Introducción)"], {name: "Las Flores Malditas (Introducción)", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Las Flores Malditas (Introducción)", type: "Blog"}], [["por_siLaBas();"], {name: "por_siLaBas();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/por_siLaBas();", type: "Blog"}], [["Regalos Para Mí"], {name: "Regalos Para Mí", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Regalos Para Mí", type: "Blog"}], [["Sus Rizos Color Caramelo"], {name: "Sus Rizos Color Caramelo", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Sus Rizos Color Caramelo", type: "Blog"}], [["Una Breve Historia De La Creación"], {name: "Una Breve Historia De La Creación", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Una Breve Historia De La Creación", type: "Blog"}], [["xWo3"], {name: "xWo3", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/xWo3", type: "Blog"}], [["dinosaurios"], {name: "dinosaurios", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/82DcC9s2sS0cZ", type: "Proyecto"}], [["por_siLaBas();"], {name: "por_siLaBas();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/f9d2cCa2Cxc31", type: "Proyecto"}], [["Christmas Gifts From The Gallego Escobar Family"], {name: "Christmas Gifts From The Gallego Escobar Family", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/h3dd2cDcsW2R3", type: "Proyecto"}], [["aNGEL();"], {name: "aNGEL();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/k92dJd29D920d", type: "Proyecto"}], [["Robot De Dedicatorias"], {name: "Robot De Dedicatorias", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/k9u8hH78jJi27", type: "Proyecto"}], [["Robot de dedicatorias"], {name: "Robot de dedicatorias", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/s98f39c0d9090", type: "Proyecto"}], [["Widgets"], {name: "Widgets", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/i9d2g2cftdCds", type: "Proyecto"}], [["ElDelprincipio"], {name: "ElDelprincipio", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/tY829dD0290df", type: "Proyecto"}], [["myProjext1"], {name: "myProjext1", users_name: "Megan Denise Fox", username: "MeganFox", profilePic: "/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg", rol: ["G", "+100"], href: "/MeganFox/p/iD8299D88d3D2", type: "Proyecto"}], [["minesweeper"], {name: "minesweeper", users_name: "Laura Escobar Bonnett", username: "L", profilePic: "/resources/images/L/OGnpwD3jys_tn.jpg", rol: ["Princesa", "+100"], href: "/L/p/2kNoind8JsjD9", type: "Proyecto"}], [["lX"], {name: "lX", users_name: "Aura María Cardona Demasiado", username: "AuraCardonaC", profilePic: "/resources/images/AuraCardonaC/44Cpl8Gig5_tn.jpg", rol: ["Profe de fitness", "+94"], href: "/AuraCardonaC/p/di29D8jj8dj2d", type: "Proyecto"}], [["--The Whole Board--", "The Whole Board"], {name: "--The Whole Board--", users_name: "Shailene Diann Woodley", username: "whale_Shailene", profilePic: "/resources/images/whale_Shailene/RKRWeNhDgJ_tn.jpg", rol: ["SEO", "+98"], href: "/whale_Shailene/p/K28fcCjs9J20v", type: "Proyecto"}], [["snka"], {name: "snka", users_name: "Dios Jesucristo", username: "G-Suschrist", profilePic: "/resources/images/G-Suschrist/Rvu7YjVcXr_tn.jpg", rol: ["G", "+100"], href: "/G-Suschrist/p/Jkik39djfX8iX", type: "Proyecto"}], [["Vv11"], {name: "Vv11", users_name: "Juan José Martínez Vidal", username: "LamaMadora", profilePic: "/resources/images/LamaMadora/sdlQg1CoQ3_tn.jpg", rol: ["Dubber", "+88"], href: "/LamaMadora/p/u889Dj8Q22dSC", type: "Proyecto"}], [["_dvlpmt"], {name: "_dvlpmt", users_name: "Walter White", username: "user", profilePic: "/resources/images/white.jpg", rol: ["Moderador", "+60"], href: "/user/p/8d299s2gvkL9", type: "Proyecto"}], [["La Perrita Del Poste", "PpP"], {users_name: "La Perrita Del Poste", username: "PpP", profilePic: "/resources/images/PpP/bZj2vYrklo_tn.jpg", rol: ["G", "+100"], type: "Usuario"}], [["ElDelprincipio", "Eld"], {users_name: "ElDelprincipio", username: "Eld", profilePic: "/resources/images/Eld/oow4doJxKO_tn.jpg", rol: ["G", "+100"], type: "Usuario"}], [["Para Que Rayes", "Photopea", "app"], {app_name: "Para Que Rayes", href: "/app/ParaQueRayes", screenshot_photo: "/resources/screenshots/ParaQueRayes_screenshot.jpg", type: "app"}], [["Matemáticas", "Curso", "Curso de Matemáticas"], {curso_name: "Curso de Matemáticas", href: "/curso-mat", screenshot_photo: "/resources/screenshots/matemáticas_screenshot.png", type: "curso"}], [["Filosofía", "Curso", "Curso de Filosofía"], {curso_name: "Curso de Filosofía", href: "/curso-fil", screenshot_photo: "/resources/screenshots/filosofía_screenshot.png", type: "curso"}]]
-
-_R(".buscar").on("input", function(){  if($(this).val() !== ""){$(".searchResults").removeClass("hidden")}else{ $(".searchResults").addClass("hidden"); return}
-results= []
-for(var e in possibleResults){
-for(var u in possibleResults[e][0]){
-if(possibleResults[e][0][u].toLowerCase().indexOf($(this).val().toLowerCase()) == 0){
-if(results.indexOf(possibleResults[e][1]) == -1)results[results.length]= possibleResults[e][1]
-}
-}
-}
-
-_R(".searchResults > div").html("")
-for(var f in results){
-if(results[f].type == "Usuario"){
-_R(".searchResults > div").append(
-`<section class="result">
-<a href= "/` + results[f].username + `"></a>
-<div class="profilePic">
-<img src="` + results[f].profilePic + `" alt="">
-<input class="knob button" data-width="106" data-height="106" data-fgColor="#2ecc71" data-bgColor="rgba(0,0,0,0)" data-displayInput=false data-thickness=".06" readonly value="` + results[f].rol[1].slice(1) + `"></div>
-<div class="username">` + results[f].users_name + `<p class="rol">` + results[f].rol[0] + ` <b>` + results[f].rol[1] + `</b></p></div>               
-<span class="resulttype">Usuario</span>
-</section>`
-)
-}
-}
-for(var f in results){
-if(results[f].type == "Blog"){
-_R(".searchResults > div").append(
-`<section class="result">
-<a href= "` + results[f].href + `"></a>
-<div class="profilePic">
-<img src="` + results[f].profilePic + `" alt="">
-<input class="knob button" data-width="106" data-height="106" data-fgColor="#2ecc71" data-bgColor="rgba(0,0,0,0)" data-displayInput=false data-thickness=".06" readonly value="` + results[f].rol[1].slice(1) + `"></div>
-<div class="username">` + results[f].users_name + `<a class= "name">&nbsp; | ` + results[f].name + `</a></div>               
-<span class="resulttype">Blog</span>
-</section>`
-)
-}
-}
-for(var f in results){
-if(results[f].type == "app"){
-_R(".searchResults > div").append(
-`<section class="result">
-<a href= "` + results[f].href + `"></a>
-<div class="screenshot">
-<img src="` + results[f].screenshot_photo + `" alt=""></div>
-<div class="appName">` + `<a class= "name">`  + results[f].app_name +  `</a></div>               
-<span class="resulttype">App</span>
-</section>`
-)
-}
-}
-for(var f in results){
-if(results[f].type == "curso"){
-_R(".searchResults > div").append(
-`<section class="result">
-<a href= "` + results[f].href + `"></a>
-<div class="screenshot">
-<img src="` + results[f].screenshot_photo + `" alt=""></div>
-<div class="cursoName">` + `<a class= "name">`  + results[f].curso_name +  `</a></div>               
-<span class="resulttype">Curso</span>
-</section>`
-)
-}
-}
-for(var f in results){
-if(results[f].type == "Proyecto"){
-_R(".searchResults > div").append(
-`<section class="result">
-<a href= "` + results[f].href + `"></a>
-<div class="profilePic">
-<img src="` + results[f].profilePic + `" alt="">
-<input class="knob button" data-width="106" data-height="106" data-fgColor="#2ecc71" data-bgColor="rgba(0,0,0,0)" data-displayInput=false data-thickness=".06" readonly value="` + results[f].rol[1].slice(1) + `"></div>
-<div class="username">` + results[f].users_name + `<a class= "name">&nbsp; | ` + results[f].name + `</a></div>               
-<span class="resulttype">Proyecto</span>
-</section>`
-)
-}
-}
-_R(".knob").knob()
-_R(".knob").e()
-$(".searchResults a").click(function(ed){if($(this).attr("target") !== "_blank" && $(this).attr("href") != undefined){if($(this).parent().find(".resulttype").text() == "Usuario"){
-		ed.preventDefault()
-		history.pushState({page: 1}, "", $(this).attr("href"))
-	  RooT.imporT(`/js/${$(this).attr("href").slice(1)}/DB.js`, Then, function(d){
-	  	$(".buscar").val("")
-		$(".buscar").trigger("input")
-	    window.user= d._user()
-	    RooT.imporT("/js/templates/user.js", Then, function(d){
-	      _T(document).scrollTop(0)
-	  	  RooT.change(useR, To, user, d)
-	      RooT.ready()
-	    })
-	})
-}}})
-})
-_R(".buscar").e()
 /*Prevent default on hashed links in #sections' click*/
 _R("#sections a[href= '#']").on("click", function(e){e.preventDefault()})
 /*Tooltip upsigned users in Situación Sentimental and ties*/
@@ -4996,6 +5043,37 @@ oReq.addEventListener("load", K0);
 oReq.open("get", "https://cdn.filestackcontent.com/T1JT7NWRhigB2KGvZN7g");
 oReq.send(); 
 }else if(RooT.maTch.photos.exec(window.location.pathname) !== null){
+	/*IntersectionObserver for lazy images loading*/
+	closesTParent= function(k){
+		return _R(k, und, 'e').closest(".carr").length?_R(k, und, 'e').closest(".carr").find("img"):_R(k, und, 'e')
+	}
+	document.querySelectorAll('img[s_rc]:not([s_rc=""])').forEach((i) => {
+	    if (i) {
+	        observer = new IntersectionObserver((entries) => {
+	            observerCallback(entries, observer, i)
+	        },
+	        {threshold: 0.05});    
+	        observer.observe(i);
+	    }
+	})
+
+	observerCallback = (entries, observer, header) => {
+	    entries.forEach((entry, i) => {
+			if (entry.intersectionRatio > 0) {
+	             _R(entry.target, und, 'e').addClass("intersecting")
+	         }
+	         else {
+	             _R(entry.target, und, 'e').removeClass("intersecting")
+	         }
+			 if (entry.intersectionRatio > 0) {
+	             _R(entry.target, und, 'e').attr("src", function(){return $(this).attr("s_rc")})
+	         }
+	         else if( _R(entry.target, und, 'e').attr("src") != "/resources/assets/loading.gif") {
+	             _R(entry.target, und, 'e').attr("s_rc", function(){return $(this).attr("src")})
+	             _R(entry.target, und, 'e').attr("src", "/resources/assets/loading.gif")
+	         }
+	    });
+	};
 	/*Define actual location*/
 	actualLocation= window.location.pathname
 	//
@@ -5134,6 +5212,37 @@ oReq.send();
     oReq.open("get", "https://cdn.filestackcontent.com/T1JT7NWRhigB2KGvZN7g");
     oReq.send(); 
 }else if(RooT.maTch.videos.exec(window.location.pathname) !== null){
+	/*IntersectionObserver for lazy images loading*/
+	closesTParent= function(k){
+		return _R(k, und, 'e').closest(".carr").length?_R(k, und, 'e').closest(".carr").find("img"):_R(k, und, 'e')
+	}
+	document.querySelectorAll('img[s_rc]:not([s_rc=""])').forEach((i) => {
+	    if (i) {
+	        observer = new IntersectionObserver((entries) => {
+	            observerCallback(entries, observer, i)
+	        },
+	        {threshold: 0.05});    
+	        observer.observe(i);
+	    }
+	})
+
+	observerCallback = (entries, observer, header) => {
+	    entries.forEach((entry, i) => {
+			if (entry.intersectionRatio > 0) {
+	             _R(entry.target, und, 'e').addClass("intersecting")
+	         }
+	         else {
+	             _R(entry.target, und, 'e').removeClass("intersecting")
+	         }
+			 if (entry.intersectionRatio > 0) {
+	             _R(entry.target, und, 'e').attr("src", function(){return $(this).attr("s_rc")})
+	         }
+	         else if( _R(entry.target, und, 'e').attr("src") != "/resources/assets/loading.gif") {
+	             _R(entry.target, und, 'e').attr("s_rc", function(){return $(this).attr("src")})
+	             _R(entry.target, und, 'e').attr("src", "/resources/assets/loading.gif")
+	         }
+	    });
+	};
 	/*Define actual location*/
 	actualLocation= window.location.pathname
 	/*Size, populate, and event sidebar*/
@@ -5270,6 +5379,37 @@ oReq.send();
 		})
 	})	
 }else if(RooT.maTch.root.exec(window.location.pathname) !== null){
+	/*IntersectionObserver for lazy images loading*/
+	closesTParent= function(k){
+		return _R(k, und, 'e').closest(".carr").length?_R(k, und, 'e').closest(".carr").find("img"):_R(k, und, 'e')
+	}
+	document.querySelectorAll('img[s_rc]:not([s_rc=""])').forEach((i) => {
+	    if (i) {
+	        observer = new IntersectionObserver((entries) => {
+	            observerCallback(entries, observer, i)
+	        },
+	        {threshold: 0.05});    
+	        observer.observe(i);
+	    }
+	})
+
+	observerCallback = (entries, observer, header) => {
+	    entries.forEach((entry, i) => {
+			if (entry.intersectionRatio > 0) {
+	             _R(entry.target, und, 'e').addClass("intersecting")
+	         }
+	         else {
+	             _R(entry.target, und, 'e').removeClass("intersecting")
+	         }
+			 if (entry.intersectionRatio > 0) {
+	             _R(entry.target, und, 'e').attr("src", function(){return $(this).attr("s_rc")})
+	         }
+	         else if( _R(entry.target, und, 'e').attr("src") != "/resources/assets/loading.gif") {
+	             _R(entry.target, und, 'e').attr("s_rc", function(){return $(this).attr("src")})
+	             _R(entry.target, und, 'e').attr("src", "/resources/assets/loading.gif")
+	         }
+	    });
+	};
 	/*Define actual location*/
 	actualLocation= window.location.pathname
 	/*RooT root link*/
@@ -5452,6 +5592,56 @@ oReq.send();
     }); 
     _R(".bookmark").e()
     /*Activate the arrows on the stories*/
+    _R(".nav_arrow.left .arrow").not("#picContainer .arrow").on("click", function(){
+        th= $("#theater").css("display") == "none"? $(".current"): th; 
+        if($("#theater .nav_arrow.left").is(".disabled"))
+            {return}; 
+        if(th.find(".nav_arrow.left").is(".disabled") && $("#theater").css("display") == "none")
+            {return}
+        if($("#theater").css("display") == "none" && !!th.find(".carr").length){ 
+ 	        lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" ));             
+            if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
+            !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width()}, 400, function(){
+            	lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? ($(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")== "/resources/assets/loading.gif"?$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("s_rc"):$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")): (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
+            	if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); 
+            	th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + (!th.is(".external")?(lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))): lk)); }): 672; 
+        }else if(!!th.find(".carr").length){ 
+            $(".theater video").attr("src", "")
+            th.find(".carr")[0].scrollLeft= th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width(); 
+ 	        lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" ));             
+            if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();            
+            th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + (!th.is(".external")?(lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))): lk));
+            source= un_tn($("#theater").find("#bigPic")[0].src)
+            th.is(".mult_carr")? $( (function(){return $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find(".Enlarge")})() ).trigger( "click" ): $("#theater").find("#bigPic")[0].src= (th.is(".story")? $(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src: un_tn($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src)); 
+            history.pushState({page: 1}, "", $(th).find(".options a").attr("href")); 
+        }
+    }); 
+    _R(".nav_arrow.left .arrow").not("#picContainer .arrow").e()
+    _R(".nav_arrow.right .arrow").not("#picContainer .arrow").on("click", function(){
+        th= $("#theater").css("display") == "none"? $(".current"): th; 
+        if($("#theater .nav_arrow.right").is(".disabled"))
+            {return}; 
+        if(th.find(".nav_arrow.right").is(".disabled") && $("#theater").css("display") == "none")
+            {return}
+        if($("#theater").css("display") == "none" && !!th.find(".carr").length){ 
+            lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
+            if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
+            !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width()}, 400, function(){
+ 	           	lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
+            	if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); 
+            	th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + (!th.is(".external")?(lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))): lk)); }): 672; 
+        }else if(!!th.find(".carr").length){ 
+            $(".theater video").attr("src", "")
+            th.find(".carr")[0].scrollLeft= th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width(); 
+ 	        lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
+            if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();            
+            th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + (!th.is(".external")?(lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))): lk));
+            source= un_tn($("#theater").find("#bigPic")[0].src)
+            th.is(".mult_carr")? $( (function(){return $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find(".Enlarge")})() ).trigger( "click" ): $("#theater").find("#bigPic")[0].src= (th.is(".story")? $(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src: un_tn($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src)); 
+            history.pushState({page: 1}, "", $(th).find(".options a").attr("href")); 
+        }
+    }); 
+    _R(".nav_arrow.right .arrow").not("#picContainer .arrow")
 	/*Size, populate, and event sidebar*/
 	_R("#resizeTop", 0).css({"height": "calc(50% - 7px)"})
 	_R("#resizeTop", 0).e()
@@ -5663,92 +5853,6 @@ audiojs.events.ready(function(){
 })
 
 	/**/ 
-	/*Leela is liril's vAssistant, she searches even on the subtitles of the videos*/
-possibleResults=[[["Megan Denise Fox", "MeganFox"], {users_name: "Megan Denise Fox", username: "MeganFox", profilePic: "/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg", rol: ["G", "+100"], type: "Usuario"}], [["Laura Escobar Bonnett", "L"], {users_name: "Laura Escobar Bonnett", username: "L", profilePic: "/resources/images/L/OGnpwD3jys_tn.jpg", rol: ["Princesa", "+100"], type: "Usuario"}], [["Shailene Diann Woodley", "whale_Shailene"], {users_name: "Shailene Diann Woodley", username: "whale_Shailene", profilePic: "/resources/images/whale_Shailene/RKRWeNhDgJ_tn.jpg", rol: ["SEO", "+98"], type: "Usuario"}], [["Luis Eduardo Gallego García", "A.K.A._Dizzy"], {users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], type: "Usuario"}], [["Dios Jesucristo", "G-Suschrist"], {users_name: "Dios Jesucristo", username: "G-Suschrist", profilePic: "/resources/images/G-Suschrist/Rvu7YjVcXr_tn.jpg", rol: ["G", "+100"], type: "Usuario"}], [["Aura María Cardona Demasiado", "AuraCardonaC"], {users_name: "Aura María Cardona Demasiado", username: "AuraCardonaC", profilePic: "/resources/images/AuraCardonaC/44Cpl8Gig5_tn.jpg", rol: ["Profe de fitness", "+94"], type: "Usuario"}], [["Juan José Martínez Vidal", "LamaMadora"], {users_name: "Juan José Martínez Vidal", username: "LamaMadora", profilePic: "/resources/images/LamaMadora/sdlQg1CoQ3_tn.jpg", rol: ["Dubber", "+88"], type: "Usuario"}], , [["Walter White", "user"], {users_name: "Walter White", username: "user", profilePic: "/resources/images/white.jpg", rol: ["Moderador", "+60"], type: "Usuario"}], [["A0"], {name: "A0", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/A0", type: "Blog"}], [["Algo Más Sobre Mí"], {name: "Algo Más Sobre Mí", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Algo Más Sobre Mí", type: "Blog"}], [["Algunas Propiedades De Mis Escritos"], {name: "Algunas Propiedades De Mis Escritos", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Algunas Propiedades De Mis Escritos", type: "Blog"}], [["Algunos Poemas Que He Escrito"], {name: "Algunos Poemas Que He Escrito", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Algunos Poemas Que He Escrito", type: "Blog"}], [["aNGEL();"], {name: "aNGEL();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/aNGEL();", type: "Blog"}], [["Constructor And Business Partners (Dedicatorias)"], {name: "Constructor And Business Partners (Dedicatorias)", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Constructor And Business Partners (Dedicatorias)", type: "Blog"}], [["Constructor And Business Partners"], {name: "Constructor And Business Partners", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Constructor And Business Partners", type: "Blog"}], [["Dinosaurios"], {name: "Dinosaurios", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Dinosaurios", type: "Blog"}], [["El Pueblo Blanco"], {name: "El Pueblo Blanco", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/El Pueblo Blanco", type: "Blog"}], [["El Salomé Castrillón"], {name: "El Salomé Castrillón", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/El Salomé Castrillón", type: "Blog"}], [["Equilibrio"], {name: "Equilibrio", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Equilibrio", type: "Blog"}], [["FRANCIA Y ElDelprincipio"], {name: "FRANCIA Y ElDelprincipio", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/FRANCIA Y ElDelprincipio", type: "Blog"}], [["La Larga Historia"], {name: "La Larga Historia", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/La Larga Historia", type: "Blog"}], [["La Perrita Del Poste"], {name: "La Perrita Del Poste", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/La Perrita Del Poste", type: "Blog"}], [["La Sagrada Biblia"], {name: "La Sagrada Biblia", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/La Sagrada Biblia", type: "Blog"}], [["Las Flores Malditas (Introducción)"], {name: "Las Flores Malditas (Introducción)", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Las Flores Malditas (Introducción)", type: "Blog"}], [["por_siLaBas();"], {name: "por_siLaBas();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/por_siLaBas();", type: "Blog"}], [["Regalos Para Mí"], {name: "Regalos Para Mí", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Regalos Para Mí", type: "Blog"}], [["Sus Rizos Color Caramelo"], {name: "Sus Rizos Color Caramelo", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Sus Rizos Color Caramelo", type: "Blog"}], [["Una Breve Historia De La Creación"], {name: "Una Breve Historia De La Creación", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Una Breve Historia De La Creación", type: "Blog"}], [["xWo3"], {name: "xWo3", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/xWo3", type: "Blog"}], [["dinosaurios"], {name: "dinosaurios", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/82DcC9s2sS0cZ", type: "Proyecto"}], [["por_siLaBas();"], {name: "por_siLaBas();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/f9d2cCa2Cxc31", type: "Proyecto"}], [["Christmas Gifts From The Gallego Escobar Family"], {name: "Christmas Gifts From The Gallego Escobar Family", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/h3dd2cDcsW2R3", type: "Proyecto"}], [["aNGEL();"], {name: "aNGEL();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/k92dJd29D920d", type: "Proyecto"}], [["Robot De Dedicatorias"], {name: "Robot De Dedicatorias", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/k9u8hH78jJi27", type: "Proyecto"}], [["Robot de dedicatorias"], {name: "Robot de dedicatorias", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/s98f39c0d9090", type: "Proyecto"}], [["Widgets"], {name: "Widgets", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/i9d2g2cftdCds", type: "Proyecto"}], [["ElDelprincipio"], {name: "ElDelprincipio", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/tY829dD0290df", type: "Proyecto"}], [["myProjext1"], {name: "myProjext1", users_name: "Megan Denise Fox", username: "MeganFox", profilePic: "/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg", rol: ["G", "+100"], href: "/MeganFox/p/iD8299D88d3D2", type: "Proyecto"}], [["minesweeper"], {name: "minesweeper", users_name: "Laura Escobar Bonnett", username: "L", profilePic: "/resources/images/L/OGnpwD3jys_tn.jpg", rol: ["Princesa", "+100"], href: "/L/p/2kNoind8JsjD9", type: "Proyecto"}], [["lX"], {name: "lX", users_name: "Aura María Cardona Demasiado", username: "AuraCardonaC", profilePic: "/resources/images/AuraCardonaC/44Cpl8Gig5_tn.jpg", rol: ["Profe de fitness", "+94"], href: "/AuraCardonaC/p/di29D8jj8dj2d", type: "Proyecto"}], [["--The Whole Board--", "The Whole Board"], {name: "--The Whole Board--", users_name: "Shailene Diann Woodley", username: "whale_Shailene", profilePic: "/resources/images/whale_Shailene/RKRWeNhDgJ_tn.jpg", rol: ["SEO", "+98"], href: "/whale_Shailene/p/K28fcCjs9J20v", type: "Proyecto"}], [["snka"], {name: "snka", users_name: "Dios Jesucristo", username: "G-Suschrist", profilePic: "/resources/images/G-Suschrist/Rvu7YjVcXr_tn.jpg", rol: ["G", "+100"], href: "/G-Suschrist/p/Jkik39djfX8iX", type: "Proyecto"}], [["Vv11"], {name: "Vv11", users_name: "Juan José Martínez Vidal", username: "LamaMadora", profilePic: "/resources/images/LamaMadora/sdlQg1CoQ3_tn.jpg", rol: ["Dubber", "+88"], href: "/LamaMadora/p/u889Dj8Q22dSC", type: "Proyecto"}], [["_dvlpmt"], {name: "_dvlpmt", users_name: "Walter White", username: "user", profilePic: "/resources/images/white.jpg", rol: ["Moderador", "+60"], href: "/user/p/8d299s2gvkL9", type: "Proyecto"}], [["La Perrita Del Poste", "PpP"], {users_name: "La Perrita Del Poste", username: "PpP", profilePic: "/resources/images/PpP/bZj2vYrklo_tn.jpg", rol: ["G", "+100"], type: "Usuario"}], [["ElDelprincipio", "Eld"], {users_name: "ElDelprincipio", username: "Eld", profilePic: "/resources/images/Eld/oow4doJxKO_tn.jpg", rol: ["G", "+100"], type: "Usuario"}], [["Para Que Rayes", "Photopea", "app"], {app_name: "Para Que Rayes", href: "/app/ParaQueRayes", screenshot_photo: "/resources/screenshots/ParaQueRayes_screenshot.jpg", type: "app"}], [["Matemáticas", "Curso", "Curso de Matemáticas"], {curso_name: "Curso de Matemáticas", href: "/curso-mat", screenshot_photo: "/resources/screenshots/matemáticas_screenshot.png", type: "curso"}], [["Filosofía", "Curso", "Curso de Filosofía"], {curso_name: "Curso de Filosofía", href: "/curso-fil", screenshot_photo: "/resources/screenshots/filosofía_screenshot.png", type: "curso"}]]
-
-_R(".buscar").on("input", function(){  if($(this).val() !== ""){$(".searchResults").removeClass("hidden")}else{ $(".searchResults").addClass("hidden"); return}
-results= []
-for(var e in possibleResults){
-for(var u in possibleResults[e][0]){
-if(possibleResults[e][0][u].toLowerCase().indexOf($(this).val().toLowerCase()) == 0){
-if(results.indexOf(possibleResults[e][1]) == -1)results[results.length]= possibleResults[e][1]
-}
-}
-}
-
-_R(".searchResults > div").html("")
-for(var f in results){
-if(results[f].type == "Usuario"){
-_R(".searchResults > div").append(
-`<section class="result">
-<a href= "/` + results[f].username + `"></a>
-<div class="profilePic">
-<img src="` + results[f].profilePic + `" alt="">
-<input class="knob button" data-width="106" data-height="106" data-fgColor="#2ecc71" data-bgColor="rgba(0,0,0,0)" data-displayInput=false data-thickness=".06" readonly value="` + results[f].rol[1].slice(1) + `"></div>
-<div class="username">` + results[f].users_name + `<p class="rol">` + results[f].rol[0] + ` <b>` + results[f].rol[1] + `</b></p></div>               
-<span class="resulttype">Usuario</span>
-</section>`
-)
-}
-}
-for(var f in results){
-if(results[f].type == "Blog"){
-_R(".searchResults > div").append(
-`<section class="result">
-<a href= "` + results[f].href + `"></a>
-<div class="profilePic">
-<img src="` + results[f].profilePic + `" alt="">
-<input class="knob button" data-width="106" data-height="106" data-fgColor="#2ecc71" data-bgColor="rgba(0,0,0,0)" data-displayInput=false data-thickness=".06" readonly value="` + results[f].rol[1].slice(1) + `"></div>
-<div class="username">` + results[f].users_name + `<a class= "name">&nbsp; | ` + results[f].name + `</a></div>               
-<span class="resulttype">Blog</span>
-</section>`
-)
-}
-}
-for(var f in results){
-if(results[f].type == "app"){
-_R(".searchResults > div").append(
-`<section class="result">
-<a href= "` + results[f].href + `"></a>
-<div class="screenshot">
-<img src="` + results[f].screenshot_photo + `" alt=""></div>
-<div class="appName">` + `<a class= "name">`  + results[f].app_name +  `</a></div>               
-<span class="resulttype">App</span>
-</section>`
-)
-}
-}
-for(var f in results){
-if(results[f].type == "curso"){
-_R(".searchResults > div").append(
-`<section class="result">
-<a href= "` + results[f].href + `"></a>
-<div class="screenshot">
-<img src="` + results[f].screenshot_photo + `" alt=""></div>
-<div class="cursoName">` + `<a class= "name">`  + results[f].curso_name +  `</a></div>               
-<span class="resulttype">Curso</span>
-</section>`
-)
-}
-}
-for(var f in results){
-if(results[f].type == "Proyecto"){
-_R(".searchResults > div").append(
-`<section class="result">
-<a href= "` + results[f].href + `"></a>
-<div class="profilePic">
-<img src="` + results[f].profilePic + `" alt="">
-<input class="knob button" data-width="106" data-height="106" data-fgColor="#2ecc71" data-bgColor="rgba(0,0,0,0)" data-displayInput=false data-thickness=".06" readonly value="` + results[f].rol[1].slice(1) + `"></div>
-<div class="username">` + results[f].users_name + `<a class= "name">&nbsp; | ` + results[f].name + `</a></div>               
-<span class="resulttype">Proyecto</span>
-</section>`
-)
-}
-}
-
-
-	$(".knob").knob()
-	})
 ctrl= false
 document.addEventListener("keyup", function(e){if(!e.ctrlKey)ctrl= false})
 window.onblur= function(){
@@ -5827,51 +5931,56 @@ ctrl= true
 	    Math.round($(this)[0].scrollLeft / $(this).width()) == $(this).children().length - 1? (function(){rf.parent().find(".nav_arrow.right").addClass("disabled"); $("#theater").find(".nav_arrow.right").addClass("disabled")})(): (function(){rf.parent().find(".nav_arrow.right").removeClass("disabled"); $("#theater").find(".nav_arrow.right").removeClass("disabled")})(); 
 	    $(this)[0].scrollLeft == 0? (function(){rf.parent().find(".nav_arrow.left").addClass("disabled"); $("#theater").find(".nav_arrow.left").addClass("disabled");})(): (function(){rf.parent().find(".nav_arrow.left").removeClass("disabled"); $("#theater").find(".nav_arrow.left").removeClass("disabled")})(); 
 	}) 
-	    $(".nav_arrow.left .arrow").not("#picContainer .arrow").on("click", function(){
-	        th= $("#theater").css("display") == "none"? $(".current"): th; 
-	        if($("#theater .nav_arrow.left").is(".disabled"))
-	            {return}; 
-	        if(th.find(".nav_arrow.left").is(".disabled") && $("#theater").css("display") == "none")
-	            {return}
-	        if($("#theater").css("display") == "none" && !!th.find(".carr").length){ 
-	            lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
-	            if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
-	            !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
-	                if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
-	        }else if(!!th.find(".carr").length){ 
-	            /*console.log( lk )*/ 
-	            th.find(".carr")[0].scrollLeft= th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width(); 
-	            lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
-	            lk= un_tn( lk ); 
-	            $("#theater video")[0].src= ""; 
-	            th.is(".mult_carr")? $( (function(){return $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find(".Enlarge")})() ).trigger( "click" ): $("#theater").find("#bigPic")[0].src= (th.is(".story")? $(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src: un_tn($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src)); 
-	            source= un_tn($("#theater").find("#bigPic")[0].src)
-	            history.pushState({page: 1}, "", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
-	        }
-	    }); 
-
-	    $(".nav_arrow.right .arrow").not("#picContainer .arrow").on("click", function(){
-	        th= $("#theater").css("display") == "none"? $(".current"): th; 
-	        if($("#theater .nav_arrow.right").is(".disabled"))
-	            {return}; 
-	        if(th.find(".nav_arrow.right").is(".disabled") && $("#theater").css("display") == "none")
-	            {return}
-	        if($("#theater").css("display") == "none" && !!th.find(".carr").length){ 
-	            lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
-	            if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
-	            !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width()}, 400, function(){lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); 
-	                if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); }): 672; 
-	        }else if(!!th.find(".carr").length){ 
-	            /*console.log( lk )*/ 
-	            th.find(".carr")[0].scrollLeft= th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width(); 
-	            lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ); th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
-	            lk= un_tn( lk ); 
-	            $("#theater video")[0].src= ""; 
-	            th.is(".mult_carr")? $( (function(){return $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find(".Enlarge")})() ).trigger( "click" ): $("#theater").find("#bigPic")[0].src= (th.is(".story")? $(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src: un_tn($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())].src)); 
-	            source= un_tn($("#theater").find("#bigPic")[0].src)
-	            history.pushState({page: 1}, "", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))); 
-	        }
-	    }); 
+	    _R(".nav_arrow.left .arrow").not("#picContainer .arrow").on("click", function(){
+        th= $("#theater").css("display") == "none"? $(".current"): th; 
+        if($("#theater .nav_arrow.left").is(".disabled"))
+            {return}; 
+        if(th.find(".nav_arrow.left").is(".disabled") && $("#theater").css("display") == "none")
+            {return}
+        if($("#theater").css("display") == "none" && !!th.find(".carr").length){ 
+ 	        lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? $(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")=="/resources/assets/loading.gif"?$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("s_rc"):$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src"): (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
+            if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
+            !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width()}, 400, function(){
+            	lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? ($(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")== "/resources/assets/loading.gif"?$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("s_rc"):$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")): (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
+            	if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); 
+            	th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + (!th.is(".external")?(lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))): lk)); }): 672; 
+        }else if(!!th.find(".carr").length){ 
+            $(".theater video").attr("src", "")
+            th.find(".carr")[0].scrollLeft= th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width(); 
+ 	        lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? $(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")=="/resources/assets/loading.gif"?$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("s_rc"):$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src"): (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
+            if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();            
+            th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + (!th.is(".external")?(lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))): lk));
+            source= un_tn($("#theater").find("#bigPic")[0].src)
+            th.is(".mult_carr")? $( (function(){return $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find(".Enlarge")})() ).trigger( "click" ): $("#theater").find("#bigPic")[0].src= (th.is(".story")? ($($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")=="/resources/assets/loading.gif" ?$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("s_rc"):$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")): un_tn(($($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")=="/resources/assets/loading.gif"?$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("s_rc"):$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")))); 
+            history.pushState({page: 1}, "", $(th).find(".options a").attr("href")); 
+        }
+    }); 
+    _R(".nav_arrow.left .arrow").not("#picContainer .arrow").e()
+    _R(".nav_arrow.right .arrow").not("#picContainer .arrow").on("click", function(){
+        th= $("#theater").css("display") == "none"? $(".current"): th; 
+        if($("#theater .nav_arrow.right").is(".disabled"))
+            {return}; 
+        if(th.find(".nav_arrow.right").is(".disabled") && $("#theater").css("display") == "none")
+            {return}
+        if($("#theater").css("display") == "none" && !!th.find(".carr").length){ 
+            lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
+            if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
+            !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width()}, 400, function(){
+ 	           	lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? $(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")=="/resources/assets/loading.gif"?$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("s_rc"):$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src"): (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
+            	if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); 
+            	th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + (!th.is(".external")?(lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))): lk)); }): 672; 
+        }else if(!!th.find(".carr").length){ 
+            $(".theater video").attr("src", "")
+            th.find(".carr")[0].scrollLeft= th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width(); 
+ 	        lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? $(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")=="/resources/assets/loading.gif"?$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("s_rc"):$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src"): (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
+            if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();            
+            th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + (!th.is(".external")?(lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))): lk));
+            source= un_tn($("#theater").find("#bigPic")[0].src)
+            th.is(".mult_carr")? $( (function(){return $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find(".Enlarge")})() ).trigger( "click" ): $("#theater").find("#bigPic")[0].src= (th.is(".story")? ($($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")=="/resources/assets/loading.gif" ?$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("s_rc"):$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")): un_tn(($($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")=="/resources/assets/loading.gif"?$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("s_rc"):$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")))); 
+            history.pushState({page: 1}, "", $(th).find(".options a").attr("href")); 
+        }
+    }); 
+    _R(".nav_arrow.right .arrow").not("#picContainer .arrow")
 
 	    
 
@@ -6362,117 +6471,7 @@ _R('a').on("click", function(e){
 		        <div>
 		        </div>
 		    </aside>`)
-			/*Leela is liril's vAssistant, she searches even on the subtitles of the videos*/
-possibleResults=[[["Megan Denise Fox", "MeganFox"], {users_name: "Megan Denise Fox", username: "MeganFox", profilePic: "/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg", rol: ["G", "+100"], type: "Usuario"}], [["Laura Escobar Bonnett", "L"], {users_name: "Laura Escobar Bonnett", username: "L", profilePic: "/resources/images/L/OGnpwD3jys_tn.jpg", rol: ["Princesa", "+100"], type: "Usuario"}], [["Shailene Diann Woodley", "whale_Shailene"], {users_name: "Shailene Diann Woodley", username: "whale_Shailene", profilePic: "/resources/images/whale_Shailene/RKRWeNhDgJ_tn.jpg", rol: ["SEO", "+98"], type: "Usuario"}], [["Luis Eduardo Gallego García", "A.K.A._Dizzy"], {users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], type: "Usuario"}], [["Dios Jesucristo", "G-Suschrist"], {users_name: "Dios Jesucristo", username: "G-Suschrist", profilePic: "/resources/images/G-Suschrist/Rvu7YjVcXr_tn.jpg", rol: ["G", "+100"], type: "Usuario"}], [["Aura María Cardona Demasiado", "AuraCardonaC"], {users_name: "Aura María Cardona Demasiado", username: "AuraCardonaC", profilePic: "/resources/images/AuraCardonaC/44Cpl8Gig5_tn.jpg", rol: ["Profe de fitness", "+94"], type: "Usuario"}], [["Juan José Martínez Vidal", "LamaMadora"], {users_name: "Juan José Martínez Vidal", username: "LamaMadora", profilePic: "/resources/images/LamaMadora/sdlQg1CoQ3_tn.jpg", rol: ["Dubber", "+88"], type: "Usuario"}], , [["Walter White", "user"], {users_name: "Walter White", username: "user", profilePic: "/resources/images/white.jpg", rol: ["Moderador", "+60"], type: "Usuario"}], [["A0"], {name: "A0", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/A0", type: "Blog"}], [["Algo Más Sobre Mí"], {name: "Algo Más Sobre Mí", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Algo Más Sobre Mí", type: "Blog"}], [["Algunas Propiedades De Mis Escritos"], {name: "Algunas Propiedades De Mis Escritos", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Algunas Propiedades De Mis Escritos", type: "Blog"}], [["Algunos Poemas Que He Escrito"], {name: "Algunos Poemas Que He Escrito", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Algunos Poemas Que He Escrito", type: "Blog"}], [["aNGEL();"], {name: "aNGEL();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/aNGEL();", type: "Blog"}], [["Constructor And Business Partners (Dedicatorias)"], {name: "Constructor And Business Partners (Dedicatorias)", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Constructor And Business Partners (Dedicatorias)", type: "Blog"}], [["Constructor And Business Partners"], {name: "Constructor And Business Partners", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Constructor And Business Partners", type: "Blog"}], [["Dinosaurios"], {name: "Dinosaurios", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Dinosaurios", type: "Blog"}], [["El Pueblo Blanco"], {name: "El Pueblo Blanco", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/El Pueblo Blanco", type: "Blog"}], [["El Salomé Castrillón"], {name: "El Salomé Castrillón", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/El Salomé Castrillón", type: "Blog"}], [["Equilibrio"], {name: "Equilibrio", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Equilibrio", type: "Blog"}], [["FRANCIA Y ElDelprincipio"], {name: "FRANCIA Y ElDelprincipio", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/FRANCIA Y ElDelprincipio", type: "Blog"}], [["La Larga Historia"], {name: "La Larga Historia", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/La Larga Historia", type: "Blog"}], [["La Perrita Del Poste"], {name: "La Perrita Del Poste", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/La Perrita Del Poste", type: "Blog"}], [["La Sagrada Biblia"], {name: "La Sagrada Biblia", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/La Sagrada Biblia", type: "Blog"}], [["Las Flores Malditas (Introducción)"], {name: "Las Flores Malditas (Introducción)", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Las Flores Malditas (Introducción)", type: "Blog"}], [["por_siLaBas();"], {name: "por_siLaBas();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/por_siLaBas();", type: "Blog"}], [["Regalos Para Mí"], {name: "Regalos Para Mí", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Regalos Para Mí", type: "Blog"}], [["Sus Rizos Color Caramelo"], {name: "Sus Rizos Color Caramelo", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Sus Rizos Color Caramelo", type: "Blog"}], [["Una Breve Historia De La Creación"], {name: "Una Breve Historia De La Creación", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/Una Breve Historia De La Creación", type: "Blog"}], [["xWo3"], {name: "xWo3", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/blog/xWo3", type: "Blog"}], [["dinosaurios"], {name: "dinosaurios", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/82DcC9s2sS0cZ", type: "Proyecto"}], [["por_siLaBas();"], {name: "por_siLaBas();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/f9d2cCa2Cxc31", type: "Proyecto"}], [["Christmas Gifts From The Gallego Escobar Family"], {name: "Christmas Gifts From The Gallego Escobar Family", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/h3dd2cDcsW2R3", type: "Proyecto"}], [["aNGEL();"], {name: "aNGEL();", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/k92dJd29D920d", type: "Proyecto"}], [["Robot De Dedicatorias"], {name: "Robot De Dedicatorias", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/k9u8hH78jJi27", type: "Proyecto"}], [["Robot de dedicatorias"], {name: "Robot de dedicatorias", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/s98f39c0d9090", type: "Proyecto"}], [["Widgets"], {name: "Widgets", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/i9d2g2cftdCds", type: "Proyecto"}], [["ElDelprincipio"], {name: "ElDelprincipio", users_name: "Luis Eduardo Gallego García", username: "A.K.A._Dizzy", profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif", rol: ["CEO", "+100"], href: "/A.K.A._Dizzy/p/tY829dD0290df", type: "Proyecto"}], [["myProjext1"], {name: "myProjext1", users_name: "Megan Denise Fox", username: "MeganFox", profilePic: "/resources/images/MeganFox/Ad4Jy7k20F_tn.jpg", rol: ["G", "+100"], href: "/MeganFox/p/iD8299D88d3D2", type: "Proyecto"}], [["minesweeper"], {name: "minesweeper", users_name: "Laura Escobar Bonnett", username: "L", profilePic: "/resources/images/L/OGnpwD3jys_tn.jpg", rol: ["Princesa", "+100"], href: "/L/p/2kNoind8JsjD9", type: "Proyecto"}], [["lX"], {name: "lX", users_name: "Aura María Cardona Demasiado", username: "AuraCardonaC", profilePic: "/resources/images/AuraCardonaC/44Cpl8Gig5_tn.jpg", rol: ["Profe de fitness", "+94"], href: "/AuraCardonaC/p/di29D8jj8dj2d", type: "Proyecto"}], [["--The Whole Board--", "The Whole Board"], {name: "--The Whole Board--", users_name: "Shailene Diann Woodley", username: "whale_Shailene", profilePic: "/resources/images/whale_Shailene/RKRWeNhDgJ_tn.jpg", rol: ["SEO", "+98"], href: "/whale_Shailene/p/K28fcCjs9J20v", type: "Proyecto"}], [["snka"], {name: "snka", users_name: "Dios Jesucristo", username: "G-Suschrist", profilePic: "/resources/images/G-Suschrist/Rvu7YjVcXr_tn.jpg", rol: ["G", "+100"], href: "/G-Suschrist/p/Jkik39djfX8iX", type: "Proyecto"}], [["Vv11"], {name: "Vv11", users_name: "Juan José Martínez Vidal", username: "LamaMadora", profilePic: "/resources/images/LamaMadora/sdlQg1CoQ3_tn.jpg", rol: ["Dubber", "+88"], href: "/LamaMadora/p/u889Dj8Q22dSC", type: "Proyecto"}], [["_dvlpmt"], {name: "_dvlpmt", users_name: "Walter White", username: "user", profilePic: "/resources/images/white.jpg", rol: ["Moderador", "+60"], href: "/user/p/8d299s2gvkL9", type: "Proyecto"}], [["La Perrita Del Poste", "PpP"], {users_name: "La Perrita Del Poste", username: "PpP", profilePic: "/resources/images/PpP/bZj2vYrklo_tn.jpg", rol: ["G", "+100"], type: "Usuario"}], [["ElDelprincipio", "Eld"], {users_name: "ElDelprincipio", username: "Eld", profilePic: "/resources/images/Eld/oow4doJxKO_tn.jpg", rol: ["G", "+100"], type: "Usuario"}], [["Para Que Rayes", "Photopea", "app"], {app_name: "Para Que Rayes", href: "/app/ParaQueRayes", screenshot_photo: "/resources/screenshots/ParaQueRayes_screenshot.jpg", type: "app"}], [["Matemáticas", "Curso", "Curso de Matemáticas"], {curso_name: "Curso de Matemáticas", href: "/curso-mat", screenshot_photo: "/resources/screenshots/matemáticas_screenshot.png", type: "curso"}], [["Filosofía", "Curso", "Curso de Filosofía"], {curso_name: "Curso de Filosofía", href: "/curso-fil", screenshot_photo: "/resources/screenshots/filosofía_screenshot.png", type: "curso"}]]
-
-_R(".buscar").on("input", function(){  if($(this).val() !== ""){$(".searchResults").removeClass("hidden")}else{ $(".searchResults").addClass("hidden"); return}
-results= []
-for(var e in possibleResults){
-for(var u in possibleResults[e][0]){
-if(possibleResults[e][0][u].toLowerCase().indexOf($(this).val().toLowerCase()) == 0){
-if(results.indexOf(possibleResults[e][1]) == -1)results[results.length]= possibleResults[e][1]
-}
-}
-}
-
-_R(".searchResults > div").html("")
-for(var f in results){
-if(results[f].type == "Usuario"){
-_R(".searchResults > div").append(
-`<section class="result">
-<a href= "/` + results[f].username + `"></a>
-<div class="profilePic">
-<img src="` + results[f].profilePic + `" alt="">
-<input class="knob button" data-width="106" data-height="106" data-fgColor="#2ecc71" data-bgColor="rgba(0,0,0,0)" data-displayInput=false data-thickness=".06" readonly value="` + results[f].rol[1].slice(1) + `"></div>
-<div class="username">` + results[f].users_name + `<p class="rol">` + results[f].rol[0] + ` <b>` + results[f].rol[1] + `</b></p></div>               
-<span class="resulttype">Usuario</span>
-</section>`
-)
-}
-}
-for(var f in results){
-if(results[f].type == "Blog"){
-_R(".searchResults > div").append(
-`<section class="result">
-<a href= "` + results[f].href + `"></a>
-<div class="profilePic">
-<img src="` + results[f].profilePic + `" alt="">
-<input class="knob button" data-width="106" data-height="106" data-fgColor="#2ecc71" data-bgColor="rgba(0,0,0,0)" data-displayInput=false data-thickness=".06" readonly value="` + results[f].rol[1].slice(1) + `"></div>
-<div class="username">` + results[f].users_name + `<a class= "name">&nbsp; | ` + results[f].name + `</a></div>               
-<span class="resulttype">Blog</span>
-</section>`
-)
-}
-}
-for(var f in results){
-if(results[f].type == "app"){
-_R(".searchResults > div").append(
-`<section class="result">
-<a href= "` + results[f].href + `"></a>
-<div class="screenshot">
-<img src="` + results[f].screenshot_photo + `" alt=""></div>
-<div class="appName">` + `<a class= "name">`  + results[f].app_name +  `</a></div>               
-<span class="resulttype">App</span>
-</section>`
-)
-}
-}
-for(var f in results){
-if(results[f].type == "curso"){
-_R(".searchResults > div").append(
-`<section class="result">
-<a href= "` + results[f].href + `"></a>
-<div class="screenshot">
-<img src="` + results[f].screenshot_photo + `" alt=""></div>
-<div class="cursoName">` + `<a class= "name">`  + results[f].curso_name +  `</a></div>               
-<span class="resulttype">Curso</span>
-</section>`
-)
-}
-}
-for(var f in results){
-if(results[f].type == "Proyecto"){
-_R(".searchResults > div").append(
-`<section class="result">
-<a href= "` + results[f].href + `"></a>
-<div class="profilePic">
-<img src="` + results[f].profilePic + `" alt="">
-<input class="knob button" data-width="106" data-height="106" data-fgColor="#2ecc71" data-bgColor="rgba(0,0,0,0)" data-displayInput=false data-thickness=".06" readonly value="` + results[f].rol[1].slice(1) + `"></div>
-<div class="username">` + results[f].users_name + `<a class= "name">&nbsp; | ` + results[f].name + `</a></div>               
-<span class="resulttype">Proyecto</span>
-</section>`
-)
-}
-}
-		$(".buscar").on("focus", function(){$(".nombre").attr("contenteditable", "false")})
-
-		$(".knob").knob()
-		})
-		$(document).on("keydown", function(r){
-
-		switch(r.keyCode){
-		  	case 40:
-		        if(_R(".result").length && !_R(".result#resaltado").length){
-		            _R(".result", 0).attr("id", "resaltado")
-		            _R(".result", 0).children()[0].focus()
-		            setTimeout(function(){_R(".searchResults > div").scrollTop(0)}, 20)
-		        }else if(_R(".result").length && _R(".result#resaltado").index() != _R(".result").length - 1){
-		            let rsltd= _R(".result#resaltado", 0)
-		            rsltd.next().children()[0].focus()
-		            rsltd.attr("id", "")
-		            rsltd.next().attr("id", "resaltado")
-		        }
-		    break;
-		  	case 38:
-		        if(_R(".result").length && $(".result#resaltado").length && $(".result#resaltado").index() != 0){
-		            let rsltd= _R(".result#resaltado", 0)
-		            rsltd.prev().children()[0].focus()
-		            rsltd.attr("id", "")
-		            rsltd.prev().attr("id", "resaltado")
-		        }
-		    break;
-		}
-		})
+			
 
 		document.onkeyup= function(o){
 		if(!o.shiftKey || !o.altKey)ctrlMShift= false
@@ -6759,7 +6758,8 @@ _R(".searchResults > div").append(
 		        "display": "block"
 		    })
 		    $this = a.closest('.story')
-		    var source = a.attr('src');
+		   
+		    var source = a.attr("src")== "/resources/assets/loading.gif"?a.attr('s_rc'):a.attr('src');
 		    $('.theater #bigPic').attr('src', source);
 
 		    var user = a.closest('.story').find(".username").html();
@@ -6968,3 +6968,36 @@ responsive= function(){
 window.onresize= function(){
     $("#resizeBottom").resizable("option", "maxHeight", ($(window).height() - $("#sidebar #search").outerHeight() - 51));
 }
+
+/*
+closesTParent= function(k){
+	return $(k).closest(".carr").length?$(k).closest(".carr").find("img"):$(k)
+}
+document.querySelectorAll('img[s_rc]:not([s_rc=""])').forEach((i) => {
+    if (i) {
+        const observer = new IntersectionObserver((entries) => {
+            observerCallback(entries, observer, i)
+        },
+        {threshold: 0.05});    
+        observer.observe(i);
+    }
+})
+
+const observerCallback = (entries, observer, header) => {
+    entries.forEach((entry, i) => {
+		if (entry.intersectionRatio > 0) {
+             $(entry.target).addClass("intersecting")
+         }
+         else {
+             $(entry.target).removeClass("intersecting")
+         }
+		 if (entry.intersectionRatio > 0) {
+             closesTParent($(entry.target))._R(entry.target, und, 'e'), function(){return $(this).attr("s_rc")})
+         }
+         else if( $(entry.target).attr("src") _R(entry.target, und, 'e')/loading.gif") {
+             _R(entry.target, und, 'e')).attr("s_rc", function(){return $(this).attr("src")})
+             closesTParent(_R(entry.target, und, 'e')t)).attr("src", "/resources/assets/loading.gif")
+         }
+    });
+};
+*/
