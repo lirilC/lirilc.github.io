@@ -1849,6 +1849,8 @@ var openModal= function(a){
 	    th= Antheater
 	    source= Antheater.is("mult_carr")?un_tn((ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("src")== "/resources/assets/loading.gif"? $(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("s_rc"):$(ar.find(".carr .pic")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())]).attr("src")):un_tn(ar.find(".pic").attr("src")=="/resources/assets/loading.gif"? ar.find(".pic").attr("s_rc"):ar.find(".pic").attr("src")); 
 	    history.pushState({page: 1}, "", "/" + user.username + "/img/" + source.slice(source.lastIndexOf("/") + 1, -4)); 
+	    
+	    a.closest('.photo').find('.info img[s_rc]').attr("src", function(){return $(this).attr("s_rc")});
 	    var info = a.closest('.photo').find(".info").html(); 
 	    $('.theater .comments .info').html(info); 
 
@@ -1864,8 +1866,8 @@ var openModal= function(a){
 	    } else {
 	        $('.theater .comments .options .star').removeClass("true");
 	    }
-	    var pic = a.closest(".photo").find(".info img").attr('src');
-	    $('.theater .comments .info #pic').attr('src', pic);
+	    var pic = a.closest(".photo").find(".info img").attr('src')=="/resources/assets/loading.gif"?a.closest(".photo").find(".info img").attr('s_rc'):a.closest(".photo").find(".info img").attr('src');
+	    $('.theater .comments .info img').first().attr('src', pic);
 
 	    var ref = a.closest(".photo").find(".options ul a").attr('href');
 	    $('.theater .comments .options ul a').attr('href', ref);
@@ -1969,6 +1971,7 @@ var openModal= function(a){
                            
     history.pushState({page: 1}, "", "/" + (Antheater.is(".repost")? $(Antheater.find(".target")[1]).attr("href").slice(1): Antheater.find(".username a").attr("href").slice(1, Antheater.find(".username a").attr("href").length)) + "img/" + source.slice(source.lastIndexOf("/") + 1, -4)); 
 
+    Antheater.find('.info img[s_rc]').attr("src", function(){return $(this).attr("s_rc")});
     var info= Antheater.find(".info").html(); 
     $('.theater .comments .info').html(info); 
 
@@ -2046,7 +2049,7 @@ var openModal= function(a){
     }
 
     var pic= (Antheater.find(".info img").attr('src') == "/resources/assets/loading.gif"?Antheater.find(".info img").attr('s_rc'):Antheater.find(".info img").attr('src'));
-    $('.theater .comments .info #pic').attr('src', pic);
+    $('.theater .comments .info img').first().attr('src', pic);
 
     var ref= Antheater.find(".options ul a").attr('href');
     $('.theater .comments .options ul a').attr('href', ref);
@@ -2157,6 +2160,7 @@ $(videojs("theater_video").L.parentElement).siblings().filter(".Playuse").addCla
         history.pushState({page: 1}, "", "/" + Antheater.find(".username a").attr("href").slice(1, $(".current").find(".username a").attr("href").length) + "vid/" + source.slice(source.lastIndexOf("/") + 1, -4)); 
     }
 
+    a.closest('.story').find('.info img[s_rc]').attr("src", function(){return $(this).attr("s_rc")});
     var info= a.closest('.story').find(".info").html(); 
     $('.theater .comments .info').html(info); 
 
@@ -2213,8 +2217,8 @@ $(videojs("theater_video").L.parentElement).siblings().filter(".Playuse").addCla
 
     th.find("video")[0].pause(); 
 
-    var pic= a.closest('.story').find(".info img").attr('src');
-    $('.theater .comments .info #pic').attr('src', pic);
+    var pic= a.closest('.story').find(".info img").attr('src')=="/resources/assets/loading.gif"?a.closest('.story').find(".info img").attr('s_rc'):a.closest('.story').find(".info img").attr('src');
+    $('.theater .comments .info img').first().attr('src', pic);
 
     var ref= a.closest('.story').find(".options ul a").attr('href');
     $('.theater .comments .options ul a').attr('href', ref);
@@ -2279,7 +2283,8 @@ var openOtherModal= function(a){
     var source= a.closest('.story').find("video").attr('src');
 
     history.pushState({page: 1}, "", "/" + (a.closest('.story').is(".repost")? $(a.closest('.story').find(".target")[1]).attr("href").slice(1): a.closest('.story').find(".username a").attr("href").slice(1, $(".current").find(".username a").attr("href").length)) + "pos" + a.parent().find("a.read").attr("href").slice(a.parent().find("a.read").attr("href").lastIndexOf("/"))); 
-
+	
+	a.closest('.story').find('.info img[s_rc]').attr("src", function(){return $(this).attr("s_rc")});
     var info= a.closest('.story').find(".info").html(); 
     $('.theater .comments .info').html(info); 
 
@@ -2343,8 +2348,8 @@ var openOtherModal= function(a){
 
     $("#theater #otherContainments").addClass("visible")
 
-    var pic= a.closest('.story').find(".info img").attr('src');
-    $('.theater .comments .info #pic').attr('src', pic);
+    var pic= a.closest('.story').find(".info img").attr('src')=="/resources/assets/loading.gif"?a.closest('.story').find(".info img").attr('s_rc'):a.closest('.story').find(".info img").attr('src');
+    $('.theater .comments .info img').first().attr('src', pic);
 
     var ref= a.closest('.story').find(".options ul a").attr('href');
     $('.theater .comments .options ul a').attr('href', ref);
@@ -2393,7 +2398,7 @@ var openProfilePicModal= function(a){
     $('.theater #bigPic').attr('src', source);
 
     history.pushState({page: 1}, "", "/" + user.username + "/img/" + source.slice(source.lastIndexOf("/") + 1, -4)); 
-
+	a.closest('#profilePic').find('.info img[s_rc]').attr("src", function(){return $(this).attr("s_rc")});
     var info= a.closest('#profilePic').find(".info").html(); 
     $('.theater .comments .info').html(info); 
 
@@ -2413,8 +2418,8 @@ var openProfilePicModal= function(a){
     var more= !!a.find(".moreI").html()? a.find(".moreI").html(): "";
     $('.theater .comments .more').html(more);
 
-    var pic= a.find(".hidden").find(".info img").attr('src');
-    $('.theater .comments .info #pic').attr('src', pic);
+    var pic= a.find(".hidden").find(".info img").attr('src')=="/resources/assets/loading.gif"?a.find(".hidden").find(".info img").attr('s_rc'):a.find(".hidden").find(".info img").attr('src');
+    $('.theater .comments .info img').first().attr('src', pic);
 
     var ref= a.find(".hidden").find(".options ul a").attr('href');
     $('.theater .comments .options ul a').attr('href', ref);
@@ -2476,7 +2481,7 @@ var openFotosModal= function(a){
         "display": "block"
     })
     $this= a
-
+    a.closest('.foto').find('.info img[s_rc]').attr("src", function(){return $(this).attr("s_rc")});
     var info= a.closest('.foto').find(".info").html(); 
     $('.theater .comments .info').html(info); 
 
@@ -2495,8 +2500,8 @@ var openFotosModal= function(a){
     }else{
         $('.theater .comments .options .star').removeClass("true");
     }
-    var pic= a.closest(".foto").find(".info img").attr('src');
-    $('.theater .comments .info #pic').attr('src', pic);
+    var pic= a.closest(".foto").find(".info img").attr('src')== "/resources/assets/loading.gif"?a.closest(".foto").find(".info img").attr('s_rc'):a.closest(".foto").find(".info img").attr('src');
+    $('.theater .comments .info img').first().attr('src', pic);
 
     var ref= a.closest(".foto").find(".options ul a").attr('href');
     $('.theater .comments .options ul a').attr('href', ref);
@@ -2542,8 +2547,8 @@ var openFotosModal= function(a){
 
     if(a.closest('.foto').is(".mult_img")){ 
         ar= $(a.closest('.foto')); 
-        source= un_tn( ar.find(".carr > section")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].getElementsByTagName( "img" )[0].src ); 
-        $("#theater").find("#bigPic")[0].src= un_tn( $(ar.find(".carr > section")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].getElementsByTagName( "img" )[0]).attr("src")=="/resources/assets/loading.gif"?$(ar.find(".carr > section")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].getElementsByTagName( "img" )[0]).attr("s_rc"):$(ar.find(".carr > section")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].getElementsByTagName( "img" )[0]).attr("src") ); 
+        source= un_tn( $(ar.find(".carr > section")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].getElementsByTagName( "img" )[0]).attr("src")=="/resources/assets/loading.gif"?$(ar.find(".carr > section")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].getElementsByTagName( "img" )[0]).attr("s_rc"):$(ar.find(".carr > section")[Math.round(ar.find(".carr")[0].scrollLeft / ar.find(".carr").width())].getElementsByTagName( "img" )[0]).attr("src") ); 
+        $("#theater").find("#bigPic")[0].src= source; 
         if(!$("#theater").find(".nav_arrow").length){
 	        $("#theater").append('<div class="nav_arrow left' + (ar.find(".nav_arrow.left").is(".disabled")? ' disabled': '') + '"><div class= "arrow"></div></div><div class="nav_arrow right' + (ar.find(".nav_arrow.right").is(".disabled")? ' disabled': '') + '"><div class= "arrow"></div></div>'); 
 	        $("#theater .nav_arrow.left .arrow").on("click", function(){
@@ -2584,7 +2589,7 @@ var openFotosModal= function(a){
 	    }
         history.pushState({page: 1}, "", "/" + user.username + "/img/" + source.slice(source.lastIndexOf("/") + 1, -4)); 
     }else{ 
-        var source= un_tn($(a.closest(".foto").children()[0]).attr('src')); 
+        var source= un_tn($(a.closest(".foto").children()[0]).attr('src')=="/resources/assets/loading.gif"?$(a.closest(".foto").children()[0]).attr('s_rc'):$(a.closest(".foto").children()[0]).attr('src')); 
         $('.theater #bigPic').attr('src', source); 
         history.pushState({page: 1}, "", "/" + user.username + "/img/" + source.slice(source.lastIndexOf("/") + 1, -4)); 
     }
@@ -2614,7 +2619,8 @@ var openVidModal= function(a){
     source= un_tn(source); 
                            
     history.pushState({page: 1}, "", "/" + user.username + "/vid/" + source.slice(source.lastIndexOf("/") + 1, -4)); 
-
+	
+	a.closest('.vid').find('.info img[s_rc]').attr("src", function(){return $(this).attr("s_rc")});
     var info= a.closest('.vid').find(".info").html(); 
     $('.theater .comments .info').html(info); 
 
@@ -2671,8 +2677,8 @@ var openVidModal= function(a){
 
     th.find("video")[0].pause(); 
 
-    var pic= a.closest('.vid').find(".info img").attr('src');
-    $('.theater .comments .info #pic').attr('src', pic);
+    var pic= a.closest('.vid').find(".info img").attr('src')== "/resources/assets/loading.gif"?a.closest('.vid').find(".info img").attr('s_rc'):a.closest('.vid').find(".info img").attr('src');
+    $('.theater .comments .info img').first().attr('src', pic);
 
     var ref= a.closest('.vid').find(".options ul a").attr('href');
     $('.theater .comments .options ul a').attr('href', ref);
@@ -2703,7 +2709,7 @@ var openPhotoModal= function(a) {
         "display": "block"
     })
     $this = th; 
-
+	a.closest('.photo').find('.info img[s_rc]').attr("src", function(){return $(this).attr("s_rc")});
     var info = a.closest('.photo').find(".info").html(); 
     $('.theater .comments .info').html(info); 
 
@@ -2720,7 +2726,7 @@ var openPhotoModal= function(a) {
         $('.theater .comments .options .star').removeClass("true");
     }
     var pic = (a.closest(".photo").find(".info img").attr('src')== "/resources/assets/loading.gif"?a.closest(".photo").find(".info img").attr('s_rc'):a.closest(".photo").find(".info img").attr('src'));
-    $('.theater .comments .info #pic').attr('src', pic);
+    $('.theater .comments .info img').first().attr('src', pic);
 
     var ref = a.closest(".photo").find(".options ul a").attr('href');
     $('.theater .comments .options ul a').attr('href', ref);
@@ -4396,6 +4402,7 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
 	                           
 	    history.pushState({page: 1}, "", "/" + a.closest('.vid').find(".username a").attr("href").slice(1, $(".current").find(".username a").attr("href").length) + "/vid/" + source.slice(source.lastIndexOf("/") + 1, -4)); 
 
+	    a.closest('.vid').find('.info img[s_rc]').attr("src", function(){return $(this).attr("s_rc")});
 	    var info= a.closest('.vid').find(".info").html(); 
 	    $('.theater .comments .info').html(info); 
 
@@ -4452,8 +4459,8 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
 
 	    th.find("video")[0].pause(); 
 
-	    var pic= a.closest('.vid').find(".info img").attr('src');
-	    $('.theater .comments .info #pic').attr('src', pic);
+	    var pic= a.closest('.vid').find(".info img").attr('src')=="/resources/assets/loading.gif"?a.closest('.vid').find(".info img").attr('s_rc'):a.closest('.vid').find(".info img").attr('src');
+	    $('.theater .comments .info img').first().attr('src', pic);
 
 	    var ref= a.closest('.vid').find(".options ul a").attr('href');
 	    $('.theater .comments .options ul a').attr('href', ref);
@@ -6703,7 +6710,7 @@ _R('a').on("click", function(e){
 		    !!a.closest("figure").find("figcaption").length? $(".more").text(a.closest("figure").find("figcaption")[0].innerText): 1; 
 
 
-		    
+		    a.closest('figure').find('.info img[s_rc]').attr("src", function(){return $(this).attr("s_rc")});
 		    var info = a.closest('figure').find(".info").html();
 		    $('.theater .comments .info').html(info);
 
@@ -6729,8 +6736,8 @@ _R('a').on("click", function(e){
 		        $('.theater .comments .options .star').removeClass("true");
 		    }
 		    
-		    var pic = a.closest('figure').find(".info img").attr('src');
-		    $('.theater .comments .info #pic').attr('src', pic);
+		    var pic = a.closest('figure').find(".info img").attr('src')=="/resources/assets/loading.gif"?a.closest('figure').find(".info img").attr('s_rc'):a.closest('figure').find(".info img").attr('src');
+		    $('.theater .comments .info img').first().attr('src', pic);
 
 		    var comments = a.find(".Comentarios").last().html();
 		    $('.theater .comments .comentarios .Comentarios').html(comments); 
@@ -6810,8 +6817,8 @@ _R('a').on("click", function(e){
 		    var more= !!a.closest('.story').find(".moreI").html()? a.closest('.story').find(".moreI").html(): "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet varius lectus, congue rutrum urna. Suspendisse in ultrices enim. In hac habitasse platea dictumst. Praesent aliquet, nisi nec euismod vulputate, odio velit porta erat, ut semper lacus erat ac nulla. Aenean ex libero, volutpat vel sem et, blandit dictum dui. Duis suscipit sed nisi finibus vestibulum. Quisque finibus porttitor nisl, nec consequat metus. Quisque commodo, libero nec volutpat suscipit, quam urna volutpat turpis, quis rhoncus magna dui sit amet lacus. Donec pellentesque aliquam turpis nec commodo. Aliquam lobortis facilisis auctor. Sed libero nisi, scelerisque et porttitor vel, accumsan sed lacus. Pellentesque at tortor pellentesque, vestibulum turpis at, iaculiuisque finibus porttitor nisl, nec consequat metus. Quisque commodo, libero nec volutpat suscipit, quam urna volutpat turpis, quis rhoncus magna dui sit amet lacus. Donec pellentesque aliquam turpis nec commodo. Aliquam lobortis facilisis auctor. Sed libero nisi, scelerisque et porttitor vel, accumsan sed lacus. Pellentesque at tortor pellentesque, vestibulum turpis at, iaculis nibh.";
 		    $('.theater .comments .more').html(more);
 
-		    var pic = a.closest('.story').find(".info img").attr('src');
-		    $('.theater .comments .info #pic').attr('src', pic);
+		    var pic = a.closest('.story').find(".info img").attr('src')=="/resources/assets/loading.gif"?a.closest('.story').find(".info img").attr('s_rc'):a.closest('.story').find(".info img").attr('src');
+		    $('.theater .comments .info img').first().attr('src', pic);
 
 		    var ref = a.closest('.story').find(".options ul a").attr('href');
 		    $('.theater .comments .options ul a').attr('href', ref);
