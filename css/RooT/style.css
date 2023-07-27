@@ -463,7 +463,7 @@ text-decoration: none;
 
 }
 #feed  .story img{
-max-height:  370px;
+height:  370px;
     max-width:  100%;
 cursor: pointer
 }
@@ -1781,7 +1781,8 @@ display: inline-block;
 /*.RIPonsive{}*/ 
 #theater .more{ 
     flex-grow: 1; 
-    overflow: hidden !important; 
+    overflow: hidden; 
+    overflow-y: auto; 
 } 
 #theater .info{ 
     z-index: 1; 
@@ -2738,7 +2739,7 @@ text-decoration: none;
     text-align: left;
 }
 #feed .story img{
-    max-height: 370px;
+    height: 370px;
     max-width: 100%;
     cursor: pointer;
 }
@@ -7070,7 +7071,8 @@ a:hover
 /*.RIPonsive{}*/ 
 #theater .more{ 
     flex-grow: 1; 
-    overflow: hidden !important; 
+    overflow: hidden; 
+    overflow-y: auto; 
 } 
 #theater .info{ 
     z-index: 1; 
