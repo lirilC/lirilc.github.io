@@ -1273,7 +1273,7 @@ purger.purge= function( a ){
     if(typeof purger.index.in !== "undefined")return
     fT= localStorage.getItem("file_tree")
     wFT= localStorage.getItem("w_file_tree")
-    if( ( localStorage.getItem( "safety_purge" ) === null || ( localStorage.getItem( "safety_purge" ) !== null && parseFloat( localStorage.getItem( "safety_purge" ) ) != purger.index ) ) || ( typeof a != "undefined" && a == "bypass" ) ){ 
+    if( ( localStorage.getItem( "safety_purge" ) === null || ( localStorage.getItem( "safety_purge" ) !== null && parseInt( localStorage.getItem( "safety_purge" ) ) != purger.index ) ) || ( typeof a != "undefined" && a == "bypass" ) ){ 
         for( ii in localStorage ){ 
             if( typeof localStorage[ii] != "function" && ii != "length" && ["safety_purge", "tooltip", "knob", "filesWidth", "user", "selected"].indexOf( ii ) == -1 ){ 
                 (( function( a ){ var av= a; for( var v= 1; v <= 2; v++ )av= av.slice( av.indexOf("/") + 1 ); return av } )( ii ).indexOf( "raw" ) === 0 || ( function( a ){ var av= a; for( var v= 1; v <= 2; v++ )av= av.slice( av.indexOf("/") + 1 ); return av } )( ii ).indexOf( "$_" ) !== -1)? console.log( ii ): localStorage.removeItem( ii ); 
@@ -1284,13 +1284,19 @@ purger.purge= function( a ){
                                 
         localStorage.setItem("file_tree", fT)
         localStorage.setItem("w_file_tree", wFT)
+        localStorage.setItem("knob", `<input class='knob button' data-width='28' data-height='28' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.18' readonly value='60'><img title=`)
+        localStorage.setItem("tooltip", `<div class='tool'><input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='60'><img src='/resources/images/white.jpg' alt='' style='object-fit: cover;  object-position: 50% 50%;'><div class='datos'><ul class='actions'><li class='chatear' title='Chatear'>C</li><li class='agregar' title='Agregar'>A</li><li class='juzgar' title='Juzgar'>J</li></ul><p class='username' title= 'Walter White'>Walter White</p><p class='rol'>Moderador <b style='color:#fff;'>+60</b></p></div><div class='insignia' title='Hum ' style='top: 28.405797101449274px; '></div><div class='insignia' title='Hum' style='top: 11.565217391304348px; '></div><div class='insignia' title='Hum ' style='top: 36.927536231884055px; '></div></div>` )
+        localStorage.setItem("user", ` src='/resources/images/white.jpg' style= 'object-fit: cover; object-position: 50% 50%;' alt=''>&nbsp<a target= '_blank'  href='/user' >Walter White</a><span class='is'>: </span><span class='Comentario'>` )
         console.log("Purged!"); 
     }; 
 }; 
 
 purger.super_purge= function( a ){
-if(!((typeof purger.index.in !== "undefined" && purger.index.in !== parseFloat(localStorage.getItem("safety_purge"))) || (typeof a != "undefined" && a === "bypass")))return
+if(!((typeof purger.index.in !== "undefined" && purger.index.in !== parseInt(localStorage.getItem("safety_purge"))) || (typeof a != "undefined" && a === "bypass")))return
 localStorage.clear()
 localStorage.setItem("safety_purge", purger.index.in)
+localStorage.setItem("knob", `<input class='knob button' data-width='28' data-height='28' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.18' readonly value='60'><img title=`)
+localStorage.setItem("tooltip", `<div class='tool'><input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='60'><img src='/resources/images/white.jpg' alt='' style='object-fit: cover;  object-position: 50% 50%;'><div class='datos'><ul class='actions'><li class='chatear' title='Chatear'>C</li><li class='agregar' title='Agregar'>A</li><li class='juzgar' title='Juzgar'>J</li></ul><p class='username' title= 'Walter White'>Walter White</p><p class='rol'>Moderador <b style='color:#fff;'>+60</b></p></div><div class='insignia' title='Hum ' style='top: 28.405797101449274px; '></div><div class='insignia' title='Hum' style='top: 11.565217391304348px; '></div><div class='insignia' title='Hum ' style='top: 36.927536231884055px; '></div></div>` )
+localStorage.setItem("user", ` src='/resources/images/white.jpg' style= 'object-fit: cover; object-position: 50% 50%;' alt=''>&nbsp<a target= '_blank'  href='/user' >Walter White</a><span class='is'>: </span><span class='Comentario'>` )
 console.log("superPurged All files and file_trees were also deleted!")
 }

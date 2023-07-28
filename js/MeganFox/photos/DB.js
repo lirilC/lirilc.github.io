@@ -1,6 +1,6 @@
 export function _user(){
 var user= {
-	username: "MeganFox",
+    username: "MeganFox",
     users_name: "Megan Denise Fox",
     profilePic: {
             "/MeganFox/img/nc79cNubi8": {

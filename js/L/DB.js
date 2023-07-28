@@ -1,7 +1,7 @@
 export function _user(){
 var user= {
-    username: "L",
-    users_name: "Laura Escobar Bonnett",
+	username: "L",
+	users_name: "Laura Escobar Bonnett",
     profilePic: {
             "/L/img/OGnpwD3jys": {
                 type: "img",
@@ -16,8 +16,8 @@ var user= {
             }
         },
     rol:{
-        rol: "Princesa",
-        level: "100"
+    	rol: "Princesa",
+    	level: "100"
     },
     tool:  `<div class='tool'>
                 <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
@@ -33,7 +33,7 @@ var user= {
                 </div>
             </div>`,
     cover: {
-        insignias: `<div title="¡Estoy Tan Enamorada!" class="line" style="top: 10%;"></div>
+    	insignias: `<div title="¡Estoy Tan Enamorada!" class="line" style="top: 10%;"></div>
                     <div title="¡Estoy Tan Enamorada!" class="line" style="top: 58%;"></div>
                     <div title="¡Estoy Tan Enamorada!" class="line" style="top: 86%;"></div>
                     <div title="¡Estoy Tan Enamorada!" class="line" style="top: 64%;"></div>
@@ -399,7 +399,7 @@ var user= {
         }
     },
     stories: {
-        "/A.K.A._Dizzy/pos/r1WjYcRQhw": {
+    	"/A.K.A._Dizzy/pos/r1WjYcRQhw": {
             type: "repost_multimedia",
             date: {
                 full: "24 de Julio de 2022 a las 3:29 pm",
@@ -462,7 +462,7 @@ var user= {
             Comentarios: "",
             Editado: [ 'type= "oC"; edHistory= {"Editado el 31 de Agosto de 2022 a las 3:38 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/217e1b57c5435fc2bbd612547fcecac4eb679f7c/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 10 de Febrero de 2022 a las 10:10 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/bddd6cbfa15e6e2bb27bde6bef42f86914f21b3e/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 25 de Octubre de 2021 a la 1:4 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/503dbef970047386769e56c222383c0db0f29ead/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 15 de Junio de 2021 a las 2:5 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/4c2ca79928a725ae354503865d01d703ef674098/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "10 de Marzo de 2021 a las 8:38 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/f4905f92a5eea07f0259cdd31cfea213d30a925b/A.K.A._Dizzy/pos/r1WjYcRQhw.html"}', "Editado el 31 de Agosto de 2022 a las 3:38 pm"]
         },
-        "/A.K.A._Dizzy/img/m88IB35sDo": {
+    	"/A.K.A._Dizzy/img/m88IB35sDo": {
             type: "repostMult_img",
             date: {
                 full: "18 de Marzo de 2022 a las 7:35 pm",
