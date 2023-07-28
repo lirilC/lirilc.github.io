@@ -721,7 +721,7 @@ distance: 0,
         's': '#sgrip',
         'w': '#wgrip'
     },
-	snap: ".widgetero,.vidVidCustomizationMode,.widget", 
+	snap: ".widgetero .widget", 
   snapMode: "both", 
 snapTolerance: 10,
 grid: ($("#gridWidth").val() == "0" && $("#gridHeight").val() == "0") || !gridSnapping? false: [parseFloat($("#gridWidth").val()), parseFloat($("#gridHeight").val())],
@@ -735,7 +735,7 @@ stop: function(event, ui)
 		}
 })
 		if(snapping){
-    		$('.widgetero .widget').resizable("option", "snap", ".vidVidCustomizationMode, .widgetero, .widgetero .widget" );
+    		$('.widgetero .widget').resizable("option", "snap", ".widgetero .widget" );
 		}else{
     		$('.widgetero .widget').resizable("option", "snap", false );
 		}
