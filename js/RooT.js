@@ -1767,7 +1767,7 @@ function newChat(a, b){
         $(".chats .chat:first-child .newMessage textarea").focus();
         $(".chats .chat:first-child .newMessage textarea").on('input', function() { 
             $(this).height(""); 
-            !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2))))): 1; 
+            !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2)) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2)))): 1; 
         }); 
 }
 function destroyChat(a){
@@ -3072,7 +3072,7 @@ wD= function(thi, b){
             $(thi.parent().next(".newComment").find("textarea")).on('input', function(){ 
                 $(this).height(""); 
                                     
-                !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2))))): 1; 
+                !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2)) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2)))): 1; 
                             
                 C= $(this); 
                             
@@ -3106,7 +3106,7 @@ wD= function(thi, b){
             $(thi.parent().next(".newComment").find("textarea")).on('input', function(){ 
                 $(this).height(""); 
                                     
-                !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2))))): 1; 
+                !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2)) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2)))): 1; 
                             
                 C= $(this); 
                             
@@ -4742,7 +4742,7 @@ _R(".comentario").on("mousemove", function(event){
 _R(".comentario")
 _R("#theater textarea", 0).on('input', function(){ 
     $(this).height(""); 
-    !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2))))): 1; 
+    !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2)) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2)))): 1; 
 }); 
 _R("#theater textarea", 0).e()
 _R(".comentarios > .newComment", 0).on('keydown', function(i){ 
@@ -5898,7 +5898,7 @@ ctrl= true
 })
 	    _R("#theater textarea", 0).on('input', function() { 
 	        $(this).height(""); 
-	        !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2))))): 1; 
+	        !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2)) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2)))): 1; 
 	    }); 
 	    _R("#theater textarea", 0).e()
 	    _R(".comentarios > .newComment", 0).on('keydown', function(i){ 
@@ -6296,7 +6296,7 @@ ctrl= true
 		            $(thi.parent().next(".newComment").find("textarea")).on('input', function(){ 
 		                $(this).height(""); 
 		                                    
-		                !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2))))): 1; 
+		                !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2)) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2)))): 1; 
 		                            
 		                C= $(this); 
 		                            
@@ -6330,7 +6330,7 @@ ctrl= true
 		            $(thi.parent().next(".newComment").find("textarea")).on('input', function(){ 
 		                $(this).height(""); 
 		                                    
-		                !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2))))): 1; 
+		                !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2)) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2)))): 1; 
 		                            
 		                C= $(this); 
 		                            
@@ -6538,7 +6538,7 @@ _R('a').on("click", function(e){
 
 		    $(".comentarios textarea").on('input', function() { 
 		        $(this).height(""); 
-		        !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2))))): 1; 
+		        !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2)) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2)))): 1; 
 		    }); 
 		    $(".comentarios > .newComment").on('keydown', function(i){ 
 		                abc= $(this).closest(".comentarios").find(".Comentarios"); 
