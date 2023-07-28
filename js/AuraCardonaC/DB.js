@@ -1,7 +1,7 @@
 export function _user(){
 var user= {
-	username: "AuraCardonaC",
-	users_name: "Aura María Cardona Demasiado",
+    username: "AuraCardonaC",
+    users_name: "Aura María Cardona Demasiado",
     profilePic: {
             "/AuraCardonaC/img/H5TxBHq4ff": {
                 type: "img",
@@ -16,8 +16,8 @@ var user= {
             }
         },
     rol:{
-    	rol: "Profe de fitness",
-    	level: "94"
+        rol: "Profe de fitness",
+        level: "94"
     },
     tool:  `<div class='tool'>
                 <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
@@ -33,7 +33,7 @@ var user= {
                 </div>
             </div>`,
     cover: {
-    	insignias: ``
+        insignias: ``
     },
     situation: {
         "###": `<div id="sión" style="border: 1px dotted #636363; width: 100%; height: 41px; position: relative; cursor: s-resize;" onmousemove='L= function(e){(e.movementX >= 0 &amp;&amp; e.movementY >= 0)? ((e.movementX / e.movementY) < 0.5)? (function(){e.target.style.cursor= "s-resize"})(): ((e.movementX / e.movementY) > 2)? (function(){e.target.style.cursor= "e-resize"})(): (function(){e.target.style.cursor= "se-resize"})(): (e.movementX < 0 &amp;&amp; e.movementY >= 0)? ((e.movementX / e.movementY) > -0.5)? (function(){e.target.style.cursor= "s-resize"})(): ((e.movementX / e.movementY) < -2)? (function(){e.target.style.cursor= "w-resize"})(): (function(){e.target.style.cursor= "sw-resize"})(): (e.movementX >= 0 &amp;&amp; e.movementY < 0)? ((e.movementX / e.movementY) > -0.5)? (function(){e.target.style.cursor= "n-resize"})(): ((e.movementX / e.movementY) < -2)? (function(){e.target.style.cursor= "e-resize"})(): (function(){e.target.style.cursor= "ne-resize"})(): (e.movementX < 0 &amp;&amp; e.movementY < 0)? ((e.movementX / e.movementY) < 0.5)? (function(){e.target.style.cursor= "n-resize"})(): ((e.movementX / e.movementY) > 2)? (function(){e.target.style.cursor= "w-resize"})(): (function(){e.target.style.cursor= "nw-resize"})(): 1}; L(event); '></div>`
@@ -173,290 +173,6 @@ var user= {
         }
     },
     stories: {
-        "/AuraCardonaC/img/zxK3COsCbY": {
-            type: "mult_img",
-            date: {
-                full: "29 de Octubre de 2022 a las 5:11 pm",
-                min: "Octubre de 2022"
-            },
-            city: {name: "Cali", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/North_downtown.JPG/300px-North_downtown.JPG", description: `Cali, oficialmente Distrito Especial, Deportivo, Cultural, Turístico, Empresarial y de Servicios de Santiago de Cali,​​​ es un distrito colombiano, capital del departamento de Valle del Cauca,​ la tercera ciudad más poblada y el tercer centro económico y cultural de Colombia. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cali'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-            title: `LOVE you mi muñeca ❤️`,
-            description: ``,
-            contents:  {carrContents: ["zxK3COsCbY.jpg", "exGWNn5AQh.jpg", "eyYxFVlYsP.jpg"]},
-            Comentarios: "",
-        },
-        "/AuraCardonaC/img/wkPiUgEf7J": {
-            type: "mult_img",
-            date: {
-                full: "23 de Octubre de 2022 a las 2:14 pm",
-                min: "Octubre de 2022"
-            },
-            city: {name: "Wall Street", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Photos_NewYork1_032.jpg/250px-Photos_NewYork1_032.jpg", description: `Wall Street es una calle de ocho cuadras de largo en el distrito financiero del Lower Manhattan en Nueva York. Va desde Broadway en el oeste hasta South Street y el East River en el este. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Wall_Street'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-            title: `Si ven este toro en la calle...`,
-            description: `...les recomiendo que le cojan las bolas y se las besen SUERTE PURA SUERTE 🍀`,
-            contents:  {carrContents: ["wkPiUgEf7J.jpg", "jviQbZFPog.jpg", "cibKARrn1w.jpg", "5oEPv9oUiv.jpg"]},
-            Comentarios: "",
-        },
-        "/AuraCardonaC/img/mDdZheLM9j": {
-            type: "mult_img",
-            date: {
-                full: "22 de Octubre de 2022 a las 7:41 pm",
-                min: "Octubre de 2022"
-            },
-            city: {name: "Nueva York", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Qwertyliberty123.jpg/257px-Qwertyliberty123.jpg", description: `Nueva York​ (en inglés: New York, (EE. UU.: pronunciado /nuˈjɔɹk/), oficialmente New York City o NYC en siglas) es la ciudad más poblada de los Estados Unidos de América y una de las más pobladas del mundo, con un área urbana de 24 millones de habitantes. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nueva_York'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-            title: `🎃`,
-            description: ``,
-            contents:  {carrContents: ["mDdZheLM9j.jpg", "Pt5abjj1e2.jpg", "QUOjcQ0l07.jpg"]},
-            Comentarios: "",
-        },
-        "/AuraCardonaC/img/bxQFR321c5": {
-            type: "mult_img",
-            date: {
-                full: "22 de Octubre de 2022 a las 5:22 pm",
-                min: "Octubre de 2022"
-            },
-            city: {name: "Salem", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Salem_mass.jpg/250px-Salem_mass.jpg", description: `Salem es una ciudad ubicada en el condado de Essex del estado estadounidense de Massachusetts.  <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Salem_(Massachusetts)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-            title: `Siempre mi mejor plan serán ellos❤️`,
-            description: `No se trata de que tu familia sea una simple compañía se trata de poder DISFRUTAR de cada uno de ellos 🙏🏻`,
-            contents:  {carrContents: ["bxQFR321c5.jpg", "UcF1xznfpn.jpg"]},
-            Comentarios: "",
-        },
-        "/AuraCardonaC/img/DHy4DSxJI7": {
-            type: "mult_img",
-            date: {
-                full: "20 de Octubre de 2022 a las 4:4 pm",
-                min: "Octubre de 2022"
-            },
-            city: {name: "Salem", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Salem_mass.jpg/250px-Salem_mass.jpg", description: `Salem es una ciudad ubicada en el condado de Essex del estado estadounidense de Massachusetts.  <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Salem_(Massachusetts)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-            title: `Nos parecemos?🙂`,
-            description: ``,
-            contents:  {carrContents: ["DHy4DSxJI7.jpg", "k3xlibKIEk.jpg"]},
-            Comentarios: "",
-        },
-        "/AuraCardonaC/img/xyAzbABTbU": {
-            type: "mult_img",
-            date: {
-                full: "19 de Octubre de 2022 a las 6:25 pm",
-                min: "Octubre de 2022"
-            },
-            city: {name: "Boston", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Boston_common_20060619.jpg/220px-Boston_common_20060619.jpg", description: `Boston (pronunciado en inglés /ˈbɒstən/) es la capital y ciudad más poblada de la Mancomunidad de Massachusetts, y una de las ciudades más antiguas de los Estados Unidos. Al tratarse de la ciudad más poblada de Nueva Inglaterra, Boston es considerada el centro económico y cultural de la región y es referida en ocasiones como la «Capital de Nueva Inglaterra» de manera no oficial. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Boston'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-            title: `Que lindo que es conocer !!✨`,
-            description: ``,
-            contents:  {carrContents: ["xyAzbABTbU.jpg", "sjcha0qyZ7.jpg", "H2Luw2f2mo.jpg"]},
-            Comentarios: "",
-        },
-        "/AuraCardonaC/img/6aleJjFWMx": {
-            type: "mult_img",
-            date: {
-                full: "19 de Octubre de 2022 a las 0:5 pm",
-                min: "Octubre de 2022"
-            },
-            city: {name: "Nueva York", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Qwertyliberty123.jpg/257px-Qwertyliberty123.jpg", description: `Nueva York​ (en inglés: New York, (EE. UU.: pronunciado /nuˈjɔɹk/), oficialmente New York City o NYC en siglas) es la ciudad más poblada de los Estados Unidos de América y una de las más pobladas del mundo, con un área urbana de 24 millones de habitantes. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nueva_York'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-            title: `Como disfruto de una buena vista con un buen atardecer!😍`,
-            description: ``,
-            contents:  {carrContents: ["6aleJjFWMx.jpg", "oGrkqse8bK.jpg", "jLo3ZF6Et4.jpg"]},
-            Comentarios: "",
-        },
-        "/AuraCardonaC/vid/B94Wi8N7hH": {
-            type: "vid",
-            date: {
-                full: "18 de Octubre de 2022 a la 7:54 am",
-                min: "Octubre de 2022"
-            },
-            city: {name: "Nueva York", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Qwertyliberty123.jpg/257px-Qwertyliberty123.jpg", description: `Nueva York​ (en inglés: New York, (EE. UU.: pronunciado /nuˈjɔɹk/), oficialmente New York City o NYC en siglas) es la ciudad más poblada de los Estados Unidos de América y una de las más pobladas del mundo, con un área urbana de 24 millones de habitantes. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nueva_York'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-            title: `ME ENCANTÓ 😍`,
-            description: ``,
-            contents:  {video: "B94Wi8N7hH"},
-            Comentarios: ""
-        },
-        "/AuraCardonaC/img/fQqryVGl5r": {
-            type: "mult_img",
-            date: {
-                full: "17 de Octubre de 2022 a las 3:51 pm",
-                min: "Octubre de 2022"
-            },
-            city: {name: "Nueva York", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Qwertyliberty123.jpg/257px-Qwertyliberty123.jpg", description: `Nueva York​ (en inglés: New York, (EE. UU.: pronunciado /nuˈjɔɹk/), oficialmente New York City o NYC en siglas) es la ciudad más poblada de los Estados Unidos de América y una de las más pobladas del mundo, con un área urbana de 24 millones de habitantes. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nueva_York'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-            title: `La clave está en no mirar hacia abajo cuando pisas el vidrio 🫠 #edgenyc`,
-            description: ``,
-            contents:  {carrContents: ["fQqryVGl5r.jpg", "IRnJIvKZqX.jpg"]},
-            Comentarios: "",
-        },
-        "/AuraCardonaC/img/FqOKdTdv6K": {
-            type: "mult_img",
-            date: {
-                full: "16 de Octubre de 2022 a las 3:16 pm",
-                min: "Octubre de 2022"
-            },
-            city: {name: "Puente de Brooklyn", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/NYCBrooklynBridge.jpg/275px-NYCBrooklynBridge.jpg", description: `El puente de Brooklyn (conocido inicialmente como puente de Nueva York y Brooklyn) une los distritos de Manhattan y Brooklyn en la ciudad de Nueva York. Se construyó entre 1870 y 1883, y en el momento de su inauguración era el puente colgante más grande del mundo. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Puente_de_Brooklyn'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-            title: `Un hermoso y antiguo Puente!!✨ #broklynbridge`,
-            description: ``,
-            contents:  {carrContents: ["FqOKdTdv6K.jpg", "sVTIzkcwZ9.jpg"]},
-            Comentarios: "",
-        },
-        "/AuraCardonaC/img/FIpk05Cvqi": {
-            type: "mult_img",
-            date: {
-                full: "16 de Octubre de 2022 a las 9:17 am",
-                min: "Octubre de 2022"
-            },
-            city: {name: "Nueva York", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Qwertyliberty123.jpg/257px-Qwertyliberty123.jpg", description: `Nueva York​ (en inglés: New York, (EE. UU.: pronunciado /nuˈjɔɹk/), oficialmente New York City o NYC en siglas) es la ciudad más poblada de los Estados Unidos de América y una de las más pobladas del mundo, con un área urbana de 24 millones de habitantes. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nueva_York'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-            title: `Una hermosa vista!🗽 #newyorkcity`,
-            description: ``,
-            contents:  {carrContents: ["FIpk05Cvqi.jpg", "Cf3thLb8kX.jpg", "DiilbM7F4U.jpg", "hMWPBA1CSv.jpg"]},
-            Comentarios: "",
-        },
-        "/AuraCardonaC/img/jfmjG7D1UR": {
-            type: "mult_img",
-            date: {
-                full: "15 de Octubre de 2022 a las 9:10 pm",
-                min: "Octubre de 2022"
-            },
-            city: {name: "Nueva York", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Qwertyliberty123.jpg/257px-Qwertyliberty123.jpg", description: `Nueva York​ (en inglés: New York, (EE. UU.: pronunciado /nuˈjɔɹk/), oficialmente New York City o NYC en siglas) es la ciudad más poblada de los Estados Unidos de América y una de las más pobladas del mundo, con un área urbana de 24 millones de habitantes. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nueva_York'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-            title: `CHOCO AVENTURAS EN OTOÑO🍁❤️ te amo!!`,
-            description: ``,
-            contents:  {carrContents: ["jfmjG7D1UR.jpg", "sDVG6dTsbd.jpg", "3kkuYuPat0.jpg", "fm27IlJwMJ.jpg"]},
-            Comentarios: "",
-        },
-        "/AuraCardonaC/img/IswshwhabH": {
-            type: "mult_img",
-            date: {
-                full: "14 de Octubre de 2022 a las 2:23 pm",
-                min: "Octubre de 2022"
-            },
-            city: {name: "Times Square", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/New_york_times_square-terabass.jpg/250px-New_york_times_square-terabass.jpg", description: `El Times Square es una intersección de avenidas en Manhattan (Nueva York, Estados Unidos). Antes llamada Plaza Longacre, está situada en la esquina de la avenida Broadway y la Séptima Avenida. Recibió su nombre actual por las oficinas de The New York Times, que se encontraban en el edificio One Times Square. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Times_Square'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-            title: `#timessquare ✨`,
-            description: ``,
-            contents:  {carrContents: ["IswshwhabH.jpg", "TPWSDsGkUU.jpg", "8yIGMQtsjl.jpg"]},
-            Comentarios: "",
-        },
-        "/AuraCardonaC/img/w7vtkRuBIm": {
-            type: "img",
-            date: {
-                full: "14 de Octubre de 2022 a las 2:52 pm",
-                min: "Octubre de 2022"
-            },
-            city: {name: "Nueva York", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Qwertyliberty123.jpg/257px-Qwertyliberty123.jpg", description: `Nueva York​ (en inglés: New York, (EE. UU.: pronunciado /nuˈjɔɹk/), oficialmente New York City o NYC en siglas) es la ciudad más poblada de los Estados Unidos de América y una de las más pobladas del mundo, con un área urbana de 24 millones de habitantes. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nueva_York'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-            title: `Una linda sonrisa merece este lugar!💙`,
-            description: ``,
-            contents:  {image: "w7vtkRuBIm.jpg"},
-            Comentarios: ""
-        },
-        "/AuraCardonaC/img/DqD1ffoViO": {
-            type: "img",
-            date: {
-                full: "13 de Octubre de 2022 a las 8:8 am",
-                min: "Octubre de 2022"
-            },
-            city: {name: "Miami Beach", pic: "https://upload.wikimedia.org/wikipedia/commons/3/3e/Miamimetroarea.jpg", description: `Miami Beach es una ciudad ubicada en el condado de Miami-Dade en el estado de Florida (Estados Unidos). En el Censo de 2010 tenía una población de 87.779 habitantes y una densidad poblacional de 2.233,68 personas por km². <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Miami_Beach'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-            title: `🍃✨`,
-            description: ``,
-            contents:  {image: "DqD1ffoViO.jpg"},
-            Comentarios: ""
-        },
-        "/AuraCardonaC/img/KQtEEZAP9p": {
-            type: "mult_img",
-            date: {
-                full: "13 de Octubre de 2022 a las 7:23 am",
-                min: "Octubre de 2022"
-            },
-            city: {name: "Miami", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Centro_de_Miami.jpg/300px-Centro_de_Miami.jpg", description: `Miami​ es una ciudad-puerto ubicada en el sureste de Florida, Estados Unidos, alrededor del río Miami, entre los Everglades y el océano Atlántico. Es la sede del condado de Miami-Dade, y por tanto, la principal, más céntrica y más poblada ciudad del Área Metropolitana de Miami. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Miami'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-            title: ``,
-            description: ``,
-            contents:  {carrContents: ["KQtEEZAP9p.jpg", "kp2LMVdgO9.jpg", "UJgkGrhBvB.jpg"]},
-            Comentarios: "",
-        },
-        "/AuraCardonaC/img/B8upiqgsON": {
-            type: "mult_img",
-            date: {
-                full: "12 de Octubre de 2022 a las 8:38 pm",
-                min: "Octubre de 2022"
-            },
-            city: {name: "Islamorada", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Islamorada_Florida.jpg/240px-Islamorada_Florida.jpg", description: `Islamorada y oficialmente como Islamorada, Village of Islands es una villa ubicada en el condado de Monroe en el estado estadounidense de Florida. En el Censo de 2010 tenía una población de 6.119 habitantes y una densidad poblacional de 360,53 personas por km². <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Islamorada'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-            title: ``,
-            description: ``,
-            contents:  {carrContents: ["B8upiqgsON.jpg", "Ngpx8sIXom.jpg", "7K4OqIQBLT.jpg", "U3cYRuObXc.jpg", "YHtN9nWoWl.jpg"]},
-            Comentarios: "",
-        },
-        "/AuraCardonaC/vid/dcKtnnbBKi": {
-            type: "vid",
-            date: {
-                full: "11 de Octubre de 2022 a la 2:45 pm",
-                min: "Octubre de 2022"
-            },
-            title: `HERMOSAS 🦒😍`,
-            description: ``,
-            contents:  {video: "dcKtnnbBKi"},
-            Comentarios: ""
-        },
-        "/AuraCardonaC/img/Keeoz8hEXK": {
-            type: "mult_img",
-            date: {
-                full: "10 de Octubre de 2022 a las 2:20 pm",
-                min: "Octubre de 2022"
-            },
-            title: `SEAN LUZ✨`,
-            description: ``,
-            contents:  {carrContents: ["Keeoz8hEXK.jpg", "B57DDuO5F2.jpg"]},
-            Comentarios: "",
-        },
-        "/AuraCardonaC/img/FjZnB3hjEw": {
-            type: "mult_img",
-            date: {
-                full: "9 de Octubre de 2022 a las 8:24 pm",
-                min: "Octubre de 2022"
-            },
-            title: `🖤`,
-            description: ``,
-            contents:  {carrContents: ["FjZnB3hjEw.jpg", "g44DoK32iD.jpg"]},
-            Comentarios: "",
-        },
-        "/AuraCardonaC/vid/HVgG5fxfZt": {
-            type: "vid",
-            date: {
-                full: "9 de Octubre de 2022 a la 1:2 pm",
-                min: "Octubre de 2022"
-            },
-            title: `BOMBA SEXY 💣`,
-            description: ``,
-            contents:  {video: "HVgG5fxfZt"},
-            Comentarios: ""
-        },
-        "/AuraCardonaC/img/a3cQIaI8ha": {
-            type: "img",
-            date: {
-                full: "7 de Octubre de 2022 a las 6:26 pm",
-                min: "Octubre de 2022"
-            },
-            city: {name: "Miami Beach", pic: "https://upload.wikimedia.org/wikipedia/commons/3/3e/Miamimetroarea.jpg", description: `Miami Beach es una ciudad ubicada en el condado de Miami-Dade en el estado de Florida (Estados Unidos). En el Censo de 2010 tenía una población de 87.779 habitantes y una densidad poblacional de 2.233,68 personas por km². <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Miami_Beach'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-            title: `PECAS 🦒`,
-            description: ``,
-            contents:  {image: "a3cQIaI8ha.jpg"},
-            Comentarios: ""
-        },
-        "/AuraCardonaC/img/dOzSiLdF38": {
-            type: "mult_img",
-            date: {
-                full: "6 de Octubre de 2022 a las 7:17 pm",
-                min: "Octubre de 2022"
-            },
-            city: {name: "Wynwood", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Midtownmiamicenter.jpg/1024px-Midtownmiamicenter.jpg", description: `Wynwood es un barrio histórico al norte del Centro de Miami, dentro del condado de Miami-Dade.​ Está limitado por la North 20th Street al sur, la Interstate 95 al oeste, la Interstate 195 al norte y la Florida East Coast Railway al este. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Wynwood'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-            title: `Todo hace parte del OUTFIT !!✨`,
-            description: ``,
-            contents:  {carrContents: ["dOzSiLdF38.jpg", "e437x7pIcU.jpg", "IAn76Rk0L8.jpg"]},
-            Comentarios: "",
-        },
-        "/AuraCardonaC/img/zuYTjt2cSj": {
-            type: "img",
-            date: {
-                full: "5 de Octubre de 2022 a las 0:7 pm",
-                min: "Octubre de 2022"
-            },
-            city: {name: "Miami Beach", pic: "https://upload.wikimedia.org/wikipedia/commons/3/3e/Miamimetroarea.jpg", description: `Miami Beach es una ciudad ubicada en el condado de Miami-Dade en el estado de Florida (Estados Unidos). En el Censo de 2010 tenía una población de 87.779 habitantes y una densidad poblacional de 2.233,68 personas por km². <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Miami_Beach'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-            title: ``,
-            description: ``,
-            contents:  {image: "zuYTjt2cSj.jpg"},
-            Comentarios: ""
-        },
         "/A.K.A._Dizzy/pos/p413w4Mawl": {
             type: "repostContainments",
             date: {
@@ -521,7 +237,7 @@ var user= {
                         </containment>`,
             Comentarios: ""
         },
-    	"/AuraCardonaC/img/eQZeHjWK8V": {
+        "/AuraCardonaC/img/eQZeHjWK8V": {
             type: "mult_img",
             date: {
                 full: "5 de Octubre de 2022 a las 2:6 pm",
@@ -532,7 +248,7 @@ var user= {
             contents:  {carrContents: ["eQZeHjWK8V.jpg", "c9byLMqcf1.jpg", "IAJZ2Y8Ygy.jpg", "PeePnnXvfW.jpg"]},
             Comentarios: "",
         },
-    	"/AuraCardonaC/img/EfEQzbHdzv": {
+        "/AuraCardonaC/img/EfEQzbHdzv": {
             type: "mult_img",
             date: {
                 full: "4 de Octubre de 2022 a las 3:3 pm",
@@ -896,7 +612,7 @@ var user= {
             Comentarios: "",
         },
         "/AuraCardonaC/vid/SZOkZDAKMZ": {
-            type: "vid",
+            type: "video",
             date: {
                 full: "5 de Marzo de 2022 a las 2:14 pm",
                 min: "Marzo de 2022"
@@ -925,7 +641,7 @@ var user= {
                 full: "14 de Febrero de 2022 a las 7:41 pm",
                 min: "Febrero de 2022"
             },
-            city: {name: "Miami Beach", pic: "https://upload.wikimedia.org/wikipedia/commons/3/3e/Miamimetroarea.jpg", description: `Miami Beach es una ciudad ubicada en el condado de Miami-Dade en el estado de Florida (Estados Unidos). En el Censo de 2010 tenía una población de 87.779 habitantes y una densidad poblacional de 2.233,68 personas por km². <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Miami_Beach'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            city: {name: "Miami Beach", pic: "https://upload.wikimedia.org/wikipedia/commons/3/3e/Miamimetroarea.jpg", description: `Miami Beach es una ciudad ubicada en el condado de Miami-Dade en el estado de Florida (Estados Unidos). En el Censo de 2010 tenía una población de 87.779 habitantes y una densidad poblacional de 2.233,68 personas por km² <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Miami_Beach'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
             title: `<a class="target" href="/A.K.A._Dizzy" title="<div class='tool'><input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'><img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'><div class='datos'><ul class='actions'><li class='chatear' title='Chatear'>C</li><li class='agregar' title='Agregar'>A</li><li class='juzgar' title='Juzgar'>J</li></ul><p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p><p class='rol'>CEO <b style='color:#fff;'>+100</b></p></div><div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div><div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div><div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div><div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div></div>">A.K.A._Dizzy</a>, vea su(s) fotico(s), pues`,
             description: ``,
             contents:  {carrContents: ["jiYQlNRSX9.jpg", "pXF49GJHaI.jpg", "PGixs4gzlF.jpg", "dsM4R5nwut.jpg"]},
