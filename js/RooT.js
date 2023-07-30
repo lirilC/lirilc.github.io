@@ -5066,10 +5066,10 @@ for(ind in edHistory){
             d.find("media").remove()
             d.find(".Comentarios").before($("badguy").find("#otherContainments")[0].outerHTML)
             d.find("text").html()
-            for(var er= 0; er <= d.find(".media audio").length - 1; er++){
-                audiojs.create(_R(d.find(".media audio"))[er])
-                _R(_R(d.find(".media audio"))[er]).e()
-            }
+            _R(".media").each(function(){
+				audiojs.create($(this).find("audio")[0])
+				$(this).e()
+			})
 
             $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
 
