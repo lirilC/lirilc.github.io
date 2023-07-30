@@ -416,10 +416,11 @@ export function app () {
                             </div>
                         </section>
                         <aside id="feed">
-                            ${one("_story", foReach, index.stories)}
-                        </aside>`,
+                            ${one("_story", foReach, _firsT(5, _of, index.stories))}
+                        </aside>
+                        <div id="loadingMorePosts">Cargando más publicaciones...</div>`,
                 feed: function (){return `<aside id="feed">
-                                              ${one("_story", foReach, index.stories)}
+                                              ${one("_story", foReach, _firsT(5, _of, index.stories))}
                                           </aside>`}
           }
       };

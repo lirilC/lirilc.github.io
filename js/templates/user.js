@@ -494,13 +494,14 @@ export function app (){
                                     </aside>
                                     <aside id="updates">
                                         <aside id="feed">
-                                            ${one("story", foReach, user.stories)}
+                                            ${one("story", foReach, firsT(5, _of, user.stories))}
                                         </aside>
                                     </aside>
                                 </section>
                             </section>
                         </section>
-                    </aside>`,
+                    </aside>
+                    <div id="loadingMorePosts">Cargando más publicaciones...</div>`,
                 sections: {
                   situation: function (){return  `<section id="situation">
                                                       <h2 class="title">Situación Sentimental</h2>
@@ -522,7 +523,7 @@ export function app (){
                 },
                 updates: function (){return  `<aside id="updates">
                                                   <aside id="feed">
-                                                      ${one("story", foReach, user.stories)}
+                                                      ${one("story", foReach, firsT(5, _of, user.stories))}
                                                   </aside>
                                               </aside>`
                 },
@@ -645,13 +646,14 @@ export function app (){
                                                               </aside>
                                                               <aside id="updates">
                                                                   <aside id="feed">
-                                                                      ${one("story", foReach, user.stories)}
+                                                                      ${one("story", foReach, firsT(5, _of, user.stories))}
                                                                   </aside>
                                                               </aside>
                                                           </section>
                                                       </section>
                                                   </section>
-                                              </aside>`},
+                                              </aside>
+                                              <div id="loadingMorePosts">Cargando más publicaciones...</div>`},
               sidebar: function (){return `<aside id="sidebar">
                         <div id="container">
                             <div id="resizeTop">

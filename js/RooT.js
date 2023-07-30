@@ -1,6 +1,7 @@
 var RooT= {}
 
 var und= "d3n9nvbl34lnvsli20icS"
+var lasTStory= undefined
 var all= "20mxcmvc2iondn29asckv"
 var _R= function(q, c, d){
 	if(typeof c === "undefined" || (typeof c != "undefined" && [all, und].indexOf(c) >= 0))return $(q).not(typeof d != "undefined"? "": ".e")
@@ -9,9 +10,52 @@ var _R= function(q, c, d){
 var _T= function(q){
 	return $(q)
 }
+var _of= "9cNidn2i9xIxmFb2CmZoq"
+var firsT= function(l, k, j){
+	var reT= {}
+	for(var f= 0; f < l; f++){
+		if(!!Object.keys(j)[f])reT[Object.keys(j)[f]]= Object.values(j)[f]
+	}
+	return reT
+}
+var _firsT= function(l, k, j){
+	var reT= []
+	for(var f= 0; f < l * 2; f+=2){
+		if(!!j[f]){
+			reT[f]= j[f]
+			reT[f+1]= j[f+1]
+		}
+	}
+	return reT
+}
+var afTer= "ashd9812h39d81h92hd10"
+var _all= function(l, s, j, i, k ){
+	var reT= {}
+	for(var f= 0; f < Object.keys(k).length; f++){
+		if(Object.keys(k)[f] == j){
+			for(var z= 1; z <= l; z++){
+				if(!!Object.keys(k)[z + f])reT[Object.keys(k)[z + f]]= Object.values(k)[z + f]
+			}
+		}
+	}
+	return reT
+}
+var __all= function(l, s, j, i, k ){
+	var reT= []
+	for(var f= 0; f < k.length; f++){
+		if(k[f] == j){
+			for(var z= 2; z <= l*2; z+=2){
+				if(!!k[z]){
+					reT[z - 2]= k[z + f]
+					reT[z  - 1]= k[z + f + 1]
+				}
+			}
+		}
+	}
+	return reT
+}
 var Then= "KOnv9na98vb92bklrh0fu"
 var foReach= "foReach"
-
 var one= function(a, b, c, d){
 	switch(a){
     	case "story":
@@ -1627,7 +1671,6 @@ RooT.reverse= function(a){
 	return reTurn
 }
 
-var afTer= "ashd9812h39d81h92hd10"
 var befoRe= "jbv39bcib9hb09asd12ac"
 var befoReEndOf= "a2w9nc9sa9c8n2ncloia1"
 var aTTheBeginningOf= "1asdaDD2dDDD27scCSDDs"
@@ -3399,7 +3442,7 @@ switch(ty){
     break; 
     case "story": 
         $(".story").each(function(){ 
-            if(($(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + ($(this).find(".carr").find("img")[0].attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img")[0].attr("s_rc"):$(this).find(".carr").find("img")[0].attr("src")).slice(($(this).find(".carr").find("img")[0].attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img")[0].attr("s_rc"):$(this).find(".carr").find("img")[0].attr("src")).lastIndexOf("/"), ($(this).find(".carr").find("img")[0].attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img")[0].attr("s_rc"):$(this).find(".carr").find("img")[0].attr("src")).lastIndexOf(".")): $(this).find(".options a").attr("href")) == uRl){
+            if(($(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + ($(this).find(".carr").find("img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img").attr("s_rc"):$(this).find(".carr").find("img").attr("src")).slice(($(this).find(".carr").find("img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img").attr("s_rc"):$(this).find(".carr").find("img").attr("src")).lastIndexOf("/"), ($(this).find(".carr").find("img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img").attr("s_rc"):$(this).find(".carr").find("img").attr("src")).lastIndexOf(".")): $(this).find(".options a").attr("href")) == uRl){
                 a= $(this); 
                 (function(){ 
                     a.on( "click", function(r){ 
@@ -3574,7 +3617,7 @@ K100= function(builds){
                 } 
             } 
         })(); 
-    	$(".foto").each(function(){ 
+    	_R(".foto").each(function(){ 
 	        src= $(this).is(".mult_img")? un_tn($(this).find(".carr img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr img").attr("s_rc"):$(this).find(".carr img").attr("src")): un_tn($(this).find(".pic").attr("src")=="/resources/assets/loading.gif"?$(this).find(".pic").attr("s_rc"):$(this).find(".pic").attr("src")); 
 	        w1=  "/" + user.username + "/img" + src.slice(src.lastIndexOf("/"), src.lastIndexOf(".")); 
 	        cold= JSON.parse(localStorage.getItem(w1)); 
@@ -3588,8 +3631,9 @@ K100= function(builds){
 	            !(!!cold && (cold.hash))? t.find("img").on("click", function(){openFotosModal($(this));}): 1; 
 	        })(): (function(){
 	        })(); 
+	        $(this).e()
 	    }); 
-	    $(".vid").each(function(){ 
+	    _R(".vid").each(function(){ 
 	        w1= `/${user.username}/vid/${$(this).find("video")[0].src.slice($(this).find("video")[0].src.lastIndexOf("/") + 1, -4)}`
 	        cold= JSON.parse(localStorage.getItem(w1)); 
 	        t= $(this); 
@@ -3602,8 +3646,9 @@ K100= function(builds){
 	            !(!!cold && (cold.hash))? t.prev().on("click", function(){openVidModal($(this).next().find(".Enlarge"))}): 1; 
 	        })(): (function(){
 	        })(); 
+	        $(this).e()
 	    }); 
-	    $(".story").each(function(){ 
+	    _R(".story").each(function(){ 
 	        w1=  $(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + ($(this).find(".carr").find("img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img").attr("s_rc"):$(this).find(".carr").find("img").attr("src")).slice(($(this).find(".carr").find("img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img").attr("s_rc"):$(this).find(".carr").find("img").attr("src")).lastIndexOf("/"), ($(this).find(".carr").find("img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img").attr("s_rc"):$(this).find(".carr").find("img").attr("src")).lastIndexOf(".")): $(this).find(".options a").attr("href");                                                   
 	        cold= JSON.parse(localStorage.getItem(w1)); 
 	        t= $(this); 
@@ -3631,8 +3676,11 @@ K100= function(builds){
 	            })(): 1; 
 	        })(): (function(){
 	        })(); 
+	        $(this).e()
+	        lasTStory= w1
+	        console.log($(this))
 	    }); 
-	    $(".photo").each(function(){ 
+	    _R(".photo").each(function(){ 
 	        src= $(this).is(".mult_img")? un_tn($(this).find(".carr img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr img").attr("s_rc"):$(this).find(".carr img").attr("src")): un_tn($(this).find(".pic").attr("src")=="/resources/assets/loading.gif"?$(this).find(".pic").attr("s_rc"):$(this).find(".pic").attr("src")); 
 	        w1=  "/" + user.username + "/img" + src.slice(src.lastIndexOf("/"), src.lastIndexOf(".")); 
 	        cold= JSON.parse(localStorage.getItem(w1)); 
@@ -3646,8 +3694,9 @@ K100= function(builds){
 	            !(!!cold && (cold.hash))? t.find("img").on("click", function(){openModal($(this))}): 1; 
 	        })(): (function(){ 
 	        })(); 
+	        $(this).e()
 	    }); 
-	    $("#profilePic").each(function(){ 
+	    _R("#profilePic").each(function(){ 
 	        src= ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img").attr("src")=="/resources/assets/loading.gif"?$("#profilePic").find(".carr img").attr("s_rc"):$("#profilePic").find(".carr img").attr("src")): un_tn($("#profilePic > img").attr("src")=="/resources/assets/loading.gif"?$("#profilePic > img").attr("s_rc"):$("#profilePic > img").attr("src"))); 
 	        w1= "/" + user.username + "/img" + src.slice(src.lastIndexOf("/"), src.lastIndexOf(".")); 
 	        cold= JSON.parse(localStorage.getItem(w1)); 
@@ -3661,6 +3710,7 @@ K100= function(builds){
 	            !(!!cold && (cold.hash))? $("#profilePic").on("click", function(){openProfilePicModal($(this));}): 1; 
 	        })(): (function(){
 	        })(); 
+	        $(this).e()
 	    }); 
 } 
 K0= function(){
@@ -4285,6 +4335,43 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
 	         }
 	    });
 	};
+	/*Event listener for lazy post loading*/
+	_last_Request= 0
+	_T(window).scroll(function() {
+		if(RooT.maTch.root.exec(actualLocation) !== null){
+		   if($(window).scrollTop() + $(window).height() == $(document).height()) {
+				if(!_last_Request && __all(5, afTer, lasTStory, _of, index.stories).length){
+		          $("#loadingMorePosts").addClass("visible")
+		         _R("#feed", und, "e").append(one("_story", foReach, __all(5, afTer, lasTStory, _of, index.stories)));
+		         RooT.ready()
+					_last_Request= 372
+					_last_Request_interval= setInterval(function(){
+						_last_Request-= 124
+						if(!_last_Request){
+							clearInterval(_last_Request_interval)
+							$("#loadingMorePosts").removeClass("visible")
+						}
+					}, 124 )
+				}
+		   }
+		}else if(RooT.maTch.user.exec(actualLocation)){
+			if($(window).scrollTop() + $(window).height() == $(document).height()) {
+				if(!_last_Request && Object.keys(_all(5, afTer, lasTStory, _of, user.stories)).length){
+		          $("#loadingMorePosts").addClass("visible")
+		         _R("#feed", und, "e").append(one("story", foReach, _all(5, afTer, lasTStory, _of, user.stories)));
+		         RooT.ready()
+					_last_Request= 372
+					_last_Request_interval= setInterval(function(){
+						_last_Request-= 124
+						if(!_last_Request){
+							clearInterval(_last_Request_interval)
+							$("#loadingMorePosts").removeClass("visible")
+						}
+					}, 124 )
+				}
+		   }
+		}
+	});
 	/*Define actual location*/
 	actualLocation= window.location.pathname
 	/*Define username*/
@@ -4980,7 +5067,8 @@ for(ind in edHistory){
             d.find(".Comentarios").before($("badguy").find("#otherContainments")[0].outerHTML)
             d.find("text").html()
             for(var er= 0; er <= d.find(".media audio").length - 1; er++){
-                audiojs.create(d.find(".media audio")[er])
+                audiojs.create(_R(d.find(".media audio"))[er])
+                _R(_R(d.find(".media audio"))[er]).e()
             }
 
             $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
@@ -5067,8 +5155,9 @@ if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHisto
 }
 })
 /*Create all audiojs instances*/
-audiojs.events.ready(function(){
-   var as= audiojs.createAll()
+_R(".media").each(function(){
+	audiojs.create($(this).find("audio")[0])
+	$(this).e()
 })
 
 /***/
@@ -5448,6 +5537,43 @@ oReq.send();
 	         }
 	    });
 	};
+	/*Event listener for lazy post loading*/
+	_last_Request= 0
+	_T(window).scroll(function() {
+		if(RooT.maTch.root.exec(actualLocation) !== null){
+		   if($(window).scrollTop() + $(window).height() == $(document).height()) {
+				if(!_last_Request && __all(5, afTer, lasTStory, _of, index.stories).length){
+		          $("#loadingMorePosts").addClass("visible")
+		         _R("#feed", und, "e").append(one("_story", foReach, __all(5, afTer, lasTStory, _of, index.stories)));
+		         RooT.ready()
+					_last_Request= 372
+					_last_Request_interval= setInterval(function(){
+						_last_Request-= 124
+						if(!_last_Request){
+							clearInterval(_last_Request_interval)
+							$("#loadingMorePosts").removeClass("visible")
+						}
+					}, 124 )
+				}
+		   }
+		}else if(RooT.maTch.user.exec(actualLocation)){
+			if($(window).scrollTop() + $(window).height() == $(document).height()) {
+				if(!_last_Request && Object.keys(_all(5, afTer, lasTStory, _of, user.stories)).length){
+		          $("#loadingMorePosts").addClass("visible")
+		         _R("#feed", und, "e").append(one("story", foReach, _all(5, afTer, lasTStory, _of, user.stories)));
+		         RooT.ready()
+					_last_Request= 372
+					_last_Request_interval= setInterval(function(){
+						_last_Request-= 124
+						if(!_last_Request){
+							clearInterval(_last_Request_interval)
+							$("#loadingMorePosts").removeClass("visible")
+						}
+					}, 124 )
+				}
+		   }
+		}
+	});
 	/*Define actual location*/
 	actualLocation= window.location.pathname
 	/*RooT root link*/
@@ -5602,7 +5728,6 @@ oReq.send();
         $($(".current")[0]).attr("tabindex", 0); 
         $(".current")[0].focus(); 
     })
-    _R(".story").e()
     /*Add click event listeners to .stars and .bookmarks __rev*/
     _R(".star").on("click", function (){ 
         $(this).toggleClass("true"); 
@@ -5886,8 +6011,9 @@ if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHisto
 }
 })
 /*Create all audiojs instances*/
-audiojs.events.ready(function(){
-   var as= audiojs.createAll()
+_R(".media").each(function(){
+	audiojs.create($(this).find("audio")[0])
+	$(this).e()
 })
 
 	/**/ 
