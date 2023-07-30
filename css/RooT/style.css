@@ -777,7 +777,7 @@ content: "\e904"
     top: 0;
     width: 205px;
     background-color: #fff;
-    z-index: 1;
+    z-index: 12;
     height: 100%;
     padding-top: 46px;
     box-sizing: border-box;
@@ -3028,7 +3028,7 @@ content: "\e904"
     top: 0;
     width: 205px;
     background-color: #fff;
-    z-index: 1;
+    z-index: 12;
     height: 100%;
     padding-top: 46px;
     box-sizing: border-box;
@@ -4320,7 +4320,7 @@ header nav ul li#right-menu #store::before {
     right: 0;
     width: 205px;
     background-color: #fff;
-    z-index: 1;
+    z-index: 12;
 }
 #sidebar .slimScrollDiv{
     position: absolute;
@@ -7774,4 +7774,38 @@ th:last-child {
 th:first-child {
   border: 1px solid;
   font-style: normal !important;
+}
+
+@keyframes backgroundfadeinfadeout {
+  0% {background-color: #d0d0d0;}
+  21% {background-color: #e3e3e3;}
+  54% {background-color: #d0d0d0;}
+  75% {background-color: #e3e3e3;}
+  100% {background-color: #d0d0d0;}
+}
+
+#loadingMorePosts {
+  width: 100%;
+  height: 12px;
+  position: fixed;
+  bottom: 0;
+  color: black;
+  font-size: 10px;
+  line-height: 1;
+  background-color: #d0d0d0;
+  animation-name: backgroundfadeinfadeout;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  z-index: 10;
+  display: none;
+  width: 100%;
+  height: 12px;
+  position: fixed;
+  bottom: 0;
+  color: black;
+  font-size: 10px;
+  line-height: 1;
+}
+#loadingMorePosts.visible {
+  display: block;
 }
