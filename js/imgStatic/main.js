@@ -39,7 +39,14 @@ loadPage(window.location.pathname, "p")
 
 
 
-
+var trimUsername= function( liurl ){ 
+    liurl= liurl.slice(liurl.indexOf("/") + 1)
+    return liurl.slice(liurl.indexOf("/"))
+} 
+var getUsername= function( liurl ){ 
+    liurl= liurl.slice(0, liurl.lastIndexOf("/"))
+    return liurl.slice(1, liurl.lastIndexOf("/"))
+}
 closeModal= function(){1}; 
 var hashes= {}; 
 var nonBuilt; 
@@ -102,7 +109,7 @@ function getCommentsAndAnswers(u, l){
     }); 
 } 
 
-k200= function(f, ww1, aa, u, ty){ 
+k200= function(f, ww1, aa, u, ty, uRl){ 
     /*console.log("Entered!")*/ 
 switch(ty){ 
     case "static": 
@@ -126,9 +133,9 @@ console.log(a)
 newComments[newComments.length]= getNewComments(aS.find(".Comentarios"), $("badguy .Comentarios")); 
 getCommentsAndAnswers($("badguy .Comentarios"), aS);
 
-JSON.parse(localStorage.getItem(f.target.responseURL.slice(100, -5))).B? aS.find(".options .bookmark").addClass("true"): aS.find(".options .bookmark").removeClass("true");
-JSON.parse(localStorage.getItem(f.target.responseURL.slice(100, -5))).S? aS.find(".options .star").addClass("true"): aS.find(".options .star").removeClass("true");
-!!JSON.parse(localStorage.getItem(f.target.responseURL.slice(100, -5))).C? (function(){aS.find(".Comentarios")[0].innerHTML= JSON.parse(localStorage.getItem(f.target.responseURL.slice(100, -5))).C})(): 1;
+JSON.parse(localStorage.getItem(uRl)).B? aS.find(".options .bookmark").addClass("true"): aS.find(".options .bookmark").removeClass("true");
+JSON.parse(localStorage.getItem(uRl)).S? aS.find(".options .star").addClass("true"): aS.find(".options .star").removeClass("true");
+!!JSON.parse(localStorage.getItem(uRl)).C? (function(){aS.find(".Comentarios")[0].innerHTML= JSON.parse(localStorage.getItem(uRl)).C})(): 1;
 $("badguy").remove(); 
 for(w in newComments){ 
     if(newComments[w].length == 1){
@@ -158,7 +165,7 @@ for(w in newAnswers){
 } 
 console.log(u[0])
 
-localStorage.setItem(f.target.responseURL.slice(100, -5), JSON.stringify({B: JSON.parse(localStorage.getItem(f.target.responseURL.slice(100, -5))).B, S: JSON.parse(localStorage.getItem(f.target.responseURL.slice(100, -5))).S, C: JSON.parse(localStorage.getItem(f.target.responseURL.slice(100, -5))).C, hash: u[0].sha}))
+localStorage.setItem(uRl, JSON.stringify({B: JSON.parse(localStorage.getItem(uRl)).B, S: JSON.parse(localStorage.getItem(uRl)).S, C: JSON.parse(localStorage.getItem(uRl)).C, hash: u[0].sha}))
 $('.theater .comments .comentarios .Comentarios .comentario').on("mousemove", function(event){elx= $($(this).children()[0]); circleWidth= elx.outerWidth( true ),circleHeight = elx.outerHeight( true ),circleLeft   = elx.offset().left,circleTop    = elx.offset().top,circlePos    ={x    : circleLeft + circleWidth / 2,y    : circleTop + circleHeight / 2,radius: circleWidth / 2};distance   = Math.sqrt( Math.pow( event.pageX - circlePos.x, 2 ) + Math.pow( event.pageY - circlePos.y, 2 ) );if(distance <= circlePos.radius){$($(this).children()[0]).css({"pointer-events": "all"});$($(this).children()[0]).css({"pointer-events": "all"});}else{$($(this).children()[0]).css({"pointer-events": "none"});$($(this).children()[0]).css({"pointer-events": "none"});}}); 
 
     $("#theater .Respuestas").html(function(){return '<span class="Responder"></span>' + "Respuestas (" + $(this).parent().children().filter(".comentario.hidden").length + ")"}); 
@@ -216,30 +223,34 @@ $('.theater .comments .comentarios .Comentarios .comentario').on("mousemove", fu
 
     
 
-    localStorage.setItem(f.target.responseURL.slice(100, -5), JSON.stringify({B: JSON.parse(localStorage.getItem(f.target.responseURL.slice(100, -5))).B, S: JSON.parse(localStorage.getItem(f.target.responseURL.slice(100, -5))).S, C: JSON.parse(localStorage.getItem(f.target.responseURL.slice(100, -5))).C, hash: u[0].sha})); 
+    localStorage.setItem(uRl, JSON.stringify({B: JSON.parse(localStorage.getItem(uRl)).B, S: JSON.parse(localStorage.getItem(uRl)).S, C: JSON.parse(localStorage.getItem(uRl)).C, hash: u[0].sha})); 
 }
-k300= function(C, p, y, ty){ 
+k300= function(C, p, y, ty, rep){ 
     typeof JSON.parse(C.target.response)[0] == "undefined"? console.log(C): 1; 
-
-    hashes[C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))]= (function(){built= true; for(eForensics in JSON.parse(C.target.response)){ 
+        art= C;
+    hashes[`/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`]= (function(){built= true; for(eForensics in JSON.parse(C.target.response)){ 
             if(nonBuilt.indexOf(JSON.parse(C.target.response)[eForensics].sha) != -1){ 
                 built= parseInt(eForensics) + 1; 
             } 
-        }; return built !== true? JSON.parse(C.target.response)[built].sha: JSON.parse(C.target.response)[0].sha; })(); 
-    if(!!JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))) && JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).hash != JSON.parse(C.target.response)[0].sha){
+        };
+
+        return built !== true? JSON.parse(C.target.response)[built].sha: JSON.parse(C.target.response)[0].sha 
+    })(); 
+    
+    if(!!JSON.parse(localStorage.getItem(`/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`)) && JSON.parse(localStorage.getItem(`/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`)).hash != JSON.parse(C.target.response)[0].sha){
         var oReq= new XMLHttpRequest(); 
-        oReq.addEventListener("load", function(e){k200(e, p, y, JSON.parse(C.target.response), ty)}); 
-        oReq.open("GET", "https://raw.githubusercontent.com/LirilC/Lirilc.github.io/" + JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).hash + C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")) + ".html"); 
-        oReq.send(); 
-    }else if(!!JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))))){
+        oReq.addEventListener("load", function(e){k200(e, p, y, JSON.parse(C.target.response), ty, (`/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`))}); 
+        oReq.open("GET", `https://raw.githubusercontent.com/LirilC/${rep}/${JSON.parse(localStorage.getItem(`/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`)).hash + C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}.html`); 
+        oReq.send();  
+    }else if(!!JSON.parse(localStorage.getItem(`/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`))){
         switch(ty){
             case "static": 
                 a= $("#theater"); 
             break; 
         }; 
-        JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).B? a.find(".options .bookmark").addClass("true"): a.find(".options .bookmark").removeClass("true"); 
-        JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).S? a.find(".options .star").addClass("true"): a.find(".options .star").removeClass("true"); 
-        !!JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).C? (function(){a.find(".Comentarios")[0].innerHTML= JSON.parse(localStorage.getItem(C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf(".")))).C})(): 1; 
+        localStorage.getItem(`/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`) !== null && JSON.parse(localStorage.getItem(`/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`)).B? a.find(".options .bookmark").addClass("true"): a.find(".options .bookmark").removeClass("true"); 
+        localStorage.getItem(`/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`) !== null && JSON.parse(localStorage.getItem(`/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`)).S? a.find(".options .star").addClass("true"): a.find(".options .star").removeClass("true"); 
+        localStorage.getItem(`/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`) !== null && !!JSON.parse(localStorage.getItem(`/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`)).C? (function(){a.find(".Comentarios")[0].innerHTML= JSON.parse(localStorage.getItem(`/${rep}${C.target.responseURL.slice(C.target.responseURL.lastIndexOf("=") + 1, C.target.responseURL.lastIndexOf("."))}`)).C})(): 1; 
 
         $('.theater .comments .comentarios .Comentarios .comentario').on("mousemove", function(event){elx= $($(this).children()[0]); circleWidth= elx.outerWidth( true ),circleHeight = elx.outerHeight( true ),circleLeft   = elx.offset().left,circleTop    = elx.offset().top,circlePos    ={x    : circleLeft + circleWidth / 2,y    : circleTop + circleHeight / 2,radius: circleWidth / 2};distance   = Math.sqrt( Math.pow( event.pageX - circlePos.x, 2 ) + Math.pow( event.pageY - circlePos.y, 2 ) );if(distance <= circlePos.radius){$($(this).children()[0]).css({"pointer-events": "all"});$($(this).children()[0]).css({"pointer-events": "all"});}else{$($(this).children()[0]).css({"pointer-events": "none"});$($(this).children()[0]).css({"pointer-events": "none"});}}); 
 
@@ -324,20 +335,20 @@ document.addEventListener("keydown",function(evt){
         }
     })()}else if(!!aaa.find(".carr").length){ 
 
-	   switch(evt.keyCode){
+       switch(evt.keyCode){
             case 37: 
                 !$(aaa.find(".carr")).is(":animated")? $(aaa.find(".carr")).animate({scrollLeft: aaa.find(".carr")[0].scrollLeft - $(aaa.find(".carr")).width()}, 400, function(){
-            		  a$= $(aaa.find(".carr")).find(".pic")[Math.round(aaa.find(".carr")[0].scrollLeft / $(aaa.find(".carr")).width())].src; 
-                	   a$= a$.slice(a$.lastIndexOf("/") + 1, a$.lastIndexOf("."));
+                      a$= $(aaa.find(".carr")).find(".pic")[Math.round(aaa.find(".carr")[0].scrollLeft / $(aaa.find(".carr")).width())].src; 
+                       a$= a$.slice(a$.lastIndexOf("/") + 1, a$.lastIndexOf("."));
                         history.pushState({page: 1}, "", "/" + username + "/img/" + a$); 
-				  }): 672; 
+                  }): 672; 
                 break; 
             case 39: 
                 !$(aaa.find(".carr")).is(":animated")? $(aaa.find(".carr")).animate({scrollLeft: aaa.find(".carr")[0].scrollLeft + $(aaa.find(".carr")).width()}, 400, function(){
-            		  a$= $(aaa.find(".carr")).find(".pic")[Math.round(aaa.find(".carr")[0].scrollLeft / $(aaa.find(".carr")).width())].src; 
-                	   a$= a$.slice(a$.lastIndexOf("/") + 1, a$.lastIndexOf(".")); 
+                      a$= $(aaa.find(".carr")).find(".pic")[Math.round(aaa.find(".carr")[0].scrollLeft / $(aaa.find(".carr")).width())].src; 
+                       a$= a$.slice(a$.lastIndexOf("/") + 1, a$.lastIndexOf(".")); 
                         history.pushState({page: 1}, "", "/" + username + "/img/" + a$); 
-				 }): 672; 
+                 }): 672; 
                 break; 
         }
     } 
@@ -370,8 +381,8 @@ K100= function(builds){
         t= $(this); 
         (!hashes[w1] || (!!cold && (cold.hash)))? (function(){ 
             var oReq= new XMLHttpRequest(); 
-            oReq.addEventListener("load", function(e){k300(e, w1, t, "static")}); 
-            oReq.open("GET", "https://api.github.com/repos/LirilC/lirilc.github.io/commits?path=" +  w1 + ".html"); 
+            oReq.addEventListener("load", function(e){k300(e, w1, t, "static", getUsername(w1))}); 
+            oReq.open("GET", `https://api.github.com/repos/LirilC/${getUsername(w1)}/commits?path=${trimUsername(w1)}.html`); 
             oReq.setRequestHeader('Authorization', "token " + token); 
             oReq.send(); 
         })(): 1; 
@@ -524,9 +535,9 @@ Antheater= $("#theater");
         Math.round($(this)[0].scrollLeft / $(this).width()) == $(this).find(".pic").length - 1? (function(){rf.parent().find(".nav_arrow.right").addClass("disabled"); $("#theater").find(".nav_arrow.right").addClass("disabled")})(): (function(){rf.parent().find(".nav_arrow.right").removeClass("disabled"); $("#theater").find(".nav_arrow.right").removeClass("disabled")})(); 
         $(this)[0].scrollLeft == 0? (function(){rf.parent().find(".nav_arrow.left").addClass("disabled"); $("#theater").find(".nav_arrow.left").addClass("disabled");})(): (function(){rf.parent().find(".nav_arrow.left").removeClass("disabled"); $("#theater").find(".nav_arrow.left").removeClass("disabled")})(); 
     }) 
-	$(".carr img").each(function(){ 
-		$(this)[0].src.indexOf(window.location.pathname.slice(window.location.pathname.lastIndexOf("/") + 1)) != -1? $(".carr").scrollLeft($(".carr").width() * $(this).parent().index()) : 123
-	}); 
+    $(".carr img").each(function(){ 
+        $(this)[0].src.indexOf(window.location.pathname.slice(window.location.pathname.lastIndexOf("/") + 1)) != -1? $(".carr").scrollLeft($(".carr").width() * $(this).parent().index()) : 123
+    }); 
     
     rf= $(".carr")
     if(!!rf.length){

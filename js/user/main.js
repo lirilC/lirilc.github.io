@@ -1073,7 +1073,7 @@ wD= function(thi, b){
             $(thi.parent().next(".newComment").find("textarea")).on('input', function(){ 
                 $(this).height(""); 
                                     
-                !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2))))): 1; 
+                !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2)) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2)))): 1; 
                             
                 C= $(this); 
                             
@@ -1107,7 +1107,7 @@ wD= function(thi, b){
             $(thi.parent().next(".newComment").find("textarea")).on('input', function(){ 
                 $(this).height(""); 
                                     
-                !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2))))): 1; 
+                !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2)) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2)))): 1; 
                             
                 C= $(this); 
                             
@@ -1234,7 +1234,7 @@ badGuy= function(){
 
 purger= {}; 
             
-purger.index= 30;
+purger.index= 31;
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return
@@ -1898,16 +1898,16 @@ $(".story").each(function(){
     }})
 
     $('.chats').click(function(e){ 
-	    aa= e.target; 
-	    ii= false; 
-	    while(!!aa.parentElement && !ii){ 
-	        (!!aa.parentElement.getAttribute("class") && aa.parentElement.getAttribute("class").indexOf("chat ") != -1)? ii= true: 1; 
-	        aa= aa.parentElement; 
-	    }
+        aa= e.target; 
+        ii= false; 
+        while(!!aa.parentElement && !ii){ 
+            (!!aa.parentElement.getAttribute("class") && aa.parentElement.getAttribute("class").indexOf("chat ") != -1)? ii= true: 1; 
+            aa= aa.parentElement; 
+        }
         if(!ii){ 
             $(this).hide(); 
-    	    $(document.elementFromPoint(e.clientX, e.clientY)).trigger("click"); 
-    	    $(this).show(); 
+            $(document.elementFromPoint(e.clientX, e.clientY)).trigger("click"); 
+            $(this).show(); 
         }
     }); 
     $("html").click(function(){
@@ -2318,7 +2318,7 @@ function responsive(){
         }
         $("#chats .chats").width($(window).width() - $("#sidebar").outerWidth() -10);
         $("#sidebar #container #resizeTop").height($("#sidebar").height() - $("#sidebar #container #resizeBottom").height() - 36);
-	$("#options ul").width($("#content").width() - 243.5); 
+    $("#options ul").width($("#content").width() - 243.5); 
  }
 
  function newChat(a, b){
@@ -2327,7 +2327,7 @@ function responsive(){
         $(".chats .chat:first-child .newMessage textarea").focus();
         $(".chats .chat:first-child .newMessage textarea").on('input', function(){ 
             $(this).height(""); 
-            !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2))))): 1; 
+            !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2)) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2)))): 1; 
         }); 
 }
 function destroyChat(a){
@@ -2521,7 +2521,7 @@ document.addEventListener("keydown", function(e){if(e.shiftKey && e.ctrlKey && e
     }); 
     $("#theater textarea").on('input', function(){ 
         $(this).height(""); 
-        !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2))))): 1; 
+        !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2)) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2)))): 1; 
     }); 
     $(".comentarios > .newComment").on('keydown', function(i){ 
         abc= $("#theater .Comentarios"); 
