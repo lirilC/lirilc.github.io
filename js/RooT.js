@@ -1766,7 +1766,7 @@ return videos}
 /**/
 var purger= {}; 
             
-purger.index= 31; 
+purger.index= 30; 
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return
@@ -4304,37 +4304,7 @@ RooT.maTch.imgStatic= new RegExp('^(\/.*?\/)img(\/.*?)$')//A slash anything but 
 RooT.maTch.vidStatic= new RegExp('^(\/.*?\/)vid(\/.*?)$')//A slash anything but a slash a slash and the word vid after, a slash and anything; e.g: /uaocno/vid/onvesb
 
 if(RooT.maTch.user.exec(window.location.pathname) !== null){
-	/*IntersectionObserver for lazy images loading*/
-	closesTParent= function(k){
-		return _R(k, und, 'e').closest(".carr").length?_R(k, und, 'e').closest(".carr").find("img"):_R(k, und, 'e')
-	}
-	document.querySelectorAll('img[s_rc]:not([s_rc=""])').forEach((i) => {
-	    if (i) {
-	        observer = new IntersectionObserver((entries) => {
-	            observerCallback(entries, observer, i)
-	        },
-	        {threshold: 0.05});    
-	        observer.observe(i);
-	    }
-	})
-
-	observerCallback = (entries, observer, header) => {
-	    entries.forEach((entry, i) => {
-			if (entry.intersectionRatio > 0) {
-	             _R(entry.target, und, 'e').addClass("intersecting")
-	         }
-	         else {
-	             _R(entry.target, und, 'e').removeClass("intersecting")
-	         }
-			 if (entry.intersectionRatio > 0) {
-	             _R(entry.target, und, 'e').attr("src", function(){return $(this).attr("s_rc")})
-	         }
-	         else if( _R(entry.target, und, 'e').attr("src") != "/resources/assets/loading.gif") {
-	             _R(entry.target, und, 'e').attr("s_rc", function(){return $(this).attr("src")})
-	             _R(entry.target, und, 'e').attr("src", "/resources/assets/loading.gif")
-	         }
-	    });
-	};
+	
 	/*Event listener for lazy post loading*/
 	_last_Request= 0
 	_T(window).scroll(function() {
@@ -4397,7 +4367,7 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
             randmIntgr= parseInt(Math.random() * Urls.length ); 
         }
 
-        if(_R("#resizeBottom ul").length)_R("#resizeBottom ul")[0].innerHTML= `${_R("#resizeBottom ul")[0].innerHTML}<li class="button offline"><img src="/resources/images/chat/${Urls[randmIntgr]}" alt=""><p>${Urls[randmIntgr].slice(0, Urls[randmIntgr].indexOf("."))}</p><span ></span></li>`
+        if(_R("#resizeBottom ul").length)_R("#resizeBottom ul")[0].innerHTML= `${_R("#resizeBottom ul")[0].innerHTML}<li class="button offline"><img src= "/resources/assets/loading.gif" s_rc="/resources/images/chat/${Urls[randmIntgr]}" alt=""><p>${Urls[randmIntgr].slice(0, Urls[randmIntgr].indexOf("."))}</p><span ></span></li>`
         Used[Used.length]= randmIntgr
     }
 
@@ -4412,6 +4382,37 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
     }
 
     _R("#resizeBottom ul").e()
+    /*IntersectionObserver for lazy images loading*/
+	closesTParent= function(k){
+		return _R(k, und, 'e').closest(".carr").length?_R(k, und, 'e').closest(".carr").find("img"):_R(k, und, 'e')
+	}
+	document.querySelectorAll('img[s_rc]:not([s_rc=""])').forEach((i) => {
+	    if (i) {
+	        observer = new IntersectionObserver((entries) => {
+	            observerCallback(entries, observer, i)
+	        },
+	        {threshold: 0.05});    
+	        observer.observe(i);
+	    }
+	})
+
+	observerCallback = (entries, observer, header) => {
+	    entries.forEach((entry, i) => {
+			if (entry.intersectionRatio > 0) {
+	             _R(entry.target, und, 'e').addClass("intersecting")
+	         }
+	         else {
+	             _R(entry.target, und, 'e').removeClass("intersecting")
+	         }
+			 if (entry.intersectionRatio > 0) {
+	             _R(entry.target, und, 'e').attr("src", function(){return $(this).attr("s_rc")})
+	         }
+	         else if( _R(entry.target, und, 'e').attr("src") != "/resources/assets/loading.gif") {
+	             _R(entry.target, und, 'e').attr("s_rc", function(){return $(this).attr("src")})
+	             _R(entry.target, und, 'e').attr("src", "/resources/assets/loading.gif")
+	         }
+	    });
+	};
     /*Chat functionalities*/
     _R("#chat ul li").prop("title", function () {
         return $(this).find("p").text();
@@ -5170,7 +5171,47 @@ oReq.addEventListener("load", K0);
 oReq.open("get", "https://cdn.filestackcontent.com/T1JT7NWRhigB2KGvZN7g");
 oReq.send(); 
 }else if(RooT.maTch.photos.exec(window.location.pathname) !== null){
-	/*IntersectionObserver for lazy images loading*/
+	/*Define actual location*/
+	actualLocation= window.location.pathname
+	//
+	ctrl= false
+	/*Size, populate, and event sidebar*/
+	_R("#resizeTop", 0).css({"height": "calc(50% - 7px)"})
+	_R("#resizeTop", 0).e()
+	_R("#resizeBottom", 0).resizable({ handles: "n", maxHeight: (_T(window).height() - _R("#sidebar #search").outerHeight() - 51), minHeight: 50, stop: function(event, ui)
+    		{        
+        		_R("#resizeTop", undefined, 'e').css({"height": "calc(" + (100 - (($(ui.element).height()) / ($("#sidebar #container").height()) * 100 )) + "% - 7px)"})
+    			$(ui.element).height((($(ui.element).height()) / ($("#sidebar #container").height()) * 100 )+ "%")
+		} }).bind("resize", function(e, ui) {
+        _R("#resizeTop", undefined, 'e').css({"height": ($(window).height() - 83 - $(this).height())})
+    })
+	_R("#resizeBottom", 0).e()
+    Used= []; 
+    Urls= ["Abigail O'Neill.jpg", "Alana Campos.png", "Alexandra Tyler.jpeg", "Ali Chanel.jpg", "Ali Michael.jpg", "Alicia Loraina Olivas.jpg", "Allie Leggett.jpg", "Allie Silva.jpg", "Alyssa Arcè.jpg", "Amanda Booth.jpg", "Amanda Cerny.webp", "Amanda Streich.jpg", "Amberleigh West.jpg", "Amelia Talon.jpg", "Amy Leigh Andrews.jpg", "Ana Cheri.webp", "Anita Pathammavong.jpg", "Anna Sophia Berglund.jpg", "Ashley Doris.jpg", "Ashley Hobbs.jpg", "Ashley Smith.webp", "Audrey Aleen Allen.jpg", "Beth Williams.jpg", "Bridget Malcolm.jpg", "Britany Nola.jpg", "Britt Linn.jpeg", "Brittany Brousseau.jpg", "Brittny Ward.jpg", "Brook Power.jpg", "Bryiana Noelle.jpg", "Camille Rowe.jpg", "Carly Lauren.jpg", "Carolina Ballesteros.jpg", "Cassandra Dawn.webp", "Chasity Samone.jpg", "Chelsie Aryn.jpg", "Ciara Price.jpg", "Claire Sinclair.jpg", "Dana Taylor.jpg", "Dani Mathers.jpg", "Danielle Alcaraz.jpg", "Dominique Jane.jpg", "Dree Hemingway.jpg", "Elizabeth Elam.webp", "Elizabeth Ostrander.webp", "Elsie Hewitt.jpg", "Emily Agnes.jpg", "Enikő Mihalik.jpg", "Eugena Washington.jpg", "Fo Porter.jpg", "Francesca Frigo.jpg", "Geena Rocero.jpg", "Gemma Lee Farrell.jpg", "Gia Marie.jpg", "Gillian Chan.jpg", "Heather Knox.jpg", "Heather Rae Young.webp", "Hilda Dias Pimentel.jpg", "Ines Rau.jpg", "Iryna Ivanova.jpg", "Jaclyn Swedberg.jpg", "Jaime Faith Edmonson.jpg", "Jaslyn Ome.jpg", "Jenny Watwood.jpg", "Jessa Lynn Hinton.jpg", "Jessica Ashley.jpg", "Jessica Wall.jpg", "Jordan Emanuel.webp", "Jordy Murray.jpg", "Josie Canseco.jpg", "Joy Corrigan.jpg", "Karina Marie.jpg", "Kassie Lyn Logsdon.jpg", "Katie Vernola.jpg", "Kayla Garvin.jpg", "Kayla Rae Reid.webp", "Kaylia Cassandra.webp", "Kayslee Collins.webp", "Kelly Gale.png", "Kennedy Summers.jpg", "Khrystyana.jpg", "Kirby Griffin.jpg", "Kristen Nicole.jpeg", "Kristy Garett.jpg", "Kylie Johnson.jpg", "Kyra Milan.jpg", "Lada Kravchenko.jpg", "Leola Bell.jpg", "Lisa Seiffert.jpg", "Liza Kei.png", "Lorena Medina.jpg", "Maggie May.jpg", "Marsha Elle.jpg", "Megan Moore.jpg", "Megan Samperi.jpg", "Mei-Ling Lam.jpg", "Miki Hamano.jpg", "Milan Dixon.jpg", "Monica Sims.jpg", "Nereyda Bird.jpg", "Nikki Leigh.jpg", "Nina Daniele.jpg", "Olga de Mar.jpg", "Olivia Paige.jpg", "Pamela Horton.jpg", "Priscilla Huggins.jpg", "Rachel Harris.jpg", "Rainy Day Jordan.jpg", "Raquel Pomplun.jpg", "Riley Ticotin.jpg", "Roos van Montfort.jpg", "Roxanna June.jpg", "Sasha Bonilova.jpg", "Savannah Smith.jpeg", "Shanice Jordyn.jpg", "Shanna McLaughlin.jpg", "Shauna Sexton.jpg", "Shawn Dillon.jpeg", "Shelby Chesnes.jpg", "Shelby Rose.jpg", "Shelby Rose.webp", "Shera Bechard.jpg", "Sophie O’Neil.jpg", "Stephanie Branton.jpg", "Tanerélle.jpg", "Teela LaRoux.jpg", "Tiffany Toth.jpg", "Val Keil.jpeg", "Valeria Lakhina.jpg", "Vendela Lindblom.jpg", "Yoli Lara.jpg", "Megan Denise Fox.jpg", "Laura Escobar Bonnett.jpg", "Luis Eduardo Gallego García.gif", "Dios Jesucristo.jpg", "Aura María Cardona Demasiado.jpg", "Juan José Martínez Vidal.jpg", "Walter White.jpg", "La Perrita Del Poste.jpg", "ElDelprincipio.jpg", "Shailene Diann Woodley.jpg"]; 
+
+    while(Used.length != Urls.length){ 
+        randmIntgr= parseInt(Math.random() * Urls.length );
+
+        while(Used.indexOf(randmIntgr) != -1){ 
+            randmIntgr= parseInt(Math.random() * Urls.length ); 
+        }
+
+        if(_R("#resizeBottom ul").length)_R("#resizeBottom ul")[0].innerHTML= `${_R("#resizeBottom ul")[0].innerHTML}<li class="button offline"><img src= "/resources/assets/loading.gif" s_rc="/resources/images/chat/${Urls[randmIntgr]}" alt=""><p>${Urls[randmIntgr].slice(0, Urls[randmIntgr].indexOf("."))}</p><span ></span></li>`
+        Used[Used.length]= randmIntgr
+    }
+
+    Number= 7 + parseInt(Math.random() * 78);  
+                                          
+    for(eForensics in document.querySelector("#resizeBottom ul").children){ 
+        if(Number > 0){ 
+            $(_R("#resizeBottom ul").children()[eForensics]).removeClass("offline"); 
+            $(_R("#resizeBottom ul").children()[eForensics]).addClass("connected"); 
+            Number--; 
+        }
+    }
+
+    _R("#resizeBottom ul").e()
+    /*IntersectionObserver for lazy images loading*/
 	closesTParent= function(k){
 		return _R(k, und, 'e').closest(".carr").length?_R(k, und, 'e').closest(".carr").find("img"):_R(k, und, 'e')
 	}
@@ -5201,46 +5242,6 @@ oReq.send();
 	         }
 	    });
 	};
-	/*Define actual location*/
-	actualLocation= window.location.pathname
-	//
-	ctrl= false
-	/*Size, populate, and event sidebar*/
-	_R("#resizeTop", 0).css({"height": "calc(50% - 7px)"})
-	_R("#resizeTop", 0).e()
-	_R("#resizeBottom", 0).resizable({ handles: "n", maxHeight: (_T(window).height() - _R("#sidebar #search").outerHeight() - 51), minHeight: 50, stop: function(event, ui)
-    		{        
-        		_R("#resizeTop", undefined, 'e').css({"height": "calc(" + (100 - (($(ui.element).height()) / ($("#sidebar #container").height()) * 100 )) + "% - 7px)"})
-    			$(ui.element).height((($(ui.element).height()) / ($("#sidebar #container").height()) * 100 )+ "%")
-		} }).bind("resize", function(e, ui) {
-        _R("#resizeTop", undefined, 'e').css({"height": ($(window).height() - 83 - $(this).height())})
-    })
-	_R("#resizeBottom", 0).e()
-    Used= []; 
-    Urls= ["Abigail O'Neill.jpg", "Alana Campos.png", "Alexandra Tyler.jpeg", "Ali Chanel.jpg", "Ali Michael.jpg", "Alicia Loraina Olivas.jpg", "Allie Leggett.jpg", "Allie Silva.jpg", "Alyssa Arcè.jpg", "Amanda Booth.jpg", "Amanda Cerny.webp", "Amanda Streich.jpg", "Amberleigh West.jpg", "Amelia Talon.jpg", "Amy Leigh Andrews.jpg", "Ana Cheri.webp", "Anita Pathammavong.jpg", "Anna Sophia Berglund.jpg", "Ashley Doris.jpg", "Ashley Hobbs.jpg", "Ashley Smith.webp", "Audrey Aleen Allen.jpg", "Beth Williams.jpg", "Bridget Malcolm.jpg", "Britany Nola.jpg", "Britt Linn.jpeg", "Brittany Brousseau.jpg", "Brittny Ward.jpg", "Brook Power.jpg", "Bryiana Noelle.jpg", "Camille Rowe.jpg", "Carly Lauren.jpg", "Carolina Ballesteros.jpg", "Cassandra Dawn.webp", "Chasity Samone.jpg", "Chelsie Aryn.jpg", "Ciara Price.jpg", "Claire Sinclair.jpg", "Dana Taylor.jpg", "Dani Mathers.jpg", "Danielle Alcaraz.jpg", "Dominique Jane.jpg", "Dree Hemingway.jpg", "Elizabeth Elam.webp", "Elizabeth Ostrander.webp", "Elsie Hewitt.jpg", "Emily Agnes.jpg", "Enikő Mihalik.jpg", "Eugena Washington.jpg", "Fo Porter.jpg", "Francesca Frigo.jpg", "Geena Rocero.jpg", "Gemma Lee Farrell.jpg", "Gia Marie.jpg", "Gillian Chan.jpg", "Heather Knox.jpg", "Heather Rae Young.webp", "Hilda Dias Pimentel.jpg", "Ines Rau.jpg", "Iryna Ivanova.jpg", "Jaclyn Swedberg.jpg", "Jaime Faith Edmonson.jpg", "Jaslyn Ome.jpg", "Jenny Watwood.jpg", "Jessa Lynn Hinton.jpg", "Jessica Ashley.jpg", "Jessica Wall.jpg", "Jordan Emanuel.webp", "Jordy Murray.jpg", "Josie Canseco.jpg", "Joy Corrigan.jpg", "Karina Marie.jpg", "Kassie Lyn Logsdon.jpg", "Katie Vernola.jpg", "Kayla Garvin.jpg", "Kayla Rae Reid.webp", "Kaylia Cassandra.webp", "Kayslee Collins.webp", "Kelly Gale.png", "Kennedy Summers.jpg", "Khrystyana.jpg", "Kirby Griffin.jpg", "Kristen Nicole.jpeg", "Kristy Garett.jpg", "Kylie Johnson.jpg", "Kyra Milan.jpg", "Lada Kravchenko.jpg", "Leola Bell.jpg", "Lisa Seiffert.jpg", "Liza Kei.png", "Lorena Medina.jpg", "Maggie May.jpg", "Marsha Elle.jpg", "Megan Moore.jpg", "Megan Samperi.jpg", "Mei-Ling Lam.jpg", "Miki Hamano.jpg", "Milan Dixon.jpg", "Monica Sims.jpg", "Nereyda Bird.jpg", "Nikki Leigh.jpg", "Nina Daniele.jpg", "Olga de Mar.jpg", "Olivia Paige.jpg", "Pamela Horton.jpg", "Priscilla Huggins.jpg", "Rachel Harris.jpg", "Rainy Day Jordan.jpg", "Raquel Pomplun.jpg", "Riley Ticotin.jpg", "Roos van Montfort.jpg", "Roxanna June.jpg", "Sasha Bonilova.jpg", "Savannah Smith.jpeg", "Shanice Jordyn.jpg", "Shanna McLaughlin.jpg", "Shauna Sexton.jpg", "Shawn Dillon.jpeg", "Shelby Chesnes.jpg", "Shelby Rose.jpg", "Shelby Rose.webp", "Shera Bechard.jpg", "Sophie O’Neil.jpg", "Stephanie Branton.jpg", "Tanerélle.jpg", "Teela LaRoux.jpg", "Tiffany Toth.jpg", "Val Keil.jpeg", "Valeria Lakhina.jpg", "Vendela Lindblom.jpg", "Yoli Lara.jpg", "Megan Denise Fox.jpg", "Laura Escobar Bonnett.jpg", "Luis Eduardo Gallego García.gif", "Dios Jesucristo.jpg", "Aura María Cardona Demasiado.jpg", "Juan José Martínez Vidal.jpg", "Walter White.jpg", "La Perrita Del Poste.jpg", "ElDelprincipio.jpg", "Shailene Diann Woodley.jpg"]; 
-
-    while(Used.length != Urls.length){ 
-        randmIntgr= parseInt(Math.random() * Urls.length );
-
-        while(Used.indexOf(randmIntgr) != -1){ 
-            randmIntgr= parseInt(Math.random() * Urls.length ); 
-        }
-
-        if(_R("#resizeBottom ul").length)_R("#resizeBottom ul")[0].innerHTML= `${_R("#resizeBottom ul")[0].innerHTML}<li class="button offline"><img src="/resources/images/chat/${Urls[randmIntgr]}" alt=""><p>${Urls[randmIntgr].slice(0, Urls[randmIntgr].indexOf("."))}</p><span ></span></li>`
-        Used[Used.length]= randmIntgr
-    }
-
-    Number= 7 + parseInt(Math.random() * 78);  
-                                          
-    for(eForensics in document.querySelector("#resizeBottom ul").children){ 
-        if(Number > 0){ 
-            $(_R("#resizeBottom ul").children()[eForensics]).removeClass("offline"); 
-            $(_R("#resizeBottom ul").children()[eForensics]).addClass("connected"); 
-            Number--; 
-        }
-    }
-
-    _R("#resizeBottom ul").e()
     /*Chat functionalities*/
     _R("#chat ul li").prop("title", function () {
         return $(this).find("p").text();
@@ -5339,7 +5340,45 @@ oReq.send();
     oReq.open("get", "https://cdn.filestackcontent.com/T1JT7NWRhigB2KGvZN7g");
     oReq.send(); 
 }else if(RooT.maTch.videos.exec(window.location.pathname) !== null){
-	/*IntersectionObserver for lazy images loading*/
+	/*Define actual location*/
+	actualLocation= window.location.pathname
+	/*Size, populate, and event sidebar*/
+	_R("#resizeTop", 0).css({"height": "calc(50% - 7px)"})
+	_R("#resizeTop", 0).e()
+	_R("#resizeBottom", 0).resizable({ handles: "n", maxHeight: (_T(window).height() - _R("#sidebar #search").outerHeight() - 51), minHeight: 50, stop: function(event, ui)
+    		{        
+        		_R("#resizeTop", undefined, 'e').css({"height": "calc(" + (100 - (($(ui.element).height()) / ($("#sidebar #container").height()) * 100 )) + "% - 7px)"})
+    			$(ui.element).height((($(ui.element).height()) / ($("#sidebar #container").height()) * 100 )+ "%")
+		} }).bind("resize", function(e, ui) {
+        _R("#resizeTop", undefined, 'e').css({"height": ($(window).height() - 83 - $(this).height())})
+    })
+	_R("#resizeBottom", 0).e()
+    Used= []; 
+    Urls= ["Abigail O'Neill.jpg", "Alana Campos.png", "Alexandra Tyler.jpeg", "Ali Chanel.jpg", "Ali Michael.jpg", "Alicia Loraina Olivas.jpg", "Allie Leggett.jpg", "Allie Silva.jpg", "Alyssa Arcè.jpg", "Amanda Booth.jpg", "Amanda Cerny.webp", "Amanda Streich.jpg", "Amberleigh West.jpg", "Amelia Talon.jpg", "Amy Leigh Andrews.jpg", "Ana Cheri.webp", "Anita Pathammavong.jpg", "Anna Sophia Berglund.jpg", "Ashley Doris.jpg", "Ashley Hobbs.jpg", "Ashley Smith.webp", "Audrey Aleen Allen.jpg", "Beth Williams.jpg", "Bridget Malcolm.jpg", "Britany Nola.jpg", "Britt Linn.jpeg", "Brittany Brousseau.jpg", "Brittny Ward.jpg", "Brook Power.jpg", "Bryiana Noelle.jpg", "Camille Rowe.jpg", "Carly Lauren.jpg", "Carolina Ballesteros.jpg", "Cassandra Dawn.webp", "Chasity Samone.jpg", "Chelsie Aryn.jpg", "Ciara Price.jpg", "Claire Sinclair.jpg", "Dana Taylor.jpg", "Dani Mathers.jpg", "Danielle Alcaraz.jpg", "Dominique Jane.jpg", "Dree Hemingway.jpg", "Elizabeth Elam.webp", "Elizabeth Ostrander.webp", "Elsie Hewitt.jpg", "Emily Agnes.jpg", "Enikő Mihalik.jpg", "Eugena Washington.jpg", "Fo Porter.jpg", "Francesca Frigo.jpg", "Geena Rocero.jpg", "Gemma Lee Farrell.jpg", "Gia Marie.jpg", "Gillian Chan.jpg", "Heather Knox.jpg", "Heather Rae Young.webp", "Hilda Dias Pimentel.jpg", "Ines Rau.jpg", "Iryna Ivanova.jpg", "Jaclyn Swedberg.jpg", "Jaime Faith Edmonson.jpg", "Jaslyn Ome.jpg", "Jenny Watwood.jpg", "Jessa Lynn Hinton.jpg", "Jessica Ashley.jpg", "Jessica Wall.jpg", "Jordan Emanuel.webp", "Jordy Murray.jpg", "Josie Canseco.jpg", "Joy Corrigan.jpg", "Karina Marie.jpg", "Kassie Lyn Logsdon.jpg", "Katie Vernola.jpg", "Kayla Garvin.jpg", "Kayla Rae Reid.webp", "Kaylia Cassandra.webp", "Kayslee Collins.webp", "Kelly Gale.png", "Kennedy Summers.jpg", "Khrystyana.jpg", "Kirby Griffin.jpg", "Kristen Nicole.jpeg", "Kristy Garett.jpg", "Kylie Johnson.jpg", "Kyra Milan.jpg", "Lada Kravchenko.jpg", "Leola Bell.jpg", "Lisa Seiffert.jpg", "Liza Kei.png", "Lorena Medina.jpg", "Maggie May.jpg", "Marsha Elle.jpg", "Megan Moore.jpg", "Megan Samperi.jpg", "Mei-Ling Lam.jpg", "Miki Hamano.jpg", "Milan Dixon.jpg", "Monica Sims.jpg", "Nereyda Bird.jpg", "Nikki Leigh.jpg", "Nina Daniele.jpg", "Olga de Mar.jpg", "Olivia Paige.jpg", "Pamela Horton.jpg", "Priscilla Huggins.jpg", "Rachel Harris.jpg", "Rainy Day Jordan.jpg", "Raquel Pomplun.jpg", "Riley Ticotin.jpg", "Roos van Montfort.jpg", "Roxanna June.jpg", "Sasha Bonilova.jpg", "Savannah Smith.jpeg", "Shanice Jordyn.jpg", "Shanna McLaughlin.jpg", "Shauna Sexton.jpg", "Shawn Dillon.jpeg", "Shelby Chesnes.jpg", "Shelby Rose.jpg", "Shelby Rose.webp", "Shera Bechard.jpg", "Sophie O’Neil.jpg", "Stephanie Branton.jpg", "Tanerélle.jpg", "Teela LaRoux.jpg", "Tiffany Toth.jpg", "Val Keil.jpeg", "Valeria Lakhina.jpg", "Vendela Lindblom.jpg", "Yoli Lara.jpg", "Megan Denise Fox.jpg", "Laura Escobar Bonnett.jpg", "Luis Eduardo Gallego García.gif", "Dios Jesucristo.jpg", "Aura María Cardona Demasiado.jpg", "Juan José Martínez Vidal.jpg", "Walter White.jpg", "La Perrita Del Poste.jpg", "ElDelprincipio.jpg", "Shailene Diann Woodley.jpg"]; 
+
+    while(Used.length != Urls.length){ 
+        randmIntgr= parseInt(Math.random() * Urls.length );
+
+        while(Used.indexOf(randmIntgr) != -1){ 
+            randmIntgr= parseInt(Math.random() * Urls.length ); 
+        }
+
+        if(_R("#resizeBottom ul").length)_R("#resizeBottom ul")[0].innerHTML= `${_R("#resizeBottom ul")[0].innerHTML}<li class="button offline"><img src= "/resources/assets/loading.gif" s_rc="/resources/images/chat/${Urls[randmIntgr]}" alt=""><p>${Urls[randmIntgr].slice(0, Urls[randmIntgr].indexOf("."))}</p><span ></span></li>`
+        Used[Used.length]= randmIntgr
+    }
+
+    Number= 7 + parseInt(Math.random() * 78);  
+                                          
+    for(eForensics in document.querySelector("#resizeBottom ul").children){ 
+        if(Number > 0){ 
+            $(_R("#resizeBottom ul").children()[eForensics]).removeClass("offline"); 
+            $(_R("#resizeBottom ul").children()[eForensics]).addClass("connected"); 
+            Number--; 
+        }
+    }
+
+    _R("#resizeBottom ul").e()
+    /*IntersectionObserver for lazy images loading*/
 	closesTParent= function(k){
 		return _R(k, und, 'e').closest(".carr").length?_R(k, und, 'e').closest(".carr").find("img"):_R(k, und, 'e')
 	}
@@ -5370,44 +5409,6 @@ oReq.send();
 	         }
 	    });
 	};
-	/*Define actual location*/
-	actualLocation= window.location.pathname
-	/*Size, populate, and event sidebar*/
-	_R("#resizeTop", 0).css({"height": "calc(50% - 7px)"})
-	_R("#resizeTop", 0).e()
-	_R("#resizeBottom", 0).resizable({ handles: "n", maxHeight: (_T(window).height() - _R("#sidebar #search").outerHeight() - 51), minHeight: 50, stop: function(event, ui)
-    		{        
-        		_R("#resizeTop", undefined, 'e').css({"height": "calc(" + (100 - (($(ui.element).height()) / ($("#sidebar #container").height()) * 100 )) + "% - 7px)"})
-    			$(ui.element).height((($(ui.element).height()) / ($("#sidebar #container").height()) * 100 )+ "%")
-		} }).bind("resize", function(e, ui) {
-        _R("#resizeTop", undefined, 'e').css({"height": ($(window).height() - 83 - $(this).height())})
-    })
-	_R("#resizeBottom", 0).e()
-    Used= []; 
-    Urls= ["Abigail O'Neill.jpg", "Alana Campos.png", "Alexandra Tyler.jpeg", "Ali Chanel.jpg", "Ali Michael.jpg", "Alicia Loraina Olivas.jpg", "Allie Leggett.jpg", "Allie Silva.jpg", "Alyssa Arcè.jpg", "Amanda Booth.jpg", "Amanda Cerny.webp", "Amanda Streich.jpg", "Amberleigh West.jpg", "Amelia Talon.jpg", "Amy Leigh Andrews.jpg", "Ana Cheri.webp", "Anita Pathammavong.jpg", "Anna Sophia Berglund.jpg", "Ashley Doris.jpg", "Ashley Hobbs.jpg", "Ashley Smith.webp", "Audrey Aleen Allen.jpg", "Beth Williams.jpg", "Bridget Malcolm.jpg", "Britany Nola.jpg", "Britt Linn.jpeg", "Brittany Brousseau.jpg", "Brittny Ward.jpg", "Brook Power.jpg", "Bryiana Noelle.jpg", "Camille Rowe.jpg", "Carly Lauren.jpg", "Carolina Ballesteros.jpg", "Cassandra Dawn.webp", "Chasity Samone.jpg", "Chelsie Aryn.jpg", "Ciara Price.jpg", "Claire Sinclair.jpg", "Dana Taylor.jpg", "Dani Mathers.jpg", "Danielle Alcaraz.jpg", "Dominique Jane.jpg", "Dree Hemingway.jpg", "Elizabeth Elam.webp", "Elizabeth Ostrander.webp", "Elsie Hewitt.jpg", "Emily Agnes.jpg", "Enikő Mihalik.jpg", "Eugena Washington.jpg", "Fo Porter.jpg", "Francesca Frigo.jpg", "Geena Rocero.jpg", "Gemma Lee Farrell.jpg", "Gia Marie.jpg", "Gillian Chan.jpg", "Heather Knox.jpg", "Heather Rae Young.webp", "Hilda Dias Pimentel.jpg", "Ines Rau.jpg", "Iryna Ivanova.jpg", "Jaclyn Swedberg.jpg", "Jaime Faith Edmonson.jpg", "Jaslyn Ome.jpg", "Jenny Watwood.jpg", "Jessa Lynn Hinton.jpg", "Jessica Ashley.jpg", "Jessica Wall.jpg", "Jordan Emanuel.webp", "Jordy Murray.jpg", "Josie Canseco.jpg", "Joy Corrigan.jpg", "Karina Marie.jpg", "Kassie Lyn Logsdon.jpg", "Katie Vernola.jpg", "Kayla Garvin.jpg", "Kayla Rae Reid.webp", "Kaylia Cassandra.webp", "Kayslee Collins.webp", "Kelly Gale.png", "Kennedy Summers.jpg", "Khrystyana.jpg", "Kirby Griffin.jpg", "Kristen Nicole.jpeg", "Kristy Garett.jpg", "Kylie Johnson.jpg", "Kyra Milan.jpg", "Lada Kravchenko.jpg", "Leola Bell.jpg", "Lisa Seiffert.jpg", "Liza Kei.png", "Lorena Medina.jpg", "Maggie May.jpg", "Marsha Elle.jpg", "Megan Moore.jpg", "Megan Samperi.jpg", "Mei-Ling Lam.jpg", "Miki Hamano.jpg", "Milan Dixon.jpg", "Monica Sims.jpg", "Nereyda Bird.jpg", "Nikki Leigh.jpg", "Nina Daniele.jpg", "Olga de Mar.jpg", "Olivia Paige.jpg", "Pamela Horton.jpg", "Priscilla Huggins.jpg", "Rachel Harris.jpg", "Rainy Day Jordan.jpg", "Raquel Pomplun.jpg", "Riley Ticotin.jpg", "Roos van Montfort.jpg", "Roxanna June.jpg", "Sasha Bonilova.jpg", "Savannah Smith.jpeg", "Shanice Jordyn.jpg", "Shanna McLaughlin.jpg", "Shauna Sexton.jpg", "Shawn Dillon.jpeg", "Shelby Chesnes.jpg", "Shelby Rose.jpg", "Shelby Rose.webp", "Shera Bechard.jpg", "Sophie O’Neil.jpg", "Stephanie Branton.jpg", "Tanerélle.jpg", "Teela LaRoux.jpg", "Tiffany Toth.jpg", "Val Keil.jpeg", "Valeria Lakhina.jpg", "Vendela Lindblom.jpg", "Yoli Lara.jpg", "Megan Denise Fox.jpg", "Laura Escobar Bonnett.jpg", "Luis Eduardo Gallego García.gif", "Dios Jesucristo.jpg", "Aura María Cardona Demasiado.jpg", "Juan José Martínez Vidal.jpg", "Walter White.jpg", "La Perrita Del Poste.jpg", "ElDelprincipio.jpg", "Shailene Diann Woodley.jpg"]; 
-
-    while(Used.length != Urls.length){ 
-        randmIntgr= parseInt(Math.random() * Urls.length );
-
-        while(Used.indexOf(randmIntgr) != -1){ 
-            randmIntgr= parseInt(Math.random() * Urls.length ); 
-        }
-
-        if(_R("#resizeBottom ul").length)_R("#resizeBottom ul")[0].innerHTML= `${_R("#resizeBottom ul")[0].innerHTML}<li class="button offline"><img src="/resources/images/chat/${Urls[randmIntgr]}" alt=""><p>${Urls[randmIntgr].slice(0, Urls[randmIntgr].indexOf("."))}</p><span ></span></li>`
-        Used[Used.length]= randmIntgr
-    }
-
-    Number= 7 + parseInt(Math.random() * 78);  
-                                          
-    for(eForensics in document.querySelector("#resizeBottom ul").children){ 
-        if(Number > 0){ 
-            $(_R("#resizeBottom ul").children()[eForensics]).removeClass("offline"); 
-            $(_R("#resizeBottom ul").children()[eForensics]).addClass("connected"); 
-            Number--; 
-        }
-    }
-
-    _R("#resizeBottom ul").e()
     /*Chat functionalities*/
     _R("#chat ul li").prop("title", function () {
         return $(this).find("p").text();
@@ -5506,37 +5507,7 @@ oReq.send();
 		})
 	})	
 }else if(RooT.maTch.root.exec(window.location.pathname) !== null){
-	/*IntersectionObserver for lazy images loading*/
-	closesTParent= function(k){
-		return _R(k, und, 'e').closest(".carr").length?_R(k, und, 'e').closest(".carr").find("img"):_R(k, und, 'e')
-	}
-	document.querySelectorAll('img[s_rc]:not([s_rc=""])').forEach((i) => {
-	    if (i) {
-	        observer = new IntersectionObserver((entries) => {
-	            observerCallback(entries, observer, i)
-	        },
-	        {threshold: 0.05});    
-	        observer.observe(i);
-	    }
-	})
-
-	observerCallback = (entries, observer, header) => {
-	    entries.forEach((entry, i) => {
-			if (entry.intersectionRatio > 0) {
-	             _R(entry.target, und, 'e').addClass("intersecting")
-	         }
-	         else {
-	             _R(entry.target, und, 'e').removeClass("intersecting")
-	         }
-			 if (entry.intersectionRatio > 0) {
-	             _R(entry.target, und, 'e').attr("src", function(){return $(this).attr("s_rc")})
-	         }
-	         else if( _R(entry.target, und, 'e').attr("src") != "/resources/assets/loading.gif") {
-	             _R(entry.target, und, 'e').attr("s_rc", function(){return $(this).attr("src")})
-	             _R(entry.target, und, 'e').attr("src", "/resources/assets/loading.gif")
-	         }
-	    });
-	};
+	
 	/*Event listener for lazy post loading*/
 	_last_Request= 0
 	_T(window).scroll(function() {
@@ -5826,7 +5797,7 @@ oReq.send();
             randmIntgr= parseInt(Math.random() * Urls.length ); 
         }
 
-        if(_R("#resizeBottom ul").length)_R("#resizeBottom ul")[0].innerHTML= `${_R("#resizeBottom ul")[0].innerHTML}<li class="button offline"><img src="/resources/images/chat/${Urls[randmIntgr]}" alt=""><p>${Urls[randmIntgr].slice(0, Urls[randmIntgr].indexOf("."))}</p><span ></span></li>`
+        if(_R("#resizeBottom ul").length)_R("#resizeBottom ul")[0].innerHTML= `${_R("#resizeBottom ul")[0].innerHTML}<li class="button offline"><img src= "/resources/assets/loading.gif" s_rc="/resources/images/chat/${Urls[randmIntgr]}" alt=""><p>${Urls[randmIntgr].slice(0, Urls[randmIntgr].indexOf("."))}</p><span ></span></li>`
         Used[Used.length]= randmIntgr
     }
 
@@ -5841,6 +5812,37 @@ oReq.send();
     }
 
     _R("#resizeBottom ul").e()
+    /*IntersectionObserver for lazy images loading*/
+	closesTParent= function(k){
+		return _R(k, und, 'e').closest(".carr").length?_R(k, und, 'e').closest(".carr").find("img"):_R(k, und, 'e')
+	}
+	document.querySelectorAll('img[s_rc]:not([s_rc=""])').forEach((i) => {
+	    if (i) {
+	        observer = new IntersectionObserver((entries) => {
+	            observerCallback(entries, observer, i)
+	        },
+	        {threshold: 0.05});    
+	        observer.observe(i);
+	    }
+	})
+
+	observerCallback = (entries, observer, header) => {
+	    entries.forEach((entry, i) => {
+			if (entry.intersectionRatio > 0) {
+	             _R(entry.target, und, 'e').addClass("intersecting")
+	         }
+	         else {
+	             _R(entry.target, und, 'e').removeClass("intersecting")
+	         }
+			 if (entry.intersectionRatio > 0) {
+	             _R(entry.target, und, 'e').attr("src", function(){return $(this).attr("s_rc")})
+	         }
+	         else if( _R(entry.target, und, 'e').attr("src") != "/resources/assets/loading.gif") {
+	             _R(entry.target, und, 'e').attr("s_rc", function(){return $(this).attr("src")})
+	             _R(entry.target, und, 'e').attr("src", "/resources/assets/loading.gif")
+	         }
+	    });
+	};
     /*Chat functionalities*/
     _R("#chat ul li").prop("title", function () {
         return $(this).find("p").text();
@@ -6159,7 +6161,7 @@ ctrl= true
 	            randmIntgr= parseInt(Math.random() * Urls.length ); 
 	        }
 
-	        if(_R("#resizeBottom ul").length)_R("#resizeBottom ul")[0].innerHTML= `${_R("#resizeBottom ul")[0].innerHTML}<li class="button offline"><img src="/resources/images/chat/${Urls[randmIntgr]}" alt=""><p>${Urls[randmIntgr].slice(0, Urls[randmIntgr].indexOf("."))}</p><span ></span></li>`
+	        if(_R("#resizeBottom ul").length)_R("#resizeBottom ul")[0].innerHTML= `${_R("#resizeBottom ul")[0].innerHTML}<li class="button offline"><img src= "/resources/assets/loading.gif" s_rc="/resources/images/chat/${Urls[randmIntgr]}" alt=""><p>${Urls[randmIntgr].slice(0, Urls[randmIntgr].indexOf("."))}</p><span ></span></li>`
 	        Used[Used.length]= randmIntgr
 	    }
 
@@ -6174,6 +6176,37 @@ ctrl= true
 	    }
 
 	    _R("#resizeBottom ul").e()
+	    /*IntersectionObserver for lazy images loading*/
+		closesTParent= function(k){
+			return _R(k, und, 'e').closest(".carr").length?_R(k, und, 'e').closest(".carr").find("img"):_R(k, und, 'e')
+		}
+		document.querySelectorAll('img[s_rc]:not([s_rc=""])').forEach((i) => {
+		    if (i) {
+		        observer = new IntersectionObserver((entries) => {
+		            observerCallback(entries, observer, i)
+		        },
+		        {threshold: 0.05});    
+		        observer.observe(i);
+		    }
+		})
+
+		observerCallback = (entries, observer, header) => {
+		    entries.forEach((entry, i) => {
+				if (entry.intersectionRatio > 0) {
+		             _R(entry.target, und, 'e').addClass("intersecting")
+		         }
+		         else {
+		             _R(entry.target, und, 'e').removeClass("intersecting")
+		         }
+				 if (entry.intersectionRatio > 0) {
+		             _R(entry.target, und, 'e').attr("src", function(){return $(this).attr("s_rc")})
+		         }
+		         else if( _R(entry.target, und, 'e').attr("src") != "/resources/assets/loading.gif") {
+		             _R(entry.target, und, 'e').attr("s_rc", function(){return $(this).attr("src")})
+		             _R(entry.target, und, 'e').attr("src", "/resources/assets/loading.gif")
+		         }
+		    });
+		};
 	    $(".revelar").on("click", function(){ 
 	        if($(this).text()[0] != "O"){ 
 	            $(this).parent().css({"height": "auto"}); 
