@@ -11,20 +11,45 @@ var _T= function(q){
 	return $(q)
 }
 var _of= "9cNidn2i9xIxmFb2CmZoq"
-var firsT= function(l, k, j){
+var spliceThem= "kK4E9s28sJLci3dfwq219"
+var firsTTime= "99Cjca9a9scja0c0cacpC"
+var firsT= function(l, k, j, s){
 	var reT= {}
 	for(var f= 0; f < l; f++){
 		if(!!Object.keys(j)[f])reT[Object.keys(j)[f]]= Object.values(j)[f]
 	}
+	if(s == spliceThem){
+	    finalObj={}
+	    if($(".story").length >= 5){
+		    for(var a= l; a < Object.keys(j).length; a++){
+		      if(!!Object.keys(j)[a])finalObj[Object.keys(j)[a]]= Object.values(j)[a]
+		    }
+	    }else{
+	    	for(var a= (l* 2); a < Object.keys(j).length; a++){
+		      if(!!Object.keys(j)[a])finalObj[Object.keys(j)[a]]= Object.values(j)[a]
+		    }
+			console.log("sad")
+	    }
+		user.stories= finalObj
+	}
 	return reT
 }
-var _firsT= function(l, k, j){
+
+
+var _firsT= function(l, k, j, s){
 	var reT= []
 	for(var f= 0; f < l * 2; f+=2){
 		if(!!j[f]){
 			reT[f]= j[f]
 			reT[f+1]= j[f+1]
 		}
+	}
+	if(s == spliceThem){
+	    finalArr=[];
+	    for(var a= l*2; a < j.length; a++){
+	      	if(!!j[a])finalArr[a - l * 2]= j[a]
+	    }
+	    index.stories= finalArr
 	}
 	return reT
 }
@@ -686,7 +711,7 @@ var one= function(a, b, c, d){
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
 		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
-		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}${c[e].user.username=="user"?"":"/"}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
 		                                <p class="title">${c[e].title}</p>
@@ -710,7 +735,7 @@ var one= function(a, b, c, d){
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
 		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
-		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}${c[e].user.username=="user"?"":"/"}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
 		                                <p class="title">${c[e].title}</p>
@@ -734,7 +759,7 @@ var one= function(a, b, c, d){
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
 		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
-		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}${c[e].user.username=="user"?"":"/"}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
 		                                <p class="title">${c[e].title}</p>
@@ -758,7 +783,7 @@ var one= function(a, b, c, d){
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
 		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
-		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}${c[e].user.username=="user"?"":"/"}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> <br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
 		                                <p class="title">${c[e].title}</p>
@@ -782,7 +807,7 @@ var one= function(a, b, c, d){
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
 		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
-		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> ${c[e].information}<br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}${c[e].user.username=="user"?"":"/"}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> ${c[e].information}<br><span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
 		                                <p class="title">${c[e].title}</p>
@@ -805,7 +830,7 @@ var one= function(a, b, c, d){
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
 		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
-		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}${c[e].user.username=="user"?"":"/"}" title= "${c[e].user.tool}">${c[e].user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
 																																								                       <img class='thumbnail' src= '${c[e].city.pic}'></img>
@@ -840,7 +865,7 @@ var one= function(a, b, c, d){
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
 		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
-		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}${c[e].user.username=="user"?"":"/"}" title= "${c[e].user.tool}">${c[e].user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
 																																								                       <img class='thumbnail' src= '${c[e].city.pic}'></img>
@@ -887,7 +912,7 @@ var one= function(a, b, c, d){
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
 		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
-		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}${c[e].user.username=="user"?"":"/"}" title= "${c[e].user.tool}">${c[e].user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
 																																								                       <img class='thumbnail' src= '${c[e].city.pic}'></img>
@@ -930,7 +955,7 @@ var one= function(a, b, c, d){
 		                                <div class="info">
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].user.rol.level}'>
 		                                    <img src="/resources/assets/loading.gif" s_rc="/resources/images/${c[e].user.username}/${c[e].user.profilePic[Object.keys(c[e].user.profilePic)[0]].contents.image}" alt="">
-		                                    <p class="username"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
+		                                    <p class="username"><a class="target" href="/${c[e].user.username}${c[e].user.username=="user"?"":"/"}" title= "${c[e].user.tool}">${c[e].user.users_name}</a>${typeof c[e].city !== "undefined"? `; en <a class="target" title="         
 																																								               <div class='tool city'>
 																																								                   <figure>
 																																								                       <img class='thumbnail' src= '${c[e].city.pic}'></img>
@@ -976,7 +1001,7 @@ var one= function(a, b, c, d){
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
 		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="${c[e].originalPoster.profilePic}" alt="">
-		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}${c[e].user.username=="user"?"":"/"}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}${c[e].originalPoster.username=="user"?"":"/"}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -1005,7 +1030,7 @@ var one= function(a, b, c, d){
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
 		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="${c[e].originalPoster.profilePic}" alt="">
-		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}${c[e].user.username=="user"?"":"/"}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}${c[e].originalPoster.username=="user"?"":"/"}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -1034,7 +1059,7 @@ var one= function(a, b, c, d){
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
 		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="${c[e].originalPoster.profilePic}" alt="">
-		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}${c[e].user.username=="user"?"":"/"}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}${c[e].originalPoster.username=="user"?"":"/"}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -1064,7 +1089,7 @@ var one= function(a, b, c, d){
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
 		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="${c[e].originalPoster.profilePic}" alt="">
-		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}${c[e].user.username=="user"?"":"/"}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}${c[e].originalPoster.username=="user"?"":"/"}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -1102,7 +1127,7 @@ var one= function(a, b, c, d){
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
 		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="${c[e].originalPoster.profilePic}" alt="">
-		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}${c[e].user.username=="user"?"":"/"}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}${c[e].originalPoster.username=="user"?"":"/"}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -1144,7 +1169,7 @@ var one= function(a, b, c, d){
 		                                    <div class="repostedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalPoster.rol.level}'>
 		                                    <img class="repost" src="/resources/assets/loading.gif" s_rc="${c[e].originalPoster.profilePic}" alt="">
-		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}/" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
+		                                    <p class="username repost"><a class="target" href="/${c[e].user.username}${c[e].user.username=="user"?"":"/"}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Reposteó de <a class="target" href="/${c[e].originalPoster.username}${c[e].originalPoster.username=="user"?"":"/"}" title="${c[e].originalPoster.tool}">${c[e].originalPoster.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -1173,7 +1198,7 @@ var one= function(a, b, c, d){
 		                                    <div class="forkedFrom"></div>
 		                                    <input class='knob button' data-width='47' data-height='47' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.12' readonly value='${c[e].originalRepoOwner.rol.level}'>
 		                                    <img class="fork" src="/resources/assets/loading.gif" s_rc="${c[e].originalRepoOwner.profilePic}" alt="">
-		                                    <p class="username fork"><a class="target" href="/${c[e].user.username}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Forkeó de <a class="target" href="/${c[e].originalRepoOwner.username}" title="${c[e].originalRepoOwner.tool}">${c[e].originalRepoOwner.users_name}</a><br>
+		                                    <p class="username fork"><a class="target" href="/${c[e].user.username}${c[e].user.username=="user"?"":"/"}" title= "${c[e].user.tool}">${c[e].user.users_name}</a> Forkeó de <a class="target" href="/${c[e].originalRepoOwner.username}${c[e].originalRepoOwner.username=="user"?"":"/"}" title="${c[e].originalRepoOwner.tool}">${c[e].originalRepoOwner.users_name}</a><br>
 		                                    <span title="${c[e].date.full}" class="time">${c[e].date.min}</span></p>
 		                                	${typeof c[e].Editado !== "undefined"? `<span onmousedown= '${c[e].Editado[0]}' title='${c[e].Editado[1]}' class="Editado">Editado</span>`: ``}
 		                                </div>
@@ -1766,7 +1791,7 @@ return videos}
 /**/
 var purger= {}; 
             
-purger.index= 30; 
+purger.index= 31; 
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return
@@ -4304,15 +4329,15 @@ RooT.maTch.imgStatic= new RegExp('^(\/.*?\/)img(\/.*?)$')//A slash anything but 
 RooT.maTch.vidStatic= new RegExp('^(\/.*?\/)vid(\/.*?)$')//A slash anything but a slash a slash and the word vid after, a slash and anything; e.g: /uaocno/vid/onvesb
 
 if(RooT.maTch.user.exec(window.location.pathname) !== null){
-	
+	firsT(5, _of, user.stories, spliceThem)
 	/*Event listener for lazy post loading*/
 	_last_Request= 0
 	_T(window).scroll(function() {
 		if(RooT.maTch.root.exec(actualLocation) !== null){
 		   if($(window).scrollTop() + $(window).height() == $(document).height()) {
-				if(!_last_Request && __all(5, afTer, lasTStory, _of, index.stories).length){
+				if(!_last_Request && _firsT(5, _of, index.stories).length){
 		          $("#loadingMorePosts").addClass("visible")
-		         _R("#feed", und, "e").append(one("_story", foReach, __all(5, afTer, lasTStory, _of, index.stories)));
+		         _R("#feed", und, "e").append(one("_story", foReach, _firsT(5, _of, index.stories, spliceThem)));
 		         RooT.ready()
 					_last_Request= 372
 					_last_Request_interval= setInterval(function(){
@@ -4326,9 +4351,9 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
 		   }
 		}else if(RooT.maTch.user.exec(actualLocation)){
 			if($(window).scrollTop() + $(window).height() == $(document).height()) {
-				if(!_last_Request && Object.keys(_all(5, afTer, lasTStory, _of, user.stories)).length){
+				if(!_last_Request && Object.keys(firsT(5, _of, user.stories)).length){
 		          $("#loadingMorePosts").addClass("visible")
-		         _R("#feed", und, "e").append(one("story", foReach, _all(5, afTer, lasTStory, _of, user.stories)));
+		         _R("#feed", und, "e").append(one("story", foReach, firsT(5, _of, user.stories)));
 		         RooT.ready()
 					_last_Request= 372
 					_last_Request_interval= setInterval(function(){
@@ -4873,7 +4898,7 @@ _R("#photos", 0).on("click", function(ev){
 })
 /*RooT root link*/
 
-_R('a[href="/"]').on("click", function(e){
+/*_R('a[href="/"]').on("click", function(e){
 	e.preventDefault()
 	
 	history.pushState({page: 1}, "", `/`)
@@ -4888,9 +4913,9 @@ _R('a[href="/"]').on("click", function(e){
       RooT.ready()
     })
   })
-})
+})*/
 /*RooT videos' link*/
-_R("#videos", 0).on("click", function(ev){
+/*_R("#videos", 0).on("click", function(ev){
 	history.pushState({page: 1}, "", `/${user.username}/videos`); 
 	ev.preventDefault()
 	RooT.imporT("/js/" + user.username + "/videos/DB.js", Then, function(d){
@@ -4905,9 +4930,9 @@ _R("#videos", 0).on("click", function(ev){
 			RooT.ready()
 		})
 	})
-})
+})*/
 /*RooT RooTed users' links*/
-_R('a[href="/L/"]').on("click", function(e){
+/*_R('a[href="/L/"]').on("click", function(e){
 	e.preventDefault()
 	history.pushState({page: 1}, "", `/L/`)
   RooT.imporT("/js/L/DB.js", Then, function(d){
@@ -5023,7 +5048,7 @@ _R('a[href="/whale_Shailene/"]').on("click", function(e){
       RooT.ready()
     })
   })
-})
+})*/
 /*
 $("a").each(function(){
 	if(RooT.maTch.user.exec($(this).attr("href"))){
@@ -5509,13 +5534,14 @@ oReq.send();
 }else if(RooT.maTch.root.exec(window.location.pathname) !== null){
 	
 	/*Event listener for lazy post loading*/
+	/*Event listener for lazy post loading*/
 	_last_Request= 0
 	_T(window).scroll(function() {
 		if(RooT.maTch.root.exec(actualLocation) !== null){
 		   if($(window).scrollTop() + $(window).height() == $(document).height()) {
-				if(!_last_Request && __all(5, afTer, lasTStory, _of, index.stories).length){
+				if(!_last_Request && _firsT(5, _of, index.stories, spliceThem).length){
 		          $("#loadingMorePosts").addClass("visible")
-		         _R("#feed", und, "e").append(one("_story", foReach, __all(5, afTer, lasTStory, _of, index.stories)));
+		         _R("#feed", und, "e").append(one("_story", foReach, _firsT(5, _of, index.stories)));
 		         RooT.ready()
 					_last_Request= 372
 					_last_Request_interval= setInterval(function(){
@@ -5529,9 +5555,9 @@ oReq.send();
 		   }
 		}else if(RooT.maTch.user.exec(actualLocation)){
 			if($(window).scrollTop() + $(window).height() == $(document).height()) {
-				if(!_last_Request && Object.keys(_all(5, afTer, lasTStory, _of, user.stories)).length){
+				if(!_last_Request && Object.keys(firsT(5, _of, user.stories)).length){
 		          $("#loadingMorePosts").addClass("visible")
-		         _R("#feed", und, "e").append(one("story", foReach, _all(5, afTer, lasTStory, _of, user.stories)));
+		         _R("#feed", und, "e").append(one("story", foReach, firsT(5, _of, user.stories)));
 		         RooT.ready()
 					_last_Request= 372
 					_last_Request_interval= setInterval(function(){
@@ -5549,7 +5575,7 @@ oReq.send();
 	actualLocation= window.location.pathname
 	/*RooT root link*/
 
-	_R('a[href="/"]').on("click", function(e){
+	/*_R('a[href="/"]').on("click", function(e){
 		e.preventDefault()
 		
 		history.pushState({page: 1}, "", `/`)
@@ -5564,9 +5590,9 @@ oReq.send();
 	      RooT.ready()
 	    })
 	  })
-	})
+	})*/
 	/*RooT RooTed users' links*/
-	_R('a[href="/L/"]').on("click", function(e){
+	/*_R('a[href="/L/"]').on("click", function(e){
 		e.preventDefault()
 		history.pushState({page: 1}, "", `/L/`)
 	  RooT.imporT("/js/L/DB.js", Then, function(d){
@@ -5682,7 +5708,7 @@ oReq.send();
 	      RooT.ready()
 	    })
 	  })
-	})
+	})*/
 	/*
 	$("a").each(function(){
 		if(RooT.maTch.user.exec($(this).attr("href"))){

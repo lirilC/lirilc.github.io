@@ -1239,7 +1239,7 @@ badGuy= function(){
 
 purger= {}; 
             
-purger.index= 30;
+purger.index= 31;
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return
@@ -1903,16 +1903,16 @@ $(".story").each(function(){
     }})
 
     $('.chats').click(function(e){ 
-        aa= e.target; 
-        ii= false; 
-        while(!!aa.parentElement && !ii){ 
-            (!!aa.parentElement.getAttribute("class") && aa.parentElement.getAttribute("class").indexOf("chat ") != -1)? ii= true: 1; 
-            aa= aa.parentElement; 
-        }
+	    aa= e.target; 
+	    ii= false; 
+	    while(!!aa.parentElement && !ii){ 
+	        (!!aa.parentElement.getAttribute("class") && aa.parentElement.getAttribute("class").indexOf("chat ") != -1)? ii= true: 1; 
+	        aa= aa.parentElement; 
+	    }
         if(!ii){ 
             $(this).hide(); 
-            $(document.elementFromPoint(e.clientX, e.clientY)).trigger("click"); 
-            $(this).show(); 
+    	    $(document.elementFromPoint(e.clientX, e.clientY)).trigger("click"); 
+    	    $(this).show(); 
         }
     }); 
     $("html").click(function(){
@@ -2323,7 +2323,7 @@ function responsive(){
         }
         $("#chats .chats").width($(window).width() - $("#sidebar").outerWidth() -10);
         $("#sidebar #container #resizeTop").height($("#sidebar").height() - $("#sidebar #container #resizeBottom").height() - 36);
-    $("#options ul").width($("#content").width() - 243.5); 
+	$("#options ul").width($("#content").width() - 243.5); 
  }
 
  function newChat(a, b){
