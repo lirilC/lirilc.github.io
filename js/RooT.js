@@ -4723,7 +4723,7 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
             history.pushState({page: 1}, "", $(th).find(".options a").attr("href")); 
         }
     }); 
-    _R(".nav_arrow.right .arrow").not("#picContainer .arrow")
+    _R(".nav_arrow.right .arrow").not("#picContainer .arrow").e()
     /**/
     _R(".revelar").on("click", function(){ 
         if($(this).text()[0] != "O"){ 
@@ -5801,7 +5801,7 @@ oReq.send();
             history.pushState({page: 1}, "", $(th).find(".options a").attr("href")); 
         }
     }); 
-    _R(".nav_arrow.right .arrow").not("#picContainer .arrow")
+    _R(".nav_arrow.right .arrow").not("#picContainer .arrow").e()
 	/*Size, populate, and event sidebar*/
 	_R("#resizeTop", 0).css({"height": "calc(50% - 7px)"})
 	_R("#resizeTop", 0).e()
