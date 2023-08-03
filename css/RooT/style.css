@@ -1063,8 +1063,9 @@ display: block;
     text-align: left;
     padding: 0;
     margin: 2.5px 0 2.5px 0;
+    white-space: break-spaces;
     padding: 5px;
-    word-wrap: break-word;
+    word-break: break-word;
     font-family: inherit !important
 }
 #chats .chats .chat.open .chatBox .messages .sent i, #chats .chats .chat.open .chatBox .messages .sent u
@@ -3299,8 +3300,9 @@ display: block;
     text-align: left;
     padding: 0;
     margin: 2.5px 0 2.5px 0;
+    white-space: break-spaces;
     padding: 5px;
-    word-wrap: break-word;
+    word-break: break-word;
     font-family: inherit !important
 }
 #chats .chats .chat.open .chatBox .messages .sent:last-child {
@@ -4918,9 +4920,9 @@ display: block;
     text-align: left;
     padding: 0;
     margin: 2.5px 0 2.5px 0;
-    white-space: normal;
+    white-space: break-spaces;
     padding: 5px;
-    word-wrap: break-word;
+    word-break: break-word;
     
 }
 #chats .chats .chat.open .chatBox .messages .sent i, #chats .chats .chat.open .chatBox .messages .sent u
