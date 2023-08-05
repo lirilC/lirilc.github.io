@@ -509,7 +509,7 @@ if(l.keyCode== 27){
 	if(!mouseDown || !$(".button.select").is(".on"))return;
 	switch(l.keyCode){
 		case 50:
-			if(typeof saved.s == "undefined" || (typeof saved.s != "undefined" && (parseFloat( $(".marker-n").parent().css("top")) + parseFloat( $(".marker-n").parent().css("height")) / 2 + (parseFloat($(".marker-n").css("top"))- parseFloat($(".verticalredlight").css("height")) / 2) ) < saved.s)){
+			if(typeof saved.s == "undefined" || (typeof saved.s != "undefined" && (parseFloat( $(".marker-n").parent().css("top")) + parseFloat( $(".marker-n").parent().css("height")) / 2 + (parseFloat($(".marker-n").css("top"))- parseFloat($(".verticalredlight").css("height")) / 2) + 1) < saved.s)){
 				if($(".marker-n").is(".saved")){
 					$(".marker-n").removeClass("saved");
 					delete saved.n
@@ -524,7 +524,7 @@ if(l.keyCode== 27){
 			}
 			break;
 		case 51:
-			if(typeof saved.e == "undefined" || (typeof saved.e != "undefined" && (parseFloat( $(".marker-w").parent().css("left")) + parseFloat( $(".marker-w").parent().css("width")) / 2 + (parseFloat($(".marker-w").css("left"))- parseFloat($(".horizontalredlight").css("width")) / 2)) > saved.e)){
+			if(typeof saved.e == "undefined" || (typeof saved.e != "undefined" && (parseFloat( $(".marker-w").parent().css("left")) + parseFloat( $(".marker-w").parent().css("width")) / 2 + (parseFloat($(".marker-w").css("left"))- parseFloat($(".horizontalredlight").css("width")) / 2) + 1) > saved.e)){
 				if($(".marker-w").is(".saved")){
 					$(".marker-w").removeClass("saved");
 					delete saved.w
@@ -539,7 +539,7 @@ if(l.keyCode== 27){
 			}
 			break;
 		case 52:
-			if(typeof saved.n == "undefined" || (typeof saved.n != "undefined" && (parseFloat( $(".marker-s").parent().css("top")) + parseFloat( $(".marker-s").parent().css("height")) / 2 + (parseFloat($(".marker-s").css("top"))- parseFloat($(".verticalredlight").css("height")) / 2)) > saved.n)){
+			if(typeof saved.n == "undefined" || (typeof saved.n != "undefined" && (parseFloat( $(".marker-s").parent().css("top")) + parseFloat( $(".marker-s").parent().css("height")) / 2 + (parseFloat($(".marker-s").css("top"))- parseFloat($(".verticalredlight").css("height")) / 2) + 1) > saved.n)){
 				if($(".marker-s").is(".saved")){
 					$(".marker-s").removeClass("saved");
 					delete saved.s
@@ -555,7 +555,7 @@ if(l.keyCode== 27){
 			}
 			break;
 		case 49:
-			if(typeof saved.w == "undefined" || (typeof saved.w != "undefined" && (parseFloat( $(".marker-e").parent().css("left")) + parseFloat( $(".marker-e").parent().css("width")) / 2 + (parseFloat($(".marker-e").css("left"))- parseFloat($(".horizontalredlight").css("width")) / 2)) < saved.w)){
+			if(typeof saved.w == "undefined" || (typeof saved.w != "undefined" && (parseFloat( $(".marker-e").parent().css("left")) + parseFloat( $(".marker-e").parent().css("width")) / 2 + (parseFloat($(".marker-e").css("left"))- parseFloat($(".horizontalredlight").css("width")) / 2) + 1) < saved.w)){
 				if($(".marker-e").is(".saved")){
 					$(".marker-e").removeClass("saved");
 					delete saved.e
@@ -667,10 +667,10 @@ $(document).mouseup(function(e) {
     					neaRestRight= (parseFloat($(intersected).css("left")) + 1)
     				}
     			})
-    			neaRestBottom= typeof saved.s != "undefined"?saved.s:neaRestBottom
-    			neaRestTop= typeof saved.n != "undefined"?saved.n:neaRestTop
-    			neaRestLeft= typeof saved.e != "undefined"?saved.e:neaRestLeft
-    			neaRestRight= typeof saved.w != "undefined"?saved.w:neaRestRight
+    			neaRestBottom= typeof saved.s != "undefined"?(saved.s + 1):neaRestBottom
+    			neaRestTop= typeof saved.n != "undefined"?(saved.n + 1):neaRestTop
+    			neaRestLeft= typeof saved.e != "undefined"?(saved.e + 1):neaRestLeft
+    			neaRestRight= typeof saved.w != "undefined"?(saved.w + 1):neaRestRight
 
 				delete saved.s
 				delete saved.n
