@@ -627,10 +627,11 @@ $(document).mouseup(function(e) {
     		{   
 
     			if(!$(ui.draggable).is(".select")){
-    			$(ui.draggable).width((($(ui.draggable).width()) / ($(".widgetero").width()) * 100 )+ "%")
-    			$(ui.draggable).height((($(ui.draggable).height()) / ($(".widgetero").height()) * 100 )+ "%")
-    			$(ui.draggable).css({"left": ($(ui.draggable).position().left / ($(".widgetero").width()) * 100 ) + "%"})
-    			$(ui.draggable).css({"top": (($(ui.draggable).position().top) / ($(".widgetero").height()) * 100 ) + "%"})
+    			$(ui.draggable).width((($(ui.draggable)[0].getBoundingClientRect().width) / ($(".widgetero")[0].getBoundingClientRect().width) * 100 )+ "%")
+    			$(ui.draggable).height((($(ui.draggable)[0].getBoundingClientRect().height) / ($(".widgetero")[0].getBoundingClientRect().height) * 100 )+ "%")
+    			$(ui.draggable).css({"left": ($(ui.draggable).position().left / ($(".widgetero")[0].getBoundingClientRect().width) * 100 ) + "%"})
+    			$(ui.draggable).css({"top": (($(ui.draggable).position().top) / ($(".widgetero")[0].getBoundingClientRect().height) * 100 ) + "%"})
+    			console.log("drop")
     			}
     			if($(ui.draggable).is(".select")){
     			neaRestTop= -10000
@@ -682,10 +683,10 @@ $(document).mouseup(function(e) {
 				$(".widget.selectedWidget").css({"width": `${(neaRestRight == 10000? (mouseX > parseFloat($(".widgetero").css("margin-left")) + $(".widgetero").width())?$(".widgetero").width() + parseFloat($(".widgetero").css("margin-left")):$(".widgetero").width(): (neaRestRight - 1)) - (neaRestLeft == -10000?mouseX < parseFloat($(".widgetero").css("margin-left"))?-parseFloat($(".widgetero").css("margin-left")): 0: (neaRestLeft - 1))}px`})
 				$(".widget.selectedWidget").css({"top": `${neaRestTop == -10000? (mouseY - 46 < parseFloat($(".widgetero").css("margin-top")) - 46)?-parseFloat($(".widgetero").css("margin-top")) + 46:0: (neaRestTop - 1)}px`})
 				$(".widget.selectedWidget").css({"left": `${neaRestLeft == -10000?mouseX < parseFloat($(".widgetero").css("margin-left"))?-parseFloat($(".widgetero").css("margin-left")): 0: (neaRestLeft - 1)}px`})
-    			$(ui.draggable).width((($(ui.draggable).width()) / ($(".widgetero").width()) * 100 )+ "%")
-    			$(ui.draggable).height((($(ui.draggable).height()) / ($(".widgetero").height()) * 100 )+ "%")
-    			$(ui.draggable).css({"left": (($(ui.draggable).position().left) / ($(".widgetero").width()) * 100 ) + "%"})
-    			$(ui.draggable).css({"top": (($(ui.draggable).position().top) / ($(".widgetero").height()) * 100 ) + "%"})
+    			$(ui.draggable).width((($(ui.draggable)[0].getBoundingClientRect().width) / ($(".widgetero")[0].getBoundingClientRect().width) * 100 )+ "%")
+    			$(ui.draggable).height((($(ui.draggable)[0].getBoundingClientRect().height) / ($(".widgetero")[0].getBoundingClientRect().height) * 100 )+ "%")
+    			$(ui.draggable).css({"left": (($(ui.draggable).position().left) / ($(".widgetero")[0].getBoundingClientRect().width) * 100 ) + "%"})
+    			$(ui.draggable).css({"top": (($(ui.draggable).position().top) / ($(".widgetero")[0].getBoundingClientRect().height) * 100 ) + "%"})
     			console.log(`Mouse, X:${mouseX} Y:${mouseY - 46} neaRestTop:${neaRestTop} neaRestBottom:${neaRestBottom} neaRestLeft:${neaRestLeft} neaRestRight: ${neaRestRight} intersectsVertically:`)
     			console.log(intersects)
     			}
@@ -728,10 +729,10 @@ grid: ($("#gridWidth").val() == "0" && $("#gridHeight").val() == "0") || !gridSn
 
 stop: function(event, ui)
     		{        
-    			$(ui.element).width((($(ui.element).width()) / ($(".widgetero").width()) * 100 )+ "%")
-    			$(ui.element).height((($(ui.element).height()) / ($(".widgetero").height()) * 100 )+ "%")
-    			$(ui.element).css({"left": ($(ui.element).position().left / ($(".widgetero").width()) * 100 ) + "%"})
-    			$(ui.element).css({"top": ($(ui.element).position().top / ($(".widgetero").height()) * 100 ) + "%"})
+    			$(ui.element).width((($(ui.element)[0].getBoundingClientRect().width) / ($(".widgetero")[0].getBoundingClientRect().width) * 100 )+ "%")
+    			$(ui.element).height((($(ui.element)[0].getBoundingClientRect().height) / ($(".widgetero")[0].getBoundingClientRect().height) * 100 )+ "%")
+    			$(ui.element).css({"left": ($(ui.element).position().left / ($(".widgetero")[0].getBoundingClientRect().width) * 100 ) + "%"})
+    			$(ui.element).css({"top": ($(ui.element).position().top / ($(".widgetero")[0].getBoundingClientRect().height) * 100 ) + "%"})
 		}
 })
 		if(snapping){
@@ -1087,17 +1088,17 @@ function controls(a, xa){
 	            }
 	            if($(".resize").is(".on")){
 	            	$(".widget.dropped").each(function(){
-	            		$(this).width((($(this).width()) / ($(".widgetero").width()) * 100 )+ "%")
-    					$(this).height((($(this).height()) / ($(".widgetero").height()) * 100 )+ "%")
-    					$(this).css({"left": ($(this).position().left / ($(".widgetero").width()) * 100 ) + "%"})
-    					$(this).css({"top": (($(this).position().top) / ($(".widgetero").height()) * 100 ) + "%"})
+	            		$(this).width((($(this)[0].getBoundingClientRect().width) / ($(".widgetero")[0].getBoundingClientRect().width) * 100 )+ "%")
+    					$(this).height((($(this)[0].getBoundingClientRect().height) / ($(".widgetero")[0].getBoundingClientRect().height) * 100 )+ "%")
+    					$(this).css({"left": ($(this).position().left / ($(".widgetero")[0].getBoundingClientRect().width) * 100 ) + "%"})
+    					$(this).css({"top": (($(this).position().top) / ($(".widgetero")[0].getBoundingClientRect().height) * 100 ) + "%"})
 	            	})
     			}
     			if($(".select").is(".on")){
-    			$(".widget.on").width(function(){return (($(this).width()) / ($(".widgetero").width()) * 100 )+ "%"})
-    			$(".widget.on").height(function(){return (($(this).height()) / ($(".widgetero").height()) * 100 )+ "%"})
-    			$(".widget.on").css({"left": (($(this).position().left) / ($(".widgetero").width()) * 100 ) + "%"})
-    			$(".widget.on").css({"top": (($(this).position().top) / ($(".widgetero").height()) * 100 ) + "%"})
+    			$(".widget.on").width(function(){return (($(this)[0].getBoundingClientRect().width) / ($(".widgetero")[0].getBoundingClientRect().width) * 100 )+ "%"})
+    			$(".widget.on").height(function(){return (($(this)[0].getBoundingClientRect().height) / ($(".widgetero")[0].getBoundingClientRect().height) * 100 )+ "%"})
+    			$(".widget.on").css({"left": (($(this).position().left) / ($(".widgetero")[0].getBoundingClientRect().width) * 100 ) + "%"})
+    			$(".widget.on").css({"top": (($(this).position().top) / ($(".widgetero")[0].getBoundingClientRect().height) * 100 ) + "%"})
     			console.log(`Mouse, X:${mouseX} Y:${mouseY - 46} neaRestTop:${neaRestTop} neaRestBottom:${neaRestBottom} neaRestLeft:${neaRestLeft} neaRestRight: ${neaRestRight} intersectsVertically:`)
     			console.log(intersects)
     			}
