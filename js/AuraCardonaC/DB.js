@@ -65,7 +65,7 @@ var user= {
                 title: `🍃✨`,
                 description: ``,
                 contents:  {carrContents: ["WygkZ4N76A_tn.jpg", "7ZReKDtliR_tn.jpg"]},
-                Comentarios: ""
+                Comentarios: "",
             },
             "/AuraCardonaC/img/KZlbnHNzb8": {
                 type: "mult_img",
@@ -77,7 +77,7 @@ var user= {
                 title: `BYE VACACIONES ✔️☀️🥥`,
                 description: ``,
                 contents:  {carrContents: ["KZlbnHNzb8_tn.jpg", "7u8Vts2zd0_tn.jpg"]},
-                Comentarios: ""
+                Comentarios: "",
             },
             "/AuraCardonaC/img/Eh3nC0TNKk": {
                 type: "mult_img",
@@ -89,7 +89,7 @@ var user= {
                 title: `🥥🌴`,
                 description: ``,
                 contents:  {carrContents: ["Eh3nC0TNKk_tn.jpg", "J4SZ0KWlMd_tn.jpg", "CHxwXpLWsy_tn.jpg"]},
-                Comentarios: ""
+                Comentarios: "",
             },
             "/AuraCardonaC/img/TeS2XyDbc7": {
                 type: "mult_img",
@@ -101,7 +101,7 @@ var user= {
                 title: `Disfrutando 🧡`,
                 description: ``,
                 contents:  {carrContents: ["TeS2XyDbc7_tn.jpg", "UdsUpOXqcX_tn.jpg"]},
-                Comentarios: ""
+                Comentarios: "",
             },
             "/AuraCardonaC/img/M2pYeEQZYc": {
                 type: "mult_img",
@@ -112,7 +112,7 @@ var user= {
                 title: ``,
                 description: `Viseras disponibles <a href="https://instagram.com/auracardona.shopper" target= "_blank">@auracardona.shopper</a> 🩷`,
                 contents:  {carrContents: ["M2pYeEQZYc_tn.jpg", "JjD9xeLWHm_tn.jpg", "T8Mi78QsUy_tn.jpg", "JMegbvXQPS_tn.jpg"]},
-                Comentarios: ""
+                Comentarios: "",
             },
             "/AuraCardonaC/img/ugjOD304PU": {
                 type: "mult_img",
@@ -124,7 +124,7 @@ var user= {
                 title: `MAR Y MAR 🌊`,
                 description: ``,
                 contents:  {carrContents: ["ugjOD304PU_tn.jpg", "AYzddb62bC_tn.jpg"]},
-                Comentarios: ""
+                Comentarios: "",
             },
             "/AuraCardonaC/img/Z6l3ewpnoi": {
                 type: "img",
@@ -148,7 +148,7 @@ var user= {
                 title: `Modo vacaciones ☀️`,
                 description: ``,
                 contents:  {carrContents: ["g1GkncPguH_tn.jpg", "gmBC8HYwL7_tn.jpg"]},
-                Comentarios: ""
+                Comentarios: "",
             },
         }
     },
@@ -278,7 +278,7 @@ var user= {
             title: `🍃✨`,
             description: ``,
             contents:  {carrContents: ["WygkZ4N76A.jpg", "7ZReKDtliR.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/vid/cFlySITheM": {
             type: "vid",
@@ -301,7 +301,7 @@ var user= {
             title: `BYE VACACIONES ✔️☀️🥥`,
             description: ``,
             contents:  {carrContents: ["KZlbnHNzb8.jpg", "7u8Vts2zd0.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/Eh3nC0TNKk": {
             type: "mult_img",
@@ -313,7 +313,7 @@ var user= {
             title: `🥥🌴`,
             description: ``,
             contents:  {carrContents: ["Eh3nC0TNKk.jpg", "J4SZ0KWlMd.jpg", "CHxwXpLWsy.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/TeS2XyDbc7": {
             type: "mult_img",
@@ -325,7 +325,7 @@ var user= {
             title: `Disfrutando 🧡`,
             description: ``,
             contents:  {carrContents: ["TeS2XyDbc7.jpg", "UdsUpOXqcX.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/M2pYeEQZYc": {
             type: "mult_img",
@@ -336,7 +336,7 @@ var user= {
             title: ``,
             description: `Viseras disponibles <a href="https://instagram.com/auracardona.shopper" target= "_blank">@auracardona.shopper</a> 🩷`,
             contents:  {carrContents: ["M2pYeEQZYc.jpg", "JjD9xeLWHm.jpg", "T8Mi78QsUy.jpg", "JMegbvXQPS.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/ugjOD304PU": {
             type: "mult_img",
@@ -348,7 +348,7 @@ var user= {
             title: `MAR Y MAR 🌊`,
             description: ``,
             contents:  {carrContents: ["ugjOD304PU.jpg", "AYzddb62bC.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/Z6l3ewpnoi": {
             type: "img",
@@ -372,7 +372,7 @@ var user= {
             title: `Modo vacaciones ☀️`,
             description: ``,
             contents:  {carrContents: ["g1GkncPguH.jpg", "gmBC8HYwL7.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/OFq8z07GeN": {
             type: "img",
@@ -395,7 +395,7 @@ var user= {
             title: `🤎`,
             description: ``,
             contents:  {carrContents: ["TFOF2IhlRy.jpg", "iPeKPhTzse.jpg", "xxGADDd3SS.jpg", "HOk9GR5K4m.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/vid/YLlV8MF4y1": {
             type: "vid",
@@ -429,7 +429,7 @@ var user= {
             title: `Que rico un pecadito!! 🤤😜`,
             description: ``,
             contents:  {carrContents: ["VU4CEugNBQ.jpg", "21juj9YrxR.jpg", "Aq1CxT61MW.jpg", "Gw059TeLPB.jpg", "buoCA5JOE8.jpg", "99gYb3fGsB.jpg", "wxlQW61mJg.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/vid/lsufFv1Iuz": {
             type: "vid",
@@ -462,7 +462,7 @@ var user= {
             title: `Feliz cumpleaños a mi amor y a su repetido!!❤️`,
             description: `Te amo gracias por tantos momentos, gracias por tu lealtad y tu amor!❤️🙏🏻 y a mi cuñisss que adoro te deseo lo mejor en todo!!<br>Son dos Grandes hombres no solo por su tamaño si no por su corazón!🫶🏻`,
             contents:  {carrContents: ["34yuEveDaK.jpg", "1fgMS9QQem.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/Vm38w7FcJL": {
             type: "mult_img",
@@ -473,7 +473,7 @@ var user= {
             title: `Que buen entreno!💪🏼🍗`,
             description: ``,
             contents:  {carrContents: ["Vm38w7FcJL.jpg", "LOzQ4XigWR.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/vid/ldXHrkCbsd": {
             type: "vid",
@@ -495,7 +495,7 @@ var user= {
             title: `🌴✨🍄`,
             description: ``,
             contents:  {carrContents: ["kuydicNAHk.jpg", "qMAuAG5bGh.jpg", "Q3w77J0iur.jpg", "Hwrj2niN7G.jpg", "6s5Lt6vuEI.jpg", "V1AkUFVDpT.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/Ub2kGiXFwR": {
             type: "mult_img",
@@ -506,7 +506,7 @@ var user= {
             title: `🪬💕`,
             description: ``,
             contents:  {carrContents: ["Ub2kGiXFwR.jpg", "qh0B6DBE4i.jpg", "T75M2vvFd7.jpg", "uIoWhwHFEn.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/zodt0RfUh0": {
             type: "mult_img",
@@ -518,7 +518,7 @@ var user= {
             title: `COLOREA TU VIDA!! 🌈`,
             description: ``,
             contents:  {carrContents: ["zodt0RfUh0.jpg", "UL5bqSOkad.jpg", "W2zZCfSpCQ.jpg", "u096zbZekl.jpg", "8qYYgGjGkQ.jpg", "HpZ1Jo5GPx.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/BFbgcg4Ovd": {
             type: "mult_img",
@@ -530,7 +530,7 @@ var user= {
             title: `🪬`,
             description: `🧢👙 @auracardona.shopper`,
             contents:  {carrContents: ["BFbgcg4Ovd.jpg", "7gF2fnbaVO.jpg", "IHLAwhIhLa.jpg", "ZkNHw74FL9.jpg", "OOFPRnfJPw.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/0CumlAVpt2": {
             type: "mult_carr",
@@ -565,7 +565,7 @@ var user= {
             title: `Solo es saber buscar la diferencia!🪬`,
             description: `👙 @honolulu_bymarcelasardi`,
             contents:  {carrContents: ["pDoatK1fTO.jpg", "pAiiM7iwNP.jpg", "oPWkPqBexs.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/wllSKfeeDj": {
             type: "mult_img",
@@ -577,7 +577,7 @@ var user= {
             title: `✨AURA✨`,
             description: ``,
             contents:  {carrContents: ["wllSKfeeDj.jpg", "syQD3pslFM.jpg", "d8vxckZDRi.jpg", "33GkXGYdMa.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/vid/dQuPFnxwC5": {
             type: "vid",
@@ -612,7 +612,7 @@ var user= {
             title: `OFICIALMENTE CUMPLEAÑERA✨🍄`,
             description: `TAURO A MUCHO HONOR! ♉️<br>Uno de mis mejores años en cuánto a crecimiento personal y espiritual! Solo se que hoy en día lo que realmente importa es ser feliz y estar tranquilo, disfrutar mi familia y disfrutarme a mi misma, alejar todo lo que no esté en mi misma sintonía y sacar provecho de cada una de las virtudes y los poderes que tenemos cada quien✨enfocarme en mi crecimiento y en mi trascender, limpiar mi AURA totalmente🪬`,
             contents:  {carrContents: ["npn2SpMU3s.jpg", "8J0rYEdZfd.jpg", "FmngXHFlV7.jpg", "unIa8PE7mm.jpg", "qitJ5vjYqV.jpg", "0OFw6y8xit.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/vid/B3uLx5xag4": {
             type: "vid",
@@ -635,7 +635,7 @@ var user= {
             title: `💚`,
             description: ``,
             contents:  {carrContents: ["CBoHsY6Aue.jpg", "E7jFlTDynf.jpg", "WaQjgAh5yg.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/5dx8BiAE3r": {
             type: "mult_img",
@@ -647,7 +647,7 @@ var user= {
             title: `✨noches mágicas✨`,
             description: ``,
             contents:  {carrContents: ["5dx8BiAE3r.jpg", "EryGFUZ7sM.jpg", "hK9adi3O4Z.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/4CBpG08U2i": {
             type: "mult_img",
@@ -659,7 +659,7 @@ var user= {
             title: `🤎✨`,
             description: ``,
             contents:  {carrContents: ["4CBpG08U2i.jpg", "ywY6qdibR2.jpg", "8mcD7u3Fgv.jpg", "DuP81JqpEf.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/EIeriVYMue": {
             type: "mult_img",
@@ -671,7 +671,7 @@ var user= {
             title: `🖤`,
             description: ``,
             contents:  {carrContents: ["EIeriVYMue.jpg", "bSPtnh1XtH.jpg", "ZNfWmUgY7o.jpg", "wuLagO4mgf.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/b1bv5ApQem": {
             type: "mult_img",
@@ -683,7 +683,7 @@ var user= {
             title: `🖤`,
             description: ``,
             contents:  {carrContents: ["b1bv5ApQem.jpg", "4g6vLpIntu.jpg", "yGIj0ptROh.jpg", "2fzJ9FS5AO.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/TsrUlkrmgj": {
             type: "mult_img",
@@ -695,7 +695,7 @@ var user= {
             title: `❤️✨ CARDONAS ✨❤️`,
             description: ``,
             contents:  {carrContents: ["TsrUlkrmgj.jpg", "ySc77w2nyW.jpg", "ihc52zQ7xa.jpg", "vsKtmbROJY.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/nuyH3ekHYZ": {
             type: "mult_img",
@@ -707,7 +707,7 @@ var user= {
             title: `Qué bonito lo bonito!✨`,
             description: ``,
             contents:  {carrContents: ["nuyH3ekHYZ.jpg", "aN4DQdn2Yo.jpg", "RORAfWVxeg.jpg", "cwryZUxJEu.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/ehLgscUjdS": {
             type: "mult_img",
@@ -719,7 +719,7 @@ var user= {
             title: `La vida es diversión! 🎡`,
             description: ``,
             contents:  {carrContents: ["ehLgscUjdS.jpg", "CKu43fLn66.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/Z7mmWTBXhD": {
             type: "img",
@@ -754,7 +754,7 @@ var user= {
             title: `Siendo muy feliz!✨`,
             description: ``,
             contents:  {carrContents: ["tkhpcYCNHx.jpg", "7mW4f68X1I.jpg", "dU9mDDOIUP.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/M37mMe6MbE": {
             type: "mult_img",
@@ -766,7 +766,7 @@ var user= {
             title: `♠️`,
             description: ``,
             contents:  {carrContents: ["M37mMe6MbE.jpg", "OTCQjSfqmD.jpg", "rJnsLoWVau.jpg", "9qSEqMEOKr.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/xWPA6zZU0J": {
             type: "mult_img",
@@ -778,7 +778,7 @@ var user= {
             title: `💚`,
             description: ``,
             contents:  {carrContents: ["xWPA6zZU0J.jpg", "2D2pxqvjb8.jpg", "Z9YzpTAPfS.jpg", "bs9N0BS5wI.jpg", "2bPIKeundx.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/GKjDGaSjrk": {
             type: "img",
@@ -802,7 +802,7 @@ var user= {
             title: `✨`,
             description: ``,
             contents:  {carrContents: ["JfXdyRHHFI.jpg", "ZZYlDGEK61.jpg", "MHYdWuIqaf.jpg", "WOvCiu9Bwe.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/zt5KciNpFL": {
             type: "mult_img",
@@ -814,7 +814,7 @@ var user= {
             title: `🤍`,
             description: ``,
             contents:  {carrContents: ["zt5KciNpFL.jpg", "cn22YvPJEW.jpg", "3qhgo6jI0A.jpg", "VkMKSAXXZr.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/ZQR11NmgI6": {
             type: "mult_img",
@@ -826,7 +826,7 @@ var user= {
             title: `✨🖤`,
             description: ``,
             contents:  {carrContents: ["ZQR11NmgI6.jpg", "Wcd3PbkwyS.jpg", "cibSkHMW3k.jpg", "EqBtLYdpnO.jpg", "SJmBu3gNUq.jpg", "tTcU7Etr3I.jpg", "DGRODxKbcF.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/EOCRAoe8Dc": {
             type: "img",
@@ -849,7 +849,7 @@ var user= {
             title: `Tu mente crea tu realidad 💪🏼 primero mentalízalo y luego ponlo en práctica✨`,
             description: ``,
             contents:  {carrContents: ["Ve6PeXu7pM.jpg", "iWspy1JdOM.jpg", "Euwgjh3I5r.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/qOVXz9AZTp": {
             type: "mult_img",
@@ -861,7 +861,7 @@ var user= {
             title: `@128club_cali ✨ 💃🏼🕺🏻`,
             description: ``,
             contents:  {carrContents: ["qOVXz9AZTp.jpg", "qSCNRBIlrk.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/vid/6Zmx5DnxY3": {
             type: "vid",
@@ -938,7 +938,7 @@ var user= {
             title: `💚`,
             description: ``,
             contents:  {carrContents: ["exJR4Pz76h.jpg", "KyCwpStX6a.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/KNWfqh6CIy": {
             type: "mult_img",
@@ -949,7 +949,7 @@ var user= {
             title: `TAURO🖤`,
             description: ``,
             contents:  {carrContents: ["KNWfqh6CIy.jpg", "6Nyx5HuzB4.jpg", "kUrGiMNnyO.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/prO4Xj7LMF": {
             type: "mult_img",
@@ -961,7 +961,7 @@ var user= {
             title: `HAPPY SAN VALENTÍN ♥️`,
             description: `<a href= "https://linktr.ee/auracardona" target= "_blank">https://linktr.ee/auracardona</a> en mi perfil ❤️`,
             contents:  {carrContents: ["prO4Xj7LMF.jpg", "yH0SxRpvvf.jpg", "EpUoxFf1Jr.jpg", "of14BweR3P.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/1qNsCzTPTe": {
             type: "img",
@@ -985,7 +985,7 @@ var user= {
             title: `Seguridad es todo lo que necesitas! 🖤💕`,
             description: `@saobeachwear 👙`,
             contents:  {carrContents: ["6E3zb8GJiq.jpg", "wOOZv63CR1.jpg", "EtUWSN7jhZ.jpg", "Dn1NO3XnIA.jpg", "8cFOGcjlxN.jpg", "BZr93M6MtQ.jpg", "9r6xHlV9zB.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/vid/d85fFyTUBv": {
             type: "vid",
@@ -1008,7 +1008,7 @@ var user= {
             title: `De mis placeres favoritos, disfrutar de un atardecer! 🌅🙏🏻😍`,
             description: ``,
             contents:  {carrContents: ["FeagC9Pzq3.jpg", "QGvnHllnkH.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/qmRlZ7ZaI6": {
             type: "mult_img",
@@ -1020,7 +1020,7 @@ var user= {
             title: `SOL SOLECITO ☀️`,
             description: ``,
             contents:  {carrContents: ["qmRlZ7ZaI6.jpg", "8Cqj9nHbkK.jpg", "k1sZgd4V3G.jpg", "2j3YAvLvf5.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/vid/Jg13b9p0kt": {
             type: "vid",
@@ -1091,7 +1091,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `Un día para no olvidar!😍💫`,
             description: ``,
             contents:  {carrContents: ["YYrrwAkyL1.jpg", "jcnNtMmC0O.jpg", "ATi04yFqF5.jpg", "qilwWI8TBA.jpg", "vPFjmmlPoT.jpg", "21z4y4BsK1.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/de2QKFGSUK": {
             type: "mult_img",
@@ -1103,7 +1103,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `PACHAMAMA MADRE DE LA TIERRA🤎`,
             description: `MENTE ABIERTA, GRANDES SUEÑOS 💫`,
             contents:  {carrContents: ["de2QKFGSUK.jpg", "Jr8pw8g0aQ.jpg", "IKH64fepah.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/70rhuzDl0e": {
             type: "img",
@@ -1127,7 +1127,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `Que hermoso lugar!😍`,
             description: ``,
             contents:  {carrContents: ["0yvMUwvtzD.jpg", "eKnUtBIw3w.jpg", "OqU3khgcAM.jpg", "u2XovvsE4N.jpg", "fnV8zS2yVr.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/KiInFWLZdR": {
             type: "mult_img",
@@ -1139,7 +1139,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `💙`,
             description: ``,
             contents:  {carrContents: ["KiInFWLZdR.jpg", "UoznR6GyN7.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/OEzeModiUb": {
             type: "mult_img",
@@ -1151,7 +1151,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: ``,
             description: ``,
             contents:  {carrContents: ["OEzeModiUb.jpg", "zMU9dmC5Lc.jpg", "53MWdcNLGH.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/WCs5QKYdq3": {
             type: "mult_img",
@@ -1163,7 +1163,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `✨`,
             description: ``,
             contents:  {carrContents: ["WCs5QKYdq3.jpg", "vkPAi2X9Hv.jpg", "fnjJ1eqIXN.jpg", "OrOsR1gvsy.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/K4L1G9ZYuk": {
             type: "mult_img",
@@ -1175,7 +1175,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `🌴🌳🌿🌱🍄`,
             description: ``,
             contents:  {carrContents: ["K4L1G9ZYuk.jpg", "Qae6VHQzY0.jpg", "gApd0gEHTq.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/TU5u44enCP": {
             type: "mult_img",
@@ -1187,7 +1187,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `Un destino para conocer! 🇨🇴😍`,
             description: `VALLE DEL CÓCORA`,
             contents:  {carrContents: ["TU5u44enCP.jpg", "ckHeynrQ8P.jpg", "zmPuFy9KLt.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/lqz2Z0Uahz": {
             type: "img",
@@ -1223,7 +1223,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `🍃❤️`,
             description: ``,
             contents:  {carrContents: ["BAmqiN873b.jpg", "vzHfZEBrt9.jpg", "JHnoWB1XbU.jpg", "g3P7OhTVx8.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/vid/zDPDYt0SAM": {
             type: "vid",
@@ -1246,7 +1246,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `AÑO NUEVO ✨`,
             description: ``,
             contents:  {carrContents: ["xQ77rPLhz6.jpg", "1QJDxCcxxg.jpg", "qHOWBLHYj2.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/xmQajgTQvh": {
             type: "mult_img",
@@ -1258,7 +1258,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `Rumbo al 2023 🙏🏻❤️ TEAMO!`,
             description: `Prosperidad! Tranquilidad! Amor! Salud! Confianza!`,
             contents:  {carrContents: ["xmQajgTQvh.jpg", "3Jrdehi1PK.jpg", "SPqOzP6Swe.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/8SIDOoJ0JN": {
             type: "mult_img",
@@ -1270,7 +1270,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `B i e n v e n i d o 2023 ⭐️ FAMILIA🙏🏻✨`,
             description: `Feliz año para todos mis seguidores gracias por todo su apoyo y cariño Dios los bendiga y los llene de mucho amor, salud y prosperidad ✨🙏🏻`,
             contents:  {carrContents: ["8SIDOoJ0JN.jpg", "tZnwe5nDZA.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/vid/7vwZ3hwqc1": {
             type: "vid",
@@ -1293,7 +1293,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `BIENVENIDA FERIA DE CALI✨💃🏼`,
             description: ``,
             contents:  {carrContents: ["dWPI5AnLtG.jpg", "siLCjTD8LK.jpg", "FgfiOWTAKd.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/34CDABesXq": {
             type: "mult_img",
@@ -1304,7 +1304,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `F E L I Z N A V I D A D 🎄`,
             description: ``,
             contents:  {carrContents: ["34CDABesXq.jpg", "5r31dzUdvu.jpg", "Zek9wIuEhU.jpg", "JyradmQ3me.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/L1IpcDO9ze": {
             type: "mult_img",
@@ -1315,7 +1315,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: ``,
             description: ``,
             contents:  {carrContents: ["L1IpcDO9ze.jpg", "q885l5FYJK.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/Dvuv5Dp7Xa": {
             type: "mult_img",
@@ -1326,7 +1326,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: ``,
             description: ``,
             contents:  {carrContents: ["Dvuv5Dp7Xa.jpg", "92LwspD1NT.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/QWmKbS22e7": {
             type: "img",
@@ -1348,7 +1348,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `Una buena combinación ❤️`,
             description: ``,
             contents:  {carrContents: ["PNPCciddqf.jpg", "9BtgSokGMw.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/vid/WerYqfK4Ce": {
             type: "vid",
@@ -1381,7 +1381,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `Una mirada muy sexy🙂`,
             description: ``,
             contents:  {carrContents: ["pFl0OBh4d2.jpg", "fdvhsWfQtS.jpg", "48cm720Zqd.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/EZTaPiw7hX": {
             type: "mult_img",
@@ -1392,7 +1392,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `ATARDECERES 🌅`,
             description: ``,
             contents:  {carrContents: ["EZTaPiw7hX.jpg", "JnWbNpL70f.jpg", "1yLitCQFt6.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/DeUkNcmTsy": {
             type: "mult_img",
@@ -1403,7 +1403,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `🏝️`,
             description: ``,
             contents:  {carrContents: ["DeUkNcmTsy.jpg", "TAfRi4fuGB.jpg", "0xIAWHLXZ9.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/vid/aAfDfilvRF": {
             type: "vid",
@@ -1447,7 +1447,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `Orgullosa de las amigas que tengo!❤️`,
             description: `Las amoo gracias por la lealtad siempre! <a href="https://instagram.com/carolina_fajardo" target= "_blank">@carolina_fajardo</a> <a href="https://instagram.com/cheli.ft" target= "_blank">@cheli.ft</a>`,
             contents:  {carrContents: ["5wMVqJN6TU.jpg", "xe3mil0MCq.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/WZuDKiZDWK": {
             type: "mult_img",
@@ -1458,7 +1458,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `Sólo vengo hasta aquí para agradecer un nuevo atardecer 🌅`,
             description: `No todos los días son lindos, no todos los días son soleados pero siempre podemos darnos cuenta que llegará el día esperado ✨😍`,
             contents:  {carrContents: ["WZuDKiZDWK.jpg", "2dWRrxoKGz.jpg", "WNpXRxqio3.jpg", "FUdi6E6k4R.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/863mevPJWk": {
             type: "mult_img",
@@ -1469,7 +1469,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: ``,
             description: ``,
             contents:  {carrContents: ["863mevPJWk.jpg", "30T8243P2T.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/3CqvlsbxXh": {
             type: "img",
@@ -1491,7 +1491,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `@thezoofestival 💜`,
             description: ``,
             contents:  {carrContents: ["NJg3Pfdlrt.jpg", "2cGs6C1jki.jpg", "VII5QK4EbT.jpg", "cNsDnR4TOj.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/8ptwmdq6VK": {
             type: "mult_img",
@@ -1502,7 +1502,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `🤡`,
             description: ``,
             contents:  {carrContents: ["8ptwmdq6VK.jpg", "7oZrRXUKYy.jpg", "5ipMnOCw3i.jpg", "x95bmFejVQ.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/uwJ7XofUN2": {
             type: "mult_img",
@@ -1513,7 +1513,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `Un lindo angelito 🖤`,
             description: ``,
             contents:  {carrContents: ["uwJ7XofUN2.jpg", "sTgDcKg0iX.jpg", "5PIr365njg.jpg", "42U9Knqt70.jpg", "4S2W5yAvqK.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/267ZK1WCVA": {
             type: "mult_img",
@@ -1524,7 +1524,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `HAPPY HALLOWEEN 🖤`,
             description: ``,
             contents:  {carrContents: ["267ZK1WCVA.jpg", "5u34TptarH.jpg", "AGojHN2Ju2.jpg", "gdvofQxt4G.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/vid/FOwEl12rRg": {
             type: "vid",
@@ -1547,7 +1547,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `🖤✨`,
             description: ``,
             contents:  {carrContents: ["CFf5PCj3gB.jpg", "QAA8LbwT9g.jpg", "zEdxGwDNq5.jpg", "yxXEqJn4St.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/zxK3COsCbY": {
             type: "mult_img",
@@ -1559,7 +1559,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `LOVE you mi muñeca ❤️`,
             description: ``,
             contents:  {carrContents: ["zxK3COsCbY.jpg", "exGWNn5AQh.jpg", "eyYxFVlYsP.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/wkPiUgEf7J": {
             type: "mult_img",
@@ -1571,7 +1571,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `Si ven este toro en la calle...`,
             description: `...les recomiendo que le cojan las bolas y se las besen SUERTE PURA SUERTE 🍀`,
             contents:  {carrContents: ["wkPiUgEf7J.jpg", "jviQbZFPog.jpg", "cibKARrn1w.jpg", "5oEPv9oUiv.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/mDdZheLM9j": {
             type: "mult_img",
@@ -1583,7 +1583,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `🎃`,
             description: ``,
             contents:  {carrContents: ["mDdZheLM9j.jpg", "Pt5abjj1e2.jpg", "QUOjcQ0l07.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/bxQFR321c5": {
             type: "mult_img",
@@ -1595,7 +1595,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `Siempre mi mejor plan serán ellos❤️`,
             description: `No se trata de que tu familia sea una simple compañía se trata de poder DISFRUTAR de cada uno de ellos 🙏🏻`,
             contents:  {carrContents: ["bxQFR321c5.jpg", "UcF1xznfpn.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/DHy4DSxJI7": {
             type: "mult_img",
@@ -1607,7 +1607,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `Nos parecemos?🙂`,
             description: ``,
             contents:  {carrContents: ["DHy4DSxJI7.jpg", "k3xlibKIEk.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/xyAzbABTbU": {
             type: "mult_img",
@@ -1619,7 +1619,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `Que lindo que es conocer !!✨`,
             description: ``,
             contents:  {carrContents: ["xyAzbABTbU.jpg", "sjcha0qyZ7.jpg", "H2Luw2f2mo.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/6aleJjFWMx": {
             type: "mult_img",
@@ -1631,7 +1631,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `Como disfruto de una buena vista con un buen atardecer!😍`,
             description: ``,
             contents:  {carrContents: ["6aleJjFWMx.jpg", "oGrkqse8bK.jpg", "jLo3ZF6Et4.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/vid/B94Wi8N7hH": {
             type: "vid",
@@ -1655,7 +1655,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `La clave está en no mirar hacia abajo cuando pisas el vidrio 🫠 #edgenyc`,
             description: ``,
             contents:  {carrContents: ["fQqryVGl5r.jpg", "IRnJIvKZqX.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/FqOKdTdv6K": {
             type: "mult_img",
@@ -1667,7 +1667,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `Un hermoso y antiguo Puente!!✨ #broklynbridge`,
             description: ``,
             contents:  {carrContents: ["FqOKdTdv6K.jpg", "sVTIzkcwZ9.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/FIpk05Cvqi": {
             type: "mult_img",
@@ -1679,7 +1679,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `Una hermosa vista!🗽 #newyorkcity`,
             description: ``,
             contents:  {carrContents: ["FIpk05Cvqi.jpg", "Cf3thLb8kX.jpg", "DiilbM7F4U.jpg", "hMWPBA1CSv.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/jfmjG7D1UR": {
             type: "mult_img",
@@ -1691,7 +1691,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `CHOCO AVENTURAS EN OTOÑO🍁❤️ te amo!!`,
             description: ``,
             contents:  {carrContents: ["jfmjG7D1UR.jpg", "sDVG6dTsbd.jpg", "3kkuYuPat0.jpg", "fm27IlJwMJ.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/IswshwhabH": {
             type: "mult_img",
@@ -1703,7 +1703,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `#timessquare ✨`,
             description: ``,
             contents:  {carrContents: ["IswshwhabH.jpg", "TPWSDsGkUU.jpg", "8yIGMQtsjl.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/w7vtkRuBIm": {
             type: "img",
@@ -1739,7 +1739,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: ``,
             description: ``,
             contents:  {carrContents: ["KQtEEZAP9p.jpg", "kp2LMVdgO9.jpg", "UJgkGrhBvB.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/B8upiqgsON": {
             type: "mult_img",
@@ -1751,7 +1751,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: ``,
             description: ``,
             contents:  {carrContents: ["B8upiqgsON.jpg", "Ngpx8sIXom.jpg", "7K4OqIQBLT.jpg", "U3cYRuObXc.jpg", "YHtN9nWoWl.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/vid/dcKtnnbBKi": {
             type: "vid",
@@ -1773,7 +1773,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `SEAN LUZ✨`,
             description: ``,
             contents:  {carrContents: ["Keeoz8hEXK.jpg", "B57DDuO5F2.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/FjZnB3hjEw": {
             type: "mult_img",
@@ -1784,7 +1784,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `🖤`,
             description: ``,
             contents:  {carrContents: ["FjZnB3hjEw.jpg", "g44DoK32iD.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/vid/HVgG5fxfZt": {
             type: "vid",
@@ -1819,7 +1819,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `Todo hace parte del OUTFIT !!✨`,
             description: ``,
             contents:  {carrContents: ["dOzSiLdF38.jpg", "e437x7pIcU.jpg", "IAn76Rk0L8.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/zuYTjt2cSj": {
             type: "img",
@@ -1906,7 +1906,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `🌈`,
             description: ``,
             contents:  {carrContents: ["eQZeHjWK8V.jpg", "c9byLMqcf1.jpg", "IAJZ2Y8Ygy.jpg", "PeePnnXvfW.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
     	"/AuraCardonaC/img/EfEQzbHdzv": {
             type: "mult_img",
@@ -1917,7 +1917,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `Cómo me gusta vivir mi propia vida ✨`,
             description: ``,
             contents:  {carrContents: ["EfEQzbHdzv.jpg", "eXHWAPgeZl.jpg", "qyf9LRafkH.jpg", "xkt6Q6jHRc.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/1uI4nhQwrH": {
             type: "img",
@@ -1950,7 +1950,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `🍸`,
             description: ``,
             contents:  {carrContents: ["yTQobLkiYy.jpg", "G5XEnaR7MN.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/4dWE1Axo8k": {
             type: "mult_carr",
@@ -1973,7 +1973,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `🖤✨`,
             description: ``,
             contents:  {carrContents: ["2ou09DdMDT.jpg", "pLpew54cyQ.jpg", "J8fntbI4d7.jpg", "Gh0dJPNQLm.jpg", "uaifiOwLfQ.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/yDyhAb8S3s": {
             type: "img",
@@ -1995,7 +1995,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: ``,
             description: ``,
             contents:  {carrContents: ["gDlbdBv9CI.jpg", "hN5V2ZHaJj.jpg", "gw1NoHGN5m.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/H5TxBHq4ff": {
             type: "img",
@@ -2122,7 +2122,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `Y que los cumplas muy feliz ✨por muchos años más junto a ti con la ayuda de Dios 🙏🏻❤️`,
             description: `Me siento orgullosa del papá y la mamá que tengo! Créanme que son pocas las personas que pueden gozar de un lindo hogar, por eso mi consejo hoy es VALOREN sus familias, honren a sus padres y a sus madres porque gracias a ellos es que hoy somos lo que somos cada uno, la vida es un ciclo primero ellos cuidan de nosotros y luego somos nosotros los que debemos cuidar de ellos! Feliz cumpleaños pa te amo intensamente y jamás me cansaré de decírtelo ❤️`,
             contents:  {carrContents: ["EZEXYW377I.jpg", "DTO1UzJ7c9.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/OUiQlJofR8": {
             type: "mult_img",
@@ -2133,7 +2133,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `😎`,
             description: ``,
             contents:  {carrContents: ["OUiQlJofR8.jpg", "TGfy2pGo09.jpg", "TXf3wvC661.jpg", "R9IMhwAIfe.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/D1RDzGEk70": {
             type: "mult_img",
@@ -2144,7 +2144,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: ``,
             description: ``,
             contents:  {carrContents: ["D1RDzGEk70.jpg", "RQR9NGtzNR.jpg", "MmtskuMiaS.jpg", "zlZcPDkSxc.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/IEOKvyBsGJ": {
             type: "mult_img",
@@ -2155,7 +2155,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `Me siento orgullosa de mí 🖤`,
             description: ``,
             contents:  {carrContents: ["IEOKvyBsGJ.jpg", "KDoMGssk5c.jpg", "rBudXPAMOB.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/DsVQ1JS2UR": {
             type: "img",
@@ -2199,7 +2199,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `🖤`,
             description: ``,
             contents:  {carrContents: ["BXYHkUjIUp.jpg", "EAhFEACROj.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/RJvR7tR3EO": {
             type: "mult_img",
@@ -2210,7 +2210,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `SIEMPRE SEGURA🖤`,
             description: ``,
             contents:  {carrContents: ["RJvR7tR3EO.jpg", "Fl5KBGVHMW.jpg", "a6EokwqGy8.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/KRhK5gQhQk": {
             type: "mult_img",
@@ -2221,7 +2221,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `MIS 3 ÁNGULOS 🖤`,
             description: ``,
             contents:  {carrContents: ["KRhK5gQhQk.jpg", "JkDlU5tTmP.jpg", "IiCsYY8XYL.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/XimgvFT6pp": {
             type: "img",
@@ -2257,7 +2257,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: ``,
             description: ``,
             contents:  {carrContents: ["J7tNqf0LWW.jpg", "utXmxvMrIk.jpg", "MbHN1fgMHy.jpg", "xaJ3gqXVbq.jpg", "t6rnDXlB64.jpg", "cgL09joAyj.jpg", "3hyNNIYjj7.jpg", "XsD7nmAtfQ.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/img/Mj9oCdQTpa": {
             type: "mult_img",
@@ -2269,7 +2269,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `🤍 En una bicicleta 🤍`,
             description: ``,
             contents:  {carrContents: ["Mj9oCdQTpa.jpg", "I4zmHzjMv4.jpg", "Te5J8T5SHF.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
         },
         "/AuraCardonaC/vid/SZOkZDAKMZ": {
             type: "vid",
@@ -2292,7 +2292,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: `<a class="target" href="/A.K.A._Dizzy" title="<div class='tool'><input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'><img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'><div class='datos'><ul class='actions'><li class='chatear' title='Chatear'>C</li><li class='agregar' title='Agregar'>A</li><li class='juzgar' title='Juzgar'>J</li></ul><p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p><p class='rol'>CEO <b style='color:#fff;'>+100</b></p></div><div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div><div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div><div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div><div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div></div>">A.K.A._Dizzy</a>, 😍🤤`,
             description: ``,
             contents:  {carrContents: ["HYk7c0QuCD.jpg", "2BYZMqibxZ.jpg", "ppETlVeyfD.jpg", "wJJkTuyzFu.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
             Editado: [ 'type= "mult_img"; edHistory= {"Editado el 26 de Marzo de 2022 a las 8:12 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/0b3099fb19b587dad7ce8a63ac31542d8abc3b44/AuraCardonaC/img/HYk7c0QuCD.html", "27 de Febrero de 2022 a las 2:50 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/8d2eb695ddd58751ede41483f0f38701aec710a4/AuraCardonaC/img/HYk7c0QuCD.html"}', "Editado el 26 de Marzo de 2022 a las 8:12 pm"]
         },
         "/AuraCardonaC/img/jiYQlNRSX9": {
@@ -2367,7 +2367,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
                                 </p>
                             </text>
                         </containment>`,
-            Comentarios: ""
+            Comentarios: "",
             Editado: [ 'type= "c"; edHistory= {"Editado el 25 de Diciembre de 2021 a las 8:11 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/fa22c59c827424670fa7d5a42362e9ee069eb5e8/A.K.A._Dizzy/pos/THKgcCyzBy.html", "Editado el 25 de Diciembre de 2021 a las 8:38 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/815df2d46e0cb28c17080f2fe6faa9ad5591908d/A.K.A._Dizzy/pos/THKgcCyzBy.html",  "Editado el 24 de Diciembre de 2021 a las 6:00 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/cc20cfd3645362371e27a6e82afe3ad62584dc00/A.K.A._Dizzy/pos/THKgcCyzBy.html", "Editado el 24 de Diciembre de 2021 a las 5:23 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/7d6960a98076abd762f1d5897b328dcde170fe47/A.K.A._Dizzy/pos/THKgcCyzBy.html", "24 de Diciembre a las 0:0 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/86f2ee25494787a1f456467f6d937728ff9433d0/A.K.A._Dizzy/pos/THKgcCyzBy.html"}', "Editado el 25 de Diciembre de 2021 a las 8:11 pm"]
         },
         "/AuraCardonaC/img/BboagO5svp": {
@@ -2380,7 +2380,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             title: ``,
             description: ``,
             contents:  {carrContents: ["BboagO5svp.jpg", "Zl4zRgmqy9.jpg", "gEUK0thaKp.jpg", "wabDNvXanj.jpg", "rKn407mzhB.jpg"]},
-            Comentarios: ""
+            Comentarios: "",
             Editado: [ 'type= "mult_img"; edHistory= {"Editado el 26 de Marzo de 2022 a las 3:34 pm": "https://raw.githubusercontent.com/lirilC/lirilColombia.github.io/136d8042d0a728c4be1b53b39af5a2b502c542f3/AuraCardonaC/img/BboagO5svp.html", "2 de Marzo de 2021 a las 10:27 pm": "https://raw.githubusercontent.com/lirilC/lirilColombia.github.io/653a9a51848b7fbc9cd497b03c51e91e277064b4/AuraCardonaC/img/BboagO5svp.html"}', "Editado el 26 de Marzo de 2022 a las 3:34 pm"]
         },
         "/AuraCardonaC/img/H6zO7uANFq": {
