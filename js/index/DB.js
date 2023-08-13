@@ -1,6 +1,371 @@
 export function _index(){
 var index= {
     stories: [
+    "/AuraCardonaC/img/du0pgbjUY8", {
+            user: {
+                username: "AuraCardonaC",
+                users_name: "Aura María Cardona Demasiado",
+                profilePic: {
+                        "/AuraCardonaC/img/H5TxBHq4ff": {
+                            type: "img",
+                            date: {
+                                full: "13 de Agosto de 2022 a las 10:8 pm",
+                                min: "Agosto de 2022"
+                            },
+                            title: `El mejor momento 😍🌅`,
+                            description: ``,
+                            contents:  {image: "H5TxBHq4ff_tn.jpg"},
+                            Comentarios: ""
+                        }
+                    },
+                rol:{
+                    rol: "Profe de fitness",
+                    level: "94"
+                },
+                tool:  `<div class='tool'>
+                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
+                            <img src='/resources/images/AuraCardonaC/H5TxBHq4ff_tn.jpg'>
+                            <div class='datos'>
+                                <ul class='actions'>
+                                    <li class='chatear' title='Chatear'>C</li>
+                                    <li class='agregar' title='Agregar'>A</li>
+                                    <li class='juzgar' title='Juzgar'>J</li>
+                                </ul>                  
+                                <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
+                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
+                            </div>
+                        </div>`
+            },
+            type: "img",
+            date: {
+                full: "23 de Julio de 2023 a la 2:3 pm",
+                min: "23 de Julio a la 2:3 pm"
+            },
+            title: `R E B E K A ✨`,
+            description: `Este animalito llego a mi vida con mucho significado. Nació el mismo día de mi cumpleaños 6 de Mayo y en su honor lleva el nombre de mi REBEKO un pajarito que críe con mucho amor❤️ Los gatos tienen una conexión tan Poderosa con el mundo espiritual que se convierten en nuestros guardianes absorbiendo toda la energía negativa que nos rodea.`,
+            contents:  {image: "du0pgbjUY8.jpg"},
+            Comentarios: ""
+        },
+    "/AuraCardonaC/img/WygkZ4N76A", {
+            user: {
+                username: "AuraCardonaC",
+                users_name: "Aura María Cardona Demasiado",
+                profilePic: {
+                        "/AuraCardonaC/img/H5TxBHq4ff": {
+                            type: "img",
+                            date: {
+                                full: "13 de Agosto de 2022 a las 10:8 pm",
+                                min: "Agosto de 2022"
+                            },
+                            title: `El mejor momento 😍🌅`,
+                            description: ``,
+                            contents:  {image: "H5TxBHq4ff_tn.jpg"},
+                            Comentarios: ""
+                        }
+                    },
+                rol:{
+                    rol: "Profe de fitness",
+                    level: "94"
+                },
+                tool:  `<div class='tool'>
+                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
+                            <img src='/resources/images/AuraCardonaC/H5TxBHq4ff_tn.jpg'>
+                            <div class='datos'>
+                                <ul class='actions'>
+                                    <li class='chatear' title='Chatear'>C</li>
+                                    <li class='agregar' title='Agregar'>A</li>
+                                    <li class='juzgar' title='Juzgar'>J</li>
+                                </ul>                  
+                                <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
+                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
+                            </div>
+                        </div>`
+            },
+            type: "mult_img",
+            date: {
+                full: "16 de Julio de 2023 a las 4:41 pm",
+                min: "16 de Julio a las 4:41 pm"
+            },
+            city: {name: "Calima", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Lago_Calima.jpg/800px-Lago_Calima.jpg", description: `Calima es un municipio colombiano del departamento del Valle del Cauca fundado, principalmente, por colonos vallecaucanos, y además, de antioqueños y caldenses. Está situado a 86 km de Cali, la temperatura media es de 18 °C, con una población total de 18.469 habitantes, considerado municipio desde 1939 y fundado en 1907 y su extensión total es de 1154 km². Su cabecera municipal se llama El Darién. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Dari%C3%A9n_(Valle_del_Cauca)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `🍃✨`,
+            description: ``,
+            contents:  {carrContents: ["WygkZ4N76A.jpg", "7ZReKDtliR.jpg"]},
+            Comentarios: ""
+        },
+    "/AuraCardonaC/vid/cFlySITheM", {
+            user: {
+                username: "AuraCardonaC",
+                users_name: "Aura María Cardona Demasiado",
+                profilePic: {
+                        "/AuraCardonaC/img/H5TxBHq4ff": {
+                            type: "img",
+                            date: {
+                                full: "13 de Agosto de 2022 a las 10:8 pm",
+                                min: "Agosto de 2022"
+                            },
+                            title: `El mejor momento 😍🌅`,
+                            description: ``,
+                            contents:  {image: "H5TxBHq4ff_tn.jpg"},
+                            Comentarios: ""
+                        }
+                    },
+                rol:{
+                    rol: "Profe de fitness",
+                    level: "94"
+                },
+                tool:  `<div class='tool'>
+                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
+                            <img src='/resources/images/AuraCardonaC/H5TxBHq4ff_tn.jpg'>
+                            <div class='datos'>
+                                <ul class='actions'>
+                                    <li class='chatear' title='Chatear'>C</li>
+                                    <li class='agregar' title='Agregar'>A</li>
+                                    <li class='juzgar' title='Juzgar'>J</li>
+                                </ul>                  
+                                <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
+                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
+                            </div>
+                        </div>`
+            },
+            type: "vid",
+            date: {
+                full: "12 de Julio de 2023 a las 4:17 pm",
+                min: "12 de Julio a las 4:17 pm"
+            },
+            title: `Todo lo que me disfruto a este man no tiene nombre...`,
+            description: `...Le encantan todos los deportes como a mí, es bailarín profesional de todo tipo de música, excelente padre, amigo y esposo.<br><br><br>Hoy quiero desearte un feliz cumpleaños Pa’, no sabes lo orgullosa que me siento de que mi mamá y tú sean mis padres, pues han sido el mejor ejemplo que la vida me ha regalado para formarme como mujer. Te amo y se que la vida me va a permitir compartir y disfrutar muchos momentos más a tu lado. Eres mi hombre ideal.<br><br><br>Dejaste una vara muy alta 🤣 y lo único que sé es que quiero mantener el ejemplo que le has dado a mi familia y a mí, así como nos enseñaste del gran significado de esas palabras tan importantes como lo son: hogar, familia, respeto y confianza. Te amo! ❤️🙏🏻<br><br><br>Donde sea y cómo sea pero siempre contigo!✨🙏🏻❤️ @ramirocardonap`,
+            contents:  {video: "cFlySITheM"},
+            Comentarios: ""
+        },
+    "/AuraCardonaC/img/KZlbnHNzb8", {
+            user: {
+                username: "AuraCardonaC",
+                users_name: "Aura María Cardona Demasiado",
+                profilePic: {
+                        "/AuraCardonaC/img/H5TxBHq4ff": {
+                            type: "img",
+                            date: {
+                                full: "13 de Agosto de 2022 a las 10:8 pm",
+                                min: "Agosto de 2022"
+                            },
+                            title: `El mejor momento 😍🌅`,
+                            description: ``,
+                            contents:  {image: "H5TxBHq4ff_tn.jpg"},
+                            Comentarios: ""
+                        }
+                    },
+                rol:{
+                    rol: "Profe de fitness",
+                    level: "94"
+                },
+                tool:  `<div class='tool'>
+                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
+                            <img src='/resources/images/AuraCardonaC/H5TxBHq4ff_tn.jpg'>
+                            <div class='datos'>
+                                <ul class='actions'>
+                                    <li class='chatear' title='Chatear'>C</li>
+                                    <li class='agregar' title='Agregar'>A</li>
+                                    <li class='juzgar' title='Juzgar'>J</li>
+                                </ul>                  
+                                <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
+                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
+                            </div>
+                        </div>`
+            },
+            type: "mult_img",
+            date: {
+                full: "3 de Julio de 2023 a las 11:15 am",
+                min: "3 de Julio a las 11:15 am"
+            },
+            city: {name: "Coveñas", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Ensenada_en_Cove%C3%B1as.JPG/800px-Ensenada_en_Cove%C3%B1as.JPG", description: `Coveñas es un municipio de Colombia, situado en el norte del país, en el departamento de Sucre (subregión de Morrosquillo). <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cove%C3%B1as'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `BYE VACACIONES ✔️☀️🥥`,
+            description: ``,
+            contents:  {carrContents: ["KZlbnHNzb8.jpg", "7u8Vts2zd0.jpg"]},
+            Comentarios: ""
+        },
+    "/AuraCardonaC/img/Eh3nC0TNKk", {
+            user: {
+                username: "AuraCardonaC",
+                users_name: "Aura María Cardona Demasiado",
+                profilePic: {
+                        "/AuraCardonaC/img/H5TxBHq4ff": {
+                            type: "img",
+                            date: {
+                                full: "13 de Agosto de 2022 a las 10:8 pm",
+                                min: "Agosto de 2022"
+                            },
+                            title: `El mejor momento 😍🌅`,
+                            description: ``,
+                            contents:  {image: "H5TxBHq4ff_tn.jpg"},
+                            Comentarios: ""
+                        }
+                    },
+                rol:{
+                    rol: "Profe de fitness",
+                    level: "94"
+                },
+                tool:  `<div class='tool'>
+                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
+                            <img src='/resources/images/AuraCardonaC/H5TxBHq4ff_tn.jpg'>
+                            <div class='datos'>
+                                <ul class='actions'>
+                                    <li class='chatear' title='Chatear'>C</li>
+                                    <li class='agregar' title='Agregar'>A</li>
+                                    <li class='juzgar' title='Juzgar'>J</li>
+                                </ul>                  
+                                <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
+                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
+                            </div>
+                        </div>`
+            },
+            type: "mult_img",
+            date: {
+                full: "2 de Julio de 2023 a las 10:27 am",
+                min: "2 de Julio a las 10:27 am"
+            },
+            city: {name: "Coveñas", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Ensenada_en_Cove%C3%B1as.JPG/800px-Ensenada_en_Cove%C3%B1as.JPG", description: `Coveñas es un municipio de Colombia, situado en el norte del país, en el departamento de Sucre (subregión de Morrosquillo). <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cove%C3%B1as'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `🥥🌴`,
+            description: ``,
+            contents:  {carrContents: ["Eh3nC0TNKk.jpg", "J4SZ0KWlMd.jpg", "CHxwXpLWsy.jpg"]},
+            Comentarios: ""
+        },
+    "/AuraCardonaC/img/TeS2XyDbc7", {
+            user: {
+                username: "AuraCardonaC",
+                users_name: "Aura María Cardona Demasiado",
+                profilePic: {
+                        "/AuraCardonaC/img/H5TxBHq4ff": {
+                            type: "img",
+                            date: {
+                                full: "13 de Agosto de 2022 a las 10:8 pm",
+                                min: "Agosto de 2022"
+                            },
+                            title: `El mejor momento 😍🌅`,
+                            description: ``,
+                            contents:  {image: "H5TxBHq4ff_tn.jpg"},
+                            Comentarios: ""
+                        }
+                    },
+                rol:{
+                    rol: "Profe de fitness",
+                    level: "94"
+                },
+                tool:  `<div class='tool'>
+                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
+                            <img src='/resources/images/AuraCardonaC/H5TxBHq4ff_tn.jpg'>
+                            <div class='datos'>
+                                <ul class='actions'>
+                                    <li class='chatear' title='Chatear'>C</li>
+                                    <li class='agregar' title='Agregar'>A</li>
+                                    <li class='juzgar' title='Juzgar'>J</li>
+                                </ul>                  
+                                <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
+                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
+                            </div>
+                        </div>`
+            },
+            type: "mult_img",
+            date: {
+                full: "1 de Julio de 2023 a las 3:16 pm",
+                min: "1 de Julio a las 3:16 pm"
+            },
+            city: {name: "Coveñas", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Ensenada_en_Cove%C3%B1as.JPG/800px-Ensenada_en_Cove%C3%B1as.JPG", description: `Coveñas es un municipio de Colombia, situado en el norte del país, en el departamento de Sucre (subregión de Morrosquillo). <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cove%C3%B1as'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `Disfrutando 🧡`,
+            description: ``,
+            contents:  {carrContents: ["TeS2XyDbc7.jpg", "UdsUpOXqcX.jpg"]},
+            Comentarios: ""
+        },
+    "/AuraCardonaC/img/M2pYeEQZYc", {
+            user: {
+                username: "AuraCardonaC",
+                users_name: "Aura María Cardona Demasiado",
+                profilePic: {
+                        "/AuraCardonaC/img/H5TxBHq4ff": {
+                            type: "img",
+                            date: {
+                                full: "13 de Agosto de 2022 a las 10:8 pm",
+                                min: "Agosto de 2022"
+                            },
+                            title: `El mejor momento 😍🌅`,
+                            description: ``,
+                            contents:  {image: "H5TxBHq4ff_tn.jpg"},
+                            Comentarios: ""
+                        }
+                    },
+                rol:{
+                    rol: "Profe de fitness",
+                    level: "94"
+                },
+                tool:  `<div class='tool'>
+                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
+                            <img src='/resources/images/AuraCardonaC/H5TxBHq4ff_tn.jpg'>
+                            <div class='datos'>
+                                <ul class='actions'>
+                                    <li class='chatear' title='Chatear'>C</li>
+                                    <li class='agregar' title='Agregar'>A</li>
+                                    <li class='juzgar' title='Juzgar'>J</li>
+                                </ul>                  
+                                <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
+                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
+                            </div>
+                        </div>`
+            },
+            type: "mult_img",
+            date: {
+                full: "1 de Julio de 2023 a las 0:45 pm",
+                min: "1 de Julio a las 0:45 pm"
+            },
+            title: ``,
+            description: `Viseras disponibles <a href="https://instagram.com/auracardona.shopper" target= "_blank">@auracardona.shopper</a> 🩷`,
+            contents:  {carrContents: ["M2pYeEQZYc.jpg", "JjD9xeLWHm.jpg", "T8Mi78QsUy.jpg", "JMegbvXQPS.jpg"]},
+            Comentarios: ""
+        },
+    "/AuraCardonaC/img/ugjOD304PU", {
+            user: {
+                username: "AuraCardonaC",
+                users_name: "Aura María Cardona Demasiado",
+                profilePic: {
+                        "/AuraCardonaC/img/H5TxBHq4ff": {
+                            type: "img",
+                            date: {
+                                full: "13 de Agosto de 2022 a las 10:8 pm",
+                                min: "Agosto de 2022"
+                            },
+                            title: `El mejor momento 😍🌅`,
+                            description: ``,
+                            contents:  {image: "H5TxBHq4ff_tn.jpg"},
+                            Comentarios: ""
+                        }
+                    },
+                rol:{
+                    rol: "Profe de fitness",
+                    level: "94"
+                },
+                tool:  `<div class='tool'>
+                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
+                            <img src='/resources/images/AuraCardonaC/H5TxBHq4ff_tn.jpg'>
+                            <div class='datos'>
+                                <ul class='actions'>
+                                    <li class='chatear' title='Chatear'>C</li>
+                                    <li class='agregar' title='Agregar'>A</li>
+                                    <li class='juzgar' title='Juzgar'>J</li>
+                                </ul>                  
+                                <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
+                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
+                            </div>
+                        </div>`
+            },
+            type: "mult_img",
+            date: {
+                full: "30 de Junio de 2023 a las 2:13 pm",
+                min: "30 de Junio a las 2:13 pm"
+            },
+            city: {name: "Coveñas", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Ensenada_en_Cove%C3%B1as.JPG/800px-Ensenada_en_Cove%C3%B1as.JPG", description: `Coveñas es un municipio de Colombia, situado en el norte del país, en el departamento de Sucre (subregión de Morrosquillo). <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cove%C3%B1as'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `MAR Y MAR 🌊`,
+            description: ``,
+            contents:  {carrContents: ["ugjOD304PU.jpg", "AYzddb62bC.jpg"]},
+            Comentarios: ""
+        },
     "/MeganFox/img/Yu7ps34i6t", {
             user: {
                 username: "MeganFox",

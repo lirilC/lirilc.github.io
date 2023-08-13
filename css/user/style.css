@@ -900,10 +900,6 @@ section.video:hover .Enlarge {
     display: block;
 }
 
-#theater #picContainer > .Playuse
-{
-    display: none; 
-}
 #theater #picContainer > div.visible, #theater .Playuse.visible
 {
     display: block; 
@@ -2574,10 +2570,7 @@ section.video section.video:hover .Enlarge {
 {
     display: none; 
 }
-#theater .Playuse
-{
-    display: none; 
-}
+
 #theater #picContainer > div.visible, #theater .Playuse.visible
 {
     display: block; 
@@ -2627,8 +2620,8 @@ padding-left: 52px;
 {
     
   color: #666;
-    font-weight: bold
-
+    font-weight: bold;
+margin-top: 26px;
 }
 #theater .more
 {
@@ -3448,7 +3441,7 @@ a:hover
     height: 100%; 
     font-size: 13px;
     max-height: 80px;
-    min-height: 26px;
+    min-height: 47px;
     border-radius: 0px; 
     resize: none; 
     border: 1px solid #b3b3b3; 

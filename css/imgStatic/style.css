@@ -153,3 +153,6 @@ b
     color: #f9fbf8;
     text-shadow: -1px 0 1px #847f7f, 0 1px 1px #847f7f, 1px 0 1px #847f7f, 0 -1px 1px #847f7f;
 }
+.navigation > .Playuse, #picContainer > .Playuse{
+	display: none;
+}
