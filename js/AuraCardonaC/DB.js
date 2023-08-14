@@ -52,7 +52,7 @@ var user= {
                 },
                 title: `R E B E K A ✨`,
                 description: `Este animalito llego a mi vida con mucho significado. Nació el mismo día de mi cumpleaños 6 de Mayo y en su honor lleva el nombre de mi REBEKO un pajarito que críe con mucho amor❤️ Los gatos tienen una conexión tan Poderosa con el mundo espiritual que se convierten en nuestros guardianes absorbiendo toda la energía negativa que nos rodea.`,
-                contents:  {image: "du0pgbjUY8.jpg"},
+                contents:  {image: "du0pgbjUY8_tn.jpg"},
                 Comentarios: ""
             },
             "/AuraCardonaC/img/WygkZ4N76A": {
