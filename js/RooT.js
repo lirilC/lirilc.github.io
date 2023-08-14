@@ -4898,7 +4898,7 @@ _R("#photos", 0).on("click", function(ev){
 })
 /*RooT root link*/
 
-/*_R('a[href="/"]').on("click", function(e){
+_R('a[href="/"]').on("click", function(e){
 	e.preventDefault()
 	
 	history.pushState({page: 1}, "", `/`)
@@ -4913,9 +4913,9 @@ _R("#photos", 0).on("click", function(ev){
       RooT.ready()
     })
   })
-})*/
+})
 /*RooT videos' link*/
-/*_R("#videos", 0).on("click", function(ev){
+_R("#videos", 0).on("click", function(ev){
 	history.pushState({page: 1}, "", `/${user.username}/videos`); 
 	ev.preventDefault()
 	RooT.imporT("/js/" + user.username + "/videos/DB.js", Then, function(d){
@@ -4930,9 +4930,9 @@ _R("#photos", 0).on("click", function(ev){
 			RooT.ready()
 		})
 	})
-})*/
+})
 /*RooT RooTed users' links*/
-/*_R('a[href="/L/"]').on("click", function(e){
+_R('a[href="/L/"]').on("click", function(e){
 	e.preventDefault()
 	history.pushState({page: 1}, "", `/L/`)
   RooT.imporT("/js/L/DB.js", Then, function(d){
@@ -5048,7 +5048,7 @@ _R('a[href="/whale_Shailene/"]').on("click", function(e){
       RooT.ready()
     })
   })
-})*/
+})
 /*
 $("a").each(function(){
 	if(RooT.maTch.user.exec($(this).attr("href"))){
@@ -5575,7 +5575,7 @@ oReq.send();
 	actualLocation= window.location.pathname
 	/*RooT root link*/
 
-	/*_R('a[href="/"]').on("click", function(e){
+	_R('a[href="/"]').on("click", function(e){
 		e.preventDefault()
 		
 		history.pushState({page: 1}, "", `/`)
@@ -5590,9 +5590,9 @@ oReq.send();
 	      RooT.ready()
 	    })
 	  })
-	})*/
+	})
 	/*RooT RooTed users' links*/
-	/*_R('a[href="/L/"]').on("click", function(e){
+	_R('a[href="/L/"]').on("click", function(e){
 		e.preventDefault()
 		history.pushState({page: 1}, "", `/L/`)
 	  RooT.imporT("/js/L/DB.js", Then, function(d){
@@ -5708,7 +5708,7 @@ oReq.send();
 	      RooT.ready()
 	    })
 	  })
-	})*/
+	})
 	/*
 	$("a").each(function(){
 		if(RooT.maTch.user.exec($(this).attr("href"))){
