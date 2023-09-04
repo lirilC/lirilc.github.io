@@ -5159,8 +5159,8 @@ for(ind in edHistory){
             break; 
     }
 }
-$(".Editado").on("contextmenu", function(er){er.preventDefault()})
-$(".Editado").on("mouseup", function(e){
+_R(".Editado").on("contextmenu", function(er){er.preventDefault()})
+_R(".Editado").on("mouseup", function(e){
 if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHistory).length - 1){
     var wReq = new XMLHttpRequest();
     var yS= $(this).closest(".story")
@@ -5180,6 +5180,7 @@ if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHisto
     if(datefinder($(this).attr("title"))== 0){$(this).css({"color": ""})}else{$(this).css({"color": "rgb(221, 221, 144)"})}
 }
 })
+_R(".Editado").e()
 /*Create all audiojs instances*/
 _R(".media").each(function(){
 	audiojs.create($(this).find("audio")[0])
@@ -6017,8 +6018,8 @@ for(ind in edHistory){
             break; 
     }
 }
-	$(".Editado").on("contextmenu", function(er){er.preventDefault()})
-$(".Editado").on("mouseup", function(e){
+	_R(".Editado").on("contextmenu", function(er){er.preventDefault()})
+_R(".Editado").on("mouseup", function(e){
 if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHistory).length - 1){
     var wReq = new XMLHttpRequest();
     var yS= $(this).closest(".story")
@@ -6038,6 +6039,7 @@ if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHisto
     if(datefinder($(this).attr("title"))== 0){$(this).css({"color": ""})}else{$(this).css({"color": "rgb(221, 221, 144)"})}
 }
 })
+_R(".Editado").e()
 /*Create all audiojs instances*/
 _R(".media").each(function(){
 	audiojs.create($(this).find("audio")[0])
@@ -6658,27 +6660,28 @@ _R('a').on("click", function(e){
     })
   })
 })
-		$(".Editado").on("contextmenu", function(er){er.preventDefault()})
-		$(".Editado").on("mouseup", function(e){
-		if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHistory).length - 1){
-		    var wReq = new XMLHttpRequest();
-		    wReq.addEventListener("load", function(e){edition(e)}); 
-		    wReq.open("get", edHistory[rvsdatefinder(datefinder($(this).attr("title")) + 1)], true);
-		    wReq.send();
-		    rvsdatefinder(datefinder($(this).attr("title")) + 1).indexOf("Editado") != 0? $(this).css({"text-decoration": "line-through", "color": "#3773639f"}): $(this).css({"text-decoration": "", "color": "rgb(221, 221, 144)"})
-		    $(this).attr("title", rvsdatefinder(datefinder($(this).attr("title")) + 1))
-		}else if(e.which === 3 && datefinder($(this).attr("title")) - 1 >= 0){
-		    var wReq = new XMLHttpRequest();
-		    wReq.addEventListener("load", function(e){edition(e)}); 
-		    wReq.open("get", edHistory[rvsdatefinder(datefinder($(this).attr("title")) - 1)], true);
-		    wReq.send();
-
-		    rvsdatefinder(datefinder($(this).attr("title")) - 1).indexOf("Editado") != 0? $(this).css({"text-decoration": "line-through", "color": "#3773639f"}): $(this).css({"text-decoration": "", "color": ""})
-		    $(this).attr("title", rvsdatefinder(datefinder($(this).attr("title")) - 1))
-		    if(datefinder($(this).attr("title"))== 0){$(this).css({"color": ""})}else{$(this).css({"color": "rgb(221, 221, 144)"})}
-		}
-
-		})
+		_R(".Editado").on("contextmenu", function(er){er.preventDefault()})
+_R(".Editado").on("mouseup", function(e){
+if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHistory).length - 1){
+    var wReq = new XMLHttpRequest();
+    var yS= $(this).closest(".story")
+    wReq.addEventListener("load", function(e){edition(e, yS)}); 
+    wReq.open("get", edHistory[rvsdatefinder(datefinder($(this).attr("title")) + 1)], true);
+    wReq.send();
+    rvsdatefinder(datefinder($(this).attr("title")) + 1).indexOf("Editado") != 0? $(this).css({"text-decoration": "line-through", "color": "#3773639f"}): $(this).css({"text-decoration": "", "color": "rgb(221, 221, 144)"})
+    $(this).attr("title", rvsdatefinder(datefinder($(this).attr("title")) + 1))
+}else if(e.which === 3 && datefinder($(this).attr("title")) - 1 >= 0){
+    var wReq = new XMLHttpRequest();
+    var yS= $(this).closest(".story")
+    wReq.addEventListener("load", function(e){edition(e, yS)}); 
+    wReq.open("get", edHistory[rvsdatefinder(datefinder($(this).attr("title")) - 1)], true);
+    wReq.send();
+    rvsdatefinder(datefinder($(this).attr("title")) - 1).indexOf("Editado") != 0? $(this).css({"text-decoration": "line-through", "color": "#3773639f"}): $(this).css({"text-decoration": "", "color": ""})
+    $(this).attr("title", rvsdatefinder(datefinder($(this).attr("title")) - 1))
+    if(datefinder($(this).attr("title"))== 0){$(this).css({"color": ""})}else{$(this).css({"color": "rgb(221, 221, 144)"})}
+}
+})
+_R(".Editado").e()
 		$(".nombre").on("click", function(){
 		    if(ctrlMShift){
 		        if($(this).attr("contenteditable") == "true"){
