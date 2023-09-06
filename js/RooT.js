@@ -4625,6 +4625,7 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
         $($(".current")[0]).attr("tabindex", 0); 
         $(".current")[0].focus(); 
     })
+    _R(".story").e()
 	/*Close modal on dark wrapper in the background of the theater's click*/
 	_R("#wrapper").on("click", function (){
         closeModal()
@@ -4760,6 +4761,7 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
     _R(".Playuse").e()
 /*Prevent default on hashed links in #sections' click*/
 _R("#sections a[href= '#']").on("click", function(e){e.preventDefault()})
+_R("#sections a[href= '#']").e()
 /*Tooltip upsigned users in Situación Sentimental and ties*/
 _R("#situation a").not("#situation a[href= '#']").tooltip({
     items: 'a',
@@ -4830,7 +4832,7 @@ _R("#ties a").not("#ties a[href= '#']").tooltip({
             });
     }
 })
-_R("#ties a").e()
+_R("#ties a").not("#ties a[href= '#']").e()
 /*Some events like the pointer-events adder and remover for the profilePic for it to be circular*/
 var distance; 
 el= $($("#profilePic > img")[0]); 
@@ -4858,7 +4860,7 @@ _R(".comentario").on("mousemove", function(event){
         $($(this).children()[0]).css({"pointer-events": "none"}); 
     }  
 }); 
-_R(".comentario")
+_R(".comentario").e()
 _R("#theater textarea", 0).on('input', function(){ 
     $(this).height(""); 
     !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2)) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2)))): 1; 
@@ -4896,6 +4898,7 @@ _R("#photos", 0).on("click", function(ev){
 		})
 	})
 })
+_R("#photos", 0).e()
 /*RooT root link*/
 
 _R('a[href="/"]').on("click", function(e){
@@ -4914,6 +4917,7 @@ _R('a[href="/"]').on("click", function(e){
     })
   })
 })
+_R('a[href="/"]').e()
 /*RooT videos' link*/
 _R("#videos", 0).on("click", function(ev){
 	history.pushState({page: 1}, "", `/${user.username}/videos`); 
@@ -4931,6 +4935,7 @@ _R("#videos", 0).on("click", function(ev){
 		})
 	})
 })
+_R("#videos", 0).e()
 /*RooT RooTed users' links*/
 _R('a[href="/L/"]').on("click", function(e){
 	e.preventDefault()
@@ -4945,6 +4950,7 @@ _R('a[href="/L/"]').on("click", function(e){
     })
   })
 })
+_R('a[href="/L/"]').e()
 _R('a[href="/A.K.A._Dizzy/"]').on("click", function(e){
 	e.preventDefault()
 	history.pushState({page: 1}, "", `/A.K.A._Dizzy/`)
@@ -4958,6 +4964,7 @@ _R('a[href="/A.K.A._Dizzy/"]').on("click", function(e){
     })
   })
 })
+_R('a[href="/A.K.A._Dizzy/"]').e()
 _R('a[href="/PpP/"]').on("click", function(e){
 	e.preventDefault()
 	history.pushState({page: 1}, "", `/PpP/`)
@@ -4971,6 +4978,7 @@ _R('a[href="/PpP/"]').on("click", function(e){
     })
   })
 })
+_R('a[href="/PpP/"]').e()
 _R('a[href="/Eld/"]').on("click", function(e){
 	e.preventDefault()
 	history.pushState({page: 1}, "", `/Eld/`)
@@ -4984,6 +4992,7 @@ _R('a[href="/Eld/"]').on("click", function(e){
     })
   })
 })
+_R('a[href="/Eld/"]').e()
 _R('a[href="/AuraCardonaC/"]').on("click", function(e){
 	e.preventDefault()
 	history.pushState({page: 1}, "", `/AuraCardonaC/`)
@@ -4997,6 +5006,7 @@ _R('a[href="/AuraCardonaC/"]').on("click", function(e){
     })
   })
 })
+_R('a[href="/AuraCardonaC/"]').e()
 _R('a[href="/MeganFox/"]').on("click", function(e){
 	e.preventDefault()
 	history.pushState({page: 1}, "", `/MeganFox/`)
@@ -5010,6 +5020,7 @@ _R('a[href="/MeganFox/"]').on("click", function(e){
     })
   })
 })
+_R('a[href="/MeganFox/"]').e()
 _R('a[href="/G-Suschrist/"]').on("click", function(e){
 	e.preventDefault()
 	history.pushState({page: 1}, "", `/G-Suschrist/`)
@@ -5023,6 +5034,7 @@ _R('a[href="/G-Suschrist/"]').on("click", function(e){
     })
   })
 })
+_R('a[href="/G-Suschrist/"]').e()
 _R('a[href="/LamaMadora/"]').on("click", function(e){
 	e.preventDefault()
 	history.pushState({page: 1}, "", `/LamaMadora/`)
@@ -5036,6 +5048,7 @@ _R('a[href="/LamaMadora/"]').on("click", function(e){
     })
   })
 })
+_R('a[href="/LamaMadora/"]').e()
 _R('a[href="/whale_Shailene/"]').on("click", function(e){
 	e.preventDefault()
 	history.pushState({page: 1}, "", `/whale_Shailene/`)
@@ -5049,6 +5062,7 @@ _R('a[href="/whale_Shailene/"]').on("click", function(e){
     })
   })
 })
+_R('a[href="/whale_Shailene/"]').e()
 /*
 $("a").each(function(){
 	if(RooT.maTch.user.exec($(this).attr("href"))){
@@ -5592,6 +5606,7 @@ oReq.send();
 	    })
 	  })
 	})
+	_R('a[href="/"]').e()
 	/*RooT RooTed users' links*/
 	_R('a[href="/L/"]').on("click", function(e){
 		e.preventDefault()
@@ -5606,6 +5621,7 @@ oReq.send();
 	    })
 	  })
 	})
+	_R('a[href="/L/"]').e()
 	_R('a[href="/A.K.A._Dizzy/"]').on("click", function(e){
 		e.preventDefault()
 		history.pushState({page: 1}, "", `/A.K.A._Dizzy/`)
@@ -5619,6 +5635,7 @@ oReq.send();
 	    })
 	  })
 	})
+	_R('a[href="/A.K.A._Dizzy/"]').e()
 	_R('a[href="/PpP/"]').on("click", function(e){
 		e.preventDefault()
 		history.pushState({page: 1}, "", `/PpP/`)
@@ -5632,6 +5649,7 @@ oReq.send();
 	    })
 	  })
 	})
+	_R('a[href="/PpP/"]').e()
 	_R('a[href="/Eld/"]').on("click", function(e){
 		e.preventDefault()
 		history.pushState({page: 1}, "", `/Eld/`)
@@ -5645,6 +5663,7 @@ oReq.send();
 	    })
 	  })
 	})
+	_R('a[href="/Eld/"]').e()
 	_R('a[href="/AuraCardonaC/"]').on("click", function(e){
 		e.preventDefault()
 		history.pushState({page: 1}, "", `/AuraCardonaC/`)
@@ -5658,6 +5677,7 @@ oReq.send();
 	    })
 	  })
 	})
+	_R('a[href="/AuraCardonaC/"]').e()
 	_R('a[href="/MeganFox/"]').on("click", function(e){
 		e.preventDefault()
 		history.pushState({page: 1}, "", `/MeganFox/`)
@@ -5671,6 +5691,7 @@ oReq.send();
 	    })
 	  })
 	})
+	_R('a[href="/MeganFox/"]').e()
 	_R('a[href="/G-Suschrist/"]').on("click", function(e){
 		e.preventDefault()
 		history.pushState({page: 1}, "", `/G-Suschrist/`)
@@ -5684,6 +5705,7 @@ oReq.send();
 	    })
 	  })
 	})
+	_R('a[href="/G-Suschrist/"]').e()
 	_R('a[href="/LamaMadora/"]').on("click", function(e){
 		e.preventDefault()
 		history.pushState({page: 1}, "", `/LamaMadora/`)
@@ -5697,6 +5719,7 @@ oReq.send();
 	    })
 	  })
 	})
+	_R('a[href="/LamaMadora/"]').e()
 	_R('a[href="/whale_Shailene/"]').on("click", function(e){
 		e.preventDefault()
 		history.pushState({page: 1}, "", `/whale_Shailene/`)
@@ -5710,6 +5733,7 @@ oReq.send();
 	    })
 	  })
 	})
+	_R('a[href="/whale_Shailene/"]').e()
 	/*
 	$("a").each(function(){
 		if(RooT.maTch.user.exec($(this).attr("href"))){
@@ -5726,6 +5750,7 @@ oReq.send();
         $($(".current")[0]).attr("tabindex", 0); 
         $(".current")[0].focus(); 
     })
+    _R(".story").e()
     /*Add click event listeners to .stars and .bookmarks __rev*/
     _R(".star").on("click", function (){ 
         $(this).toggleClass("true"); 
