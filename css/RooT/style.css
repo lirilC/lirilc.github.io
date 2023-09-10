@@ -6856,6 +6856,7 @@ a:hover
     height: 100%; 
     position: absolute; 
     text-align: center; 
+    pointer-events: none;
 } 
 .nav_arrow .arrow{ 
     font-family: "icomoon"; 
@@ -6864,6 +6865,7 @@ a:hover
     background-color: white; 
     border-radius: 50%; 
     position: relative; 
+    pointer-events: auto;
 } 
 .nav_arrow.disabled .arrow {
     color: #ccc;
