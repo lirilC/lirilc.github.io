@@ -28,7 +28,7 @@ var firsT= function(l, k, j, s){
 	    	for(var a= (l* 2); a < Object.keys(j).length; a++){
 		      if(!!Object.keys(j)[a])finalObj[Object.keys(j)[a]]= Object.values(j)[a]
 		    }
-			console.log("sad")
+			//console.log("sad")
 	    }
 		user.stories= finalObj
 	}
@@ -1791,7 +1791,7 @@ return videos}
 /**/
 var purger= {}; 
             
-purger.index= 33; 
+purger.index= 32; 
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return
@@ -3467,6 +3467,7 @@ switch(ty){
     break; 
     case "story": 
         $(".story").each(function(){ 
+        	console.log(($(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + ($(this).find(".carr").find("img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img").attr("s_rc"):$(this).find(".carr").find("img").attr("src")).slice(($(this).find(".carr").find("img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img").attr("s_rc"):$(this).find(".carr").find("img").attr("src")).lastIndexOf("/"), ($(this).find(".carr").find("img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img").attr("s_rc"):$(this).find(".carr").find("img").attr("src")).lastIndexOf(".")): $(this).find(".options a").attr("href")), uRl)
             if(($(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + ($(this).find(".carr").find("img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img").attr("s_rc"):$(this).find(".carr").find("img").attr("src")).slice(($(this).find(".carr").find("img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img").attr("s_rc"):$(this).find(".carr").find("img").attr("src")).lastIndexOf("/"), ($(this).find(".carr").find("img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img").attr("s_rc"):$(this).find(".carr").find("img").attr("src")).lastIndexOf(".")): $(this).find(".options a").attr("href")) == uRl){
                 a= $(this); 
                 (function(){ 
@@ -3658,6 +3659,7 @@ K100= function(builds){
 	        })(); 
 	        $(this).e()
 	    }); 
+	    _R(".foto").e()
 	    _R(".vid").each(function(){ 
 	        w1= `/${user.username}/vid/${$(this).find("video")[0].src.slice($(this).find("video")[0].src.lastIndexOf("/") + 1, -4)}`
 	        cold= JSON.parse(localStorage.getItem(w1)); 
@@ -3673,9 +3675,11 @@ K100= function(builds){
 	        })(); 
 	        $(this).e()
 	    }); 
+	    _R(".vid").e()
 	    _R(".story").each(function(){ 
 	        w1=  $(this).is(".mult_img")? $(this).find(".options a").attr("href").slice(0, $(this).find(".options a").attr("href").lastIndexOf("/")) + ($(this).find(".carr").find("img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img").attr("s_rc"):$(this).find(".carr").find("img").attr("src")).slice(($(this).find(".carr").find("img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img").attr("s_rc"):$(this).find(".carr").find("img").attr("src")).lastIndexOf("/"), ($(this).find(".carr").find("img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr").find("img").attr("s_rc"):$(this).find(".carr").find("img").attr("src")).lastIndexOf(".")): $(this).find(".options a").attr("href");                                                   
 	        cold= JSON.parse(localStorage.getItem(w1)); 
+
 	        t= $(this); 
 	        if(t.is(".repost")){
 	        	var userRe= t.find(".info .repost").not(".username").last().attr("src")== "/resources/assets/loading.gif"?t.find(".info .repost").not(".username").last().attr("s_rc"):t.find(".info .repost").not(".username").last().attr("src");
@@ -3705,6 +3709,7 @@ K100= function(builds){
 	        lasTStory= w1
 	        console.log($(this))
 	    }); 
+	    _R(".story").e()
 	    _R(".photo").each(function(){ 
 	        src= $(this).is(".mult_img")? un_tn($(this).find(".carr img").attr("src")=="/resources/assets/loading.gif"?$(this).find(".carr img").attr("s_rc"):$(this).find(".carr img").attr("src")): un_tn($(this).find(".pic").attr("src")=="/resources/assets/loading.gif"?$(this).find(".pic").attr("s_rc"):$(this).find(".pic").attr("src")); 
 	        w1=  "/" + user.username + "/img" + src.slice(src.lastIndexOf("/"), src.lastIndexOf(".")); 
@@ -3721,6 +3726,7 @@ K100= function(builds){
 	        })(); 
 	        $(this).e()
 	    }); 
+	    _R(".photo").e()
 	    _R("#profilePic").each(function(){ 
 	        src= ($("#profilePic").is(".mult_img")? un_tn($("#profilePic").find(".carr img").attr("src")=="/resources/assets/loading.gif"?$("#profilePic").find(".carr img").attr("s_rc"):$("#profilePic").find(".carr img").attr("src")): un_tn($("#profilePic > img").attr("src")=="/resources/assets/loading.gif"?$("#profilePic > img").attr("s_rc"):$("#profilePic > img").attr("src"))); 
 	        w1= "/" + user.username + "/img" + src.slice(src.lastIndexOf("/"), src.lastIndexOf(".")); 
@@ -3737,6 +3743,7 @@ K100= function(builds){
 	        })(); 
 	        $(this).e()
 	    }); 
+	    _R("#profilePic").e()
 } 
 K0= function(){
     token= this.responseText; 
@@ -4625,7 +4632,6 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
         $($(".current")[0]).attr("tabindex", 0); 
         $(".current")[0].focus(); 
     })
-    _R(".story").e()
 	/*Close modal on dark wrapper in the background of the theater's click*/
 	_R("#wrapper").on("click", function (){
         closeModal()
@@ -4650,7 +4656,7 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
         badGuy(); 
     }); 
     _R(".star").e()
-    $(".bookmark").on("click", function (){ 
+    _R(".bookmark").on("click", function (){ 
         $(this).toggleClass("true"); 
         if(!$(this).closest("#theater").length){ 
             $(".current").removeClass("current"); 
@@ -5349,14 +5355,16 @@ oReq.send();
         closeModal()
     });
     /*Add event listeners for staring and bookmarking*/
-    $(".star").on("click", function () {
+    _R(".star").on("click", function () {
         $(this).toggleClass("true"); 
         badGuy(); 
     });
-    $(".bookmark").on("click", function () {
+    _R(".star").e()
+    _R(".bookmark").on("click", function () {
         $(this).toggleClass("true"); 
         badGuy(); 
     });
+    _R(".bookmark").e()
     /*RooT link for the user in the #root*/
     _R("#root .contnr div a", 0, 'e').on("click", function(e){
 		e.preventDefault()
@@ -5521,14 +5529,16 @@ oReq.send();
         closeModal()
     });
     /*Add event listeners for staring and bookmarking*/
-    $(".star").on("click", function () {
+    _R(".star").on("click", function () {
         $(this).toggleClass("true"); 
         badGuy(); 
     });
-    $(".bookmark").on("click", function () {
+    _R(".star").e()
+    _R(".bookmark").on("click", function () {
         $(this).toggleClass("true"); 
         badGuy(); 
     });
+    _R(".bookmark").e()
     /*RooT link for the user in the #root*/
     _R("#root .contnr div a", 0, 'e').on("click", function(e){
 		e.preventDefault()
@@ -5750,7 +5760,6 @@ oReq.send();
         $($(".current")[0]).attr("tabindex", 0); 
         $(".current")[0].focus(); 
     })
-    _R(".story").e()
     /*Add click event listeners to .stars and .bookmarks __rev*/
     _R(".star").on("click", function (){ 
         $(this).toggleClass("true"); 
@@ -5765,7 +5774,7 @@ oReq.send();
         badGuy(); 
     }); 
     _R(".star").e()
-    $(".bookmark").on("click", function (){ 
+    _R(".bookmark").on("click", function (){ 
         $(this).toggleClass("true"); 
         if(!$(this).closest("#theater").length){ 
             $(".current").removeClass("current"); 
@@ -7063,30 +7072,36 @@ _R(".Editado").e()
 		        		}
 		    		);
 		    
-		    $(".star").on("click",function(){
+		    _R(".star").on("click",function(){
 				 $(this).toggleClass("true")
 			});
-		    $(".bookmark").on("click",function(){
+			_R(".star").e()
+		    _R(".bookmark").on("click",function(){
 				 $(this).toggleClass("true")
 			});
+			_R(".bookmark").e()
 		    
-		     $(".options.first .bookmark").on("click",function(){
+		     _R(".options.first .bookmark").on("click",function(){
 		        $('.options.ending .bookmark').toggleClass("true")
 		          
 			});
-		    $(".options.ending .bookmark").on("click",function(){
+		     _R(".options.first .bookmark").e()
+		    _R(".options.ending .bookmark").on("click",function(){
 		        $('.options.first .bookmark').toggleClass("true")
 		          
 			});
+			_R(".options.ending .bookmark").e()
 		    
-		     $(".options.first .star").on("click",function(){
+		     _R(".options.first .star").on("click",function(){
 		        $('.options.ending .star').toggleClass("true")
 		          
 			});
-		    $(".options.ending .star").on("click",function(){
+		     _R(".options.first .star")
+		    _R(".options.ending .star").on("click",function(){
 		        $('.options.first .star').toggleClass("true")
 		          
 			});
+			_R(".options.ending .star")
 		    
 			$("#dots").on("click", function () {
 		        $("#Store").toggleClass("open");
