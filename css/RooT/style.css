@@ -4813,6 +4813,7 @@ content: "\e904"
     position: fixed;
     overflow-y: hidden;
     z-index: 2; 
+    pointer-events: none;
 }
 #chats .chats
 {
@@ -4839,6 +4840,7 @@ content: "\e904"
     direction:ltr;
     padding-bottom: 9px;
     vertical-align: bottom;
+    pointer-events: auto;
 }
 #chats .chats .chat.open 
 {
