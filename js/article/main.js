@@ -50,240 +50,736 @@ Anti_joint= ["¡", "¿", "'"];
 Chocolate= ["!", "?", "'"]; 
 loaded= {}
 
-accentuaTe= function(f, aL, m){
+unaccentuaTe= function(ph, a_l){
+    b_w= "";
+    if(a_l== "s"){
+        for(var g= 0; g<ph.length; g++){
+            if([" ", "-", "–", "–", ",", ";", ".", "&"].indexOf(ph[g]) + 1){
+                b_w=`${b_w}${ph[g]}`
+            }else{
+                for(var i in Alphabets["español"]){
+                    for(var iz in Alphabets["español"][i]){
+                        if(ph[g] == ph[g].toLowerCase()){
+                            if(Alphabets["español"][i][iz][0]==ph[g])b_w=`${b_w}${i}`
+                        }else{
+                            if(Alphabets["español"][i][iz][0]==ph[g].toLowerCase())b_w=`${b_w}${i.toUpperCase()}`
+                        }
+                    }
+                }
+            }
+        }
+    }else if(a_l== "e"){
+        for(var g= 0; g<ph.length; g++){
+            if([" ", "-", "–", "–", ",", ";", ".", "&"].indexOf(ph[g]) + 1){
+                b_w=`${b_w}${ph[g]}`
+            }else{
+                for(var i in Alphabets["english"]){
+                    for(var iz in Alphabets["english"][i]){
+                        if(ph[g] == ph[g].toLowerCase()){
+                            if(Alphabets["english"][i][iz][0]==ph[g])b_w=`${b_w}${i}`
+                        }else{
+                            if(Alphabets["english"][i][iz][0]==ph[g].toLowerCase())b_w=`${b_w}${i.toUpperCase()}`
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return b_w
+}
+
+accentuaTe= function(f, aL, m, accenT_m){
     switch(m){
         case "nd":
-            var f= f.toLowerCase()
-            var bW= ""
-            for(var fi= f.length - 1; fi+1;fi--){
-                if(((aL=="e"?"&+,.0123456789abcdefghijklmnopqrstuvwxyz ":"&+,.0123456789abcdefghijklmnñopqrstuvwxyz ").indexOf(f[f.length-1-fi])+1 && !((Chocolate.indexOf(f[f.length-fi])+1) || (Anti_joint.indexOf(f[f.length-2-fi])+1))) || (f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")){
-                    bW=`${bW}${(f[f.length-1-fi]=="–"?"":f[f.length-1-fi])+((f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")?"    ":"  ")}`
-                }else{
-                    if(aL== "s"){
-                        Alphabets["español"] 
-                        for(var i in Alphabets["español"]){
-                            for(var iz in Alphabets["español"][i]){
-                                if(Alphabets["español"][i][iz][0]==f[f.length-1-fi])bW=`${bW}${Tms(Alphabets["español"][i][iz][1]+1+(Chocolate.indexOf(f[f.length-fi])+1?1:0)+(Anti_joint.indexOf(f[f.length-2-fi])+1?1:0), `${i+(f[f.length-1-fi]==" "?"   ":"  ")}`)} `
+            if(typeof accenT_m == "undefined"){
+                var f= f.toLowerCase()
+                var bW= ""
+                for(var fi= f.length - 1; fi+1;fi--){
+                    if(((aL=="e"?"&+,.0123456789abcdefghijklmnopqrstuvwxyz ":"&+,.0123456789abcdefghijklmnñopqrstuvwxyz ").indexOf(f[f.length-1-fi])+1 && !((Chocolate.indexOf(f[f.length-fi])+1) || (Anti_joint.indexOf(f[f.length-2-fi])+1))) || (f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")){
+                        bW=`${bW}${(f[f.length-1-fi]=="–"?"":f[f.length-1-fi])+((f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")?"    ":"  ")}`
+                    }else{
+                        if(aL== "s"){
+                            Alphabets["español"] 
+                            for(var i in Alphabets["español"]){
+                                for(var iz in Alphabets["español"][i]){
+                                    if(Alphabets["español"][i][iz][0]==f[f.length-1-fi])bW=`${bW}${Tms(Alphabets["español"][i][iz][1]+1+(Chocolate.indexOf(f[f.length-fi])+1?1:0)+(Anti_joint.indexOf(f[f.length-2-fi])+1?1:0), `${i+(f[f.length-1-fi]==" "?"   ":"  ")}`)} `
+                                }
                             }
-                        }
-                    }else if(aL== "e"){
-                        Alphabets["english"] 
-                        for(var i in Alphabets["english"]){
-                            for(var iz in Alphabets["english"][i]){
-                                if(Alphabets["english"][i][iz][0]==f[f.length-1-fi])bW=`${bW}${Tms(Alphabets["english"][i][iz][1]+1+(Chocolate.indexOf(f[f.length-fi])+1?1:0)+(Anti_joint.indexOf(f[f.length-2-fi])+1?1:0), `${i+(f[f.length-1-fi]==" "?"   ":"  ")}`)} `
+                        }else if(aL== "e"){
+                            Alphabets["english"] 
+                            for(var i in Alphabets["english"]){
+                                for(var iz in Alphabets["english"][i]){
+                                    if(Alphabets["english"][i][iz][0]==f[f.length-1-fi])bW=`${bW}${Tms(Alphabets["english"][i][iz][1]+1+(Chocolate.indexOf(f[f.length-fi])+1?1:0)+(Anti_joint.indexOf(f[f.length-2-fi])+1?1:0), `${i+(f[f.length-1-fi]==" "?"   ":"  ")}`)} `
+                                }
                             }
                         }
                     }
                 }
+                return bW.replaceAll("      ", "$_").replaceAll("   ", " ").replaceAll("  ", " ").replaceAll("$_", "   ").slice(0, -1).replaceAll("    ", "   ");
+            }else{
+                fP= ""
+                if(aL== "s"){
+                    for(var e= 0; e< $("bg ac").length; e++){
+                        if($($("bg ac")[e]).next().is("sup")){
+                            if($($("bg ac")[e]).next().text().split(",").length== 4){
+                                if($($("bg ac")[e]).next().text().split(",")[0] != "0"){
+                                    fP= `${fP} ${Tms((parseInt($($("bg ac")[e]).next().text().split(",")[0]) + 1), `${$($("bg ac")[e]).next().text().split(",")[2]} `)}`
+                                }else{
+                                    fP= `${fP} ${$($("bg ac")[e]).next().text().split(",")[2]}`
+                                }
+                            }else{
+                                if($($("bg ac")[e]).next().text().split(",")[0] != "0"){
+                                    fP= `${fP} ${Tms((parseInt($($("bg ac")[e]).next().text().split(",")[0])+1), `${$($("bg ac")[e]).text()} `)}`
+                          }else{
+                                    fP= `${fP} ${$($("bg ac")[e]).text()}`
+                                }
+                            }
+                        }else{
+                            fP= `${fP} ${$($("bg ac")[e]).text()}`
+                        }
+                    }
+                }else if(aL== "e"){
+                    for(var e= 0; e< $("bg ac").length; e++){
+                        if($($("bg ac")[e]).next().is("sup")){
+                            if($($("bg ac")[e]).next().text().split(",").length== 4){
+                                if($($("bg ac")[e]).next().text().split(",")[1] != "0"){
+                                    fP= `${fP} ${Tms((parseInt($($("bg ac")[e]).next().text().split(",")[1]) + 1), `${$($("bg ac")[e]).next().text().split(",")[3]} `)}`
+                                }else{
+                                    fP= `${fP} ${$($("bg ac")[e]).next().text().split(",")[3]}`
+                                }
+                            }else{
+                                if($($("bg ac")[e]).next().text().split(",")[1] != "0"){
+                                    fP= `${fP} ${Tms((parseInt($($("bg ac")[e]).next().text().split(",")[1])+1), `${$($("bg ac")[e]).text()} `)}`
+                          }else{
+                                    fP= `${fP} ${$($("bg ac")[e]).text()}`
+                                }
+                            }
+                        }else{
+                            fP= `${fP} ${$($("bg ac")[e]).text()}`
+                        }
+                    }
+                }
+                return fP.toLowerCase()
             }
-            return bW.replaceAll("      ", "$_").replaceAll("   ", " ").replaceAll("  ", " ").replaceAll("$_", "   ").slice(0, -1).replaceAll("    ", "   ");
             break;
         case "na":
-            var f= f.toLowerCase()
-            var bW= ""
-            for(var fi= f.length - 1; fi+1;fi--){
-                if(((aL=="e"?"&+,.0123456789abcdefghijklmnopqrstuvwxyz ":"&+,.0123456789abcdefghijklmnñopqrstuvwxyz ").indexOf(f[f.length-1-fi])+1 && !((Anti_joint.indexOf(f[f.length-fi])+1) || (Chocolate.indexOf(f[f.length-2-fi])+1))) || (f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")){
-                    bW=`${bW}${(f[f.length-1-fi]=="–"?"":f[f.length-1-fi])+((f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")?"    ":"  ")}`
-                }else{
-                    if(aL== "s"){
-                        Alphabets["español"] 
-                        for(var i in Alphabets["español"]){
-                            for(var iz in Alphabets["español"][i]){
-                                if(Alphabets["español"][i][iz][0]==f[f.length-1-fi])bW=`${bW}${Tms(Alphabets["español"][i][iz][1]+1+((Anti_joint.indexOf(f[f.length-fi])+1?1:0)+Chocolate.indexOf(f[f.length-2-fi])+1?1:0), `${i+(f[f.length-1-fi]==" "?"   ":"  ")}`)} `
+            if(typeof accenT_m == "undefined"){
+                var f= f.toLowerCase()
+                var bW= ""
+                for(var fi= f.length - 1; fi+1;fi--){
+                    if(((aL=="e"?"&+,.0123456789abcdefghijklmnopqrstuvwxyz ":"&+,.0123456789abcdefghijklmnñopqrstuvwxyz ").indexOf(f[f.length-1-fi])+1 && !((Anti_joint.indexOf(f[f.length-fi])+1) || (Chocolate.indexOf(f[f.length-2-fi])+1))) || (f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")){
+                        bW=`${bW}${(f[f.length-1-fi]=="–"?"":f[f.length-1-fi])+((f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")?"    ":"  ")}`
+                    }else{
+                        if(aL== "s"){
+                            Alphabets["español"] 
+                            for(var i in Alphabets["español"]){
+                                for(var iz in Alphabets["español"][i]){
+                                    if(Alphabets["español"][i][iz][0]==f[f.length-1-fi])bW=`${bW}${Tms(Alphabets["español"][i][iz][1]+1+((Anti_joint.indexOf(f[f.length-fi])+1?1:0)+Chocolate.indexOf(f[f.length-2-fi])+1?1:0), `${i+(f[f.length-1-fi]==" "?"   ":"  ")}`)} `
+                                }
                             }
-                        }
-                    }else if(aL== "e"){
-                        Alphabets["english"] 
-                        for(var i in Alphabets["english"]){
-                            for(var iz in Alphabets["english"][i]){
-                                if(Alphabets["english"][i][iz][0]==f[f.length-1-fi])bW=`${bW}${Tms(Alphabets["english"][i][iz][1]+1+((Anti_joint.indexOf(f[f.length-fi])+1?1:0)+Chocolate.indexOf(f[f.length-2-fi])+1?1:0), `${i+(f[f.length-1-fi]==" "?"   ":"  ")}`)} `
+                        }else if(aL== "e"){
+                            Alphabets["english"] 
+                            for(var i in Alphabets["english"]){
+                                for(var iz in Alphabets["english"][i]){
+                                    if(Alphabets["english"][i][iz][0]==f[f.length-1-fi])bW=`${bW}${Tms(Alphabets["english"][i][iz][1]+1+((Anti_joint.indexOf(f[f.length-fi])+1?1:0)+Chocolate.indexOf(f[f.length-2-fi])+1?1:0), `${i+(f[f.length-1-fi]==" "?"   ":"  ")}`)} `
+                                }
                             }
                         }
                     }
                 }
+                return bW.replaceAll("      ", "$_").replaceAll("   ", " ").replaceAll("  ", " ").replaceAll("$_", "   ").slice(0, -1).replaceAll("    ", "   ");
+            }else{
+                fP= ""
+                if(aL== "s"){
+                    for(var e= 0; e< $("bg ac").length; e++){
+                        if($($("bg ac")[e]).next().is("sup")){
+                            if($($("bg ac")[e]).next().text().split(",").length== 4){
+                                if($($("bg ac")[e]).next().text().split(",")[0] != "0"){
+                                    fP= `${fP} ${Tms((parseInt($($("bg ac")[e]).next().text().split(",")[0]) + 1), `${$($("bg ac")[e]).next().text().split(",")[2]} `)}`
+                                }else{
+                                    fP= `${fP} ${$($("bg ac")[e]).next().text().split(",")[2]}`
+                                }
+                            }else{
+                                if($($("bg ac")[e]).next().text().split(",")[0] != "0"){
+                                    fP= `${fP} ${Tms((parseInt($($("bg ac")[e]).next().text().split(",")[0])+1), `${$($("bg ac")[e]).text()} `)}`
+                          }else{
+                                    fP= `${fP} ${$($("bg ac")[e]).text()}`
+                                }
+                            }
+                        }else{
+                            fP= `${fP} ${$($("bg ac")[e]).text()}`
+                        }
+                    }
+                }else if(aL== "e"){
+                    for(var e= 0; e< $("bg ac").length; e++){
+                        if($($("bg ac")[e]).next().is("sup")){
+                            if($($("bg ac")[e]).next().text().split(",").length== 4){
+                                if($($("bg ac")[e]).next().text().split(",")[1] != "0"){
+                                    fP= `${fP} ${Tms((parseInt($($("bg ac")[e]).next().text().split(",")[1]) + 1), `${$($("bg ac")[e]).next().text().split(",")[3]} `)}`
+                                }else{
+                                    fP= `${fP} ${$($("bg ac")[e]).next().text().split(",")[3]}`
+                                }
+                            }else{
+                                if($($("bg ac")[e]).next().text().split(",")[1] != "0"){
+                                    fP= `${fP} ${Tms((parseInt($($("bg ac")[e]).next().text().split(",")[1])+1), `${$($("bg ac")[e]).text()} `)}`
+                          }else{
+                                    fP= `${fP} ${$($("bg ac")[e]).text()}`
+                                }
+                            }
+                        }else{
+                            fP= `${fP} ${$($("bg ac")[e]).text()}`
+                        }
+                    }
+                }
+                return fP.toLowerCase()
             }
-            return bW.replaceAll("      ", "$_").replaceAll("   ", " ").replaceAll("  ", " ").replaceAll("$_", "   ").slice(0, -1).replaceAll("    ", "   ");
             break;
         case "hd":
-            var f= f.toLowerCase()
-            var bW= ""
-            for(var fi= f.length - 1; fi+1;fi--){
-                if(((aL=="e"?"+,.abcdefghijklmnopqrstuvwxyz ":"+,.abcdefghijklmnñopqrstuvwxyz ").indexOf(f[f.length-1-fi])+1 && !((Chocolate.indexOf(f[f.length+1-fi])+1) || (Anti_joint.indexOf(f[f.length-3-fi])+1) || (Chocolate.indexOf(f[f.length-fi])+1) || (Anti_joint.indexOf(f[f.length-2-fi])+1))) || (f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")){
-                    bW=`${bW}${(f[f.length-1-fi]=="–"?"":f[f.length-1-fi])+((f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")?"   ":"  ")}`
-                }else{
-                    if(aL== "s"){
-                        Alphabets["español"] 
-                        for(var i in Alphabets["español"]){
-                            for(var iz in Alphabets["español"][i]){
-                                if(Alphabets["español"][i][iz][0]==f[f.length-1-fi])bW=`${bW}<b>${i}</b>${(f[f.length-1-fi]==" "?"   ":"  ")}`
+            if(typeof accenT_m == "undefined"){
+                var f= f.toLowerCase()
+                var bW= ""
+                for(var fi= f.length - 1; fi+1;fi--){
+                    if(((aL=="e"?"+,.abcdefghijklmnopqrstuvwxyz ":"+,.abcdefghijklmnñopqrstuvwxyz ").indexOf(f[f.length-1-fi])+1 && !((Chocolate.indexOf(f[f.length+1-fi])+1) || (Anti_joint.indexOf(f[f.length-3-fi])+1) || (Chocolate.indexOf(f[f.length-fi])+1) || (Anti_joint.indexOf(f[f.length-2-fi])+1))) || (f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")){
+                        bW=`${bW}${(f[f.length-1-fi]=="–"?"":f[f.length-1-fi])+((f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")?"   ":"  ")}`
+                    }else{
+                        if(aL== "s"){
+                            Alphabets["español"] 
+                            for(var i in Alphabets["español"]){
+                                for(var iz in Alphabets["español"][i]){
+                                    if(Alphabets["español"][i][iz][0]==f[f.length-1-fi])bW=`${bW}<b>${i}</b>${(f[f.length-1-fi]==" "?"   ":"  ")}`
+                                }
                             }
-                        }
-                    }else if(aL== "e"){
-                        Alphabets["english"] 
-                        for(var i in Alphabets["english"]){
-                            for(var iz in Alphabets["english"][i]){
-                                if(Alphabets["english"][i][iz][0]==f[f.length-1-fi])bW=`${bW}<b>${i}</b>${(f[f.length-1-fi]==" "?"   ":"  ")}`
+                        }else if(aL== "e"){
+                            Alphabets["english"] 
+                            for(var i in Alphabets["english"]){
+                                for(var iz in Alphabets["english"][i]){
+                                    if(Alphabets["english"][i][iz][0]==f[f.length-1-fi])bW=`${bW}<b>${i}</b>${(f[f.length-1-fi]==" "?"   ":"  ")}`
+                                }
                             }
                         }
                     }
                 }
+                return bW.replaceAll("      ", "$_").replaceAll("     ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ").slice(0, -1);
+            }else{
+                fP= ""
+                if(aL== "s"){
+                    for(var e= 0; e< $("bg ac").length; e++){
+                        if($($("bg ac")[e]).next().is("sup")){
+                            if($($("bg ac")[e]).next().text().split(",").length== 4){
+                                if($($("bg ac")[e]).next().text().split(",")[0] != "0"){
+                                    fP= `${fP} <b>${$($("bg ac")[e]).next().text().split(",")[2]}</b>`
+                                }else{
+                                    fP= `${fP} ${$($("bg ac")[e]).next().text().split(",")[2]}`
+                                }
+                            }else{
+                                if($($("bg ac")[e]).next().text().split(",")[0] != "0"){
+                                    fP= `${fP} <b>${$($("bg ac")[e]).text()}</b>`
+                          }else{
+                                    fP= `${fP} ${$($("bg ac")[e]).text()}`
+                                }
+                            }
+                        }else{
+                            fP= `${fP} ${$($("bg ac")[e]).text()}`
+                        }
+                    }
+                }else if(aL== "e"){
+                    for(var e= 0; e< $("bg ac").length; e++){
+                        if($($("bg ac")[e]).next().is("sup")){
+                            if($($("bg ac")[e]).next().text().split(",").length== 4){
+                                if($($("bg ac")[e]).next().text().split(",")[1] != "0"){
+                                    fP= `${fP} <b>${$($("bg ac")[e]).next().text().split(",")[3]}</b>`
+                                }else{
+                                    fP= `${fP} ${$($("bg ac")[e]).next().text().split(",")[3]}`
+                                }
+                            }else{
+                                if($($("bg ac")[e]).next().text().split(",")[1] != "0"){
+                                    fP= `${fP} <b>${$($("bg ac")[e]).text()}</b>`
+                          }else{
+                                    fP= `${fP} ${$($("bg ac")[e]).text()}`
+                                }
+                            }
+                        }else{
+                            fP= `${fP} ${$($("bg ac")[e]).text()}`
+                        }
+                    }
+                }
+                return fP.toLowerCase()
             }
-            return bW.replaceAll("      ", "$_").replaceAll("     ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ").slice(0, -1);
             break;
         case "ha":
-            var f= f.toLowerCase()
-            var bW= ""
-            for(var fi= f.length - 1; fi+1;fi--){
-                if(((aL=="e"?"+,.abcdefghijklmnopqrstuvwxyz ":"+,.abcdefghijklmnñopqrstuvwxyz ").indexOf(f[f.length-1-fi])+1 && !((Anti_joint.indexOf(f[f.length+1-fi])+1) || (Chocolate.indexOf(f[f.length-3-fi])+1) || (Anti_joint.indexOf(f[f.length-fi])+1) || (Chocolate.indexOf(f[f.length-2-fi])+1))) || (f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")){
-                    bW=`${bW}${(f[f.length-1-fi]=="–"?"":f[f.length-1-fi])+((f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")?"   ":"  ")}`
-                }else{
-                    //alert(f[f.length-1-fi])
-                    if(aL== "s"){
-                        Alphabets["español"] 
-                        for(var i in Alphabets["español"]){
-                            for(var iz in Alphabets["español"][i]){
-                                if(Alphabets["español"][i][iz][0]==f[f.length-1-fi])bW=`${bW}<b>${i}</b>${(f[f.length-1-fi]==" "?"   ":"  ")}`
+            if(typeof accenT_m == "undefined"){
+                var f= f.toLowerCase()
+                var bW= ""
+                for(var fi= f.length - 1; fi+1;fi--){
+                    if(((aL=="e"?"+,.abcdefghijklmnopqrstuvwxyz ":"+,.abcdefghijklmnñopqrstuvwxyz ").indexOf(f[f.length-1-fi])+1 && !((Anti_joint.indexOf(f[f.length+1-fi])+1) || (Chocolate.indexOf(f[f.length-3-fi])+1) || (Anti_joint.indexOf(f[f.length-fi])+1) || (Chocolate.indexOf(f[f.length-2-fi])+1))) || (f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")){
+                        bW=`${bW}${(f[f.length-1-fi]=="–"?"":f[f.length-1-fi])+((f[f.length-1-fi]==" " || f[f.length-1-fi]=="–")?"   ":"  ")}`
+                    }else{
+                        //alert(f[f.length-1-fi])
+                        if(aL== "s"){
+                            Alphabets["español"] 
+                            for(var i in Alphabets["español"]){
+                                for(var iz in Alphabets["español"][i]){
+                                    if(Alphabets["español"][i][iz][0]==f[f.length-1-fi])bW=`${bW}<b>${i}</b>${(f[f.length-1-fi]==" "?"   ":"  ")}`
+                                }
                             }
-                        }
-                    }else if(aL== "e"){
-                        Alphabets["english"] 
-                        for(var i in Alphabets["english"]){
-                            for(var iz in Alphabets["english"][i]){
-                                if(Alphabets["english"][i][iz][0]==f[f.length-1-fi])bW=`${bW}<b>${i}</b>${(f[f.length-1-fi]==" "?"   ":"  ")}`
+                        }else if(aL== "e"){
+                            Alphabets["english"] 
+                            for(var i in Alphabets["english"]){
+                                for(var iz in Alphabets["english"][i]){
+                                    if(Alphabets["english"][i][iz][0]==f[f.length-1-fi])bW=`${bW}<b>${i}</b>${(f[f.length-1-fi]==" "?"   ":"  ")}`
+                                }
                             }
                         }
                     }
                 }
+                return bW.replaceAll("      ", "$_").replaceAll("     ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ").slice(0, -1);
+            }else{
+                fP= ""
+                if(aL== "s"){
+                    for(var e= 0; e< $("bg ac").length; e++){
+                        if($($("bg ac")[e]).next().is("sup")){
+                            if($($("bg ac")[e]).next().text().split(",").length== 4){
+                                if($($("bg ac")[e]).next().text().split(",")[0] != "0"){
+                                    fP= `${fP} <b>${$($("bg ac")[e]).next().text().split(",")[2]}</b>`
+                                }else{
+                                    fP= `${fP} ${$($("bg ac")[e]).next().text().split(",")[2]}`
+                                }
+                            }else{
+                                if($($("bg ac")[e]).next().text().split(",")[0] != "0"){
+                                    fP= `${fP} <b>${$($("bg ac")[e]).text()}</b>`
+                          }else{
+                                    fP= `${fP} ${$($("bg ac")[e]).text()}`
+                                }
+                            }
+                        }else{
+                            fP= `${fP} ${$($("bg ac")[e]).text()}`
+                        }
+                    }
+                }else if(aL== "e"){
+                    for(var e= 0; e< $("bg ac").length; e++){
+                        if($($("bg ac")[e]).next().is("sup")){
+                            if($($("bg ac")[e]).next().text().split(",").length== 4){
+                                if($($("bg ac")[e]).next().text().split(",")[1] != "0"){
+                                    fP= `${fP} <b>${$($("bg ac")[e]).next().text().split(",")[3]}</b>`
+                                }else{
+                                    fP= `${fP} ${$($("bg ac")[e]).next().text().split(",")[3]}`
+                                }
+                            }else{
+                                if($($("bg ac")[e]).next().text().split(",")[1] != "0"){
+                                    fP= `${fP} <b>${$($("bg ac")[e]).text()}</b>`
+                          }else{
+                                    fP= `${fP} ${$($("bg ac")[e]).text()}`
+                                }
+                            }
+                        }else{
+                            fP= `${fP} ${$($("bg ac")[e]).text()}`
+                        }
+                    }
+                }
+                return fP.toLowerCase()
             }
-            return bW.replaceAll("      ", "$_").replaceAll("     ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ").slice(0, -1);
             break;
         case "sa":
-            var f= f.toLowerCase().replaceAll("-'", "$_").replaceAll("'-", "$_").replaceAll("$_", "'-'")
-            var bW= ""
-            Anti_joint= ["¡", "¿"]; 
-            Chocolate= ["!", "?"]; 
-            for(var di= f.length - 1; di+1;di--){
-                if(f[f.length-1-di]=="-"||f[f.length-1-di]==" "||!(f.length-1-di)){
-                    cc= 1
-                    s= ""
-                    for(var fi= di - (!(f.length-1-di)? 0:1); (fi+1 && f[f.length-1-fi]!=" " && f[f.length-1-fi]!="-");fi--){
-                        if((aL=="e"?"&+.0123456789abcdefghijklmnopqrstuvwxyz -'":"&+.0123456789abcdefghijklmnñopqrstuvwxyz -'").indexOf(f[f.length-1-fi])+1 && !(Anti_joint.indexOf(f[f.length-fi])+1 || Chocolate.indexOf(f[f.length-2-fi])+1)){
-                            cc;
-                            s= `${s}${f[f.length-1-fi]}`
-                        }else{
-                            if(aL== "s"){
-                                Alphabets["español"] 
-                                for(var i in Alphabets["español"]){
-                                    for(var iz in Alphabets["español"][i]){
-                                        if(Alphabets["español"][i][iz][0]==f[f.length-1-fi]){cc+=((Alphabets["español"][i][iz][1]+(Anti_joint.indexOf(f[f.length-fi])+1?1:0)+(Chocolate.indexOf(f[f.length-2-fi])+1?1:0)));s= `${s}${i}`}
+            if(typeof accenT_m == "undefined"){
+                var f= f.toLowerCase().replaceAll("-'", "$_").replaceAll("'-", "$_").replaceAll("$_", "'-'")
+                var bW= ""
+                Anti_joint= ["¡", "¿"]; 
+                Chocolate= ["!", "?"]; 
+                for(var di= f.length - 1; di+1;di--){
+                    if(f[f.length-1-di]=="-"||f[f.length-1-di]==" "||!(f.length-1-di)){
+                        cc= 1
+                        s= ""
+                        for(var fi= di - (!(f.length-1-di)? 0:1); (fi+1 && f[f.length-1-fi]!=" " && f[f.length-1-fi]!="-");fi--){
+                            if((aL=="e"?"&+.0123456789abcdefghijklmnopqrstuvwxyz -'":"&+.0123456789abcdefghijklmnñopqrstuvwxyz -'").indexOf(f[f.length-1-fi])+1 && !(Anti_joint.indexOf(f[f.length-fi])+1 || Chocolate.indexOf(f[f.length-2-fi])+1)){
+                                cc;
+                                s= `${s}${f[f.length-1-fi]}`
+                            }else{
+                                if(aL== "s"){
+                                    Alphabets["español"] 
+                                    for(var i in Alphabets["español"]){
+                                        for(var iz in Alphabets["español"][i]){
+                                            if(Alphabets["español"][i][iz][0]==f[f.length-1-fi]){cc+=((Alphabets["español"][i][iz][1]+(Anti_joint.indexOf(f[f.length-fi])+1?1:0)+(Chocolate.indexOf(f[f.length-2-fi])+1?1:0)));s= `${s}${i}`}
+                                        }
                                     }
-                                }
-                            }else if(aL== "e"){
-                                Alphabets["english"] 
-                                for(var i in Alphabets["english"]){
-                                    for(var iz in Alphabets["english"][i]){
-                                        if(Alphabets["english"][i][iz][0]==f[f.length-1-fi]){cc+=((Alphabets["english"][i][iz][1]+(Anti_joint.indexOf(f[f.length-fi])+1?1:0)+(Chocolate.indexOf(f[f.length-2-fi])+1?1:0)));s= `${s}${i}`}
+                                }else if(aL== "e"){
+                                    Alphabets["english"] 
+                                    for(var i in Alphabets["english"]){
+                                        for(var iz in Alphabets["english"][i]){
+                                            if(Alphabets["english"][i][iz][0]==f[f.length-1-fi]){cc+=((Alphabets["english"][i][iz][1]+(Anti_joint.indexOf(f[f.length-fi])+1?1:0)+(Chocolate.indexOf(f[f.length-2-fi])+1?1:0)));s= `${s}${i}`}
+                                        }
                                     }
                                 }
                             }
                         }
+                        //alert(cc+(s.indexOf("'")+1?1:0))
+                        bW= `${bW}${f[f.length-4-fi]==","?", ":"" }${f[f.length-4-fi]=="."?". ":"" }${f[f.length-4-fi]==";"?"; ":"" }${Tms(cc+(s.indexOf("'")+1?1:0), `${s}${f[f.length-1-fi]=="-"?" ":"  " }`)}  `.replaceAll("'", "")
                     }
-                    //alert(cc+(s.indexOf("'")+1?1:0))
-                    bW= `${bW}${f[f.length-4-fi]==","?", ":"" }${f[f.length-4-fi]=="."?". ":"" }${f[f.length-4-fi]==";"?"; ":"" }${Tms(cc+(s.indexOf("'")+1?1:0), `${s}${f[f.length-1-fi]=="-"?" ":"  " }`)}  `.replaceAll("'", "")
                 }
-            }
-            Anti_joint= ["¡", "¿", "'"]; 
-            Chocolate= ["!", "?", "'"];
+                Anti_joint= ["¡", "¿", "'"];  
+                Chocolate= ["!", "?", "'"];
+            }else{
+                $("bg3").remove()
+                $("body").append(`<bg3>${$("bg2").html()}</bg3>`)
+                $("bg3 sup").remove() 
+                fP= ""
+                if(aL== "s"){
+                    for(var fg= 0; fg < $("bg2 ac").length; fg++){
+                        if(fg== 0 || ($($("bg3 ac")[fg]).prev().text() == " " && $($("bg3 ac")[fg]).prev().prev().text() != " " && $($("bg3 ac")[fg]).text() != " ")){
+                            acc= 0;
+                            bP= "";
+                            for( var ag=fg; (ag<$("bg2 ac").length && $($("bg2 ac")[ag]).text() != " "); ag++){
+                                if($($("bg2 ac")[ag]).next().is("sup") && $($("bg2 ac")[ag]).next().text().split(",").length == 4){
+                                    bP= `${bP}${$($("bg2 ac")[ag]).next().text().split(",")[2]}`;
+                                }else{
+                                    bP= `${bP}${$($("bg2 ac")[ag]).text()}`;
+                                }
+                                if($($("bg2 ac")[ag]).next().is("sup")){
+                                    acc+= parseInt($($("bg2 ac")[ag]).next().text().split(",")[0])
+                                }
+                            }
+                            fP= `${fP} ${Tms((acc + 1), `${bP} `)}`;
+                        }else if(($($("bg3 ac")[fg]).prev().text() == " " && ($($("bg3 ac")[fg]).prev().prev().text() == " " && $($("bg3 ac")[fg]).prev().prev().prev().text() == " "))){
+                            acc= 0;
+                            bP= "";
+                            for( var ag=fg; (ag<$("bg2 ac").length && $($("bg2 ac")[ag]).text() != " "); ag++){
+                                if($($("bg2 ac")[ag]).next().is("sup") && $($("bg2 ac")[ag]).next().text().split(",").length == 4){
+                                    bP= `${bP}${$($("bg2 ac")[ag]).next().text().split(",")[2]}`;
+                                }else{
+                                    bP= `${bP}${$($("bg2 ac")[ag]).text()}`;
+                                }
+                                if($($("bg2 ac")[ag]).next().is("sup")){
+                                    acc+= parseInt($($("bg2 ac")[ag]).next().text().split(",")[0])
+                                }
+                            }
+                            fP= `${fP}   ${Tms((acc + 1), `${bP} `)}`;
+                        }
+                    }
+                }else if(aL== "e"){
+                
+
+                    for(var fg= 0; fg < $("bg2 ac").length; fg++){
+                        if(fg== 0 || ($($("bg3 ac")[fg]).prev().text() == " " && $($("bg3 ac")[fg]).prev().prev().text() != " " && $($("bg3 ac")[fg]).text() != " ")){
+                            acc= 0;
+                            bP= "";
+                            for( var ag=fg; (ag<$("bg2 ac").length && $($("bg2 ac")[ag]).text() != " "); ag++){
+                                if($($("bg2 ac")[ag]).next().is("sup") && $($("bg2 ac")[ag]).next().text().split(",").length == 4){
+                                    bP= `${bP}${$($("bg2 ac")[ag]).next().text().split(",")[3]}`;
+                                }else{
+                                    bP= `${bP}${$($("bg2 ac")[ag]).text()}`;
+                                }
+                                if($($("bg2 ac")[ag]).next().is("sup")){
+                                    acc+= parseInt($($("bg2 ac")[ag]).next().text().split(",")[1])
+                                }
+                            }
+                            fP= `${fP} ${Tms((acc + 1), `${bP} `)}`;
+                        }else if(($($("bg3 ac")[fg]).prev().text() == " " && ($($("bg3 ac")[fg]).prev().prev().text() == " " && $($("bg3 ac")[fg]).prev().prev().prev().text() == " "))){
+                            acc= 0;
+                            bP= "";
+                            for( var ag=fg; (ag<$("bg2 ac").length && $($("bg2 ac")[ag]).text() != " "); ag++){
+                                if($($("bg2 ac")[ag]).next().is("sup") && $($("bg2 ac")[ag]).next().text().split(",").length == 4){
+                                    bP= `${bP}${$($("bg2 ac")[ag]).next().text().split(",")[3]}`;
+                                }else{
+                                    bP= `${bP}${$($("bg2 ac")[ag]).text()}`;
+                                }
+                                if($($("bg2 ac")[ag]).next().is("sup")){
+                                    acc+= parseInt($($("bg2 ac")[ag]).next().text().split(",")[1])
+                                }
+                            }
+                            fP= `${fP}   ${Tms((acc + 1), `${bP} `)}`;
+                        }
+                    }
+                }
+                fP_= fP
+                fP= fP.replaceAll("    ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ")
+                return fP
+            }            
             return bW.slice(0, -2).replaceAll("   ", "$_").replaceAll("  ", " ").replaceAll("$_", "  ").slice(0, -1).replaceAll("   ", "$_").replaceAll("  ", " ").replaceAll("$_", "  ")
             break;
         case "sd":
             var f= f.toLowerCase().replaceAll("-'", "$_").replaceAll("'-", "$_").replaceAll("$_", "'-'")
             var bW= ""
-            for(var di= f.length - 1; di+1;di--){
-                if(f[f.length-1-di]=="-"||f[f.length-1-di]==" "||!(f.length-1-di)){
-                    cc= 1
-                    s= ""
-                    for(var fi= di - (!(f.length-1-di)? 0:1); (fi+1 && f[f.length-1-fi]!=" " && f[f.length-1-fi]!="-");fi--){
-                        if((aL=="e"?"&+,.0123456789abcdefghijklmnopqrstuvwxyz -":"&+,.0123456789abcdefghijklmnñopqrstuvwxyz -").indexOf(f[f.length-1-fi])+1 && !((Chocolate.indexOf(f[f.length-fi])+1) || (Anti_joint.indexOf(f[f.length-2-fi])+1))){
-                            cc;
-                            s= `${s}${f[f.length-1-fi]}`
-                        }else{
-                            if(aL== "s"){
-                                Alphabets["español"] 
-                                for(var i in Alphabets["español"]){
-                                    for(var iz in Alphabets["español"][i]){
-                                        if(Alphabets["español"][i][iz][0]==f[f.length-1-fi]){cc+=((Alphabets["español"][i][iz][1]+(Chocolate.indexOf(f[f.length-fi])+1?1:0)+(Anti_joint.indexOf(f[f.length-2-fi])+1?1:0)));s= `${s}${i}`}
+            if(typeof accenT_m == "undefined"){
+                for(var di= f.length - 1; di+1;di--){
+                    if(f[f.length-1-di]=="-"||f[f.length-1-di]==" "||!(f.length-1-di)){
+                        cc= 1
+                        s= ""
+                        for(var fi= di - (!(f.length-1-di)? 0:1); (fi+1 && f[f.length-1-fi]!=" " && f[f.length-1-fi]!="-");fi--){
+                            if((aL=="e"?"&+,.0123456789abcdefghijklmnopqrstuvwxyz -":"&+,.0123456789abcdefghijklmnñopqrstuvwxyz -").indexOf(f[f.length-1-fi])+1 && !((Chocolate.indexOf(f[f.length-fi])+1) || (Anti_joint.indexOf(f[f.length-2-fi])+1))){
+                                cc;
+                                s= `${s}${f[f.length-1-fi]}`
+                            }else{
+                                if(aL== "s"){
+                                    Alphabets["español"] 
+                                    for(var i in Alphabets["español"]){
+                                        for(var iz in Alphabets["español"][i]){
+                                            if(Alphabets["español"][i][iz][0]==f[f.length-1-fi]){cc+=((Alphabets["español"][i][iz][1]+(Chocolate.indexOf(f[f.length-fi])+1?1:0)+(Anti_joint.indexOf(f[f.length-2-fi])+1?1:0)));s= `${s}${i}`}
+                                        }
                                     }
-                                }
-                            }else if(aL== "e"){
-                                Alphabets["english"] 
-                                for(var i in Alphabets["english"]){
-                                    for(var iz in Alphabets["english"][i]){
-                                        if(Alphabets["english"][i][iz][0]==f[f.length-1-fi]){cc+=((Alphabets["english"][i][iz][1]+(Chocolate.indexOf(f[f.length-fi])+1?1:0)+(Anti_joint.indexOf(f[f.length-2-fi])+1?1:0)));s= `${s}${i}`}
+                                }else if(aL== "e"){
+                                    Alphabets["english"] 
+                                    for(var i in Alphabets["english"]){
+                                        for(var iz in Alphabets["english"][i]){
+                                            if(Alphabets["english"][i][iz][0]==f[f.length-1-fi]){cc+=((Alphabets["english"][i][iz][1]+(Chocolate.indexOf(f[f.length-fi])+1?1:0)+(Anti_joint.indexOf(f[f.length-2-fi])+1?1:0)));s= `${s}${i}`}
+                                        }
                                     }
                                 }
                             }
                         }
+                        //alert(cc)
+                        bW= `${bW}${`${cc-1?"<b>":""}${s}${cc-1?"</b>":""}${f[f.length-1-fi]=="-"?" ":"  " }`}  `
                     }
-                    //alert(cc)
-                    bW= `${bW}${`${cc-1?"<b>":""}${s}${cc-1?"</b>":""}${f[f.length-1-fi]=="-"?" ":"  " }`}  `
                 }
+                return bW.slice(0, -2).replaceAll("   ", "$_").replaceAll("  ", " ").replaceAll("$_", "  ").slice(0, -1).replaceAll("   ", "$_").replaceAll("  ", " ").replaceAll("$_", "  ")
+            }else{
+                $("bg2").remove()
+                $("bg ac").filter(function(){
+                    return $(this).text()== "-"?true:false
+                }).text(" ");
+                $("body").append(`<bg2>${$("bg").html()}</bg2>`)
+                $("bg3").remove()
+                $("body").append(`<bg3>${$("bg2").html()}</bg3>`)
+                $("bg3 sup").remove() 
+                fP= ""
+                _sA= accenT_m.h_supeR;
+                if(aL== "s"){
+                    for(var fg= 0; fg < $("bg2 ac").length; fg++){
+                        if(fg== 0 || ($($("bg3 ac")[fg]).prev().text() == " " && $($("bg3 ac")[fg]).prev().prev().text() != " " && $($("bg3 ac")[fg]).text() != " ")){
+                            acc= 0;
+                            bP= "";
+                            for( var ag=fg; (ag<$("bg2 ac").length && $($("bg2 ac")[ag]).text() != " "); ag++){
+                                if($($("bg2 ac")[ag]).next().is("sup") && $($("bg2 ac")[ag]).next().text().split(",").length == 4){
+                                    bP= `${bP}${$($("bg2 ac")[ag]).next().text().split(",")[2]}`;
+                                }else{
+                                    bP= `${bP}${$($("bg2 ac")[ag]).text()}`;
+                                }
+                                if($($("bg2 ac")[ag]).next().is("sup")){
+                                    acc+= parseInt($($("bg2 ac")[ag]).next().text().split(",")[0])
+                                }
+                            }
+                            if(acc == 0){
+                                fP= `${fP} ${bP}`;
+                            }else{
+                                fP= `${fP} <b>${bP}</b>`;
+                            }
+                        }else if(($($("bg3 ac")[fg]).prev().text() == " " && ($($("bg3 ac")[fg]).prev().prev().text() == " " && $($("bg3 ac")[fg]).prev().prev().prev().text() == " "))){
+                            acc= 0;
+                            bP= "";
+                            for( var ag=fg; (ag<$("bg2 ac").length && $($("bg2 ac")[ag]).text() != " "); ag++){
+                                if($($("bg2 ac")[ag]).next().is("sup") && $($("bg2 ac")[ag]).next().text().split(",").length == 4){
+                                    bP= `${bP}${$($("bg2 ac")[ag]).next().text().split(",")[2]}`;
+                                }else{
+                                    bP= `${bP}${$($("bg2 ac")[ag]).text()}`;
+                                }
+                                if($($("bg2 ac")[ag]).next().is("sup")){
+                                    acc+= parseInt($($("bg2 ac")[ag]).next().text().split(",")[0])
+                                }
+                            }
+                            if(acc == 0){
+                                fP= `${fP}  ${bP}`;
+                            }else{
+                                fP= `${fP}  <b>${bP}</b>`;
+                            }
+                        }
+                    }
+                }else if(aL== "e"){
+                    for(var fg= 0; fg < $("bg2 ac").length; fg++){
+                        if(fg== 0 || ($($("bg3 ac")[fg]).prev().text() == " " && $($("bg3 ac")[fg]).prev().prev().text() != " " && $($("bg3 ac")[fg]).text() != " ")){
+                            acc= 0;
+                            bP= "";
+                            for( var ag=fg; (ag<$("bg2 ac").length && $($("bg2 ac")[ag]).text() != " "); ag++){
+                                if($($("bg2 ac")[ag]).next().is("sup") && $($("bg2 ac")[ag]).next().text().split(",").length == 4){
+                                    bP= `${bP}${$($("bg2 ac")[ag]).next().text().split(",")[3]}`;
+                                }else{
+                                    bP= `${bP}${$($("bg2 ac")[ag]).text()}`;
+                                }
+                                if($($("bg2 ac")[ag]).next().is("sup")){
+                                    acc+= parseInt($($("bg2 ac")[ag]).next().text().split(",")[1])
+                                }
+                            }
+                            if(acc == 0){
+                                fP= `${fP} ${bP}`;
+                            }else{
+                                fP= `${fP} <b>${bP}</b>`;
+                            }
+                        }else if(($($("bg3 ac")[fg]).prev().text() == " " && ($($("bg3 ac")[fg]).prev().prev().text() == " " && $($("bg3 ac")[fg]).prev().prev().prev().text() == " "))){
+                            acc= 0;
+                            bP= "";
+                            for( var ag=fg; (ag<$("bg2 ac").length && $($("bg2 ac")[ag]).text() != " "); ag++){
+                                if($($("bg2 ac")[ag]).next().is("sup") && $($("bg2 ac")[ag]).next().text().split(",").length == 4){
+                                    bP= `${bP}${$($("bg2 ac")[ag]).next().text().split(",")[3]}`;
+                                }else{
+                                    bP= `${bP}${$($("bg2 ac")[ag]).text()}`;
+                                }
+                                if($($("bg2 ac")[ag]).next().is("sup")){
+                                    acc+= parseInt($($("bg2 ac")[ag]).next().text().split(",")[1])
+                                }
+                            }
+                            if(acc == 0){
+                                fP= `${fP}  ${bP}`;
+                            }else{
+                                fP= `${fP}  <b>${bP}</b>`;
+                            }
+                        }
+                    }
+                }
+                return fP.toLowerCase()
             }
-            return bW.slice(0, -2).replaceAll("   ", "$_").replaceAll("  ", " ").replaceAll("$_", "  ").slice(0, -1).replaceAll("   ", "$_").replaceAll("  ", " ").replaceAll("$_", "  ")
             break;
         case "pd":
-            var f= f.toLowerCase()
-            var bW= ""
-            for(var fi= f.length - 1; fi+1;fi--){
-                if(((aL=="e"?"&+,.0123456789abcdefghijklmnopqrstuvwxyz '":"&+,.0123456789abcdefghijklmnñopqrstuvwxyz '").indexOf(f[f.length-1-fi])+1 && !(Chocolate.indexOf(f[f.length-fi])+1 || Anti_joint.indexOf(f[f.length-2-fi])+1)) || f[f.length-1-fi]== " "){
-                    bW=`${bW}${f[f.length-1-fi]}${f[f.length-1-fi]==" "?"       ":"  " }`
-                }else{
-                    //alert(f[f.length-1-fi])
-                    if(aL== "s"){
-                        Alphabets["español"] 
-                        for(var i in Alphabets["español"]){
-                            for(var iz in Alphabets["español"][i]){
-                                if(Alphabets["español"][i][iz][0]==f[f.length-1-fi])bW=`${bW}<b>${i}</b>${f[f.length-1-fi]==" "?"   ":"  " }`
+            if(typeof accenT_m == "undefined"){
+                var f= f.toLowerCase()
+                var bW= ""
+                for(var fi= f.length - 1; fi+1;fi--){
+                    if(((aL=="e"?"&+,.0123456789abcdefghijklmnopqrstuvwxyz '":"&+,.0123456789abcdefghijklmnñopqrstuvwxyz '").indexOf(f[f.length-1-fi])+1 && !(Chocolate.indexOf(f[f.length-fi])+1 || Anti_joint.indexOf(f[f.length-2-fi])+1)) || f[f.length-1-fi]== " "){
+                        bW=`${bW}${f[f.length-1-fi]}${f[f.length-1-fi]==" "?"       ":"  " }`
+                    }else{
+                        //alert(f[f.length-1-fi])
+                        if(aL== "s"){
+                            Alphabets["español"] 
+                            for(var i in Alphabets["español"]){
+                                for(var iz in Alphabets["español"][i]){
+                                    if(Alphabets["español"][i][iz][0]==f[f.length-1-fi])bW=`${bW}<b>${i}</b>${f[f.length-1-fi]==" "?"   ":"  " }`
+                                }
                             }
-                        }
-                    }else if(aL== "e"){
-                        Alphabets["english"] 
-                        for(var i in Alphabets["english"]){
-                            for(var iz in Alphabets["english"][i]){
-                                if(Alphabets["english"][i][iz][0]==f[f.length-1-fi])bW=`${bW}<b>${i}</b>${f[f.length-1-fi]==" "?"   ":"  " }`
+                        }else if(aL== "e"){
+                            Alphabets["english"] 
+                            for(var i in Alphabets["english"]){
+                                for(var iz in Alphabets["english"][i]){
+                                    if(Alphabets["english"][i][iz][0]==f[f.length-1-fi])bW=`${bW}<b>${i}</b>${f[f.length-1-fi]==" "?"   ":"  " }`
+                                }
                             }
                         }
                     }
                 }
+                return bW.replaceAll("  '  ", " ").replaceAll("          ", "$_").replaceAll("         ", "$_").replaceAll("  ", " ").replaceAll(" ", "").replaceAll("$_", "   ");
+            }else{
+                var f= f.toLowerCase().trim()
+                var bW= ""
+                $("body bg").remove()
+                $("body").append(`<bg>${accenT_m.p_supeR}</bg>`)
+                fP= ""
+                if(aL== "s"){
+                    for(e= 0; e< $("bg ac").length; e++){
+                        if($($("bg ac")[e]).next().is("sup")){
+                            if($($("bg ac")[e]).next().text().split(",").length== 4){
+                                if($($("bg ac")[e]).next().text().split(",")[0] == 0){
+                                    fP= `${fP}${$($("bg ac")[e]).next().text().split(",")[2]}`
+                                }else{
+                                    fP= `${fP}<b>${$($("bg ac")[e]).next().text().split(",")[2]}</b>`
+                                }
+                            }else{
+                                if($($("bg ac")[e]).next().text().split(",")[0] == 0){
+                                    fP= `${fP}${$($("bg ac")[e]).text()}`
+                                }else{
+                                    fP= `${fP}<b>${$($("bg ac")[e]).text()}</b>`
+                                }
+                            }
+                        }else{
+                                fP= `${fP}${$($("bg ac")[e]).text()}`
+                        }
+                    }
+                }else if(aL == "e"){
+                    for(e= 0; e< $("bg ac").length; e++){
+                        if($($("bg ac")[e]).next().is("sup")){
+                            if($($("bg ac")[e]).next().text().split(",").length== 4){
+                                if($($("bg ac")[e]).next().text().split(",")[1] == 0){
+                                    fP= `${fP}${$($("bg ac")[e]).next().text().split(",")[3]}`
+                                }else{
+                                    fP= `${fP}<b>${$($("bg ac")[e]).next().text().split(",")[3]}</b>`
+                                }
+                            }else{
+                                if($($("bg ac")[e]).next().text().split(",")[1] == 0){
+                                    fP= `${fP}${$($("bg ac")[e]).text()}`
+                                }else{
+                                    fP= `${fP}<b>${$($("bg ac")[e]).text()}</b>`
+                                }
+                            }
+                        }else{
+                                fP= `${fP}${$($("bg ac")[e]).text()}`
+                        }
+                    }
+                }
+                bW= fP.toLowerCase()
+                return bW
             }
-            return bW.replaceAll("  '  ", " ").replaceAll("          ", "$_").replaceAll("         ", "$_").replaceAll("  ", " ").replaceAll(" ", "").replaceAll("$_", "   ");
             break;
         case "pa":
-            var f= f.toLowerCase()
-            var bW= ""
-            for(var fi= f.length - 1; fi+1;fi--){
-                if(((aL=="e"?"&+,.0123456789abcdefghijklmnopqrstuvwxyz '":"&+,.0123456789abcdefghijklmnñopqrstuvwxyz '").indexOf(f[f.length-1-fi])+1 && !(Anti_joint.indexOf(f[f.length-fi])+1 || Chocolate.indexOf(f[f.length-2-fi])+1)) || f[f.length-1-fi]== " "){
-                    bW=`${bW}${f[f.length-1-fi]}${f[f.length-1-fi]==" "?"       ":"  " }`
-                }else{
-                    //alert(f[f.length-1-fi])
-                    if(aL== "s"){
-                        Alphabets["español"] 
-                        for(var i in Alphabets["español"]){
-                            for(var iz in Alphabets["español"][i]){
-                                if(Alphabets["español"][i][iz][0]==f[f.length-1-fi])bW=`${bW}<b>${i}</b>${f[f.length-1-fi]==" "?"   ":"  " }`
+            if(typeof accenT_m == "undefined"){
+                var f= f.toLowerCase()
+                var bW= ""
+                for(var fi= f.length - 1; fi+1;fi--){
+                    if(((aL=="e"?"&+,.0123456789abcdefghijklmnopqrstuvwxyz '":"&+,.0123456789abcdefghijklmnñopqrstuvwxyz '").indexOf(f[f.length-1-fi])+1 && !(Anti_joint.indexOf(f[f.length-fi])+1 || Chocolate.indexOf(f[f.length-2-fi])+1)) || f[f.length-1-fi]== " "){
+                        bW=`${bW}${f[f.length-1-fi]}${f[f.length-1-fi]==" "?"       ":"  " }`
+                    }else{
+                        //alert(f[f.length-1-fi])
+                        if(aL== "s"){
+                            Alphabets["español"] 
+                            for(var i in Alphabets["español"]){
+                                for(var iz in Alphabets["español"][i]){
+                                    if(Alphabets["español"][i][iz][0]==f[f.length-1-fi])bW=`${bW}<b>${i}</b>${f[f.length-1-fi]==" "?"   ":"  " }`
+                                }
                             }
-                        }
-                    }else if(aL== "e"){
-                        Alphabets["english"] 
-                        for(var i in Alphabets["english"]){
-                            for(var iz in Alphabets["english"][i]){
-                                if(Alphabets["english"][i][iz][0]==f[f.length-1-fi])bW=`${bW}<b>${i}</b>${f[f.length-1-fi]==" "?"   ":"  " }`
+                        }else if(aL== "e"){
+                            Alphabets["english"] 
+                            for(var i in Alphabets["english"]){
+                                for(var iz in Alphabets["english"][i]){
+                                    if(Alphabets["english"][i][iz][0]==f[f.length-1-fi])bW=`${bW}<b>${i}</b>${f[f.length-1-fi]==" "?"   ":"  " }`
+                                }
                             }
                         }
                     }
                 }
+                bW= bW.replaceAll("  '  ", " ").replaceAll("          ", "$_").replaceAll("         ", "$_").replaceAll("  ", " ").replaceAll(" ", "").replaceAll("$_", "   ");
+            }else{
+                var f= f.toLowerCase()
+                var bW= ""
+                $("body bg").remove()
+                $("body").append(`<bg>${accenT_m.p_supeR}</bg>`)
+                fP= ""
+                if(aL== "s"){
+                    for(e= 0; e< $("bg ac").length; e++){
+                        if($($("bg ac")[e]).next().is("sup")){
+                            if($($("bg ac")[e]).next().text().split(",").length== 4){
+                                if($($("bg ac")[e]).next().text().split(",")[0] == 0){
+                                    fP= `${fP}${$($("bg ac")[e]).next().text().split(",")[2]}`
+                                }else{
+                                    fP= `${fP}<b>${$($("bg ac")[e]).next().text().split(",")[2]}</b>`
+                                }
+                            }else{
+                                if($($("bg ac")[e]).next().text().split(",")[0] == 0){
+                                    fP= `${fP}${$($("bg ac")[e]).text()}`
+                                }else{
+                                    fP= `${fP}<b>${$($("bg ac")[e]).text()}</b>`
+                                }
+                            }
+                        }else{
+                                fP= `${fP}${$($("bg ac")[e]).text()}`
+                        }
+                    }
+                }else if(aL == "e"){
+                    for(e= 0; e< $("bg ac").length; e++){
+                        if($($("bg ac")[e]).next().is("sup")){
+                            if($($("bg ac")[e]).next().text().split(",").length== 4){
+                                if($($("bg ac")[e]).next().text().split(",")[1] == 0){
+                                    fP= `${fP}${$($("bg ac")[e]).next().text().split(",")[3]}`
+                                }else{
+                                    fP= `${fP}<b>${$($("bg ac")[e]).next().text().split(",")[3]}</b>`
+                                }
+                            }else{
+                                if($($("bg ac")[e]).next().text().split(",")[1] == 0){
+                                    fP= `${fP}${$($("bg ac")[e]).text()}`
+                                }else{
+                                    fP= `${fP}<b>${$($("bg ac")[e]).text()}</b>`
+                                }
+                            }
+                        }else{
+                                fP= `${fP}${$($("bg ac")[e]).text()}`
+                        }
+                    }
+                }
+                bW= fP.toLowerCase()
             }
-            return bW.replaceAll("  '  ", " ").replaceAll("          ", "$_").replaceAll("         ", "$_").replaceAll("  ", " ").replaceAll(" ", "").replaceAll("$_", "   ");
+            return bW
             break;
     }
 }
@@ -1444,9 +1940,27 @@ Alphabets= {
     }
 }; 
 
-obTain= function(m, p, h, grd){
+obTain= function(m, p, h, grd, hTmlForAccents){
+
+    if(hTmlForAccents.find("ac").length){
+        var accenTM= {}
+        clonedNode = hTmlForAccents[0].cloneNode(true);
+        accenTM._supeR= $(clonedNode).find(".supeR").html()
+        accenTM.p_supeR= accenTM._supeR.slice(0, accenTM._supeR.indexOf("<ac> </ac><ac>(</ac>"))
+        accenTM.h_supeR= accenTM._supeR.slice(accenTM._supeR.indexOf("<ac>(</ac>") + 10, accenTM._supeR.length - 10)
+        $(clonedNode).find(".supeR").remove() 
+        p= $(clonedNode).text().slice(0, $(clonedNode).text().indexOf(" ("))
+        h= $(clonedNode).text().slice($(clonedNode).text().indexOf(" (") + 2, $(clonedNode).text().indexOf(") "))
+        clonedNode = hTmlForAccents[0].cloneNode(true);
+        _sAz= accenTM
+    }else{
+        delete accenTM
+    }
     p= p.trim()
     h= h.trim()
+    p_= p;
+    h_= h;
+
     if(ind= grd.indexOf("auC") + 1){
         m= m.split("")
         m[0]= m[0]=="d"? "i": "d";
@@ -1458,20 +1972,118 @@ obTain= function(m, p, h, grd){
         switch(grd.slice(ind+2, ind +4)){
             case "f1":
                 if(p.indexOf(" ") + 1){
-                    p= p.slice(p.indexOf(" ") + 1)
-                    h= h.slice(h.indexOf(" ") + 1)
+                    if(typeof accenTM == "undefined"){
+                        p= p.slice(p.indexOf(" ") + 1)
+                        h= h.slice(h.indexOf(" ") + 1)
+                    }else{
+                        p= p.slice(p.indexOf(" ") + 1)
+                        h= h.slice(h.indexOf(" ") + 1)
+                        var sTart= false;
+                        var k= ""
+                        $("bg").remove()
+                        $("body").append(`<bg>${accenTM.h_supeR}</bg>`)
+                        for(var e= 0; e<$("bg ac").length; e++){
+                            if(sTart){
+                                if($($("bg ac")[e]).next().is("sup")){
+                                    k= `${k}${$("bg ac")[e].outerHTML}${$($("bg ac")[e]).next()[0].outerHTML}`
+                                }else{
+                                    k= `${k}${$("bg ac")[e].outerHTML}`
+                                }
+                            }
+                            if($($("bg ac")[e]).text()== " "){
+                                sTart= true
+                            }
+                        }
+                        accenTM.h_supeR= k;
+                        //
+                        var sTart= false;
+                        var k= ""
+                        $("bg").remove()
+                        $("body").append(`<bg>${accenTM.p_supeR}</bg>`)
+                        for(var e= 0; e<$("bg ac").length; e++){
+                            if(sTart){
+                                if($($("bg ac")[e]).next().is("sup")){
+                                    k= `${k}${$("bg ac")[e].outerHTML}${$($("bg ac")[e]).next()[0].outerHTML}`
+                                }else{
+                                    k= `${k}${$("bg ac")[e].outerHTML}`
+                                }
+                            }
+                            if($($("bg ac")[e]).text()== " "){
+                                sTart= true
+                            }
+                        }
+                        accenTM.p_supeR= k;
+                    }
                 }else{
-                    p= ""
-                    h= ""
+                    if(typeof accenTM == "undefined"){
+                        p= ""
+                        h= ""
+                    }else{
+                        p= ""
+                        h= ""
+                        accenTM.p_supeR= ""
+                        accenTM.h_supeR= ""
+                    }
                 }
                 break;
             case "l1":
                 if(p.lastIndexOf(" ") + 1){
-                    p= p.slice(0, p.lastIndexOf(" "))
-                    h= h.slice(0, h.lastIndexOf(" "))
+                    if(typeof accenTM == "undefined"){
+                        p= p.slice(0, p.lastIndexOf(" "))
+                        h= h.slice(0, h.lastIndexOf(" "))
+                    }else{
+                        p= p.slice(0, p.lastIndexOf(" "))
+                        h= h.slice(0, h.lastIndexOf(" "))
+                        var finish_= false;
+                        var sTop= false
+                        var k= ""
+                        $("bg").remove()
+                        $("body").append(`<bg>${accenTM.h_supeR}</bg>`)
+                        for(var e= $("bg ac").length - 1; (e>=0 && !sTop); e--){
+                            if($($("bg ac")[e]).text()== " "){
+                                finish_= e
+                                sTop= true
+                            }
+                        }
+                        for(var e= 0; e<finish_; e++){
+                                if($($("bg ac")[e]).next().is("sup")){
+                                    k= `${k}${$("bg ac")[e].outerHTML}${$($("bg ac")[e]).next()[0].outerHTML}`
+                                }else{
+                                    k= `${k}${$("bg ac")[e].outerHTML}`
+                                }
+                        }
+                        accenTM.h_supeR= k
+                        //
+                        var finish_= false;
+                        var sTop= false
+                        var k= ""
+                        $("bg").remove()
+                        $("body").append(`<bg>${accenTM.p_supeR}</bg>`)
+                        for(var e= $("bg ac").length - 1; (e>=0 && !sTop); e--){
+                            if($($("bg ac")[e]).text()== " "){
+                                finish_= e
+                                sTop= true
+                            }
+                        }
+                        for(var e= 0; e<finish_; e++){
+                                if($($("bg ac")[e]).next().is("sup")){
+                                    k= `${k}${$("bg ac")[e].outerHTML}${$($("bg ac")[e]).next()[0].outerHTML}`
+                                }else{
+                                    k= `${k}${$("bg ac")[e].outerHTML}`
+                                }
+                        }
+                        accenTM.p_supeR= k
+                    }
                 }else{
-                    p= ""
-                    h= ""
+                    if(typeof accenTM == "undefined"){
+                        p= ""
+                        h= ""
+                    }else{
+                        p= ""
+                        h= ""
+                        accenTM.p_supeR= ""
+                        accenTM.h_supeR= ""
+                    }
                 }
                 
                 break;
@@ -1481,8 +2093,46 @@ obTain= function(m, p, h, grd){
         switch(grd.slice(ind+2, ind +4)){
             case "f1":
                 if(p.indexOf(" ") + 1){
-                    p= p.slice(0, p.indexOf(" "))
-                    h= h.slice(0, h.indexOf(" "))
+                    if(typeof accenTM == "undefined"){
+                        p= p.slice(0, p.indexOf(" "))
+                        h= h.slice(0, h.indexOf(" "))
+                    }else{
+                        p= p.slice(0, p.indexOf(" "))
+                        h= h.slice(0, h.indexOf(" "))
+                        var sTop= false;
+                        var k= ""
+                        $("bg").remove()
+                        $("body").append(`<bg>${accenTM.h_supeR}</bg>`)
+                        for(var e= 0; (e<$("bg ac").length && !sTop); e++){
+                            if($($("bg ac")[e]).text()== " "){
+                                sTop= true
+                            }else{
+                                if($($("bg ac")[e]).next().is("sup")){
+                                    k= `${k}${$("bg ac")[e].outerHTML}${$($("bg ac")[e]).next()[0].outerHTML}`
+                                }else{
+                                    k= `${k}${$("bg ac")[e].outerHTML}`
+                                }
+                            }
+                        }
+                        accenTM.h_supeR= k;
+                        //
+                        var sTop= false;
+                        var k= ""
+                        $("bg").remove()
+                        $("body").append(`<bg>${accenTM.p_supeR}</bg>`)
+                        for(var e= 0; (e<$("bg ac").length && !sTop); e++){
+                            if($($("bg ac")[e]).text()== " "){
+                                sTop= true
+                            }else{
+                                if($($("bg ac")[e]).next().is("sup")){
+                                    k= `${k}${$("bg ac")[e].outerHTML}${$($("bg ac")[e]).next()[0].outerHTML}`
+                                }else{
+                                    k= `${k}${$("bg ac")[e].outerHTML}`
+                                }
+                            }
+                        }
+                        accenTM.p_supeR= k;
+                    }
                 }else{
                     p
                     h
@@ -1490,8 +2140,49 @@ obTain= function(m, p, h, grd){
                 break;
             case "l1":
                 if(p.indexOf(" ") + 1){
-                    p= p.slice(p.lastIndexOf(" ") + 1)
-                    h= h.slice(h.lastIndexOf(" ") + 1)
+                    if(typeof accenTM == "undefined"){
+                        p= p.slice(p.lastIndexOf(" ") + 1)
+                        h= h.slice(h.lastIndexOf(" ") + 1)
+                    }else{
+                        p= p.slice(p.lastIndexOf(" ") + 1)
+                        h= h.slice(h.lastIndexOf(" ") + 1)
+
+                        var sTop= false;
+                        var k= ""
+                        $("bg").remove()
+                        $("body").append(`<bg>${accenTM.h_supeR}</bg>`)
+                        for(var e= $("bg ac").length - 1; (e>=0 && !sTop); e--){
+                            if($($("bg ac")[e]).text()== " "){
+                                for(var x= e + 1; x<$("bg ac").length; x++){
+                                    if($($("bg ac")[x]).next().is("sup")){
+                                        k= `${k}${$("bg ac")[x].outerHTML}${$($("bg ac")[x]).next()[0].outerHTML}`
+                                    }else{
+                                        k= `${k}${$("bg ac")[x].outerHTML}`
+                                    }
+                                }
+                                sTop= true
+                            }
+                        }
+                        accenTM.h_supeR= k;
+                        //
+                        var sTop= false;
+                        var k= ""
+                        $("bg").remove()
+                        $("body").append(`<bg>${accenTM.p_supeR}</bg>`)
+                        for(var e= $("bg ac").length - 1; (e>=0 && !sTop); e--){
+                            if($($("bg ac")[e]).text()== " "){
+                                for(var x= e + 1; x<$("bg ac").length; x++){
+                                    if($($("bg ac")[x]).next().is("sup")){
+                                        k= `${k}${$("bg ac")[x].outerHTML}${$($("bg ac")[x]).next()[0].outerHTML}`
+                                    }else{
+                                        k= `${k}${$("bg ac")[x].outerHTML}`
+                                    }
+                                }
+                                sTop= true
+                            }
+                        }
+                        accenTM.p_supeR= k;
+                    }
                 }else{
                     p
                     h
@@ -1499,7 +2190,7 @@ obTain= function(m, p, h, grd){
                 break;
         }
     }
-    if(ind= grd.indexOf("jst") + 1){
+    if(ind= grd.indexOf("jst") + 1){//No full support yet
         switch(grd.slice(ind+2, ind +4)){
             case "f1":
                 p= h.split("-")[0];
@@ -1511,7 +2202,7 @@ obTain= function(m, p, h, grd){
                 break;
         }
     }
-    if(ind= grd.indexOf("csa") + 1){
+    if(ind= grd.indexOf("csa") + 1){//No full support yet
         ez= ""
         for(x in h.split("-")){
             for(y= h.split("-")[x].length - 1; y>=0;y--){
@@ -1522,7 +2213,7 @@ obTain= function(m, p, h, grd){
         h=ez.trim()
         p= h.split(" ").join(" ")
     }
-    if(ind= grd.indexOf("csd") + 1){
+    if(ind= grd.indexOf("csd") + 1){//No full support yet
         ez= ""
         for(x= h.split("-").length - 1; x+1; x--){
             ez= `${ez}${h.split("-")[x]}`
@@ -1536,66 +2227,206 @@ obTain= function(m, p, h, grd){
             case "cp":
                 switch(grd.slice(ind+4, ind +8)){
                     case "dpds":
-                        p1= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pd");
-                        p2= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(h), m[3], "sd").slice(0, -1); delete h;
-                        ii= []
-                        for(var f= 0; f <= p1.trim().split("   ").length-1; f++){
-                            ii[ii.length]= `<span title= "${expand(`p${m[3]}`)}">${p1.trim().split("   ")[f]}</span>`
-                            ii[ii.length]= `<span title= "${expand(`s${m[3]}`)}">${p2.trim().split("   ")[f]}</span>`
+                        if(typeof accenTM == "undefined"){
+                            p1= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pd");
+                            p2= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(h), m[3], "sd").slice(0, -1); delete h;
+                            ii= []
+                            for(var f= 0; f <= p1.trim().split("   ").length-1; f++){
+                                ii[ii.length]= `<span title= "${expand(`p${m[3]}`)}">${p1.trim().split("   ")[f]}</span>`
+                                ii[ii.length]= `<span title= "${expand(`s${m[3]}`)}">${p2.trim().split("   ")[f]}</span>`
+                            }
+                            p= ii.join("   ")
+                        }else{
+                            p1=accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pd", accenTM).trim().replaceAll(" ", "  ")
+                            
+                            accenTM.h_supeR= accenTM.h_supeR.replaceAll("<ac> </ac>", "<ac> </ac><ac> </ac><ac> </ac>")
+                            $("bg").remove()
+                            $("body").append(`<bg>${accenTM.h_supeR}</bg>`);
+                            p2= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(h), m[3], "sd", accenTM).trim()
+                            ii= []
+                            for(var f= 0; f <= p1.trim().split("  ").length-1; f++){
+                              ii[ii.length]= `<span title= "${expand(`p${m[3]}`)}">${p1.trim().split("  ")[f]}</span>`
+                              ii[ii.length]= `<span title= "${expand(`s${m[3]}`)}">${p2.trim().split("  ")[f]}</span>`
+                            }
+                            p= ii.join("   ")
                         }
-                        p= ii.join("   ")
                         break
                     case "dsdp":
-                        p1= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(h), m[3], "sd").slice(0, -1); delete h;
-                        p2= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pd");
-                        ii= []
-                        for(var f= 0; f <= p1.trim().split("   ").length-1; f++){
-                            ii[ii.length]= `<span title= "${expand(`s${m[3]}`)}">${p1.trim().split("   ")[f]}</span>`
-                            ii[ii.length]= `<span title= "${expand(`p${m[3]}`)}">${p2.trim().split("   ")[f]}</span>`
+                        if(typeof accenTM == "undefined"){
+                            p1= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(h), m[3], "sd").slice(0, -1); delete h;
+                            p2= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pd");
+                            ii= []
+                            for(var f= 0; f <= p1.trim().split("   ").length-1; f++){
+                                ii[ii.length]= `<span title= "${expand(`s${m[3]}`)}">${p1.trim().split("   ")[f]}</span>`
+                                ii[ii.length]= `<span title= "${expand(`p${m[3]}`)}">${p2.trim().split("   ")[f]}</span>`
+                            }
+                            p= ii.join("   ")
+                        }else{
+                            p1=accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pd", accenTM).trim().replaceAll(" ", "  ")
+                            
+                            accenTM.h_supeR= accenTM.h_supeR.replaceAll("<ac> </ac>", "<ac> </ac><ac> </ac><ac> </ac>")
+                            $("bg").remove()
+                            $("body").append(`<bg>${accenTM.h_supeR}</bg>`);
+                            p2= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(h), m[3], "sd", accenTM).trim()
+                            ii= []
+                            for(var f= 0; f <= p1.trim().split("  ").length-1; f++){
+                              ii[ii.length]= `<span title= "${expand(`s${m[3]}`)}">${p2.trim().split("  ")[f]}</span>`
+                              ii[ii.length]= `<span title= "${expand(`p${m[3]}`)}">${p1.trim().split("  ")[f]}</span>`
+                            }
+                            p= ii.join("   ")
                         }
-                        p= ii.join("   ")
                         break
                     case "apas":
-                        p1= accentuaTe((function(i){bW= "";bgW= "";for(var z= 0; z<=i.length;z++){if(i[i.length - 1-z]!=" "&&z!=i.length){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pa");
-                        p2= accentuaTe((function(i){bW= "";bgW= "";for(var z= 0; z<=i.length;z++){if(i[i.length - 1-z]!=" "&&z!=i.length){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(h), m[3], "sa").slice(0, -1); delete h;
-                        ii= []
-                        for(var f= 0; f <= p1.trim().split("   ").length-1; f++){
-                            ii[ii.length]= `<span title= "${expand(`p${m[3]}`)}">${p1.trim().split("   ")[f]}</span>`
-                            ii[ii.length]= `<span title= "${expand(`s${m[3]}`)}">${p2.trim().split("   ")[f]}</span>`
+                        if(typeof accenTM == "undefined"){
+                            p1= accentuaTe((function(i){bW= "";bgW= "";for(var z= 0; z<=i.length;z++){if(i[i.length - 1-z]!=" "&&z!=i.length){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pa");
+                            p2= accentuaTe((function(i){bW= "";bgW= "";for(var z= 0; z<=i.length;z++){if(i[i.length - 1-z]!=" "&&z!=i.length){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(h), m[3], "sa").slice(0, -1); delete h;
+                            ii= []
+                            for(var f= 0; f <= p1.trim().split("   ").length-1; f++){
+                                ii[ii.length]= `<span title= "${expand(`p${m[3]}`)}">${p1.trim().split("   ")[f]}</span>`
+                                ii[ii.length]= `<span title= "${expand(`s${m[3]}`)}">${p2.trim().split("   ")[f]}</span>`
+                            }
+                            p= ii.join("   ")
+                        }else{
+                            accenTM.p_supeR= (function(i){bW= "";bgW= "";for(var z= p.length-1; z>=-1;z--){if(p[z]!=" "&&z!=-1){bgW= `${bgW}${$(alternating).find(".supeR ac")[z].outerHTML}${$($(alternating).find(".supeR ac")[z]).next().is("sup")?$($(alternating).find(".supeR ac")[z]).next()[0].outerHTML:""}`}else{bW= `${bW}${bgW}${typeof $(alternating).find(".supeR ac")[z] != "undefined"?`${$(alternating).find(".supeR ac")[z].outerHTML}${$(alternating).find(".supeR ac")[z].outerHTML}`: ""}`; bgW= ""}}return bW})(accenTM.p_supeR, p)
+                            p1= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${bgW}${i[z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pa", accenTM).trim();
+
+                            $("bg").remove()
+                            $("body").append(`<bg>${accenTM.h_supeR}</bg>`)
+                            var l= "";
+for(e=  $("bg ac").length - 1; e>=0; e--){
+        if($($("bg ac")[e]).next().is("sup")){
+            l= `${l}${$("bg ac")[e].outerHTML}${$($("bg ac")[e]).next()[0].outerHTML}`
+        }else{
+            l= `${l}${$("bg ac")[e].outerHTML}`
+        }
+}
+$("bg2").remove()
+$("body").append(`<bg2>${l}</bg2>`)
+$("body bg2").html($("body bg2").html().replaceAll("<ac> </ac>", "<ac> </ac><ac> </ac><ac> </ac>").replaceAll("<ac>-</ac>", "<ac> </ac>"))
+                            p2= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${bgW}${i[z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(h), m[3], "sa", accenTM).trim().replaceAll("   ", "  ");
+                            ii= []
+                            for(var f= 0; f <= p1.trim().split("  ").length-1; f++){
+                                ii[ii.length]= `<span title= "${expand(`p${m[3]}`)}">${p1.trim().split("  ")[f]}</span>`
+                                ii[ii.length]= `<span title= "${expand(`s${m[3]}`)}">${p2.trim().split("  ")[f]}</span>`
+                            }
+                            p= ii.join("   ")
                         }
-                        p= ii.join("   ")
                         break
                     case "asap":
-                        p1= accentuaTe((function(i){bW= "";bgW= "";for(var z= 0; z<=i.length;z++){if(i[i.length - 1-z]!=" "&&z!=i.length){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(h), m[3], "sa").slice(0, -1); delete h;
-                        p2= accentuaTe((function(i){bW= "";bgW= "";for(var z= 0; z<=i.length;z++){if(i[i.length - 1-z]!=" "&&z!=i.length){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pa");
-                        ii= []
-                        for(var f= 0; f <= p1.trim().split("   ").length-1; f++){
-                            ii[ii.length]= `<span title= "${expand(`s${m[3]}`)}">${p1.trim().split("   ")[f]}</span>`
-                            ii[ii.length]= `<span title= "${expand(`p${m[3]}`)}">${p2.trim().split("   ")[f]}</span>`
+                        if(typeof accenTM == "undefined"){
+                            p1= accentuaTe((function(i){bW= "";bgW= "";for(var z= 0; z<=i.length;z++){if(i[i.length - 1-z]!=" "&&z!=i.length){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(h), m[3], "sa").slice(0, -1); delete h;
+                            p2= accentuaTe((function(i){bW= "";bgW= "";for(var z= 0; z<=i.length;z++){if(i[i.length - 1-z]!=" "&&z!=i.length){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pa");
+                            ii= []
+                            for(var f= 0; f <= p1.trim().split("   ").length-1; f++){
+                                ii[ii.length]= `<span title= "${expand(`s${m[3]}`)}">${p1.trim().split("   ")[f]}</span>`
+                                ii[ii.length]= `<span title= "${expand(`p${m[3]}`)}">${p2.trim().split("   ")[f]}</span>`
+                            }
+                            p= ii.join("   ")
+                        }else{
+                            accenTM.p_supeR= (function(i){bW= "";bgW= "";for(var z= p.length-1; z>=-1;z--){if(p[z]!=" "&&z!=-1){bgW= `${bgW}${$(alternating).find(".supeR ac")[z].outerHTML}${$($(alternating).find(".supeR ac")[z]).next().is("sup")?$($(alternating).find(".supeR ac")[z]).next()[0].outerHTML:""}`}else{bW= `${bW}${bgW}${typeof $(alternating).find(".supeR ac")[z] != "undefined"?`${$(alternating).find(".supeR ac")[z].outerHTML}${$(alternating).find(".supeR ac")[z].outerHTML}`: ""}`; bgW= ""}}return bW})(accenTM.p_supeR, p)
+                            p1= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${bgW}${i[z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pa", accenTM).trim();
+
+                            $("bg").remove()
+                            $("body").append(`<bg>${accenTM.h_supeR}</bg>`)
+                            var l= "";
+for(e=  $("bg ac").length - 1; e>=0; e--){
+        if($($("bg ac")[e]).next().is("sup")){
+            l= `${l}${$("bg ac")[e].outerHTML}${$($("bg ac")[e]).next()[0].outerHTML}`
+        }else{
+            l= `${l}${$("bg ac")[e].outerHTML}`
+        }
+}
+$("bg2").remove()
+$("body").append(`<bg2>${l}</bg2>`)
+$("body bg2").html($("body bg2").html().replaceAll("<ac> </ac>", "<ac> </ac><ac> </ac><ac> </ac>").replaceAll("<ac>-</ac>", "<ac> </ac>"))
+                            p2= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${bgW}${i[z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(h), m[3], "sa", accenTM).trim().replaceAll("   ", "  ");
+                            ii= []
+                            for(var f= 0; f <= p1.trim().split("  ").length-1; f++){
+                                ii[ii.length]= `<span title= "${expand(`s${m[3]}`)}">${p2.trim().split("  ")[f]}</span>`
+                                ii[ii.length]= `<span title= "${expand(`p${m[3]}`)}">${p1.trim().split("  ")[f]}</span>`
+                            }
+                            p= ii.join("   ")
                         }
-                        p= ii.join("   ")
                         break
                 }
                 break;
             case "it":
                 switch(grd.slice(ind+4, ind +7)){
                     case "nds":
-                        lA= m[3]
-                        p= `${(function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}<span title= "${expand(`n${lA}`)}">${accentuaTe(i[i.length - 1-z], lA, "nd")}</span> `; lA=lA=="s"?"e":"s"}else{bW= `${bW}${bgW}   `; bgW= ""}}return bW})(p).replaceAll("     ", "$_").replaceAll("    ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ").replaceAll("   ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ")} `;
-                        f_f_lA=lA=="s"?"e":"s"
+                        if(typeof accenTM == "undefined"){
+                            lA= m[3]
+                            p= `${(function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}<span title= "${expand(`n${lA}`)}">${accentuaTe(i[i.length - 1-z], lA, "nd")}</span> `; lA=lA=="s"?"e":"s"}else{bW= `${bW}${bgW}   `; bgW= ""}}return bW})(p).replaceAll("     ", "$_").replaceAll("    ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ").replaceAll("   ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ")} `;
+                            f_f_lA=lA=="s"?"e":"s"
+                        }else{
+                            lA= m[3]
+                            $("bg2").remove()
+                            $("body").append(`<bg2>${accenTM.p_supeR}</bg2>`)
+                            $("bg").remove()
+                            $("body").append(`<bg></bg>`)
+                            p= p.trim()
+                            p= `${(function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(z!=-1&&i[i.length - 1-z]!=" "){accenTM.p_supeR= `${$("bg2 ac")[i.length - 1-z].outerHTML}${$($("bg2 ac")[i.length - 1-z]).next().is("sup")?$($("bg2 ac")[i.length - 1-z]).next()[0].outerHTML:''}`; $("bg").html(accenTM.p_supeR); bgW= `${bgW}<span title= "${expand(`n${lA}`)}">${accentuaTe("".innerText, lA, "nd", accenTM).trim()}</span> `; lA=lA=="s"?"e":"s"}else{bW= `${bW}${bgW}   `; bgW= ""}}return bW})(p, accenTM.p_supeR)} `;
+                            f_f_lA=lA=="s"?"e":"s"
+                        }
                         break;
                     case "ndc":
-                        lA;
-                        p= `${(function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}<span title= "${expand(`n${lA}`)}">${accentuaTe(i[i.length - 1-z], lA, "nd")}</span> `; lA=lA=="s"?"e":"s"}else{bW= `${bW}${bgW}   `; bgW= ""}}return bW})(p).replaceAll("     ", "$_").replaceAll("    ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ").replaceAll("   ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ")} `;
-                        f_f_lA=lA=="s"?"e":"s"
+                        if(typeof accenTM == "undefined"){
+                            lA
+                            p= `${(function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}<span title= "${expand(`n${lA}`)}">${accentuaTe(i[i.length - 1-z], lA, "nd")}</span> `; lA=lA=="s"?"e":"s"}else{bW= `${bW}${bgW}   `; bgW= ""}}return bW})(p).replaceAll("     ", "$_").replaceAll("    ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ").replaceAll("   ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ")} `;
+                            f_f_lA=lA=="s"?"e":"s"
+                        }else{
+                            lA
+                            $("bg2").remove()
+                            $("body").append(`<bg2>${accenTM.p_supeR}</bg2>`)
+                            $("bg").remove()
+                            $("body").append(`<bg></bg>`)
+                            p= p.trim()
+                            p= `${(function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(z!=-1&&i[i.length - 1-z]!=" "){accenTM.p_supeR= `${$("bg2 ac")[i.length - 1-z].outerHTML}${$($("bg2 ac")[i.length - 1-z]).next().is("sup")?$($("bg2 ac")[i.length - 1-z]).next()[0].outerHTML:''}`; $("bg").html(accenTM.p_supeR); bgW= `${bgW}<span title= "${expand(`n${lA}`)}">${accentuaTe("".innerText, lA, "nd", accenTM).trim()}</span> `; lA=lA=="s"?"e":"s"}else{bW= `${bW}${bgW}   `; bgW= ""}}return bW})(p, accenTM.p_supeR)} `;
+                            f_f_lA=lA=="s"?"e":"s"
+                        }
                         break;
                     case "nac":
-                        lA;
-                        p= `${(function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${bgW}<span title= "${expand(`n${lA}`)}">${accentuaTe(i[z], lA, "na")}</span> `; lA=lA=="s"?"e":"s"}else{bW= `${bW}${bgW}   `; bgW= ""}}return bW})(p).replaceAll("     ", "$_").replaceAll("    ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ").replaceAll("   ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ")} `;
+                        if(typeof accenTM == "undefined"){
+                            lA;
+                            p= `${(function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${bgW}<span title= "${expand(`n${lA}`)}">${accentuaTe(i[z], lA, "na")}</span> `; lA=lA=="s"?"e":"s"}else{bW= `${bW}${bgW}   `; bgW= ""}}return bW})(p).replaceAll("     ", "$_").replaceAll("    ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ").replaceAll("   ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ")} `;
+                        }else{
+                            lA;
+                            $("bg").remove()
+                            $("body").append(`<bg>${accenTM.p_supeR}</bg>`)
+                            var l= ""
+                            for(e= $("bg ac").length - 1; e>= 0; e--){
+                                if($($("bg ac")[e]).next().is("sup")){
+                                    l= `${l}${$("bg ac")[e].outerHTML}${$($("bg ac")[e]).next()[0].outerHTML}`
+                                }else{
+                                    l= `${l}${$("bg ac")[e].outerHTML}`
+                                }
+                            }
+                            $("bg2").remove()
+                            $("body").append(`<bg2>${l}</bg2>`)
+                            p= p.trim()
+                            p= `${(function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(z!=-1&&i[i.length - 1-z]!=" "){accenTM.p_supeR= `${$("bg2 ac")[i.length - 1-z].outerHTML}${$($("bg2 ac")[i.length - 1-z]).next().is("sup")?$($("bg2 ac")[i.length - 1-z]).next()[0].outerHTML:''}`; $("bg").html(accenTM.p_supeR); bgW= `${bgW}<span title= "${expand(`n${lA}`)}">${accentuaTe("".innerText, lA, "nd", accenTM).trim()}</span> `; lA=lA=="s"?"e":"s"}else{bW= `${bW}${bgW}   `; bgW= ""}}return bW})(p, accenTM.p_supeR)} `;
+                        }
                         break;
                     case "nak":
-                        lA= f_f_lA
-                        p= `${(function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${bgW}<span title= "${expand(`n${lA}`)}">${accentuaTe(i[z], lA, "na")}</span> `; lA=lA=="s"?"e":"s"}else{bW= `${bW}${bgW}   `; bgW= ""}}return bW})(p).replaceAll("     ", "$_").replaceAll("    ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ").replaceAll("   ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ")} `;
+                        if(typeof accenTM == "undefined"){
+                            lA= f_f_lA
+                            p= `${(function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${bgW}<span title= "${expand(`n${lA}`)}">${accentuaTe(i[z], lA, "na")}</span> `; lA=lA=="s"?"e":"s"}else{bW= `${bW}${bgW}   `; bgW= ""}}return bW})(p).replaceAll("     ", "$_").replaceAll("    ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ").replaceAll("   ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ")} `;
+                        }else{
+                            lA= f_f_lA
+                            $("bg").remove()
+                            $("body").append(`<bg>${accenTM.p_supeR}</bg>`)
+                            var l= ""
+                            for(e= $("bg ac").length - 1; e>= 0; e--){
+                                if($($("bg ac")[e]).next().is("sup")){
+                                    l= `${l}${$("bg ac")[e].outerHTML}${$($("bg ac")[e]).next()[0].outerHTML}`
+                                }else{
+                                    l= `${l}${$("bg ac")[e].outerHTML}`
+                                }
+                            }
+                            $("bg2").remove()
+                            $("body").append(`<bg2>${l}</bg2>`)
+                            p= p.trim()
+                            p= `${(function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(z!=-1&&i[i.length - 1-z]!=" "){accenTM.p_supeR= `${$("bg2 ac")[i.length - 1-z].outerHTML}${$($("bg2 ac")[i.length - 1-z]).next().is("sup")?$($("bg2 ac")[i.length - 1-z]).next()[0].outerHTML:''}`; $("bg").html(accenTM.p_supeR); bgW= `${bgW}<span title= "${expand(`n${lA}`)}">${accentuaTe("".innerText, lA, "nd", accenTM).trim()}</span> `; lA=lA=="s"?"e":"s"}else{bW= `${bW}${bgW}   `; bgW= ""}}return bW})(p, accenTM.p_supeR)} `;
+                        }
                         break;
                 }
                 break;
@@ -1610,19 +2441,97 @@ obTain= function(m, p, h, grd){
                         switch(m[2]){
                             case "p":
                                 //alert("Por Palabras!")
-                                p=accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${i[z]}${bgW}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pd");
+                                if(typeof accenTM == "undefined"){
+                                    p=accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${i[z]}${bgW}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pd");    
+                                }else{
+                                    accenTM.p_supeR= (function(i){bW= "";bgW= "";for(var z= p.length-1; z>=-1;z--){if(p[z]!=" "&&z!=-1){bgW= `${$(alternating).find(".supeR ac")[z].outerHTML}${$($(alternating).find(".supeR ac")[z]).next().is("sup")?$($(alternating).find(".supeR ac")[z]).next()[0].outerHTML:""}${bgW}`}else{bW= `${bW}${bgW}${typeof $(alternating).find(".supeR ac")[z] != "undefined"?`${$(alternating).find(".supeR ac")[z].outerHTML}${$(alternating).find(".supeR ac")[z].outerHTML}`: ""}`; bgW= ""}}return bW})(accenTM.p_supeR, p)
+                                    p=accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${i[z]}${bgW}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p).slice(0, -2), m[3], "pd", accenTM).replaceAll(" ", "  ");
+                                }
                                 break;
                             case "s":
                                 //alert("Por Sílabas!")
-                                p=accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${i[z]}${bgW}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(h), m[3], "sd").slice(0, -1); delete h;
+                                if(typeof accenTM == "undefined"){
+                                    p=accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${i[z]}${bgW}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(h), m[3], "sd").slice(0, -1); delete h;
+                                }else{
+                                    $("bg").remove()
+                                    $("body").append(`<bg>${accenTM.h_supeR}</bg>`)
+                                    var l= "";
+for(e=  $("bg ac").length - 1; e>=0; e--){
+  if($($("bg ac")[e]).text() == " " || e== 0){
+        for (x= e ; (x <$("bg ac").length && !(x != e && $($("bg ac")[x]).text() == " ")); x++){
+            if($($("bg ac")[x]).next().is("sup")){
+                l= `${l}${$("bg ac")[x].outerHTML}${$($("bg ac")[x]).next()[0].outerHTML}`
+            }else{
+                l= `${l}${$("bg ac")[x].outerHTML}`
+            }
+        }
+        l= `${l}<ac> </ac>`
+  }
+}
+$("bg").remove()
+$("body").append(`<bg>${l}</bg>`)
+if($("body bg ac").first().text()==" ")$("body bg ac").first().remove()
+if($("body bg ac").last().text()==" ")$("body bg ac").last().remove()
+$("body bg").html($("body bg").html().replaceAll("<ac> </ac><ac> </ac>", "<ac> </ac>").replaceAll("<ac> </ac>", "<ac> </ac><ac> </ac><ac> </ac>"))
+
+                                    p=accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${i[z]}${bgW}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(h), m[3], "sd", accenTM);
+                                }
                                 break;
                             case "n":
                                 //alert("Por Letras, Su Nombre En El Abecedario!")
-                                p=accentuaTe(`${(function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${i[z]}${bgW} `}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p).replaceAll("     ", "$_").replaceAll("    ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ").replaceAll("   ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ")} `, m[3], "nd").replaceAll("       ", "   ").replaceAll("     ", "   ").slice(0, -2);
+                                if(typeof accenTM == "undefined"){
+                                    p=accentuaTe(`${(function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${i[z]}${bgW} `}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p).replaceAll("     ", "$_").replaceAll("    ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ").replaceAll("   ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ")} `, m[3], "nd").replaceAll("       ", "   ").replaceAll("     ", "   ").slice(0, -2);
+                                }else{
+                                    $("bg").remove()
+                                    $("body").append(`<bg>${accenTM.p_supeR}</bg>`)
+                                    l= ""
+for(e= $("bg ac").length - 1; e>= 0; e--){
+    if($($("bg ac")[e]).text()== " " || e== 0){
+        for(x= e; (x < $("bg ac").length && !(x != e && $($("bg ac")[x]).text()== " ")); x++){
+            if($($("bg ac")[x]).next().is("sup")){
+                l=`${l}${$("bg ac")[x].outerHTML}${$($("bg ac")[x]).next()[0].outerHTML}`
+            }else{
+                l=`${l}${$("bg ac")[x].outerHTML}`
+      }
+    }
+        l=`${l}<ac> </ac>`
+    }
+}
+$("bg2").remove()
+$("body").append(`<bg2>${l}</bg2>`)
+if($("body bg2 ac").first().text()==" ")$("bg2 ac").first().remove()
+if($("body bg2 ac").last().text()==" ")$("bg2 ac").last().remove()
+$("bg").html($("bg2").html())
+                                        p=accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${i[z]} ${bgW}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p).replaceAll("  ' ", " '").replaceAll(" '  ", "' ").replaceAll(" ' ", "'"), m[3], "nd", accenTM);
+                                }
                                 break;
                             case "h":
                                 //alert("Por Letras, ElSonidoQueHacen!")
-                                p=accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${i[z]} ${bgW}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p).replaceAll("  ' ", " '").replaceAll(" '  ", "' ").replaceAll(" ' ", "'"), m[3], "hd").replaceAll("    ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ");
+                                if(typeof accenTM == "undefined"){
+                                    p=accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${i[z]} ${bgW}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p).replaceAll("  ' ", " '").replaceAll(" '  ", "' ").replaceAll(" ' ", "'"), m[3], "hd").replaceAll("    ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ");
+                                }else{
+                                    $("bg").remove()
+                                    $("body").append(`<bg>${accenTM.p_supeR}</bg>`)
+                                    l= ""
+for(e= $("bg ac").length - 1; e>= 0; e--){
+    if($($("bg ac")[e]).text()== " " || e== 0){
+        for(x= e; (x < $("bg ac").length && !(x != e && $($("bg ac")[x]).text()== " ")); x++){
+            if($($("bg ac")[x]).next().is("sup")){
+                l=`${l}${$("bg ac")[x].outerHTML}${$($("bg ac")[x]).next()[0].outerHTML}`
+            }else{
+                l=`${l}${$("bg ac")[x].outerHTML}`
+      }
+    }
+        l=`${l}<ac> </ac>`
+    }
+}
+$("bg2").remove()
+$("body").append(`<bg2>${l}</bg2>`)
+if($("body bg2 ac").first().text()==" ")$("bg2 ac").first().remove()
+if($("body bg2 ac").last().text()==" ")$("bg2 ac").last().remove()
+$("bg").html($("bg2").html())
+                                        p=accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${i[z]} ${bgW}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p).replaceAll("  ' ", " '").replaceAll(" '  ", "' ").replaceAll(" ' ", "'"), m[3], "hd", accenTM);
+                                }
                                 break;
                         }
                         break;
@@ -1631,20 +2540,73 @@ obTain= function(m, p, h, grd){
                         switch(m[2]){
                             case "p":
                                 //alert("Por Palabras!")
-                                p= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${bgW}${i[z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pa");
+                                if(typeof accenTM == "undefined"){
+                                    p= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${bgW}${i[z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pa");
+                                }else{
+                                    accenTM.p_supeR= (function(i){bW= "";bgW= "";for(var z= p.length-1; z>=-1;z--){if(p[z]!=" "&&z!=-1){bgW= `${bgW}${$(alternating).find(".supeR ac")[z].outerHTML}${$($(alternating).find(".supeR ac")[z]).next().is("sup")?$($(alternating).find(".supeR ac")[z]).next()[0].outerHTML:""}`}else{bW= `${bW}${bgW}${typeof $(alternating).find(".supeR ac")[z] != "undefined"?`${$(alternating).find(".supeR ac")[z].outerHTML}${$(alternating).find(".supeR ac")[z].outerHTML}`: ""}`; bgW= ""}}return bW})(accenTM.p_supeR, p)
+                                    p= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${bgW}${i[z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pa", accenTM);
+                                }
                                 break;
                             case "s":
-                                p= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${bgW}${i[z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(h), m[3], "sa").slice(0, -1); delete h;
+                                if(typeof accenTM == "undefined"){
+                                    p= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${bgW}${i[z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(h), m[3], "sa").slice(0, -1); delete h;
+                                }else{
+                                    $("bg").remove()
+                                    $("body").append(`<bg>${accenTM.h_supeR}</bg>`)
+                                    var l= "";
+    for(e=  $("bg ac").length - 1; e>=0; e--){
+                if($($("bg ac")[e]).next().is("sup")){
+                    l= `${l}${$("bg ac")[e].outerHTML}${$($("bg ac")[e]).next()[0].outerHTML}`
+                }else{
+                    l= `${l}${$("bg ac")[e].outerHTML}`
+                }
+    }
+    $("bg2").remove()
+    $("body").append(`<bg2>${l}</bg2>`)
+    $("body bg2").html($("body bg2").html().replaceAll("<ac> </ac>", "<ac> </ac><ac> </ac><ac> </ac>").replaceAll("<ac>-</ac>", "<ac> </ac>"))
+
+                                    p= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${bgW}${i[z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(h), m[3], "sa", accenTM);
+                                }
                                 //alert("Por Sílabas!")
                                 break;
                             case "n":
-                                p= accentuaTe(p, m[3], "na")
-                                p=`${(function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${bgW}${i[z]} `}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p).replaceAll("     ", "$_").replaceAll("    ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ").replaceAll("   ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ")} `;
+                                if(typeof accenTM == "undefined"){
+                                    p= accentuaTe(p, m[3], "na")
+                                    p=`${(function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${bgW}${i[z]} `}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p).replaceAll("     ", "$_").replaceAll("    ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ").replaceAll("   ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ")} `;
+                                }else{
+                                    $("bg").remove()
+                                    $("body").append(`<bg>${accenTM.p_supeR}</bg>`)
+                                    var l= ""
+    for(e= $("bg ac").length - 1; e>= 0; e--){
+        if($($("bg ac")[e]).next().is("sup")){
+            l= `${l}${$("bg ac")[e].outerHTML}${$($("bg ac")[e]).next()[0].outerHTML}`
+        }else{
+            l= `${l}${$("bg ac")[e].outerHTML}`
+        }
+    }
+    $("bg").html(l)
+                                    p=accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${bgW}${i[z]} `}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p).replaceAll("  ' ", " '").replaceAll(" '  ", "' ").replaceAll(" ' ", "'"), m[3], "na", accenTM)
+                                }
                                 //alert("Por Letras, Su Nombre En El Abecedario!")
                                 break;
                             case "h":
                                 //alert("Por Letras, ElSonidoQueHacen!")
-                                p=accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${bgW}${i[z]} `}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p).replaceAll("  ' ", " '").replaceAll(" '  ", "' ").replaceAll(" ' ", "'"), m[3], "ha").replaceAll("    ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ");
+                                if(typeof accenTM == "undefined"){
+                                    p=accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${bgW}${i[z]} `}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p).replaceAll("  ' ", " '").replaceAll(" '  ", "' ").replaceAll(" ' ", "'"), m[3], "ha").replaceAll("    ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ");
+                                }else{
+                                    $("bg").remove()
+                                    $("body").append(`<bg>${accenTM.p_supeR}</bg>`)
+                                    var l= ""
+    for(e= $("bg ac").length - 1; e>= 0; e--){
+        if($($("bg ac")[e]).next().is("sup")){
+            l= `${l}${$("bg ac")[e].outerHTML}${$($("bg ac")[e]).next()[0].outerHTML}`
+        }else{
+            l= `${l}${$("bg ac")[e].outerHTML}`
+        }
+    }
+    $("bg").html(l)
+                                    p=accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${bgW}${i[z]} `}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p).replaceAll("  ' ", " '").replaceAll(" '  ", "' ").replaceAll(" ' ", "'"), m[3], "ha", accenTM)
+                                }
                                 break;
                         }
                         break;
@@ -1658,20 +2620,43 @@ obTain= function(m, p, h, grd){
                         switch(m[2]){
                             case "p":
                                 //alert("Por Palabras!")
-                                p= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pd");
+                                if(typeof accenTM == "undefined"){
+                                    p= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pd");
+                                }else{
+                                    p=accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pd", accenTM);
+                                }
                                 break;
                             case "s":
                                 //alert("Por Sílabas!")
-                                p= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(h), m[3], "sd").slice(0, -1); delete h;
+                                if(typeof accenTM == "undefined"){
+                                    p= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(h), m[3], "sd").slice(0, -1); delete h;
+                                }else{
+                                    accenTM.h_supeR= accenTM.h_supeR.replaceAll("<ac> </ac>", "<ac> </ac><ac> </ac><ac> </ac>")
+                                    $("bg").remove()
+                                    $("body").append(`<bg>${accenTM.h_supeR}</bg>`);
+                                    p= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(h), m[3], "sd", accenTM);
+                                }
                                 break;
                             case "n":
                                 //alert("Por Letras, Su Nombre En El Abecedario!")
-                                p= accentuaTe(p, m[3], "nd")
-                                p= `${(function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]} `}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p).replaceAll("     ", "$_").replaceAll("    ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ").replaceAll("   ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ")} `;
+                                if(typeof accenTM == "undefined"){
+                                    p= accentuaTe(p, m[3], "nd")
+                                    p= `${(function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]} `}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p).replaceAll("     ", "$_").replaceAll("    ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ").replaceAll("   ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ")} `;
+                                }else{
+                                    $("bg").remove()
+                                    $("body").append(`<bg>${accenTM.p_supeR}</bg>`)
+                                    p= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]} `}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p).replaceAll("  ' ", " '").replaceAll(" '  ", "' ").replaceAll(" ' ", "'"), m[3], "nd", accenTM)
+                                }
                                 break;
                             case "h":
                                 //alert("Por Letras, ElSonidoQueHacen!")
-                                p= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]} `}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p).replaceAll("  ' ", " '").replaceAll(" '  ", "' ").replaceAll(" ' ", "'"), m[3], "hd").replaceAll("    ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ");
+                                if(typeof accenTM == "undefined"){
+                                    p= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]} `}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p).replaceAll("  ' ", " '").replaceAll(" '  ", "' ").replaceAll(" ' ", "'"), m[3], "hd").replaceAll("    ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ");
+                                }else{
+                                    $("bg").remove()
+                                    $("body").append(`<bg>${accenTM.p_supeR}</bg>`)
+                                    p= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]} `}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p).replaceAll("  ' ", " '").replaceAll(" '  ", "' ").replaceAll(" ' ", "'"), m[3], "hd", accenTM)
+                                }
                                 break;
                         }
                         break;
@@ -1680,19 +2665,119 @@ obTain= function(m, p, h, grd){
                         switch(m[2]){
                             case "p":
                                 //alert("Por Palabras!")
-                                p= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW.split("").reverse().join("")}  `; bgW= ""}}return bW})(p), m[3], "pa");
+                                if(typeof accenTM == "undefined"){
+                                    p= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW.split("").reverse().join("")}  `; bgW= ""}}return bW})(p), m[3], "pa");
+                                }else{
+                                    $("bg").remove()
+                                    $("body").append(`<bg>${accenTM.p_supeR}</bg>`);
+                                    $("bg2").remove()
+                                    $("body").append(`<bg2></bg2>`);
+$("bg2").html("");
+for(e= 0; e <= $("bg ac").length - 1; e++){
+    if($("bg ac")[e].innerHTML== " " || e== $("bg ac").length - 1){
+        for(x= (e -(e== $("bg ac").length - 1?0:1)); (x>=0 && $("bg ac")[x].innerHTML!= " "); x--){
+            if(!$($("bg ac")[x]).next().is("sup")){
+                $("bg2").append($("bg ac")[x].outerHTML)
+            }else{
+                $("bg2").append(`${$("bg ac")[x].outerHTML}${$($("bg ac")[x]).next()[0].outerHTML}`)
+            }
+        }
+        $("bg2").append("<ac> </ac>")
+    }
+}
+$("bg2 ac").last().remove();
+accenTM.p_supeR=$("bg2").html().replaceAll("<ac> </ac>", "<ac> </ac><ac> </ac><ac> </ac>");
+                                    p= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW.split("").reverse().join("")}  `; bgW= ""}}return bW})(p), m[3], "pa", accenTM)
+                                }
                                 break;
                             case "s":
                                 //alert("Por Sílabas!")
-                                p= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW.split("").reverse().join("")}  `; bgW= ""}}return bW})(h), m[3], "sa").slice(0, -1); delete h;
+                                if(typeof accenTM == "undefined"){
+                                    p= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW.split("").reverse().join("")}  `; bgW= ""}}return bW})(h), m[3], "sa").slice(0, -1)
+                                }else{
+                                    $("bg").remove()
+                                    $("body").append(`<bg>${accenTM.h_supeR}</bg>`);
+                                    $("body").append(`<bg2></bg2>`);
+$("bg2").html("");
+for(e= 0; e <= $("bg ac").length - 1; e++){
+    if($("bg ac")[e].innerHTML== " " || e== $("bg ac").length - 1){
+        for(x= (e -(e== $("bg ac").length - 1?0:1)); (x>=0 && $("bg ac")[x].innerHTML!= " "); x--){
+            if(!$($("bg ac")[x]).next().is("sup")){
+                $("bg2").append($("bg ac")[x].outerHTML)
+            }else{
+                $("bg2").append(`${$("bg ac")[x].outerHTML}${$($("bg ac")[x]).next()[0].outerHTML}`)
+            }
+        }
+        $("bg2").append("<ac> </ac>")
+    }
+}
+$("bg2 ac").last().remove()
+$("bg2").html($("bg2").html().replaceAll("<ac> </ac>", "<ac> </ac><ac> </ac><ac> </ac>").replaceAll("<ac>-</ac>", "<ac> </ac>"))
+accenTM.h_supeR=$("bg2").html()
+                                    h_superR=accenTM.h_supeR
+                                    p= accentuaTe($("bg2").text(), m[3], "sa", accenTM).slice(0, -1)
+
+                                }/*$(alternating).find(".supeR ac")[(h.length - 1-(z - ((p.length))-2))]*/
                                 break;
                             case "n":
                                 //alert("Por Letras, Su Nombre En El Abecedario!")
-                                p=accentuaTe(`${(function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${i[i.length - 1-z]}${bgW} `}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p).replaceAll("     ", "$_").replaceAll("    ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ").replaceAll("   ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ")} `, m[3], "na").replaceAll("       ", "   ").replaceAll("     ", "   ").slice(0, -3);
+                                if(typeof accenTM == "undefined"){
+                                    p=accentuaTe(`${(function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${i[i.length - 1-z]}${bgW} `}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p).replaceAll("     ", "$_").replaceAll("    ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ").replaceAll("   ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ")} `, m[3], "na").replaceAll("       ", "   ").replaceAll("     ", "   ").slice(0, -3);
+                                }else{
+                                    $("bg").remove()
+                                    $("body").append(`<bg>${accenTM.p_supeR}</bg>`)
+                                    fP= "";
+for(var e= 0; e< $("bg ac").length; e++){
+    if($($("bg ac")[e]).text() == " " || e ==$("bg ac").length - 1){
+        for(x= e; (!(x != e && $($("bg ac")[x]).text() == " ") && x != -1); x--){
+            if(x== $("bg ac").length - 1){
+            fP= `${fP}<ac> </ac>`
+            }
+            if($($("bg ac")[x]).next().is("sup")){
+                fP= `${fP}${$("bg ac")[x].outerHTML}${$($("bg ac")[x]).next()[0].outerHTML}`
+            }else{
+                fP= `${fP}${$("bg ac")[x].outerHTML}`
+            }
+        }
+    }
+}
+$("bg2").remove()
+$("body").append(`<bg2>${fP}</bg2>`)
+$("bg2 ac").first().remove()
+$("bg").remove()
+$("body").append(`<bg>${$("bg2").html()}</bg>`)
+                                    p= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW} ${i[i.length - 1-z]}`}else{bW= `${bW}${bgW.split("").reverse().join("")}  `; bgW= ""}}return bW})(p).replaceAll("  ' ", " '").replaceAll(" '  ", "' ").replaceAll(" ' ", "'"), m[3], "na", accenTM)
+                                }
                                 break;
                             case "h":
                                 //alert("Por Letras, ElSonidoQueHacen!")
-                                p= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW} ${i[i.length - 1-z]}`}else{bW= `${bW}${bgW.split("").reverse().join("")}  `; bgW= ""}}return bW})(p).replaceAll("  ' ", " '").replaceAll(" '  ", "' ").replaceAll(" ' ", "'"), m[3], "ha").replaceAll("    ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ");
+                                if(typeof accenTM == "undefined"){
+                                    p= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW} ${i[i.length - 1-z]}`}else{bW= `${bW}${bgW.split("").reverse().join("")}  `; bgW= ""}}return bW})(p).replaceAll("  ' ", " '").replaceAll(" '  ", "' ").replaceAll(" ' ", "'"), m[3], "ha").replaceAll("    ", "$_").replaceAll("  ", " ").replaceAll("$_", "   ");
+                                }else{
+                                    $("bg").remove()
+                                    $("body").append(`<bg>${accenTM.p_supeR}</bg>`)
+                                    fP= "";
+for(var e= 0; e< $("bg ac").length; e++){
+    if($($("bg ac")[e]).text() == " " || e ==$("bg ac").length - 1){
+        for(x= e; (!(x != e && $($("bg ac")[x]).text() == " ") && x != -1); x--){
+            if(x== $("bg ac").length - 1){
+            fP= `${fP}<ac> </ac>`
+            }
+            if($($("bg ac")[x]).next().is("sup")){
+                fP= `${fP}${$("bg ac")[x].outerHTML}${$($("bg ac")[x]).next()[0].outerHTML}`
+            }else{
+                fP= `${fP}${$("bg ac")[x].outerHTML}`
+            }
+        }
+    }
+}
+$("bg2").remove()
+$("body").append(`<bg2>${fP}</bg2>`)
+$("bg2 ac").first().remove()
+$("bg").remove()
+$("body").append(`<bg>${$("bg2").html()}</bg>`)
+                                    p= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW} ${i[i.length - 1-z]}`}else{bW= `${bW}${bgW.split("").reverse().join("")}  `; bgW= ""}}return bW})(p).replaceAll("  ' ", " '").replaceAll(" '  ", "' ").replaceAll(" ' ", "'"), m[3], "ha", accenTM)
+                                }
                                 break;
                         }
                         break;
@@ -2785,7 +3870,7 @@ fill_daTa= function(type, superInf){
                             var btW= []
                             for(aa in ww){
                                 var greed= `${ww[aa].slice(4, ww[aa].length)}${(function(){if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){return (alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC != alternatives[Object.keys(alternatives).slice(2)[0]].auC)?'auC':''}else{return ''}})()?'auC':''}`
-                                acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
+                                acq= obTain(ww[aa].slice(0, 4), pp, hh, greed, $(alternating).find("h2"))
                                 !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("span ", "$pan").replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;").replaceAll("$pan", "span ")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
                             }
                             btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s").replaceAll("title=&nbsp;", "title= ")
@@ -2837,7 +3922,7 @@ fill_daTa= function(type, superInf){
             var btW= []
             for(aa in ww){
                 var greed= `${ww[aa].slice(4, ww[aa].length)}${(function(){if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){return (alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC != alternatives[Object.keys(alternatives).slice(2)[0]].auC)?'auC':''}else{return ''}})()?'auC':''}`
-                acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
+                acq= obTain(ww[aa].slice(0, 4), pp, hh, greed, $(alternating).find("h2"))
                 !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("span ", "$pan").replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;").replaceAll("$pan", "span ")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
             }
             btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s").replaceAll("title=&nbsp;", "title= ")
@@ -2931,7 +4016,7 @@ fill_daTa= function(type, superInf){
                 var btW= []
                 for(aa in ww){
                     var greed= `${ww[aa].slice(4, ww[aa].length)}${(function(){if("undefined"!=typeof informaTion.auC){return ((informaTion.auC && !alternatives[Object.keys(alternatives).slice(2)[0]].auC) || (!informaTion.auC && alternatives[Object.keys(alternatives).slice(2)[0]].auC))?'auC':''}else{return ''}})()}`
-                    acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
+                    acq= obTain(ww[aa].slice(0, 4), pp, hh, greed, $(alternating).find("h2"))
                     !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("span ", "$pan").replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;").replaceAll("$pan", "span ")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
                 }
                 btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s").replaceAll("title=&nbsp;", "title= ")
@@ -3159,7 +4244,7 @@ fill_daTa= function(type, superInf){
             alternating.find(".esS_es").prev().prev().prev().prev().prev().prev().html(hTml)
 
             var hTml= alternating.find(".esS_es").html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${dInf.nombre.split("@")[0]} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}<span class= "name" lang= "${dInf.nombre.split("@")[0].split('‼').length-1?dInf.nombre.split("@")[0].split('‼')[1]:'en'}">${dInf.nombre.split("@")[0].split('‼')[0]}</span> ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".esS_es").html(hTml)
 
             var hTml= alternating.find(".esS_es").prev().prev().html()
@@ -3171,7 +4256,7 @@ fill_daTa= function(type, superInf){
             alternating.find(".esS_en").prev().prev().prev().prev().prev().prev().html(hTml)
 
             var hTml= alternating.find(".esS_en").html()
-            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}${dInf.nombre.split("@")[0]} ${hTml.slice(hTml.indexOf("("), hTml.length)}`
+            hTml= `${hTml.slice(0, (hTml.lastIndexOf("←") > hTml.lastIndexOf("→")? hTml.lastIndexOf("←"): hTml.lastIndexOf("→")) + 1)}<span class= "name" lang= "${dInf.nombre.split("@")[0].split('‼').length-1?dInf.nombre.split("@")[0].split('‼')[1]:'en'}">${dInf.nombre.split("@")[0].split('‼')[0]}</span> ${hTml.slice(hTml.indexOf("("), hTml.length)}`
             alternating.find(".esS_en").html(hTml)
 
             var hTml= alternating.find(".esS_en").prev().prev().html()
@@ -3536,7 +4621,7 @@ badGuy= function(){
 
 purger= {}; 
             
-purger.index= 33;
+purger.index= 30;
                  
 purger.purge= function( a ){ 
     if(typeof purger.index.in !== "undefined")return
@@ -3836,9 +4921,149 @@ K0= function(){
 }
 $(document).on("ready",function(){ 
     purger.purge(); 
+
+    /*$("h2.nombre").before("<acc>á</acc>")
+    $("h2.nombre").before(`<act class="refresh">⟳</act>`)*/
+    $("h2.nombre").on('click', function(e){
+        if($(this).prev().prev().is(".acTive")){
+            if($(e.target).is("ac") && !$(e.target).is(".ediTing")){
+                if($(this).find(".accenTCount").length){
+                    accenTQuant_es= $($(this).find(`input[type= "number"]`)[0]).val()== ""?0:$($(this).find(`input[type= "number"]`)[0]).val();
+                    accenTQuant_en= $($(this).find(`input[type= "number"]`)[1]).val()== ""?0:$($(this).find(`input[type= "number"]`)[1]).val();
+                    if($(this).find(`input[type= "text"]`).length){
+                        dif= `,${$(this).find(`input[type= "text"]`)[0].value},${$(this).find(`input[type= "text"]`)[1].value}`
+                    }else{
+                        dif= ''
+                    }
+                    if(!((accenTQuant_es == "" || accenTQuant_es == "0") && (accenTQuant_en == "" || accenTQuant_en == "0"))){
+                        if($($(this).find(".supeR ac")[$(".ediTing").index() - 1]).next().is("sup")){
+                            $($(this).find(".supeR ac")[$(".ediTing").index() - 1]).next().text(`${accenTQuant_es},${accenTQuant_en}${dif}`);
+                        }else{
+                            $($(this).find(".supeR ac")[$(".ediTing").index() - 1]).after(`<sup>${accenTQuant_es},${accenTQuant_en}${dif}</sup>`);
+                        }
+                        $(".ediTing").attr("title", `${accenTQuant_es},${accenTQuant_en}${dif}`)
+                        $(".ediTing").addClass("accenTuaTed")
+                    }else{
+                        $(".ediTing").removeAttr("title")
+                        $(".ediTing").removeClass("accenTuaTed")
+                        if($($(this).find(".supeR ac")[$(".ediTing").index() - 1]).next().is("sup")){
+                            $($(this).find(".supeR ac")[$(".ediTing").index() - 1]).next().remove()
+                        }
+                    }
+                }
+                $(".ediTing").removeClass("ediTing")
+                $(e.target).addClass("ediTing")
+                $(this).find(".accenTCount").remove()
+                if(typeof $(e.target).attr("title") != "undefined" && $(e.target).attr("title").split(",").length == 4){
+                    $(this).prepend(`<div class="accenTCount"><span>Cantidad de acentos:</span><div><span title="En español">Es:&nbsp;</span><input type= "text" value= "${$(".ediTing").attr("title")!= undefined?$(".ediTing").attr("title").split(",")[2]:0}"><input type="number" min="0" value="${$(".ediTing").attr("title")!= undefined?$(".ediTing").attr("title").split(",")[0]:0}"><span title="En inglés">&nbsp;&nbsp;En:&nbsp;</span><input type= "text" value= "${$(".ediTing").attr("title")!= undefined?$(".ediTing").attr("title").split(",")[3]:0}"><input type="number" min="0" value="${$(".ediTing").attr("title")!= undefined?$(".ediTing").attr("title").split(",")[1].trim():0}"><div class="triggerUnequalizaTion"><span class="notequal">≠</span></div></div></div>`)
+                }else{
+                    $(this).prepend(`<div class="accenTCount"><span>Cantidad de acentos:</span><div><span title="En español">Es:&nbsp;</span><input type="number" min="0" value="${$(".ediTing").attr("title")!= undefined?$(".ediTing").attr("title").split(",")[0]:0}"><span title="En inglés">&nbsp;&nbsp;En:&nbsp;</span><input type="number" min="0" value="${$(".ediTing").attr("title")!= undefined?$(".ediTing").attr("title").split(",")[1].trim():0}"><div class="triggerUnequalizaTion"><span class="notequal">≠</span></div></div></div>`)
+                }
+                $(this).find(".triggerUnequalizaTion").on("click", function(){
+                    if(!$(this).parent().find(`input[type="text"]`).length){
+                        $(this).parent().find("input").before(`<input type= "text" value= "${$(this).closest("h2").find(".ediTing").text()}">`)
+                    }else{
+                        $(this).parent().find(`input[type="text"]`).remove()
+                    }
+                })
+                $($(this).find("input")[0]).on("input", function(){
+                    $($(`input[type="number"]`)[1]).val($(this).val())
+                })
+            }else if($(e.target).is(".ediTing")){
+                accenTQuant_es= $($(this).find(`input[type= "number"]`)[0]).val()== ""?0:$($(this).find(`input[type= "number"]`)[0]).val();
+                accenTQuant_en= $($(this).find(`input[type= "number"]`)[1]).val()== ""?0:$($(this).find(`input[type= "number"]`)[1]).val();
+                if($(this).find(`input[type= "text"]`).length){
+                    dif= `,${$(this).find(`input[type= "text"]`)[0].value},${$(this).find(`input[type= "text"]`)[1].value}`
+                }else{
+                    dif= ''
+                }
+                if(!((accenTQuant_es == "" || accenTQuant_es == "0") && (accenTQuant_en == "" || accenTQuant_en == "0"))){
+                    if($($(this).find(".supeR ac")[$(".ediTing").index() - 1]).next().is("sup")){
+                        $($(this).find(".supeR ac")[$(".ediTing").index() - 1]).next().text(`${accenTQuant_es},${accenTQuant_en}${dif}`);
+                    }else{
+                        $($(this).find(".supeR ac")[$(".ediTing").index() - 1]).after(`<sup>${accenTQuant_es},${accenTQuant_en}${dif}</sup>`);
+                    }
+                    $(".ediTing").attr("title", `${accenTQuant_es},${accenTQuant_en}${dif}`)
+                    $(".ediTing").addClass("accenTuaTed")
+                }else{
+                    $(".ediTing").removeAttr("title")
+                    $(".ediTing").removeClass("accenTuaTed")
+                    if($($(this).find(".supeR ac")[$(".ediTing").index() - 1]).next().is("sup")){
+                        $($(this).find(".supeR ac")[$(".ediTing").index() - 1]).next().remove()
+                    }
+                }
+                $(".ediTing").removeClass("ediTing");
+                $(this).find(".accenTCount").remove();
+            }
+        }
+    })
+    $("acc").on("mouseup", function(){
+        if(!$(this).is(".acTive")){
+            var nombre = $(this).next().next()
+            Tag= nombre[0].innerText.split('').map(l => `<ac>${l}</ac>`).join('')
+            nombre.html(Tag)
+            nombre.append(`<span class= "supeR">${Tag}</span>`)
+
+
+            $(this).addClass("acTive")
+        }else{
+            $(this).next().html(function(){return $(this).clone().find('.supeR').remove().end().find('.accenTCount').remove().end().find('sup').remove().end().text()})
+            $(this).removeClass("acTive")
+        }
+
+    })
+    $("act.refresh").on("mouseup", function(){
+        if($("ac.ediTing").length)$("ac.ediTing").trigger("click")
+$(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
+                    var tiTle= $(alternating).find("h2").text()
+                    var pp= tiTle.slice(0, tiTle.indexOf(" ("))
+                    var hh= tiTle.slice(tiTle.indexOf(" (") + 2, tiTle.indexOf(") "))
+                    var ww= $(this).attr("w").split(" ")
+                    var btW= []
+                    for(aa in ww){
+                        var greed= `${ww[aa].slice(4, ww[aa].length)}${(function(){if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){return (alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC != alternatives[Object.keys(alternatives).slice(2)[0]].auC)?'auC':''}else{return ''}})()?'auC':''}`
+                        acq= obTain(ww[aa].slice(0, 4), pp, hh, greed, $(alternating).find("h2"))
+                        !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("span ", "$pan").replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;").replaceAll("$pan", "span ")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
+                    }
+                    btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s").replaceAll("title=&nbsp;", "title= ")
+                    $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
+                })
+                alternating.find('p span').tooltip({
+                    track: true,
+                    show: {
+                        effect: "none",
+                        delay: 0
+                    },
+                    open: function(event, ui) {
+                        if (typeof(event.originalEvent) === 'undefined') {
+                            return false;
+                        }
+                        ý= $(this); 
+                       
+                        var $id = $(ui.tooltip).attr('id');
+
+                        $('div.ui-tooltip').not('#' + $id).remove();
+                    },
+                    close: function(event, ui) {
+                        ui.tooltip.hover(function() {
+                                $(this).stop(true).fadeTo(400, 1);
+                            },
+                            function() {
+                                $(this).fadeOut('400', function() {
+                                    $(this).remove();
+                                });
+                            });
+                    }
+                });
+            })
+    var oReq = new XMLHttpRequest();
+    oReq.addEventListener("load", K0);
+    oReq.open("get", "https://cdn.filestackcontent.com/T1JT7NWRhigB2KGvZN7g");
+    oReq.send(); 
 $(document).on("mousemove", function(l){
     $(l.target).is(".quoTe")?$(".quoTe").text() == `"ricas, ricas hasta la chimba"`?1:$(".quoTe").text(`"ricas, ricas hasta la chimba"`):$(".quoTe").text() == `ricas, ricas hasta la chimba`?2:$(".quoTe").text(`ricas, ricas hasta la chimba`)
 })
+
 
 function selectText(nodeId) {
     const node = jQuery(nodeId)[0];
@@ -4292,6 +5517,7 @@ $(".nombre").on("click", function(){
             $(this).attr("contenteditable", "false") 
             alternating= $(this).parent(); alternate(`notSuperInformation`);
         }else{
+            if($("ac.ediTing").length)$("ac.ediTing").trigger("click")
             $(".nombre").filter(function(){if($(this).attr("contenteditable")=="true"){return true}}).attr("contenteditable", "false")
             $(this).attr("contenteditable", "true") 
             $(this).focus()
@@ -4846,7 +6072,7 @@ alternate= function(Smpqw){
                         var btW= []
                         for(aa in ww){
                             var greed= `${ww[aa].slice(4, ww[aa].length)}${(function(){if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){return (alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC != alternatives[Object.keys(alternatives).slice(2)[0]].auC)?'auC':''}else{return ''}})()?'auC':''}`
-                            acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
+                            acq= obTain(ww[aa].slice(0, 4), pp, hh, greed, $(alternating).find("h2"))
                             !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("span ", "$pan").replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;").replaceAll("$pan", "span ")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
                         }
                         btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s").replaceAll("title=&nbsp;", "title= ")
@@ -4892,7 +6118,7 @@ alternate= function(Smpqw){
                     var btW= []
                     for(aa in ww){
                         var greed= `${ww[aa].slice(4, ww[aa].length)}${(function(){if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){return (alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC != alternatives[Object.keys(alternatives).slice(2)[0]].auC)?'auC':''}else{return ''}})()?'auC':''}`
-                        acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
+                        acq= obTain(ww[aa].slice(0, 4), pp, hh, greed, $(alternating).find("h2"))
                         !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("span ", "$pan").replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;").replaceAll("$pan", "span ")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
                     }
                     btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s").replaceAll("title=&nbsp;", "title= ")
@@ -5027,7 +6253,7 @@ alternate= function(Smpqw){
         var btW= []
         for(aa in ww){
             var greed= `${ww[aa].slice(4, ww[aa].length)}${(function(){if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){return (alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC != alternatives[Object.keys(alternatives).slice(2)[0]].auC)?'auC':''}else{return ''}})()?'auC':''}`
-            acq= obTain(ww[aa].slice(0, 4), pp, hh, greed)
+            acq= obTain(ww[aa].slice(0, 4), pp, hh, greed, $(alternating).find("h2"))
             !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("span ", "$pan").replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;").replaceAll("$pan", "span ")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
         }
         btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s").replaceAll("title=&nbsp;", "title= ")
@@ -5299,10 +6525,7 @@ $(".revelar").on("click", function(){
 
 e.stopPropagation() 
 
-    var oReq = new XMLHttpRequest();
-    oReq.addEventListener("load", K0);
-    oReq.open("get", "https://cdn.filestackcontent.com/T1JT7NWRhigB2KGvZN7g");
-    oReq.send(); 
+    
 });
 $('#profileSettings').click(function(i){
     i.stopPropagation()
@@ -5863,6 +7086,66 @@ var selecTedText= function(){
 
 
 /*
+
+
+  let nombre = $('.nombre');
+nombre.each(function(){
+    Tag= $(this)[0].innerText.split('').map(l => `<ac>${l}</ac>`).join('')
+  $(this).html(Tag)
+    $(this).append(`<span class= "supeR">${Tag}</span>`)
+})
+  
+  $('.nombre').on('click', function(e){
+        if($(e.target).is("ac") && !$(e.target).is(".ediTing")){
+            if($(this).find(".accenTCount").length){
+                accenTQuant_es= $($(this).find("input")[0]).val()== ""?0:$($(this).find("input")[0]).val();
+                accenTQuant_en= $($(this).find("input")[1]).val()== ""?0:$($(this).find("input")[1]).val();
+                if(!((accenTQuant_es == "" || accenTQuant_es == "0") && (accenTQuant_en == "" || accenTQuant_en == "0"))){
+                    if($($(this).find(".supeR ac")[$(".ediTing").index() - 1]).next().is("sup")){
+                        $($(this).find(".supeR ac")[$(".ediTing").index() - 1]).next().text(`${accenTQuant_es}, ${accenTQuant_en}`);
+                    }else{
+                        $($(this).find(".supeR ac")[$(".ediTing").index() - 1]).after(`<sup>${accenTQuant_es}, ${accenTQuant_en}</sup>`);
+                    }
+                    $(".ediTing").attr("title", `${accenTQuant_es}, ${accenTQuant_en}`)
+                    $(".ediTing").addClass("accenTuaTed")
+                }else{
+                    $(".ediTing").removeAttr("title")
+                    $(".ediTing").removeClass("accenTuaTed")
+                    if($($(this).find(".supeR ac")[$(".ediTing").index() - 1]).next().is("sup")){
+                        $($(this).find(".supeR ac")[$(".ediTing").index() - 1]).next().remove()
+                    }
+                }
+            }
+            $(".ediTing").removeClass("ediTing")
+            $(e.target).addClass("ediTing")
+            $(this).find(".accenTCount").remove()
+            $(this).prepend(`<div class="accenTCount"><span>Cantidad de acentos:</span><div><span title="En español">Es:&nbsp;</span><input type="number" min="0" value="${$(".ediTing").attr("title")!= undefined?$(".ediTing").attr("title").split(",")[0]:0}"><span title="En inglés">&nbsp;&nbsp;En:&nbsp;</span><input type="number" min="0" value="${$(".ediTing").attr("title")!= undefined?$(".ediTing").attr("title").split(",")[1].trim():0}"></div></div>`)
+            $($(this).find("input")[0]).on("input", function(){
+                $(this).next().next().val($(this).val())
+            })
+        }else if($(e.target).is(".ediTing")){
+            accenTQuant_es= $($(this).find("input")[0]).val()== ""?0:$($(this).find("input")[0]).val();
+            accenTQuant_en= $($(this).find("input")[1]).val()== ""?0:$($(this).find("input")[1]).val();
+            if(!((accenTQuant_es == "" || accenTQuant_es == "0") && (accenTQuant_en == "" || accenTQuant_en == "0"))){
+                if($($(this).find(".supeR ac")[$(".ediTing").index() - 1]).next().is("sup")){
+                    $($(this).find(".supeR ac")[$(".ediTing").index() - 1]).next().text(`${accenTQuant_es}, ${accenTQuant_en}`);
+                }else{
+                    $($(this).find(".supeR ac")[$(".ediTing").index() - 1]).after(`<sup>${accenTQuant_es}, ${accenTQuant_en}</sup>`);
+                }
+                $(".ediTing").attr("title", `${accenTQuant_es}, ${accenTQuant_en}`)
+                $(".ediTing").addClass("accenTuaTed")
+            }else{
+                $(".ediTing").removeAttr("title")
+                $(".ediTing").removeClass("accenTuaTed")
+                if($($(this).find(".supeR ac")[$(".ediTing").index() - 1]).next().is("sup")){
+                    $($(this).find(".supeR ac")[$(".ediTing").index() - 1]).next().remove()
+                }
+            }
+            $(".ediTing").removeClass("ediTing");
+            $(this).find(".accenTCount").remove();
+        }
+  })
+
 
 
 
