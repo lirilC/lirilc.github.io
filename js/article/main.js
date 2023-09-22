@@ -50,42 +50,52 @@ Anti_joint= ["¡", "¿", "'"];
 Chocolate= ["!", "?", "'"]; 
 loaded= {}
 
-unaccentuaTe= function(ph, a_l){
-    b_w= "";
-    if(a_l== "s"){
-        for(var g= 0; g<ph.length; g++){
-            if([" ", "-", "–", "–", ",", ";", ".", "&"].indexOf(ph[g]) + 1){
-                b_w=`${b_w}${ph[g]}`
-            }else{
-                for(var i in Alphabets["español"]){
-                    for(var iz in Alphabets["español"][i]){
-                        if(ph[g] == ph[g].toLowerCase()){
-                            if(Alphabets["español"][i][iz][0]==ph[g])b_w=`${b_w}${i}`
+unaccentuaTe= function(ph){
+    axR= ph;
+
+    Anti_joint= ["¡", "¿", "'"];  
+    Chocolate= ["!", "?", "'"];
+    
+    fH= ""
+    fSH= ""
+    for(e in axR){
+        var ch= axR[e];
+        var uRce;//uppeRcase
+        if(ch!= ch.toLowerCase()){
+            ch=ch.toLowerCase()
+            uRce= true
+        }else{
+            uRce= false
+        }
+        if(!("()-+,.abcdefghijklmnopqrstuvwxyz0123456789 ".indexOf(ch) + 1)){
+            for(var i in Alphabets["english"]){
+                for(var iz in Alphabets["english"][i]){
+                    if(Alphabets["english"][i][iz][0]==ch){
+                        if(ch != "ñ"){
+                            var accents__= Alphabets["english"][i][iz][1]+(Chocolate.indexOf(axR[(parseInt(e) + 1)])+1?1:0)+(Anti_joint.indexOf(axR[(parseInt(e) - 1)])+1?1:0)
+                            fH=`${fH}<ac class= "accenTUaTed" title= "${accents__},${accents__}">${uRce?i.toUpperCase():i}</ac>`
+                            fSH=`${fSH}<ac>${uRce?i.toUpperCase():i}</ac><sup>${accents__},${accents__}</sup>`
                         }else{
-                            if(Alphabets["español"][i][iz][0]==ph[g].toLowerCase())b_w=`${b_w}${i.toUpperCase()}`
+                            fH=`${fH}<ac class= "accenTUaTed" title= "0,4,ñ,n">n</ac>`
+                            fSH=`${fSH}<ac>n</ac><sup>0,4,ñ,n</sup>`
                         }
                     }
                 }
             }
-        }
-    }else if(a_l== "e"){
-        for(var g= 0; g<ph.length; g++){
-            if([" ", "-", "–", "–", ",", ";", ".", "&"].indexOf(ph[g]) + 1){
-                b_w=`${b_w}${ph[g]}`
+        }else if(!(Chocolate.indexOf(ch)+1) && !(Anti_joint.indexOf(ch)+1)){
+            var accents__= 0
+            //console.log(axR, e, axR[(e)], axR[e + 1], (e + 1), (Chocolate.indexOf(axR[(e + 1)])+1?1:0))
+            accents__= (Chocolate.indexOf(axR[(parseInt(e) + 1)])+1?1:0)+(Anti_joint.indexOf(axR[(parseInt(e) - 1)])+1?1:0)
+            if(!accents__ || ch== " "){
+                fH=`${fH}<ac>${uRce?ch.toUpperCase():ch}</ac>`
+                fSH=`${fSH}<ac>${uRce?ch.toUpperCase():ch}</ac>`
             }else{
-                for(var i in Alphabets["english"]){
-                    for(var iz in Alphabets["english"][i]){
-                        if(ph[g] == ph[g].toLowerCase()){
-                            if(Alphabets["english"][i][iz][0]==ph[g])b_w=`${b_w}${i}`
-                        }else{
-                            if(Alphabets["english"][i][iz][0]==ph[g].toLowerCase())b_w=`${b_w}${i.toUpperCase()}`
-                        }
-                    }
-                }
+                fH=`${fH}<ac class= "accenTUaTed" title= "${accents__},${accents__}">${uRce?ch.toUpperCase():ch}</ac>`
+                fSH=`${fSH}<ac>${uRce?ch.toUpperCase():ch}</ac><sup>${accents__},${accents__}</sup>`
             }
         }
     }
-    return b_w
+    return [fH, fSH]
 }
 
 accentuaTe= function(f, aL, m, accenT_m){
@@ -2445,7 +2455,7 @@ $("body bg2").html($("body bg2").html().replaceAll("<ac> </ac>", "<ac> </ac><ac>
                                     p=accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${i[z]}${bgW}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pd");    
                                 }else{
                                     accenTM.p_supeR= (function(i){bW= "";bgW= "";for(var z= p.length-1; z>=-1;z--){if(p[z]!=" "&&z!=-1){bgW= `${$(alternating).find(".supeR ac")[z].outerHTML}${$($(alternating).find(".supeR ac")[z]).next().is("sup")?$($(alternating).find(".supeR ac")[z]).next()[0].outerHTML:""}${bgW}`}else{bW= `${bW}${bgW}${typeof $(alternating).find(".supeR ac")[z] != "undefined"?`${$(alternating).find(".supeR ac")[z].outerHTML}${$(alternating).find(".supeR ac")[z].outerHTML}`: ""}`; bgW= ""}}return bW})(accenTM.p_supeR, p)
-                                    p=accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${i[z]}${bgW}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p).slice(0, -2), m[3], "pd", accenTM).replaceAll(" ", "  ");
+                                    p=accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[z]!=" "&&z!=-1){bgW= `${i[z]}${bgW}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p).slice(0, -2), m[3], "pd", accenTM);
                                 }
                                 break;
                             case "s":
@@ -2623,7 +2633,7 @@ $("bg").html($("bg2").html())
                                 if(typeof accenTM == "undefined"){
                                     p= accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pd");
                                 }else{
-                                    p=accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pd", accenTM);
+                                    p=accentuaTe((function(i){bW= "";bgW= "";for(var z= i.length-1; z>=-1;z--){if(i[i.length - 1-z]!=" "&&z!=-1){bgW= `${bgW}${i[i.length - 1-z]}`}else{bW= `${bW}${bgW}  `; bgW= ""}}return bW})(p), m[3], "pd", accenTM).replaceAll(" ", " ");
                                 }
                                 break;
                             case "s":
@@ -4922,12 +4932,81 @@ K0= function(){
 $(document).on("ready",function(){ 
     purger.purge(); 
 
-    /*$("h2.nombre").before("<acc>á</acc>")
-    $("h2.nombre").before(`<act class="refresh">⟳</act>`)*/
+    $("h2.nombre").before("<acc>á</acc>")
+    $("h2.nombre").before(`<act class="refresh">⟳</act>`)
     $("h2.nombre").on('click', function(e){
-        if($(this).prev().prev().is(".acTive")){
-            if($(e.target).is("ac") && !$(e.target).is(".ediTing")){
-                if($(this).find(".accenTCount").length){
+        if(!ctrlMShift){
+
+            if($(this).prev().prev().is(".acTive")){
+                if($(e.target).is("ac") && !$(e.target).is(".ediTing")){
+                    if($(this).find(".accenTCount").length){
+                        accenTQuant_es= $($(this).find(`input[type= "number"]`)[0]).val()== ""?0:$($(this).find(`input[type= "number"]`)[0]).val();
+                        accenTQuant_en= $($(this).find(`input[type= "number"]`)[1]).val()== ""?0:$($(this).find(`input[type= "number"]`)[1]).val();
+                        if($(this).find(`input[type= "text"]`).length){
+                            dif= `,${$(this).find(`input[type= "text"]`)[0].value},${$(this).find(`input[type= "text"]`)[1].value}`
+                        }else{
+                            dif= ''
+                        }
+                        if(!((accenTQuant_es == "" || accenTQuant_es == "0") && (accenTQuant_en == "" || accenTQuant_en == "0"))){
+                            if($($(this).find(".supeR ac")[$(".ediTing").index() - 1]).next().is("sup")){
+                                $($(this).find(".supeR ac")[$(".ediTing").index() - 1]).next().text(`${accenTQuant_es},${accenTQuant_en}${dif}`);
+                            }else{
+                                $($(this).find(".supeR ac")[$(".ediTing").index() - 1]).after(`<sup>${accenTQuant_es},${accenTQuant_en}${dif}</sup>`);
+                            }
+                            $(".ediTing").attr("title", `${accenTQuant_es},${accenTQuant_en}${dif}`)
+                            $(".ediTing").addClass("accenTuaTed")
+                        }else{
+                            $(".ediTing").removeAttr("title")
+                            $(".ediTing").removeClass("accenTuaTed")
+                            if($($(this).find(".supeR ac")[$(".ediTing").index() - 1]).next().is("sup")){
+                                $($(this).find(".supeR ac")[$(".ediTing").index() - 1]).next().remove()
+                            }
+                        }
+                    }
+
+                    nom= $(".ediTing").closest(".poema").find(".nombre > ac").filter(function(){return !("-()".indexOf($(this).text())+1)&& !($(this).text()==" " && $(this).next().text()=="(")?true:false})
+                    nomClon= $(".ediTing").closest(".poema").find(".nombre").clone().find(".supeR").remove().end().find(".accenTCount").remove().end()
+                    if($(nomClon).text().slice(0, nomClon.text().indexOf(" (")).toLowerCase()==$(nomClon).text().slice(nomClon.text().indexOf(" (") + 2, -1).toLowerCase().replaceAll("-", "")){
+                        supeR_=$(".ediTing").closest(".poema").find(".nombre .supeR ac").filter(function(){return !("-()".indexOf($(this).text())+1)&& !($(this).text()==" " && $(this).next().text()=="(")?true:false})
+                        acs= nomClon.find("ac").filter(function(){return !("-()".indexOf($(this).text())+1)&& !($(this).text()==" " && $(this).next().text()=="(")?true:false})
+                        inx= nomClon.find("ac").index(nomClon.find(".ediTing"))
+                        if($(supeR_[inx]).next().is("sup")){
+                            if($(supeR_[inx + acs.length / 2]).next().is("sup")){
+                                $(supeR_[inx + acs.length / 2]).next().html($(supeR_[inx]).next().html())
+                                $(nom[inx + acs.length / 2]).attr("title", $(supeR_[inx]).next().html())
+                            }else{
+                                $(supeR_[inx + acs.length / 2]).after(`<sup>${$(supeR_[inx]).next().html()}</sup>`)
+                                $(nom[inx + acs.length / 2]).attr("title", $(supeR_[inx]).next().html())
+                                $(nom[inx + acs.length / 2]).addClass("accenTuaTed")
+                            }
+                        }else{
+                            if($(supeR_[inx + acs.length / 2]).next().is("sup")){
+                                $(supeR_[inx + acs.length / 2]).next().remove()
+                                $(nom[inx + acs.length / 2]).removeAttr("title")
+                                $(nom[inx + acs.length / 2]).removeClass("accenTuaTed")
+                            }
+                        }
+                    }
+                    
+                    $(".ediTing").removeClass("ediTing")
+                    $(e.target).addClass("ediTing")
+                    $(this).find(".accenTCount").remove()
+                    if(typeof $(e.target).attr("title") != "undefined" && $(e.target).attr("title").split(",").length == 4){
+                        $(this).prepend(`<div class="accenTCount"><span>Cantidad de acentos:</span><div><span title="En español">Es:&nbsp;</span><input type= "text" value= "${$(".ediTing").attr("title")!= undefined?$(".ediTing").attr("title").split(",")[2]:0}"><input type="number" min="0" value="${$(".ediTing").attr("title")!= undefined?$(".ediTing").attr("title").split(",")[0]:0}"><span title="En inglés">&nbsp;&nbsp;En:&nbsp;</span><input type= "text" value= "${$(".ediTing").attr("title")!= undefined?$(".ediTing").attr("title").split(",")[3]:0}"><input type="number" min="0" value="${$(".ediTing").attr("title")!= undefined?$(".ediTing").attr("title").split(",")[1].trim():0}"><div class="triggerUnequalizaTion"><span class="notequal">≠</span></div></div></div>`)
+                    }else{
+                        $(this).prepend(`<div class="accenTCount"><span>Cantidad de acentos:</span><div><span title="En español">Es:&nbsp;</span><input type="number" min="0" value="${$(".ediTing").attr("title")!= undefined?$(".ediTing").attr("title").split(",")[0]:0}"><span title="En inglés">&nbsp;&nbsp;En:&nbsp;</span><input type="number" min="0" value="${$(".ediTing").attr("title")!= undefined?$(".ediTing").attr("title").split(",")[1].trim():0}"><div class="triggerUnequalizaTion"><span class="notequal">≠</span></div></div></div>`)
+                    }
+                    $(this).find(".triggerUnequalizaTion").on("click", function(){
+                        if(!$(this).parent().find(`input[type="text"]`).length){
+                            $(this).parent().find("input").before(`<input type= "text" value= "${$(this).closest("h2").find(".ediTing").text()}">`)
+                        }else{
+                            $(this).parent().find(`input[type="text"]`).remove()
+                        }
+                    })
+                    $($(this).find("input")[0]).on("input", function(){
+                        $($(`input[type="number"]`)[1]).val($(this).val())
+                    })
+                }else if($(e.target).is(".ediTing")){
                     accenTQuant_es= $($(this).find(`input[type= "number"]`)[0]).val()== ""?0:$($(this).find(`input[type= "number"]`)[0]).val();
                     accenTQuant_en= $($(this).find(`input[type= "number"]`)[1]).val()== ""?0:$($(this).find(`input[type= "number"]`)[1]).val();
                     if($(this).find(`input[type= "text"]`).length){
@@ -4950,112 +5029,67 @@ $(document).on("ready",function(){
                             $($(this).find(".supeR ac")[$(".ediTing").index() - 1]).next().remove()
                         }
                     }
-                }
-                $(".ediTing").removeClass("ediTing")
-                $(e.target).addClass("ediTing")
-                $(this).find(".accenTCount").remove()
-                if(typeof $(e.target).attr("title") != "undefined" && $(e.target).attr("title").split(",").length == 4){
-                    $(this).prepend(`<div class="accenTCount"><span>Cantidad de acentos:</span><div><span title="En español">Es:&nbsp;</span><input type= "text" value= "${$(".ediTing").attr("title")!= undefined?$(".ediTing").attr("title").split(",")[2]:0}"><input type="number" min="0" value="${$(".ediTing").attr("title")!= undefined?$(".ediTing").attr("title").split(",")[0]:0}"><span title="En inglés">&nbsp;&nbsp;En:&nbsp;</span><input type= "text" value= "${$(".ediTing").attr("title")!= undefined?$(".ediTing").attr("title").split(",")[3]:0}"><input type="number" min="0" value="${$(".ediTing").attr("title")!= undefined?$(".ediTing").attr("title").split(",")[1].trim():0}"><div class="triggerUnequalizaTion"><span class="notequal">≠</span></div></div></div>`)
-                }else{
-                    $(this).prepend(`<div class="accenTCount"><span>Cantidad de acentos:</span><div><span title="En español">Es:&nbsp;</span><input type="number" min="0" value="${$(".ediTing").attr("title")!= undefined?$(".ediTing").attr("title").split(",")[0]:0}"><span title="En inglés">&nbsp;&nbsp;En:&nbsp;</span><input type="number" min="0" value="${$(".ediTing").attr("title")!= undefined?$(".ediTing").attr("title").split(",")[1].trim():0}"><div class="triggerUnequalizaTion"><span class="notequal">≠</span></div></div></div>`)
-                }
-                $(this).find(".triggerUnequalizaTion").on("click", function(){
-                    if(!$(this).parent().find(`input[type="text"]`).length){
-                        $(this).parent().find("input").before(`<input type= "text" value= "${$(this).closest("h2").find(".ediTing").text()}">`)
-                    }else{
-                        $(this).parent().find(`input[type="text"]`).remove()
+
+                    nom= $(".ediTing").closest(".poema").find(".nombre > ac").filter(function(){return !("-()".indexOf($(this).text())+1)&& !($(this).text()==" " && $(this).next().text()=="(")?true:false})
+                    nomClon= $(".ediTing").closest(".poema").find(".nombre").clone().find(".supeR").remove().end().find(".accenTCount").remove().end()
+                    if($(nomClon).text().slice(0, nomClon.text().indexOf(" (")).toLowerCase()==$(nomClon).text().slice(nomClon.text().indexOf(" (") + 2, -1).toLowerCase().replaceAll("-", "")){
+                        supeR_=$(".ediTing").closest(".poema").find(".nombre .supeR ac").filter(function(){return !("-()".indexOf($(this).text())+1)&& !($(this).text()==" " && $(this).next().text()=="(")?true:false})
+                        acs= nomClon.find("ac").filter(function(){return !("-()".indexOf($(this).text())+1)&& !($(this).text()==" " && $(this).next().text()=="(")?true:false})
+                        inx= nomClon.find("ac").index(nomClon.find(".ediTing"))
+                        if($(supeR_[inx]).next().is("sup")){
+                            if($(supeR_[inx + acs.length / 2]).next().is("sup")){
+                                $(supeR_[inx + acs.length / 2]).next().html($(supeR_[inx]).next().html())
+                                $(nom[inx + acs.length / 2]).attr("title", $(supeR_[inx]).next().html())
+                            }else{
+                                $(supeR_[inx + acs.length / 2]).after(`<sup>${$(supeR_[inx]).next().html()}</sup>`)
+                                $(nom[inx + acs.length / 2]).attr("title", $(supeR_[inx]).next().html())
+                                $(nom[inx + acs.length / 2]).addClass("accenTuaTed")
+                            }
+                        }else{
+                            if($(supeR_[inx + acs.length / 2]).next().is("sup")){
+                                $(supeR_[inx + acs.length / 2]).next().remove()
+                                $(nom[inx + acs.length / 2]).removeAttr("title")
+                                $(nom[inx + acs.length / 2]).removeClass("accenTuaTed")
+                            }
+                        }
                     }
-                })
-                $($(this).find("input")[0]).on("input", function(){
-                    $($(`input[type="number"]`)[1]).val($(this).val())
-                })
-            }else if($(e.target).is(".ediTing")){
-                accenTQuant_es= $($(this).find(`input[type= "number"]`)[0]).val()== ""?0:$($(this).find(`input[type= "number"]`)[0]).val();
-                accenTQuant_en= $($(this).find(`input[type= "number"]`)[1]).val()== ""?0:$($(this).find(`input[type= "number"]`)[1]).val();
-                if($(this).find(`input[type= "text"]`).length){
-                    dif= `,${$(this).find(`input[type= "text"]`)[0].value},${$(this).find(`input[type= "text"]`)[1].value}`
-                }else{
-                    dif= ''
+                    $(".ediTing").removeClass("ediTing");
+                    $(this).find(".accenTCount").remove();
                 }
-                if(!((accenTQuant_es == "" || accenTQuant_es == "0") && (accenTQuant_en == "" || accenTQuant_en == "0"))){
-                    if($($(this).find(".supeR ac")[$(".ediTing").index() - 1]).next().is("sup")){
-                        $($(this).find(".supeR ac")[$(".ediTing").index() - 1]).next().text(`${accenTQuant_es},${accenTQuant_en}${dif}`);
-                    }else{
-                        $($(this).find(".supeR ac")[$(".ediTing").index() - 1]).after(`<sup>${accenTQuant_es},${accenTQuant_en}${dif}</sup>`);
-                    }
-                    $(".ediTing").attr("title", `${accenTQuant_es},${accenTQuant_en}${dif}`)
-                    $(".ediTing").addClass("accenTuaTed")
-                }else{
-                    $(".ediTing").removeAttr("title")
-                    $(".ediTing").removeClass("accenTuaTed")
-                    if($($(this).find(".supeR ac")[$(".ediTing").index() - 1]).next().is("sup")){
-                        $($(this).find(".supeR ac")[$(".ediTing").index() - 1]).next().remove()
-                    }
-                }
-                $(".ediTing").removeClass("ediTing");
-                $(this).find(".accenTCount").remove();
             }
         }
     })
     $("acc").on("mouseup", function(){
         if(!$(this).is(".acTive")){
+            $(".nombre").filter(function(){if($(this).attr("contenteditable")=="true"){return true}}).attr("contenteditable", "false");
             var nombre = $(this).next().next()
             Tag= nombre[0].innerText.split('').map(l => `<ac>${l}</ac>`).join('')
-            nombre.html(Tag)
-            nombre.append(`<span class= "supeR">${Tag}</span>`)
+            deaccentuation= unaccentuaTe(nombre[0].innerText)
+            nombre.html(deaccentuation[0])
+            nombre.append(`<span class= "supeR">${deaccentuation[1]}</span>`)
 
 
             $(this).addClass("acTive")
         }else{
-            $(this).next().html(function(){return $(this).clone().find('.supeR').remove().end().find('.accenTCount').remove().end().find('sup').remove().end().text()})
-            $(this).removeClass("acTive")
+            if(($(".nombre").find(".supeR").length && confirm("Perderás todos los acentos que hayas específicado en este título si sales de la edición de acentos.\n\n¿Salir?")) || !$(".nombre").find(".supeR").length){
+                if($("ac.ediTing").length)$("ac.ediTing").trigger("click")
+                $(this).next().html(function(){return $(this).clone().find('.supeR').remove().end().find('.accenTCount').remove().end().find('sup').remove().end().text()})
+                $(this).removeClass("acTive")
+                $(alternating).find(".nombre").html($(alternating).find(".nombre").clone().find(".supeR").remove().end().text())
+            }
         }
 
     })
     $("act.refresh").on("mouseup", function(){
         if($("ac.ediTing").length)$("ac.ediTing").trigger("click")
-$(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).each(function(){
-                    var tiTle= $(alternating).find("h2").text()
-                    var pp= tiTle.slice(0, tiTle.indexOf(" ("))
-                    var hh= tiTle.slice(tiTle.indexOf(" (") + 2, tiTle.indexOf(") "))
-                    var ww= $(this).attr("w").split(" ")
-                    var btW= []
-                    for(aa in ww){
-                        var greed= `${ww[aa].slice(4, ww[aa].length)}${(function(){if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){return (alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC != alternatives[Object.keys(alternatives).slice(2)[0]].auC)?'auC':''}else{return ''}})()?'auC':''}`
-                        acq= obTain(ww[aa].slice(0, 4), pp, hh, greed, $(alternating).find("h2"))
-                        !!acq?btW[btW.length]= `${!(greed.indexOf("dWra")+1)?`<span title= "${expand(ww[aa].slice(0, 4).slice(2, 4))}">`: ``}${acq.replaceAll("span ", "$pan").replaceAll("   ", "&#32;&#32;").replaceAll(" ", "&nbsp;").replaceAll("$pan", "span ")}${!(greed.indexOf("dWra")+1)?`</span>`: ``}`: 1
-                    }
-                    btW= btW.join("&nbsp;&nbsp;").replaceAll(" </span>&nbsp;&nbsp;", "</span>&#32;&#32;").replaceAll("&nbsp;&nbsp;<span> ", "&#32;&#32;<span>").replaceAll("span>&nbsp;&nbsp;<s", "span>&#32;&#32;<s").replaceAll("title=&nbsp;", "title= ")
-                    $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
-                })
-                alternating.find('p span').tooltip({
-                    track: true,
-                    show: {
-                        effect: "none",
-                        delay: 0
-                    },
-                    open: function(event, ui) {
-                        if (typeof(event.originalEvent) === 'undefined') {
-                            return false;
-                        }
-                        ý= $(this); 
-                       
-                        var $id = $(ui.tooltip).attr('id');
-
-                        $('div.ui-tooltip').not('#' + $id).remove();
-                    },
-                    close: function(event, ui) {
-                        ui.tooltip.hover(function() {
-                                $(this).stop(true).fadeTo(400, 1);
-                            },
-                            function() {
-                                $(this).fadeOut('400', function() {
-                                    $(this).remove();
-                                });
-                            });
-                    }
-                });
-            })
+        setTimeout(function(){
+            if(shift_k){
+                alternate(`superInformation`);
+            }else{
+                alternate(`notSuperInformation`);
+            }
+        },500)
+    })
     var oReq = new XMLHttpRequest();
     oReq.addEventListener("load", K0);
     oReq.open("get", "https://cdn.filestackcontent.com/T1JT7NWRhigB2KGvZN7g");
@@ -5512,15 +5546,28 @@ if(e.which === 1 && datefinder($(this).attr("title")) + 1 <= Object.keys(edHisto
 })
 $(".nombre").on("click", function(){
     if(ctrlMShift){
-        console.log('this');
         if($(this).attr("contenteditable") == "true"){
             $(this).attr("contenteditable", "false") 
             alternating= $(this).parent(); alternate(`notSuperInformation`);
         }else{
-            if($("ac.ediTing").length)$("ac.ediTing").trigger("click")
-            $(".nombre").filter(function(){if($(this).attr("contenteditable")=="true"){return true}}).attr("contenteditable", "false")
-            $(this).attr("contenteditable", "true") 
-            $(this).focus()
+            //if($("ac.ediTing").length)$("ac.ediTing").trigger("click")
+              
+                //warn
+            alternating= $(this).parent();
+            if(($(alternating).find(".supeR").length && confirm("Perderás todos los acentos que hayas específicado en este título si lo editas.\n\n¿Editar?"))){
+                $(alternating).find(".accenTCount").remove();
+                $("acc").removeClass("acTive")
+                $(alternating).find(".nombre").html($(alternating).find(".nombre").clone().find(".supeR").remove().end().text());
+                $(".nombre").filter(function(){if($(this).attr("contenteditable")=="true"){return true}}).attr("contenteditable", "false");
+                setTimeout(function(){
+                    $(alternating).find(".nombre").attr("contenteditable", "true");
+                    $(alternating).find(".nombre").focus()
+                }, 500)
+            }else if(!$(alternating).find(".supeR").length){
+                $(".nombre").filter(function(){if($(this).attr("contenteditable")=="true"){return true}}).attr("contenteditable", "false");
+                $(alternating).find(".nombre").attr("contenteditable", "true");
+                $(alternating).find(".nombre").focus()
+            }
         }
   }
 })
@@ -6060,6 +6107,7 @@ expand= function(c){
     }
 }
 alternate= function(Smpqw){
+    ///*$("acc").removeClass("acTive")
     if("undefined"!=typeof Smpqw){
         switch(Smpqw){
             case "superInformation":
@@ -6177,6 +6225,7 @@ alternate= function(Smpqw){
             }
         }else if($(this).is($(alternating.find("p").filter(function(){return "undefined"!=typeof $(this).attr("w")?true:false})[0])) && ("undefined" !=typeof loaded[alternatives.id] && loaded[alternatives.id].indexOf(`Rooper`))){
             if($(this).is($(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).first()))alternatives.__a= nexT(alternatives.__a, Object.keys(alternatives).slice(2).length - 1)
+                $("acc").removeClass("acTive")
             if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC && alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){
                 if(!alternatives[Object.keys(alternatives).slice(2)[pRev(alternatives.__a, Object.keys(alternatives).slice(2).length - 1)]].auC){
                     $(this).html($(this).html().replaceAll("→", "_x_$").replaceAll("←", "→").replaceAll("_x_$", "←"))
@@ -6194,6 +6243,7 @@ alternate= function(Smpqw){
             }
         }else if("undefined" !=typeof loaded[alternatives.id] && !loaded[alternatives.id].indexOf(`Rooper`)){
             if($(this).is($(alternating).find("p").filter(function(){return $(this).attr("w")? true: false}).first()))alternatives.__a= nexT(alternatives.__a, Object.keys(alternatives).slice(2).length - 1)
+                $("acc").removeClass("acTive")
             if("undefined"!=typeof alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC && alternatives[Object.keys(alternatives).slice(2)[alternatives.__a]].auC){
                 if(loaded[alternatives.id].split("er")[1]== "false"){
                     $(this).html($(this).html().replaceAll("→", "_x_$").replaceAll("←", "→").replaceAll("_x_$", "←"))

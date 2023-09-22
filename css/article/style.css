@@ -2244,7 +2244,9 @@ ac:hover {
 }
 .accenTCount > span {
   font-size: 0.4em;
-  float: left;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .accenTCount input {
   font-size: 0.4em;
@@ -2353,6 +2355,9 @@ acc.acTive{
   margin-right: 2px;
   width: 23px;
   color: #282828;
+}
+.accenTCount span{
+    text-decoration: none !important;
 }
 act.refresh {
   color: #d7e8d1;
