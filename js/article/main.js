@@ -67,7 +67,7 @@ unaccentuaTe= function(ph){
         }else{
             uRce= false
         }
-        if(!("()-+,.abcdefghijklmnopqrstuvwxyz0123456789 ".indexOf(ch) + 1)){
+        if(!("()-–—+,.abcdefghijklmnopqrstuvwxyz0123456789 ".indexOf(ch) + 1)){
             for(var i in Alphabets["english"]){
                 for(var iz in Alphabets["english"][i]){
                     if(Alphabets["english"][i][iz][0]==ch){
@@ -83,15 +83,20 @@ unaccentuaTe= function(ph){
                 }
             }
         }else if(!(Chocolate.indexOf(ch)+1) && !(Anti_joint.indexOf(ch)+1)){
-            var accents__= 0
-            //console.log(axR, e, axR[(e)], axR[e + 1], (e + 1), (Chocolate.indexOf(axR[(e + 1)])+1?1:0))
-            accents__= (Chocolate.indexOf(axR[(parseInt(e) + 1)])+1?1:0)+(Anti_joint.indexOf(axR[(parseInt(e) - 1)])+1?1:0)
-            if(!accents__ || ch== " "){
+            if("-–—".indexOf(ch)+1){
                 fH=`${fH}<ac>${uRce?ch.toUpperCase():ch}</ac>`
                 fSH=`${fSH}<ac>${uRce?ch.toUpperCase():ch}</ac>`
             }else{
-                fH=`${fH}<ac class= "accenTuaTed" title= "${accents__},${accents__}">${uRce?ch.toUpperCase():ch}</ac>`
-                fSH=`${fSH}<ac>${uRce?ch.toUpperCase():ch}</ac><sup>${accents__},${accents__}</sup>`
+                var accents__= 0
+                //console.log(axR, e, axR[(e)], axR[e + 1], (e + 1), (Chocolate.indexOf(axR[(e + 1)])+1?1:0))
+                accents__= (Chocolate.indexOf(axR[(parseInt(e) + (axR[parseInt(e) + 1]== '-'?2:1))])+1?1:0)+(Anti_joint.indexOf(axR[(parseInt(e) - (axR[parseInt(e) - 1]== '-'?2:1))])+1?1:0)
+                if(!accents__ || ch== " "){
+                    fH=`${fH}<ac>${uRce?ch.toUpperCase():ch}</ac>`
+                    fSH=`${fSH}<ac>${uRce?ch.toUpperCase():ch}</ac>`
+                }else{
+                    fH=`${fH}<ac class= "accenTuaTed" title= "${accents__},${accents__}">${uRce?ch.toUpperCase():ch}</ac>`
+                    fSH=`${fSH}<ac>${uRce?ch.toUpperCase():ch}</ac><sup>${accents__},${accents__}</sup>`
+                }
             }
         }
     }
