@@ -73,10 +73,10 @@ unaccentuaTe= function(ph){
                     if(Alphabets["english"][i][iz][0]==ch){
                         if(ch != "ñ"){
                             var accents__= Alphabets["english"][i][iz][1]+(Chocolate.indexOf(axR[(parseInt(e) + 1)])+1?1:0)+(Anti_joint.indexOf(axR[(parseInt(e) - 1)])+1?1:0)
-                            fH=`${fH}<ac class= "accenTUaTed" title= "${accents__},${accents__}">${uRce?i.toUpperCase():i}</ac>`
+                            fH=`${fH}<ac class= "accenTuaTed" title= "${accents__},${accents__}">${uRce?i.toUpperCase():i}</ac>`
                             fSH=`${fSH}<ac>${uRce?i.toUpperCase():i}</ac><sup>${accents__},${accents__}</sup>`
                         }else{
-                            fH=`${fH}<ac class= "accenTUaTed" title= "0,4,ñ,n">n</ac>`
+                            fH=`${fH}<ac class= "accenTuaTed" title= "0,4,ñ,n">n</ac>`
                             fSH=`${fSH}<ac>n</ac><sup>0,4,ñ,n</sup>`
                         }
                     }
@@ -90,7 +90,7 @@ unaccentuaTe= function(ph){
                 fH=`${fH}<ac>${uRce?ch.toUpperCase():ch}</ac>`
                 fSH=`${fSH}<ac>${uRce?ch.toUpperCase():ch}</ac>`
             }else{
-                fH=`${fH}<ac class= "accenTUaTed" title= "${accents__},${accents__}">${uRce?ch.toUpperCase():ch}</ac>`
+                fH=`${fH}<ac class= "accenTuaTed" title= "${accents__},${accents__}">${uRce?ch.toUpperCase():ch}</ac>`
                 fSH=`${fSH}<ac>${uRce?ch.toUpperCase():ch}</ac><sup>${accents__},${accents__}</sup>`
             }
         }
