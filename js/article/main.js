@@ -67,7 +67,7 @@ unaccentuaTe= function(ph){
         }else{
             uRce= false
         }
-        if(!("()-–—+,.abcdefghijklmnopqrstuvwxyz0123456789 ".indexOf(ch) + 1)){
+        if(!("()-–—_+&;,.abcdefghijklmnopqrstuvwxyz0123456789 ".indexOf(ch) + 1)){
             for(var i in Alphabets["english"]){
                 for(var iz in Alphabets["english"][i]){
                     if(Alphabets["english"][i][iz][0]==ch){
@@ -83,7 +83,7 @@ unaccentuaTe= function(ph){
                 }
             }
         }else if(!(Chocolate.indexOf(ch)+1) && !(Anti_joint.indexOf(ch)+1)){
-            if("-–—".indexOf(ch)+1){
+            if("-–—_+".indexOf(ch)+1){
                 fH=`${fH}<ac>${uRce?ch.toUpperCase():ch}</ac>`
                 fSH=`${fSH}<ac>${uRce?ch.toUpperCase():ch}</ac>`
             }else{
