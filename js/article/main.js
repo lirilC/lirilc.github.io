@@ -5001,6 +5001,7 @@ $(document).on("ready",function(){
                     }else{
                         $(this).prepend(`<div class="accenTCount"><span>Cantidad de acentos:</span><div><span title="En español">Es:&nbsp;</span><input type="number" min="0" value="${$(".ediTing").attr("title")!= undefined?$(".ediTing").attr("title").split(",")[0]:0}"><span title="En inglés">&nbsp;&nbsp;En:&nbsp;</span><input type="number" min="0" value="${$(".ediTing").attr("title")!= undefined?$(".ediTing").attr("title").split(",")[1].trim():0}"><div class="triggerUnequalizaTion"><span class="notequal">≠</span></div></div></div>`)
                     }
+                    $($(this).find(`input[type="number"]`)[0]).focus()
                     $(this).find(".triggerUnequalizaTion").on("click", function(){
                         if(!$(this).parent().find(`input[type="text"]`).length){
                             $(this).parent().find("input").before(`<input type= "text" value= "${$(this).closest("h2").find(".ediTing").text()}">`)
