@@ -641,16 +641,15 @@ var index= {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
                 profilePic: {
-                        "/A.K.A._Dizzy/img/1AzV0qwVwn": {
+                        "/A.K.A._Dizzy/img/4uHf7tgk8C": {
                             type: "img",
                             date: {
-                                full: "13 de Enero de 2022 a las 7:57 pm",
-                                min: "Enero de 2022"
+                                full: "27 de Septiembre de 2023 a las 3:27 pm",
+                                min: "27 de Septiembre a las 3:27 pm"
                             },
-                            city: {name: "Nariño", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG/250px-Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG", description: `Nariño es un municipio de Colombia, localizado en la subregión Oriente del departamento de Antioquia. Limita por el norte con los municipios de Sonsón y Argelia, por el este y sur con el departamento de Caldas y por el oeste con el municipio de Sonsón. </br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nari%C3%B1o_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-                            title: `You start truly appreciating life once you realize you're special, not better.`,
+                            title: `La Luna y sus alrededores...`,
                             description: ``,
-                            contents:  {image: "1AzV0qwVwn_tn.gif"},
+                            contents:  {image: "4uHf7tgk8C_tn.jpg"},
                             Comentarios: ""
                         }
                     },
@@ -660,7 +659,7 @@ var index= {
                 },
                 tool:  `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -746,16 +745,15 @@ var index= {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
                 profilePic: {
-                        "/A.K.A._Dizzy/img/1AzV0qwVwn": {
+                        "/A.K.A._Dizzy/img/4uHf7tgk8C": {
                             type: "img",
                             date: {
-                                full: "13 de Enero de 2022 a las 7:57 pm",
-                                min: "Enero de 2022"
+                                full: "27 de Septiembre de 2023 a las 3:27 pm",
+                                min: "27 de Septiembre a las 3:27 pm"
                             },
-                            city: {name: "Nariño", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG/250px-Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG", description: `Nariño es un municipio de Colombia, localizado en la subregión Oriente del departamento de Antioquia. Limita por el norte con los municipios de Sonsón y Argelia, por el este y sur con el departamento de Caldas y por el oeste con el municipio de Sonsón. </br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nari%C3%B1o_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-                            title: `You start truly appreciating life once you realize you're special, not better.`,
+                            title: `La Luna y sus alrededores...`,
                             description: ``,
-                            contents:  {image: "1AzV0qwVwn_tn.gif"},
+                            contents:  {image: "4uHf7tgk8C_tn.jpg"},
                             Comentarios: ""
                         }
                     },
@@ -765,7 +763,7 @@ var index= {
                 },
                 tool:  `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -806,16 +804,15 @@ var index= {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
                 profilePic: {
-                        "/A.K.A._Dizzy/img/1AzV0qwVwn": {
+                        "/A.K.A._Dizzy/img/4uHf7tgk8C": {
                             type: "img",
                             date: {
-                                full: "13 de Enero de 2022 a las 7:57 pm",
-                                min: "Enero de 2022"
+                                full: "27 de Septiembre de 2023 a las 3:27 pm",
+                                min: "27 de Septiembre a las 3:27 pm"
                             },
-                            city: {name: "Nariño", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG/250px-Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG", description: `Nariño es un municipio de Colombia, localizado en la subregión Oriente del departamento de Antioquia. Limita por el norte con los municipios de Sonsón y Argelia, por el este y sur con el departamento de Caldas y por el oeste con el municipio de Sonsón. </br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nari%C3%B1o_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-                            title: `You start truly appreciating life once you realize you're special, not better.`,
+                            title: `La Luna y sus alrededores...`,
                             description: ``,
-                            contents:  {image: "1AzV0qwVwn_tn.gif"},
+                            contents:  {image: "4uHf7tgk8C_tn.jpg"},
                             Comentarios: ""
                         }
                     },
@@ -825,7 +822,7 @@ var index= {
                 },
                 tool:  `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -1040,7 +1037,7 @@ var index= {
                             <img title="         
         <div class='tool'>
             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
             <div class='datos'>
                 <ul class='actions'>
                 <li class='chatear' title='Chatear'>C</li>
@@ -1054,7 +1051,7 @@ var index= {
             <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
             <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
             <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-        </div>" src="/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif" alt="">
+        </div>" src="/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg" alt="">
                             &nbsp<a target="_blank" href="/A.K.A._Dizzy">Luis Eduardo Gallego García</a><span class="is">: </span><span class="Comentario">
                                 <img src="/resources/images/A.K.A._Dizzy/TmIAHZHTOs.jpg" style="width: 100%; height: auto; border-radius: 0; ">
                             </span>
@@ -1434,14 +1431,14 @@ var index= {
             originalPoster: {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
+                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
                 rol: {
                     rol: "CEO",
                     level: "100"
                 },
                 tool: `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -1687,14 +1684,14 @@ var index= {
             originalPoster: {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
+                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
                 rol: {
                     rol: "CEO",
                     level: "100"
                 },
                 tool: `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -1762,14 +1759,14 @@ var index= {
             originalPoster: {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
+                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
                 rol: {
                     rol: "CEO",
                     level: "100"
                 },
                 tool: `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -1797,16 +1794,15 @@ var index= {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
                 profilePic: {
-                        "/A.K.A._Dizzy/img/1AzV0qwVwn": {
+                        "/A.K.A._Dizzy/img/4uHf7tgk8C": {
                             type: "img",
                             date: {
-                                full: "13 de Enero de 2022 a las 7:57 pm",
-                                min: "Enero de 2022"
+                                full: "27 de Septiembre de 2023 a las 3:27 pm",
+                                min: "27 de Septiembre a las 3:27 pm"
                             },
-                            city: {name: "Nariño", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG/250px-Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG", description: `Nariño es un municipio de Colombia, localizado en la subregión Oriente del departamento de Antioquia. Limita por el norte con los municipios de Sonsón y Argelia, por el este y sur con el departamento de Caldas y por el oeste con el municipio de Sonsón. </br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nari%C3%B1o_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-                            title: `You start truly appreciating life once you realize you're special, not better.`,
+                            title: `La Luna y sus alrededores...`,
                             description: ``,
-                            contents:  {image: "1AzV0qwVwn_tn.gif"},
+                            contents:  {image: "4uHf7tgk8C_tn.jpg"},
                             Comentarios: ""
                         }
                     },
@@ -1816,7 +1812,7 @@ var index= {
                 },
                 tool:  `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -2025,14 +2021,14 @@ var index= {
             originalPoster: {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
+                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
                 rol: {
                     rol: "CEO",
                     level: "100"
                 },
                 tool: `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -2084,16 +2080,15 @@ var index= {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
                 profilePic: {
-                        "/A.K.A._Dizzy/img/1AzV0qwVwn": {
+                        "/A.K.A._Dizzy/img/4uHf7tgk8C": {
                             type: "img",
                             date: {
-                                full: "13 de Enero de 2022 a las 7:57 pm",
-                                min: "Enero de 2022"
+                                full: "27 de Septiembre de 2023 a las 3:27 pm",
+                                min: "27 de Septiembre a las 3:27 pm"
                             },
-                            city: {name: "Nariño", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG/250px-Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG", description: `Nariño es un municipio de Colombia, localizado en la subregión Oriente del departamento de Antioquia. Limita por el norte con los municipios de Sonsón y Argelia, por el este y sur con el departamento de Caldas y por el oeste con el municipio de Sonsón. </br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nari%C3%B1o_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-                            title: `You start truly appreciating life once you realize you're special, not better.`,
+                            title: `La Luna y sus alrededores...`,
                             description: ``,
-                            contents:  {image: "1AzV0qwVwn_tn.gif"},
+                            contents:  {image: "4uHf7tgk8C_tn.jpg"},
                             Comentarios: ""
                         }
                     },
@@ -2103,7 +2098,7 @@ var index= {
                 },
                 tool:  `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -2179,14 +2174,14 @@ var index= {
             originalPoster: {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
+                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
                 rol: {
                     rol: "CEO",
                     level: "100"
                 },
                 tool: `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -2251,14 +2246,14 @@ var index= {
             originalPoster: {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
+                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
                 rol: {
                     rol: "CEO",
                     level: "100"
                 },
                 tool: `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -2326,14 +2321,14 @@ var index= {
             originalPoster: {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
+                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
                 rol: {
                     rol: "CEO",
                     level: "100"
                 },
                 tool: `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -2401,14 +2396,14 @@ var index= {
             originalPoster: {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
+                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
                 rol: {
                     rol: "CEO",
                     level: "100"
                 },
                 tool: `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -2506,7 +2501,7 @@ var index= {
                             <img title="         
         <div class='tool'>
             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
             <div class='datos'>
                 <ul class='actions'>
                 <li class='chatear' title='Chatear'>C</li>
@@ -2520,7 +2515,7 @@ var index= {
             <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
             <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
             <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-        </div>" src="/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif" alt="">
+        </div>" src="/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg" alt="">
                             &nbsp<a target="_blank" href="/A.K.A._Dizzy">Luis Eduardo Gallego García</a><span class="is">: </span><span class="Comentario">
                                 <img src="/resources/images/A.K.A._Dizzy/TmIAHZHTOs.jpg" style="width: 100%; height: auto; border-radius: 0; ">
                             </span>
@@ -2532,16 +2527,15 @@ var index= {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
                 profilePic: {
-                        "/A.K.A._Dizzy/img/1AzV0qwVwn": {
+                        "/A.K.A._Dizzy/img/4uHf7tgk8C": {
                             type: "img",
                             date: {
-                                full: "13 de Enero de 2022 a las 7:57 pm",
-                                min: "Enero de 2022"
+                                full: "27 de Septiembre de 2023 a las 3:27 pm",
+                                min: "27 de Septiembre a las 3:27 pm"
                             },
-                            city: {name: "Nariño", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG/250px-Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG", description: `Nariño es un municipio de Colombia, localizado en la subregión Oriente del departamento de Antioquia. Limita por el norte con los municipios de Sonsón y Argelia, por el este y sur con el departamento de Caldas y por el oeste con el municipio de Sonsón. </br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nari%C3%B1o_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-                            title: `You start truly appreciating life once you realize you're special, not better.`,
+                            title: `La Luna y sus alrededores...`,
                             description: ``,
-                            contents:  {image: "1AzV0qwVwn_tn.gif"},
+                            contents:  {image: "4uHf7tgk8C_tn.jpg"},
                             Comentarios: ""
                         }
                     },
@@ -2551,7 +2545,7 @@ var index= {
                 },
                 tool:  `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -2675,7 +2669,7 @@ var index= {
                             <img title="         
         <div class='tool'>
             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
             <div class='datos'>
                 <ul class='actions'>
                 <li class='chatear' title='Chatear'>C</li>
@@ -2689,7 +2683,7 @@ var index= {
             <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
             <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
             <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-        </div>" src="/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif" alt="">
+        </div>" src="/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg" alt="">
                             &nbsp<a target="_blank" href="/A.K.A._Dizzy">Luis Eduardo Gallego García</a><span class="is">: </span><span class="Comentario">
                                 <img src="/resources/images/A.K.A._Dizzy/TmIAHZHTOs.jpg" style="width: 100%; height: auto; border-radius: 0; ">
                             </span>
@@ -2766,7 +2760,7 @@ var index= {
                             <img title="         
         <div class='tool'>
             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
             <div class='datos'>
                 <ul class='actions'>
                 <li class='chatear' title='Chatear'>C</li>
@@ -2780,7 +2774,7 @@ var index= {
             <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
             <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
             <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-        </div>" src="/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif" alt="">
+        </div>" src="/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg" alt="">
                             &nbsp<a target="_blank" href="/A.K.A._Dizzy">Luis Eduardo Gallego García</a><span class="is">: </span><span class="Comentario">
                                 <img src="/resources/images/A.K.A._Dizzy/TmIAHZHTOs.jpg" style="width: 100%; height: auto; border-radius: 0; ">
                             </span>
@@ -2830,14 +2824,14 @@ var index= {
             originalPoster: {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
+                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
                 rol: {
                     rol: "CEO",
                     level: "100"
                 },
                 tool: `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -2889,16 +2883,15 @@ var index= {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
                 profilePic: {
-                        "/A.K.A._Dizzy/img/1AzV0qwVwn": {
+                        "/A.K.A._Dizzy/img/4uHf7tgk8C": {
                             type: "img",
                             date: {
-                                full: "13 de Enero de 2022 a las 7:57 pm",
-                                min: "Enero de 2022"
+                                full: "27 de Septiembre de 2023 a las 3:27 pm",
+                                min: "27 de Septiembre a las 3:27 pm"
                             },
-                            city: {name: "Nariño", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG/250px-Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG", description: `Nariño es un municipio de Colombia, localizado en la subregión Oriente del departamento de Antioquia. Limita por el norte con los municipios de Sonsón y Argelia, por el este y sur con el departamento de Caldas y por el oeste con el municipio de Sonsón. </br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nari%C3%B1o_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-                            title: `You start truly appreciating life once you realize you're special, not better.`,
+                            title: `La Luna y sus alrededores...`,
                             description: ``,
-                            contents:  {image: "1AzV0qwVwn_tn.gif"},
+                            contents:  {image: "4uHf7tgk8C_tn.jpg"},
                             Comentarios: ""
                         }
                     },
@@ -2908,7 +2901,7 @@ var index= {
                 },
                 tool:  `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -3453,7 +3446,7 @@ var index= {
                             <img title="         
         <div class='tool'>
             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
             <div class='datos'>
                 <ul class='actions'>
                 <li class='chatear' title='Chatear'>C</li>
@@ -3467,7 +3460,7 @@ var index= {
             <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
             <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
             <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-        </div>" src="/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif" alt="">
+        </div>" src="/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg" alt="">
                             &nbsp<a target="_blank" href="/A.K.A._Dizzy">Luis Eduardo Gallego García</a><span class="is">: </span><span class="Comentario">
                                 <img src="/resources/images/A.K.A._Dizzy/TmIAHZHTOs.jpg" style="width: 100%; height: auto; border-radius: 0; ">
                             </span>
@@ -3525,16 +3518,15 @@ var index= {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
                 profilePic: {
-                        "/A.K.A._Dizzy/img/1AzV0qwVwn": {
+                        "/A.K.A._Dizzy/img/4uHf7tgk8C": {
                             type: "img",
                             date: {
-                                full: "13 de Enero de 2022 a las 7:57 pm",
-                                min: "Enero de 2022"
+                                full: "27 de Septiembre de 2023 a las 3:27 pm",
+                                min: "27 de Septiembre a las 3:27 pm"
                             },
-                            city: {name: "Nariño", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG/250px-Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG", description: `Nariño es un municipio de Colombia, localizado en la subregión Oriente del departamento de Antioquia. Limita por el norte con los municipios de Sonsón y Argelia, por el este y sur con el departamento de Caldas y por el oeste con el municipio de Sonsón. </br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nari%C3%B1o_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-                            title: `You start truly appreciating life once you realize you're special, not better.`,
+                            title: `La Luna y sus alrededores...`,
                             description: ``,
-                            contents:  {image: "1AzV0qwVwn_tn.gif"},
+                            contents:  {image: "4uHf7tgk8C_tn.jpg"},
                             Comentarios: ""
                         }
                     },
@@ -3544,7 +3536,7 @@ var index= {
                 },
                 tool:  `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -3576,16 +3568,15 @@ var index= {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
                 profilePic: {
-                        "/A.K.A._Dizzy/img/1AzV0qwVwn": {
+                        "/A.K.A._Dizzy/img/4uHf7tgk8C": {
                             type: "img",
                             date: {
-                                full: "13 de Enero de 2022 a las 7:57 pm",
-                                min: "Enero de 2022"
+                                full: "27 de Septiembre de 2023 a las 3:27 pm",
+                                min: "27 de Septiembre a las 3:27 pm"
                             },
-                            city: {name: "Nariño", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG/250px-Iglesia_Nuestra_Se%C3%B1ora_de_las_Mercedes%2C_Nari%C3%B1o%2C_Antioquia..JPG", description: `Nariño es un municipio de Colombia, localizado en la subregión Oriente del departamento de Antioquia. Limita por el norte con los municipios de Sonsón y Argelia, por el este y sur con el departamento de Caldas y por el oeste con el municipio de Sonsón. </br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Nari%C3%B1o_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-                            title: `You start truly appreciating life once you realize you're special, not better.`,
+                            title: `La Luna y sus alrededores...`,
                             description: ``,
-                            contents:  {image: "1AzV0qwVwn_tn.gif"},
+                            contents:  {image: "4uHf7tgk8C_tn.jpg"},
                             Comentarios: ""
                         }
                     },
@@ -3595,7 +3586,7 @@ var index= {
                 },
                 tool:  `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>

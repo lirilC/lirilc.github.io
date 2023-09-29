@@ -112,7 +112,7 @@ export function app () {
                                   <div id="notifications">
                                       <ul>
                                           <div class="info button">
-                                              <img src="/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif" alt="">
+                                              <img src="/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg" alt="">
                                               <p class="username"><b href="#">A.K.A._Dizzy:</b> <br> 😉 Revisen Mi Perfil: <a target="_blank" href="/A.K.A._Dizzy">A.K.A._Dizzy</a></p>
                                           </div>
                                           <div class="info button">

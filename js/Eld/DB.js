@@ -202,14 +202,14 @@ var user= {
             originalPoster: {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
+                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
                 rol: {
                     rol: "CEO",
                     level: "100"
                 },
                 tool: `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>

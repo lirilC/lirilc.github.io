@@ -42,7 +42,7 @@ var user= {
         ["Hija de", {name: "#Satanás Belcebú"}],
         ["Hermana de", {username: "A.K.A._Dizzy", name: "Luis Eduardo Gallego García", tool:   `<div class='tool'>
                                                                                                         <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                                                                                                        <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                                                                                                        <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                                                                                                         <div class='datos'>
                                                                                                             <ul class='actions'>
                                                                                                                 <li class='chatear' title='Chatear'>C</li>
@@ -449,7 +449,7 @@ var user= {
                             <img title="         
         <div class='tool'>
             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
             <div class='datos'>
                 <ul class='actions'>
                 <li class='chatear' title='Chatear'>C</li>
@@ -463,7 +463,7 @@ var user= {
             <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
             <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
             <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-        </div>" src="/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif" alt="">
+        </div>" src="/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg" alt="">
                             &nbsp<a target="_blank" href="/A.K.A._Dizzy">Luis Eduardo Gallego García</a><span class="is">: </span><span class="Comentario">
                                 <img src="/resources/images/A.K.A._Dizzy/TmIAHZHTOs.jpg" style="width: 100%; height: auto; border-radius: 0; ">
                             </span>
@@ -515,14 +515,14 @@ var user= {
             originalPoster: {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
+                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
                 rol: {
                     rol: "CEO",
                     level: "100"
                 },
                 tool: `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -621,14 +621,14 @@ var user= {
             originalPoster: {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
+                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
                 rol: {
                     rol: "CEO",
                     level: "100"
                 },
                 tool: `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -683,14 +683,14 @@ var user= {
             originalPoster: {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
+                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
                 rol: {
                     rol: "CEO",
                     level: "100"
                 },
                 tool: `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -723,14 +723,14 @@ var user= {
             originalPoster: {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
+                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
                 rol: {
                     rol: "CEO",
                     level: "100"
                 },
                 tool: `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -773,14 +773,14 @@ var user= {
             originalPoster: {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
+                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
                 rol: {
                     rol: "CEO",
                     level: "100"
                 },
                 tool: `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -813,14 +813,14 @@ var user= {
             originalPoster: {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
+                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
                 rol: {
                     rol: "CEO",
                     level: "100"
                 },
                 tool: `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -864,14 +864,14 @@ var user= {
             originalPoster: {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
+                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
                 rol: {
                     rol: "CEO",
                     level: "100"
                 },
                 tool: `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -905,14 +905,14 @@ var user= {
             originalPoster: {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
+                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
                 rol: {
                     rol: "CEO",
                     level: "100"
                 },
                 tool: `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>

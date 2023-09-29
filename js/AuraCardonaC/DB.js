@@ -1,7 +1,7 @@
 export function _user(){
 var user= {
-	username: "AuraCardonaC",
-	users_name: "Aura María Cardona Demasiado",
+    username: "AuraCardonaC",
+    users_name: "Aura María Cardona Demasiado",
     profilePic: {
             "/AuraCardonaC/img/H5TxBHq4ff": {
                 type: "img",
@@ -16,8 +16,8 @@ var user= {
             }
         },
     rol:{
-    	rol: "Profe de fitness",
-    	level: "94"
+        rol: "Profe de fitness",
+        level: "94"
     },
     tool:  `<div class='tool'>
                 <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
@@ -33,7 +33,7 @@ var user= {
                 </div>
             </div>`,
     cover: {
-    	insignias: ``
+        insignias: ``
     },
     situation: {
         "###": `<div id="sión" style="border: 1px dotted #636363; width: 100%; height: 41px; position: relative; cursor: s-resize;" onmousemove='L= function(e){(e.movementX >= 0 &amp;&amp; e.movementY >= 0)? ((e.movementX / e.movementY) < 0.5)? (function(){e.target.style.cursor= "s-resize"})(): ((e.movementX / e.movementY) > 2)? (function(){e.target.style.cursor= "e-resize"})(): (function(){e.target.style.cursor= "se-resize"})(): (e.movementX < 0 &amp;&amp; e.movementY >= 0)? ((e.movementX / e.movementY) > -0.5)? (function(){e.target.style.cursor= "s-resize"})(): ((e.movementX / e.movementY) < -2)? (function(){e.target.style.cursor= "w-resize"})(): (function(){e.target.style.cursor= "sw-resize"})(): (e.movementX >= 0 &amp;&amp; e.movementY < 0)? ((e.movementX / e.movementY) > -0.5)? (function(){e.target.style.cursor= "n-resize"})(): ((e.movementX / e.movementY) < -2)? (function(){e.target.style.cursor= "e-resize"})(): (function(){e.target.style.cursor= "ne-resize"})(): (e.movementX < 0 &amp;&amp; e.movementY < 0)? ((e.movementX / e.movementY) < 0.5)? (function(){e.target.style.cursor= "n-resize"})(): ((e.movementX / e.movementY) > 2)? (function(){e.target.style.cursor= "w-resize"})(): (function(){e.target.style.cursor= "nw-resize"})(): 1}; L(event); '></div>`
@@ -1842,14 +1842,14 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             originalPoster: {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
+                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
                 rol: {
                     rol: "CEO",
                     level: "100"
                 },
                 tool: `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -1897,7 +1897,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
                         </containment>`,
             Comentarios: ""
         },
-    	"/AuraCardonaC/img/eQZeHjWK8V": {
+        "/AuraCardonaC/img/eQZeHjWK8V": {
             type: "mult_img",
             date: {
                 full: "5 de Octubre de 2022 a las 2:6 pm",
@@ -1908,7 +1908,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             contents:  {carrContents: ["eQZeHjWK8V.jpg", "c9byLMqcf1.jpg", "IAJZ2Y8Ygy.jpg", "PeePnnXvfW.jpg"]},
             Comentarios: "",
         },
-    	"/AuraCardonaC/img/EfEQzbHdzv": {
+        "/AuraCardonaC/img/EfEQzbHdzv": {
             type: "mult_img",
             date: {
                 full: "4 de Octubre de 2022 a las 3:3 pm",
@@ -2028,14 +2028,14 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             originalPoster: {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
+                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
                 rol: {
                     rol: "CEO",
                     level: "100"
                 },
                 tool: `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -2328,14 +2328,14 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             originalPoster: {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
+                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
                 rol: {
                     rol: "CEO",
                     level: "100"
                 },
                 tool: `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>
@@ -2415,14 +2415,14 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             originalPoster: {
                 username: "A.K.A._Dizzy",
                 users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif",
+                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
                 rol: {
                     rol: "CEO",
                     level: "100"
                 },
                 tool: `<div class='tool'>
                             <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/1AzV0qwVwn_tn.gif'>
+                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
                             <div class='datos'>
                                 <ul class='actions'>
                                     <li class='chatear' title='Chatear'>C</li>

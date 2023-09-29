@@ -2005,6 +2005,7 @@ background-color: #ddd}
   outline: none;
   padding: 0;
   padding-left: 2px;
+  width: 158px;
 }
 .ui-state-active, .ui-widget-content .ui-state-active {
   background: #313531 !important;
