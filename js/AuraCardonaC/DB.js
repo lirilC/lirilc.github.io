@@ -42,119 +42,249 @@ var user= {
         ["Hermana de", {name: "#Juan Camilo Cardona C."}]
     ],
     fotos: {
-        quantity: 419,
+        quantity: 446,
         fotos: {
-            "/AuraCardonaC/img/du0pgbjUY8": {
+            "/AuraCardonaC/img/P0cN877R2I": {
                 type: "img",
                 date: {
-                    full: "23 de Julio de 2023 a la 2:3 pm",
-                    min: "23 de Julio a la 2:3 pm"
-                },
-                title: `R E B E K A ✨`,
-                description: `Este animalito llego a mi vida con mucho significado. Nació el mismo día de mi cumpleaños 6 de Mayo y en su honor lleva el nombre de mi REBEKO un pajarito que críe con mucho amor❤️ Los gatos tienen una conexión tan Poderosa con el mundo espiritual que se convierten en nuestros guardianes absorbiendo toda la energía negativa que nos rodea.`,
-                contents:  {image: "du0pgbjUY8_tn.jpg"},
-                Comentarios: ""
-            },
-            "/AuraCardonaC/img/WygkZ4N76A": {
-                type: "mult_img",
-                date: {
-                    full: "16 de Julio de 2023 a las 4:41 pm",
-                    min: "16 de Julio a las 4:41 pm"
+                    full: "24 de Septiembre de 2023 a las 3:20 pm",
+                    min: "24 de Septiembre a las 3:20 pm"
                 },
                 city: {name: "Calima", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Lago_Calima.jpg/800px-Lago_Calima.jpg", description: `Calima es un municipio colombiano del departamento del Valle del Cauca fundado, principalmente, por colonos vallecaucanos, y además, de antioqueños y caldenses. Está situado a 86 km de Cali, la temperatura media es de 18 °C, con una población total de 18.469 habitantes, considerado municipio desde 1939 y fundado en 1907 y su extensión total es de 1154 km². Su cabecera municipal se llama El Darién. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Dari%C3%A9n_(Valle_del_Cauca)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-                title: `🍃✨`,
+                title: `💙`,
                 description: ``,
-                contents:  {carrContents: ["WygkZ4N76A_tn.jpg", "7ZReKDtliR_tn.jpg"]},
-                Comentarios: "",
-            },
-            "/AuraCardonaC/img/KZlbnHNzb8": {
-                type: "mult_img",
-                date: {
-                    full: "3 de Julio de 2023 a las 11:15 am",
-                    min: "3 de Julio a las 11:15 am"
-                },
-                city: {name: "Coveñas", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Ensenada_en_Cove%C3%B1as.JPG/800px-Ensenada_en_Cove%C3%B1as.JPG", description: `Coveñas es un municipio de Colombia, situado en el norte del país, en el departamento de Sucre (subregión de Morrosquillo). <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cove%C3%B1as'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-                title: `BYE VACACIONES ✔️☀️🥥`,
-                description: ``,
-                contents:  {carrContents: ["KZlbnHNzb8_tn.jpg", "7u8Vts2zd0_tn.jpg"]},
-                Comentarios: "",
-            },
-            "/AuraCardonaC/img/Eh3nC0TNKk": {
-                type: "mult_img",
-                date: {
-                    full: "2 de Julio de 2023 a las 10:27 am",
-                    min: "2 de Julio a las 10:27 am"
-                },
-                city: {name: "Coveñas", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Ensenada_en_Cove%C3%B1as.JPG/800px-Ensenada_en_Cove%C3%B1as.JPG", description: `Coveñas es un municipio de Colombia, situado en el norte del país, en el departamento de Sucre (subregión de Morrosquillo). <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cove%C3%B1as'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-                title: `🥥🌴`,
-                description: ``,
-                contents:  {carrContents: ["Eh3nC0TNKk_tn.jpg", "J4SZ0KWlMd_tn.jpg", "CHxwXpLWsy_tn.jpg"]},
-                Comentarios: "",
-            },
-            "/AuraCardonaC/img/TeS2XyDbc7": {
-                type: "mult_img",
-                date: {
-                    full: "1 de Julio de 2023 a las 3:16 pm",
-                    min: "1 de Julio a las 3:16 pm"
-                },
-                city: {name: "Coveñas", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Ensenada_en_Cove%C3%B1as.JPG/800px-Ensenada_en_Cove%C3%B1as.JPG", description: `Coveñas es un municipio de Colombia, situado en el norte del país, en el departamento de Sucre (subregión de Morrosquillo). <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cove%C3%B1as'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-                title: `Disfrutando 🧡`,
-                description: ``,
-                contents:  {carrContents: ["TeS2XyDbc7_tn.jpg", "UdsUpOXqcX_tn.jpg"]},
-                Comentarios: "",
-            },
-            "/AuraCardonaC/img/M2pYeEQZYc": {
-                type: "mult_img",
-                date: {
-                    full: "1 de Julio de 2023 a las 0:45 pm",
-                    min: "1 de Julio a las 0:45 pm"
-                },
-                title: ``,
-                description: `Viseras disponibles <a href="https://instagram.com/auracardona.shopper" target= "_blank">@auracardona.shopper</a> 🩷`,
-                contents:  {carrContents: ["M2pYeEQZYc_tn.jpg", "JjD9xeLWHm_tn.jpg", "T8Mi78QsUy_tn.jpg", "JMegbvXQPS_tn.jpg"]},
-                Comentarios: "",
-            },
-            "/AuraCardonaC/img/ugjOD304PU": {
-                type: "mult_img",
-                date: {
-                    full: "30 de Junio de 2023 a las 2:13 pm",
-                    min: "30 de Junio a las 2:13 pm"
-                },
-                city: {name: "Coveñas", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Ensenada_en_Cove%C3%B1as.JPG/800px-Ensenada_en_Cove%C3%B1as.JPG", description: `Coveñas es un municipio de Colombia, situado en el norte del país, en el departamento de Sucre (subregión de Morrosquillo). <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cove%C3%B1as'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-                title: `MAR Y MAR 🌊`,
-                description: ``,
-                contents:  {carrContents: ["ugjOD304PU_tn.jpg", "AYzddb62bC_tn.jpg"]},
-                Comentarios: "",
-            },
-            "/AuraCardonaC/img/Z6l3ewpnoi": {
-                type: "img",
-                date: {
-                    full: "29 de Junio de 2023 a la 1:7 pm",
-                    min: "29 de Junio a la 1:7 pm"
-                },
-                city: {name: "Coveñas", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Ensenada_en_Cove%C3%B1as.JPG/800px-Ensenada_en_Cove%C3%B1as.JPG", description: `Coveñas es un municipio de Colombia, situado en el norte del país, en el departamento de Sucre (subregión de Morrosquillo). <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cove%C3%B1as'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-                title: `🤍`,
-                description: ``,
-                contents:  {image: "Z6l3ewpnoi_tn.jpg"},
+                contents:  {image: "P0cN877R2I_tn.jpg"},
                 Comentarios: ""
             },
-            "/AuraCardonaC/img/g1GkncPguH": {
+            "/AuraCardonaC/img/OVMv6r5HXh": {
                 type: "mult_img",
                 date: {
-                    full: "27 de Junio de 2023 a las 4:9 pm",
-                    min: "27 de Junio a las 4:9 pm"
+                    full: "20 de Septiembre de 2023 a las 11:4 am",
+                    min: "20 de Septiembre a las 11:4 am"
                 },
-                city: {name: "Coveñas", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Ensenada_en_Cove%C3%B1as.JPG/800px-Ensenada_en_Cove%C3%B1as.JPG", description: `Coveñas es un municipio de Colombia, situado en el norte del país, en el departamento de Sucre (subregión de Morrosquillo). <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cove%C3%B1as'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-                title: `Modo vacaciones ☀️`,
-                description: ``,
-                contents:  {carrContents: ["g1GkncPguH_tn.jpg", "gmBC8HYwL7_tn.jpg"]},
+                city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+                title: ``,
+                description: 
+    `Quién dijo que las futuras mamás debemos dejar de mostrarnos y perder nuestro lado sexy? 😒 pues en mi caso seré todoo lo contrario y seguiré siendo yo en compañía de mi hermoso bebe que viene en camino!
+    Siempre sexy y llenita de amor !!💙
+    20.7💙`,
+                contents:  {carrContents: ["OVMv6r5HXh_tn.jpg", "tgK5fvhBhc_tn.jpg", "UHJrVbKKzD_tn.jpg", "m4e2EuNoSV_tn.jpg", "i2omGU3bfL_tn.jpg"]},
                 Comentarios: "",
             },
+            "/AuraCardonaC/img/LFyQla7rNl": {
+                type: "mult_img",
+                date: {
+                    full: "19 de Septiembre de 2023 a la 1:3 pm",
+                    min: "19 de Septiembre a la 1:3 pm"
+                },
+                city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+                title: `Aquí como si nada!!✨💙`,
+                description: ``,
+                contents:  {carrContents: ["LFyQla7rNl_tn.jpg", "wdogHMyfM7_tn.jpg"]},
+                Comentarios: "",
+            },
+            "/AuraCardonaC/img/ELhxhv8M4z": {
+                type: "img",
+                date: {
+                    full: "18 de Septiembre de 2023 a las 2:48 pm",//18,09,2023,2,48,1
+                    min: "18 de Septiembre a las 2:48 pm"
+                },
+                city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+                title: `✨`,
+                description: ``,
+                contents:  {image: "ELhxhv8M4z_tn.jpg"},
+                Comentarios: ""
+            },
+            "/AuraCardonaC/img/Q5PdSfPTyw": {
+                type: "mult_img",
+                date: {
+                    full: "18 de Septiembre de 2023 a las 2:11 pm",
+                    min: "18 de Septiembre a las 2:11 pm"
+                },
+                city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+                title: `Aquí con los hombres de mi vida celebrando el amor y la amistad 💙 una sóla energía por siempre!✨`,
+                description: ``,
+                contents:  {carrContents: ["Q5PdSfPTyw_tn.jpg", "4TYpF0uEVH_tn.jpg", "0EMFIhd94G_tn.jpg", "UtEHBvCgXJ_tn.jpg"]},
+                Comentarios: "",
+            },
+            "/AuraCardonaC/img/FhmYzc6oL7": {
+                type: "mult_img",
+                date: {
+                    full: "17 de Septiembre de 2023 a las 7:11 pm",
+                    min: "17 de Septiembre a las 7:11 pm"
+                },
+                city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+                title: `21 semanas llenas de amor!💙✨`,
+                description: `Disfrutando mi etapa , disfrutando mi momento!`,
+                contents:  {carrContents: ["FhmYzc6oL7_tn.jpg", "yQV7lYAbne_tn.jpg", "grZjXYJtja_tn.jpg"]},
+                Comentarios: "",
+            },
+            "/AuraCardonaC/img/n4K7mqwPSx": {
+                type: "mult_img",
+                date: {
+                    full: "17 de Septiembre de 2023 a las 6:21 pm",
+                    min: "17 de Septiembre a las 6:21 pm"
+                },
+                city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+                title: `🩷`,
+                description: ``,
+                contents:  {carrContents: ["n4K7mqwPSx_tn.jpg", "pX10aO7Zrh_tn.jpg"]},
+                Comentarios: "",
+            },
+            "/AuraCardonaC/img/rgVMwRIqz0": {
+                type: "mult_img",
+                date: {
+                    full: "15 de Septiembre de 2023 a la 1:26 pm",
+                    min: "15 de Septiembre a la 1:26 pm"
+                },
+                city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+                title: `🌸🩵`,
+                description: ``,
+                contents:  {carrContents: ["rgVMwRIqz0_tn.jpg", "ASJ2OiXYtj_tn.jpg", "XEaEu1HCGq_tn.jpg"]},
+                Comentarios: "",
+            },
+            "/AuraCardonaC/img/YlvYXTx0RA": {
+                type: "img",
+                date: {
+                    full: "14 de Septiembre de 2023 a las 5:4 pm",
+                    min: "14 de Septiembre a las 5:4 pm"
+                },
+                title: `💙🩵💙`,
+                description: ``,
+                contents:  {image: "YlvYXTx0RA_tn.jpg"},
+                Comentarios: ""
+            }
         }
     },
     videos: {
-        quantity: 33,
+        quantity: 41,
         videos: {
+            "/AuraCardonaC/vid/8I2X63UvOl": {
+                type: "video",
+                date: {
+                    full: "2 de Octubre de 2023 a las 8:22 pm",
+                    min: "2 de Octubre a las 8:22 pm"
+                },
+                title: `FELIZ CUMPLEAÑOS AL AMOR DE MI VIDA 😍`,
+                description: `@juancardona.c te amo mi CHIKITITIII cómo me gustaría poder estar contigo acompañándote en tu día, gracias por ser el mejor hermano de todos y por siempre estar ahí en todo momento !!! ❤️ te amo y te extraño. Estoy feliz de que vas a ser el mejor tío de todosss🤰🏼te amamos mi CHIKI que cumplas muchos más !💙 @juancardona.c`,
+                contents:  {video: "8I2X63UvOl"},
+                Comentarios: ""
+            },
+            "/AuraCardonaC/vid/Wwejjti93z": {
+                type: "video",
+                date: {
+                    full: "17 de Septiembre de 2023 a las 4:23 pm",
+                    min: "17 de Septiembre a las 4:23 pm"
+                },
+                title: `FELIZ DÍA DEL AMOR Y LA AMISTAD ❣️`,
+                description: ``,
+                contents:  {video: "Wwejjti93z"},
+                Comentarios: ""
+            },
+            "/AuraCardonaC/vid/tq6qxx4XLj": {
+                type: "video",
+                date: {
+                    full: "15 de Septiembre de 2023 a las 11:12 am",
+                    min: "15 de Septiembre a las 11:12 am"
+                },
+                title: `Este último video que les subo de esta cele...`,
+                description: 
+    `...bración tan hermosa que tuvimos es para agradecerle a todos mis invitados y familiares por acompañarnos en este día tan especial. Les recomiendo ver todo hasta el final 🤪
+
+    Quiero agradecer nuevamente a todas las empresas que hicieron posible y realidad este sueño que siempre había tenido 😍
+    REVELACIÓN DE SEXO 🩵🩷
+    Planner: @claudiajimenezevent
+    📍 @sarangel.resortevents
+    🎈 @angeles_expresionesconamor
+    🖨️ @impronta.co
+    🪑 @decorsillas
+    🥳 @horahappygospel
+    🎆 @somosexperience
+    🎂 @thesugarfactorypalmira
+    🎫 @juliananavarrofiestascreativas
+    🍸 @vitalogy_cocktails
+    🍿 @bienestarintegradodeservicios
+    ⛱️ @entodaocasion_eventos
+    🎥 @visual_zuleta
+    🎥 @pipesaa`,
+                contents:  {video: "tq6qxx4XLj"},
+                Comentarios: ""
+            },
+            "/AuraCardonaC/vid/DJQAorjTfP": {
+                type: "video",
+                date: {
+                    full: "13 de Septiembre de 2023 a las 2:59 pm",
+                    min: "13 de Septiembre a las 2:59 pm"
+                },
+                title: `🩷GIRL OR BOY🩵`,
+                description: 
+    `Creo que este ha sido uno de los momentos más especiales de mi vida , les confieso que me tomó totalmente por sorpresa el resultado de mi revelación🥹
+    JAMÁSSS ME LO IMAGINÉ pero ahora que lo sé soy la futura mamá más feliz del mundo!
+
+    Quiero agradecer a todo mi equipo que hizo posible esta celebración tan especial para todos nosotros 🙏🏻
+
+    REVELACIÓN DE SEXO 🩵🩷
+    Planner: @claudiajimenezevent
+    📍 @sarangel.resortevents
+    🎈 @angeles_expresionesconamor
+    🖨️ @impronta.co
+    🪑 @decorsillas
+    🥳 @horahappygospel
+    🎆 @somosexperience
+    🎂 @thesugarfactorypalmira
+    🎫 @juliananavarrofiestascreativas
+    🍸 @vitalogy_cocktails
+    🍿 @bienestarintegradodeservicios
+    ⛱️ @entodaocasion_eventos
+    🎥 @visual_zuleta
+    👗 @_franchesca.co`,
+                contents:  {video: "DJQAorjTfP"},
+                Comentarios: ""
+            },
+            "/AuraCardonaC/vid/y6BnAQX3fk": {
+                type: "video",
+                date: {
+                    full: "10 de Septiembre de 2023 a las 3:32 pm",
+                    min: "10 de Septiembre a las 3:32 pm"
+                },
+                title: `SUBAN EL VOLUMEN 🥹🎧 ⛶`,
+                description: `Mi mayor felicidad cuando vi el resultado positivo de la prueba fue pensar en los años de vida que le iba a regalar a mis papás, es su primer nieto el cual han esperado durante muchos años y hoy tengo el corazón lleno de amor y mucha felicidad al ser la primera en la familia en poder otorgarles esa alegría 🙏🏻. Me siento orgullosa y privilegiada al tenerlos como padres, pues gracias a ellos soy la mujer quien soy; les agradezco por enseñarme a darle el verdadero significado al amor y por inculcarme algo que se ha perdido mucho en la actualidad: el valor y el respeto por LA FAMILIA y las ganas de luchar junto a tu pareja para construir un hogar estable y feliz. Por eso y mucho más, gracias @ramirocardonap y Lili por ser ustedes mi mejor elección como padres!🙏🏻❤️`,
+                contents:  {video: "y6BnAQX3fk"},
+                Comentarios: ""
+            },
+            "/AuraCardonaC/vid/FInpoYgfof": {
+                type: "video",
+                date: {
+                    full: "31 de Agosto de 2023 a las 6:22 pm",
+                    min: "31 de Agosto a las 6:22 pm"
+                },
+                title: `Hoy les comparto la felicidad más grande de nuestras vidas!🙏🏻`,
+                description: `fueron meses muy difíciles para mí y para mi bebe he tenido un embarazo de alto riesgo por todas las enfermedades que me dieron, hoy con felicidad en mi corazón puedo decirles que ya estamos fuera de peligro y que ahora sí puedo empezarles a compartir todo lo que ha pasado desde el momento que nos dimos cuenta que íbamos a ser papás!😍 por ahora los dejo con este video que fue la noticia más maravillosa que nos llego hace unos meses!🙏🏻`,
+                contents:  {video: "FInpoYgfof"},
+                Comentarios: ""
+            },
+            "/AuraCardonaC/vid/UQCjfSS0aQ": {
+                type: "video",
+                date: {
+                    full: "26 de Agosto de 2023 a la 1:12 pm",
+                    min: "26 de Agosto a la 1:12 pm"
+                },
+                title: `Si se queda mirándote así😍NO LO DEJES IR!`,
+                description: ``,
+                contents:  {video: "UQCjfSS0aQ"},
+                Comentarios: ""
+            },
+            "/AuraCardonaC/vid/NY4MG3Hdpy": {
+                type: "video",
+                date: {
+                    full: "19 de Agosto de 2023 a las 8:15 pm",
+                    min: "19 de Agosto a las 8:15 pm"
+                },
+                title: `DÍA DE COGER COLOR EN @bronceadoperfecto ☀️🩷`,
+                description: ``,
+                contents:  {video: "NY4MG3Hdpy"},
+                Comentarios: ""
+            },
             "/AuraCardonaC/vid/cFlySITheM": {
                 type: "video",
                 date: {
@@ -165,103 +295,273 @@ var user= {
                 description: `...Le encantan todos los deportes como a mí, es bailarín profesional de todo tipo de música, excelente padre, amigo y esposo.<br><br><br>Hoy quiero desearte un feliz cumpleaños Pa’, no sabes lo orgullosa que me siento de que mi mamá y tú sean mis padres, pues han sido el mejor ejemplo que la vida me ha regalado para formarme como mujer. Te amo y se que la vida me va a permitir compartir y disfrutar muchos momentos más a tu lado. Eres mi hombre ideal.<br><br><br>Dejaste una vara muy alta 🤣 y lo único que sé es que quiero mantener el ejemplo que le has dado a mi familia y a mí, así como nos enseñaste del gran significado de esas palabras tan importantes como lo son: hogar, familia, respeto y confianza. Te amo! ❤️🙏🏻<br><br><br>Donde sea y cómo sea pero siempre contigo!✨🙏🏻❤️ @ramirocardonap`,
                 contents:  {video: "cFlySITheM"},
                 Comentarios: ""
-            },
-            "/AuraCardonaC/vid/YLlV8MF4y1": {
-                type: "video",
-                date: {
-                    full: "24 de Junio de 2023 a las 6:56 pm",
-                    min: "24 de Junio a las 6:56 pm"
-                },
-                title: `Disfrutemos cada momento que nos regala la vida✨`,
-                description: `Dejemos de preocuparnos por lo superficial, hay cosas más importantes y valiosas que el mundo y la vida nos ofrecen a diario, si pensamos de manera negativa eso mismo atraeremos, mantengamos siempre una mentalidad positiva ya que la única forma en que lograremos ver cambios reales es si tomamos conciencia de la transformación que debemos hacer de adentro hacia afuera.`,
-                contents:  {video: "YLlV8MF4y1"},
-                Comentarios: ""
-            },
-            "/AuraCardonaC/vid/eCdpjs3zwG": {
-                type: "video",
-                date: {
-                    full: "12 de Junio de 2023 a las 2:45 pm",
-                    min: "12 de Junio a las 2:45 pm"
-                },
-                title: `F E S T I V O✨`,
-                description: `<a href= "https://piclink.me/AuraCardonac" target= "_blank">https://piclink.me/AuraCardonac</a> 👆🏻`,
-                contents:  {video: "eCdpjs3zwG"},
-                Comentarios: ""
-            },
-            "/AuraCardonaC/vid/lsufFv1Iuz": {
-                type: "video",
-                date: {
-                    full: "1 de Junio de 2023 a las 3:38 pm",
-                    min: "1 de Junio a las 3:38 pm"
-                },
-                title: `CHECK ✅🍗`,
-                description: `Conjunto ALO disponible en @auracardona.shopper 🪬`,
-                contents:  {video: "lsufFv1Iuz"},
-                Comentarios: ""
-            },
-            "/AuraCardonaC/vid/3SG7x1bvFD": {
-                type: "video",
-                date: {
-                    full: "27 de Mayo de 2023 a las 8:27 pm",
-                    min: "27 de Mayo a las 8:27 pm"
-                },
-                title: ``,
-                description: `Ya conoces la mejor zona para rumbear en la ciudad de Cali? ✨ @la40stcali tiene todo en un solo lugar: buen ambiente, rumba, gastronomía y seguridad, te esperamos para que disfrutes junto a tus amigos y familiares una noche diferente a las demás!`,
-                contents:  {video: "3SG7x1bvFD"},
-                Comentarios: ""
-            },
-            "/AuraCardonaC/vid/ldXHrkCbsd": {
-                type: "video",
-                date: {
-                    full: "17 de Mayo de 2023 a las 5:23 pm",
-                    min: "17 de Mayo a las 5:23 pm"
-                },
-                title: `Les presento nuestra NUEVA HAMBURGUESA ROSA NEGRA 🍔`,
-                description: `Estamos fuera de concurso 🤚🏻<br>Pídela en @rosanegra.restaurante y te obsequiamos la bebida acompañante 🥤`,
-                contents:  {video: "ldXHrkCbsd"},
-                Comentarios: ""
-            },
-            "/AuraCardonaC/vid/Ra1rRJNhnp": {
-                type: "video",
-                date: {
-                    full: "9 de Mayo de 2023 a las 8:56 am",
-                    min: "9 de Mayo a las 8:56 am"
-                },
-                title: `💕🌴`,
-                description: ``,
-                contents:  {video: "Ra1rRJNhnp"},
-                Comentarios: ""
-            },
-            "/AuraCardonaC/vid/dQuPFnxwC5": {
-                type: "video",
-                date: {
-                    full: "7 de Mayo de 2023 a las 10:36 am",
-                    min: "7 de Mayo a las 10:36 am"
-                },
-                title: `Aunque muchas personas lo vean como un chiste o una moda créanme que solo se trata de...`,
-                description: `...Respetar, Intencionar, Conscientizar y mantener un REAL Y VERDADERO CAMBIO!✨🪬✨<br>Hecho está todo lo que declare tu mente!🙌🏻`,
-                contents:  {video: "dQuPFnxwC5"},
-                Comentarios: ""
-            },
-            "/AuraCardonaC/vid/B3uLx5xag4": {
-                type: "video",
-                date: {
-                    full: "24 de Abril de 2023 a las 6:11 pm",
-                    min: "24 de Abril a las 6:11 pm"
-                },
-                title: ``,
-                description: `<a href= "https://piclink.me/AuraCardonac" target= "_blank">https://piclink.me/AuraCardonac</a>`,
-                contents:  {video: "B3uLx5xag4"},
-                Comentarios: ""
             }
         }
     },
     stories: {
+        "/AuraCardonaC/vid/8I2X63UvOl": {
+            type: "vid",
+            date: {
+                full: "2 de Octubre de 2023 a las 8:22 pm",
+                min: "2 de Octubre a las 8:22 pm"
+            },
+            title: `FELIZ CUMPLEAÑOS AL AMOR DE MI VIDA 😍`,
+            description: `@juancardona.c te amo mi CHIKITITIII cómo me gustaría poder estar contigo acompañándote en tu día, gracias por ser el mejor hermano de todos y por siempre estar ahí en todo momento !!! ❤️ te amo y te extraño. Estoy feliz de que vas a ser el mejor tío de todosss🤰🏼te amamos mi CHIKI que cumplas muchos más !💙 @juancardona.c`,
+            contents:  {video: "8I2X63UvOl"},
+            Comentarios: ""
+        },
+        "/AuraCardonaC/img/P0cN877R2I": {
+            type: "img",
+            date: {
+                full: "24 de Septiembre de 2023 a las 3:20 pm",
+                min: "24 de Septiembre a las 3:20 pm"
+            },
+            city: {name: "Calima", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Lago_Calima.jpg/800px-Lago_Calima.jpg", description: `Calima es un municipio colombiano del departamento del Valle del Cauca fundado, principalmente, por colonos vallecaucanos, y además, de antioqueños y caldenses. Está situado a 86 km de Cali, la temperatura media es de 18 °C, con una población total de 18.469 habitantes, considerado municipio desde 1939 y fundado en 1907 y su extensión total es de 1154 km². Su cabecera municipal se llama El Darién. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Dari%C3%A9n_(Valle_del_Cauca)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `💙`,
+            description: ``,
+            contents:  {image: "P0cN877R2I.jpg"},
+            Comentarios: ""
+        },
+        "/AuraCardonaC/img/OVMv6r5HXh": {
+            type: "mult_img",
+            date: {
+                full: "20 de Septiembre de 2023 a las 11:4 am",
+                min: "20 de Septiembre a las 11:4 am"
+            },
+            city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: ``,
+            description: 
+`Quién dijo que las futuras mamás debemos dejar de mostrarnos y perder nuestro lado sexy? 😒 pues en mi caso seré todoo lo contrario y seguiré siendo yo en compañía de mi hermoso bebe que viene en camino!
+Siempre sexy y llenita de amor !!💙
+20.7💙`,
+            contents:  {carrContents: ["OVMv6r5HXh.jpg", "tgK5fvhBhc.jpg", "UHJrVbKKzD.jpg", "m4e2EuNoSV.jpg", "i2omGU3bfL.jpg"]},
+            Comentarios: "",
+        },
+        "/AuraCardonaC/img/LFyQla7rNl": {
+            type: "mult_img",
+            date: {
+                full: "19 de Septiembre de 2023 a la 1:3 pm",
+                min: "19 de Septiembre a la 1:3 pm"
+            },
+            city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `Aquí como si nada!!✨💙`,
+            description: ``,
+            contents:  {carrContents: ["LFyQla7rNl.jpg", "wdogHMyfM7.jpg"]},
+            Comentarios: "",
+        },
+        "/AuraCardonaC/img/ELhxhv8M4z": {
+            type: "img",
+            date: {
+                full: "18 de Septiembre de 2023 a las 2:48 pm",//18,09,2023,2,48,1
+                min: "18 de Septiembre a las 2:48 pm"
+            },
+            city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `✨`,
+            description: ``,
+            contents:  {image: "ELhxhv8M4z.jpg"},
+            Comentarios: ""
+        },
+        "/AuraCardonaC/img/Q5PdSfPTyw": {
+            type: "mult_img",
+            date: {
+                full: "18 de Septiembre de 2023 a las 2:11 pm",
+                min: "18 de Septiembre a las 2:11 pm"
+            },
+            city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `Aquí con los hombres de mi vida celebrando el amor y la amistad 💙 una sóla energía por siempre!✨`,
+            description: ``,
+            contents:  {carrContents: ["Q5PdSfPTyw.jpg", "4TYpF0uEVH.jpg", "0EMFIhd94G.jpg", "UtEHBvCgXJ.jpg"]},
+            Comentarios: "",
+        },
+        "/AuraCardonaC/img/FhmYzc6oL7": {
+            type: "mult_img",
+            date: {
+                full: "17 de Septiembre de 2023 a las 7:11 pm",
+                min: "17 de Septiembre a las 7:11 pm"
+            },
+            city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `21 semanas llenas de amor!💙✨`,
+            description: `Disfrutando mi etapa , disfrutando mi momento!`,
+            contents:  {carrContents: ["FhmYzc6oL7.jpg", "yQV7lYAbne.jpg", "grZjXYJtja.jpg"]},
+            Comentarios: "",
+        },
+        "/AuraCardonaC/img/n4K7mqwPSx": {
+            type: "mult_img",
+            date: {
+                full: "17 de Septiembre de 2023 a las 6:21 pm",
+                min: "17 de Septiembre a las 6:21 pm"
+            },
+            city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `🩷`,
+            description: ``,
+            contents:  {carrContents: ["n4K7mqwPSx.jpg", "pX10aO7Zrh.jpg"]},
+            Comentarios: "",
+        },
+        "/AuraCardonaC/vid/Wwejjti93z": {
+            type: "vid",
+            date: {
+                full: "17 de Septiembre de 2023 a las 4:23 pm",
+                min: "17 de Septiembre a las 4:23 pm"
+            },
+            title: `FELIZ DÍA DEL AMOR Y LA AMISTAD ❣️`,
+            description: ``,
+            contents:  {video: "Wwejjti93z"},
+            Comentarios: ""
+        },
+        "/AuraCardonaC/img/rgVMwRIqz0": {
+            type: "mult_img",
+            date: {
+                full: "15 de Septiembre de 2023 a la 1:26 pm",
+                min: "15 de Septiembre a la 1:26 pm"
+            },
+            city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `🌸🩵`,
+            description: ``,
+            contents:  {carrContents: ["rgVMwRIqz0.jpg", "ASJ2OiXYtj.jpg", "XEaEu1HCGq.jpg"]},
+            Comentarios: "",
+        },
+        "/AuraCardonaC/vid/tq6qxx4XLj": {
+            type: "vid",
+            date: {
+                full: "15 de Septiembre de 2023 a las 11:12 am",
+                min: "15 de Septiembre a las 11:12 am"
+            },
+            title: `Este último video que les subo de esta cele...`,
+            description: 
+`...bración tan hermosa que tuvimos es para agradecerle a todos mis invitados y familiares por acompañarnos en este día tan especial. Les recomiendo ver todo hasta el final 🤪
+
+Quiero agradecer nuevamente a todas las empresas que hicieron posible y realidad este sueño que siempre había tenido 😍
+REVELACIÓN DE SEXO 🩵🩷
+Planner: @claudiajimenezevent
+📍 @sarangel.resortevents
+🎈 @angeles_expresionesconamor
+🖨️ @impronta.co
+🪑 @decorsillas
+🥳 @horahappygospel
+🎆 @somosexperience
+🎂 @thesugarfactorypalmira
+🎫 @juliananavarrofiestascreativas
+🍸 @vitalogy_cocktails
+🍿 @bienestarintegradodeservicios
+⛱️ @entodaocasion_eventos
+🎥 @visual_zuleta
+🎥 @pipesaa`,
+            contents:  {video: "tq6qxx4XLj"},
+            Comentarios: ""
+        },
+        "/AuraCardonaC/img/YlvYXTx0RA": {
+            type: "img",
+            date: {
+                full: "14 de Septiembre de 2023 a las 5:4 pm",
+                min: "14 de Septiembre a las 5:4 pm"
+            },
+            title: `💙🩵💙`,
+            description: ``,
+            contents:  {image: "YlvYXTx0RA.jpg"},
+            Comentarios: ""
+        },
+        "/AuraCardonaC/vid/DJQAorjTfP": {
+            type: "vid",
+            date: {
+                full: "13 de Septiembre de 2023 a las 2:59 pm",
+                min: "13 de Septiembre a las 2:59 pm"
+            },
+            title: `🩷GIRL OR BOY🩵`,
+            description: 
+`Creo que este ha sido uno de los momentos más especiales de mi vida , les confieso que me tomó totalmente por sorpresa el resultado de mi revelación🥹
+JAMÁSSS ME LO IMAGINÉ pero ahora que lo sé soy la futura mamá más feliz del mundo!
+
+Quiero agradecer a todo mi equipo que hizo posible esta celebración tan especial para todos nosotros 🙏🏻
+
+REVELACIÓN DE SEXO 🩵🩷
+Planner: @claudiajimenezevent
+📍 @sarangel.resortevents
+🎈 @angeles_expresionesconamor
+🖨️ @impronta.co
+🪑 @decorsillas
+🥳 @horahappygospel
+🎆 @somosexperience
+🎂 @thesugarfactorypalmira
+🎫 @juliananavarrofiestascreativas
+🍸 @vitalogy_cocktails
+🍿 @bienestarintegradodeservicios
+⛱️ @entodaocasion_eventos
+🎥 @visual_zuleta
+👗 @_franchesca.co`,
+            contents:  {video: "DJQAorjTfP"},
+            Comentarios: ""
+        },
+        "/AuraCardonaC/img/l5j5TdxdBT": {
+            type: "mult_img",
+            date: {
+                full: "12 de Septiembre de 2023 a las 4:53 pm",
+                min: "12 de Septiembre a las 4:53 pm"
+            },
+            title: `SEMANA 20.3🤰🏼💙`,
+            description: `No saben cómo le agradezco a Dios poder estar disfrutando cada etapa de mi embarazo. Ahora que estoy en este estado pienso que realmente todo está en tu mente; tu fuerza, tus ganas, tu sensualidad, tu brillo absolutamente TODO✨. No permitas que ningún cambio en tu vida apague tu luz!! Creo que para las que soñamos algún día con ser madres, esta es la mejor etapa que vamos a poder vivir y experimentar en nuestras vidas 😍`,
+            contents:  {carrContents: ["l5j5TdxdBT.jpg", "a6nEHNGT1n.jpg", "3sOkVFcDCb.jpg", "BcvjcNhrUe.jpg"]},
+            Comentarios: "",
+        },
+        "/AuraCardonaC/vid/y6BnAQX3fk": {
+            type: "vid",
+            date: {
+                full: "10 de Septiembre de 2023 a las 3:32 pm",
+                min: "10 de Septiembre a las 3:32 pm"
+            },
+            title: `SUBAN EL VOLUMEN 🥹🎧 ⛶`,
+            description: `Mi mayor felicidad cuando vi el resultado positivo de la prueba fue pensar en los años de vida que le iba a regalar a mis papás, es su primer nieto el cual han esperado durante muchos años y hoy tengo el corazón lleno de amor y mucha felicidad al ser la primera en la familia en poder otorgarles esa alegría 🙏🏻. Me siento orgullosa y privilegiada al tenerlos como padres, pues gracias a ellos soy la mujer quien soy; les agradezco por enseñarme a darle el verdadero significado al amor y por inculcarme algo que se ha perdido mucho en la actualidad: el valor y el respeto por LA FAMILIA y las ganas de luchar junto a tu pareja para construir un hogar estable y feliz. Por eso y mucho más, gracias @ramirocardonap y Lili por ser ustedes mi mejor elección como padres!🙏🏻❤️`,
+            contents:  {video: "y6BnAQX3fk"},
+            Comentarios: ""
+        },
+        "/AuraCardonaC/img/nYBvv7BSLM": {
+            type: "img",
+            date: {
+                full: "3 de Septiembre de 2023 a las 11:5 pm",
+                min: "3 de Septiembre a las 11:5 pm"
+            },
+            title: `Ya somos 2 en la foto!🤍`,
+            description: ``,
+            contents:  {image: "nYBvv7BSLM.jpg"},
+            Comentarios: ""
+        },
+        "/AuraCardonaC/vid/FInpoYgfof": {
+            type: "vid",
+            date: {
+                full: "31 de Agosto de 2023 a las 6:22 pm",
+                min: "31 de Agosto a las 6:22 pm"
+            },
+            title: `Hoy les comparto la felicidad más grande de nuestras vidas!🙏🏻`,
+            description: `fueron meses muy difíciles para mí y para mi bebe he tenido un embarazo de alto riesgo por todas las enfermedades que me dieron, hoy con felicidad en mi corazón puedo decirles que ya estamos fuera de peligro y que ahora sí puedo empezarles a compartir todo lo que ha pasado desde el momento que nos dimos cuenta que íbamos a ser papás!😍 por ahora los dejo con este video que fue la noticia más maravillosa que nos llego hace unos meses!🙏🏻`,
+            contents:  {video: "FInpoYgfof"},
+            Comentarios: ""
+        },
+        "/AuraCardonaC/vid/UQCjfSS0aQ": {
+            type: "vid",
+            date: {
+                full: "26 de Agosto de 2023 a la 1:12 pm",
+                min: "26 de Agosto a la 1:12 pm"
+            },
+            title: `Si se queda mirándote así😍NO LO DEJES IR!`,
+            description: ``,
+            contents:  {video: "UQCjfSS0aQ"},
+            Comentarios: ""
+        },
+        "/AuraCardonaC/vid/NY4MG3Hdpy": {
+            type: "vid",
+            date: {
+                full: "19 de Agosto de 2023 a las 8:15 pm",
+                min: "19 de Agosto a las 8:15 pm"
+            },
+            title: `DÍA DE COGER COLOR EN @bronceadoperfecto ☀️🩷`,
+            description: ``,
+            contents:  {video: "NY4MG3Hdpy"},
+            Comentarios: ""
+        },
         "/AuraCardonaC/img/du0pgbjUY8": {
             type: "img",
             date: {
-                full: "23 de Julio de 2023 a la 2:3 pm",
-                min: "23 de Julio a la 2:3 pm"
+                full: "23 de Julio de 2023 a las 2:3 pm",//correct la 2:3 everwer
+                min: "23 de Julio a las 2:3 pm"
             },
             title: `R E B E K A ✨`,
             description: `Este animalito llego a mi vida con mucho significado. Nació el mismo día de mi cumpleaños 6 de Mayo y en su honor lleva el nombre de mi REBEKO un pajarito que críe con mucho amor❤️ Los gatos tienen una conexión tan Poderosa con el mundo espiritual que se convierten en nuestros guardianes absorbiendo toda la energía negativa que nos rodea.`,
@@ -2447,7 +2747,7 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             Comentarios: ""
         },
         "/AuraCardonaC/vid/I90Corf6I3": {
-            type: "video",
+            type: "vid",
             date: {
                 full: "21 de Noviembre de 2021 a las 3:55 am",
                 min: "Noviembre de 2021"

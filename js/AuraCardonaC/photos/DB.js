@@ -1671,7 +1671,139 @@ Ella no es de redes sociales ni de fotos ni videos y no significa que no la ame 
             description: `Este animalito llego a mi vida con mucho significado. Nació el mismo día de mi cumpleaños 6 de Mayo y en su honor lleva el nombre de mi REBEKO un pajarito que críe con mucho amor❤️ Los gatos tienen una conexión tan Poderosa con el mundo espiritual que se convierten en nuestros guardianes absorbiendo toda la energía negativa que nos rodea.`,
             contents:  {image: "du0pgbjUY8.jpg"},
             Comentarios: ""
-        }
+        },
+        "/AuraCardonaC/img/nYBvv7BSLM": {
+            type: "img",
+            date: {
+                full: "3 de Septiembre de 2023 a las 11:5 pm",
+                min: "3 de Septiembre a las 11:5 pm"
+            },
+            title: `Ya somos 2 en la foto!🤍`,
+            description: ``,
+            contents:  {image: "nYBvv7BSLM_tn.jpg"},
+            Comentarios: ""
+        },
+        "/AuraCardonaC/img/l5j5TdxdBT": {
+            type: "mult_img",
+            date: {
+                full: "12 de Septiembre de 2023 a las 4:53 pm",
+                min: "12 de Septiembre a las 4:53 pm"
+            },
+            title: `SEMANA 20.3🤰🏼💙`,
+            description: `No saben cómo le agradezco a Dios poder estar disfrutando cada etapa de mi embarazo. Ahora que estoy en este estado pienso que realmente todo está en tu mente; tu fuerza, tus ganas, tu sensualidad, tu brillo absolutamente TODO✨. No permitas que ningún cambio en tu vida apague tu luz!! Creo que para las que soñamos algún día con ser madres, esta es la mejor etapa que vamos a poder vivir y experimentar en nuestras vidas 😍`,
+            contents:  {carrContents: ["l5j5TdxdBT_tn.jpg", "a6nEHNGT1n_tn.jpg", "3sOkVFcDCb_tn.jpg", "BcvjcNhrUe_tn.jpg"]},
+            Comentarios: "",
+        },
+        "/AuraCardonaC/img/YlvYXTx0RA": {
+            type: "img",
+            date: {
+                full: "14 de Septiembre de 2023 a las 5:4 pm",
+                min: "14 de Septiembre a las 5:4 pm"
+            },
+            title: `💙🩵💙`,
+            description: ``,
+            contents:  {image: "YlvYXTx0RA_tn.jpg"},
+            Comentarios: ""
+        },
+        "/AuraCardonaC/img/rgVMwRIqz0": {
+            type: "mult_img",
+            date: {
+                full: "15 de Septiembre de 2023 a la 1:26 pm",
+                min: "15 de Septiembre a la 1:26 pm"
+            },
+            city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `🌸🩵`,
+            description: ``,
+            contents:  {carrContents: ["rgVMwRIqz0_tn.jpg", "ASJ2OiXYtj_tn.jpg", "XEaEu1HCGq_tn.jpg"]},
+            Comentarios: "",
+        },
+        "/AuraCardonaC/img/n4K7mqwPSx": {
+            type: "mult_img",
+            date: {
+                full: "17 de Septiembre de 2023 a las 6:21 pm",
+                min: "17 de Septiembre a las 6:21 pm"
+            },
+            city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `🩷`,
+            description: ``,
+            contents:  {carrContents: ["n4K7mqwPSx_tn.jpg", "pX10aO7Zrh_tn.jpg"]},
+            Comentarios: "",
+        },
+        "/AuraCardonaC/img/FhmYzc6oL7": {
+            type: "mult_img",
+            date: {
+                full: "17 de Septiembre de 2023 a las 7:11 pm",
+                min: "17 de Septiembre a las 7:11 pm"
+            },
+            city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `21 semanas llenas de amor!💙✨`,
+            description: `Disfrutando mi etapa , disfrutando mi momento!`,
+            contents:  {carrContents: ["FhmYzc6oL7_tn.jpg", "yQV7lYAbne_tn.jpg", "grZjXYJtja_tn.jpg"]},
+            Comentarios: "",
+        },
+        "/AuraCardonaC/img/Q5PdSfPTyw": {
+            type: "mult_img",
+            date: {
+                full: "18 de Septiembre de 2023 a las 2:11 pm",
+                min: "18 de Septiembre a las 2:11 pm"
+            },
+            city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `Aquí con los hombres de mi vida celebrando el amor y la amistad 💙 una sóla energía por siempre!✨`,
+            description: ``,
+            contents:  {carrContents: ["Q5PdSfPTyw_tn.jpg", "4TYpF0uEVH_tn.jpg", "0EMFIhd94G_tn.jpg", "UtEHBvCgXJ_tn.jpg"]},
+            Comentarios: "",
+        },
+        "/AuraCardonaC/img/ELhxhv8M4z": {
+            type: "img",
+            date: {
+                full: "18 de Septiembre de 2023 a las 2:48 pm",//18,09,2023,2,48,1
+                min: "18 de Septiembre a las 2:48 pm"
+            },
+            city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `✨`,
+            description: ``,
+            contents:  {image: "ELhxhv8M4z_tn.jpg"},
+            Comentarios: ""
+        },
+        "/AuraCardonaC/img/LFyQla7rNl": {
+            type: "mult_img",
+            date: {
+                full: "19 de Septiembre de 2023 a la 1:3 pm",
+                min: "19 de Septiembre a la 1:3 pm"
+            },
+            city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `Aquí como si nada!!✨💙`,
+            description: ``,
+            contents:  {carrContents: ["LFyQla7rNl_tn.jpg", "wdogHMyfM7_tn.jpg"]},
+            Comentarios: "",
+        },
+        "/AuraCardonaC/img/OVMv6r5HXh": {
+            type: "mult_img",
+            date: {
+                full: "20 de Septiembre de 2023 a las 11:4 am",
+                min: "20 de Septiembre a las 11:4 am"
+            },
+            city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: ``,
+            description: 
+`Quién dijo que las futuras mamás debemos dejar de mostrarnos y perder nuestro lado sexy? 😒 pues en mi caso seré todoo lo contrario y seguiré siendo yo en compañía de mi hermoso bebe que viene en camino!
+Siempre sexy y llenita de amor !!💙
+20.7💙`,
+            contents:  {carrContents: ["OVMv6r5HXh_tn.jpg", "tgK5fvhBhc_tn.jpg", "UHJrVbKKzD_tn.jpg", "m4e2EuNoSV_tn.jpg", "i2omGU3bfL_tn.jpg"]},
+            Comentarios: "",
+        },
+        "/AuraCardonaC/img/P0cN877R2I": {
+            type: "img",
+            date: {
+                full: "24 de Septiembre de 2023 a las 3:20 pm",
+                min: "24 de Septiembre a las 3:20 pm"
+            },
+            city: {name: "Calima", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Lago_Calima.jpg/800px-Lago_Calima.jpg", description: `Calima es un municipio colombiano del departamento del Valle del Cauca fundado, principalmente, por colonos vallecaucanos, y además, de antioqueños y caldenses. Está situado a 86 km de Cali, la temperatura media es de 18 °C, con una población total de 18.469 habitantes, considerado municipio desde 1939 y fundado en 1907 y su extensión total es de 1154 km². Su cabecera municipal se llama El Darién. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Dari%C3%A9n_(Valle_del_Cauca)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `💙`,
+            description: ``,
+            contents:  {image: "P0cN877R2I_tn.jpg"},
+            Comentarios: ""
+        },
     }
 }
 return user

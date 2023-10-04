@@ -1,41 +1,702 @@
 export function _index(){
+var _useRs= {}
+_useRs["user"]= {
+    username: "user",
+    users_name: "Walter White",
+    profilePic: {
+        "/user/img/white": {
+            contents:  {image: "white.jpg"},
+        }
+    },
+    rol:{
+        rol: "Moderador",
+        level: "60"
+    },
+    tool: `<div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/user/white.jpg'>
+                <div class='datos'>
+                    <ul class='actions'>
+                        <li class='chatear' title='Chatear'>C</li>
+                        <li class='agregar' title='Agregar'>A</li>
+                        <li class='juzgar' title='Juzgar'>J</li>
+                    </ul>                  
+                    <p class='username' title= 'Walter White'>Walter White</p>
+                    <p class='rol'>Moderador <b style='color:#fff;'>+60</b></p>
+                </div>
+            </div>`
+};
+_useRs["AuraCardonaC"]= {
+    username: "AuraCardonaC",
+    users_name: "Aura María Cardona Demasiado",
+    profilePic: {
+            "/AuraCardonaC/img/H5TxBHq4ff": {
+                type: "img",
+                date: {
+                    full: "13 de Agosto de 2022 a las 10:8 pm",
+                    min: "Agosto de 2022"
+                },
+                title: `El mejor momento 😍🌅`,
+                description: ``,
+                contents:  {image: "H5TxBHq4ff_tn.jpg"},
+                Comentarios: ""
+            }
+        },
+    rol:{
+        rol: "Profe de fitness",
+        level: "94"
+    },
+    tool:  `<div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
+                <img src='/resources/images/AuraCardonaC/H5TxBHq4ff_tn.jpg'>
+                <div class='datos'>
+                    <ul class='actions'>
+                        <li class='chatear' title='Chatear'>C</li>
+                        <li class='agregar' title='Agregar'>A</li>
+                        <li class='juzgar' title='Juzgar'>J</li>
+                    </ul>                  
+                    <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
+                    <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
+                </div>
+            </div>`
+};
+_useRs["G-Suschrist"]= {
+    username: "G-Suschrist",
+    users_name: "Dios Jesucristo",
+    profilePic: {
+            "/G-Suschrist/img/Rvu7YjVcXr": {
+                type: "img",
+                date: {
+                    full: "1 de Enero de 2021 a las 3:25 pm",
+                    min: "Enero de 2021"
+                },
+                city: {name: "Manywhere", pic: "j", description: `Manywhere. <a target= '_blank'style= 'font-size:0.8em; ' href= ''><span style= 'color: #2ecc71; font-size: 1.5em; '>···&nbsp</span>es.wikipedia.org</a>`},
+                title: `Por aquí y por allá; casual.`,
+                description: ``,
+                contents:  {image: "Rvu7YjVcXr_tn.jpg"},
+                Comentarios: ``
+            }
+        },
+    rol:{
+        rol: "G",
+        level: "100"
+    },
+    tool:  `<div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/G-Suschrist/Rvu7YjVcXr_tn.jpg'>
+                <div class='datos'>
+                    <ul class='actions'>
+                        <li class='chatear' title='Chatear'>C</li>
+                        <li class='agregar' title='Agregar'>A</li>
+                        <li class='juzgar' title='Juzgar'>J</li>
+                    </ul>                  
+                    <p class='username' title= 'Dios Jesucristo'>Dios Jesucristo</p>
+                    <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+                </div>
+            </div>`
+}
+_useRs["MeganFox"]= {
+    username: "MeganFox",
+    users_name: "Megan Denise Fox",
+    profilePic: {
+            "/MeganFox/img/nc79cNubi8": {
+                type: "img",
+                date: {
+                    full: "17 de Julio de 2022 a las 0:10 pm",
+                    min: "17 de Julio a las 0:10 pm"
+                },
+                title: `the trees call me by my name`,
+                description: ``,
+                contents:  {image: "nc79cNubi8_tn.jpg"},
+                Comentarios: ""
+            }
+        },
+    rol:{
+        rol: "G",
+        level: "100"
+    },
+    tool:  `<div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
+                <div class='datos'>
+                    <ul class='actions'>
+                        <li class='chatear' title='Chatear'>C</li>
+                        <li class='agregar' title='Agregar'>A</li>
+                        <li class='juzgar' title='Juzgar'>J</li>
+                    </ul>                  
+                    <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
+                    <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+                </div>
+            </div>`
+};
+_useRs["LamaMadora"]= {
+    username: "LamaMadora",
+    users_name: "Juan José Martínez Vidal",
+    profilePic: {
+            "/LamaMadora/img/sdlQg1CoQ3": {
+                type: "img",
+                date: {
+                    full: "12 de Diciembre de 2021 a las 2:18 pm",
+                    min: "Diciembre de 2021"
+                },
+                title: ``,
+                description: ``,
+                contents:  {image: "sdlQg1CoQ3_tn.jpg"},
+                Comentarios: ""
+            }
+        },
+    rol:{
+        rol: "Dubber",
+        level: "88"
+    },
+    tool:  `<div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='88'>
+                <img src='/resources/images/LamaMadora/sdlQg1CoQ3_tn.jpg'>
+                <div class='datos'>
+                    <ul class='actions'>
+                        <li class='chatear' title='Chatear'>C</li>
+                        <li class='agregar' title='Agregar'>A</li>
+                        <li class='juzgar' title='Juzgar'>J</li>
+                    </ul>                  
+                    <p title= 'Juan José Martínez Vidal' class='username'>Juan José Martínez Vidal</p>
+                    <p class='rol'>Dubber <b style='color:#fff;'>+88</b></p>
+                </div>
+                <div class='insignia' style='top: 11px; border-bottom-color: #4f61bf; ' title='Curso completado (Dubbing en español)'></div>
+                <div class='insignia' style='top: 23px; border-bottom-color: #79371d; 'title='Curso completado (Sub syncing)'></div>
+                <div class='insignia' style='top: 17px; border-bottom-color: #8c8866; ' title='Rol asignado (Dubber)'> </div>
+              </div>`
+};
+_useRs["whale_Shailene"]= {
+    username: "whale_Shailene",
+    users_name: "Shailene Diann Woodley",
+    profilePic: {
+            "/whale_Shailene/img/RKRWeNhDgJ": {
+                type: "img",
+                date: {
+                    full: "19 de Noviembre de 2022 a las 7:4 pm",
+                    min: "Noviembre de 2022"
+                },
+                title: `.monot.`,
+                description: ``,
+                contents:  {image: "RKRWeNhDgJ_tn.jpg"},
+                Comentarios: ``
+            }
+        },
+    rol:{
+        rol: "SEO",
+        level: "94"
+    },
+    tool:  `<div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='98'>
+                <img src='/resources/images/whale_Shailene/RKRWeNhDgJ_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>
+                  <p class='username' title= 'whale_Shailene'>Shailene Diann Woodley</p>
+                  <p class='rol'>SEO <b style='color:#fff;'>+98</b></p>
+                </div>
+            </div>`
+};
+_useRs["A.K.A._Dizzy"]= {
+    username: "A.K.A._Dizzy",
+    users_name: "Luis Eduardo Gallego García",
+    profilePic: {
+            "/A.K.A._Dizzy/img/4uHf7tgk8C": {
+                type: "img",
+                date: {
+                    full: "27 de Septiembre de 2023 a las 3:27 pm",
+                    min: "27 de Septiembre a las 3:27 pm"
+                },
+                title: `La Luna y sus alrededores...`,
+                description: ``,
+                contents:  {image: "4uHf7tgk8C_tn.jpg"},
+                Comentarios: ""
+            }
+        },
+    rol:{
+        rol: "CEO",
+        level: "100"
+    },
+    tool:  `<div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
+                <div class='datos'>
+                    <ul class='actions'>
+                        <li class='chatear' title='Chatear'>C</li>
+                        <li class='agregar' title='Agregar'>A</li>
+                        <li class='juzgar' title='Juzgar'>J</li>
+                    </ul>                  
+                    <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
+                    <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
+                </div>
+                <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
+                <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
+                <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
+                <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
+            </div>`
+};
+_useRs["PpP"]= {
+    username: "PpP",
+    users_name: "La Perrita Del Poste",
+    profilePic: {
+            "/PpP/img/bZj2vYrklo": {
+                type: "img",
+                date: {
+                    full: "20 de Septiembre de 2022 a las 4:7 pm",
+                    min: "Septiembre de 2022"
+                },
+                city: {name: "Rionegro", pic: "https://upload.wikimedia.org/wikipedia/commons/2/26/Atardecer-parque.jpg", description: `Rionegro es una pequeña ciudad en los Andes colombianos. Aquí se encuentra el aeropuerto internacional de Medellín. En la Plaza de la Libertad está la Catedral de San Nicolás, con sus cúpulas. El Museo Histórico Casa de la Convención se encuentra en un edificio en el que se sancionó una versión de la constitución colombiana en 1863. Al sudoeste, está Tutucán, que es una réplica de un pueblo típico local, con una iglesia, un molino y una granja. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Rionegro_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+                title: ``,
+                description: ``,
+                contents:  {image: "bZj2vYrklo_tn.jpg"},
+                Comentarios: ``
+            }
+        },
+    rol:{
+        rol: "G",
+        level: "100"
+    },
+    tool:  `<div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/PpP/bZj2vYrklo_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>
+                  <p class='username' title= 'La Perrita Del Poste'>La Perrita Del Poste</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+                </div>
+            </div>`
+};
+_useRs["Eld"]= {
+    username: "Eld",
+    users_name: "ElDelprincipio",
+    profilePic: {
+            "/Eld/img/oow4doJxKO": {
+                type: "img",
+                date: {
+                    full: "20 de Septiembre de 2022 a las 4:20 pm",
+                    min: "Septiembre de 2022"
+                },
+                title: ``,
+                description: ``,
+                contents:  {image: "oow4doJxKO_tn.jpg"},
+                Comentarios: ``
+            }
+        },
+    rol:{
+        rol: "G",
+        level: "100"
+    },
+    tool:  `<div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/Eld/oow4doJxKO_tn.jpg'>
+                <div class='datos'>
+                  <ul class='actions'>
+                    <li class='chatear' title='Chatear'>C</li>
+                    <li class='agregar' title='Agregar'>A</li>
+                    <li class='juzgar' title='Juzgar'>J</li>
+                  </ul>
+                  <p class='username' title= 'ElDelprincipio'>ElDelprincipio</p>
+                  <p class='rol'>G <b style='color:#fff;'>+100</b></p>
+                </div>
+            </div>`
+};
+_useRs["L"]= {
+    username: "L",
+    users_name: "Laura Escobar Bonnett",
+    profilePic: {
+            "/L/img/OGnpwD3jys": {
+                type: "img",
+                date: {
+                    full: "2 de Enero de 2022 a las 2:51 pm",
+                    min: "Enero de 2022"
+                },
+                title: `⚔️`,
+                description: ``,
+                contents:  {image: "OGnpwD3jys_tn.jpg"},
+                Comentarios: ""
+            }
+        },
+    rol:{
+        rol: "Princesa",
+        level: "100"
+    },
+    tool:  `<div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/L/OGnpwD3jys_tn.jpg'>
+                <div class='datos'>
+                    <ul class='actions'>
+                        <li class='chatear' title='Chatear'>C</li>
+                        <li class='agregar' title='Agregar'>A</li>
+                        <li class='juzgar' title='Juzgar'>J</li>
+                    </ul>                  
+                    <p class='username' title= 'Laura Escobar Bonnett'>Laura Escobar Bonnett</p>
+                    <p class='rol'>Princesa <b style='color:#fff;'>+100</b></p>
+                </div>
+            </div>`
+};
+_useRs.asop= {};
+_useRs.asop["L"]= {
+    username: "L",
+    users_name: "Laura Escobar Bonnett",
+    profilePic: "/resources/images/L/OGnpwD3jys_tn.jpg",
+    rol: {
+        rol: "Princesa",
+        level: "100"
+    },
+    tool:  `<div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/L/OGnpwD3jys_tn.jpg'>
+                <div class='datos'>
+                    <ul class='actions'>
+                        <li class='chatear' title='Chatear'>C</li>
+                        <li class='agregar' title='Agregar'>A</li>
+                        <li class='juzgar' title='Juzgar'>J</li>
+                    </ul>                  
+                    <p class='username' title= 'Laura Escobar Bonnett'>Laura Escobar Bonnett</p>
+                    <p class='rol'>Princesa <b style='color:#fff;'>+100</b></p>
+                </div>
+            </div>`
+};
+_useRs.asop["A.K.A._Dizzy"]= {
+    username: "A.K.A._Dizzy",
+    users_name: "Luis Eduardo Gallego García",
+    profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
+    rol: {
+        rol: "CEO",
+        level: "100"
+    },
+    tool: `<div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
+                <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
+                <div class='datos'>
+                    <ul class='actions'>
+                        <li class='chatear' title='Chatear'>C</li>
+                        <li class='agregar' title='Agregar'>A</li>
+                        <li class='juzgar' title='Juzgar'>J</li>
+                    </ul>                  
+                    <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
+                    <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
+                </div>
+                <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
+                <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
+                <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
+                <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
+            </div>`
+};
+_useRs.asop["user"]= {
+    username: "user",
+    users_name: "Walter White",
+    profilePic: "/resources/images/white.jpg",
+    rol: {
+        rol: "Moderador",
+        level: "60"
+    },
+    tool:  `<div class='tool'>
+                <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='60'>
+                <img src='/resources/images/white.jpg'>
+                <div class='datos'>
+                    <ul class='actions'>
+                        <li class='chatear' title='Chatear'>C</li>
+                        <li class='agregar' title='Agregar'>A</li>
+                        <li class='juzgar' title='Juzgar'>J</li>
+                    </ul>                  
+                    <p class='username' title= 'Walter White'>Walter White</p>
+                    <p class='rol'>Moderador <b style='color:#fff;'>+60</b></p>
+                </div>
+            <div class='insignia' style='top: 9px;' title='Hum'></div>
+            <div class='insignia' style='top: 28px;' title='Hum'></div>
+            <div class='insignia' style='top: 35px;' title='Hum'></div>
+          </div>`
+
+};
 var index= {
     stories: [
-    "/AuraCardonaC/img/du0pgbjUY8", {
-            user: {
-                username: "AuraCardonaC",
-                users_name: "Aura María Cardona Demasiado",
-                profilePic: {
-                        "/AuraCardonaC/img/H5TxBHq4ff": {
-                            type: "img",
-                            date: {
-                                full: "13 de Agosto de 2022 a las 10:8 pm",
-                                min: "Agosto de 2022"
-                            },
-                            title: `El mejor momento 😍🌅`,
-                            description: ``,
-                            contents:  {image: "H5TxBHq4ff_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "Profe de fitness",
-                    level: "94"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
-                            <img src='/resources/images/AuraCardonaC/H5TxBHq4ff_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
-                            </div>
-                        </div>`
+    "/AuraCardonaC/vid/8I2X63UvOl", {
+            user: _useRs["AuraCardonaC"],
+            type: "vid",
+            date: {
+                full: "2 de Octubre de 2023 a las 8:22 pm",
+                min: "2 de Octubre a las 8:22 pm"
             },
+            title: `FELIZ CUMPLEAÑOS AL AMOR DE MI VIDA 😍`,
+            description: `@juancardona.c te amo mi CHIKITITIII cómo me gustaría poder estar contigo acompañándote en tu día, gracias por ser el mejor hermano de todos y por siempre estar ahí en todo momento !!! ❤️ te amo y te extraño. Estoy feliz de que vas a ser el mejor tío de todosss🤰🏼te amamos mi CHIKI que cumplas muchos más !💙 @juancardona.c`,
+            contents:  {video: "8I2X63UvOl"},
+            Comentarios: ""
+        },
+    "/AuraCardonaC/img/P0cN877R2I", {
+            user: _useRs["AuraCardonaC"],
+            type: "img",
+            date: {
+                full: "24 de Septiembre de 2023 a las 3:20 pm",
+                min: "24 de Septiembre a las 3:20 pm"
+            },
+            city: {name: "Calima", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Lago_Calima.jpg/800px-Lago_Calima.jpg", description: `Calima es un municipio colombiano del departamento del Valle del Cauca fundado, principalmente, por colonos vallecaucanos, y además, de antioqueños y caldenses. Está situado a 86 km de Cali, la temperatura media es de 18 °C, con una población total de 18.469 habitantes, considerado municipio desde 1939 y fundado en 1907 y su extensión total es de 1154 km². Su cabecera municipal se llama El Darién. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Dari%C3%A9n_(Valle_del_Cauca)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `💙`,
+            description: ``,
+            contents:  {image: "P0cN877R2I.jpg"},
+            Comentarios: ""
+        },
+    "/AuraCardonaC/img/OVMv6r5HXh", {
+            user: _useRs["AuraCardonaC"],
+            type: "mult_img",
+            date: {
+                full: "20 de Septiembre de 2023 a las 11:4 am",
+                min: "20 de Septiembre a las 11:4 am"
+            },
+            city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: ``,
+            description: 
+`Quién dijo que las futuras mamás debemos dejar de mostrarnos y perder nuestro lado sexy? 😒 pues en mi caso seré todoo lo contrario y seguiré siendo yo en compañía de mi hermoso bebe que viene en camino!
+Siempre sexy y llenita de amor !!💙
+20.7💙`,
+            contents:  {carrContents: ["OVMv6r5HXh.jpg", "tgK5fvhBhc.jpg", "UHJrVbKKzD.jpg", "m4e2EuNoSV.jpg", "i2omGU3bfL.jpg"]},
+            Comentarios: "",
+        },
+    "/AuraCardonaC/img/LFyQla7rNl", {
+            user: _useRs["AuraCardonaC"],
+            type: "mult_img",
+            date: {
+                full: "19 de Septiembre de 2023 a la 1:3 pm",
+                min: "19 de Septiembre a la 1:3 pm"
+            },
+            city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `Aquí como si nada!!✨💙`,
+            description: ``,
+            contents:  {carrContents: ["LFyQla7rNl.jpg", "wdogHMyfM7.jpg"]},
+            Comentarios: "",
+        },
+    "/AuraCardonaC/img/ELhxhv8M4z", {
+            user: _useRs["AuraCardonaC"],
+            type: "img",
+            date: {
+                full: "18 de Septiembre de 2023 a las 2:48 pm",//18,09,2023,2,48,1
+                min: "18 de Septiembre a las 2:48 pm"
+            },
+            city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `✨`,
+            description: ``,
+            contents:  {image: "ELhxhv8M4z.jpg"},
+            Comentarios: ""
+        },
+    "/AuraCardonaC/img/Q5PdSfPTyw", {
+            user: _useRs["AuraCardonaC"],
+            type: "mult_img",
+            date: {
+                full: "18 de Septiembre de 2023 a las 2:11 pm",
+                min: "18 de Septiembre a las 2:11 pm"
+            },
+            city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `Aquí con los hombres de mi vida celebrando el amor y la amistad 💙 una sóla energía por siempre!✨`,
+            description: ``,
+            contents:  {carrContents: ["Q5PdSfPTyw.jpg", "4TYpF0uEVH.jpg", "0EMFIhd94G.jpg", "UtEHBvCgXJ.jpg"]},
+            Comentarios: "",
+        },
+    "/AuraCardonaC/img/FhmYzc6oL7", {
+            user: _useRs["AuraCardonaC"],
+            type: "mult_img",
+            date: {
+                full: "17 de Septiembre de 2023 a las 7:11 pm",
+                min: "17 de Septiembre a las 7:11 pm"
+            },
+            city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `21 semanas llenas de amor!💙✨`,
+            description: `Disfrutando mi etapa , disfrutando mi momento!`,
+            contents:  {carrContents: ["FhmYzc6oL7.jpg", "yQV7lYAbne.jpg", "grZjXYJtja.jpg"]},
+            Comentarios: "",
+        },
+    "/AuraCardonaC/img/n4K7mqwPSx", {
+            user: _useRs["AuraCardonaC"],
+            type: "mult_img",
+            date: {
+                full: "17 de Septiembre de 2023 a las 6:21 pm",
+                min: "17 de Septiembre a las 6:21 pm"
+            },
+            city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `🩷`,
+            description: ``,
+            contents:  {carrContents: ["n4K7mqwPSx.jpg", "pX10aO7Zrh.jpg"]},
+            Comentarios: "",
+        },
+    "/AuraCardonaC/vid/Wwejjti93z", {
+            user: _useRs["AuraCardonaC"],
+            type: "vid",
+            date: {
+                full: "17 de Septiembre de 2023 a las 4:23 pm",
+                min: "17 de Septiembre a las 4:23 pm"
+            },
+            title: `FELIZ DÍA DEL AMOR Y LA AMISTAD ❣️`,
+            description: ``,
+            contents:  {video: "Wwejjti93z"},
+            Comentarios: ""
+        },
+    "/AuraCardonaC/img/rgVMwRIqz0", {
+            user: _useRs["AuraCardonaC"],
+            type: "mult_img",
+            date: {
+                full: "15 de Septiembre de 2023 a la 1:26 pm",
+                min: "15 de Septiembre a la 1:26 pm"
+            },
+            city: {name: "Cartagena de Indias", pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Castillo_San_Felipe_ingreso.JPG/276px-Castillo_San_Felipe_ingreso.JPG", description: `Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias (abreviado Cartagena de Indias, D. T. y C.), es un distrito colombiano,​ desde 1991.​ Ubicada a orillas del mar Caribe. Fue fundada el 1 de junio de 1533 por Pedro de Heredia.​ Capital del departamento de Bolívar. Su centro histórico, llamada «Ciudad Amurallada», fue declarado Patrimonio Nacional de Colombia en 1959 y por la Unesco como Patrimonio de la Humanidad en 1984. <br><a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Cartagena_de_Indias'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
+            title: `🌸🩵`,
+            description: ``,
+            contents:  {carrContents: ["rgVMwRIqz0.jpg", "ASJ2OiXYtj.jpg", "XEaEu1HCGq.jpg"]},
+            Comentarios: "",
+        },
+    "/AuraCardonaC/vid/tq6qxx4XLj", {
+            user: _useRs["AuraCardonaC"],
+            type: "vid",
+            date: {
+                full: "15 de Septiembre de 2023 a las 11:12 am",
+                min: "15 de Septiembre a las 11:12 am"
+            },
+            title: `Este último video que les subo de esta cele...`,
+            description: 
+`...bración tan hermosa que tuvimos es para agradecerle a todos mis invitados y familiares por acompañarnos en este día tan especial. Les recomiendo ver todo hasta el final 🤪
+
+Quiero agradecer nuevamente a todas las empresas que hicieron posible y realidad este sueño que siempre había tenido 😍
+REVELACIÓN DE SEXO 🩵🩷
+Planner: @claudiajimenezevent
+📍 @sarangel.resortevents
+🎈 @angeles_expresionesconamor
+🖨️ @impronta.co
+🪑 @decorsillas
+🥳 @horahappygospel
+🎆 @somosexperience
+🎂 @thesugarfactorypalmira
+🎫 @juliananavarrofiestascreativas
+🍸 @vitalogy_cocktails
+🍿 @bienestarintegradodeservicios
+⛱️ @entodaocasion_eventos
+🎥 @visual_zuleta
+🎥 @pipesaa`,
+            contents:  {video: "tq6qxx4XLj"},
+            Comentarios: ""
+        },
+    "/AuraCardonaC/img/YlvYXTx0RA", {
+            user: _useRs["AuraCardonaC"],
+            type: "img",
+            date: {
+                full: "14 de Septiembre de 2023 a las 5:4 pm",
+                min: "14 de Septiembre a las 5:4 pm"
+            },
+            title: `💙🩵💙`,
+            description: ``,
+            contents:  {image: "YlvYXTx0RA.jpg"},
+            Comentarios: ""
+        },
+    "/AuraCardonaC/vid/DJQAorjTfP", {
+            user: _useRs["AuraCardonaC"],
+            type: "vid",
+            date: {
+                full: "13 de Septiembre de 2023 a las 2:59 pm",
+                min: "13 de Septiembre a las 2:59 pm"
+            },
+            title: `🩷GIRL OR BOY🩵`,
+            description: 
+`Creo que este ha sido uno de los momentos más especiales de mi vida , les confieso que me tomó totalmente por sorpresa el resultado de mi revelación🥹
+JAMÁSSS ME LO IMAGINÉ pero ahora que lo sé soy la futura mamá más feliz del mundo!
+
+Quiero agradecer a todo mi equipo que hizo posible esta celebración tan especial para todos nosotros 🙏🏻
+
+REVELACIÓN DE SEXO 🩵🩷
+Planner: @claudiajimenezevent
+📍 @sarangel.resortevents
+🎈 @angeles_expresionesconamor
+🖨️ @impronta.co
+🪑 @decorsillas
+🥳 @horahappygospel
+🎆 @somosexperience
+🎂 @thesugarfactorypalmira
+🎫 @juliananavarrofiestascreativas
+🍸 @vitalogy_cocktails
+🍿 @bienestarintegradodeservicios
+⛱️ @entodaocasion_eventos
+🎥 @visual_zuleta
+👗 @_franchesca.co`,
+            contents:  {video: "DJQAorjTfP"},
+            Comentarios: ""
+        },
+    "/AuraCardonaC/img/l5j5TdxdBT", {
+            user: _useRs["AuraCardonaC"],
+            type: "mult_img",
+            date: {
+                full: "12 de Septiembre de 2023 a las 4:53 pm",
+                min: "12 de Septiembre a las 4:53 pm"
+            },
+            title: `SEMANA 20.3🤰🏼💙`,
+            description: `No saben cómo le agradezco a Dios poder estar disfrutando cada etapa de mi embarazo. Ahora que estoy en este estado pienso que realmente todo está en tu mente; tu fuerza, tus ganas, tu sensualidad, tu brillo absolutamente TODO✨. No permitas que ningún cambio en tu vida apague tu luz!! Creo que para las que soñamos algún día con ser madres, esta es la mejor etapa que vamos a poder vivir y experimentar en nuestras vidas 😍`,
+            contents:  {carrContents: ["l5j5TdxdBT.jpg", "a6nEHNGT1n.jpg", "3sOkVFcDCb.jpg", "BcvjcNhrUe.jpg"]},
+            Comentarios: "",
+        },
+    "/AuraCardonaC/vid/y6BnAQX3fk", {
+            user: _useRs["AuraCardonaC"],
+            type: "vid",
+            date: {
+                full: "10 de Septiembre de 2023 a las 3:32 pm",
+                min: "10 de Septiembre a las 3:32 pm"
+            },
+            title: `SUBAN EL VOLUMEN 🥹🎧 ⛶`,
+            description: `Mi mayor felicidad cuando vi el resultado positivo de la prueba fue pensar en los años de vida que le iba a regalar a mis papás, es su primer nieto el cual han esperado durante muchos años y hoy tengo el corazón lleno de amor y mucha felicidad al ser la primera en la familia en poder otorgarles esa alegría 🙏🏻. Me siento orgullosa y privilegiada al tenerlos como padres, pues gracias a ellos soy la mujer quien soy; les agradezco por enseñarme a darle el verdadero significado al amor y por inculcarme algo que se ha perdido mucho en la actualidad: el valor y el respeto por LA FAMILIA y las ganas de luchar junto a tu pareja para construir un hogar estable y feliz. Por eso y mucho más, gracias @ramirocardonap y Lili por ser ustedes mi mejor elección como padres!🙏🏻❤️`,
+            contents:  {video: "y6BnAQX3fk"},
+            Comentarios: ""
+        },
+    "/AuraCardonaC/img/nYBvv7BSLM", {
+            user: _useRs["AuraCardonaC"],
+            type: "img",
+            date: {
+                full: "3 de Septiembre de 2023 a las 11:5 pm",
+                min: "3 de Septiembre a las 11:5 pm"
+            },
+            title: `Ya somos 2 en la foto!🤍`,
+            description: ``,
+            contents:  {image: "nYBvv7BSLM.jpg"},
+            Comentarios: ""
+        },
+    "/AuraCardonaC/vid/FInpoYgfof", {
+            user: _useRs["AuraCardonaC"],
+            type: "vid",
+            date: {
+                full: "31 de Agosto de 2023 a las 6:22 pm",
+                min: "31 de Agosto a las 6:22 pm"
+            },
+            title: `Hoy les comparto la felicidad más grande de nuestras vidas!🙏🏻`,
+            description: `fueron meses muy difíciles para mí y para mi bebe he tenido un embarazo de alto riesgo por todas las enfermedades que me dieron, hoy con felicidad en mi corazón puedo decirles que ya estamos fuera de peligro y que ahora sí puedo empezarles a compartir todo lo que ha pasado desde el momento que nos dimos cuenta que íbamos a ser papás!😍 por ahora los dejo con este video que fue la noticia más maravillosa que nos llego hace unos meses!🙏🏻`,
+            contents:  {video: "FInpoYgfof"},
+            Comentarios: ""
+        },
+    "/AuraCardonaC/vid/UQCjfSS0aQ", {
+            user: _useRs["AuraCardonaC"],
+            type: "vid",
+            date: {
+                full: "26 de Agosto de 2023 a la 1:12 pm",
+                min: "26 de Agosto a la 1:12 pm"
+            },
+            title: `Si se queda mirándote así😍NO LO DEJES IR!`,
+            description: ``,
+            contents:  {video: "UQCjfSS0aQ"},
+            Comentarios: ""
+        },
+    "/AuraCardonaC/vid/NY4MG3Hdpy", {
+            user: _useRs["AuraCardonaC"],
+            type: "vid",
+            date: {
+                full: "19 de Agosto de 2023 a las 8:15 pm",
+                min: "19 de Agosto a las 8:15 pm"
+            },
+            title: `DÍA DE COGER COLOR EN @bronceadoperfecto ☀️🩷`,
+            description: ``,
+            contents:  {video: "NY4MG3Hdpy"},
+            Comentarios: ""
+        },
+    "/AuraCardonaC/img/du0pgbjUY8", {
+            user: _useRs["AuraCardonaC"],
             type: "img",
             date: {
                 full: "23 de Julio de 2023 a la 2:3 pm",
@@ -47,40 +708,7 @@ var index= {
             Comentarios: ""
         },
     "/AuraCardonaC/img/WygkZ4N76A", {
-            user: {
-                username: "AuraCardonaC",
-                users_name: "Aura María Cardona Demasiado",
-                profilePic: {
-                        "/AuraCardonaC/img/H5TxBHq4ff": {
-                            type: "img",
-                            date: {
-                                full: "13 de Agosto de 2022 a las 10:8 pm",
-                                min: "Agosto de 2022"
-                            },
-                            title: `El mejor momento 😍🌅`,
-                            description: ``,
-                            contents:  {image: "H5TxBHq4ff_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "Profe de fitness",
-                    level: "94"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
-                            <img src='/resources/images/AuraCardonaC/H5TxBHq4ff_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["AuraCardonaC"],
             type: "mult_img",
             date: {
                 full: "16 de Julio de 2023 a las 4:41 pm",
@@ -93,40 +721,7 @@ var index= {
             Comentarios: ""
         },
     "/AuraCardonaC/vid/cFlySITheM", {
-            user: {
-                username: "AuraCardonaC",
-                users_name: "Aura María Cardona Demasiado",
-                profilePic: {
-                        "/AuraCardonaC/img/H5TxBHq4ff": {
-                            type: "img",
-                            date: {
-                                full: "13 de Agosto de 2022 a las 10:8 pm",
-                                min: "Agosto de 2022"
-                            },
-                            title: `El mejor momento 😍🌅`,
-                            description: ``,
-                            contents:  {image: "H5TxBHq4ff_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "Profe de fitness",
-                    level: "94"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
-                            <img src='/resources/images/AuraCardonaC/H5TxBHq4ff_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["AuraCardonaC"],
             type: "vid",
             date: {
                 full: "12 de Julio de 2023 a las 4:17 pm",
@@ -138,40 +733,7 @@ var index= {
             Comentarios: ""
         },
     "/AuraCardonaC/img/KZlbnHNzb8", {
-            user: {
-                username: "AuraCardonaC",
-                users_name: "Aura María Cardona Demasiado",
-                profilePic: {
-                        "/AuraCardonaC/img/H5TxBHq4ff": {
-                            type: "img",
-                            date: {
-                                full: "13 de Agosto de 2022 a las 10:8 pm",
-                                min: "Agosto de 2022"
-                            },
-                            title: `El mejor momento 😍🌅`,
-                            description: ``,
-                            contents:  {image: "H5TxBHq4ff_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "Profe de fitness",
-                    level: "94"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
-                            <img src='/resources/images/AuraCardonaC/H5TxBHq4ff_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["AuraCardonaC"],
             type: "mult_img",
             date: {
                 full: "3 de Julio de 2023 a las 11:15 am",
@@ -184,40 +746,7 @@ var index= {
             Comentarios: ""
         },
     "/AuraCardonaC/img/Eh3nC0TNKk", {
-            user: {
-                username: "AuraCardonaC",
-                users_name: "Aura María Cardona Demasiado",
-                profilePic: {
-                        "/AuraCardonaC/img/H5TxBHq4ff": {
-                            type: "img",
-                            date: {
-                                full: "13 de Agosto de 2022 a las 10:8 pm",
-                                min: "Agosto de 2022"
-                            },
-                            title: `El mejor momento 😍🌅`,
-                            description: ``,
-                            contents:  {image: "H5TxBHq4ff_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "Profe de fitness",
-                    level: "94"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
-                            <img src='/resources/images/AuraCardonaC/H5TxBHq4ff_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["AuraCardonaC"],
             type: "mult_img",
             date: {
                 full: "2 de Julio de 2023 a las 10:27 am",
@@ -230,40 +759,7 @@ var index= {
             Comentarios: ""
         },
     "/AuraCardonaC/img/TeS2XyDbc7", {
-            user: {
-                username: "AuraCardonaC",
-                users_name: "Aura María Cardona Demasiado",
-                profilePic: {
-                        "/AuraCardonaC/img/H5TxBHq4ff": {
-                            type: "img",
-                            date: {
-                                full: "13 de Agosto de 2022 a las 10:8 pm",
-                                min: "Agosto de 2022"
-                            },
-                            title: `El mejor momento 😍🌅`,
-                            description: ``,
-                            contents:  {image: "H5TxBHq4ff_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "Profe de fitness",
-                    level: "94"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
-                            <img src='/resources/images/AuraCardonaC/H5TxBHq4ff_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["AuraCardonaC"],
             type: "mult_img",
             date: {
                 full: "1 de Julio de 2023 a las 3:16 pm",
@@ -276,40 +772,7 @@ var index= {
             Comentarios: ""
         },
     "/AuraCardonaC/img/M2pYeEQZYc", {
-            user: {
-                username: "AuraCardonaC",
-                users_name: "Aura María Cardona Demasiado",
-                profilePic: {
-                        "/AuraCardonaC/img/H5TxBHq4ff": {
-                            type: "img",
-                            date: {
-                                full: "13 de Agosto de 2022 a las 10:8 pm",
-                                min: "Agosto de 2022"
-                            },
-                            title: `El mejor momento 😍🌅`,
-                            description: ``,
-                            contents:  {image: "H5TxBHq4ff_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "Profe de fitness",
-                    level: "94"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
-                            <img src='/resources/images/AuraCardonaC/H5TxBHq4ff_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["AuraCardonaC"],
             type: "mult_img",
             date: {
                 full: "1 de Julio de 2023 a las 0:45 pm",
@@ -321,40 +784,7 @@ var index= {
             Comentarios: ""
         },
     "/AuraCardonaC/img/ugjOD304PU", {
-            user: {
-                username: "AuraCardonaC",
-                users_name: "Aura María Cardona Demasiado",
-                profilePic: {
-                        "/AuraCardonaC/img/H5TxBHq4ff": {
-                            type: "img",
-                            date: {
-                                full: "13 de Agosto de 2022 a las 10:8 pm",
-                                min: "Agosto de 2022"
-                            },
-                            title: `El mejor momento 😍🌅`,
-                            description: ``,
-                            contents:  {image: "H5TxBHq4ff_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "Profe de fitness",
-                    level: "94"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
-                            <img src='/resources/images/AuraCardonaC/H5TxBHq4ff_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["AuraCardonaC"],
             type: "mult_img",
             date: {
                 full: "30 de Junio de 2023 a las 2:13 pm",
@@ -367,40 +797,7 @@ var index= {
             Comentarios: ""
         },
     "/MeganFox/img/Yu7ps34i6t", {
-            user: {
-                username: "MeganFox",
-                users_name: "Megan Denise Fox",
-                profilePic: {
-                        "/MeganFox/img/nc79cNubi8": {
-                            type: "img",
-                            date: {
-                                full: "17 de Julio de 2022 a las 0:10 pm",
-                                min: "17 de Julio a las 0:10 pm"
-                            },
-                            title: `the trees call me by my name`,
-                            description: ``,
-                            contents:  {image: "nc79cNubi8_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["MeganFox"],
             type: "mult_img",
             date: {
                 full: "19 de Julio de 2023 a las 6:34 pm",
@@ -412,40 +809,7 @@ var index= {
             Comentarios: ""
         },
     "/MeganFox/img/92Myy9CUyU", {
-            user: {
-                username: "MeganFox",
-                users_name: "Megan Denise Fox",
-                profilePic: {
-                        "/MeganFox/img/nc79cNubi8": {
-                            type: "img",
-                            date: {
-                                full: "17 de Julio de 2022 a las 0:10 pm",
-                                min: "17 de Julio a las 0:10 pm"
-                            },
-                            title: `the trees call me by my name`,
-                            description: ``,
-                            contents:  {image: "nc79cNubi8_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["MeganFox"],
             type: "mult_img",
             date: {
                 full: "18 de Julio de 2023 a las 3:8 pm",
@@ -457,40 +821,7 @@ var index= {
             Comentarios: ""
         },
     "/MeganFox/img/nc79cNubi8", {
-            user: {
-                username: "MeganFox",
-                users_name: "Megan Denise Fox",
-                profilePic: {
-                        "/MeganFox/img/nc79cNubi8": {
-                            type: "img",
-                            date: {
-                                full: "17 de Julio de 2022 a las 0:10 pm",
-                                min: "17 de Julio a las 0:10 pm"
-                            },
-                            title: `the trees call me by my name`,
-                            description: ``,
-                            contents:  {image: "nc79cNubi8_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["MeganFox"],
             type: "mult_img",
             date: {
                 full: "17 de Julio de 2022 a las 0:10 pm",
@@ -502,40 +833,7 @@ var index= {
             Comentarios: ""
         },
     "/MeganFox/img/chyfUpPNM1", {
-            user: {
-                username: "MeganFox",
-                users_name: "Megan Denise Fox",
-                profilePic: {
-                        "/MeganFox/img/nc79cNubi8": {
-                            type: "img",
-                            date: {
-                                full: "17 de Julio de 2022 a las 0:10 pm",
-                                min: "17 de Julio a las 0:10 pm"
-                            },
-                            title: `the trees call me by my name`,
-                            description: ``,
-                            contents:  {image: "nc79cNubi8_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["MeganFox"],
             type: "mult_carr",
             date: {
                 full: "15 de Julio de 2023 a las 3:13 pm",
@@ -547,40 +845,7 @@ var index= {
             Comentarios: ""
         },
     "/MeganFox/vid/qcCQ0xyu8N", {
-            user: {
-                username: "MeganFox",
-                users_name: "Megan Denise Fox",
-                profilePic: {
-                        "/MeganFox/img/nc79cNubi8": {
-                            type: "img",
-                            date: {
-                                full: "17 de Julio de 2022 a las 0:10 pm",
-                                min: "17 de Julio a las 0:10 pm"
-                            },
-                            title: `the trees call me by my name`,
-                            description: ``,
-                            contents:  {image: "nc79cNubi8_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["MeganFox"],
             type: "vid",
             date: {
                 full: "8 de Junio de 2023 a las 8:20 am",
@@ -592,40 +857,7 @@ var index= {
             Comentarios: ""
         },
     "/MeganFox/vid/CfWWfdm024", {
-            user: {
-                username: "MeganFox",
-                users_name: "Megan Denise Fox",
-                profilePic: {
-                        "/MeganFox/img/nc79cNubi8": {
-                            type: "img",
-                            date: {
-                                full: "17 de Julio de 2022 a las 0:10 pm",
-                                min: "17 de Julio a las 0:10 pm"
-                            },
-                            title: `the trees call me by my name`,
-                            description: ``,
-                            contents:  {image: "nc79cNubi8_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["MeganFox"],
             type: "vid",
             date: {
                 full: "7 de Junio de 2023 a las 7:1 pm",
@@ -637,44 +869,7 @@ var index= {
             Comentarios: ""
         },
     "/A.K.A._Dizzy/pos/K82nd9clLd", {
-            user: {
-                username: "A.K.A._Dizzy",
-                users_name: "Luis Eduardo Gallego García",
-                profilePic: {
-                        "/A.K.A._Dizzy/img/4uHf7tgk8C": {
-                            type: "img",
-                            date: {
-                                full: "27 de Septiembre de 2023 a las 3:27 pm",
-                                min: "27 de Septiembre a las 3:27 pm"
-                            },
-                            title: `La Luna y sus alrededores...`,
-                            description: ``,
-                            contents:  {image: "4uHf7tgk8C_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "CEO",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
-                                <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
-                            </div>
-                            <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
-                            <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
-                            <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
-                            <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-                        </div>`
-            },
+            user: _useRs["A.K.A._Dizzy"],
             type: "links",
             date: {
                 full: "28 de Mayo de 2023 a las 8:14 pm",
@@ -696,40 +891,7 @@ var index= {
             Comentarios: ""
         },
     "/MeganFox/img/Kh0K3EhRyP", {
-            user: {
-                username: "MeganFox",
-                users_name: "Megan Denise Fox",
-                profilePic: {
-                        "/MeganFox/img/nc79cNubi8": {
-                            type: "img",
-                            date: {
-                                full: "17 de Julio de 2022 a las 0:10 pm",
-                                min: "17 de Julio a las 0:10 pm"
-                            },
-                            title: `the trees call me by my name`,
-                            description: ``,
-                            contents:  {image: "nc79cNubi8_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["MeganFox"],
             type: "mult_carr",
             date: {
                 full: "20 de Mayo de 2023 a las 2:16 pm",
@@ -741,44 +903,7 @@ var index= {
             Comentarios: ""
         },
     "/A.K.A._Dizzy/pos/kdm0g0dTee", {
-            user: {
-                username: "A.K.A._Dizzy",
-                users_name: "Luis Eduardo Gallego García",
-                profilePic: {
-                        "/A.K.A._Dizzy/img/4uHf7tgk8C": {
-                            type: "img",
-                            date: {
-                                full: "27 de Septiembre de 2023 a las 3:27 pm",
-                                min: "27 de Septiembre a las 3:27 pm"
-                            },
-                            title: `La Luna y sus alrededores...`,
-                            description: ``,
-                            contents:  {image: "4uHf7tgk8C_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "CEO",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
-                                <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
-                            </div>
-                            <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
-                            <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
-                            <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
-                            <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-                        </div>`
-            },
+            user: _useRs["A.K.A._Dizzy"],
             type: "links",
             date: {
                 full: "2 de Febrero de 2023 a la 1:17 pm",
@@ -800,44 +925,7 @@ var index= {
             Editado: [ 'type= "c"; edHistory= {"Editado el 14 de Junio de 2023 a la 8:13 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/477c19b1d8f2a2a8fcf97adb36e05b9ca4c2e69d/pos/kdm0g0dTee.html", "Editado el 30 de Mayo de 2023 a la 1:15 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/75a468ba4c951dc9f2a11410593da1f1e49f6d2c/pos/kdm0g0dTee.html", "Editado el 15 de Mayo de 2023 a la 1:55 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/c6ba0b7b59bd19e373ba2889107d3718b8c958f9/pos/kdm0g0dTee.html", "Editado el 9 de Mayo de 2023 a las 9:7 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/480ecf868ac9b5dfe990cc0466a5ba2efa0e6638/pos/kdm0g0dTee.html", "Editado el 7 de Mayo de 2023 a las 9:20 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/00609f7ad315316f573325a7d8cc9e70c9e0cb27/pos/kdm0g0dTee.html", "Editado el 28 de Abril de 2023 a las 12:2 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/aa674bdcac4401bb76c346caee6a51067961f7fa/pos/kdm0g0dTee.html", "Editado el 27 de Abril de 2023 a las 7:40 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/d06622a9d21a48031570fa5ab08c72ebac11a6b9/pos/kdm0g0dTee.html", "Editado el 21 de Abril de 2023 a las 12:50 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/cb849bc9aba297de325f72aa2000c46c7493dcd6/pos/kdm0g0dTee.html", "Editado el 20 de Abril de 2023 a las 12:15 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/00de1bee94093cd044d94c42034e7948bdcc52ed/pos/kdm0g0dTee.html", "Editado el 19 de Abril de 2023 a las 9:57 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/7cd723ed4f5d503fe00d7cc1797b536fa94f202a/pos/kdm0g0dTee.html", "Editado el 17 de Abril de 2023 a las 8:12 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/16bff48bb8a86cb56287d60424f81b34b41ab02e/pos/kdm0g0dTee.html", "Editado el 11 de Abril de 2023 a las 4:34 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/3387a7c14d44dc2c80b795c1fecc65b0d8cffe46/pos/kdm0g0dTee.html", "Editado el 10 de Marzo de 2023 a las 4:24 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/2e21386ea5c531c7e2bcf30ba28f38ffe469cdbc/pos/kdm0g0dTee.html", "Editado el 4 de Marzo de 2023 a las 3:9 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/f67c2778ee5297ed1fb33ab807e75a88d6de06c4/pos/kdm0g0dTee.html", "Editado el 3 de Marzo de 2023 a las 9:40 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/c598ac10596bdb10d07ee8e4a528520e289032f6/pos/kdm0g0dTee.html", "Editado el 5 de Febrero de 2023 a la 1:7 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/db21ec804c9352254baf282bc0321493f92a7106/pos/kdm0g0dTee.html", "2 de Febrero de 2023 a la 1:17 pm": "https://raw.githubusercontent.com/lirilC/A.K.A._Dizzy/ffc96d089a6bbfb588ac2e358ffd7433224be8f5/pos/kdm0g0dTee.html"}', "Editado el 14 de Junio de 2023 a la 8:13 pm"]
         },
         "/A.K.A._Dizzy/pos/p413w4Mawl", {
-            user: {
-                username: "A.K.A._Dizzy",
-                users_name: "Luis Eduardo Gallego García",
-                profilePic: {
-                        "/A.K.A._Dizzy/img/4uHf7tgk8C": {
-                            type: "img",
-                            date: {
-                                full: "27 de Septiembre de 2023 a las 3:27 pm",
-                                min: "27 de Septiembre a las 3:27 pm"
-                            },
-                            title: `La Luna y sus alrededores...`,
-                            description: ``,
-                            contents:  {image: "4uHf7tgk8C_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "CEO",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
-                                <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
-                            </div>
-                            <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
-                            <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
-                            <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
-                            <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-                        </div>`
-            },
+            user: _useRs["A.K.A._Dizzy"],
             type: "links",
             date: {
                 full: "24 de Diciembre de 2022 a las 0:0 pm",
@@ -876,40 +964,7 @@ var index= {
             Comentarios: ""
         },
         "/whale_Shailene/pos/zxMaLXAkxg", {
-            user: {
-                username: "whale_Shailene",
-                users_name: "Shailene Diann Woodley",
-                profilePic: {
-                        "/whale_Shailene/img/RKRWeNhDgJ": {
-                            type: "img",
-                            date: {
-                                full: "19 de Noviembre de 2022 a las 7:4 pm",
-                                min: "Noviembre de 2022"
-                            },
-                            title: `.monot.`,
-                            description: ``,
-                            contents:  {image: "RKRWeNhDgJ_tn.jpg"},
-                            Comentarios: ``
-                        }
-                    },
-                rol:{
-                    rol: "SEO",
-                    level: "94"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='98'>
-                            <img src='/resources/images/whale_Shailene/RKRWeNhDgJ_tn.jpg'>
-                            <div class='datos'>
-                              <ul class='actions'>
-                                <li class='chatear' title='Chatear'>C</li>
-                                <li class='agregar' title='Agregar'>A</li>
-                                <li class='juzgar' title='Juzgar'>J</li>
-                              </ul>
-                              <p class='username' title= 'whale_Shailene'>Shailene Diann Woodley</p>
-                              <p class='rol'>SEO <b style='color:#fff;'>+98</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["whale_Shailene"],
             type: "links",
             date: {
                 full: "20 de Diciembre de 2022 a las 7:1 pm",
@@ -923,40 +978,7 @@ var index= {
             Comentarios: ""
         },
         "/MeganFox/img/SzrEX6md0n", {
-            user: {
-                username: "MeganFox",
-                users_name: "Megan Denise Fox",
-                profilePic: {
-                        "/MeganFox/img/nc79cNubi8": {
-                            type: "img",
-                            date: {
-                                full: "17 de Julio de 2022 a las 0:10 pm",
-                                min: "17 de Julio a las 0:10 pm"
-                            },
-                            title: `the trees call me by my name`,
-                            description: ``,
-                            contents:  {image: "nc79cNubi8_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["MeganFox"],
             type: "mult_img",
             date: {
                 full: "9 de Diciembre de 2022 a las 1:10 pm",
@@ -968,67 +990,13 @@ var index= {
             Comentarios: ""
         },
         "/L/img/CT8HFtH57Y", {
-            user: {
-                username: "whale_Shailene",
-                users_name: "Shailene Diann Woodley",
-                profilePic: {
-                        "/whale_Shailene/img/RKRWeNhDgJ": {
-                            type: "img",
-                            date: {
-                                full: "19 de Noviembre de 2022 a las 7:4 pm",
-                                min: "Noviembre de 2022"
-                            },
-                            title: `.monot.`,
-                            description: ``,
-                            contents:  {image: "RKRWeNhDgJ_tn.jpg"},
-                            Comentarios: ``
-                        }
-                    },
-                rol:{
-                    rol: "SEO",
-                    level: "94"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='98'>
-                            <img src='/resources/images/whale_Shailene/RKRWeNhDgJ_tn.jpg'>
-                            <div class='datos'>
-                              <ul class='actions'>
-                                <li class='chatear' title='Chatear'>C</li>
-                                <li class='agregar' title='Agregar'>A</li>
-                                <li class='juzgar' title='Juzgar'>J</li>
-                              </ul>
-                              <p class='username' title= 'whale_Shailene'>Shailene Diann Woodley</p>
-                              <p class='rol'>SEO <b style='color:#fff;'>+98</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["whale_Shailene"],
             type: "repostImg",
             date: {
                 full: "3 de Diciembre de 2022 a las 2:2 pm",
                 min: "Diciembre de 2022"
             },
-            originalPoster: {
-                username: "L",
-                users_name: "Laura Escobar Bonnett",
-                profilePic: "/resources/images/L/OGnpwD3jys_tn.jpg",
-                rol: {
-                    rol: "Princesa",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/L/OGnpwD3jys_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Laura Escobar Bonnett'>Laura Escobar Bonnett</p>
-                                <p class='rol'>Princesa <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            originalPoster: _useRs.asop["L"],
             title: "...",
             description: ``,
             contents:  {image: "CT8HFtH57Y.jpg"},
@@ -1059,40 +1027,7 @@ var index= {
                         </div>`
         },
         "/whale_Shailene/pos/4rNglo8BUN", {
-            user: {
-                username: "whale_Shailene",
-                users_name: "Shailene Diann Woodley",
-                profilePic: {
-                        "/whale_Shailene/img/RKRWeNhDgJ": {
-                            type: "img",
-                            date: {
-                                full: "19 de Noviembre de 2022 a las 7:4 pm",
-                                min: "Noviembre de 2022"
-                            },
-                            title: `.monot.`,
-                            description: ``,
-                            contents:  {image: "RKRWeNhDgJ_tn.jpg"},
-                            Comentarios: ``
-                        }
-                    },
-                rol:{
-                    rol: "SEO",
-                    level: "94"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='98'>
-                            <img src='/resources/images/whale_Shailene/RKRWeNhDgJ_tn.jpg'>
-                            <div class='datos'>
-                              <ul class='actions'>
-                                <li class='chatear' title='Chatear'>C</li>
-                                <li class='agregar' title='Agregar'>A</li>
-                                <li class='juzgar' title='Juzgar'>J</li>
-                              </ul>
-                              <p class='username' title= 'whale_Shailene'>Shailene Diann Woodley</p>
-                              <p class='rol'>SEO <b style='color:#fff;'>+98</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["whale_Shailene"],
             type: "links",
             date: {
                 full: "3 de Diciembre de 2022 a la 1:6 pm",
@@ -1106,40 +1041,7 @@ var index= {
             Comentarios: ""
         },
         "/whale_Shailene/pos/oGRrvbxcAF", {
-            user: {
-                username: "whale_Shailene",
-                users_name: "Shailene Diann Woodley",
-                profilePic: {
-                        "/whale_Shailene/img/RKRWeNhDgJ": {
-                            type: "img",
-                            date: {
-                                full: "19 de Noviembre de 2022 a las 7:4 pm",
-                                min: "Noviembre de 2022"
-                            },
-                            title: `.monot.`,
-                            description: ``,
-                            contents:  {image: "RKRWeNhDgJ_tn.jpg"},
-                            Comentarios: ``
-                        }
-                    },
-                rol:{
-                    rol: "SEO",
-                    level: "94"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='98'>
-                            <img src='/resources/images/whale_Shailene/RKRWeNhDgJ_tn.jpg'>
-                            <div class='datos'>
-                              <ul class='actions'>
-                                <li class='chatear' title='Chatear'>C</li>
-                                <li class='agregar' title='Agregar'>A</li>
-                                <li class='juzgar' title='Juzgar'>J</li>
-                              </ul>
-                              <p class='username' title= 'whale_Shailene'>Shailene Diann Woodley</p>
-                              <p class='rol'>SEO <b style='color:#fff;'>+98</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["whale_Shailene"],
             type: "containments",
             date: {
                 full: "2 de Diciembre de 2022 a las 6:22 pm",
@@ -1161,40 +1063,7 @@ var index= {
             Comentarios: ``
         },
         "/AuraCardonaC/img/eQZeHjWK8V", {
-            user: {
-                username: "AuraCardonaC",
-                users_name: "Aura María Cardona Demasiado",
-                profilePic: {
-                        "/AuraCardonaC/img/H5TxBHq4ff": {
-                            type: "img",
-                            date: {
-                                full: "13 de Agosto de 2022 a las 10:8 pm",
-                                min: "Agosto de 2022"
-                            },
-                            title: `El mejor momento 😍🌅`,
-                            description: ``,
-                            contents:  {image: "H5TxBHq4ff_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "Profe de fitness",
-                    level: "94"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
-                            <img src='/resources/images/AuraCardonaC/H5TxBHq4ff_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["AuraCardonaC"],
             type: "mult_img",
             date: {
                 full: "5 de Octubre de 2022 a las 2:6 pm",
@@ -1206,40 +1075,7 @@ var index= {
             Comentarios: "",
         },
         "/MeganFox/img/u5skYVxux7", {
-            user: {
-                username: "MeganFox",
-                users_name: "Megan Denise Fox",
-                profilePic: {
-                        "/MeganFox/img/nc79cNubi8": {
-                            type: "img",
-                            date: {
-                                full: "17 de Julio de 2022 a las 0:10 pm",
-                                min: "17 de Julio a las 0:10 pm"
-                            },
-                            title: `the trees call me by my name`,
-                            description: ``,
-                            contents:  {image: "nc79cNubi8_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["MeganFox"],
             type: "mult_img",
             date: {
                 full: "18 de Noviembre de 2022 a las 3:15 pm",
@@ -1251,40 +1087,7 @@ var index= {
             Comentarios: ""
         },
         "/MeganFox/img/oGUg7NaroZ", {
-            user: {
-                username: "MeganFox",
-                users_name: "Megan Denise Fox",
-                profilePic: {
-                        "/MeganFox/img/nc79cNubi8": {
-                            type: "img",
-                            date: {
-                                full: "17 de Julio de 2022 a las 0:10 pm",
-                                min: "17 de Julio a las 0:10 pm"
-                            },
-                            title: `the trees call me by my name`,
-                            description: ``,
-                            contents:  {image: "nc79cNubi8_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["MeganFox"],
             type: "mult_img",
             date: {
                 full: "19 de Octubre de 2022 a las 6:34 pm",
@@ -1296,40 +1099,7 @@ var index= {
             Comentarios: ""
         },
         "/AuraCardonaC/img/EfEQzbHdzv", {
-            user: {
-                username: "AuraCardonaC",
-                users_name: "Aura María Cardona Demasiado",
-                profilePic: {
-                        "/AuraCardonaC/img/H5TxBHq4ff": {
-                            type: "img",
-                            date: {
-                                full: "13 de Agosto de 2022 a las 10:8 pm",
-                                min: "Agosto de 2022"
-                            },
-                            title: `El mejor momento 😍🌅`,
-                            description: ``,
-                            contents:  {image: "H5TxBHq4ff_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "Profe de fitness",
-                    level: "94"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
-                            <img src='/resources/images/AuraCardonaC/H5TxBHq4ff_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["AuraCardonaC"],
             type: "mult_img",
             date: {
                 full: "4 de Octubre de 2022 a las 3:3 pm",
@@ -1341,40 +1111,7 @@ var index= {
             Comentarios: ""
         },
         "/MeganFox/img/qTaHNrHo4j", {
-            user: {
-                username: "MeganFox",
-                users_name: "Megan Denise Fox",
-                profilePic: {
-                        "/MeganFox/img/nc79cNubi8": {
-                            type: "img",
-                            date: {
-                                full: "17 de Julio de 2022 a las 0:10 pm",
-                                min: "17 de Julio a las 0:10 pm"
-                            },
-                            title: `the trees call me by my name`,
-                            description: ``,
-                            contents:  {image: "nc79cNubi8_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["MeganFox"],
             type: "mult_img",
             date: {
                 full: "3 de Octubre de 2022 a las 5:16 pm",
@@ -1386,74 +1123,13 @@ var index= {
             Comentarios: ""
         },
         "/A.K.A._Dizzy/pos/ZIW9P3p4dt", {
-            user: {
-                username: "LamaMadora",
-                users_name: "Juan José Martínez Vidal",
-                profilePic: {
-                        "/LamaMadora/img/sdlQg1CoQ3": {
-                            type: "img",
-                            date: {
-                                full: "12 de Diciembre de 2021 a las 2:18 pm",
-                                min: "Diciembre de 2021"
-                            },
-                            title: ``,
-                            description: ``,
-                            contents:  {image: "sdlQg1CoQ3_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "Dubber",
-                    level: "88"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='88'>
-                            <img src='/resources/images/LamaMadora/sdlQg1CoQ3_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p title= 'Juan José Martínez Vidal' class='username'>Juan José Martínez Vidal</p>
-                                <p class='rol'>Dubber <b style='color:#fff;'>+88</b></p>
-                            </div>
-                            <div class='insignia' style='top: 11px; border-bottom-color: #4f61bf; ' title='Curso completado (Dubbing en español)'></div>
-                            <div class='insignia' style='top: 23px; border-bottom-color: #79371d; 'title='Curso completado (Sub syncing)'></div>
-                            <div class='insignia' style='top: 17px; border-bottom-color: #8c8866; ' title='Rol asignado (Dubber)'> </div>
-                          </div>`
-            },
+            user: _useRs["LamaMadora"],
             type: "repostLinks",
             date: {
                 full: "1 de Octubre de 2022 a las 8:54 pm",
                 min: "Octubre de 2022"
             },
-            originalPoster: {
-                username: "A.K.A._Dizzy",
-                users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
-                rol: {
-                    rol: "CEO",
-                    level: "100"
-                },
-                tool: `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
-                                <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
-                            </div>
-                            <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
-                            <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
-                            <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
-                            <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-                        </div>`
-            },
+            originalPoster: _useRs.asop["A.K.A._Dizzy"],
             title: "Algo Más Sobre Mí",
             description: ``,
             contents:  `<section id="links">
@@ -1462,40 +1138,7 @@ var index= {
             Comentarios: ""
         },
         "/MeganFox/img/7q5KgBPkOY", {
-            user: {
-                username: "MeganFox",
-                users_name: "Megan Denise Fox",
-                profilePic: {
-                        "/MeganFox/img/nc79cNubi8": {
-                            type: "img",
-                            date: {
-                                full: "17 de Julio de 2022 a las 0:10 pm",
-                                min: "17 de Julio a las 0:10 pm"
-                            },
-                            title: `the trees call me by my name`,
-                            description: ``,
-                            contents:  {image: "nc79cNubi8_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["MeganFox"],
             type: "mult_img",
             date: {
                 full: "1 de Octubre de 2022 a las 8:17 pm",
@@ -1507,40 +1150,7 @@ var index= {
             Comentarios: ""
         },
         "/MeganFox/img/gQv7jG4RCp", {
-            user: {
-                username: "MeganFox",
-                users_name: "Megan Denise Fox",
-                profilePic: {
-                        "/MeganFox/img/nc79cNubi8": {
-                            type: "img",
-                            date: {
-                                full: "17 de Julio de 2022 a las 0:10 pm",
-                                min: "17 de Julio a las 0:10 pm"
-                            },
-                            title: `the trees call me by my name`,
-                            description: ``,
-                            contents:  {image: "nc79cNubi8_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["MeganFox"],
             type: "mult_img",
             date: {
                 full: "30 de Septiembre de 2022 a las 6:7 am",
@@ -1552,40 +1162,7 @@ var index= {
             Comentarios: ""
         },
         "/AuraCardonaC/img/1uI4nhQwrH", {
-            user: {
-                username: "AuraCardonaC",
-                users_name: "Aura María Cardona Demasiado",
-                profilePic: {
-                        "/AuraCardonaC/img/H5TxBHq4ff": {
-                            type: "img",
-                            date: {
-                                full: "13 de Agosto de 2022 a las 10:8 pm",
-                                min: "Agosto de 2022"
-                            },
-                            title: `El mejor momento 😍🌅`,
-                            description: ``,
-                            contents:  {image: "H5TxBHq4ff_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "Profe de fitness",
-                    level: "94"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
-                            <img src='/resources/images/AuraCardonaC/H5TxBHq4ff_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["AuraCardonaC"],
             type: "img",
             date: {
                 full: "31 de Septiembre de 2022 a la 1:4 pm",
@@ -1597,40 +1174,7 @@ var index= {
             Comentarios: ""
         },
         "/MeganFox/img/QDHpif5S3n", {
-            user: {
-                username: "MeganFox",
-                users_name: "Megan Denise Fox",
-                profilePic: {
-                        "/MeganFox/img/nc79cNubi8": {
-                            type: "img",
-                            date: {
-                                full: "17 de Julio de 2022 a las 0:10 pm",
-                                min: "17 de Julio a las 0:10 pm"
-                            },
-                            title: `the trees call me by my name`,
-                            description: ``,
-                            contents:  {image: "nc79cNubi8_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["MeganFox"],
             type: "mult_carr",
             date: {
                 full: "27 de Septiembre de 2022 a las 9:41 pm",
@@ -1681,32 +1225,7 @@ var index= {
                 full: "20 de Septiembre de 2022 a las 5:17 pm",
                 min: "Septiembre de 2022"
             },
-            originalPoster: {
-                username: "A.K.A._Dizzy",
-                users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
-                rol: {
-                    rol: "CEO",
-                    level: "100"
-                },
-                tool: `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
-                                <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
-                            </div>
-                            <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
-                            <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
-                            <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
-                            <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-                        </div>`
-            },
+            originalPoster: _useRs.asop["A.K.A._Dizzy"],
             title: "FRANCIA y ElDelprincipio",
             description: ``,
             contents:  `<section id="links">
@@ -1716,72 +1235,13 @@ var index= {
             Comentarios: ""
         },
         "/A.K.A._Dizzy/pos/YEOxwElo0s", {
-            user: {
-                username: "PpP",
-                users_name: "La Perrita Del Poste",
-                profilePic: {
-                        "/PpP/img/bZj2vYrklo": {
-                            type: "img",
-                            date: {
-                                full: "20 de Septiembre de 2022 a las 4:7 pm",
-                                min: "Septiembre de 2022"
-                            },
-                            city: {name: "Rionegro", pic: "https://upload.wikimedia.org/wikipedia/commons/2/26/Atardecer-parque.jpg", description: `Rionegro es una pequeña ciudad en los Andes colombianos. Aquí se encuentra el aeropuerto internacional de Medellín. En la Plaza de la Libertad está la Catedral de San Nicolás, con sus cúpulas. El Museo Histórico Casa de la Convención se encuentra en un edificio en el que se sancionó una versión de la constitución colombiana en 1863. Al sudoeste, está Tutucán, que es una réplica de un pueblo típico local, con una iglesia, un molino y una granja. <a target= '_blank'style= 'font-size:0.8em; ' href= 'https://es.wikipedia.org/wiki/Rionegro_(Antioquia)'><span style= 'color: #2ecc71; font-size: 1.5em; '>···</span> es.wikipedia.org</a>`},
-                            title: ``,
-                            description: ``,
-                            contents:  {image: "bZj2vYrklo_tn.jpg"},
-                            Comentarios: ``
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/PpP/bZj2vYrklo_tn.jpg'>
-                            <div class='datos'>
-                              <ul class='actions'>
-                                <li class='chatear' title='Chatear'>C</li>
-                                <li class='agregar' title='Agregar'>A</li>
-                                <li class='juzgar' title='Juzgar'>J</li>
-                              </ul>
-                              <p class='username' title= 'La Perrita Del Poste'>La Perrita Del Poste</p>
-                              <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["PpP"],
             type: "repostLinks",
             date: {
                 full: "20 de Septiembre de 2022 a las 4:58 pm",
                 min: "Septiembre de 2022"
             },
-            originalPoster: {
-                username: "A.K.A._Dizzy",
-                users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
-                rol: {
-                    rol: "CEO",
-                    level: "100"
-                },
-                tool: `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
-                                <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
-                            </div>
-                            <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
-                            <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
-                            <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
-                            <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-                        </div>`
-            },
+            originalPoster: _useRs.asop["A.K.A._Dizzy"],
             title: "La Perrita Del Poste",
             description: ``,
             contents:  `<section id="links">
@@ -1790,44 +1250,7 @@ var index= {
             Comentarios: ""
         },
         "/A.K.A._Dizzy/vid/YGrUmbzaP6", {
-            user: {
-                username: "A.K.A._Dizzy",
-                users_name: "Luis Eduardo Gallego García",
-                profilePic: {
-                        "/A.K.A._Dizzy/img/4uHf7tgk8C": {
-                            type: "img",
-                            date: {
-                                full: "27 de Septiembre de 2023 a las 3:27 pm",
-                                min: "27 de Septiembre a las 3:27 pm"
-                            },
-                            title: `La Luna y sus alrededores...`,
-                            description: ``,
-                            contents:  {image: "4uHf7tgk8C_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "CEO",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
-                                <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
-                            </div>
-                            <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
-                            <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
-                            <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
-                            <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-                        </div>`
-            },
+            user: _useRs["A.K.A._Dizzy"],
             type: "mult_carr",
             date: {
                 full: "17 de Septiembre de 2022 a las 2:52 pm",
@@ -1839,40 +1262,7 @@ var index= {
             Comentarios: ""
         },
         "/MeganFox/img/MFU1p9jw6f", {
-            user: {
-                username: "MeganFox",
-                users_name: "Megan Denise Fox",
-                profilePic: {
-                        "/MeganFox/img/nc79cNubi8": {
-                            type: "img",
-                            date: {
-                                full: "17 de Julio de 2022 a las 0:10 pm",
-                                min: "17 de Julio a las 0:10 pm"
-                            },
-                            title: `the trees call me by my name`,
-                            description: ``,
-                            contents:  {image: "nc79cNubi8_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["MeganFox"],
             type: "mult_img",
             date: {
                 full: "16 de Septiembre de 2022 a las 8:40 pm",
@@ -1884,40 +1274,7 @@ var index= {
             Comentarios: ""
         },
         "/AuraCardonaC/img/4dWE1Axo8k", {
-            user: {
-                username: "AuraCardonaC",
-                users_name: "Aura María Cardona Demasiado",
-                profilePic: {
-                        "/AuraCardonaC/img/H5TxBHq4ff": {
-                            type: "img",
-                            date: {
-                                full: "13 de Agosto de 2022 a las 10:8 pm",
-                                min: "Agosto de 2022"
-                            },
-                            title: `El mejor momento 😍🌅`,
-                            description: ``,
-                            contents:  {image: "H5TxBHq4ff_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "Profe de fitness",
-                    level: "94"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
-                            <img src='/resources/images/AuraCardonaC/H5TxBHq4ff_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["AuraCardonaC"],
             type: "mult_carr",
             date: {
                 full: "8 de Septiembre de 2022 a la 1:31 pm",
@@ -1930,40 +1287,7 @@ var index= {
             Comentarios: ""
         },
         "/MeganFox/vid/wD9Afzs350", {
-            user: {
-                username: "MeganFox",
-                users_name: "Megan Denise Fox",
-                profilePic: {
-                        "/MeganFox/img/nc79cNubi8": {
-                            type: "img",
-                            date: {
-                                full: "17 de Julio de 2022 a las 0:10 pm",
-                                min: "17 de Julio a las 0:10 pm"
-                            },
-                            title: `the trees call me by my name`,
-                            description: ``,
-                            contents:  {image: "nc79cNubi8_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["MeganFox"],
             type: "mult_carr",
             date: {
                 full: "7 de Septiembre de 2022 a las 7:9 pm",
@@ -1976,74 +1300,13 @@ var index= {
             Comentarios: ""
         },
         "/A.K.A._Dizzy/pos/r1WjYcRQhw", {
-            user: {
-                username: "LamaMadora",
-                users_name: "Juan José Martínez Vidal",
-                profilePic: {
-                        "/LamaMadora/img/sdlQg1CoQ3": {
-                            type: "img",
-                            date: {
-                                full: "12 de Diciembre de 2021 a las 2:18 pm",
-                                min: "Diciembre de 2021"
-                            },
-                            title: ``,
-                            description: ``,
-                            contents:  {image: "sdlQg1CoQ3_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "Dubber",
-                    level: "88"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='88'>
-                            <img src='/resources/images/LamaMadora/sdlQg1CoQ3_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p title= 'Juan José Martínez Vidal' class='username'>Juan José Martínez Vidal</p>
-                                <p class='rol'>Dubber <b style='color:#fff;'>+88</b></p>
-                            </div>
-                            <div class='insignia' style='top: 11px; border-bottom-color: #4f61bf; ' title='Curso completado (Dubbing en español)'></div>
-                            <div class='insignia' style='top: 23px; border-bottom-color: #79371d; 'title='Curso completado (Sub syncing)'></div>
-                            <div class='insignia' style='top: 17px; border-bottom-color: #8c8866; ' title='Rol asignado (Dubber)'> </div>
-                          </div>`
-            },
+            user: _useRs["LamaMadora"],
             type: "repost_multimedia",
             date: {
                 full: "31 de Agosto de 2022 a las 3:43 pm",
                 min: "Agosto de 2022"
             },
-            originalPoster: {
-                username: "A.K.A._Dizzy",
-                users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
-                rol: {
-                    rol: "CEO",
-                    level: "100"
-                },
-                tool: `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
-                                <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
-                            </div>
-                            <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
-                            <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
-                            <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
-                            <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-                        </div>`
-            },
+            originalPoster: _useRs.asop["A.K.A._Dizzy"],
             title: "Constructor And Business Partners - Planifique (LQ)",
             description: ``,
             contents:  `<media>
@@ -2076,44 +1339,7 @@ var index= {
             Editado: [ 'type= "oC"; edHistory= {"Editado el 31 de Agosto de 2022 a las 3:38 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/217e1b57c5435fc2bbd612547fcecac4eb679f7c/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 10 de Febrero de 2022 a las 10:10 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/bddd6cbfa15e6e2bb27bde6bef42f86914f21b3e/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 25 de Octubre de 2021 a la 1:4 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/503dbef970047386769e56c222383c0db0f29ead/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 15 de Junio de 2021 a las 2:5 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/4c2ca79928a725ae354503865d01d703ef674098/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "10 de Marzo de 2021 a las 8:38 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/f4905f92a5eea07f0259cdd31cfea213d30a925b/A.K.A._Dizzy/pos/r1WjYcRQhw.html"}', "Editado el 31 de Agosto de 2022 a las 3:38 pm"]
         },
         "/A.K.A._Dizzy/pos/CvXsC3PQ5A", {
-            user: {
-                username: "A.K.A._Dizzy",
-                users_name: "Luis Eduardo Gallego García",
-                profilePic: {
-                        "/A.K.A._Dizzy/img/4uHf7tgk8C": {
-                            type: "img",
-                            date: {
-                                full: "27 de Septiembre de 2023 a las 3:27 pm",
-                                min: "27 de Septiembre a las 3:27 pm"
-                            },
-                            title: `La Luna y sus alrededores...`,
-                            description: ``,
-                            contents:  {image: "4uHf7tgk8C_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "CEO",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
-                                <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
-                            </div>
-                            <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
-                            <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
-                            <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
-                            <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-                        </div>`
-            },
+            user: _useRs["A.K.A._Dizzy"],
             type: "links",
             date: {
                 full: "2 de Agosto de 2022 a las 9:31 pm",
@@ -2132,143 +1358,26 @@ var index= {
             Comentarios: ""
         },
         "/A.K.A._Dizzy/vid/CHFZVxsnIK", {
-            user: {
-                username: "AuraCardonaC",
-                users_name: "Aura María Cardona Demasiado",
-                profilePic: {
-                        "/AuraCardonaC/img/H5TxBHq4ff": {
-                            type: "img",
-                            date: {
-                                full: "13 de Agosto de 2022 a las 10:8 pm",
-                                min: "Agosto de 2022"
-                            },
-                            title: `El mejor momento 😍🌅`,
-                            description: ``,
-                            contents:  {image: "H5TxBHq4ff_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "Profe de fitness",
-                    level: "94"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
-                            <img src='/resources/images/AuraCardonaC/H5TxBHq4ff_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["AuraCardonaC"],
             type: "repostVideo",
             date: {
                 full: "24 de Julio de 2022 a las 9:51 am",
                 min: "24 de Julio a las 9:51 am"
             },
-            originalPoster: {
-                username: "A.K.A._Dizzy",
-                users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
-                rol: {
-                    rol: "CEO",
-                    level: "100"
-                },
-                tool: `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
-                                <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
-                            </div>
-                            <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
-                            <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
-                            <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
-                            <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-                        </div>`
-            },
+            originalPoster: _useRs.asop["A.K.A._Dizzy"],
             title: "Una canción que le escribí a Danielle Henao",
             description: ``,
             contents:  {video: "CHFZVxsnIK"},
             Comentarios: ""
         },
         "/A.K.A._Dizzy/pos/ZGm4LhyR6Y", {
-            user: {
-                username: "G-Suschrist",
-                users_name: "Dios Jesucristo",
-                profilePic: {
-                        "/G-Suschrist/img/Rvu7YjVcXr": {
-                            type: "img",
-                            date: {
-                                full: "1 de Enero de 2021 a las 3:25 pm",
-                                min: "Enero de 2021"
-                            },
-                            city: {name: "Manywhere", pic: "j", description: `Manywhere. <a target= '_blank'style= 'font-size:0.8em; ' href= ''><span style= 'color: #2ecc71; font-size: 1.5em; '>···&nbsp</span>es.wikipedia.org</a>`},
-                            title: `Por aquí y por allá; casual.`,
-                            description: ``,
-                            contents:  {image: "Rvu7YjVcXr_tn.jpg"},
-                            Comentarios: ``
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/G-Suschrist/Rvu7YjVcXr_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Dios Jesucristo'>Dios Jesucristo</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["G-Suschrist"],
             type: "repostLinks",
             date: {
                 full: "24 de Julio de 2022 a las 8:1 pm",
                 min: "Julio de 2022"
             },
-            originalPoster: {
-                username: "A.K.A._Dizzy",
-                users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
-                rol: {
-                    rol: "CEO",
-                    level: "100"
-                },
-                tool: `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
-                                <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
-                            </div>
-                            <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
-                            <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
-                            <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
-                            <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-                        </div>`
-            },
+            originalPoster: _useRs.asop["A.K.A._Dizzy"],
             title: "dinosaurios(); ",
             description: ``,
             contents:  `<section id="links">
@@ -2278,72 +1387,13 @@ var index= {
             Comentarios: ``
         },
         "/A.K.A._Dizzy/pos/gujcNPk8fT", {
-            user: {
-                username: "G-Suschrist",
-                users_name: "Dios Jesucristo",
-                profilePic: {
-                        "/G-Suschrist/img/Rvu7YjVcXr": {
-                            type: "img",
-                            date: {
-                                full: "1 de Enero de 2021 a las 3:25 pm",
-                                min: "Enero de 2021"
-                            },
-                            city: {name: "Manywhere", pic: "j", description: `Manywhere. <a target= '_blank'style= 'font-size:0.8em; ' href= ''><span style= 'color: #2ecc71; font-size: 1.5em; '>···&nbsp</span>es.wikipedia.org</a>`},
-                            title: `Por aquí y por allá; casual.`,
-                            description: ``,
-                            contents:  {image: "Rvu7YjVcXr_tn.jpg"},
-                            Comentarios: ``
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/G-Suschrist/Rvu7YjVcXr_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Dios Jesucristo'>Dios Jesucristo</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["G-Suschrist"],
             type: "repostLinks",
             date: {
                 full: "24 de Julio de 2022 a las 7:55 pm",
                 min: "Julio de 2022"
             },
-            originalPoster: {
-                username: "A.K.A._Dizzy",
-                users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
-                rol: {
-                    rol: "CEO",
-                    level: "100"
-                },
-                tool: `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
-                                <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
-                            </div>
-                            <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
-                            <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
-                            <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
-                            <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-                        </div>`
-            },
+            originalPoster: _useRs.asop["A.K.A._Dizzy"],
             title: "por_siLaBas(); ",
             description: ``,
             contents:  `<section id="links">
@@ -2353,72 +1403,13 @@ var index= {
             Comentarios: ``
         },
         "/A.K.A._Dizzy/pos/lHltXe9mbc", {
-            user: {
-                username: "G-Suschrist",
-                users_name: "Dios Jesucristo",
-                profilePic: {
-                        "/G-Suschrist/img/Rvu7YjVcXr": {
-                            type: "img",
-                            date: {
-                                full: "1 de Enero de 2021 a las 3:25 pm",
-                                min: "Enero de 2021"
-                            },
-                            city: {name: "Manywhere", pic: "j", description: `Manywhere. <a target= '_blank'style= 'font-size:0.8em; ' href= ''><span style= 'color: #2ecc71; font-size: 1.5em; '>···&nbsp</span>es.wikipedia.org</a>`},
-                            title: `Por aquí y por allá; casual.`,
-                            description: ``,
-                            contents:  {image: "Rvu7YjVcXr_tn.jpg"},
-                            Comentarios: ``
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/G-Suschrist/Rvu7YjVcXr_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Dios Jesucristo'>Dios Jesucristo</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["G-Suschrist"],
             type: "repostLinks",
             date: {
                 full: "24 de Julio de 2022 a las 7:27 pm",
                 min: "Julio de 2022"
             },
-            originalPoster: {
-                username: "A.K.A._Dizzy",
-                users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
-                rol: {
-                    rol: "CEO",
-                    level: "100"
-                },
-                tool: `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
-                                <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
-                            </div>
-                            <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
-                            <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
-                            <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
-                            <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-                        </div>`
-            },
+            originalPoster: _useRs.asop["A.K.A._Dizzy"],
             title: "aNGEL(); ",
             description: ``,
             contents:  `<section id="links">
@@ -2429,70 +1420,13 @@ var index= {
             Comentarios: ``
         },
         "/L/img/CT8HFtH57Y", {
-            user: {
-                username: "LamaMadora",
-                users_name: "Juan José Martínez Vidal",
-                profilePic: {
-                        "/LamaMadora/img/sdlQg1CoQ3": {
-                            type: "img",
-                            date: {
-                                full: "12 de Diciembre de 2021 a las 2:18 pm",
-                                min: "Diciembre de 2021"
-                            },
-                            title: ``,
-                            description: ``,
-                            contents:  {image: "sdlQg1CoQ3_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "Dubber",
-                    level: "88"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='88'>
-                            <img src='/resources/images/LamaMadora/sdlQg1CoQ3_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p title= 'Juan José Martínez Vidal' class='username'>Juan José Martínez Vidal</p>
-                                <p class='rol'>Dubber <b style='color:#fff;'>+88</b></p>
-                            </div>
-                            <div class='insignia' style='top: 11px; border-bottom-color: #4f61bf; ' title='Curso completado (Dubbing en español)'></div>
-                            <div class='insignia' style='top: 23px; border-bottom-color: #79371d; 'title='Curso completado (Sub syncing)'></div>
-                            <div class='insignia' style='top: 17px; border-bottom-color: #8c8866; ' title='Rol asignado (Dubber)'> </div>
-                          </div>`
-            },
+            user: _useRs["LamaMadora"],
             type: "repostImg",
             date: {
                 full: "24 de Julio de 2022 a las 5:2 pm",
                 min: "Julio de 2022"
             },
-            originalPoster: {
-                username: "L",
-                users_name: "Laura Escobar Bonnett",
-                profilePic: "/resources/images/L/OGnpwD3jys_tn.jpg",
-                rol: {
-                    rol: "Princesa",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/L/OGnpwD3jys_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Laura Escobar Bonnett'>Laura Escobar Bonnett</p>
-                                <p class='rol'>Princesa <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            originalPoster: _useRs.asop["L"],
             title: "...",
             description: ``,
             contents:  {image: "CT8HFtH57Y.jpg"},
@@ -2523,75 +1457,13 @@ var index= {
                         </div>`
         },
         "/user/pos/kZCvatjUhF", {
-            user: {
-                username: "A.K.A._Dizzy",
-                users_name: "Luis Eduardo Gallego García",
-                profilePic: {
-                        "/A.K.A._Dizzy/img/4uHf7tgk8C": {
-                            type: "img",
-                            date: {
-                                full: "27 de Septiembre de 2023 a las 3:27 pm",
-                                min: "27 de Septiembre a las 3:27 pm"
-                            },
-                            title: `La Luna y sus alrededores...`,
-                            description: ``,
-                            contents:  {image: "4uHf7tgk8C_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "CEO",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
-                                <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
-                            </div>
-                            <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
-                            <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
-                            <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
-                            <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-                        </div>`
-            },
+            user: _useRs["A.K.A._Dizzy"],
             type: "repostLinks",
             date: {
                 full: "24 de Julio de 2022 a las 7:8 pm",
                 min: "Julio de 2022"
             },
-            originalPoster: {
-                username: "user",
-                users_name: "Walter White",
-                profilePic: "/resources/images/white.jpg",
-                rol: {
-                    rol: "Moderador",
-                    level: "60"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='60'>
-                            <img src='/resources/images/white.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Walter White'>Walter White</p>
-                                <p class='rol'>Moderador <b style='color:#fff;'>+60</b></p>
-                            </div>
-                        <div class='insignia' style='top: 9px;' title='Hum'></div>
-                        <div class='insignia' style='top: 28px;' title='Hum'></div>
-                        <div class='insignia' style='top: 35px;' title='Hum'></div>
-                      </div>`
-
-            },
+            originalPoster: _useRs.asop["user"],
             title: "_dvlpmt",
             description: ``,
             contents:  `<section id="links">
@@ -2600,67 +1472,13 @@ var index= {
             Comentarios: ""
         },
         "/L/img/CT8HFtH57Y", {
-            user: {
-                username: "MeganFox",
-                users_name: "Megan Denise Fox",
-                profilePic: {
-                        "/MeganFox/img/nc79cNubi8": {
-                            type: "img",
-                            date: {
-                                full: "17 de Julio de 2022 a las 0:10 pm",
-                                min: "17 de Julio a las 0:10 pm"
-                            },
-                            title: `the trees call me by my name`,
-                            description: ``,
-                            contents:  {image: "nc79cNubi8_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["MeganFox"],
             type: "repostImg",
             date: {
                 full: "24 de Julio de 2022 a las 5:2 pm",
                 min: "Julio de 2022"
             },
-            originalPoster: {
-                username: "L",
-                users_name: "Laura Escobar Bonnett",
-                profilePic: "/resources/images/L/OGnpwD3jys_tn.jpg",
-                rol: {
-                    rol: "Princesa",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/L/OGnpwD3jys_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Laura Escobar Bonnett'>Laura Escobar Bonnett</p>
-                                <p class='rol'>Princesa <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            originalPoster: _useRs.asop["L"],
             title: "...",
             description: ``,
             contents:  {image: "CT8HFtH57Y.jpg"},
@@ -2691,67 +1509,13 @@ var index= {
                         </div>`
         },
         "/L/img/CT8HFtH57Y", {
-            user: {
-                username: "AuraCardonaC",
-                users_name: "Aura María Cardona Demasiado",
-                profilePic: {
-                        "/AuraCardonaC/img/H5TxBHq4ff": {
-                            type: "img",
-                            date: {
-                                full: "13 de Agosto de 2022 a las 10:8 pm",
-                                min: "Agosto de 2022"
-                            },
-                            title: `El mejor momento 😍🌅`,
-                            description: ``,
-                            contents:  {image: "H5TxBHq4ff_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "Profe de fitness",
-                    level: "94"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
-                            <img src='/resources/images/AuraCardonaC/H5TxBHq4ff_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["AuraCardonaC"],
             type: "repostImg",
             date: {
                 full: "24 de Julio de 2022 a las 3:58 pm",
                 min: "Julio de 2022"
             },
-            originalPoster: {
-                username: "L",
-                users_name: "Laura Escobar Bonnett",
-                profilePic: "/resources/images/L/OGnpwD3jys_tn.jpg",
-                rol: {
-                    rol: "Princesa",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/L/OGnpwD3jys_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Laura Escobar Bonnett'>Laura Escobar Bonnett</p>
-                                <p class='rol'>Princesa <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            originalPoster: _useRs.asop["L"],
             title: "...",
             description: ``,
             contents:  {image: "CT8HFtH57Y.jpg"},
@@ -2782,71 +1546,13 @@ var index= {
                         </div>`
         },
         "/A.K.A._Dizzy/pos/r1WjYcRQhw", {
-            user: {
-                username: "L",
-                users_name: "Laura Escobar Bonnett",
-                profilePic: {
-                        "/L/img/OGnpwD3jys": {
-                            type: "img",
-                            date: {
-                                full: "2 de Enero de 2022 a las 2:51 pm",
-                                min: "Enero de 2022"
-                            },
-                            title: `⚔️`,
-                            description: ``,
-                            contents:  {image: "OGnpwD3jys_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "Princesa",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/L/OGnpwD3jys_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Laura Escobar Bonnett'>Laura Escobar Bonnett</p>
-                                <p class='rol'>Princesa <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["L"],
             type: "repost_multimedia",
             date: {
                 full: "24 de Julio de 2022 a las 3:29 pm",
                 min: "Julio de 2022"
             },
-            originalPoster: {
-                username: "A.K.A._Dizzy",
-                users_name: "Luis Eduardo Gallego García",
-                profilePic: "/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg",
-                rol: {
-                    rol: "CEO",
-                    level: "100"
-                },
-                tool: `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
-                                <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
-                            </div>
-                            <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
-                            <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
-                            <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
-                            <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-                        </div>`
-            },
+            originalPoster: _useRs.asop["A.K.A._Dizzy"],
             title: "Constructor And Business Partners - Planifique (LQ)",
             description: ``,
             contents:  `<media>
@@ -2879,44 +1585,7 @@ var index= {
             Editado: [ 'type= "oC"; edHistory= {"Editado el 31 de Agosto de 2022 a las 3:38 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/217e1b57c5435fc2bbd612547fcecac4eb679f7c/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 10 de Febrero de 2022 a las 10:10 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/bddd6cbfa15e6e2bb27bde6bef42f86914f21b3e/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 25 de Octubre de 2021 a la 1:4 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/503dbef970047386769e56c222383c0db0f29ead/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "Editado el 15 de Junio de 2021 a las 2:5 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/4c2ca79928a725ae354503865d01d703ef674098/A.K.A._Dizzy/pos/r1WjYcRQhw.html", "10 de Marzo de 2021 a las 8:38 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/f4905f92a5eea07f0259cdd31cfea213d30a925b/A.K.A._Dizzy/pos/r1WjYcRQhw.html"}', "Editado el 31 de Agosto de 2022 a las 3:38 pm"]
         },
         "/A.K.A._Dizzy/pos/hptI4FO7Tv", {
-            user: {
-                username: "A.K.A._Dizzy",
-                users_name: "Luis Eduardo Gallego García",
-                profilePic: {
-                        "/A.K.A._Dizzy/img/4uHf7tgk8C": {
-                            type: "img",
-                            date: {
-                                full: "27 de Septiembre de 2023 a las 3:27 pm",
-                                min: "27 de Septiembre a las 3:27 pm"
-                            },
-                            title: `La Luna y sus alrededores...`,
-                            description: ``,
-                            contents:  {image: "4uHf7tgk8C_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "CEO",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
-                                <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
-                            </div>
-                            <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
-                            <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
-                            <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
-                            <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-                        </div>`
-            },
+            user: _useRs["A.K.A._Dizzy"],
             type: "links",
             date: {
                 full: "3 de Julio de 2022 a las 0:52 am",
@@ -2938,68 +1607,13 @@ var index= {
             Editado: [ 'type= "oC"; edHistory= {"Editado el 10 de Julio de 2022 a las 8:55 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/8f7354d4e2cc556b82e0e14f47787119ef00b259/A.K.A._Dizzy/pos/hptI4FO7Tv.html", "3 de Julio de 2022 a las 0:52 am": "https://raw.githubusercontent.com/lirilCo/lirilco.github.io/11d7faa7fda75e0e72ad7f32b8bed9d0d4909b91/A.K.A._Dizzy/pos/hptI4FO7Tv.html"}', "Editado el 10 de Julio de 2022 a las 8:55 pm"]
         },
         "/G-Suschrist/pos/lfJa5nhGOt", {
-            user: {
-                username: "G-Suschrist",
-                users_name: "Dios Jesucristo",
-                profilePic: {
-                        "/G-Suschrist/img/Rvu7YjVcXr": {
-                            type: "img",
-                            date: {
-                                full: "1 de Enero de 2021 a las 3:25 pm",
-                                min: "Enero de 2021"
-                            },
-                            city: {name: "Manywhere", pic: "j", description: `Manywhere. <a target= '_blank'style= 'font-size:0.8em; ' href= ''><span style= 'color: #2ecc71; font-size: 1.5em; '>···&nbsp</span>es.wikipedia.org</a>`},
-                            title: `Por aquí y por allá; casual.`,
-                            description: ``,
-                            contents:  {image: "Rvu7YjVcXr_tn.jpg"},
-                            Comentarios: ``
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/G-Suschrist/Rvu7YjVcXr_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Dios Jesucristo'>Dios Jesucristo</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["G-Suschrist"],
             type: "fork",
             date: {
                 full: "7 de Mayo de 2022 a las 8:6 pm",
                 min: "Mayo de 2022"
             },
-            originalRepoOwner: {
-                username: "L",
-                users_name: "Laura Escobar Bonnett",
-                profilePic: "/resources/images/L/OGnpwD3jys_tn.jpg",
-                rol: {
-                    rol: "Princesa",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/L/OGnpwD3jys_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Laura Escobar Bonnett'>Laura Escobar Bonnett</p>
-                                <p class='rol'>Princesa <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            originalRepoOwner: _useRs.asop["L"],
             title: `minesweeper`,
             description: ``,
             contents:  `<section id="links">
@@ -3008,43 +1622,7 @@ var index= {
             Comentarios: ``
         },
         "/LamaMadora/pos/CMgd0lPQfl", {
-            user: {
-                username: "LamaMadora",
-                users_name: "Juan José Martínez Vidal",
-                profilePic: {
-                        "/LamaMadora/img/sdlQg1CoQ3": {
-                            type: "img",
-                            date: {
-                                full: "12 de Diciembre de 2021 a las 2:18 pm",
-                                min: "Diciembre de 2021"
-                            },
-                            title: ``,
-                            description: ``,
-                            contents:  {image: "sdlQg1CoQ3_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "Dubber",
-                    level: "88"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='88'>
-                            <img src='/resources/images/LamaMadora/sdlQg1CoQ3_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p title= 'Juan José Martínez Vidal' class='username'>Juan José Martínez Vidal</p>
-                                <p class='rol'>Dubber <b style='color:#fff;'>+88</b></p>
-                            </div>
-                            <div class='insignia' style='top: 11px; border-bottom-color: #4f61bf; ' title='Curso completado (Dubbing en español)'></div>
-                            <div class='insignia' style='top: 23px; border-bottom-color: #79371d; 'title='Curso completado (Sub syncing)'></div>
-                            <div class='insignia' style='top: 17px; border-bottom-color: #8c8866; ' title='Rol asignado (Dubber)'> </div>
-                          </div>`
-            },
+            user: _useRs["LamaMadora"],
             type: "links",
             date: {
                 full: "26 de Abril de 2022 a las 9:13 pm",
@@ -3058,40 +1636,7 @@ var index= {
             Comentarios: ""
         },
         "/AuraCardonaC/pos/VJclElvkG9", {
-            user: {
-                username: "AuraCardonaC",
-                users_name: "Aura María Cardona Demasiado",
-                profilePic: {
-                        "/AuraCardonaC/img/H5TxBHq4ff": {
-                            type: "img",
-                            date: {
-                                full: "13 de Agosto de 2022 a las 10:8 pm",
-                                min: "Agosto de 2022"
-                            },
-                            title: `El mejor momento 😍🌅`,
-                            description: ``,
-                            contents:  {image: "H5TxBHq4ff_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "Profe de fitness",
-                    level: "94"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
-                            <img src='/resources/images/AuraCardonaC/H5TxBHq4ff_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["AuraCardonaC"],
             type: "links",
             date: {
                 full: "12 de Abril de 2022 a las 5:9 pm",
@@ -3152,40 +1697,7 @@ var index= {
             Comentarios: ""
         },
         "/MeganFox/pos/LXZw0oJuoZ", {
-            user: {
-                username: "MeganFox",
-                users_name: "Megan Denise Fox",
-                profilePic: {
-                        "/MeganFox/img/nc79cNubi8": {
-                            type: "img",
-                            date: {
-                                full: "17 de Julio de 2022 a las 0:10 pm",
-                                min: "17 de Julio a las 0:10 pm"
-                            },
-                            title: `the trees call me by my name`,
-                            description: ``,
-                            contents:  {image: "nc79cNubi8_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["MeganFox"],
             type: "links",
             date: {
                 full: "6 de Abril de 2022 a las 3:8 pm",
@@ -3199,40 +1711,7 @@ var index= {
             Comentarios: ""
         },
         "/AuraCardonaC/img/Mj9oCdQTpa", {
-            user: {
-                username: "AuraCardonaC",
-                users_name: "Aura María Cardona Demasiado",
-                profilePic: {
-                        "/AuraCardonaC/img/H5TxBHq4ff": {
-                            type: "img",
-                            date: {
-                                full: "13 de Agosto de 2022 a las 10:8 pm",
-                                min: "Agosto de 2022"
-                            },
-                            title: `El mejor momento 😍🌅`,
-                            description: ``,
-                            contents:  {image: "H5TxBHq4ff_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "Profe de fitness",
-                    level: "94"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='94'>
-                            <img src='/resources/images/AuraCardonaC/H5TxBHq4ff_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Aura María Cardona Demasiado'>Aura María Cardona Demasiado</p>
-                                <p class='rol' title= 'Profe de fitness'>P...d...fitness <b style='color:#fff;'>+94</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["AuraCardonaC"],
             type: "mult_img",
             date: {
                 full: "25 de Marzo de 2022 a las 3:15 pm",
@@ -3245,40 +1724,7 @@ var index= {
             Comentarios: "",
         },
         "/MeganFox/img/YZflJpIi3z", {
-            user: {
-                username: "MeganFox",
-                users_name: "Megan Denise Fox",
-                profilePic: {
-                        "/MeganFox/img/nc79cNubi8": {
-                            type: "img",
-                            date: {
-                                full: "17 de Julio de 2022 a las 0:10 pm",
-                                min: "17 de Julio a las 0:10 pm"
-                            },
-                            title: `the trees call me by my name`,
-                            description: ``,
-                            contents:  {image: "nc79cNubi8_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["MeganFox"],
             type: "mult_img",
             date: {
                 full: "20 de Enero de 2022 a las 5:10 pm",
@@ -3468,40 +1914,7 @@ var index= {
                         </div>`
         },
         "/MeganFox/vid/fDFmX5MXBa", {
-            user: {
-                username: "MeganFox",
-                users_name: "Megan Denise Fox",
-                profilePic: {
-                        "/MeganFox/img/nc79cNubi8": {
-                            type: "img",
-                            date: {
-                                full: "17 de Julio de 2022 a las 0:10 pm",
-                                min: "17 de Julio a las 0:10 pm"
-                            },
-                            title: `the trees call me by my name`,
-                            description: ``,
-                            contents:  {image: "nc79cNubi8_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["MeganFox"],
             type: "vid",
             date: {
                 full: "12 de Enero de 2022 a las 11:2 pm",
@@ -3514,44 +1927,7 @@ var index= {
             Comentarios: ""
         },
         "/A.K.A._Dizzy/img/m88IB35sDo", {
-            user: {
-                username: "A.K.A._Dizzy",
-                users_name: "Luis Eduardo Gallego García",
-                profilePic: {
-                        "/A.K.A._Dizzy/img/4uHf7tgk8C": {
-                            type: "img",
-                            date: {
-                                full: "27 de Septiembre de 2023 a las 3:27 pm",
-                                min: "27 de Septiembre a las 3:27 pm"
-                            },
-                            title: `La Luna y sus alrededores...`,
-                            description: ``,
-                            contents:  {image: "4uHf7tgk8C_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "CEO",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
-                                <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
-                            </div>
-                            <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
-                            <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
-                            <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
-                            <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-                        </div>`
-            },
+            user: _useRs["A.K.A._Dizzy"],
             type: "mult_img",
             date: {
                 full: "3 de Enero de 2022 a las 8:22 pm",
@@ -3564,44 +1940,7 @@ var index= {
             Editado: [ 'type= "mult_img"; edHistory= {"Editado el 3 de Agosto de 2022 a las 5:33 pm": "https://raw.githubusercontent.com/lirilC/lirilColombia.github.io/79bc8b28e9b1cd78770b6a8952cb55fe59f1c1d2/A.K.A._Dizzy/img/m88IB35sDo.html", "3 de Enero de 2022 a las 8:22 pm": "https://raw.githubusercontent.com/lirilC/lirilColombia.github.io/62a73cb90fad9a3fdac70915cafcee58789d53fa/A.K.A._Dizzy/img/m88IB35sDo.html"}', "Editado el 3 de Agosto de 2022 a las 5:33 pm"]
         },
         "/A.K.A._Dizzy/pos/THKgcCyzBy", {
-            user: {
-                username: "A.K.A._Dizzy",
-                users_name: "Luis Eduardo Gallego García",
-                profilePic: {
-                        "/A.K.A._Dizzy/img/4uHf7tgk8C": {
-                            type: "img",
-                            date: {
-                                full: "27 de Septiembre de 2023 a las 3:27 pm",
-                                min: "27 de Septiembre a las 3:27 pm"
-                            },
-                            title: `La Luna y sus alrededores...`,
-                            description: ``,
-                            contents:  {image: "4uHf7tgk8C_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "CEO",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/A.K.A._Dizzy/4uHf7tgk8C_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Luis Eduardo Gallego García'>Luis Eduardo Gallego García</p>
-                                <p class='rol'>CEO <b style='color:#fff;'>+100</b></p>
-                            </div>
-                            <div class='insignia' style='top: 9px;' title='Proyecto completado (aNGEL();)'></div>
-                            <div class='insignia' style='top: 22px;'title='Proyecto completado (por_siLaBas();)'></div>
-                            <div class='insignia' style='top: 14px;' title='Proyecto completado (dinosaurios)'> </div>
-                            <div class='insignia' style='top: 39px;' title='EP (Planifique)'> </div> <div class='insignia' style='top: 43px;' title='Proyecto completado (Robot De Dedicatorias)'> </div>
-                        </div>`
-            },
+            user: _useRs["A.K.A._Dizzy"],
             type: "links",
             date: {
                 full: "24 de Diciembre de 2021 a las 0:00 am",
@@ -3627,41 +1966,7 @@ var index= {
             Editado: [ 'type= "c"; edHistory= {"Editado el 25 de Diciembre de 2021 a las 8:11 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/fa22c59c827424670fa7d5a42362e9ee069eb5e8/A.K.A._Dizzy/pos/THKgcCyzBy.html", "Editado el 25 de Diciembre de 2021 a las 8:38 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/815df2d46e0cb28c17080f2fe6faa9ad5591908d/A.K.A._Dizzy/pos/THKgcCyzBy.html",  "Editado el 24 de Diciembre de 2021 a las 6:00 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/cc20cfd3645362371e27a6e82afe3ad62584dc00/A.K.A._Dizzy/pos/THKgcCyzBy.html", "Editado el 24 de Diciembre de 2021 a las 5:23 pm": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/7d6960a98076abd762f1d5897b328dcde170fe47/A.K.A._Dizzy/pos/THKgcCyzBy.html", "24 de Diciembre a las 0:00 am": "https://raw.githubusercontent.com/lirilC/lirilc.github.io/86f2ee25494787a1f456467f6d937728ff9433d0/A.K.A._Dizzy/pos/THKgcCyzBy.html"}', "Editado el 25 de Diciembre de 2021 a las 8:11 pm"]
         },
         "/G-Suschrist/pos/bp2NlhDANW", {
-            user: {
-                username: "G-Suschrist",
-                users_name: "Dios Jesucristo",
-                profilePic: {
-                        "/G-Suschrist/img/Rvu7YjVcXr": {
-                            type: "img",
-                            date: {
-                                full: "1 de Enero de 2021 a las 3:25 pm",
-                                min: "Enero de 2021"
-                            },
-                            city: {name: "Manywhere", pic: "j", description: `Manywhere. <a target= '_blank'style= 'font-size:0.8em; ' href= ''><span style= 'color: #2ecc71; font-size: 1.5em; '>···&nbsp</span>es.wikipedia.org</a>`},
-                            title: `Por aquí y por allá; casual.`,
-                            description: ``,
-                            contents:  {image: "Rvu7YjVcXr_tn.jpg"},
-                            Comentarios: ``
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/G-Suschrist/Rvu7YjVcXr_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Dios Jesucristo'>Dios Jesucristo</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["G-Suschrist"],
             type: "containments",
             date: {
                 full: "27 de Octubre de 2021 a las 2:81 pm",
@@ -3687,40 +1992,7 @@ var index= {
             Comentarios: ``
         },
         "/MeganFox/img/ihsJ6mzXTl", {
-            user: {
-                username: "MeganFox",
-                users_name: "Megan Denise Fox",
-                profilePic: {
-                        "/MeganFox/img/nc79cNubi8": {
-                            type: "img",
-                            date: {
-                                full: "17 de Julio de 2022 a las 0:10 pm",
-                                min: "17 de Julio a las 0:10 pm"
-                            },
-                            title: `the trees call me by my name`,
-                            description: ``,
-                            contents:  {image: "nc79cNubi8_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "G",
-                    level: "100"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='100'>
-                            <img src='/resources/images/MeganFox/nc79cNubi8_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p class='username' title= 'Megan Denise Fox'>Megan Denise Fox</p>
-                                <p class='rol'>G <b style='color:#fff;'>+100</b></p>
-                            </div>
-                        </div>`
-            },
+            user: _useRs["MeganFox"],
             type: "mult_img",
             date: {
                 full: "13 de Septiembre de 2021 5:24 pm",
@@ -3732,43 +2004,7 @@ var index= {
             Comentarios: ""
         },
         "/LamaMadora/img/bHq7JUZnFM", {
-            user: {
-                username: "LamaMadora",
-                users_name: "Juan José Martínez Vidal",
-                profilePic: {
-                        "/LamaMadora/img/sdlQg1CoQ3": {
-                            type: "img",
-                            date: {
-                                full: "12 de Diciembre de 2021 a las 2:18 pm",
-                                min: "Diciembre de 2021"
-                            },
-                            title: ``,
-                            description: ``,
-                            contents:  {image: "sdlQg1CoQ3_tn.jpg"},
-                            Comentarios: ""
-                        }
-                    },
-                rol:{
-                    rol: "Dubber",
-                    level: "88"
-                },
-                tool:  `<div class='tool'>
-                            <input class='knob button' data-width='102' data-height='102' data-fgColor='#2ecc71' data-bgColor='rgba(0,0,0,0)' data-displayInput=false data-thickness='.08' readonly value='88'>
-                            <img src='/resources/images/LamaMadora/sdlQg1CoQ3_tn.jpg'>
-                            <div class='datos'>
-                                <ul class='actions'>
-                                    <li class='chatear' title='Chatear'>C</li>
-                                    <li class='agregar' title='Agregar'>A</li>
-                                    <li class='juzgar' title='Juzgar'>J</li>
-                                </ul>                  
-                                <p title= 'Juan José Martínez Vidal' class='username'>Juan José Martínez Vidal</p>
-                                <p class='rol'>Dubber <b style='color:#fff;'>+88</b></p>
-                            </div>
-                            <div class='insignia' style='top: 11px; border-bottom-color: #4f61bf; ' title='Curso completado (Dubbing en español)'></div>
-                            <div class='insignia' style='top: 23px; border-bottom-color: #79371d; 'title='Curso completado (Sub syncing)'></div>
-                            <div class='insignia' style='top: 17px; border-bottom-color: #8c8866; ' title='Rol asignado (Dubber)'> </div>
-                          </div>`
-            },
+            user: _useRs["LamaMadora"],
             type: "mult_img",
             date: {
                 full: "27 de Noviembre de 2021 a las 3:28 pm",
