@@ -2382,3 +2382,55 @@ act.refresh:active {
   background: aquamarine;
   color: gray;
 }
+
+/*Mobile support css*/
+
+.buttons {
+  width: 100%;
+  height: 42px;
+  position: sticky;
+  top: 44px;
+  background: black;
+  display: none;
+}
+.buttons button {
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: bottom;
+  color: ghostwhite;
+  border-right: 1px solid white;
+}
+.buttons button:active {
+  background: #d2b661;
+  color: grey;
+}
+.buttons button:focus {
+  outline: none;
+}
+
+@media (any-pointer:none), (any-pointer:coarse) {
+  #article{
+    padding-right: 0;
+    width: 100% !important;
+  }
+  #sidebar{
+    display: none
+  }
+  #article #text{
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box; 
+  }
+  .nombre{      
+    top: 86px
+  }
+  .buttons{
+    display: block;
+  }
+  acc, act.refresh{
+    display: none !important;
+  }
+}
+
+

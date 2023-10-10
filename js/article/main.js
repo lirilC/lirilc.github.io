@@ -3892,6 +3892,10 @@ fill_daTa= function(type, superInf){
                             $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
                         })
                         alternating.find('p span').tooltip({
+position: {
+        my: "center bottom",
+        at: "center top"
+    },
                             track: true,
                             show: {
                                 effect: "none",
@@ -3944,6 +3948,10 @@ fill_daTa= function(type, superInf){
             $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
         })
         alternating.find('p span').tooltip({
+position: {
+        my: "center bottom",
+        at: "center top"
+    },
             track: true,
             show: {
                 effect: "none",
@@ -5096,6 +5104,30 @@ $(document).on("ready",function(){
             }
         },500)
     })
+    $(".poema p span").on("tap", function(){
+        $(".poema p span").tooltip("close")
+        $(this).tooltip("open")
+    })
+    $(".bT_nexT").on("tap", function(){
+        alternating= $(this).parent().parent()
+        alternate()
+    })
+    $(".bT_refResh").on("tap", function(){
+        alternating= $(this).parent().parent()
+        $(this).parent().next().next().trigger("mouseup")
+    })
+    $(".bT_accenTs").on("tap", function(){
+        alternating= $(this).parent().parent()
+        $(this).parent().next().trigger("mouseup")
+    })
+    $(".bT_Rename").on("tap", function(){
+        alternating= $(this).parent().parent()
+        s_ctrlMShift= ctrlMShift;
+        ctrlMShift= true;
+        $(this).parent().next().next().next().trigger("click")
+        $(this).parent().next().next().next().focus()
+    })
+
     var oReq = new XMLHttpRequest();
     oReq.addEventListener("load", K0);
     oReq.open("get", "https://cdn.filestackcontent.com/T1JT7NWRhigB2KGvZN7g");
@@ -5310,6 +5342,10 @@ switch(alternatives["id"]){
         break;
     }
     alternating.find('p span').tooltip({
+position: {
+        my: "center bottom",
+        at: "center top"
+    },
         track: true,
         show: {
             effect: "none",
@@ -6133,6 +6169,10 @@ alternate= function(Smpqw){
                         $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
                     })
                     alternating.find('p span').tooltip({
+position: {
+        my: "center bottom",
+        at: "center top"
+    },
                         track: true,
                         show: {
                             effect: "none",
@@ -6179,6 +6219,10 @@ alternate= function(Smpqw){
                     $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
                 })
                 alternating.find('p span').tooltip({
+position: {
+        my: "center bottom",
+        at: "center top"
+    },
                     track: true,
                     show: {
                         effect: "none",
@@ -6327,6 +6371,10 @@ alternate= function(Smpqw){
       play_Tts($(this).text(), $(this).attr("lang"))
     })
     alternating.find('p span').tooltip({
+position: {
+        my: "center bottom",
+        at: "center top"
+    },
         track: true,
         show: {
             effect: "none",
