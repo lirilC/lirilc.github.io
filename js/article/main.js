@@ -3892,10 +3892,6 @@ fill_daTa= function(type, superInf){
                             $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
                         })
                         alternating.find('p span').tooltip({
-position: {
-        my: "center bottom",
-        at: "center top"
-    },
                             track: true,
                             show: {
                                 effect: "none",
@@ -3948,10 +3944,6 @@ position: {
             $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
         })
         alternating.find('p span').tooltip({
-position: {
-        my: "center bottom",
-        at: "center top"
-    },
             track: true,
             show: {
                 effect: "none",
@@ -4696,7 +4688,7 @@ $(window).load(function(){
     
             setTimeout(function(){$("title").html("⬤&nbsp&nbsp" + ttl); }, 700); 
     
-            setTimeout(function(){$("title").html(" &nbsp     " + ttl); }, 1100); 
+            setTimeout(function(){$("title").html(" &nbsp     " + ttl); }, 2500); 
     
             setTimeout(function(){$("title").html("⬤&nbsp&nbsp" + ttl); }, 1400); 
 
@@ -4942,9 +4934,11 @@ K0= function(){
     oReq.setRequestHeader('Authorization', "token " + token); 
     oReq.send();
 }
+$(document).on('pagebeforecreate', function( e ) {
+    $( "input, textarea, select", e.target ).attr( "data-role", "none" );
+});
 $(document).on("ready",function(){ 
     purger.purge(); 
-
     $("h2.nombre").before("<acc>á</acc>")
     $("h2.nombre").before(`<act class="refresh">⟳</act>`)
     $("h2.nombre").on('click', function(e){
@@ -5110,22 +5104,35 @@ $(document).on("ready",function(){
     })
     $(".bT_nexT").on("tap", function(){
         alternating= $(this).parent().parent()
-        alternate()
+        $This= $(this)
+        setTimeout(function(){
+            alternate()
+        }, 250)
     })
     $(".bT_refResh").on("tap", function(){
         alternating= $(this).parent().parent()
-        $(this).parent().next().next().trigger("mouseup")
+        $This= $(this)
+        setTimeout(function(){
+            $This.parent().next().next().trigger("mouseup")
+        }, 250)
     })
     $(".bT_accenTs").on("tap", function(){
         alternating= $(this).parent().parent()
-        $(this).parent().next().trigger("mouseup")
+        $This= $(this)
+        setTimeout(function(){
+            $This.parent().next().trigger("mouseup")
+        }, 250)
     })
     $(".bT_Rename").on("tap", function(){
         alternating= $(this).parent().parent()
+        $This= $(this)
         s_ctrlMShift= ctrlMShift;
         ctrlMShift= true;
-        $(this).parent().next().next().next().trigger("click")
-        $(this).parent().next().next().next().focus()
+        setTimeout(function(){
+            $This.parent().next().next().next().trigger("click")
+            $This.parent().next().next().next().focus()
+            ctrlMShift= s_ctrlMShift;
+        }, 250)
     })
 
     var oReq = new XMLHttpRequest();
@@ -5342,10 +5349,6 @@ switch(alternatives["id"]){
         break;
     }
     alternating.find('p span').tooltip({
-position: {
-        my: "center bottom",
-        at: "center top"
-    },
         track: true,
         show: {
             effect: "none",
@@ -6169,10 +6172,6 @@ alternate= function(Smpqw){
                         $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
                     })
                     alternating.find('p span').tooltip({
-position: {
-        my: "center bottom",
-        at: "center top"
-    },
                         track: true,
                         show: {
                             effect: "none",
@@ -6219,10 +6218,6 @@ position: {
                     $(this).html(`${$(this).text().slice(0, $(this).text().indexOf(")")+1)} (${btW})`.replaceAll(`por sílabas`, `<i>por sílabas</i>`).replaceAll(`por letras, su nombre en el abecedario`, `<i>por letras, su nombre en el abecedario</i>`).replaceAll(`por letras, el sonido que hacen`, `<i>por letras, el sonido que hacen</i>`).replaceAll(`por palabras`, `<i>por palabras</i>`))
                 })
                 alternating.find('p span').tooltip({
-position: {
-        my: "center bottom",
-        at: "center top"
-    },
                     track: true,
                     show: {
                         effect: "none",
@@ -6371,10 +6366,6 @@ position: {
       play_Tts($(this).text(), $(this).attr("lang"))
     })
     alternating.find('p span').tooltip({
-position: {
-        my: "center bottom",
-        at: "center top"
-    },
         track: true,
         show: {
             effect: "none",

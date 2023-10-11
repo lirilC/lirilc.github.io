@@ -2387,15 +2387,15 @@ act.refresh:active {
 
 .buttons {
   width: 100%;
-  height: 42px;
+  height: 64px;
   position: sticky;
   top: 44px;
   background: black;
   display: none;
 }
 .buttons button {
-  width: 44px;
-  height: 44px;
+  width: 76px;
+  height: 64px;
   border: none;
   background: bottom;
   color: ghostwhite;
@@ -2408,7 +2408,12 @@ act.refresh:active {
 .buttons button:focus {
   outline: none;
 }
-
+.C_warning_symbol{
+    font-size: 138px;
+}
+.C_warning_text{
+    font-size: 0.75em;
+}
 @media (any-pointer:none), (any-pointer:coarse) {
   #article{
     padding-right: 0;
@@ -2423,7 +2428,7 @@ act.refresh:active {
     box-sizing: border-box; 
   }
   .nombre{      
-    top: 86px
+    top: 108px
   }
   .buttons{
     display: block;
@@ -2431,6 +2436,35 @@ act.refresh:active {
   acc, act.refresh{
     display: none !important;
   }
+  #article #text h2{
+    font-size: 53px
+  }
+  .poema p{
+    font-size: 31px      
+  }
+  #article #text{
+    font-size: 29px      
+  }
+  .oculto{
+    padding: 30px 20px
+  }
+  .revelar{
+    margin-top: -19px;
+  }
+  .C_warning_symbol{
+    font-size: 178px;
+  }
+  .C_warning_text{
+    font-size: 25px;
+  }
+  #article #title{
+    font-size: 70px
+  }
+  time{
+    font-size: 22px
+  }
 }
 
-
+.ui-loader {
+  display: none;
+}
