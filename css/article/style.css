@@ -2437,13 +2437,13 @@ act.refresh:active {
     display: none !important;
   }
   #article #text h2{
-    font-size: 53px
+    font-size: 56px
   }
   .poema p{
-    font-size: 31px      
+    font-size: 37px      
   }
   #article #text{
-    font-size: 29px      
+    font-size: 32px      
   }
   .oculto{
     padding: 30px 20px
@@ -2455,13 +2455,14 @@ act.refresh:active {
     font-size: 178px;
   }
   .C_warning_text{
-    font-size: 25px;
+    font-size: 29px;
   }
   #article #title{
     font-size: 70px
   }
   time{
-    font-size: 22px
+    font-size: 26px;
+    text-align: left;
   }
 }
 
