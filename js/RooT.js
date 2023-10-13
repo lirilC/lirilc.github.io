@@ -3240,14 +3240,15 @@ wwd= function(t, tr){
 bGComments= function(arg){ 
 	(_R("#theater").css("display") == "block" && (typeof arg == "undefined"))? (function(){ 
         $("body").prepend("<badguy></badguy>"); 
-        $("badguy").html($("#theater .Comentarios").html()); 
+        _R("badguy").html($("#theater .Comentarios").html()); 
         $("badguy .Comentario .media > div").prop('outerHTML', function(){return $(this).find("audio").prop("outerHTML")}); 
-        $("badguy").find(".Respuestas .Responder").each(function(){wwd($(this)[0], 1)}); 
-        bG= $("badguy")[0].innerHTML; 
-        $("badguy").remove(); 
+        _R("badguy").find(".Respuestas .Responder").each(function(){wwd($(this)[0], 1)}); 
+        bG= _R("badguy")[0].innerHTML; 
+        _R("badguy").remove(); 
     })(): (function(){bG= (typeof arg == "undefined")? $(".current .Comentarios")[0].innerHTML: $(arg).find(".Comentarios")[0].innerHTML; })(); 
     return bG; 
 }
+/*skpd(last things to RooT, carefully check)*/
 badGuy= function(){ 
 	if(RooT.maTch.root.exec(actualLocation) !== null){
 		Antheater= typeof th != "undefined" && !th.is(".story")? th: $(".current")	    
@@ -3507,9 +3508,9 @@ switch(ty){
 
     aS= a; 
     if(JSON.parse(localStorage.getItem(uRl)).hash != hashes[uRl]){
-            $("badguy").remove();
+            _R("badguy").remove();
             $("body").prepend("<badguy></badguy>");
-            $("badguy").html(f.target.response.slice(f.target.response.lastIndexOf("biography") + 12, f.target.response.indexOf("sidebar") - 11).slice(0, f.target.response.slice(f.target.response.lastIndexOf("biography") + 12, f.target.response.indexOf("sidebar") - 11).lastIndexOf("</aside>")));
+            _R("badguy").html(f.target.response.slice(f.target.response.lastIndexOf("biography") + 12, f.target.response.indexOf("sidebar") - 11).slice(0, f.target.response.slice(f.target.response.lastIndexOf("biography") + 12, f.target.response.indexOf("sidebar") - 11).lastIndexOf("</aside>")));
             newComments= []; 
             newAnswers= []; 
             $("badguy .Comentarios").children().filter(".comentario").each(function(){ 
@@ -3523,7 +3524,7 @@ switch(ty){
         JSON.parse(localStorage.getItem(uRl)).B? aS.find(".options .bookmark").addClass("true"): aS.find(".options .bookmark").removeClass("true");
         JSON.parse(localStorage.getItem(uRl)).S? aS.find(".options .star").addClass("true"): aS.find(".options .star").removeClass("true");
         !!JSON.parse(localStorage.getItem(uRl)).C? (function(){aS.find(".Comentarios")[0].innerHTML= JSON.parse(localStorage.getItem(uRl)).C})(): 1;
-        $("badguy").remove(); 
+        _R("badguy").remove(); 
         for(w in newComments){ 
             if(newComments[w].length == 1){
                 for(e in newComments[w][0]){
@@ -4427,7 +4428,7 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
             newChat($(this), `c${cC}`)
             cC++
         }else{
-            $dat= $(`.chats .chat.${$(this).attr('class').split(' ')[3]}`)
+            $dat= _R(`.chats .chat.${$(this).attr('class').split(' ')[3]}`, und, 'e')
             if(!$dat.hasClass("open")){
                 prependClass($dat,"open");  
             }
@@ -4521,9 +4522,9 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
 	        "display": "block"
 	    })
 	    var source= th.find("video").attr("src");
-	    $('#theater video').attr("src", source);
+	    _R('#theater video').attr("src", source);
 
-	    $('#theater video').attr('autoplay', "true");
+	    _R('#theater video').attr('autoplay', "true");
 
 	    source= un_tn(source); 
 	                           
@@ -4543,8 +4544,8 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
 	    _R('#theater .comments .comentarios .Comentarios').html(comments);
 
 	    _R('#theater .comments .comentarios .Comentarios .comentario').on("mousemove", function(event){elx= $($(this).children()[0]); circleWidth= elx.outerWidth( true ),circleHeight = elx.outerHeight( true ),circleLeft   = elx.offset().left,circleTop    = elx.offset().top,circlePos    ={x    : circleLeft + circleWidth / 2,y    : circleTop + circleHeight / 2,radius: circleWidth / 2};distance   = Math.sqrt( Math.pow( event.pageX - circlePos.x, 2 ) + Math.pow( event.pageY - circlePos.y, 2 ) );if(distance <= circlePos.radius){$($(this).children()[0]).css({"pointer-events": "all"});$($(this).children()[0]).css({"pointer-events": "all"});}else{$($(this).children()[0]).css({"pointer-events": "none"});$($(this).children()[0]).css({"pointer-events": "none"});}}); 
-	    /*bookmaRk_flag*/
-	    _R("#theater .Respuestas").html(function(){return '<span class="Responder"></span>' + "Respuestas (" + $(this).parent().children().filter(".comentario.hidden").length + ")"}); 
+
+	    _R("#theater .Respuestas").html(function(){return `<span class="Responder"></span>Respuestas (${$(this).parent().children().filter(".comentario.hidden").length})`}); 
 	                                       
 	    _R("#theater .Respuestas").click(function(l){wd($(this), l)}); 
 
@@ -4591,7 +4592,7 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
 
 	    var ref= th.find(".options ul a").attr("href");
 	    $('#theater .comments .options ul a').attr("href", ref);
-
+	    /*impR(consider standar css-only solution)*/
 	    if(_R("#bigPic").width()<=_R("#bigPic").height()){
 	        _R("#bigPic").css({ "width":"100%"})
 	    }else{
@@ -4621,17 +4622,18 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
                     updateUser(); 
                 }
             })
-            $(".ui-tooltip input").focus(); }
+            _R(".ui-tooltip input").focus(); }
     });
     _R(".line").e()
     /*Set first post as .current and subsequently the one clicked*/
     _R("#feed .story", 0).addClass("current")
-	current= $(".story.current");
-	_R(".story").on("click", function (){
-        $(".current").removeClass("current");
+    /*impR(check the .e()ing of elements to be after all eventing)*/
+	current= _R(".story.current", und, 'e');
+	_R(".story", und, 'e').on("click", function (){
+        _R(".current", und, 'e').removeClass("current");
         $(this).addClass("current"); 
-        $($(".current")[0]).attr("tabindex", 0); 
-        $(".current")[0].focus(); 
+        _R(".current", 0, 'e').attr("tabindex", 0); 
+        _R(".current", und, 'e')[0].focus(); 
     })
 	/*Close modal on dark wrapper in the background of the theater's click*/
 	_R("#wrapper").on("click", function (){
@@ -4650,9 +4652,9 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
         if(!$(this).closest("#theater").length){ 
             $(".current").removeClass("current"); 
             $(this).closest(".story").addClass("current"); 
-            $($(".current")[0]).attr("tabindex", 0); 
-            $(".current")[0].focus(); 
-            th= $(".current"); 
+            _R(".current", 0, 'e').attr("tabindex", 0); 
+            _R(".current", 0, 'e')[0].focus(); 
+            th= _R(".current", und, 'e'); 
         }; 
         badGuy(); 
     }); 
@@ -4660,11 +4662,11 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
     _R(".bookmark").on("click", function (){ 
         $(this).toggleClass("true"); 
         if(!$(this).closest("#theater").length){ 
-            $(".current").removeClass("current"); 
+            _R(".current", und, 'e').removeClass("current"); 
             $(this).closest(".story").addClass("current"); 
-            $($(".current")[0]).attr("tabindex", 0); 
-            $(".current")[0].focus(); 
-            th= $(".current"); 
+            _R(".current", 0, 'e').attr("tabindex", 0); 
+            _R(".current", 0, 'e')[0].focus(); 
+            th= _R(".current", und, 'e'); 
         }; 
         badGuy(); 
     }); 
@@ -4677,58 +4679,57 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
 	}) 
 	_R(".carr").e()
 
-    $(".carr").on("scroll", function(){ 
-	    rf= $(this)
-	    Math.round($(this)[0].scrollLeft / $(this).width()) == $(this).children().length - 1? (function(){rf.parent().find(".nav_arrow.right").addClass("disabled"); _R("#theater").find(".nav_arrow.right").addClass("disabled")})(): (function(){rf.parent().find(".nav_arrow.right").removeClass("disabled"); _R("#theater").find(".nav_arrow.right").removeClass("disabled")})(); 
-	    $(this)[0].scrollLeft == 0? (function(){rf.parent().find(".nav_arrow.left").addClass("disabled"); _R("#theater").find(".nav_arrow.left").addClass("disabled");})(): (function(){rf.parent().find(".nav_arrow.left").removeClass("disabled"); _R("#theater").find(".nav_arrow.left").removeClass("disabled")})(); 
-	}) 
-	    _R(".nav_arrow.left .arrow").not("#picContainer .arrow").on("click", function(){
-        th= _R("#theater").css("display") == "none"? $(".current"): th; 
-        if($("#theater .nav_arrow.left").is(".disabled"))
+	_R(".nav_arrow.left .arrow").not("#picContainer .arrow").on("click", function(){
+        th= _R("#theater").css("display") == "none"? _R(".current", und, 'e'): th; 
+        if(_R("#theater .nav_arrow.left", und, 'e').is(".disabled"))
             {return}; 
         if(th.find(".nav_arrow.left").is(".disabled") && _R("#theater").css("display") == "none")
             {return}
         if(_R("#theater").css("display") == "none" && !!th.find(".carr").length){ 
- 	        lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? $(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")=="/resources/assets/loading.gif"?$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("s_rc"):$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src"): (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
-            if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
-            !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width()}, 400, function(){
-            	lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? ($(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")== "/resources/assets/loading.gif"?$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("s_rc"):$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")): (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
-            	if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); 
-            	th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + (!th.is(".external")?(lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))): lk)); }): 672; 
+        	/*impR(store some repeated values on variables and expand and organize the code)*/
+ 	        lk= _R( th.find(".carr > section"), Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width()), 'e').is(".picture")? _R(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ), und, 'e').attr("src")=="/resources/assets/loading.gif"?_R(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ), und, 'e').attr("s_rc"):_R(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ), und, 'e').attr("src"): (!th.is(".external")? _R( th.find(".carr > section"), Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width()), 'e').find( "source" ).attr( "src" ): _R( th.find(".carr > section"), Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width()), 'e').find( "video" ).attr( "random_character_identifier" )); 
+            if(tipo( lk ) == "/vid/")_R(th.find(".carr").children(), (th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width()), 'e').find("video")[0].pause();
+            /*impR(discuss und and 'e'*/
+            !_R(th.find(".carr"), und, 'e').is(":animated")? _R(th.find(".carr"), und, 'e').animate({scrollLeft: th.find(".carr")[0].scrollLeft - _R(th.find(".carr"), und, 'e').width()}, 400, function(){
+            	lk= _R( th.find(".carr > section"), Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width()), 'e').is(".picture")? (_R(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ), und, 'e').attr("src")== "/resources/assets/loading.gif"?_R(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ), und, 'e').attr("s_rc"):_R(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ), und, 'e').attr("src")): (!th.is(".external")? _R( th.find(".carr > section"), Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width()), 'e').find( "source" ).attr( "src" ): _R( th.find(".carr > section"), Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width()), 'e' ).find( "video" ).attr( "random_character_identifier" )); 
+            	if(tipo( lk ) == "/vid/")_R(th.find(".carr").children(), (th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width()), 'e').find("video")[0].play(); 
+            	th.find(".options a").attr("href", th.find(".options a").attr("href").slice(0, th.find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + (!th.is(".external")?(lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))): lk)); }): 672; 
         }else if(!!th.find(".carr").length){ 
-            $("#theater video").attr("src", "")
-            th.find(".carr")[0].scrollLeft= th.find(".carr")[0].scrollLeft - $(th.find(".carr")).width(); 
- 	        lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? $(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")=="/resources/assets/loading.gif"?$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("s_rc"):$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src"): (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
-            if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();            
-            th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + (!th.is(".external")?(lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))): lk));
+            _R("#theater video").attr("src", "")
+            th.find(".carr")[0].scrollLeft= th.find(".carr")[0].scrollLeft - th.find(".carr").width(); 
+ 	        lk= _R(th.find(".carr > section"), Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width()), 'e').is(".picture")? _R(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ), und, 'e').attr("src")=="/resources/assets/loading.gif"?_R(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ), und, 'e').attr("s_rc"):_R(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ), und, 'e').attr("src"): (!th.is(".external")? _R(th.find(".carr > section"), Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width()), 'e').find( "source" ).attr( "src" ): _R( th.find(".carr > section"), Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width()), 'e').find( "video" ).attr( "random_character_identifier" )); 
+            if(tipo( lk ) == "/vid/")_R(th.find(".carr").children(), (th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width()), 'e').find("video")[0].pause();            
+            th.find(".options a").attr("href", _th.find(".options a").attr("href").slice(0, th.find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + (!th.is(".external")?(lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))): lk));
             source= un_tn(_R("#theater").find("#bigPic")[0].src)
-            th.is(".mult_carr")? $( (function(){return $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find(".Enlarge")})() ).trigger( "click" ): _R("#theater").find("#bigPic")[0].src= (th.is(".story")? ($($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")=="/resources/assets/loading.gif" ?$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("s_rc"):$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")): un_tn(($($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")=="/resources/assets/loading.gif"?$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("s_rc"):$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")))); 
-            history.pushState({page: 1}, "", $(th).find(".options a").attr("href")); 
+            th.is(".mult_carr")? _R( (function(){return _R( th.find(".carr > section"), Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width()), 'e').is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ): _R( th.find(".carr > section"), Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width()), 'e').find(".Enlarge")})() ).trigger( "click" ): _R("#theater").find("#bigPic")[0].src= (th.is(".story")? (_R(th.find(".carr").find(".pic"), Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width()), 'e').attr("src")=="/resources/assets/loading.gif" ?_R(th.find(".carr").find(".pic"), Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width()), 'e').attr("s_rc"):_R(th.find(".carr").find(".pic"), Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width()), 'e').attr("src")): un_tn((_R(th.find(".carr").find(".pic"), Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width()), 'e').attr("src")=="/resources/assets/loading.gif"?_R(th.find(".carr").find(".pic"), Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width()), 'e').attr("s_rc"):_R(th.find(".carr").find(".pic"), Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width()), 'e').attr("src")))); 
+            history.pushState({page: 1}, "", th.find(".options a").attr("href")); 
         }
     }); 
     _R(".nav_arrow.left .arrow").not("#picContainer .arrow").e()
     _R(".nav_arrow.right .arrow").not("#picContainer .arrow").on("click", function(){
-        th= _R("#theater").css("display") == "none"? $(".current"): th; 
-        if($("#theater .nav_arrow.right").is(".disabled"))
+        th= _R("#theater").css("display") == "none"? _R(".current", und, 'e'): th; 
+        if(_R("#theater .nav_arrow.right", und, 'e').is(".disabled"))
             {return}; 
         if(th.find(".nav_arrow.right").is(".disabled") && _R("#theater").css("display") == "none")
             {return}
         if(_R("#theater").css("display") == "none" && !!th.find(".carr").length){ 
-            lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ).src: (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
-            if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();
-            !$(th.find(".carr")).is(":animated")? $(th.find(".carr")).animate({scrollLeft: th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width()}, 400, function(){
- 	           	lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? $(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")=="/resources/assets/loading.gif"?$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("s_rc"):$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src"): (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
-            	if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].play(); 
-            	th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + (!th.is(".external")?(lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))): lk)); }): 672; 
+            /*impR(store some repeated values on variables and expand and organize the code)*/
+            lk= _R( th.find(".carr > section"), Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width()), 'e').is(".picture")? _R(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ), und, 'e').attr("src")=="/resources/assets/loading.gif"?_R(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ), und, 'e').attr("s_rc"):_R(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ), und, 'e').attr("src"): (!th.is(".external")? _R( th.find(".carr > section"), Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width()), 'e').find( "source" ).attr( "src" ): _R( th.find(".carr > section"), Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width()), 'e').find( "video" ).attr( "random_character_identifier" )); 
+            if(tipo( lk ) == "/vid/")_R(th.find(".carr").children(), (th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width()), 'e').find("video")[0].pause();
+            /*impR(discuss und and 'e'*/
+            !_R(th.find(".carr"), und, 'e').is(":animated")? _R(th.find(".carr"), und, 'e').animate({scrollLeft: th.find(".carr")[0].scrollLeft + _R(th.find(".carr"), und, 'e').width()}, 400, function(){
+                lk= _R( th.find(".carr > section"), Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width()), 'e').is(".picture")? (_R(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ), und, 'e').attr("src")== "/resources/assets/loading.gif"?_R(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ), und, 'e').attr("s_rc"):_R(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ), und, 'e').attr("src")): (!th.is(".external")? _R( th.find(".carr > section"), Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width()), 'e').find( "source" ).attr( "src" ): _R( th.find(".carr > section"), Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width()), 'e' ).find( "video" ).attr( "random_character_identifier" )); 
+                if(tipo( lk ) == "/vid/")_R(th.find(".carr").children(), (th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width()), 'e').find("video")[0].play(); 
+                th.find(".options a").attr("href", th.find(".options a").attr("href").slice(0, th.find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + (!th.is(".external")?(lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))): lk)); }): 672; 
         }else if(!!th.find(".carr").length){ 
-            $("#theater video").attr("src", "")
-            th.find(".carr")[0].scrollLeft= th.find(".carr")[0].scrollLeft + $(th.find(".carr")).width(); 
- 	        lk= $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? $(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src")=="/resources/assets/loading.gif"?$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("s_rc"):$(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" )).attr("src"): (!th.is(".external")? $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "source" ).attr( "src" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find( "video" ).attr( "random_character_identifier" )); 
-            if(tipo( lk ) == "/vid/")$(th.find(".carr").children()[(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).find("video")[0].pause();            
-            th.find(".options a").attr("href", $(th).find(".options a").attr("href").slice(0, $(th).find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + (!th.is(".external")?(lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))): lk));
+            _R("#theater video").attr("src", "")
+            th.find(".carr")[0].scrollLeft= th.find(".carr")[0].scrollLeft + th.find(".carr").width(); 
+            lk= _R(th.find(".carr > section"), Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width()), 'e').is(".picture")? _R(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ), und, 'e').attr("src")=="/resources/assets/loading.gif"?_R(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ), und, 'e').attr("s_rc"):_R(th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ), und, 'e').attr("src"): (!th.is(".external")? _R(th.find(".carr > section"), Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width()), 'e').find( "source" ).attr( "src" ): _R( th.find(".carr > section"), Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width()), 'e').find( "video" ).attr( "random_character_identifier" )); 
+            if(tipo( lk ) == "/vid/")_R(th.find(".carr").children(), (th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width()), 'e').find("video")[0].pause();            
+            th.find(".options a").attr("href", _th.find(".options a").attr("href").slice(0, th.find(".options a").attr("href").lastIndexOf("/") - 4) + tipo( lk ) + (!th.is(".external")?(lk.slice(lk.lastIndexOf("/") + 1, lk.lastIndexOf("."))): lk));
             source= un_tn(_R("#theater").find("#bigPic")[0].src)
-            th.is(".mult_carr")? $( (function(){return $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ): $( th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())] ).find(".Enlarge")})() ).trigger( "click" ): _R("#theater").find("#bigPic")[0].src= (th.is(".story")? ($($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")=="/resources/assets/loading.gif" ?$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("s_rc"):$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")): un_tn(($($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")=="/resources/assets/loading.gif"?$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("s_rc"):$($(th.find(".carr")).find(".pic")[Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width())]).attr("src")))); 
-            history.pushState({page: 1}, "", $(th).find(".options a").attr("href")); 
+            th.is(".mult_carr")? _R( (function(){return _R( th.find(".carr > section"), Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width()), 'e').is(".picture")? th.find(".carr > section")[Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width())].querySelector( ".pic" ): _R( th.find(".carr > section"), Math.round(th.find(".carr")[0].scrollLeft / th.find(".carr").width()), 'e').find(".Enlarge")})() ).trigger( "click" ): _R("#theater").find("#bigPic")[0].src= (th.is(".story")? (_R(th.find(".carr").find(".pic"), Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width()), 'e').attr("src")=="/resources/assets/loading.gif" ?_R(th.find(".carr").find(".pic"), Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width()), 'e').attr("s_rc"):_R(th.find(".carr").find(".pic"), Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width()), 'e').attr("src")): un_tn((_R(th.find(".carr").find(".pic"), Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width()), 'e').attr("src")=="/resources/assets/loading.gif"?_R(th.find(".carr").find(".pic"), Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width()), 'e').attr("s_rc"):_R(th.find(".carr").find(".pic"), Math.round(th.find(".carr")[0].scrollLeft / $(th.find(".carr")).width()), 'e').attr("src")))); 
+            history.pushState({page: 1}, "", th.find(".options a").attr("href")); 
         }
     }); 
     _R(".nav_arrow.right .arrow").not("#picContainer .arrow").e()
@@ -4753,17 +4754,17 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
         videojs(_R("video").not("#theater video")[e].id).on("pause", function(i){ 
             a= i
             let vId= VIds.length - 1
-            $(videojs(i.target.parentElement.id).L.parentElement).siblings().filter(".Playuse").removeClass("playing")
+            _R(videojs(i.target.parentElement.id).L.parentElement, und, 'e').siblings().filter(".Playuse").removeClass("playing")
         })
         videojs(_R("video").not("#theater video")[e].id).on("play", function(i){ 
             let vId= VIds.length - 1
-            $(videojs(i.target.parentElement.id).L.parentElement).siblings().filter(".Playuse").addClass("playing")
+            _R(videojs(i.target.parentElement.id).L.parentElement, und, 'e').siblings().filter(".Playuse").addClass("playing")
         })
     }
     _R("video").not("#theater video").e()
     _R(".Playuse").click(function(i){ 
-        $(i.target).parent().find("video")[0].play()
-        $(i.target).addClass("playing")
+        _R(i.target, und, 'e').parent().find("video")[0].play()
+        _R(i.target, und, 'e').addClass("playing")
     })
     _R(".Playuse").e()
 /*Prevent default on hashed links in #sections' click*/
@@ -4776,22 +4777,23 @@ _R("#situation a").not("#situation a[href= '#']").tooltip({
         if (typeof(event.originalEvent) === 'undefined') {
             return false;
         }
-        $(".knob").not(".foto .knob").knob();
+        /*impR(replace this by .e()ing)*/
+        _R(".knob").not(".foto .knob").knob();
 
         ý= $(this); 
 
-        $(".chatear").click(function() {
+        _R(".chatear").click(function() {
             u = $(this).parent().parent().find(".username").text();
 
-            $("#chat").find("ul").find("li").each(function() {
+            _R("#chat ul li", und, 'e').each(function() {
                 $(this).find("p").text() === u ? $(this).click() : 1;
             });
 
-            !!Antheater? (function(){closeModal(); $( ".ui-tooltip.ui-widget.ui-corner-all.ui-widget-content" ).remove(); })(): 1; 
+            !!Antheater? (function(){closeModal(); _R( ".ui-tooltip.ui-widget.ui-corner-all.ui-widget-content" ).remove(); })(): 1; 
         })
-        var $id = $(ui.tooltip).attr('id');
+        var $id = _R(ui.tooltip).attr('id');
 
-        $('div.ui-tooltip').not('#' + $id).remove();
+        _R('div.ui-tooltip', und, 'e').not('#' + $id).remove();
     },
     close: function(event, ui) {
         ui.tooltip.hover(function() {
@@ -4811,22 +4813,22 @@ _R("#ties a").not("#ties a[href= '#']").tooltip({
         if (typeof(event.originalEvent) === 'undefined') {
             return false;
         }
-        $(".knob").not(".foto .knob").knob();
+        _R(".knob").not(".foto .knob").knob();
 
         ý= $(this); 
 
-        $(".chatear").click(function() {
+        _R(".chatear").click(function() {
             u = $(this).parent().parent().find(".username").text();
 
-            $("#chat").find("ul").find("li").each(function() {
+            _R("#chat ul li", und, 'e').each(function() {
                 $(this).find("p").text() === u ? $(this).click() : 1;
             });
 
-            !!Antheater? (function(){closeModal(); $( ".ui-tooltip.ui-widget.ui-corner-all.ui-widget-content" ).remove(); })(): 1; 
+            if(!!Antheater)(function(){closeModal(); _R( ".ui-tooltip.ui-widget.ui-corner-all.ui-widget-content" ).remove(); })()
         })
-        var $id = $(ui.tooltip).attr('id');
+        var $id = _R(ui.tooltip).attr('id');
 
-        $('div.ui-tooltip').not('#' + $id).remove();
+        _R('div.ui-tooltip', und, 'e').not('#' + $id).remove();
     },
     close: function(event, ui) {
         ui.tooltip.hover(function() {
@@ -4842,7 +4844,7 @@ _R("#ties a").not("#ties a[href= '#']").tooltip({
 _R("#ties a").not("#ties a[href= '#']").e()
 /*Some events like the pointer-events adder and remover for the profilePic for it to be circular*/
 var distance; 
-el= $($("#profilePic > img")[0]); 
+el= _R("#profilePic > img", 0, 'e'); 
                     
     
 _R(".comentario").on("mousemove", function(event){ 
@@ -4870,30 +4872,32 @@ _R(".comentario").on("mousemove", function(event){
 _R(".comentario").e()
 _R("#theater textarea", 0).on('input', function(){ 
     $(this).height(""); 
-    !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2)) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2)))): 1; 
+    if(!!$(this).val()){$(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2)) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2))))};
 }); 
 _R("#theater textarea", 0).e()
 _R(".comentarios > .newComment", 0).on('keydown', function(i){ 
-    abc= $("#theater .Comentarios"); 
+    abc= _R("#theater .Comentarios", und, 'e'); 
 
-    (!i.shiftKey && i.keyCode == 13)? (function(){abc.append("<div class='comentario'>" + localStorage.getItem("knob") + '"' +  localStorage.getItem("tooltip") + '"' + localStorage.getItem("user") + $(".comentarios > .newComment textarea").val().replaceAll("\n", "<br>") + "</span><span class='Responder'></span></div>"); $(".comentarios > .newComment textarea").val(""); $($($("#theater .Comentarios").children()[$("#theater .Comentarios").children().length - 1]).find(".Responder")).on("click", function(){wD($(this))}); $("#theater .Comentarios").scrollTop($("#theater .Comentarios")[0].scrollHeight); $($($("#theater .Comentarios").children()[$("#theater .Comentarios").children().length - 1])).on("mousemove", function(event){elx= $($(this).children()[0]); circleWidth= elx.outerWidth( true ),circleHeight = elx.outerHeight( true ),circleLeft   = elx.offset().left,circleTop    = elx.offset().top,circlePos    ={x    : circleLeft + circleWidth / 2,y    : circleTop + circleHeight / 2,radius: circleWidth / 2};distance   = Math.sqrt( Math.pow( event.pageX - circlePos.x, 2 ) + Math.pow( event.pageY - circlePos.y, 2 ) );if(distance <= circlePos.radius){$($(this).children()[0]).css({"pointer-events": "all"});$($(this).children()[0]).css({"pointer-events": "all"});}else{$($(this).children()[0]).css({"pointer-events": "none"});$($(this).children()[0]).css({"pointer-events": "none"});}}); document.activeElement.blur(); $(".comentarios > .newComment textarea").css({"height": ""}); badGuy(); })(): 1; 
+    if(!i.shiftKey && i.keyCode == 13)(function(){abc.append(`<div class='comentario'>${localStorage.getItem("knob")}"${localStorage.getItem("tooltip")}"${localStorage.getItem("user")}${_R(".comentarios > .newComment textarea", und, 'e').val().replaceAll("\n", "<br>")}</span><span class='Responder'></span></div>`); _R(".comentarios > .newComment textarea", und, 'e').val(""); _R(_R(_R("#theater .Comentarios", und, 'e').children(), (_R("#theater .Comentarios", und, 'e').children().length - 1), 'e').find(".Responder"), und, 'e').on("click", function(){wD($(this))}); _R("#theater .Comentarios", und, 'e').scrollTop(_R("#theater .Comentarios", 0, 'e')[0].scrollHeight); _R(_R(_R("#theater .Comentarios", und, 'e').children(), (_R("#theater .Comentarios", und, 'e').children().length - 1), 'e'), und, 'e').on("mousemove", function(event){elx= $($(this).children()[0]); circleWidth= elx.outerWidth( true ),circleHeight = elx.outerHeight( true ),circleLeft   = elx.offset().left,circleTop    = elx.offset().top,circlePos    ={x    : circleLeft + circleWidth / 2,y    : circleTop + circleHeight / 2,radius: circleWidth / 2};distance   = Math.sqrt( Math.pow( event.pageX - circlePos.x, 2 ) + Math.pow( event.pageY - circlePos.y, 2 ) );if(distance <= circlePos.radius){_R($(this).children(), 0, 'e').css({"pointer-events": "all"});_R($(this).children(), 0, 'e').css({"pointer-events": "all"});}else{_R($(this).children(), 0, 'e').css({"pointer-events": "none"});_R($(this).children(), 0, 'e').css({"pointer-events": "none"});}}); document.activeElement.blur(); _R(".comentarios > .newComment textarea", und, 'e').css({"height": ""}); badGuy(); })()
 
-    $(".knob").knob(); 
+    _R(".knob").knob(); 
+    _R(".knob").e()
 
     tooltipComentarios(); 
 }); 
 _R(".comentarios > .newComment", 0).e()
 _R("#theater .read", 0).on("click", function(){ 
-    !$("#theater .description").hasClass("closed")? $("#theater .description").addClass("closed"): $("#theater .description").removeClass("closed"); 
-    !$("#theater .comentarios").hasClass("open")? $("#theater .comentarios").addClass("open"): $("#theater .comentarios").removeClass("open"); 
+    !_R("#theater .description").hasClass("closed")? _R("#theater .description").addClass("closed"): _R("#theater .description").removeClass("closed"); 
+    !_R("#theater .comentarios").hasClass("open")? _R("#theater .comentarios").addClass("open"): _R("#theater .comentarios").removeClass("open"); 
 })
 _R("#theater .read", 0).e()
 /*RooT photos' link*/
+/*impR(check this thoroughly)*/
 _R("#photos", 0).on("click", function(ev){
 	history.pushState({page: 1}, "", `/${user.username}/photos`); 
 	ev.preventDefault()
 	RooT.imporT("/js/" + user.username + "/photos/DB.js", Then, function(d){
-    $(".ui-tooltip").remove()
+    _R(".ui-tooltip").remove()
 		window.user= d._user()
 		RooT.imporT("/js/templates/photos.js", Then, function(d){
 			_T(document).scrollTop(0)
@@ -4913,7 +4917,7 @@ _R('a[href="/"]').on("click", function(e){
 	
 	history.pushState({page: 1}, "", `/`)
   RooT.imporT("/js/index/DB.js", Then, function(d){
-    $(".ui-tooltip").remove()
+    _R(".ui-tooltip").remove()
   	window.index= d._index()
     RooT.imporT("/js/templates/index.js", Then, function(d){
       _T(document).scrollTop(0)
@@ -4930,7 +4934,7 @@ _R("#videos", 0).on("click", function(ev){
 	history.pushState({page: 1}, "", `/${user.username}/videos`); 
 	ev.preventDefault()
 	RooT.imporT("/js/" + user.username + "/videos/DB.js", Then, function(d){
-    $(".ui-tooltip").remove()
+    _R(".ui-tooltip").remove()
 		window.user= d._user()
 		RooT.imporT("/js/templates/videos.js", Then, function(d){
 			_T(document).scrollTop(0)
@@ -4948,7 +4952,7 @@ _R('a[href="/L/"]').on("click", function(e){
 	e.preventDefault()
 	history.pushState({page: 1}, "", `/L/`)
   RooT.imporT("/js/L/DB.js", Then, function(d){
-    $(".ui-tooltip").remove()
+    _R(".ui-tooltip").remove()
     window.user= d._user()
     RooT.imporT("/js/templates/user.js", Then, function(d){
       _T(document).scrollTop(0)
@@ -4962,7 +4966,7 @@ _R('a[href="/A.K.A._Dizzy/"]').on("click", function(e){
 	e.preventDefault()
 	history.pushState({page: 1}, "", `/A.K.A._Dizzy/`)
   RooT.imporT("/js/A.K.A._Dizzy/DB.js", Then, function(d){
-    $(".ui-tooltip").remove()
+    _R(".ui-tooltip").remove()
     window.user= d._user()
     RooT.imporT("/js/templates/user.js", Then, function(d){
       _T(document).scrollTop(0)
@@ -4976,7 +4980,7 @@ _R('a[href="/PpP/"]').on("click", function(e){
 	e.preventDefault()
 	history.pushState({page: 1}, "", `/PpP/`)
   RooT.imporT("/js/PpP/DB.js", Then, function(d){
-    $(".ui-tooltip").remove()
+    _R(".ui-tooltip").remove()
     window.user= d._user()
     RooT.imporT("/js/templates/user.js", Then, function(d){
       _T(document).scrollTop(0)
@@ -4990,7 +4994,7 @@ _R('a[href="/Eld/"]').on("click", function(e){
 	e.preventDefault()
 	history.pushState({page: 1}, "", `/Eld/`)
   RooT.imporT("/js/Eld/DB.js", Then, function(d){
-    $(".ui-tooltip").remove()
+    _R(".ui-tooltip").remove()
     window.user= d._user()
     RooT.imporT("/js/templates/user.js", Then, function(d){
       _T(document).scrollTop(0)
@@ -5004,7 +5008,7 @@ _R('a[href="/AuraCardonaC/"]').on("click", function(e){
 	e.preventDefault()
 	history.pushState({page: 1}, "", `/AuraCardonaC/`)
   RooT.imporT("/js/AuraCardonaC/DB.js", Then, function(d){
-    $(".ui-tooltip").remove()
+    _R(".ui-tooltip").remove()
     window.user= d._user()
     RooT.imporT("/js/templates/user.js", Then, function(d){
       _T(document).scrollTop(0)
@@ -5018,7 +5022,7 @@ _R('a[href="/MeganFox/"]').on("click", function(e){
 	e.preventDefault()
 	history.pushState({page: 1}, "", `/MeganFox/`)
   RooT.imporT("/js/MeganFox/DB.js", Then, function(d){
-    $(".ui-tooltip").remove()
+    _R(".ui-tooltip").remove()
     window.user= d._user()
     RooT.imporT("/js/templates/user.js", Then, function(d){
       _T(document).scrollTop(0)
@@ -5032,7 +5036,7 @@ _R('a[href="/G-Suschrist/"]').on("click", function(e){
 	e.preventDefault()
 	history.pushState({page: 1}, "", `/G-Suschrist/`)
   RooT.imporT("/js/G-Suschrist/DB.js", Then, function(d){
-    $(".ui-tooltip").remove()
+    _R(".ui-tooltip").remove()
     window.user= d._user()
     RooT.imporT("/js/templates/user.js", Then, function(d){
       _T(document).scrollTop(0)
@@ -5046,7 +5050,7 @@ _R('a[href="/LamaMadora/"]').on("click", function(e){
 	e.preventDefault()
 	history.pushState({page: 1}, "", `/LamaMadora/`)
   RooT.imporT("/js/LamaMadora/DB.js", Then, function(d){
-    $(".ui-tooltip").remove()
+    _R(".ui-tooltip").remove()
     window.user= d._user()
     RooT.imporT("/js/templates/user.js", Then, function(d){
       _T(document).scrollTop(0)
@@ -5060,7 +5064,7 @@ _R('a[href="/whale_Shailene/"]').on("click", function(e){
 	e.preventDefault()
 	history.pushState({page: 1}, "", `/whale_Shailene/`)
   RooT.imporT("/js/whale_Shailene/DB.js", Then, function(d){
-    $(".ui-tooltip").remove()
+    _R(".ui-tooltip").remove()
     window.user= d._user()
     RooT.imporT("/js/templates/user.js", Then, function(d){
       _T(document).scrollTop(0)
@@ -5082,7 +5086,7 @@ ctrl= false
 document.addEventListener("keyup", function(e){if(!e.ctrlKey)ctrl= false})
 window.onblur= function(){
 ctrl= false
-$(".nombre").attr("contenteditable", "false") 
+_R(".nombre", und, 'e').attr("contenteditable", "false") 
 }
 document.addEventListener("keydown", function(e){
 if(e.ctrlKey){
@@ -5103,40 +5107,40 @@ for(ind in edHistory){
     indc++
     if(edHistory[ind] ==edHistory[e])return indc
 }}
-
+/*skpd(leave for last)*/
  edition= function(e, d){
-    $("body").prepend("<badguy></badguy>"); 
+    _R("body").prepend("<badguy></badguy>"); 
     switch(type){
         case "oC":
-            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.length).indexOf("<aside") + e.target.responseText.lastIndexOf("otherContainments") - 9)); 
+            _R("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.length).indexOf("<aside") + e.target.responseText.lastIndexOf("otherContainments") - 9)); 
             d.find("#otherContainments").remove()
             d.find("media").remove()
-            d.find(".Comentarios").before($("badguy").find("#otherContainments")[0].outerHTML)
+            d.find(".Comentarios").before(_R("badguy").find("#otherContainments")[0].outerHTML)
             d.find("text").html()
             _R(".media").each(function(){
 				audiojs.create($(this).find("audio")[0])
 				$(this).e()
 			})
 
-            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
+            _R("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
 
-            if(d.find(".title").text().indexOf("We're L") != 0)d.find(".title").html($("badguy").html())
-            $("badguy").remove()
+            if(d.find(".title").text().indexOf("We're L") != 0)d.find(".title").html(_R("badguy").html())
+            _R("badguy").remove()
             break;
         case "c":
-            $("badguy").html(e.target.responseText.slice(e.target.responseText.indexOf("<containment") , e.target.responseText.slice(e.target.responseText.lastIndexOf("<containment"), e.target.responseText.length).indexOf("</containment") + e.target.responseText.indexOf("<containment"))); 
+            _R("badguy").html(e.target.responseText.slice(e.target.responseText.indexOf("<containment") , e.target.responseText.slice(e.target.responseText.lastIndexOf("<containment"), e.target.responseText.length).indexOf("</containment") + e.target.responseText.indexOf("<containment"))); 
             d.find("containment").remove()
-            d.find(".Comentarios").before($("badguy").find("containment")[0].outerHTML)
+            d.find(".Comentarios").before(_R("badguy").find("containment")[0].outerHTML)
 
-            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
+            _R("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
 
-            d.find(".title").html($("badguy").html())
-            $("badguy").remove()
+            d.find(".title").html(_R("badguy").html())
+            _R("badguy").remove()
             break;
         case "mult_img":
-            $("badguy").html(e.target.responseText.slice(e.target.responseText.indexOf('"navigation"') - 15, e.target.responseText.slice(e.target.responseText.indexOf('"navigation"') - 15, e.target.responseText.length).indexOf("Playuse") - 3 + e.target.responseText.indexOf('"navigation"') - 15)); 
+            _R("badguy").html(e.target.responseText.slice(e.target.responseText.indexOf('"navigation"') - 15, e.target.responseText.slice(e.target.responseText.indexOf('"navigation"') - 15, e.target.responseText.length).indexOf("Playuse") - 3 + e.target.responseText.indexOf('"navigation"') - 15)); 
             $(".current .Comentarios").prev().remove()
-            $(".current .Comentarios").before($("badguy").find(".navigation")[0].outerHTML)
+            $(".current .Comentarios").before(_R("badguy").find(".navigation")[0].outerHTML)
             $(".current").find("text").html()
             
             $(".current .nav_arrow.left .arrow").not("#picContainer .arrow").on("click", function(){
@@ -5173,10 +5177,10 @@ for(ind in edHistory){
                 $(this)[0].scrollLeft == 0? (function(){rf.parent().find(".nav_arrow.left").addClass("disabled"); _R("#theater").find(".nav_arrow.left").addClass("disabled");})(): (function(){rf.parent().find(".nav_arrow.left").removeClass("disabled"); _R("#theater").find(".nav_arrow.left").removeClass("disabled")})(); 
             }) 
 
-            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') - 9, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') - 9, e.target.responseText.length).indexOf('"more"') - 9 + e.target.responseText.lastIndexOf('"title"') - 9)); 
+            _R("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') - 9, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') - 9, e.target.responseText.length).indexOf('"more"') - 9 + e.target.responseText.lastIndexOf('"title"') - 9)); 
             W= e.target.responseText
             $(".current .title").html($("badguy p").html())
-            $("badguy").remove()
+            _R("badguy").remove()
             break; 
     }
 }
@@ -5205,8 +5209,8 @@ _R(".Editado").e()
 /*Create all audiojs instances*/
 _R(".media").each(function(){
 	audiojs.create($(this).find("audio")[0])
-	$(this).e()
 })
+_R(".media").e()
 
 /***/
 
@@ -5371,7 +5375,7 @@ oReq.send();
 		e.preventDefault()
 		history.pushState({page: 1}, "", `/${user.username}`); 
 		RooT.imporT("/js/" + user.username + "/DB.js", Then, function(d){
-    $(".ui-tooltip").remove()
+    _R(".ui-tooltip").remove()
 			window.user= d._user()
 			RooT.imporT("/js/templates/user.js", Then, function(d){
 				_T(document).scrollTop(0)
@@ -5545,7 +5549,7 @@ oReq.send();
 		e.preventDefault()
 		history.pushState({page: 1}, "", `/${user.username}`); 
 		RooT.imporT("/js/" + user.username + "/DB.js", Then, function(d){
-    $(".ui-tooltip").remove()
+    _R(".ui-tooltip").remove()
 			window.user= d._user()
 			RooT.imporT("/js/templates/user.js", Then, function(d){
 				_T(document).scrollTop(0)
@@ -5606,7 +5610,7 @@ oReq.send();
 		
 		history.pushState({page: 1}, "", `/`)
 	  RooT.imporT("/js/index/DB.js", Then, function(d){
-    $(".ui-tooltip").remove()
+    _R(".ui-tooltip").remove()
 	  	window.index= d._index()
 	    RooT.imporT("/js/templates/index.js", Then, function(d){
 	      _T(document).scrollTop(0)
@@ -5623,7 +5627,7 @@ oReq.send();
 		e.preventDefault()
 		history.pushState({page: 1}, "", `/L/`)
 	  RooT.imporT("/js/L/DB.js", Then, function(d){
-    $(".ui-tooltip").remove()
+    _R(".ui-tooltip").remove()
 	    window.user= d._user()
 	    RooT.imporT("/js/templates/user.js", Then, function(d){
 	      _T(document).scrollTop(0)
@@ -5637,7 +5641,7 @@ oReq.send();
 		e.preventDefault()
 		history.pushState({page: 1}, "", `/A.K.A._Dizzy/`)
 	  RooT.imporT("/js/A.K.A._Dizzy/DB.js", Then, function(d){
-    $(".ui-tooltip").remove()
+    _R(".ui-tooltip").remove()
 	    window.user= d._user()
 	    RooT.imporT("/js/templates/user.js", Then, function(d){
 	      _T(document).scrollTop(0)
@@ -5651,7 +5655,7 @@ oReq.send();
 		e.preventDefault()
 		history.pushState({page: 1}, "", `/PpP/`)
 	  RooT.imporT("/js/PpP/DB.js", Then, function(d){
-    $(".ui-tooltip").remove()
+    _R(".ui-tooltip").remove()
 	    window.user= d._user()
 	    RooT.imporT("/js/templates/user.js", Then, function(d){
 	      _T(document).scrollTop(0)
@@ -5665,7 +5669,7 @@ oReq.send();
 		e.preventDefault()
 		history.pushState({page: 1}, "", `/Eld/`)
 	  RooT.imporT("/js/Eld/DB.js", Then, function(d){
-    $(".ui-tooltip").remove()
+    _R(".ui-tooltip").remove()
 	    window.user= d._user()
 	    RooT.imporT("/js/templates/user.js", Then, function(d){
 	      _T(document).scrollTop(0)
@@ -5679,7 +5683,7 @@ oReq.send();
 		e.preventDefault()
 		history.pushState({page: 1}, "", `/AuraCardonaC/`)
 	  RooT.imporT("/js/AuraCardonaC/DB.js", Then, function(d){
-    $(".ui-tooltip").remove()
+    _R(".ui-tooltip").remove()
 	    window.user= d._user()
 	    RooT.imporT("/js/templates/user.js", Then, function(d){
 	      _T(document).scrollTop(0)
@@ -5693,7 +5697,7 @@ oReq.send();
 		e.preventDefault()
 		history.pushState({page: 1}, "", `/MeganFox/`)
 	  RooT.imporT("/js/MeganFox/DB.js", Then, function(d){
-    $(".ui-tooltip").remove()
+    _R(".ui-tooltip").remove()
 	    window.user= d._user()
 	    RooT.imporT("/js/templates/user.js", Then, function(d){
 	      _T(document).scrollTop(0)
@@ -5707,7 +5711,7 @@ oReq.send();
 		e.preventDefault()
 		history.pushState({page: 1}, "", `/G-Suschrist/`)
 	  RooT.imporT("/js/G-Suschrist/DB.js", Then, function(d){
-    $(".ui-tooltip").remove()
+    _R(".ui-tooltip").remove()
 	    window.user= d._user()
 	    RooT.imporT("/js/templates/user.js", Then, function(d){
 	      _T(document).scrollTop(0)
@@ -5721,7 +5725,7 @@ oReq.send();
 		e.preventDefault()
 		history.pushState({page: 1}, "", `/LamaMadora/`)
 	  RooT.imporT("/js/LamaMadora/DB.js", Then, function(d){
-    $(".ui-tooltip").remove()
+    _R(".ui-tooltip").remove()
 	    window.user= d._user()
 	    RooT.imporT("/js/templates/user.js", Then, function(d){
 	      _T(document).scrollTop(0)
@@ -5735,7 +5739,7 @@ oReq.send();
 		e.preventDefault()
 		history.pushState({page: 1}, "", `/whale_Shailene/`)
 	  RooT.imporT("/js/whale_Shailene/DB.js", Then, function(d){
-    $(".ui-tooltip").remove()
+    _R(".ui-tooltip").remove()
 	    window.user= d._user()
 	    RooT.imporT("/js/templates/user.js", Then, function(d){
 	      _T(document).scrollTop(0)
@@ -5982,34 +5986,34 @@ for(ind in edHistory){
     $("body").prepend("<badguy></badguy>"); 
     switch(type){
         case "oC":
-            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.length).indexOf("<aside") + e.target.responseText.lastIndexOf("otherContainments") - 9)); 
+            _R("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.length).indexOf("<aside") + e.target.responseText.lastIndexOf("otherContainments") - 9)); 
             d.find("#otherContainments").remove()
             d.find("media").remove()
-            d.find(".Comentarios").before($("badguy").find("#otherContainments")[0].outerHTML)
+            d.find(".Comentarios").before(_R("badguy").find("#otherContainments")[0].outerHTML)
             d.find("text").html()
             for(var er= 0; er <= d.find(".media audio").length - 1; er++){
                 audiojs.create(d.find(".media audio")[er])
             }
 
-            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
+            _R("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
 
-            if(d.find(".title").text().indexOf("We're L") != 0)d.find(".title").html($("badguy").html())
-            $("badguy").remove()
+            if(d.find(".title").text().indexOf("We're L") != 0)d.find(".title").html(_R("badguy").html())
+            _R("badguy").remove()
             break;
         case "c":
-            $("badguy").html(e.target.responseText.slice(e.target.responseText.indexOf("<containment") , e.target.responseText.slice(e.target.responseText.lastIndexOf("<containment"), e.target.responseText.length).indexOf("</containment") + e.target.responseText.indexOf("<containment"))); 
+            _R("badguy").html(e.target.responseText.slice(e.target.responseText.indexOf("<containment") , e.target.responseText.slice(e.target.responseText.lastIndexOf("<containment"), e.target.responseText.length).indexOf("</containment") + e.target.responseText.indexOf("<containment"))); 
             d.find("containment").remove()
-            d.find(".Comentarios").before($("badguy").find("containment")[0].outerHTML)
+            d.find(".Comentarios").before(_R("badguy").find("containment")[0].outerHTML)
 
-            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
+            _R("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
 
-            d.find(".title").html($("badguy").html())
-            $("badguy").remove()
+            d.find(".title").html(_R("badguy").html())
+            _R("badguy").remove()
             break;
         case "mult_img":
-            $("badguy").html(e.target.responseText.slice(e.target.responseText.indexOf('"navigation"') - 15, e.target.responseText.slice(e.target.responseText.indexOf('"navigation"') - 15, e.target.responseText.length).indexOf("Playuse") - 3 + e.target.responseText.indexOf('"navigation"') - 15)); 
+            _R("badguy").html(e.target.responseText.slice(e.target.responseText.indexOf('"navigation"') - 15, e.target.responseText.slice(e.target.responseText.indexOf('"navigation"') - 15, e.target.responseText.length).indexOf("Playuse") - 3 + e.target.responseText.indexOf('"navigation"') - 15)); 
             $(".current .Comentarios").prev().remove()
-            $(".current .Comentarios").before($("badguy").find(".navigation")[0].outerHTML)
+            $(".current .Comentarios").before(_R("badguy").find(".navigation")[0].outerHTML)
             $(".current").find("text").html()
             
             $(".current .nav_arrow.left .arrow").not("#picContainer .arrow").on("click", function(){
@@ -6046,10 +6050,10 @@ for(ind in edHistory){
                 $(this)[0].scrollLeft == 0? (function(){rf.parent().find(".nav_arrow.left").addClass("disabled"); _R("#theater").find(".nav_arrow.left").addClass("disabled");})(): (function(){rf.parent().find(".nav_arrow.left").removeClass("disabled"); _R("#theater").find(".nav_arrow.left").removeClass("disabled")})(); 
             }) 
 
-            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') - 9, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') - 9, e.target.responseText.length).indexOf('"more"') - 9 + e.target.responseText.lastIndexOf('"title"') - 9)); 
+            _R("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') - 9, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') - 9, e.target.responseText.length).indexOf('"more"') - 9 + e.target.responseText.lastIndexOf('"title"') - 9)); 
             W= e.target.responseText
             $(".current .title").html($("badguy p").html())
-            $("badguy").remove()
+            _R("badguy").remove()
             break; 
     }
 }
@@ -6426,34 +6430,34 @@ ctrl= true
 		    $("body").append("<badguy></badguy>"); 
 		    switch(type){
 		        case "oC":
-		            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.length).indexOf("<aside") + e.target.responseText.lastIndexOf("otherContainments") - 9)); 
+		            _R("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.slice(e.target.responseText.lastIndexOf("otherContainments") - 9, e.target.responseText.length).indexOf("<aside") + e.target.responseText.lastIndexOf("otherContainments") - 9)); 
 		            d.find("#otherContainments").remove()
 		            d.find("media").remove()
-		            d.find(".Comentarios").before($("badguy").find("#otherContainments")[0].outerHTML)
+		            d.find(".Comentarios").before(_R("badguy").find("#otherContainments")[0].outerHTML)
 		            d.find("text").html()
 		            for(var er= 0; er <= d.find(".media audio").length - 1; er++){
 		                audiojs.create(d.find(".media audio")[er])
 		            }
 
-		            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
+		            _R("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
 
-		            if(d.find(".title").text().indexOf("We're L") != 0)d.find(".title").html($("badguy").html())
-		            $("badguy").remove()
+		            if(d.find(".title").text().indexOf("We're L") != 0)d.find(".title").html(_R("badguy").html())
+		            _R("badguy").remove()
 		            break;
 		        case "c":
-		            $("badguy").html(e.target.responseText.slice(e.target.responseText.indexOf("<containment") , e.target.responseText.slice(e.target.responseText.lastIndexOf("<containment"), e.target.responseText.length).indexOf("</containment") + e.target.responseText.indexOf("<containment"))); 
+		            _R("badguy").html(e.target.responseText.slice(e.target.responseText.indexOf("<containment") , e.target.responseText.slice(e.target.responseText.lastIndexOf("<containment"), e.target.responseText.length).indexOf("</containment") + e.target.responseText.indexOf("<containment"))); 
 		            $(".current .title").next().remove()
-		            $(".current .title").after($("badguy").find("containment")[0].outerHTML)
+		            $(".current .title").after(_R("badguy").find("containment")[0].outerHTML)
 
-		            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
+		            _R("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
 
-		            $(".current").find(".title").html($("badguy").html())
-		            $("badguy").remove()
+		            $(".current").find(".title").html(_R("badguy").html())
+		            _R("badguy").remove()
 		            break;
 		        case "mult_img":
-		            $("badguy").html(e.target.responseText.slice(e.target.responseText.indexOf('"navigation"') - 15, e.target.responseText.slice(e.target.responseText.indexOf('"navigation"') - 15, e.target.responseText.length).indexOf("Playuse") - 3 + e.target.responseText.indexOf('"navigation"') - 15)); 
+		            _R("badguy").html(e.target.responseText.slice(e.target.responseText.indexOf('"navigation"') - 15, e.target.responseText.slice(e.target.responseText.indexOf('"navigation"') - 15, e.target.responseText.length).indexOf("Playuse") - 3 + e.target.responseText.indexOf('"navigation"') - 15)); 
 		            $(".current .Comentarios").prev().remove()
-		            $(".current .Comentarios").before($("badguy").find(".navigation")[0].outerHTML)
+		            $(".current .Comentarios").before(_R("badguy").find(".navigation")[0].outerHTML)
 		            $(".current").find("text").html()
 		            
 		            $(".current .nav_arrow.left .arrow").not("#picContainer .arrow").on("click", function(){
@@ -6490,18 +6494,18 @@ ctrl= true
 		                $(this)[0].scrollLeft == 0? (function(){rf.parent().find(".nav_arrow.left").addClass("disabled"); _R("#theater").find(".nav_arrow.left").addClass("disabled");})(): (function(){rf.parent().find(".nav_arrow.left").removeClass("disabled"); _R("#theater").find(".nav_arrow.left").removeClass("disabled")})(); 
 		            }) 
 
-		            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
+		            _R("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.slice(e.target.responseText.lastIndexOf('"title"') + 8, e.target.responseText.length).indexOf("</p>") + e.target.responseText.lastIndexOf('"title"') + 8)); 
 		            W= e.target.responseText
-		            $("badguy").remove()
+		            _R("badguy").remove()
 		            break; 
 		        case "b":
-		            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('id="text"') - 7, e.target.responseText.slice(e.target.responseText.lastIndexOf('id="text"') - 7, e.target.responseText.length).indexOf("</aside>") + e.target.responseText.lastIndexOf('id="text"') - 7)); 
+		            _R("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('id="text"') - 7, e.target.responseText.slice(e.target.responseText.lastIndexOf('id="text"') - 7, e.target.responseText.length).indexOf("</aside>") + e.target.responseText.lastIndexOf('id="text"') - 7)); 
 		            $("#text").not("badguy #text").html("")
 		            $("#text").not("badguy #text").html($("badguy #text").html())
-		            $("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('id="title"') + 11, e.target.responseText.slice(e.target.responseText.lastIndexOf('id="title"') + 11, e.target.responseText.length).indexOf("</aside>") + e.target.responseText.lastIndexOf('id="title"') + 11)); 
+		            _R("badguy").html(e.target.responseText.slice(e.target.responseText.lastIndexOf('id="title"') + 11, e.target.responseText.slice(e.target.responseText.lastIndexOf('id="title"') + 11, e.target.responseText.length).indexOf("</aside>") + e.target.responseText.lastIndexOf('id="title"') + 11)); 
 
-		            $("#title").not("badguy #title").html($("badguy").html())
-		            $("badguy").remove()
+		            $("#title").not("badguy #title").html(_R("badguy").html())
+		            _R("badguy").remove()
 		            $("figure > div").resizable({
 		                handles: 'e',
 		                start: function() {
@@ -6514,113 +6518,114 @@ ctrl= true
 		            break;
 		    }
 		}
+		/*impR(read and impR or fix if necessary)*/
 		wD= function(thi, b){ 
 		    if(typeof b == "undefined"){ 
 		        if(!thi.parent().next(".newComment").find("textarea").length){ 
-		            $(".newComment").not(".comentarios > .newComment").remove(); 
+		            _R(".newComment", und, 'e').not(".comentarios > .newComment").remove(); 
 		                                                                         
 		            thi.parent().after('<div class="newComment"><textarea rows="1"></textarea></div>'); 
 		                                                                                                           
-		            $(thi.parent().next(".newComment").find("textarea")).on('input', function(){ 
+		            _R(thi.parent().next(".newComment").find("textarea"), und, 'e').on('input', function(){ 
 		                $(this).height(""); 
 		                                    
 		                !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2)) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2)))): 1; 
 		                            
 		                C= $(this); 
 		                            
-		                !!C.closest("#theater").length? C.closest(".Comentarios").scrollTop($(C.closest(".comentarios").find("textarea")[0]).parent()[0].offsetTop + $(C.closest(".comentarios").find("textarea")[0]).parent().outerHeight() - C.closest(".Comentarios").height() - (66 + $("#theater .info").height() - 38)): $("html").scrollTop($(C.closest(".comentarios").find("textarea")[0]).parent()[0].offsetTop + $(C.closest(".comentarios").find("textarea")[0]).parent().outerHeight() - $("html").height() + 112); 
+		                !!C.closest("#theater").length? C.closest(".Comentarios").scrollTop($(C.closest(".comentarios").find("textarea")[0]).parent()[0].offsetTop + $(C.closest(".comentarios").find("textarea")[0]).parent().outerHeight() - C.closest(".Comentarios").height() - (66 + _R("#theater .info").height() - 38)): _R("html").scrollTop(_R(C.closest(".comentarios").find("textarea"), 0).parent()[0].offsetTop + _R(C.closest(".comentarios").find("textarea"), 0).parent().outerHeight() - _R("html").height() + 112); 
 		            }); 
 		                
-		            $(thi.parent().next(".newComment").find("textarea")).on('keydown', function(i){ 
+		            _R(thi.parent().next(".newComment").find("textarea"), und, 'e').on('keydown', function(i){ 
 		                abc= $(this); 
+		                /*impR(standarize quotes everywhere[``, "", ''])*/
+		                (!i.shiftKey && i.keyCode == 13)? (function(){!abc.parent().next().is(".respuestas")? (function(){ll= _R(abc.closest(".comentarios").find("textarea"), 0).parent().prev(); abc.parent()[0].outerHTML= `<div class='respuestas'><div class='comentario'>${localStorage.getItem("knob")}"${localStorage.getItem("tooltip")}"${localStorage.getItem("user")}${abc.val().replaceAll("\n", "<br>")}</span><span class='Responder'></span></div><span class='Respuestas'><span class='Responder'></span></span></div>`; ll.next().find(".Respuestas .Responder")[0].addEventListener("contextmenu", function(e){e.preventDefault(); wwd(this); }); ll.next().find(".comentario").on("mousemove", function(event){elx= $($(this).children()[0]); circleWidth = elx.outerWidth( true ),circleHeight  = elx.outerHeight( true ),circleLeft    = elx.offset().left,circleTop     = elx.offset().top,circlePos     = {x     : circleLeft + circleWidth / 2,y     : circleTop + circleHeight / 2,radius: circleWidth / 2};distance    = Math.sqrt( Math.pow( event.pageX - circlePos.x, 2 ) + Math.pow( event.pageY - circlePos.y, 2 ) );if(distance <= circlePos.radius){$($(this).children()[0]).css({"pointer-events": "all"});$($(this).children()[0]).css({"pointer-events": "all"});}else{$($(this).children()[0]).css({"pointer-events": "none"});$($(this).children()[0]).css({"pointer-events": "none"});}}); $(ll.next().find(".Respuestas .Responder")).on("click", function(){wD($(this), 1)}); $(ll.next().find(".comentario .Responder")).on("click", function(){wD($(this))}); badGuy(); })(): (function(){abc.parent().next().children().filter(".Respuestas").find(".Responder").remove(); abc.parent().next().append(`<span class="Respuestas"><span class="Responder"></span></span>`); $($(abc.parent().next().children()[abc.parent().next().children().length - 1]).find(".Responder"))[0].addEventListener("contextmenu", function(e){e.preventDefault(); wwd(this); }); $($(abc.parent().next().children()[abc.parent().next().children().length - 1]).find(".Responder")).on("click", function(){wD($(this), 1)}); $(".Respuestas").each(function(){!$(this).html()? $(this).remove(): 1;}); $(abc.parent().next().children()[abc.parent().next().children().length - 1]).before(`<div class='comentario'>${localStorage.getItem("knob")}"${localStorage.getItem("tooltip")}"${localStorage.getItem("user")}${abc.val().replaceAll("\n", "<br>")}</span><span class='Responder'></span></div>`); $($(abc.parent().next().children()[abc.parent().next().children().length - 2]).find(".Responder")).on("click", function(){wD($(this))}); $($(abc.parent().next().children()[abc.parent().next().children().length - 2])).on("mousemove", function(event){elx= $($(this).children()[0]); circleWidth = elx.outerWidth( true ),circleHeight  = elx.outerHeight( true ),circleLeft    = elx.offset().left,circleTop     = elx.offset().top,circlePos     = {x     : circleLeft + circleWidth / 2,y     : circleTop + circleHeight / 2,radius: circleWidth / 2};distance    = Math.sqrt( Math.pow( event.pageX - circlePos.x, 2 ) + Math.pow( event.pageY - circlePos.y, 2 ) );if(distance <= circlePos.radius){$($(this).children()[0]).css({"pointer-events": "all"});$($(this).children()[0]).css({"pointer-events": "all"});}else{$($(this).children()[0]).css({"pointer-events": "none"});$($(this).children()[0]).css({"pointer-events": "none"});}}); abc.parent().remove(); badGuy(); })()})(): 1; 
 
-		                (!i.shiftKey && i.keyCode == 13)? (function(){!abc.parent().next().is(".respuestas")? (function(){ll= $(abc.closest(".comentarios").find("textarea")[0]).parent().prev(); abc.parent()[0].outerHTML= "<div class='respuestas'><div class='comentario'>" + localStorage.getItem("knob") + '"' +  localStorage.getItem("tooltip") + '"' + localStorage.getItem("user") + abc.val().replaceAll("\n", "<br>") + "</span><span class='Responder'></span></div><span class='Respuestas'><span class='Responder'></span></span></div>"; ll.next().find(".Respuestas .Responder")[0].addEventListener("contextmenu", function(e){e.preventDefault(); wwd(this); }); ll.next().find(".comentario").on("mousemove", function(event){elx= $($(this).children()[0]); circleWidth = elx.outerWidth( true ),circleHeight  = elx.outerHeight( true ),circleLeft    = elx.offset().left,circleTop     = elx.offset().top,circlePos     = {x     : circleLeft + circleWidth / 2,y     : circleTop + circleHeight / 2,radius: circleWidth / 2};distance    = Math.sqrt( Math.pow( event.pageX - circlePos.x, 2 ) + Math.pow( event.pageY - circlePos.y, 2 ) );if(distance <= circlePos.radius){$($(this).children()[0]).css({"pointer-events": "all"});$($(this).children()[0]).css({"pointer-events": "all"});}else{$($(this).children()[0]).css({"pointer-events": "none"});$($(this).children()[0]).css({"pointer-events": "none"});}}); $(ll.next().find(".Respuestas .Responder")).on("click", function(){wD($(this), 1)}); $(ll.next().find(".comentario .Responder")).on("click", function(){wD($(this))}); badGuy(); })(): (function(){abc.parent().next().children().filter(".Respuestas").find(".Responder").remove(); abc.parent().next().append('<span class="Respuestas"><span class="Responder"></span></span>'); $($(abc.parent().next().children()[abc.parent().next().children().length - 1]).find(".Responder"))[0].addEventListener("contextmenu", function(e){e.preventDefault(); wwd(this); }); $($(abc.parent().next().children()[abc.parent().next().children().length - 1]).find(".Responder")).on("click", function(){wD($(this), 1)}); $(".Respuestas").each(function(){!$(this).html()? $(this).remove(): 1;}); $(abc.parent().next().children()[abc.parent().next().children().length - 1]).before("<div class='comentario'>" + localStorage.getItem("knob") + '"' +  localStorage.getItem("tooltip") + '"' + localStorage.getItem("user") + abc.val().replaceAll("\n", "<br>") + "</span><span class='Responder'></span></div>"); $($(abc.parent().next().children()[abc.parent().next().children().length - 2]).find(".Responder")).on("click", function(){wD($(this))}); $($(abc.parent().next().children()[abc.parent().next().children().length - 2])).on("mousemove", function(event){elx= $($(this).children()[0]); circleWidth = elx.outerWidth( true ),circleHeight  = elx.outerHeight( true ),circleLeft    = elx.offset().left,circleTop     = elx.offset().top,circlePos     = {x     : circleLeft + circleWidth / 2,y     : circleTop + circleHeight / 2,radius: circleWidth / 2};distance    = Math.sqrt( Math.pow( event.pageX - circlePos.x, 2 ) + Math.pow( event.pageY - circlePos.y, 2 ) );if(distance <= circlePos.radius){$($(this).children()[0]).css({"pointer-events": "all"});$($(this).children()[0]).css({"pointer-events": "all"});}else{$($(this).children()[0]).css({"pointer-events": "none"});$($(this).children()[0]).css({"pointer-events": "none"});}}); abc.parent().remove(); badGuy(); })()})(): 1; 
-
-		                $(".knob").knob(); 
+		                _R(".knob").knob(); 
 
 		                tooltipComentarios(); 
 		            }); 
 
 		            aa= thi; 
 		                         
-		            !!thi.closest("#theater").length? thi.closest(".Comentarios").scrollTop($(thi.closest(".comentarios").find("textarea")[0]).parent()[0].offsetTop + $(thi.closest(".comentarios").find("textarea")[0]).parent().outerHeight() - thi.closest(".Comentarios").height() - (66 + $("#theater .info").height() - 38)): $("html").scrollTop($(thi.closest(".comentarios").find("textarea")[0]).parent()[0].offsetTop + $(thi.closest(".comentarios").find("textarea")[0]).parent().outerHeight() - $("html").height() + 112); 
+		            !!thi.closest("#theater").length? thi.closest(".Comentarios").scrollTop(_R(thi.closest(".comentarios").find("textarea"), 0, 'e').parent()[0].offsetTop + _R(thi.closest(".comentarios").find("textarea"), 0, 'e').parent().outerHeight() - thi.closest(".Comentarios").height() - (66 + _R("#theater .info").height() - 38)): _R("html").scrollTop(_R(thi.closest(".comentarios").find("textarea"), 0, 'e').parent()[0].offsetTop + _R(thi.closest(".comentarios").find("textarea")[0]).parent().outerHeight() - _R("html").height() + 112); 
 		                                                                                          
-		            $($(aa).parent().next(".newComment").find("textarea")).focus(); 
+		            _R(aa, und, 'e').parent().next(".newComment").find("textarea").focus(); 
 		        }else{ 
-		            $(".newComment").not(".comentarios > .newComment").remove(); 
+		            _R(".newComment", und, 'e').not(".comentarios > .newComment").remove(); 
 		        } 
 		    }else{ 
 		        if(!thi.parent().next(".newComment").find("textarea").length){ 
-		            $(".newComment").not(".comentarios > .newComment").remove(); 
+		            _R(".newComment", und, 'e').not(".comentarios > .newComment").remove(); 
 		                                                                         
 		            thi.parent().after('<div class="newComment"><textarea rows="1"></textarea></div>'); 
 		                                                                                                           
-		            $(thi.parent().next(".newComment").find("textarea")).on('input', function(){ 
+		            _R(thi.parent().next(".newComment").find("textarea"), und, 'e').on('input', function(){ 
 		                $(this).height(""); 
 		                                    
 		                !!$(this).val()? $(this).height($(this).prop('scrollHeight') - (parseInt($(this).css("padding-top").slice(0, -2)) + parseInt($(this).css("padding-bottom").slice(0, -2)) + parseInt($(this).css("border-top").slice(0, -2)) + parseInt($(this).css("border-bottom").slice(0, -2)))): 1; 
 		                            
 		                C= $(this); 
 		                            
-		                !!C.closest("#theater").length? C.closest(".comentarios").find(".Comentarios").scrollTop($(C.closest(".comentarios").find("textarea")[0]).parent()[0].offsetTop + $(C.closest(".comentarios").find("textarea")[0]).parent().outerHeight() - C.closest(".comentarios").find(".Comentarios").height() - (66 + $("#theater .info").height() - 38)): $("html").scrollTop($(C.closest(".comentarios").find("textarea")[0]).parent()[0].offsetTop + $(C.closest(".comentarios").find("textarea")[0]).parent().outerHeight() - $("html").height() + 112); 
+		                !!C.closest("#theater").length? C.closest(".comentarios").find(".Comentarios").scrollTop(_R(C.closest(".comentarios").find("textarea"), 0, 'e').parent()[0].offsetTop + $(C.closest(".comentarios").find("textarea")[0]).parent().outerHeight() - C.closest(".comentarios").find(".Comentarios").height() - (66 + _R("#theater .info").height() - 38)): _R("html").scrollTop(_R(C.closest(".comentarios").find("textarea"), 0, 'e').parent()[0].offsetTop + _R(C.closest(".comentarios").find("textarea"), 0, 'e').parent().outerHeight() - _R("html").height() + 112); 
 		            }); 
 		                
-		            $(thi.parent().next(".newComment").find("textarea")).on('keydown', function(i){ 
+		            _R(thi.parent().next(".newComment").find("textarea"), und, 'e').on('keydown', function(i){ 
 		                abc= $(this); 
 
-		                (!i.shiftKey && i.keyCode == 13)? (function(){abc.parent().parent().children().filter(".Respuestas").find(".Responder").remove(); abc.parent().parent().append('<span class="Respuestas"><span class="Responder"></span></span>'); $(abc.parent().parent().children()[abc.parent().parent().children().length - 1]).children().filter(".Respuestas .Responder")[0].addEventListener("contextmenu", function(e){e.preventDefault(); wwd(this); }); $($(abc.parent().parent().children()[abc.parent().parent().children().length - 1]).find(".Responder")).on("click", function(){wD($(this), 1)}); $(".Respuestas").each(function(){!$(this).html()? $(this).remove(): 1;}); ll= $(abc.closest(".comentarios").find("textarea")[0]).parent().prev(); abc.parent()[0].outerHTML= "<div class='comentario'>" + localStorage.getItem("knob") + '"' +  localStorage.getItem("tooltip") + '"' + localStorage.getItem("user") + abc.val().replaceAll("\n", "<br>") + "</span><span class='Responder'></span></div>"; ll.next().on("mousemove", function(event){elx= $($(this).children()[0]); circleWidth = elx.outerWidth( true ),circleHeight  = elx.outerHeight( true ),circleLeft    = elx.offset().left,circleTop     = elx.offset().top,circlePos     = {x     : circleLeft + circleWidth / 2,y     : circleTop + circleHeight / 2,radius: circleWidth / 2};distance    = Math.sqrt( Math.pow( event.pageX - circlePos.x, 2 ) + Math.pow( event.pageY - circlePos.y, 2 ) );if(distance <= circlePos.radius){$($(this).children()[0]).css({"pointer-events": "all"});$($(this).children()[0]).css({"pointer-events": "all"});}else{$($(this).children()[0]).css({"pointer-events": "none"});$($(this).children()[0]).css({"pointer-events": "none"});}}); $(ll.next().find(".Responder")).on("click", function(){wD($(this))}); badGuy(); })(): 1; 
+		                (!i.shiftKey && i.keyCode == 13)? (function(){abc.parent().parent().children().filter(".Respuestas").find(".Responder").remove(); abc.parent().parent().append('<span class="Respuestas"><span class="Responder"></span></span>'); _R(abc.parent().parent().children(), (abc.parent().parent().children().length - 1), 'e').children().filter(".Respuestas .Responder")[0].addEventListener("contextmenu", function(e){e.preventDefault(); wwd(this); }); _R(abc.parent().parent().children(), (abc.parent().parent().children().length - 1), 'e').find(".Responder").on("click", function(){wD($(this), 1)}); $(".Respuestas").each(function(){if(!$(this).html())$(this).remove()}); ll= _R(abc.closest(".comentarios").find("textarea"), 0).parent().prev(); abc.parent()[0].outerHTML= `<div class='comentario'>${localStorage.getItem("knob")}"${localStorage.getItem("tooltip")}"${localStorage.getItem("user")}${abc.val().replaceAll("\n", "<br>")}</span><span class='Responder'></span></div>`; ll.next().on("mousemove", function(event){elx= $($(this).children()[0]); circleWidth = elx.outerWidth( true ),circleHeight  = elx.outerHeight( true ),circleLeft    = elx.offset().left,circleTop     = elx.offset().top,circlePos     = {x     : circleLeft + circleWidth / 2,y     : circleTop + circleHeight / 2,radius: circleWidth / 2};distance    = Math.sqrt( Math.pow( event.pageX - circlePos.x, 2 ) + Math.pow( event.pageY - circlePos.y, 2 ) );if(distance <= circlePos.radius){$($(this).children()[0]).css({"pointer-events": "all"});$($(this).children()[0]).css({"pointer-events": "all"});}else{$($(this).children()[0]).css({"pointer-events": "none"});$($(this).children()[0]).css({"pointer-events": "none"});}}); _R(ll.next().find(".Responder"), und, 'e').on("click", function(){wD($(this))}); badGuy(); })(): 1; 
 
-		                $(".knob").knob(); 
+		                _R(".knob").knob(); 
 
 		                tooltipComentarios(); 
 		            }); 
 
 		            aa= thi; 
 		                         
-		            !!aa.closest("#theater").length? aa.closest(".Comentarios").scrollTop($(aa.closest(".comentarios").find("textarea")[0]).parent()[0].offsetTop + $(aa.closest(".comentarios").find("textarea")[0]).parent().outerHeight() - aa.closest(".Comentarios").height() - (66 + $("#theater .info").height() - 38)): $("html").scrollTop($(aa.closest(".comentarios").find("textarea")[0]).parent()[0].offsetTop + $(aa.closest(".comentarios").find("textarea")[0]).parent().outerHeight() - $("html").height() + 112); 
+		            !!aa.closest("#theater").length? aa.closest(".Comentarios").scrollTop(_R(aa.closest(".comentarios").find("textarea"), 0, 'e').parent()[0].offsetTop + _R(aa.closest(".comentarios").find("textarea"), 0, 'e').parent().outerHeight() - aa.closest(".Comentarios").height() - (66 + _R("#theater .info").height() - 38)): _R("html").scrollTop(_R(aa.closest(".comentarios").find("textarea"), 0, 'e').parent()[0].offsetTop + _R(aa.closest(".comentarios").find("textarea"), 0, 'e').parent().outerHeight() - _R("html").height() + 112); 
 		                                                                                          
-		            $($(aa).parent().next(".newComment").find("textarea")).focus(); 
+		            _R(aa, und, 'e').parent().next(".newComment").find("textarea").focus(); 
 		        }else{ 
-		            $(".newComment").not(".comentarios > .newComment").remove(); 
+		            _R(".newComment", und, 'e').not(".comentarios > .newComment").remove(); 
 		        } 
 		    } 
 		} 
 		wd= function(Tt, l){ 
-		    $(l.target).is(".Respuestas")? (function(){ 
+		    if(_R(l.target, und, 'e').is(".Respuestas"))(function(){ 
 		        ///*console.log(l.target); */ 
 
 		        for(a= 1; a<= 3; a++){ 
-		            $(Tt.parent().children().filter(".comentario.hidden")[0]).next().is(".respuestas.hidden")? $(Tt.parent().children().filter(".comentario.hidden")[0]).next().removeClass("hidden"): 1; 
-		            $(Tt.parent().children().filter(".comentario.hidden")[0]).removeClass("hidden"); 
+		            if(_R(Tt.parent().children().filter(".comentario.hidden"), 0, 'e').next().is(".respuestas.hidden"))_R(Tt.parent().children().filter(".comentario.hidden"), 0, 'e').next().removeClass("hidden"); 
+		            _R(Tt.parent().children().filter(".comentario.hidden"), 0, 'e').removeClass("hidden"); 
 		        } 
-		    
-		        !!Tt.parent().children().filter(".comentario.hidden").length? Tt.html((!$(Tt).next().length? '<span class="Responder"></span>': '') + "Más respuestas (" + Tt.parent().children().filter(".comentario.hidden").length + ")"): !$(Tt).next().length? Tt.html('<span class="Responder"></span>'): Tt.remove(); 
+				/*impR(remove unnecessary ", und, 'e'"s or alike)*/		    
+		        !!Tt.parent().children().filter(".comentario.hidden").length? Tt.html(`${(!_R(Tt, und, 'e').next().length? '<span class="Responder"></span>': '')}Más respuestas (${Tt.parent().children().filter(".comentario.hidden").length})`): !_R(Tt).next().length? Tt.html('<span class="Responder"></span>'): Tt.remove(); 
 
-		        !!Tt.find(".Responder").length? Tt.find(".Responder")[0].addEventListener("contextmenu", function(e){e.preventDefault(); wwd(this); }): 1; 
+		        if(!!Tt.find(".Responder").length)Tt.find(".Responder")[0].addEventListener("contextmenu", function(e){e.preventDefault(); wwd(this); });
 		        Tt.find(".Responder").on("click",function(){wD($(this), 1)}) 
-		    })(): 1; 
+		    })()
 		}
 		wwd= function(t, tr){ 
-		    $(".respuestas .newComment").remove(); 
+		    _R(".respuestas .newComment", und, 'e').remove(); 
 
-		    $(t.parentElement.parentElement).children().each(function(){ 
-		        $(this).index() != $(this).parent().children().length - 1? $(this).addClass("hidden"): 1; 
+		    _R(t.parentElement.parentElement, und, 'e').children().each(function(){ 
+		        if($(this).index() != $(this).parent().children().length - 1)$(this).addClass("hidden"); 
 		    }); 
 		        
-		    typeof tr === "undefined"? $(t).closest(".respuestas").find(".Respuestas .Responder").each(function(){wwd($(this)[0], true)}): 1; 
+		    typeof tr === "undefined"? _R(t, und, 'e').closest(".respuestas").find(".Respuestas .Responder").each(function(){wwd($(this)[0], true)}): 1; 
+			/*impR(redefine variables' scope)*/ 
+		    U= _R(t, und, e).parent().parent().children().filter(".Respuestas"); 
 		                                                                
-		    U= $(t).parent().parent().children().filter(".Respuestas"); 
-		                                                                
-		    (U.length == 2)? (function(){$(U[1]).html("<span class='Responder'></span>Respuestas (" + $(U[1]).parent().children().filter(".comentario").length + ")"); $(U[1]).click(function(l){wd($(this), l)}); $($(U[1]).find(".Responder")).on("click", function(){wD($(this), 1)}); U[0].remove()})(): (function(){U.html("<span class='Responder'></span>Respuestas (" + U.parent().children().filter(".comentario").length + ")"); U.click(function(l){wd($(this), l)}); $(U.find(".Responder")).on("click", function(){wD($(this), 1)}); })(); 
+		    (U.length == 2)? (function(){_R(U, 1, 'e').html(`<span class='Responder'></span>Respuestas (${_R(U, 1, 'e').parent().children().filter(".comentario").length})`); _R(U, 1, 'e').click(function(l){wd($(this), l)}); _R(U, 1, 'e').find(".Responder").on("click", function(){wD($(this), 1)}); U[0].remove()})(): (function(){U.html(`<span class='Responder'></span>Respuestas (${U.parent().children().filter(".comentario").length})`); U.click(function(l){wd($(this), l)}); U.find(".Responder").on("click", function(){wD($(this), 1)}); })(); 
 		} 
 		bGComments= function(arg){ 
 		    (typeof arg == "undefined")? (function(){ 
 		        $("body").prepend("<badguy></badguy>"); 
-		        $("badguy").html($("#article .Comentarios").html()); 
+		        _R("badguy").html($("#article .Comentarios").html()); 
 		        $("badguy .Comentario .media > div").prop('outerHTML', function(){return $(this).find("audio").prop("outerHTML")}); 
-		        $("badguy").find(".Respuestas .Responder").each(function(){wwd($(this)[0], 1)}); 
-		        bG= $("badguy")[0].innerHTML; 
-		        $("badguy").remove(); 
+		        _R("badguy").find(".Respuestas .Responder").each(function(){wwd($(this)[0], 1)}); 
+		        bG= _R("badguy")[0].innerHTML; 
+		        _R("badguy").remove(); 
 		    })(): (function(){bG= (typeof arg == "undefined")? 1: 1; })(); 
 		    return bG; 
 		}
