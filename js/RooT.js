@@ -4344,7 +4344,7 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
 	_last_Request= 0
 	_T(window).scroll(function() {
 		if(RooT.maTch.root.exec(actualLocation) !== null){
-		   if(_T(window).scrollTop() + window.innerHeight >= _T(document).height() - 10) {
+		   if(_T(window).scrollTop() + _T(window).height() >= _T(document).height() - 100) {
 				if(!_last_Request && _firsT(5, _of, index.stories).length){
 		          _R("#loadingMorePosts").addClass("visible")
 		         _R("#feed", und, 'e').append(one("_story", foReach, _firsT(5, _of, index.stories, spliceThem)));
@@ -4360,7 +4360,7 @@ if(RooT.maTch.user.exec(window.location.pathname) !== null){
 				}
 		   }
 		}else if(RooT.maTch.user.exec(actualLocation)){
-			if(_T(window).scrollTop() + window.innerHeight >= _T(document).height() - 10) {
+			if(_T(window).scrollTop() + _T(window).height() >= _T(document).height() - 100) {
 				if(!_last_Request && Object.keys(firsT(5, _of, user.stories)).length){
 		          _R("#loadingMorePosts").addClass("visible")
 		         _R("#feed", und, 'e').append(one("story", foReach, firsT(5, _of, user.stories)));
@@ -5564,7 +5564,7 @@ oReq.send();
 	_last_Request= 0
 	_T(window).scroll(function() {
 		if(RooT.maTch.root.exec(actualLocation) !== null){
-		   if(_T(window).scrollTop() + window.innerHeight >= _T(document).height() - 10) {
+		   if(_T(window).scrollTop() + _T(window).height() >= _T(document).height() - 100) {
 				if(!_last_Request && _firsT(5, _of, index.stories, spliceThem).length){
 		          _R("#loadingMorePosts").addClass("visible")
 		         _R("#feed", und, 'e').append(one("_story", foReach, _firsT(5, _of, index.stories)));
@@ -5580,7 +5580,7 @@ oReq.send();
 				}
 		   }
 		}else if(RooT.maTch.user.exec(actualLocation)){
-			if(_T(window).scrollTop() + window.innerHeight >= _T(document).height() - 10) {
+			if(_T(window).scrollTop() + _T(window).height() >= _T(document).height() - 100) {
 				if(!_last_Request && Object.keys(firsT(5, _of, user.stories)).length){
 		          _R("#loadingMorePosts").addClass("visible")
 		         _R("#feed", und, 'e').append(one("story", foReach, firsT(5, _of, user.stories)));
