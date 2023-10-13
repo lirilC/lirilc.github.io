@@ -3061,6 +3061,7 @@ content: "\e904"
     padding: 0;
     height: 100% !important;
     overflow-y: scroll;
+    overflow-x: hidden;
     right: -12px;
     position: absolute;
     width: 217px;
