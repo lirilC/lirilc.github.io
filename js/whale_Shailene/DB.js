@@ -241,41 +241,6 @@ var user= {
                 contents:  {video: "1ykiSKSC1E"},
                 Comentarios: ""
             },
-        "/whale_Shailene/vid/tDKwGSQRHh": {
-            type: "external_vid",
-            date: {
-                full: "21 de Noviembre de 2022 a las 10:51 pm",
-                min: "Noviembre de 2022"
-            },
-            poster: `/resources/images/whale_Shailene/tDKwGSQRHh_poster.png`,
-            title: `The Emperor's New Groove`,
-            description: `Thanks to Disney ♡<br><a target= "_blank" href= "https://creativecommons.org/publicdomain/mark/1.0/">Public Domain Mark 1.0&nbsp;&nbsp;&nbsp;<span class= "cc-cc-icon"></span>&nbsp;&nbsp;<span class= "cc-no_copyright-icon"></span></a>`,
-            contents:  {url: "https://ia803402.us.archive.org/30/items/the-emperors-new-groove/The%20Emperors%20New%20Groove.mp4", rCI: "tDKwGSQRHh", subtitles: {Español: "/resources/videos/whale_Shailene/Spanish.vtt", "عرب.": "/resources/videos/whale_Shailene/Arabic.vtt"}},
-            Comentarios: ""
-        },
-        "/whale_Shailene/vid/vB6zk582DE": {
-            type: "external_vid",
-            date: {
-                full: "21 de Noviembre de 2022 a las 10:5 pm",
-                min: "Noviembre de 2022"
-            },
-            poster: `/resources/images/whale_Shailene/vB6zk582DE_poster.png`,
-            title: `Phineas And Ferb - Summer Belongs To You!`,
-            description: `Thanks to Disney ♡<br><a target= "_blank" href= "https://creativecommons.org/publicdomain/mark/1.0/">Public Domain Mark 1.0&nbsp;&nbsp;&nbsp;<span class= "cc-cc-icon"></span>&nbsp;&nbsp;<span class= "cc-no_copyright-icon"></span></a>`,
-            contents:  {url: "https://ia902306.us.archive.org/22/items/phineas-and-ferb-summer-belongs-to-you-1/Phineas%20And%20Ferb%20Summer%20Belongs%20To%20You%21-1.mp4", rCI: "vB6zk582DE"},
-            Comentarios: ""
-        },
-        "/whale_Shailene/vid/8wuzcn3VDF": {
-            type: "external_mult_carr",
-            date: {
-                full: "21 de Noviembre de 2022 a las 8:45 pm",
-                min: "Noviembre de 2022"
-            },
-            title: `Winnie the Pooh: Boo to You Too!`,
-            description: `Thanks to Disney ♡<br><a target= "_blank" href= "https://creativecommons.org/licenses/by-nd/4.0/">Attribution-NoDerivatives 4.0 International&nbsp;&nbsp;&nbsp;<span class= "cc-cc-icon"></span>&nbsp;&nbsp;<span class= "cc-attribution-icon"></span>&nbsp;&nbsp;<span class= "cc-nd-icon"></span></a>`,
-            contents:  {carrContents: [["vi", {url: "https://ia801409.us.archive.org/15/items/winnie-the-pooh-boo-to-you-too-1999-full-vhs/Winnie%20the%20Pooh%20Boo%20to%20You%20Too%21%20%281999%29%20Full%20VHS.ia.mp4", rCI: "8wuzcn3VDF", poster: `/resources/images/whale_Shailene/8wuzcn3VDF0_poster.png`}], ["vi", {url: "https://ia601508.us.archive.org/1/items/winnie-the-pooh-spookable-pooh-1995-full-vhs/Winnie%20The%20Pooh%20Spookable%20Pooh%20%281995%29%20Full%20VHS.mp4", rCI: "AT7GsL3ZSI", poster: `/resources/images/whale_Shailene/Y04fcPZRCB_poster.png`}]]},
-            Comentarios: ""
-        },
         "/whale_Shailene/vid/MaSnBpwoxO": {
             type: "external_mult_carr",
             date: {
