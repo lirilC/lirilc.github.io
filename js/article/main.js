@@ -427,7 +427,7 @@ accentuaTe= function(f, aL, m, accenT_m){
                             }
                         }
                         //alert(cc+(s.indexOf("'")+1?1:0))
-                        bW= `${bW}${f[f.length-4-fi]==","?", ":"" }${f[f.length-4-fi]=="."?". ":"" }${f[f.length-4-fi]==";"?"; ":"" }${Tms(cc+(s.indexOf("'")+1?1:0), `${s}${f[f.length-1-fi]=="-"?" ":"  " }`)}  `.replaceAll("'", "")
+                        bW= `${bW}${f[f.length-4-fi]==","?", ":"" }${f[f.length-4-fi]==";"?"; ":"" }${Tms(cc+(s.indexOf("'")+1?1:0), `${s}${f[f.length-1-fi]=="-"?" ":"  " }`)}  `.replaceAll("'", "")
                     }
                 }
                 Anti_joint= ["¡", "¿", "'"];  
