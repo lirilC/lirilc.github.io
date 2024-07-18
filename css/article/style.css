@@ -2414,7 +2414,7 @@ act.refresh:active {
 .C_warning_text{
     font-size: 0.75em;
 }
-@media (hover: none) and (any-pointer: none) {
+@media (hover: none){
   #article{
     padding-right: 0;
     width: 100% !important;
