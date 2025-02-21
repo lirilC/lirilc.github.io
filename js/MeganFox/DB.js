@@ -255,7 +255,7 @@ var user= {
 		},
 		title: `nothing is ever really lost. welcome back 👼🏼❤️`,
 		description: ``,
-		contents:  {carrContents: ["Kf2mx89q5v_tn.jpg", "Rt6zy41o3w_tn.jpg"]},
+		contents:  {carrContents: ["Kf2mx89q5v.jpg", "Rt6zy41o3w.jpg"]},
 		Comentarios: ""
 	    },
         "/MeganFox/img/Yu7ps34i6t": {
