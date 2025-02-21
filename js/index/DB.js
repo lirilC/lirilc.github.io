@@ -418,7 +418,7 @@ _useRs.asop["user"]= {
 };
 var index= {
     stories: [
-    "/MeganFox/img/Kf2mx89q5v": {
+    "/MeganFox/img/Kf2mx89q5v", {
         user: _useRs["MeganFox"],
 		type: "mult_img",
 		date: {
