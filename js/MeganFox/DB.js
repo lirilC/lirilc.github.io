@@ -195,17 +195,6 @@ var user= {
                 contents:  {carrContents: ["7q5KgBPkOY_tn.jpg", "oMizJp8C4C_tn.jpg", "oUuwGQLmKp_tn.jpg"]},
                 Comentarios: ""
             },
-            "/MeganFox/img/gQv7jG4RCp": {
-                type: "mult_img",
-                date: {
-                    full: "30 de Septiembre de 2022 a las 6:7 am",
-                    min: "Septiembre de 2022"
-                },
-                title: `Britney and Justin if they had been Greenwich Village art school drop outs instead of Disney channel sweethearts`,
-                description: ``,
-                contents:  {carrContents: ["gQv7jG4RCp_tn.jpg", "EVSE3yWkli_tn.jpg"]},
-                Comentarios: ""
-            }
         }
     },
     videos: {
