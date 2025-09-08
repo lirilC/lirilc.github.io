@@ -4393,9 +4393,9 @@ fill_daTa= function(type, superInf){
             break
         case "pro":
             if(!eInf.auC){
-                alternating.find(".pro_in").html(`Leyendo <i>por sílabas</i>, en ${eInf.lang}, en este caso, y derecho, el lema de <i>${eInf.pro}</i> en ${eInf.lang}, <i>${eInf.name.name}</i>, es perfectamente hasta el final el nombre de <i>${eInf.com.slice(0, eInf.com.indexOf(" ("))}</i>, y tiene un "Cuídeme a las niñas", así:`)
+                alternating.find(".pro_in").html(`Leyendo <i>por sílabas</i>, en ${eInf.lang}, en este caso, y derecho, el lema de <i>${eInf.pro}</i> en ${eInf.lang}, <i>${eInf.name.name}</i>, es perfectamente hasta el final el nombre de <i>${eInf.pro.slice(0, eInf.pro.indexOf(" ("))}</i>, y tiene un "Cuídeme a las niñas", así:`)
             }else{
-                alternating.find(".pro_in").html(`Leyendo <i>por sílabas</i>, en ${eInf.lang}, en este caso, y al revés, el lema de <i>${eInf.pro}</i> en ${eInf.lang}, <i>${eInf.name.name}</i>, es perfectamente hasta el principio el nombre de <i>${eInf.com.slice(0, eInf.com.indexOf(" ("))}</i>, y tiene un "Cuídeme a las niñas", así:`)
+                alternating.find(".pro_in").html(`Leyendo <i>por sílabas</i>, en ${eInf.lang}, en este caso, y al revés, el lema de <i>${eInf.pro}</i> en ${eInf.lang}, <i>${eInf.name.name}</i>, es perfectamente hasta el principio el nombre de <i>${eInf.pro.slice(0, eInf.pro.indexOf(" ("))}</i>, y tiene un "Cuídeme a las niñas", así:`)
             }
             break
     }
